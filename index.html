@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Teamcubation"/>
+    <link rel="apple-touch-icon" href="logo192.png"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Teamcubation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+</head>
+<style>
+    body, * {
+        background: #131116;
+        margin: 0;
+    }
+    .main{
+        margin-top: 45vh;
+    }
+    .logo{
+        text-align: center;
+    }
+    #tq, #us{
+        display: inline-block;
+    }
+    #us{
+        margin-bottom: -10px;
+    }
+</style>
+<script type="text/javascript">
+    window.setInterval(function (){
+        const us = document.getElementById('us');
+        if (us.style.visibility == '') {
+            us.style.visibility = 'hidden';
+        } else {
+            us.style.visibility = '';
+        }
+    }, 500);
+</script>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img id="tq"
+                 src="tq.png"
+                 srcset="tqsm.png 512w,
+                         tq.png 1024w"
+                sizes="(max-width: 600px) 256px,
+                       512px"/>
+            <img id="us"
+                 src="_.png"
+                 srcset="_sm.png 512w,
+                         _.png 1024w"
+                sizes="(max-width: 600px) 256px,
+                       512px"/>
+        </div>
+    </div>
+</body>
+</html>
