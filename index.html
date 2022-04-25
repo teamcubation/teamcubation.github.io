@@ -39,6 +39,23 @@
     #us{
         margin-bottom: -10px;
     }
+    .progress{
+        color: #fff;
+        font-family: "Courier New";
+        font-size: 13px;
+        margin: 50px auto;
+        width: 550px;
+    }
+    @media (max-width: 600px) {
+        .progress{
+            font-size: 8px;
+            width: 360px
+        }
+    }
+    .perc-color{
+        background: #00cd00;
+        color: #000;
+    }
 </style>
 <script type="text/javascript">
     window.setInterval(function (){
@@ -49,6 +66,13 @@
             us.style.visibility = '';
         }
     }, 500);
+    const spinChars = '-\\|/';
+    let spinIdx = 0;
+    window.setInterval(function (){
+        document.getElementById('spin').innerHTML = spinChars[spinIdx];
+        spinIdx++;
+        if (spinIdx == spinChars.length) spinIdx = 0;
+    }, 100);
 </script>
 <body>
     <div class="main">
@@ -65,6 +89,10 @@
                          us.png 1024w"
                 sizes="(max-width: 600px) 256px,
                        512px"/>
+        </div>
+        <div class="progress">
+            <div>Unpacking solution-to-the-lack-of-experienced-tech-talent (0.3)...</div>
+            <div><span class="perc-color">Progress: [14%]</span> <span id="spin">-</span> [#######...........................................]</div>
         </div>
     </div>
 </body>
