@@ -64,8 +64,11 @@
             line-height: 12px;
             width: 340px;
         }
+        .hiring{
+            font-size: 13px;
+        }
     }
-    .perc-color{
+    .perc-color, .perc-color *{
         background: #00cd00;
         color: #000;
     }
@@ -82,7 +85,7 @@
     const spinChars = '-\\|/';
     let spinIdx = 0;
     window.setInterval(function (){
-        document.getElementById('spin').innerHTML = spinChars[spinIdx];
+        document.getElementById('spin').innerText = spinChars[spinIdx];
         spinIdx++;
         if (spinIdx == spinChars.length) spinIdx = 0;
     }, 100);
@@ -107,11 +110,16 @@
         </div>
         <div class="progress">
             <div>Unpacking solution-to-the-lack-of-experienced-tech-talent (0.3)...</div>
-            <div><span class="perc-color">Progress: [18%]</span> <span id="spin">-</span> [#########.........................................]</div>
+            <div><span class="perc-color">Progress: [<span id="prog-perc">18</span>%]</span> <span id="spin">-</span> <span id="prog-bar"></span></div>
         </div>
         <div class="hiring">
             💼 <a href="https://coda.io/@tq-jobs/we-are-hiring" target="_blank">We are hiring!</a>
         </div>
     </div>
+    <script type="text/javascript">
+        const perc = parseInt(parseInt(document.getElementById('prog-perc').innerText, 10) / 2, 10);
+        const rest = 50 - perc;
+        document.getElementById('prog-bar').innerText = '[' + '#'.repeat(perc) + '.'.repeat(rest) + ']';
+    </script>
 </body>
 </html>
