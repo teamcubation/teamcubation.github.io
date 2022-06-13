@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <link rel="icon" href="favicon.ico"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="#000000"/>
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Teamcubation"/>
+    <title>Teamcubation</title>
+    <link rel="icon" href="media/favicon.ico"/>
     <link rel="apple-touch-icon" href="logo192.png"/>
     <link rel="manifest" href="manifest.json"/>
-    <title>Teamcubation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">	
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVX5NJFK14"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,104 +26,356 @@
     
       gtag('config', 'G-VVX5NJFK14');
     </script>
-</head>
-<style>
-    body, * {
-        background: #141116;
-        margin: 0;
-    }
-    .main{
-        margin-top: calc(50vh - 100px);
-    }
-    .logo{
-        text-align: center;
-    }
-    #tq, #us{
-        display: inline-block;
-    }
-    #us{
-        margin-bottom: -10px;
-    }
-    .progress{
-        color: #fff;
-        font-family: "Courier New", "Ubuntu Mono", monospace, serif;
-        font-size: 13px;
-        margin: 50px auto;
-        width: 550px;
-        line-height: 18px;
-    }
-    .hiring{
-        font-family: 'Titillium Web', serif;
-        font-size: 16px;
-        margin: 10px auto;
-        text-align: center;
-        line-height: 18px;
-    }
-    .hiring a{
-        color: #fff;
-    }
-    @media (max-width: 600px) {
-        .progress{
-            font-size: 8px;
-            line-height: 12px;
-            width: 340px;
-        }
-        .hiring{
-            font-size: 13px;
-        }
-    }
-    .perc-color, .perc-color *{
-        background: #00cd00;
-        color: #000;
-    }
-</style>
-<script type="text/javascript">
-    window.setInterval(function (){
-        const us = document.getElementById('us');
-        if (us.style.visibility == '') {
-            us.style.visibility = 'hidden';
-        } else {
-            us.style.visibility = '';
-        }
-    }, 500);
-    const spinChars = '-\\|/';
-    let spinIdx = 0;
-    window.setInterval(function (){
-        document.getElementById('spin').innerText = spinChars[spinIdx];
-        spinIdx++;
-        if (spinIdx == spinChars.length) spinIdx = 0;
-    }, 100);
-</script>
-<body>
-    <div class="main">
-        <div class="logo">
-            <img id="tq"
-                 alt="Teamcubation"
-                 src="tq.png"
-                 srcset="tq.png 512w,
-                         tq.png 1024w"
-                 sizes="(max-width: 600px) 256px,
-                        512px"/>
-            <img id="us"
-                 alt="_"
-                 src="us.png"
-                 srcset="us_sm.png 512w,
-                         us.png 1024w"
-                 sizes="(max-width: 600px) 256px,
-                        512px"/>
+
+  </head>
+
+  <body>
+    <div class="container-fluid color">
+
+      <div class="row" style="justify-content: center">
+        
+        <div class="col-1 col-xl-1"></div>
+        
+        <div class="col-7 col-xl-6">
+          <div class="row">
+            <img class="logo" src="media/logo.png" alt="imgLogo"/>
+            <img class="imgHeader" src="media/imgHeader.png" alt="imgHeader"  />
+          </div>
         </div>
-        <div class="progress">
-            <div>Unpacking solution-to-the-lack-of-experienced-tech-talent (0.3)...</div>
-            <div><span class="perc-color">Progress: [<span id="prog-perc">53</span>%]</span> <span id="spin">-</span> <span id="prog-bar"></span></div>
+        
+        <div class="col-5 col-xl-4">
+          <div class="row">
+            <div class="row Header-organization">
+              <div class="col-3 decorate-menu bc-red"></div>
+              <div class="col-3 decorate-menu bc-green"></div>
+              <div class="col-3 decorate-menu bc-orange"></div>
+              <div class="col-3 decorate-menu bc-turquoise"></div>
+              <div class="header-organization-leyend">
+                <span class="arrow left" style="margin: 2.2% 3% 0 0"></span><h3 class="color-red">ORGANIZATIONS</h3>
+              </div>
+              <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ </h3>
+            </div>
+            <div class="row Rotary-legend">
+              <h2> "Our DEVs are<br><span style="margin-left: 20px">resigning"</span></h2>
+            </div>
+            <div class="row Central-legend">
+              <h1 class="color-red">WE TRAIN </h1>
+              <h2 class="color-red">DEVELOPERS</h2>
+            </div>
+          </div>
         </div>
-        <div class="hiring">
-            💼 <a href="https://coda.io/@tq-jobs/we-are-hiring" target="_blank">We are hiring!</a>
+
+        <div class="col-1 col-xl-1"></div>
+
+      <div class="row Descriptive-legend">
+        <h5>
+          <span class="color-orange" style="font-size: 3.5vw"><</span>
+          <span>THEY GAIN EXPERIENCE </span>
+          <span style="font-weight: 200;">WHILST</span> 
+
+          <span style="font-weight: 200;"></span><br>
+          <span style="margin-left: -2%;"> DEVELOPING A SOFTWARE</span><br>
+          <span style=" color:#ff1322; font-weight: 200; margin-left: 4%;"> YOUR </span> 
+          <span style="color:#ff1322"> ORGANIZATION NEEDS </span>
+          <span class="color-orange" style="line-height: 0; margin: 0 -1% 0 1%; font-size: 3.5vw">/> </span>
+        </h5>
+      </div>
+      <div class="row" style="justify-content: right; margin: 1% 0 0 -21%;">
+         <p class="color-grey" style="padding: 0; width: 7.5%; font-size: 1.2vw; font-weight: 500; display: inline">conocer más</p>
+        <span class="arrow down"></span>
+      </div>
+      </div>
+      <div  style="max-width: 100%; max-height: 3vw; overflow: hidden; padding: 0px 5px">
+        <h3 class="underscore">
+          _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+          _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+          _ _ _ _ _ _ _ _ _ _
+        </h3>
+      </div>
+
+      <div class="row" style="margin-top: 5%">
+        <div class="col-1"></div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-1">
+              <img style="height: 34%; margin: 25% 0 0 50%;" src="media/arrow_right.svg" alt="tc_vertical"/>
+            </div>
+            <div class="col-11">
+              <h2 class="color-grey" style="line-height: 0.9">
+                <span style="font-weight:200; padding-left: 0; z-index:1; position: relative">WHAT IS</span><br>
+                <span style="font-weight:bold ; z-index:1; position: relative">TEAMCUBATION</span>
+                <span style="font-weight:200">_?</span> 
+              </h2>
+            </div>
+          </div>
+          <div>
+            <img class="back_Tc_vertical" src="media/tc_vertical.svg" alt="tc_vertical"/>
+          </div>
         </div>
+        <div class="col-5">
+          <h5 class="color-red" style="font-size: 2.3vw; margin-top: 22%">
+            <span style="font-weight:200;">Is</span> the bridge between education  <br> 
+            and work. We want to contribute <br> to solve the digital senior talent <br>
+            shortage by incubating junior development teams <br>
+            to take on more senior roles.
+          </h5>
+        </div>
+        <div class="col-1"></div>
+      </div>
+
+      <div class="row" style="background-image: url('media/back-grey.png'); background-size: cover; padding-top: 15%;">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-1" style="padding: 1.5% 0 0 0">
+              <div class="decorate-tittle bc-orange"></div>
+            </div>
+            <div class="col-4">
+              <h2 style="line-height: 0.9">
+                <span class="color-grey" style="font-weight:200; padding-left: 0">WHAT IS</span><br>
+                <span class="bc-red-dark" style="font-weight:bold; color: #fff; display: inline-block">OUR</span>
+                <span class="color-red" style="display: inline-block; margin-left: -2%; font-weight:bold;">ANSWER</span> 
+                <span class="color-grey" style="font-weight:200">?</span>
+              </h2>
+            </div>
+            <div class="col-7" style="padding: 5.5% 0 0 0">
+              <div class="decorate-tittle bc-grey" ></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" class="row" style="margin: 4% 0">
+          <div class="col-1"></div>
+          <div class="col-10">
+            <h5 class="color-grey" style="font-size: 2.3vw; font-weight:200; ">
+              With the surge of digital careers and coding schools, there are plenty of 
+              tech professionals with lots of potential 
+              and yet not enough experience. Finding and  transforming them into 
+              rounded and experienced professionals takes effort,  money but most of all time and dedication.
+            </h5>
+            </div>
+          <div class="col-1"></div>
+        </div>
+        <div class="row" class="row" style="margin: 1% 0 8% 0">
+          <div class="col-1"></div>
+          <div class="col-5"></div>
+          <div class="col-5">
+            <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;"><</h5>
+            <h5 class="color-red" style="font-size: 2.3vw; font-weight:200; text-align: justify; text-align-last: justify;">
+              <span style="font-weight: bold;">
+                Teamcubation hacks the experience challenge, by providing 
+                an opportunity for people who would otherwise not make it 
+                to the pipeline. In <span style="font-weight:200;"> - only 6 months - </span> we onboard and train the 
+                new batch of junior programmers <span style="font-weight:200;">, whilst working on one or more 
+                projects of your backlog. In turn, the senior devs in your 
+                organization can focus on the delivery <br> of your key projects 
+                and as a bonus, <br> we easen up a little bit <br> the work of your hiring team.</span>
+              </h5>
+            <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;">/ ></h5>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>    
+      <div class="row" style="justify-content: flex-start; margin-bottom: -2px; padding: 0"> 
+        <img style="padding: 0" src="media/img2.png" alt="">
+      </div>
+      
+      <div class="row pt-5" style="background-color: #c50219">
+        <div class="col-1" style="padding: 1.5% 0 0 0">
+          <div class="decorate-tittle bc-orange"></div>
+        </div>
+        <div class="col-3 pb-5">
+          <h2 class="color-light-grey" style="line-height: 0.9; font-weight: 200">
+            <span class="color-grey" style="font-weight:200; padding-left: 0; color: #fff;">HOW </span><br>  
+            DO <span class="bc-orange color-red" style="font-weight:bold; display: inline-block">WE DO </span>
+            <span style="display: inline-block; margin-left: -12px; font-weight:bold">IT</span> 
+          </h2>
+        </div>
+        <div class="col-8" style="padding: 5.5% 0 0 0">
+          <div class="decorate-tittle bc-light-grey" ></div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5 pt-5">
+          
+          <div class="row" style="
+            font-style: italic;
+            height: 33% ;
+            background-image: url('media/img_3.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat;
+            filter: drop-shadow(2px 4px 16px orange);"
+            >
+            <div class="col-10">
+              <h3 class="color-red" style="margin: 22% 0 0 23%">
+                A <span style="font-weight: bold; font-size: 3vw">SIMPLE</span> <br>
+                PROCESS
+              </h3>
+              <div class="row color-red" style="margin-left: 12%">
+                <div class="col-2">
+                  <h3 style="margin: 15% 0% 0% 70%">IN</h3> 
+                </div>
+                <div class="col-2">
+                  <h3 style="font-size: 8vw; line-height: 0.8; padding: 0;">3</h3> 
+                </div>
+                <div class="col-2">
+                  <h3 style="margin-top: 85%;">STEPS</h3> 
+                </div>
+              </div>
+              <!-- <h3 class="color-red" style="margin: 15% 0 0 20%">IN</h3> -->
+              </div>
+          </div>
+
+        </div>
+        <div class="col-5 pt-5">
+          <div class="row">
+            <div class="col-1">
+              <img style="margin: 70% 0 0 30%; width: 80%;" src="media/arrow_right_orange.svg" alt="">
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start">
+              <h2 class="numbers color-white">.01</h2>
+              <div class="decorate-menu bc-orange" style="width: 40%; margin-left: 35%;"></div>
+            </div>
+            <div class="col-8">
+              <h3 class="color-orange" style="font-weight: bold; margin-top: 10%">ASSESMENT</h3>
+              <p class="color-white" style="font-size: 1.5vw">
+                We seek to understand your organization’s way of working <br> by learning your technology stack, methodologies and culture.
+               </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <img style="margin: 70% 0 0 30%; width: 80%;" src="media/arrow_right_orange.svg" alt="">
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start">
+              <h2 class="numbers color-white">.02</h2>
+              <div class="decorate-menu bc-orange" style="width: 40%; margin-left: 35%;"></div>
+            </div>
+            <div class="col-8">
+              <h3 class="color-orange" style="font-weight: bold; margin-top: 10%">EXECUTION</h3>
+              <p class="color-white" style="font-size: 1.5vw">
+                Execution. We pull together a squad between your junior devs and 1 senior dev and 
+                1 scrum lead of ours. This team will work together for 6 months 
+                developing a project in your backlog powered by PEP 
+                (our proprietary software used to customize the training to each person's needs). 
+                PEP stands for <br> < xxx > but most importantly for PEP Guardiola! During this period 
+                  we have several demos with your organization to ensure the project is aligned to your needs.                
+               </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <img style="margin: 70% 0 0 30%; width: 80%;" src="media/arrow_right_orange.svg" alt="">
+            </div>
+            <div class="col-3 d-flex flex-column align-items-start">
+              <h2 class="numbers color-white">.03</h2>
+              <div class="decorate-menu bc-orange" style="width: 40%; margin-left: 35%;"></div>
+            </div>
+            <div class="col-8">
+              <h3 class="color-orange" style="font-weight: bold; margin-top: 10%">CLOSING</h3>
+              <p class="color-white" style="font-size: 1.5vw">
+                Closing. The junior devs have acquired more seniority and 
+                are ready to take on projects of greater responsibility in 
+                your organization. Because all this time they have worked 
+                according to the info gathered in the initial assessment, 
+                interacted with your teams and even worked from your offices, 
+                they understand your company's processes and culture and 
+                are ready to hit the ground running.               
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row" style="justify-content: flex-start; margin-top: -2px; padding: 0">
+        <img style="padding: 0" src="media/img_4.png" alt="">
+      </div>
+
+      <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
+        <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
+        <img style="width: 80%" src="media/clients.png" alt="">
+      </div>
+
+      <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
+        <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
+        <img style="width: 80%" src="media/inversores.png" alt="">
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-1" style="padding: 1.5% 0 0 0">
+          <div class="decorate-tittle bc-light-grey"></div>
+        </div>
+        <div class="col-3">
+          <h2 style="line-height: 0.9">
+            <span class="color-white" style=" background-color: black; font-weight:200;  display: inline-block">CONTACT</span>
+            <!-- <span class="color-grey" style="font-weight:200; display: inline-block; margin-left: -3%;">CTO</span> -->
+          </h2>
+        </div>
+        <div class="col-8" style="padding: 1.5% 0 0 0">
+          <div class="decorate-tittle bc-grey" ></div>
+        </div>
+      </div>
+      <div class="row mt-5 pb-5" style="background-color: #80808026;">
+        <div class="col-1"></div>
+        <div class="col-5">
+          <form>
+            <div class="mb-5 mt-5">
+              <label for="Name" class="form-label">Full Name</label>
+              <input type="text" class="form-control color-dark" id="Name">
+            </div>
+            <div class="mb-5 mt-5">
+              <label for="Organization" class="form-label">Organization</label>
+              <input type="text" class="form-control" id="Organization">
+            </div>
+            <div class="row mb-5">
+              <div class="col-7">
+                <div class="row">
+                  <label for="Organization" class="form-label">Telephone</label>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="country-phone">
+                    <small id="country-phone-Help" class="form-text text-muted">Country</small>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control" id="area-phone">
+                    <small id="area-phone-Help" class="form-text text-muted">Area</small>
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="form-control" id="number-phone">
+                    <small id="number-phone-Help" class="form-text text-muted">Number</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <label for="Organization" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+            </div>
+            <div class="mb-5 mt-5">
+              <label for="Name" class="form-label">How can we help?</label>
+              <input type="text" class="form-control color-dark" id="Name">
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+          </form>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4" style="background-color: #8080801a;">
+          <div class="row" style="justify-content: flex-end; text-align: right; padding-top: 5%;">
+            <img class="mb-5 mt-3" style="width: 40%" src="media/logo.png" alt="teamcubation">
+            <h4 class="color-red mb-0">ORGANIZATION</h4>
+            <h4 class="color-green mb-0">SENIOR</h4>
+            <h4 class="color-orange mb-3">JUNIOR</h4>
+            <h5 class="color-turquoise mb-0">about us</h5>
+            <h5 class="color-turquoise mb-5">case studies</h5>
+            <div class="mb-5" style="height: 2px; background-color: #fff"></div>
+            <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
+            <p class="mb-3" style="margin-right: 3%;">All rights reserved</p>
+            <p>Cookies | Privacy policies</p>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row bc-red" style="height: 25px"></div>
     </div>
-    <script type="text/javascript">
-        const perc = parseInt(parseInt(document.getElementById('prog-perc').innerText, 10) / 2, 10);
-        const rest = 50 - perc;
-        document.getElementById('prog-bar').innerText = '[' + '#'.repeat(perc) + '.'.repeat(rest) + ']';
-    </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  </body>
+
 </html>
