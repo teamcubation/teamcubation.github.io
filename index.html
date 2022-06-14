@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/style.css">	
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVX5NJFK14"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -26,7 +25,6 @@
     
       gtag('config', 'G-VVX5NJFK14');
     </script>
-
   </head>
 
   <body>
@@ -320,7 +318,7 @@
           <form id="form-contact"> 
             <div class="mt-5">
               <label for="Name" class="form-label">Full Name</label>
-              <input type="text"  id="name" name="name"  class="form-control color-dark">
+              <input type="text"  id="name" name="name"  class="form-control color-dark" required>
             </div>
             <div class="mb-2 mt-2">
               <label for="Organization" class="form-label">Organization</label>
@@ -351,10 +349,10 @@
             </div>
             <div class="mb-5 mt-2">
               <label for="Message" class="form-label">How can we help?</label>
-              <input type="text" class="form-control color-dark" name="message" id="message">
+              <input type="text" class="form-control color-dark" name="message" id="message" required>
             </div>
 
-            <button type="button" id="submit-contact" name="submit-contact" class="btn btn-dark btn-lg">Submit</button>
+            <button type="submit" id="submit-contact" name="submit-contact" class="btn btn-dark btn-lg">Submit</button>
           </form>
         </div>
         <div class="col-1"></div>
