@@ -231,6 +231,16 @@ h3{
 		width: 18%!important;
 		text-align: right;
 	}
+	/* .steps{
+		font-style: italic;
+		height: 100% !important; 
+		background-size: contain; 
+		background-repeat: no-repeat;
+		filter: drop-shadow(2px 4px 16px orange);
+	} */
+	.steps{
+		display: none!important;
+	}
 
 }
 
@@ -324,8 +334,7 @@ a:hover{
 
 .steps{
     font-style: italic;
-    height: 33% ;
-    background-image: url('media/img_3.png'); 
+    height: 33% ; 
     background-size: contain; 
     background-repeat: no-repeat;
 	filter: drop-shadow(2px 4px 16px orange);
