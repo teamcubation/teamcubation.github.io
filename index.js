@@ -1,5 +1,6 @@
-$("#submit-contact").on( "click", function(){
-    $("#submit-contact").text('sending')
+$("#form-contact").on("submit", function(ev) {
+    ev.preventDefault();
+    $("#submit-contact").text('Sending...')
 	const data_name = $("#name").val();
     const data_number = `+${$("#country-phone").val()} ${$("#area-phone").val()} ${$("#number-phone").val()}` 
     const data_email = $("#email").val();
@@ -19,20 +20,20 @@ $("#submit-contact").on( "click", function(){
         dataType: 'json',
         success: (r) => {
             $('.alert').remove(); 
-            $("#form-contact").prepend('<div class="alert alert-success mt-1" role="alert"</div>')
-            $(".alert").text('send !!')
-            $("#submit-contact").text('submit')
-            $("#name").text('');
+            $("#form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
+            $(".alert").text('Your message has been sent, thank you!')
+            $("#submit-contact").text('Submit')
             clearForm();
         },
         error: (r) => {
             $('.alert').remove(); 
-            $("#form-contact").prepend('<div class="alert alert-danger mt-1" role="alert"</div>')
-            $(".alert").text('error !!')
-            $("#submit-contact").text('submit')
+            $("#form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
+            $(".alert").text('An error ocurred while sending the form, please try again.')
+            $("#submit-contact").text('Submit')
             clearForm();
         }
     });
+    return false;
 });
 
 const clearForm = () => {
