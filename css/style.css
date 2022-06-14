@@ -322,3 +322,11 @@ a:hover{
 	margin-right: 1%;
 }
 
+.steps{
+    font-style: italic;
+    height: 33% ;
+    background-image: url('media/img_3.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+	filter: drop-shadow(2px 4px 16px orange);
+}
