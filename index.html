@@ -50,10 +50,10 @@
               <div class="col-3 decorate-menu bc-green"></div>
               <div class="col-3 decorate-menu bc-orange"></div>
               <div class="col-3 decorate-menu bc-turquoise"></div>
-              <div class="header-organization-leyend">
+              <div class="header-organization-leyend" style="visibility: hidden">
                 <span class="arrow left" style="margin: 2.2% 3% 0 0"></span><h3 class="color-red">ORGANIZATIONS</h3>
               </div>
-              <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ </h3>
+              <h3 class="underscore" style="visibility: hidden">_ _ _ _ _ _ _ _ _ _ </h3>
             </div>
             <div class="row Rotary-legend">
               <h2> "Our DEVs are<br><span style="margin-left: 20px">resigning"</span></h2>
@@ -80,9 +80,9 @@
           <span class="color-orange" style="line-height: 0; margin: 0 -1% 0 1%; font-size: 3.5vw">/> </span>
         </h5>
       </div>
-      <div class="row" style="justify-content: right; margin: 1% 0 0 -21%;">
-         <p class="color-grey" style="padding: 0; width: 7.5%; font-size: 1.2vw; font-weight: 500; display: inline">learn more</p>
-        <span class="arrow down"></span>
+      <div class="row" id="learn-more" style="justify-content: right; margin: 1% 0 0 -21%;">
+         <a class="color-grey" href="#What_is_Tc" style="padding: 0; width: 7.5%; font-size: 1.2vw; font-weight: 500; display: inline">learn more</a>
+         <span class="arrow down"></span>
       </div>
       </div>
       <div  style="max-width: 100%; max-height: 3vw; overflow: hidden; padding: 0px 5px">
@@ -93,7 +93,7 @@
         </h3>
       </div>
 
-      <div class="row" style="margin-top: 5%">
+      <div class="row" id="What_is_Tc" style="margin-top: 5%; padding-top: 2%">
         <div class="col-1"></div>
         <div class="col-5">
           <div class="row">
@@ -290,7 +290,7 @@
         <img style="padding: 0" src="media/img_4.png" alt="">
       </div>
 
-      <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
+      <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
         <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
         <img style="width: 80%" src="media/clients.png" alt="">
       </div>
@@ -298,7 +298,7 @@
       <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
         <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
         <img style="width: 80%" src="media/inversores.png" alt="">
-      </div>
+      </div> -->
 
       <div class="row mt-5">
         <div class="col-1" style="padding: 1.5% 0 0 0">
@@ -317,7 +317,7 @@
       <div class="row mt-5 pb-5" style="background-color: #80808026;">
         <div class="col-1"></div>
         <div class="col-5">
-          <form>
+          <form id="form-contact"> 
             <div class="mb-5 mt-5">
               <label for="Name" class="form-label">Full Name</label>
               <input type="text"  id="name" name="name"  class="form-control color-dark">
@@ -361,15 +361,16 @@
         <div class="col-4" style="background-color: #8080801a;">
           <div class="row" style="justify-content: flex-end; text-align: right; padding-top: 5%;">
             <img class="mb-5 mt-3" style="width: 40%" src="media/logo.png" alt="teamcubation">
-            <h4 class="color-red mb-0">ORGANIZATION</h4>
+            <!-- <h4 class="color-red mb-0">ORGANIZATION</h4>
             <h4 class="color-green mb-0">SENIOR</h4>
             <h4 class="color-orange mb-3">JUNIOR</h4>
             <h5 class="color-turquoise mb-0">about us</h5>
-            <h5 class="color-turquoise mb-5">case studies</h5>
+            <h5 class="color-turquoise mb-5">case studies</h5> -->
             <div class="mb-5" style="height: 2px; background-color: #fff"></div>
-            <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
             <p class="mb-3" style="margin-right: 3%;">All rights reserved</p>
-            <p>Cookies | Privacy policies</p>
+            <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
+
+            <!-- <p>Cookies | Privacy policies</p> -->
           </div>
         </div>
         <div class="col-1"></div>

@@ -1,4 +1,5 @@
 $("#submit-contact").on( "click", function(){
+    $("#submit-contact").text('sending')
 	const data_name = $("#name").val();
     const data_number = `+${$("#country-phone").val()} ${$("#area-phone").val()} ${$("#number-phone").val()}` 
     const data_email = $("#email").val();
@@ -16,7 +17,30 @@ $("#submit-contact").on( "click", function(){
             email: data_email
         }),
         dataType: 'json',
-        success: (r) => { alert('Sent!'); },
-        error: (r) => { alert('error!'); }
+        success: (r) => {
+            $('.alert').remove(); 
+            $("#form-contact").prepend('<div class="alert alert-success mt-1" role="alert"</div>')
+            $(".alert").text('send !!')
+            $("#submit-contact").text('submit')
+            $("#name").text('');
+            clearForm();
+        },
+        error: (r) => {
+            $('.alert').remove(); 
+            $("#form-contact").prepend('<div class="alert alert-danger mt-1" role="alert"</div>')
+            $(".alert").text('error !!')
+            $("#submit-contact").text('submit')
+            clearForm();
+        }
     });
 });
+
+const clearForm = () => {
+    $("#name").val('');
+    $("#country-phone").val('');
+    $("#area-phone").val('');
+    $("#number-phone").val('')    
+    $("#email").val('');
+    $("#message").val('');
+    $("#organization").val('');
+}
