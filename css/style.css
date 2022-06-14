@@ -225,3 +225,23 @@ h3{
 		width: 120px; 
 	}
 } 
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+a:hover{
+	color: var(--color-logo-red)
+}
+
+#learn-more:hover{
+	color: var(--color-logo-red)
+}
+
+#learn-more .arrow{
+	margin-left: -15px;
+    margin-top: 0.5%;
+    height: 0.2%;
+    width: 0.2%;
+    padding: 0.2%;
+}
