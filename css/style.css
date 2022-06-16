@@ -9,7 +9,7 @@ h1{
 }
 
 h2{
-	font-size: 3.8vw;
+	font-size: 3.6vw;
 	/* font-size: calc(3em + 1vw); */
 }
 
@@ -57,7 +57,7 @@ h5{
 }
 
 .bc-light-grey{
-	background-color: var(--color-light-grey); 
+	background-color: var(--color-light-grey);
 }
 
 .color-white{
@@ -144,55 +144,57 @@ h5{
 }
 
 .Header-organization > h3{
-	margin-top: -8%; 
+	margin-top: -8%;
 	padding: 0;
 	padding-right: 1%;
 }
 
 .underscore{
 	color: #a3a3a3;
-	font-weight: 100; 
+	font-weight: 100;
 }
 
 .Rotary-legend{
-	text-align: center; 
-	margin: 11% 0 0 -5%
+	text-align: center;
+	margin: 3% 0 0 0%;
+	min-height: 220px;
 }
 
-.Rotary-legend > h2{
-	color:#5f5f5f; 
-	font-weight: bold; 
-	line-height: 1; 
+.Rotary-legend h2{
+	color:#5f5f5f;
+	font-weight: bold;
+	line-height: 1;
 	font-style: italic
 }
 
 .Central-legend{
     text-align: right;
-    margin: 11% 0 0 0%;
+    margin: 11% 0 0 -25%;
 }
 
 .Central-legend > h1{
 	font-size: 6.5vw;
-	line-height: 0.5; 
-	font-weight: bold; 
+	line-height: 0.5;
+	font-weight: bold;
+	margin-left: -10%;
 }
 
 .Central-legend > h2{
 	font-size: 5vw;
-	font-weight: bold; 
-	/* margin-left: 50%; */
+	font-weight: bold;
+	margin-left: 23%;
 }
 
 .Descriptive-legend{
-	justify-content: center;
-	text-align: center;
-    margin: -6.5% 0 0 50%;
+	justify-content: right;
+	text-align: left;
+    margin: -6.5% 0 0 95%;
 }
 
 .Descriptive-legend > h5{
 	color:  var(--color-grey);
-	font-size: 2vw; 
-	line-height: 0.9; 
+	font-size: 2vw;
+	line-height: 0.9;
 	margin-left: -6%
 }
 /*  */
@@ -219,7 +221,7 @@ h5{
 	transform: rotate(135deg);
 }
 .arrow.left {
-	transform: rotate(45deg); 
+	transform: rotate(45deg);
 }
 .arrow.top {
 	transform: rotate(315deg);
@@ -236,7 +238,7 @@ h5{
 	font-weight: 200;
 }
 
-@media only screen and (max-width: 1100px) { 
+@media only screen and (max-width: 1100px) {
 	.Central-legend > h2{
 		font-size: 3.5vw;
 	}
@@ -253,38 +255,40 @@ h5{
 }
 
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
 	.logo{
 		z-index: 2;
 		position: absolute;
 		margin: 3% 0 0 3%;
-		width: 25%; 
+		width: 25%;
 	}
 	.Header-organization{
 		display: none;
 	}
 	.Rotary-legend{
-		text-align: right;
+		min-height: 120px!important;
+		text-align: center;
 		margin-top: 5%;
 	}
-	.Rotary-legend > h2{
+	.Rotary-legend h2{
 		font-size: calc(1.5em + 3.5vw)
 	}
 	.Central-legend{
 		text-align: center;
-		margin-top: 8%;
+		margin: 8% 0 5% 0!important;
 	}
 	.Central-legend > h2,
 	.Central-legend > h1{
-		font-size: calc(2em + 3.5vw)
+		margin: 0!important;
+		font-size: calc(2.2em + 3.5vw)
 	}
 	.Descriptive-legend{
 		text-align: center;
-		margin: 2%	
+		margin: 2%
 	}
 	.Descriptive-legend > h5{
-		font-size: calc(1em + 2vw);
-		line-height: 0.9; 
+		font-size: calc(0.6em + 2vw);
+		line-height: 1;
 	}
 	#What_is_Tc h2{
 		font-size: calc(1.8em + 1vw) !important;
@@ -355,14 +359,14 @@ h5{
 }
 
 
-@media only screen and (max-width: 700px) { 
+@media only screen and (max-width: 700px) {
 	.logo{
 		z-index: 2;
 		position: absolute;
 		margin: 3% 0 0 3%;
-		width: 35%; 
+		width: 35%;
 	}
-} 
+}
 
 @media only screen and (max-width: 700px) {
 	.bc_tc_grey{
@@ -397,8 +401,8 @@ a:hover{
 .steps{
 	width: 100%;
     height: 40%;
-	min-height: 250px; 
-    background-size: contain; 
+	min-height: 250px;
+    background-size: contain;
     background-repeat: no-repeat;
 	background-position: center;
 	filter: drop-shadow(2px 4px 16px rgb(171, 5, 5));
@@ -409,13 +413,13 @@ a:hover{
 
 .bc_tc_grey{
 	background-image: url('/media/tc_vertical.svg');
-	background-size: contain; 
+	background-size: contain;
 	background-repeat: no-repeat;
 	height: 650px;
 }
 
 .arrowOrange{
-	margin: 70% 0 0 30%; 
+	margin: 70% 0 0 30%;
 	width: 80%;
 	color: var(--color-logo-orange);
 }
