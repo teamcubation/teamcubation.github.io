@@ -254,6 +254,12 @@ h5{
 	}
 }
 
+@media only screen and (max-width: 1367px) {
+	.Rotary-legend{
+		min-height: 170px!important;
+	}
+}
+
 
 @media only screen and (max-width: 768px) {
 	.logo{
@@ -366,9 +372,6 @@ h5{
 		margin: 3% 0 0 3%;
 		width: 35%;
 	}
-}
-
-@media only screen and (max-width: 700px) {
 	.bc_tc_grey{
 		height: 280px!important;
 	}
