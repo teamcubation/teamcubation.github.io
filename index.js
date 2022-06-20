@@ -7,8 +7,8 @@ $("#form-contact").on("submit", function(ev) {
 	const data_message = $("#message").val();
     const data_organization = $("#organization").val();
     $.ajax({
-        url: "ttps://localhost:3000",
-        // url: 'https://api.prod.tq.teamcubation.com/contact',
+        // url: "ttps://localhost:3000",
+        url: 'https://api.prod.tq.teamcubation.com/contact',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
