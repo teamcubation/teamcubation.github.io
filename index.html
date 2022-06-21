@@ -294,39 +294,35 @@ Estos últimos dos pasos pueden repetirse tantas veces como hagan falta, agregan
     <div class="col-sm-12 col-lg-5 pb-5">
       <form id="form-contact">
         <div class="mt-5">
-          <label for="name" class="form-label">Nombre</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" placeholder="Nombre" required>
         </div>
-        <div class="mb-2 mt-2">
-          <label for="organization" class="form-label">Compañía</label>
-          <input type="text" name="organization" id="organization">
+        <div class="mt-4">
+          <input type="text" name="organization" id="organization" placeholder="Compañía">
         </div>
-        <div class="row mb-2">
+        <div class="mt-4">
+            <label for="country-phone" class="form-label">Teléfono</label>
+        </div>
+        <div class="row">
           <div class="col-md-7 col-sm-12">
             <div class="row">
-              <label for="country-phone" class="form-label">Telefono</label>
               <div class="col-3">
-                <input type="text" name="country-phone"  id="country-phone">
-                <small id="country-phone-Help" class="form-text text-muted">País</small>
+                <span>+</span>
+                <input style="width: calc(100% - 15px)" type="text" name="country-phone" id="country-phone" placeholder="País">
               </div>
               <div class="col-3">
-                <input type="text" name="area-phone"  id="area-phone">
-                <small id="area-phone-Help" class="form-text text-muted">Area</small>
+                <input type="text" name="area-phone"  id="area-phone" placeholder="Área">
               </div>
               <div class="col-6">
-                <input type="text"  name="number-phone" id="number-phone">
-                <small id="number-phone-Help">Número</small>
+                <input type="text"  name="number-phone" id="number-phone" placeholder="Número">
               </div>
             </div>
           </div>
-          <div class="col-md-5 col-sm-12">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" name="email" id="email">
+          <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+            <input type="email" name="email" id="email" placeholder="E-mail">
           </div>
         </div>
-        <div class="mb-5 mt-2">
-          <label for="message" class="form-label">¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?</label>
-          <input type="text" name="message" id="message" required>
+        <div class="mb-4 mt-4">
+          <textarea name="message" id="message" placeholder="¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?" rows="1" required></textarea>
         </div>
 
         <button type="submit" id="submit-contact" name="submit-contact" class="btn-tc">Enviar<span class="_effect">_</span></button>
