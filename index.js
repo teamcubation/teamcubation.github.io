@@ -1,6 +1,16 @@
+import data_en from "./src/locales/en.json" assert {type: 'json'};
+import data_es from "./src/locales/es.json" assert {type: 'json'};
+
+let data;
+
+$(document).ready(
+    document.documentElement.lang === 'es' ? data = data_es : data = data_en,
+    $("#form-contact").append('<button type="submit" id="submit-contact" name="submit-contact" class="btn-tc">' + data.section_5["contact-form"].btn_text +'<span class=_effect>_</span></button>')
+);
+
 $("#form-contact").on("submit", function(ev) {
     ev.preventDefault();
-    $("#submit-contact").val('Enviando...')
+    $("#submit-contact").val(data.section_5["contact-form"].btn_sending)
 	const data_name = $("#name").val();
     const data_number = `+${$("#country-phone").val()} ${$("#area-phone").val()} ${$("#number-phone").val()}` 
     const data_email = $("#email").val();
@@ -22,15 +32,15 @@ $("#form-contact").on("submit", function(ev) {
         success: (r) => {
             $('.alert').remove(); 
             $("#form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
-            $(".alert").text('Su mensaje se ha enviado correctamente, gracias !!')
-            $("#submit-contact").val('Enviar"<span class=_effect>_</span>"')
+            $(".alert").text(data.section_5["contact-form"]["submit-response"].success)
+            $("#submit-contact").val(data.section_5["contact-form"].btn_text +"<span class=_effect>_</span>")
             clearForm();
         },
         error: (r) => {
             $('.alert').remove(); 
             $("#form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
-            $(".alert").text('Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo.')
-            $("#submit-contact").val('Enviar"<span class=_effect>_</span>"')
+            $(".alert").text(data.section_5["contact-form"]["submit-response"].error)
+            $("#submit-contact").val(data.section_5["contact-form"].btn_text +"<span class=_effect>_</span>")
             clearForm();
         }
     });

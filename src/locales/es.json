@@ -1,16 +1,99 @@
 {
-  "my": {
-    "key": "chau",
-    "class": "es"
+  "lang": {
+    "text": "es"
   },
-  "other": {
-    "key": "hombre",
-    "ok": "confirmar"
+  "section_1": {
+    "url": "http://127.0.0.1:5500/en",
+    "flag": "media/b_english.png",
+    "carousel": {
+      "text_1": "“Perdemos oportunidades por falta de gente”",
+      "helper_1": "CEO",
+      "text_2": "“Se nos van los devs”",
+      "helper_2": "CTO",
+      "text_3": "“Tenemos el equipo a la mitad”",
+      "helper_3": "Product Manager",
+      "text_4": "“No hay mas seniors”",
+      "helper_4": "People Manager"
+    },
+    "central_legend": {
+      "style_h1": "margin-left: 0%",
+      "h1": "ENTRANAMOS",
+      "h2": "DEVELOPERS"
+    },
+    "descriptive_legend": {
+      "class": "Descriptive-legend-es",
+      "class_line4": "d-inline color-red",
+      "class_line3": "d-block color-red",
+      "line_1": "TRANSFORMAMOS JUNIORS EN EXPERTOS ",
+      "line_2": "READY-TO-WORK MIENTRAS ",
+      "line_3": "DESARROLLAN EL SOFTWARE QUE ",
+      "line_4": "SU ORGANIZACIÓN NECESITA."
+    },
+    "learn_more": {
+      "text": "Conozca más"
+    }
   },
-  "redirect": {
-    "key": "cambiar a ingles"
+  "section_2": {
+    "tittle": "QUÉ ES",
+    "text": "Somos el engranaje que faltaba entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando y entrenando equipos de desarrollo para transformar juniors en recursos con experiencia"
   },
-  "url": {
-    "key": "http://localhost:5501/en"
+  "section_3": {
+    "tittle": {
+      "text_1": "QUÉ",
+      "text_2": "SOLUCION",
+      "text_3": "AMOS"
+    } ,
+    "text_1": "Conseguir desarrolladores capacitados para su organización se hace cada vez más difícil y toma más tiempo. Por eso Teamcubation desarrolló la manera de adelantar el proceso y en solo seis meses, transforma a juniors en colaboradores productivos y los prepara para sumarse a su empresa mientras construyen el software que su organización tiene en backlog.",
+    "text_2": "Existen muchísimas personas con potencial, pero sin práctica. Encontrarlos y transformarlos en profesionales experimentados, demanda esfuerzo, dinero . y sobre todo tiempo. Teamcubation se encarga de romper la trampa de la experiencia, entrenando gente que usualmente no entraría en el hiring pipeline de su organización y encargándose —en solo seis meses— de la inducción del nuevo colaborador, permitiendo que la organización se nutra constantemente de gente nueva sin ralentizar la estructura actual y solucionando necesidades de software en su organización."
+  },
+  "section_4": {
+    "tittle": {
+      "text_1": "CÓMO",
+      "text_2": "LO",
+      "text_3": "HACE",
+      "text_4": "MOS"
+    } ,
+    "img_steps": "media/img_3_es.png",
+    "steps": {
+      "1":{
+        "tittle": "ASSESMENT",
+        "text": "Análisis y evaluación de la forma de trabajar de su organización a través de la observación y el aprendizaje de sus metodologías, stack tecnológico y cultura."
+      },
+      "2":{
+        "tittle": "EJECUCIÓN",
+        "text": "Se forma un Squad para el desarrollo de un software que está en el backlog de la organización. Un equipo mixto, conformado por tres desarrolladores juniors de su empresa que serán entrenados por un Squad líder y un desarrollador Senior de nuestro equipo. Guiados por nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), aplicarán la mejor forma de potenciar el talento y encarar los desafíos de los recursos juniors asignados por su organización."
+      },
+      "3":{
+        "tittle": "DELIVERY",
+        "text": " Luego de seis meses, gracias a nuestra tecnología de evaluación y trabajando en Teamcubation para la organización, los tres juniors se transformaron en colaboradores productivos que comprenden la cultura, están imbuidos en los procesos de la empresa y tienen las habilidades requeridas para sumarse sin fricciones a los equipos de la organización. A su vez, este será el momento en el cual se entregará el software desarrollado o un hito en el proceso de desarrollo.<BR><BR>Estos últimos dos pasos pueden repetirse tantas veces como hagan falta, agregando nuevos recursos en un pipeline virtuoso."
+      }
+    }
+  },
+  "section_5": {
+    "tittle": {
+      "text_1": "CONTACTE",
+      "text_2": "NOS"
+    },
+    "contact-form": {
+      "name": "Nombre",
+      "organization": "Compañia",
+      "telephone": {
+        "label": "Teléfono",
+        "country": "País",
+        "area": "Área",
+        "number" : "Número"
+      },
+      "email": "E-mail",
+      "reason": "¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?",
+      "btn_text": "Enviar",
+      "btn_sending": "Enviando...",
+      "submit-response": {
+        "success": "Su mensaje se ha enviado correctamente, gracias !!",
+        "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+      }
+    }
+  },
+  "footer": {
+    "legal": "Todos los derechos reservados"
   }
 }

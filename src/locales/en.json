@@ -1,16 +1,99 @@
 {
-    "my": {
-      "key": "Bye",
-      "class": "en"
+  "lang": {
+    "text": "en"
+  },
+  "section_1": {
+    "url": "http://127.0.0.1:5500/",
+    "flag": "media/b_spanish.png",
+    "carousel": {
+      "text_1": "“We lose opportunities due to lack of people”",
+      "helper_1": "CEO",
+      "text_2": "“The devs are leaving us”",
+      "helper_2": "CTO",
+      "text_3": "“We have the team at half”",
+      "helper_3": "Product Manager",
+      "text_4": "“There are no more seniors”",
+      "helper_4": "People Manager"
     },
-    "other": {
-      "key": "man",
-      "ok": "confirm"
+    "central_legend": {
+      "style_h1": "margin-left: 10%",
+      "h1": "WE TRAIN",
+      "h2": "DEVELOPERS"
     },
-    "redirect": {
-      "key": "change to castellano"
+    "descriptive_legend": {
+      "class": "Descriptive-legend-en",
+      "class_line4": "d-none",
+      "class_line3": "d-inline color-red",
+      "line_1": "THEY GAIN EXPERIENCE WHILST",
+      "line_2": " DEVELOPING A SOFTWARE ",
+      "line_3": "YOUR ORGANIZATION NEEDS.",
+      "line_4": ""
     },
-    "url": {
-      "key": "http://localhost:5501"
+    "learn_more": {
+      "text": "Learn more"
     }
+  },
+  "section_2": {
+    "tittle": "WHAT IS",
+    "text": "Teamcubation is the bridge between education and work. we want to contribute to solve the digital senior talent shortage by incubating junior development teams to take on more senior roles."
+  },
+  "section_3": {
+    "tittle": {
+      "text_1": "WHAT IS",
+      "text_2": "OUR",
+      "text_3": "ANSWER"
+    } ,
+    "text_1": "With the surge of digital careers and coding schools, there are plenty of tech professionals with lots of potential and yet not enough experience. Finding and transforming them into rounded and experienced professionals takes effort, money, but most of all time and dedication.",
+    "text_2": "Teamcubation hacks the experience challenge, by providing an opportunity for people who would otherwise not make it to the pipeline. In only 6 months, we onboard and train the new batch of junior programmers, whilst working on one or more projects of your backlog. In turn, the senior devs in your organization can focus on the delivery of your key projects and as a bonus, we easen up a little bit the work of your hiring team."
+  },
+  "section_4": {
+    "tittle": {
+      "text_1": "HOW",
+      "text_2": "DO",
+      "text_3": "WE DO",
+      "text_4": "IT"
+    },
+    "img_steps": "media/img_3.png",
+    "steps": {
+      "1":{
+        "tittle": "ASSESMENT",
+        "text": "We seek to understand your organization’s way of working by learning your technology stack, methodologies and culture."
+      },
+      "2":{
+        "tittle": "EXECUTION",
+        "text": "We pull together a squad between your junior devs and 1 senior dev and 1 scrum lead of ours. This team will work together for 6 months developing a project in your backlog powered by PEP (our proprietary software used to customize the training to each person's needs). PEP stands for Programming Experience Platform but most importantly for PEP Guardiola! During this period we have several demos with your organization to ensure the project is aligned to your needs."
+      },
+      "3":{
+        "tittle": "DELIVERY",
+        "text": "The junior devs have acquired more seniority and are ready to take on projects of greater responsibility in your organization. Because all this time they have worked according to the info gathered in the initial assessment, interacted with your teams and even worked from your offices, they understand your company's processes and culture and are ready to hit the ground running."
+      }
+    }
+  },
+  "section_5": {
+    "tittle": {
+      "text_1": "CONTACT",
+      "text_2": "US"
+    },
+    "contact-form": {
+      "name": "Name",
+      "organization": "Organization",
+      "telephone": {
+        "label": "Telephone",
+        "country": "Country",
+        "area": "Area",
+        "number" : "Number"
+      },
+      "email": "E-mail",
+      "reason": "¿How can we help?",
+      "btn_text": "Submit",
+      "btn_sending": "Sending...",
+      "submit-response": {
+        "success": "Your message has been sent, thank you!",
+        "error": "An error ocurred while sending the form, please try again."
+      }
+    }
+  },
+  "footer": {
+    "legal": "All rights reserved"
   }
+}
