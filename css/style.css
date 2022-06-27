@@ -33,7 +33,7 @@ h5{
 .color{
 	--color-logo-white: #fff;
 	--color-logo-red: #ff1322;
-	--color-red-dark: #d3031c;
+	--color-red-dark: #c5000c;
 	--color-logo-green: #446e5c;
 	--color-logo-turquoise: #317287;
 	--color-logo-orange: #efa31e;
@@ -245,12 +245,6 @@ h5{
 	line-height: 0.8;
 }
 
-/* .Descriptive-legend-en > h4,
-.Descriptive-legend-es > h4{
-	display: inline;
-} */
-/*  */
-
 .arrow {
 	color: var(--color-grey);
 	display: inline-block;
@@ -310,15 +304,16 @@ h5{
 		min-height: 160px!important;
 	}
 }
-@media only screen and (max-width: 1367px) {
-	/* .Descriptive-legend-es{
+
+/* @media only screen and (max-width: 1367px) {
+	.Descriptive-legend-es{
 		margin: -7% 0 1% 105%;
 	}
 	.Descriptive-legend-en{
 		margin: -7% 0 1% 55%;
     	width: 40%;
-	} */
-}
+	}
+} */
 
 @media only screen and (max-width: 768px) {
 	.logo{
@@ -377,26 +372,26 @@ h5{
 		font-size: calc(1.8em + 1vw) !important
 	}
 	#ourAnswer h5{
-		font-size: calc(1em + 1.3vw) !important;;
+		font-size: calc(1em + 1.3vw) !important;
 	}
 	#ourAnswer .decorate-lg{
-		width: 15% !important;;
+		width: 19% !important;
 	}
 	#ourAnswer .tittle{
-		width: 75% !important;;
+		width: 74% !important;
 	}
 
 	#HowWeDo h2{
 		font-size: calc(2em + 1.2vw) !important;
 	}
 	#HowWeDo h5{
-		font-size: calc(1em + 1.3vw) !important;;
+		font-size: calc(1em + 1.3vw) !important;
 	}
 	#HowWeDo h3{
-		font-size: calc(1.2em + 1.5vw) !important;;
+		font-size: calc(1.2em + 1.5vw) !important;
 	}
 	#HowWeDo p{
-		font-size: calc(1em + 0.5vw) !important;;
+		font-size: calc(1em + 0.5vw) !important;
 	}
 	.numbers{
 		font-size: calc(3em + 1vw) !important;
@@ -466,6 +461,9 @@ h5{
 		margin: 0;
 		filter:none
 	}
+	.hidden_tc_vertical{
+		height: 90px;	
+	}
 }
 
 a:link, a:visited, a:active {
@@ -490,8 +488,6 @@ a:hover{
 	margin-left: 10px;
 	float: right;
 }
-
-/* section what is tc */
 
 .bc_tc_grey{
 	height: 650px;
@@ -570,4 +566,11 @@ input:focus, textarea:focus{
 	49% { opacity: 0; }
 	50% { opacity: 1; }
 	100% { opacity: 1; }
+}
+
+.hidden_tc_vertical{
+	margin-top: -10%;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(0% 0%, 100% 8vw, 100% 100%, 0% 100%);
+    padding: 0;
 }
