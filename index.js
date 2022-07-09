@@ -2,6 +2,14 @@ import data_en from "./src/locales/en.json" assert {type: 'json'};
 import data_es from "./src/locales/es.json" assert {type: 'json'};
 
 let data;
+// const location = document.location.href;
+// if(location.includes('organization')){
+//     $("#organization").show();
+// }
+// else{
+//     $("#landing").show('slow');
+// }
+
 
 $(document).ready(
     document.documentElement.lang === 'es' ? data = data_es : data = data_en,
@@ -56,3 +64,10 @@ const clearForm = () => {
     $("#message").val('');
     $("#organization").val('');
 }
+
+$("#btn-organization").on("click", function(e){
+    e.preventDefault;
+    $("#landing").hide('slow');
+    $("#organization").show('slow');
+    window.history.pushState('', '', '#organization')
+});
