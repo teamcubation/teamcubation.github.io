@@ -96,14 +96,14 @@ $(".form-contact").on("submit", function(ev) {
         dataType: 'json',
         success: (r) => {
             $('.alert').remove(); 
-            $("#form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
+            $(".form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
             $(".alert").text(dataByLang.formContact.submitResponse.success)
             $(".submit-contact").val(dataByLang.formContact.btnSend +"<span class=_effect>_</span>")
             clearForm();
         },
         error: (r) => {
             $('.alert').remove(); 
-            $("#form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
+            $(".form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
             $(".alert").text(dataByLang.formContact.submitResponse.error)
             $(".submit-contact").val(dataByLang.formContact.btnSend +"<span class=_effect>_</span>")
             clearForm();
@@ -113,13 +113,13 @@ $(".form-contact").on("submit", function(ev) {
 });
     
 const clearForm = () => {
-    $("#name").val('');
-    $("#country-phone").val('');
-    $("#area-phone").val('');
-    $("#number-phone").val('')    
-    $("#email").val('');
-    $("#message").val('');
-    $("#organization").val('');
+    $(".name").val('');
+    $(".country-phone").val('');
+    $(".area-phone").val('');
+    $(".number-phone").val('')    
+    $(".email").val('');
+    $(".message").val('');
+    $(".organization").val('');
 }
 
 // hide-show home and pages /////////
