@@ -3,9 +3,40 @@
   "lang": {
     "text": "es"
   },
-  "section_1": {
+  "textLinks": {
+    "organization": "ORGANIZACIÓN",
+    "senior": "SENIOR",
+    "junior": "JUNIOR"
+  },
+  "home":{
     "url": "https://teamcubation.com/en",
-    "flag": "media/b_english.png",
+    "welcome": "Bien_venido",
+    "enter":{
+      "organization": {
+        "name": "ORGANIZACIÓN",
+        "description-bold": "TRASFORMAMOS JUNIORS EN EXPERTOS RTW",
+        "description":"(READY TO WORK) MIENTRAS DESARROLLAN EL SOFTWARE QUE SU ORGANIZACIÓN NECESITA"
+      },
+      "senior": {
+        "name": "SENIOR",
+        "description": "TE ENSEÑAMOS A TRANSFORMAR JUNIORS EN SENIORS RTW"
+      },
+      "junior": {
+        "name": "JUNIOR",
+        "description-bold": "SOMOS UNA MÁQUINA DEL TIEMPO",
+        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA DE 2 AÑOS EN 6 MESES"
+      },
+      "team": {
+        "name": "TEAM",
+        "description-bold": "CONOCÉ TODO SOBRE NOSOTROS",
+        "description":"QUÉ Y QUIÉNES NOS HACEN LA PRIMER EMPRESA EN EL MERCADO DE CAPACITACIÓN DE DESARROLLADORES IN-OUT"
+      }
+    }
+  },
+  "section_1": {
+    "url": "https://teamcubation.com/en/#organization/",
+    "flag": "media/flag-eu.png",
+    "tittle": "ORGANIZACIÓN",
     "carousel": {
       "text_1": "“Perdemos oportunidades por falta de gente”",
       "helper_1": "CEO",
@@ -17,11 +48,12 @@
       "helper_4": "People Manager"
     },
     "central_legend": {
-      "style_h1": "margin-left: 0%",
+      "style_h1": "margin-left: 2%",
       "h1": "ENTRENAMOS",
       "h2": "DEVELOPERS"
     },
     "descriptive_legend": {
+      "style_closing_tag": "margin-left: 7%; font-size: calc(1.1em + 2vw); line-height: 0;",
       "class": "Descriptive-legend-es",
       "class_line4": "d-inline color-red",
       "class_line3": "d-block color-red",
@@ -95,6 +127,196 @@
     }
   },
   "footer": {
-    "legal": "Todos los derechos reservados"
+    "legal": "Todos los derechos reservados",
+    "searches": {
+      "link": " https://teamcubation.bamboohr.com/jobs/",
+      "text": "Trabajá con nosotros"
+    }
+  },
+  "senior":{
+    "section_1": {
+      "url": "https://teamcubation.com/en/#senior/",
+      "flag": "media/b_english.png",
+      "tittle": "SENIOR",
+      "carousel": {
+        "text_1": "“No tengo pichis”",
+        "helper_1": "CEO",
+        "text_2": "“No hay mas seniors”",
+        "helper_2": "CTO",
+        "text_3": "“Tenemos el equipo a la mitad”",
+        "helper_3": "Product Manager",
+        "text_4": "“No hay mas seniors”",
+        "helper_4": "People Manager"
+      },
+      "central_legend": {
+        "style_h1": "margin-left: 13%; font-size: calc(1.6em + 2.7vw);",
+        "style_h2": "margin-left: 21%; font-size: calc(1.4em + 2vw);",
+        "h1": "TRANSFORMAMOS",
+        "h2": "JUNIORS EN SENIORS"
+      },
+      "descriptive_legend": {
+        "class": "Descriptive-legend-senior-es",
+        "class_line4": "d-inline color-green weight-600",
+        "line_1": "ACUMULANDO EXPERIENCIA MIENTRAS",
+        "line_2": "DESARROLLAN EL SOFTWARE ",
+        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+      },
+      "learn_more": {
+        "text": "Conozca más"
+      }
+    },
+    "section_2": {
+      "tittle": "QUÉ SOMOS_?",
+      "text": "SOMOS LA EMPRESA QUE TE ENSEÑA A TRANSFORMAR A JUNIORS EN SENIORS. Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."
+    },
+    "section_3": {
+      "tittle": {
+        "text_1": "QUÉ",
+        "text_2": "SOLUCION",
+        "text_3": "AMOS"
+      } ,
+      "text_1": "Las organizaciones piden desarrolladores senior, pero el mercado solo tiene juniors. ¿Cómo lograr la alquimia de pasar de una condición a otra?.",
+      "text_2": "Teamcubation se encarga de romper el loop de la falta de experiencia transformando a desarrolladores novicios en un equipo cohesivo y eficiente listo para dar lo mejor en la compañía en la que fueron contratados. Y quién los transforme, serás tu."
+    },
+    "section_4": {
+      "tittle": {
+        "text_1": "CÓMO",
+        "text_2": "LO",
+        "text_3": "HACE",
+        "text_4": "MOS"
+      } ,
+      "img_steps": "media/senior/img_3_es.png",
+      "steps": {
+        "1":{
+          "tittle": "Onboarding en Teamcubation:",
+          "text": "Bienvenido a casa. En Teamcubation aprenderás no solo nuevo código, sino también a liderar equipos, enseñar, ser mentor y ser el líder de tu squad."
+        },
+        "2":{
+          "tittle": "Onboarding en la organización cliente:",
+          "text": "Si eres un Senior Squad Member, harás foco en comprender el stack tecnológico de la organización: ¿qué hacen?, ¿qué framework? Si eres un Squad Leader, harás foco en la cultura de la organización: ¿qué metodología usan?, ¿cómo lo hacen?"
+        },
+        "3":{
+          "tittle": "Ejecución:",
+          "text": " Asignamos un proyecto, un Squad y durante seis meses te comprometes a acelerar la transformación de juniors en seniors con la ayuda de nuestro propio software propietario de analíticas de aprendizaje, Programming Experience Platform (PEP) que, combinado con tu mentoría y experiencia, nos permitirá detectar las áreas que demandan más atención de cada uno de los rookies."
+        }
+      }
+    },
+    "section_5": {
+      "tittle": {
+        "text_1": "CONTACTE",
+        "text_2": "NOS"
+      },
+      "contact-form": {
+        "name": "Nombre",
+        "organization": "Compañia",
+        "telephone": {
+          "label": "Teléfono",
+          "country": "País",
+          "area": "Área",
+          "number" : "Número"
+        },
+        "email": "E-mail",
+        "reason": "¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?",
+        "btn_text": "Enviar",
+        "btn_sending": "Enviando...",
+        "submit-response": {
+          "success": "Su mensaje se ha enviado correctamente, gracias !!",
+          "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+        }
+      }
+    }
+  },
+  "junior":{
+    "section_1": {
+      "url": "https://teamcubation.com/en/#junior/",
+      "flag": "media/b_english.png",
+      "tittle": "JUNIOR",
+      "carousel": {
+        "text_1": "“La máquina del tiempo existe”",
+        "helper_1": "CEO",
+        "text_2": "“No hay mas seniors”",
+        "helper_2": "CTO",
+        "text_3": "“Tenemos el equipo a la mitad”",
+        "helper_3": "Product Manager",
+        "text_4": "“No hay mas seniors”",
+        "helper_4": "People Manager"
+      },
+      "central_legend": {
+        "style_h1": "margin-left: 17%; line-height: 0.7; font-size: calc(1.8em + 4.2vw);",
+        "style_h2": "margin-left: 24%; font-size: calc(1.4em + 2.5vw);",
+        "h1": "EXPERIENCIA",
+        "h2": "6 MESES = 2 AÑOS"
+      },
+      "descriptive_legend": {
+        "class": "Descriptive-legend-junior-es",
+        "class_line3": "d-inline color-light-turquoise weight-600",
+        "line_1": "ACUMULÁ EXPERIENCIA MIENTRAS",
+        "line_2": "DESARROLLAS EL SOFTWARE ",
+        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+      },
+      "learn_more": {
+        "text": "Conozca más"
+      }
+    },
+    "section_2": {
+      "tittle": "QUÉ SOMOS_?",
+      "text": "SOMOS UNA MÁQUINA DEL TIEMPO Y HACEMOS QUE TENGAS LA EXPERIENCIA DE 2 AÑOS EN 6 MESES. La máquina del tiempo existe. Hola, Somos Teamcubation."
+    },
+    "section_3": {
+      "tittle": {
+        "text_1": "QUÉ",
+        "text_2": "SOLUCION",
+        "text_3": "AMOS"
+      } ,
+      "text_1": "Ocupamos el engranaje que falta entre la universidad y el mundo laboral de la industria digital.",
+      "text_2": "O dicho de otra manera: transformamos a un junior en un “ready to work”, a un David en un Goliat, a un Pelé en un Maradona. Te hacemos ganar experiencia en un ambiente transparente, agradable, con buena gente, que sabe mucho sobre cómo programar, pero mejor aún, sabe cómo enseñar."
+    },
+    "section_4": {
+      "tittle": {
+        "text_1": "CÓMO",
+        "text_2": "LO",
+        "text_3": "HACE",
+        "text_4": "MOS"
+      } ,
+      "img_steps": "media/junior/img_3_es.png",
+      "steps": {
+        "1":{
+          "tittle": "Onboarding en Teamcubation:",
+          "text": "¿Listo para viajar en el tiempo y hacer en seis meses lo que a cualquier otra persona le tomaría dos años? Te asignaremos a un Squad, donde te empaparás de las metodologías y tecnologías y desarrollarás un proyecto en la organización de la que eres parte."
+        },
+        "2":{
+          "tittle": "Incubación y aprendizaje:",
+          "text": "Código. Código. Mucho código. Código como nunca. Conocerás gente interesante y te divertirás adquiriendo las habilidades laborales que necesita la organización que te contrató. Y recuerda: no se trata solo de aprender skills de código, también te enseñaremos habilidad de comunicación y liderazgo."
+        },
+        "3":{
+          "tittle": "FIN y adiós:",
+          "text": " Nos hemos encariñado, pero todo pájaro debe ir a vivir al nido de su familia. Llegaste siendo un junior, hoy ya eres un developer experimentado dentro de una gran organización. ¡Haznos sentir orgullosos y lleva el nombre de Teamcubation en alto!"
+        }
+      }
+    },
+    "section_5": {
+      "tittle": {
+        "text_1": "CONTACTE",
+        "text_2": "NOS"
+      },
+      "contact-form": {
+        "name": "Nombre",
+        "organization": "Compañia",
+        "telephone": {
+          "label": "Teléfono",
+          "country": "País",
+          "area": "Área",
+          "number" : "Número"
+        },
+        "email": "E-mail",
+        "reason": "¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?",
+        "btn_text": "Enviar",
+        "btn_sending": "Enviando...",
+        "submit-response": {
+          "success": "Su mensaje se ha enviado correctamente, gracias !!",
+          "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+        }
+      }
+    }
   }
 }

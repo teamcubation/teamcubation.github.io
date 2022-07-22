@@ -26,23 +26,80 @@
 
 <body>
 
-<!------------------------------------- LANDING PAGE-------------------------------------------------------------->
+<!------------------------------------- HOME PAGE-------------------------------------------------------------->
 
-  <!-- <div id="landing">
-    <h1>Teamcubation_</h1>
-    <button id="btn-organization" type="button">organization</button>
-  </div> -->
+  <div id="home" style="height: 100vh">
+    <div class="container-fluid color h-100">
+      <div class="row h-100">
+        <div class="col-12 col-md-6 no-effect-item">
+          <div class="row d-flex flex-column h-100 align-items-center text-center justify-content-center" style="padding-bottom: 25%">
+            <img src="media/img_landing.png" class="back_home" alt>
+            <img src="media/logo.png" class="logo-home">
+            <h2 id="welcome" class="color-light-grey">Bien_venido</h2>
+          </div>
+        </div>
+
+        <!-- <div class="col-1 d-flex align-items-center">
+          <div class="scroll-prompt-arrow-container">
+            <div class="scroll-prompt-arrow"><div></div></div>
+          </div>
+        </div> -->
+
+        <div class="col-12 col-md-6" style="max-height: 100vh; overflow: hidden">
+          <div class="row d-flex flex-column h-100 align-items-center justify-content-center">
+            <a href="http://127.0.0.1:5501/en">
+              <img style="position:absolute; top: 2%; right: 1%; height: 32px" alt="redirect_lang" src="media/flag-eu.png"></a>
+            <button class="burguer-menu bc-ligth-grey" id="organization-enter"></button>
+            <div class="enter-item text-center" id="organization-enter-item">
+              <h1 class="color-red">ORGANIZACIÓN</h1>
+              <div class="row enter-item-description">
+                <img style="width: 3.5vw; margin: 2% 0 0 15%" fill="#ff1322" src="media/arrow_down_red.svg" alt>
+                <h4 class="color-grey-100 mt-2 weight-600" style="line-height: 1 ; margin: 2% 0 0 0">TRASFORMAMOS JUNIORS EN EXPERTOS RTW</h4>
+                <h4 class="color-grey-100 mt-2" style="line-height: 1;">(READY TO WORK) MIENTRAS DESARROLLAN EL SOFTWARE QUE SU ORGANIZACIÓN NECESITA</h4>
+              </div>
+            </div>
+            <button class="burguer-menu bc-grey-200" id="senior-enter"></button>
+            <div class="enter-item text-center" id="senior-enter-item">
+              <h1 class="color-green">SENIOR</h1>
+              <div class="row enter-item-description">
+                <img style="width: 3.5vw; margin: 2% 0 0 32%" src="media/arrow_down_green.svg" alt>
+                <h4 class="color-grey-100 mt-2 weight-600">TE ENSEÑAMOS A TRANSFORMAR JUNIORS EN SENIORS RTW</h4>
+              </div>
+            </div>
+            <div class="enter-item text-center" id="junior-enter-item">
+              <h1 class="color-orange">JUNIOR</h1>
+              <div class="row enter-item-description">
+                <img style="width: 3.5vw; margin: 2% 0 2% 32%" src="media/arrow_up_orange.svg" alt>
+                <h4 class="color-grey-100 mt-2 weight-600" style="line-height: 0.5; margin: 2% 0 0 0">SOMOS UNA MÁQUINA DEL TIEMPO</h4>
+                <h4 class="color-grey-100 mt-2" style="line-height: 1;">Y HACEMOS QUE TENGAS LA EXPERIENCIA DE 2 AÑOS EN 6 MESES</h4>
+              </div>
+            </div>
+            <button class="burguer-menu bc-grey-100" id="junior-enter"></button>  
+            <!-- <div class="enter-item text-center" id="team-enter-item">
+              <h1  class="color-turquoise">TEAM</h1>
+              <div class="row enter-item-description">
+                <img style="width: 3.5vw; margin: 2% 0 2% 37%" src="media/arrow_up_turquoise.svg" alt="">
+                <h4 class="color-grey-100 mt-2 weight-600" style="line-height: 0.5; margin: 2% 0 0 0" data-t>home.enter.team.description-bold</h4>
+                <h4 class="color-grey-100 mt-2" style="line-height: 1;" data-t>home.enter.team.description</h4>
+              </div>
+            </div>
+            <button class="burguer-menu bc-grey" id="team-enter"></button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!------------------------------------- ORGANIZATION -------------------------------------------------------------->
 
 <div id="organization" class="container-fluid color">
   <img class="Float_Tc_" src="media/tc_vertical.svg" alt="tc_vertical">
   <div class="row VisibleLayer bc-white" style="justify-content: center; overflow: hidden; position:relative">
-    <div class="col-sm-0 col-md-1"></div>
+    <div class=".d-none .d-sm-block col-md-1"></div>
     <div class="col-sm-10 col-md-6">
       <div class="row">
-        <a class="flag-mobile" href="https://teamcubation.com/en"><img alt="redirect_lang" src="media/b_english.png"></a>
-        <img class="logo" src="media/logo.png" alt="imgLogo">
+        <a class="flag-mobile" href="http://127.0.0.1:5501/en/#organization/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+        <img class="logo navigate-home" src="media/logo.png" alt="imgLogo">
         <img class="imgHeader" src="media/imgHeader.png" alt="imgHeader">
       </div>
     </div>
@@ -50,13 +107,13 @@
       <div class="row">
         <div class="row Header-organization">
           <div class="col-3 decorate-menu bc-red"></div>
-          <div class="col-3 decorate-menu bc-green"></div>
-          <div class="col-3 decorate-menu bc-orange"></div>
-          <div class="col-3 decorate-menu bc-turquoise"></div>
-          <div class="header-organization-leyend" style="visibility: hidden">
-            <span class="arrow left" style="margin: 2.2% 3% 0 0"></span><h3 class="color-red">ORGANIZATIONS</h3>
+          <div class="col-3 decorate-menu bc-grey-200 hover-bc-green navigate-senior"></div>
+          <div class="col-3 decorate-menu bc-grey-100 hover-bc-orange navigate-junior"></div>
+          <div class="col-3 decorate-menu bc-grey"></div>
+          <div class="header-organization-leyend">
+            <span class="arrow left" style="margin: 2.2% 3% 0 0"></span><h3 class="color-red">ORGANIZACIÓN</h3>
           </div>
-          <h3 class="underscore" style="visibility: hidden">_ _ _ _ _ _ _ _ _ _ </h3>
+          <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ </h3>
         </div>
         <div class="row Rotary-legend">
           <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -81,22 +138,826 @@
           </div>
         </div>
         <div class="row Central-legend">
-          <h1 class="color-red" style="margin-left: 0%">ENTRENAMOS</h1>
+          <h1 class="color-red" style="margin-left: 2%">ENTRENAMOS</h1>
           <h2 class="color-red">DEVELOPERS</h2>
         </div>
       </div>
     </div>
     <div class="col-sm-0 col-md-1">
       <div class="row flag-desktop">
-        <a href="https://teamcubation.com/en"><img alt="redirect_lang" src="media/b_english.png"></a>
+        <a href="http://127.0.0.1:5501/en/#organization/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
       </div>
     </div>
     <div class="Descriptive-legend-es">
-      <div class="d-inline color-orange" style="margin-left: -3%; font-size: 3.5vw; line-height: 0.5">< </div>
+      <div class="d-inline color-orange" style="margin-left: -2.5%; font-size: calc(1.1em + 2vw); line-height: 0.5">< </div>
       <h5 class="d-inline color-grey">TRANSFORMAMOS JUNIORS EN EXPERTOS </h5>
       <h5 class="color-grey">READY-TO-WORK MIENTRAS </h5>
       <h5 class="d-block color-red">DESARROLLAN EL SOFTWARE QUE </h5>
       <h5 class="d-inline color-red">SU ORGANIZACIÓN NECESITA.</h5>
+      <div class="d-inline color-orange" style="margin-left: 7%; font-size: calc(1.1em + 2vw); line-height: 0;">/></div>      
+    </div>
+    <div class="row" id="learn-more" style="justify-content: right; margin: 4% 0 0 -21%;">
+      <a id="navigate-organization-what" class="color-grey hover-red navigate-what" style="padding: 0; font-weight: 600; display: inline"> <p class="d-inline">Conozca más</p> 
+         <span class="down-angle">︾</span>
+      </a>
+    </div>
+  </div>
+  <div class="VisibleLayer bc-white" style="max-width: 100%; max-height: 3vw; overflow: hidden; padding: 0px 5px">
+    <h3 class="underscore">
+      _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _ _ _
+    </h3>
+  </div>
+  <div class="row" id="organization/what" style="margin-top: 5%; padding-top: 2%;">
+    <div class="col-1"></div>
+    <div class="col-sm-10 col-md-10 bc_tc_grey">
+      <div class="row">
+        <div class="col-1">
+          <img class="VisibleLayer" style="height: 40%;margin-top: -10%;" src="media/arrow_right.svg" alt="tc_vertical">
+        </div>
+        <div class="col-11">
+          <h2 class="What_is_Tc_tittle color-grey VisibleLayer inline-xs weight-200">QUÉ ES</h2>
+          <h2 class="What_is_Tc_tittle color-grey VisibleLayer d-inline" style="font-weight: bold">
+            TEAMCUBATION_</h2><h2 class="What_is_Tc_tittle VisibleLayer d-inline color-grey inline-xs weight-200" style="margin: 0">?</h2>
+        </div>
+      </div>
+      <div class="row What_is_Tc_text" style="text-align:right; margin: 4% 0;">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <h5 class="color-red VisibleLayer" style="font-size: 2.3vw">Somos el engranaje que faltaba entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando y entrenando equipos de desarrollo para transformar juniors en recursos con experiencia</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div id="ourAnswer" class="row mt-5" style="background-image: url('media/back-grey.png'); background-size: cover; padding-top: 15%">
+    <div class="row p-0 m-0">
+      <div class="decorate-tittle decorate-xs bc-orange VisibleLayer"></div>
+      <div class="tittle VisibleLayer">
+        <h2 class="color-grey d-inline inline-md" style="font-weight:200; padding-left: 0">QUÉ</h2>
+          <br>
+        <h2 class="bc-red-dark inline-md" style="font-weight:bold; color: #fff; display: inline-block">SOLUCION</h2>
+        <h2 class="color-red inline-md" style="display: inline-block; margin-left: -1%; font-weight:bold;">AMOS</h2>
+        <h2 class="color-grey inline-md d-inline" style="font-weight:200">?</h2>
+      </div>
+      <div class="decorate-tittle decorate-lg bc-grey VisibleLayer"></div>
+    </div>
+    <div class="row" style="margin: 4% 0">
+      <div class="col-1"></div>
+      <div class="col-12 col-md-10">
+        <h5 class="color-grey VisibleLayer" style="font-weight:200; ">Conseguir desarrolladores capacitados para su organización se hace cada vez más difícil y toma más tiempo. Por eso Teamcubation desarrolló la manera de adelantar el proceso y en solo seis meses, transforma a juniors en colaboradores productivos y los prepara para sumarse a su empresa mientras construyen el software que su organización tiene en backlog.</h5>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row justify-content-center" style="margin: 1% 0 8% 0">
+      <div class="col-md-1"></div>
+      <div class="hidden-xs col-md-5"></div>
+      <div class="col-sm-11 col-md-5">
+        <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;"><</h5>
+        <h5 class="color-red VisibleLayer" style="font-size: 2.3vw; font-weight:600; text-align: right;">Existen muchísimas personas con potencial, pero sin práctica. Encontrarlos y transformarlos en profesionales experimentados, demanda esfuerzo, dinero y sobre todo tiempo. Teamcubation se encarga de romper la trampa de la experiencia, entrenando gente que usualmente no entraría en el hiring pipeline de su organización y encargándose —en solo seis meses— de la inducción del nuevo colaborador, permitiendo que la organización se nutra constantemente de gente nueva sin ralentizar la estructura actual y solucionando necesidades de software en su organización.</h5>
+        <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;">/ ></h5>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="hidden_tc_vertical"></div>
+  </div>
+  <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-bottom: -2px; padding: 0">
+    <img style="padding: 0" src="media/img2.png" alt>
+  </div>
+  <div id="HowWeDo" class="row pt-5 VisibleLayer" style="background-color: #c50219; z-index: 2">
+    <div class="decorate-tittle decorate-xs bc-orange"></div>
+    <div class="tittle">
+      <h2 class="color-grey d-inline inline-md" style="font-weight:200; padding-left: 0; color: #fff;">CÓMO</h2>
+        <br>
+      <h2 class="color-light-grey d-inline inline-md" style="line-height: 0.9; font-weight: 200">LO</h2>
+      <h2 class="bc-orange color-red inline-md" style="font-weight:bold; padding-left: 0; display: inline-block">HACE</h2>
+      <h2 class="color-light-grey d-inline inline-md" style="font-weight:bold">MOS</h2>
+    </div>
+    <div class="decorate-tittle decorate-lg bc-light-grey"></div>
+    <div class="col-sm-12 col-lg-5">
+      <div class="row mt-5">
+        <img alt="3_steps" src="media/img_3_es.png">
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-5 pt-5">
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow_right_orange.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.01</h1>
+          <div class="decorate-menu bc-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-orange" style="font-weight: bold; margin-top: 10%">ASSESMENT</h3>
+          <p class="color-white" style="font-size: 1.5vw">Análisis y evaluación de la forma de trabajar de su organización a través de la observación y el aprendizaje de sus metodologías, stack tecnológico y cultura.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow_right_orange.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.02</h1>
+          <div class="decorate-menu bc-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-orange" style="font-weight: bold; margin-top: 10%">EJECUCIÓN</h3>
+          <p class="color-white" style="font-size: 1.5vw">Se forma un Squad para el desarrollo de un software que está en el backlog de la organización. Un equipo mixto, conformado por tres desarrolladores juniors de su empresa que serán entrenados por un Squad líder y un desarrollador Senior de nuestro equipo. Guiados por nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), aplicarán la mejor forma de potenciar el talento y encarar los desafíos de los recursos juniors asignados por su organización.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow_right_orange.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.03</h1>
+          <div class="decorate-menu bc-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-orange" style="font-weight: bold; margin-top: 10%">DELIVERY</h3>
+          <p class="color-white" style="font-size: 1.5vw"> Luego de seis meses, gracias a nuestra tecnología de evaluación y trabajando en Teamcubation para la organización, los tres juniors se transformaron en colaboradores productivos que comprenden la cultura, están imbuidos en los procesos de la empresa y tienen las habilidades requeridas para sumarse sin fricciones a los equipos de la organización. A su vez, este será el momento en el cual se entregará el software desarrollado o un hito en el proceso de desarrollo.<BR><BR>Estos últimos dos pasos pueden repetirse tantas veces como hagan falta, agregando nuevos recursos en un pipeline virtuoso.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
+    <img style="padding: 0" src="media/img_4.png" alt>
+  </div>
+
+  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
+    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
+    <img style="width: 80%" src="media/clients.png" alt="">
+  </div>
+
+  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
+    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
+    <img style="width: 80%" src="media/inversores.png" alt="">
+  </div> -->
+
+  <div class="row VisibleLayer bc-white py-5" id="ContactUs">
+    <div class="decorate-tittle decorate-xs bc-light-grey"></div>
+    <div class="tittle">
+      <h2 class="color-white inline-md" style=" background-color: black; font-weight:200;  display: inline-block">CONTACTE</h2>
+      <h2 class="color-grey d-inline inline-md" style="font-weight:200; display: inline-block; margin-left: -1%;">NOS</h2>
+    </div>
+    <div class="decorate-tittle decorate-lg bc-grey"></div>
+  </div>
+  <div class="row VisibleLayer" style="background-color: #f3f3f3;">
+    <div class="col-1"></div>
+    <div class="col-sm-12 col-lg-5 pb-5">
+      <form class="form-contact" id="form-organization">
+        <div class="mt-5">
+          <input type="text" class="name" name="name" required placeholder="Nombre">
+        </div>
+        <div class="mt-4">
+          <input type="text" name="organization" class="organizationContact" placeholder="Compañia">
+        </div>
+        <div class="mt-4">
+            <label for="country-phone" class="form-label">Teléfono</label>
+        </div>
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="row">
+              <div class="col-3">
+                <span>+</span>
+                <input style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="País">
+              </div>
+              <div class="col-3">
+                <input type="text" name="area-phone" class="area-phone" placeholder="Área">
+              </div>
+              <div class="col-6">
+                <input type="text" name="number-phone" class="number-phone" placeholder="Número">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+            <input type="email" name="email" class="email" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="mb-4 mt-4">
+          <textarea name="message" class="message" rows="1" required placeholder="¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?"></textarea>
+        </div>
+        <input class="typeContact" hidden value="organization">
+      </form>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-sm-12 col-lg-4 pb-5" style="background-color: #8080801a;">
+      <div class="row" style="justify-content: flex-end; text-align: right; padding: 5% 3% 0 0;">
+        <img class="mb-4 mt-3 navigate-home" style="width: 40%" src="media/logo.png" alt="teamcubation">
+        <a class="color-green hover-green mb-0 navigate-senior">SENIOR</a>
+        <a class="color-orange hover-orange navigate-junior">JUNIOR</a>
+        <a class="mb-3 color-turquoise hover-turquoise" target="_blank" href=" https://teamcubation.bamboohr.com/jobs/">Trabajá con nosotros</a>
+        <!-- <h5 class="color-turquoise mb-0">about us</h5>
+        <h5 class="color-turquoise mb-5">case studies</h5> -->
+        <div class="mb-4" style="height: 2px; background-color: #fff"></div>
+        <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
+        <p class="mb-3">Todos los derechos reservados</p>
+        <!-- <p>Cookies | Privacy policies</p> -->
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row bc-red VisibleLayer" style="height: 25px"></div>
+</div>
+
+<!---------------------------------------- SENIOR -------------------------------------------------------------->
+
+<div id="senior" class="container-fluid color">
+  <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_vertical">
+  <div class="row VisibleLayer bc-white" style="justify-content: center; overflow: hidden; position:relative; height: 100vh">
+    <div class="d-none d-sm-block col-md-1"></div>
+    <div class="col-sm-10 col-md-6">
+      <div class="row">
+        <a class="flag-mobile" href="http://127.0.0.1:5501/en/#senior/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+        <img class="logo navigate-home" src="media/logo.png" alt="imgLogo">
+        <img class="imgHeader" style="margin-top:3%" src="media/senior/imgHeader.png" alt="imgHeader">
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-4">
+      <div class="row">
+        <div class="row Header-organization">
+          <div class="col-3 decorate-menu bc-light-grey hover-bc-red navigate-organization"></div>
+          <div class="col-3 decorate-menu bc-green"></div>
+          <div class="col-3 decorate-menu bc-grey-100 hover-bc-orange navigate-junior"></div>
+          <div class="col-3 decorate-menu bc-grey"></div>
+          <div class="header-organization-leyend">
+            <span class="arrow left " style="margin: 2.2% 3% 0 0"></span><h3 class="color-green weight-600">SENIOR</h3>
+          </div>
+          <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ </h3>
+        </div>
+        <div class="row Rotary-legend">
+          <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2800">
+                <h2>“No tengo pichis”</h2>
+                <p style="margin:0">CEO</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2>“No hay mas seniors”</h2>
+                <p style="margin:0">CTO</p>
+              </div>
+              <!-- <div class="carousel-item" data-bs-interval="2800">
+                <h2 data-t>section_1.carousel.text_3</h2>
+                <p style="margin:0" data-t>section_1.carousel.helper_3</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2 data-t>section_1.carousel.text_4</h2>
+                <p style="margin:0" data-t>section_1.carousel.helper_4</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row Central-legend">
+          <h1 class="color-green" style="margin-left: 13%; font-size: calc(1.6em + 2.7vw);">TRANSFORMAMOS</h1>
+          <h2 class="color-green" style="margin-left: 21%; font-size: calc(1.4em + 2vw);">JUNIORS EN SENIORS</h2>
+        </div>
+      </div>
+    </div>
+    <div class="hidden-xs col-lg-1">
+      <div class="row flag-desktop">
+        <a href="http://127.0.0.1:5501/en/#senior/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+      </div>
+    </div>
+    <div class="Descriptive-legend-senior-es">
+      <div class="d-inline color-orange" style="margin-left: -2.5%; font-size: calc(1.1em + 2vw); line-height: 0.5">< </div>
+      <h5 class="d-inline color-grey">ACUMULANDO EXPERIENCIA MIENTRAS</h5>
+      <h5 class="color-grey">DESARROLLAN EL SOFTWARE </h5>
+      <h5 class="d-inline color-green weight-600">QUE TU ORGANIZACIÓN NECESITA</h5>
+      <div class="d-inline color-orange" style="margin-left: 3%; font-size: calc(1.1em + 2vw); line-height: 0">/></div>      
+    </div>
+    <div class="row" id="learn-more" style="justify-content: right; margin: 2% 0 0 -21%;">
+      <a id="navigate-senior-what" class="color-grey hover-green navigate-what" style="padding: 0; font-weight: 600; display: inline"> <p class="d-inline">Conozca más</p> 
+         <span class="down-angle">︾</span>
+      </a>
+    </div>
+  </div>
+  <div class="row bc-green" id="senior/what" style="padding-top: 4%;">
+    <div class="col-1"></div>
+    <div class="col-sm-10 col-md-10">
+      <div class="row mt-3">
+        <div class="col-1">
+          <img class="VisibleLayer arrow-left" src="media/arrow_right_orange.svg" alt="tc_vertical">
+        </div>
+        <div class="col-11">
+          <h2 class="What_is_Tc_tittle color-light-grey VisibleLayer inline-xs weight-200">QUÉ ES</h2>
+          <h2 class="What_is_Tc_tittle color-white VisibleLayer d-inline" style="font-weight: bold">
+            TEAMCUBATION_</h2><h2 class="What_is_Tc_tittle VisibleLayer d-inline color-light-grey inline-xs weight-200" style="margin: 0">?</h2>
+        </div>
+      </div>
+      <div class="row What_is_Tc_text" style="text-align:left; margin: 2% 0;">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <h5 class="color-light-grey VisibleLayer" style="font-size: 2.2vw">SOMOS LA EMPRESA QUE TE ENSEÑA A TRANSFORMAR A JUNIORS EN SENIORS. Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div id="ourAnswer" class="row bc-green" style="background-image: url('media/back-grey.png'); background-size: cover; padding-top: 15%">
+    <div class="row p-0 m-0 mt-1">
+      <div class="decorate-tittle decorate-xs bc-orange VisibleLayer"></div>
+      <div class="tittle VisibleLayer">
+        <h2 class="color-grey d-inline inline-md" style="font-weight:200; padding-left: 0">QUÉ</h2>
+          <br>
+        <h2 class="bc-green inline-md" style="font-weight:bold; color: #fff; display: inline-block">SOLUCION</h2>
+        <h2 class="color-green inline-md" style="display: inline-block; margin-left: -1%; font-weight:bold;">AMOS</h2>
+        <h2 class="color-grey inline-md d-inline" style="font-weight:200">?</h2>
+      </div>
+      <div class="decorate-tittle decorate-lg bc-grey VisibleLayer"></div>
+    </div>
+    <div class="row" style="margin: 4% 0">
+      <div class="col-1"></div>
+      <div class="col-12 col-md-10">
+        <h5 class="color-grey VisibleLayer" style="font-weight:200; ">Las organizaciones piden desarrolladores senior, pero el mercado solo tiene juniors. ¿Cómo lograr la alquimia de pasar de una condición a otra?.</h5>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row justify-content-center" style="margin: 1% 0 8% 0">
+      <div class="col-md-1"></div>
+      <div class="hidden-xs col-md-5"></div>
+      <div class="col-sm-11 col-md-5">
+        <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;"><</h5>
+        <h5 class="color-green VisibleLayer" style="font-size: 2.3vw; font-weight:600; text-align: right;">Teamcubation se encarga de romper el loop de la falta de experiencia transformando a desarrolladores novicios en un equipo cohesivo y eficiente listo para dar lo mejor en la compañía en la que fueron contratados. Y quién los transforme, serás tu.</h5>
+        <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;">/ ></h5>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="hidden_tc_vertical"></div>
+  </div>
+  <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-bottom: -2px; padding: 0">
+    <img style="padding: 0" src="media/senior/img_2.png" alt>
+  </div>
+  <div id="HowWeDo" class="row pt-5 bc-green VisibleLayer" style="z-index: 2">
+    <div class="decorate-tittle decorate-xs bc-orange"></div>
+    <div class="tittle">
+      <h2 class="color-grey d-inline inline-md" style="font-weight:200; padding-left: 0; color: #fff;">CÓMO</h2>
+        <br>
+      <h2 class="color-light-grey d-inline inline-md" style="line-height: 0.9; font-weight: 200">LO</h2>
+      <h2 class="bc-orange color-green inline-md" style="font-weight:bold; padding-left: 0; display: inline-block">HACE</h2>
+      <h2 class="color-light-grey d-inline inline-md" style="font-weight:bold">MOS</h2>
+    </div>
+    <div class="decorate-tittle decorate-lg bc-light-grey"></div>
+    <div class="col-sm-12 col-lg-5">
+      <div class="row mt-5">
+        <img alt="3_steps" src="media/senior/img_3_es.png">
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-5 pt-5">
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow-right-light-green.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.01</h1>
+          <div class="decorate-menu bc-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-light-orange" style="font-weight: bold; margin-top: 10%">Onboarding en Teamcubation:</h3>
+          <p class="color-white" style="font-size: 1.5vw">Bienvenido a casa. En Teamcubation aprenderás no solo nuevo código, sino también a liderar equipos, enseñar, ser mentor y ser el líder de tu squad.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow-right-light-green.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.02</h1>
+          <div class="decorate-menu bc-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-light-orange" style="font-weight: bold; margin-top: 10%">Onboarding en la organización cliente:</h3>
+          <p class="color-white" style="font-size: 1.5vw">Si eres un Senior Squad Member, harás foco en comprender el stack tecnológico de la organización: ¿qué hacen?, ¿qué framework? Si eres un Squad Leader, harás foco en la cultura de la organización: ¿qué metodología usan?, ¿cómo lo hacen?</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow-right-light-green.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.03</h1>
+          <div class="decorate-menu bc-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-light-orange" style="font-weight: bold; margin-top: 10%">Ejecución:</h3>
+          <p class="color-white" style="font-size: 1.5vw"> Asignamos un proyecto, un Squad y durante seis meses te comprometes a acelerar la transformación de juniors en seniors con la ayuda de nuestro propio software propietario de analíticas de aprendizaje, Programming Experience Platform (PEP) que, combinado con tu mentoría y experiencia, nos permitirá detectar las áreas que demandan más atención de cada uno de los rookies.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
+    <img style="padding: 0" src="media/senior/img_4.png" alt>
+  </div>
+
+  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
+    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
+    <img style="width: 80%" src="media/clients.png" alt="">
+  </div>
+
+  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
+    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
+    <img style="width: 80%" src="media/inversores.png" alt="">
+  </div> -->
+
+  <div class="row VisibleLayer bc-white py-5" id="ContactUs">
+    <div class="decorate-tittle decorate-xs bc-light-grey"></div>
+    <div class="tittle">
+      <h2 class="color-white inline-md" style=" background-color: black; font-weight:200;  display: inline-block">CONTACTE</h2>
+      <h2 class="color-grey d-inline inline-md" style="font-weight:200; display: inline-block; margin-left: -1%;">NOS</h2>
+    </div>
+    <div class="decorate-tittle decorate-lg bc-grey"></div>
+  </div>
+  <div class="row VisibleLayer" style="background-color: #f3f3f3;">
+    <div class="col-1"></div>
+    <div class="col-sm-12 col-lg-5 pb-5">
+      <form class="form-contact" id="form-senior">
+        <div class="mt-5">
+          <input type="text" class="name" name="name" required placeholder="Nombre">
+        </div>
+        <div class="mt-4">
+          <input type="text" name="Linkedin" class="linkedin" placeholder="Linkedin">
+        </div>
+        <div class="mt-4">
+            <label for="country-phone" class="form-label">Teléfono</label>
+        </div>
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="row">
+              <div class="col-3">
+                <span>+</span>
+                <input style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="País">
+              </div>
+              <div class="col-3">
+                <input type="text" name="area-phone" class="area-phone" placeholder="Área">
+              </div>
+              <div class="col-6">
+                <input type="text" name="number-phone" class="number-phone" placeholder="Número">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+            <input type="email" name="email" class="email" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="mb-4 mt-4">
+          <textarea name="message" class="message" rows="1" required placeholder="¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?"></textarea>
+        </div>
+        <input class="typeContact" hidden value="senior">
+      </form>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-sm-12 col-lg-4 pb-5" style="background-color: #8080801a;">
+      <div class="row" style="justify-content: flex-end; text-align: right; padding: 5% 3% 0 0;">
+        <img class="mb-4 mt-3 navigate-home" style="width: 40%; margin-right: 3%;" src="media/logo.png" alt="teamcubation">
+        <a class="color-red hover-red mb-0 navigate-organization">ORGANIZACIÓN</a>
+        <a class="color-orange hover-orange navigate-junior">JUNIOR</a>
+        <a class="mb-3 color-turquoise hover-turquoise" target="_blank" href=" https://teamcubation.bamboohr.com/jobs/">Trabajá con nosotros</a>
+        <!-- <h5 class="color-turquoise mb-0">about us</h5>
+        <h5 class="color-turquoise mb-5">case studies</h5> -->
+        <div class="mb-4" style="height: 2px; background-color: #fff"></div>
+        <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
+        <p class="mb-3">Todos los derechos reservados</p>
+        <!-- <p>Cookies | Privacy policies</p> -->
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row bc-green VisibleLayer" style="height: 25px"></div>
+</div>
+
+<!---------------------------------------- JUNIORS -------------------------------------------------------------->
+
+<div id="junior" class="container-fluid color">
+  <img class="Float_Tc_ junior-filter" src="media/junior/tc_vertical.svg" alt="tc_vertical">
+  <div class="row VisibleLayer bc-white" style="justify-content: center; overflow: hidden; position:relative; height: 100vh">
+    <div class=".d-none .d-sm-block col-md-1"></div>
+    <div class="col-sm-10 col-md-6">
+      <div class="row">
+        <a class="flag-mobile" href="http://127.0.0.1:5501/en/#junior/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+        <img class="logo navigate-home" src="media/logo.png" alt="imgLogo">
+        <img class="imgHeader" style="margin-top: 2vh" src="media/junior/imgHeader.png" alt="imgHeader">
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-4">
+      <div class="row">
+        <div class="row Header-organization">
+          <div class="col-3 decorate-menu bc-light-grey hover-bc-red navigate-organization"></div>
+          <div class="col-3 decorate-menu bc-grey-200 hover-bc-green navigate-senior"></div>
+          <div class="col-3 decorate-menu bc-orange"></div>
+          <div class="col-3 decorate-menu bc-grey"></div>
+          <div class="header-organization-leyend">
+            <span class="arrow left" style="margin: 2.2% 3% 0 0"></span><h3 class="color-orange weight-600">JUNIOR</h3>
+          </div>
+          <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ </h3>
+        </div>
+        <div class="row Rotary-legend">
+          <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2800">
+                <h2>“La máquina del tiempo existe”</h2>
+                <p style="margin:0">CEO</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2>“No hay mas seniors”</h2>
+                <p style="margin:0">CTO</p>
+              </div>
+              <!-- <div class="carousel-item" data-bs-interval="2800">
+                <h2 data-t>section_1.carousel.text_3</h2>
+                <p style="margin:0" data-t>section_1.carousel.helper_3</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2 data-t>section_1.carousel.text_4</h2>
+                <p style="margin:0" data-t>section_1.carousel.helper_4</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row Central-legend">
+          <h1 class="color-orange" style="margin-left: 17%; line-height: 0.7; font-size: calc(1.8em + 4.2vw);">EXPERIENCIA</h1>
+          <h2 class="color-orange" style="margin-left: 24%; font-size: calc(1.4em + 2.5vw);">6 MESES = 2 AÑOS</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-0 col-md-1">
+      <div class="row flag-desktop">
+        <a href="http://127.0.0.1:5501/en/#junior/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+      </div>
+    </div>
+    <div class="Descriptive-legend-junior-es">
+      <div class="d-inline color-light-turquoise" style="margin-left: -2.5%; font-size: calc(1.1em + 2vw); line-height: 0.5">< </div>
+      <h5 class="d-inline color-grey">ACUMULÁ EXPERIENCIA MIENTRAS</h5>
+      <h5 class="color-grey">DESARROLLAS EL SOFTWARE </h5>
+      <h5 class="d-inline color-light-turquoise weight-600">QUE TU ORGANIZACIÓN NECESITA</h5>
+      <div class="d-inline color-light-turquoise" style="margin-left: 1%; font-size: calc(1.1em + 2vw); line-height: 0">/></div>      
+    </div>
+    <div class="row" id="learn-more" style="justify-content: right; margin: 2% 0 0 -21%;">
+      <a id="navigate-junior-what" class="color-grey hover-orange navigate-what" style="padding: 0; font-weight: 600; display: inline"> <p class="d-inline">Conozca más</p> 
+         <span class="down-angle">︾</span>
+      </a>
+    </div>
+  </div>
+  <div class="row bc-orange" id="junior/what" style="padding-top: 5%;">
+    <div class="col-1"></div>
+    <div class="col-sm-10 col-md-10 bc_tc_grey">
+      <div class="row">
+        <div class="col-1">
+          <img class="VisibleLayer arrow-left" src="media/arrow_right_orange.svg" alt="tc_vertical">
+        </div>
+        <div class="col-11">
+          <h2 class="What_is_Tc_tittle color-light-grey VisibleLayer inline-xs weight-200">QUÉ ES</h2>
+          <h2 class="What_is_Tc_tittle color-white VisibleLayer d-inline" style="font-weight: bold">
+            TEAMCUBATION_</h2><h2 class="What_is_Tc_tittle VisibleLayer d-inline color-light-grey inline-xs weight-200" style="margin: 0">?</h2>
+        </div>
+      </div>
+      <div class="row What_is_Tc_text" style="text-align:left; margin: 4% 0;">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <h5 class="color-white VisibleLayer" style="font-size: 2.3vw">SOMOS UNA MÁQUINA DEL TIEMPO Y HACEMOS QUE TENGAS LA EXPERIENCIA DE 2 AÑOS EN 6 MESES. La máquina del tiempo existe. Hola, Somos Teamcubation.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div id="ourAnswer" class="row bc-orange" style="background-image: url('media/back-grey.png'); background-size: cover; padding-top: 15%">
+    <div class="row p-0 m-0">
+      <div class="decorate-tittle decorate-xs bc-orange VisibleLayer"></div>
+      <div class="tittle VisibleLayer">
+        <h2 class="color-grey d-inline inline-md" style="font-weight:200; padding-left: 0">QUÉ</h2>
+          <br>
+        <h2 class="bc-orange inline-md" style="font-weight:bold; color: #fff; display: inline-block">SOLUCION</h2>
+        <h2 class="color-light-turquoise inline-md" style="display: inline-block; margin-left: -1%; font-weight:bold;">AMOS</h2>
+        <h2 class="color-grey inline-md d-inline" style="font-weight:200">?</h2>
+      </div>
+      <div class="decorate-tittle decorate-lg bc-grey VisibleLayer"></div>
+    </div>
+    <div class="row" style="margin: 4% 0">
+      <div class="col-1"></div>
+      <div class="col-12 col-md-10">
+        <h5 class="color-grey VisibleLayer" style="font-weight:200; ">Ocupamos el engranaje que falta entre la universidad y el mundo laboral de la industria digital.</h5>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div class="row justify-content-center" style="margin: 1% 0 8% 0">
+      <div class="col-md-1"></div>
+      <div class="hidden-xs col-md-5"></div>
+      <div class="col-sm-11 col-md-5">
+        <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;"><</h5>
+        <h5 class="color-orange VisibleLayer" style="font-size: 2.3vw; font-weight:600; text-align: right;">O dicho de otra manera: transformamos a un junior en un “ready to work”, a un David en un Goliat, a un Pelé en un Maradona. Te hacemos ganar experiencia en un ambiente transparente, agradable, con buena gente, que sabe mucho sobre cómo programar, pero mejor aún, sabe cómo enseñar.</h5>
+        <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;">/ ></h5>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="hidden_tc_vertical"></div>
+  </div>
+  <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-bottom: -2px; padding: 0">
+    <img style="padding: 0" src="media/junior/img_2.png" alt>
+  </div>
+  <div id="HowWeDo" class="row pt-5 VisibleLayer bc-orange" style="z-index: 2">
+    <div class="decorate-tittle decorate-xs bc-light-orange"></div>
+    <div class="tittle">
+      <h2 class="color-grey d-inline inline-md" style="font-weight:200; padding-left: 0; color: #fff;">CÓMO</h2>
+        <br>
+      <h2 class="color-light-grey d-inline inline-md" style="line-height: 0.9; font-weight: 200">LO</h2>
+      <h2 class="bc-light-orange color-orange inline-md" style="font-weight:bold; padding-left: 0; display: inline-block">HACE</h2>
+      <h2 class="color-light-grey d-inline inline-md" style="font-weight:bold">MOS</h2>
+    </div>
+    <div class="decorate-tittle decorate-lg bc-light-grey"></div>
+    <div class="col-sm-12 col-lg-5">
+      <div class="row mt-5">
+        <img alt="3_steps" src="media/junior/img_3_es.png">
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-5 pt-5">
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow_right_light_turquoise.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.01</h1>
+          <div class="decorate-menu bc-light-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-light-orange" style="font-weight: bold; margin-top: 10%">Onboarding en Teamcubation:</h3>
+          <p class="color-white" style="font-size: 1.5vw">¿Listo para viajar en el tiempo y hacer en seis meses lo que a cualquier otra persona le tomaría dos años? Te asignaremos a un Squad, donde te empaparás de las metodologías y tecnologías y desarrollarás un proyecto en la organización de la que eres parte.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow_right_light_turquoise.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.02</h1>
+          <div class="decorate-menu bc-light-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-light-orange" style="font-weight: bold; margin-top: 10%">Incubación y aprendizaje:</h3>
+          <p class="color-white" style="font-size: 1.5vw">Código. Código. Mucho código. Código como nunca. Conocerás gente interesante y te divertirás adquiriendo las habilidades laborales que necesita la organización que te contrató. Y recuerda: no se trata solo de aprender skills de código, también te enseñaremos habilidad de comunicación y liderazgo.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img class="arrowOrange" src="media/arrow_right_light_turquoise.svg" alt>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-start">
+          <h1 class="numbers color-white">.03</h1>
+          <div class="decorate-menu bc-light-orange" style="width: 80%;"></div>
+        </div>
+        <div class="col-8">
+          <h3 class="color-light-orange" style="font-weight: bold; margin-top: 10%">FIN y adiós:</h3>
+          <p class="color-white" style="font-size: 1.5vw"> Nos hemos encariñado, pero todo pájaro debe ir a vivir al nido de su familia. Llegaste siendo un junior, hoy ya eres un developer experimentado dentro de una gran organización. ¡Haznos sentir orgullosos y lleva el nombre de Teamcubation en alto!</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
+    <img style="padding: 0" src="media/junior/img_4.png" alt>
+  </div>
+
+  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
+    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
+    <img style="width: 80%" src="media/clients.png" alt="">
+  </div>
+
+  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
+    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
+    <img style="width: 80%" src="media/inversores.png" alt="">
+  </div> -->
+
+  <div class="row VisibleLayer bc-white py-5" id="ContactUs">
+    <div class="decorate-tittle decorate-xs bc-light-grey"></div>
+    <div class="tittle">
+      <h2 class="color-white inline-md" style=" background-color: black; font-weight:200;  display: inline-block">CONTACTE</h2>
+      <h2 class="color-grey d-inline inline-md" style="font-weight:200; display: inline-block; margin-left: -1%;">NOS</h2>
+    </div>
+    <div class="decorate-tittle decorate-lg bc-grey"></div>
+  </div>
+  <div class="row VisibleLayer" style="background-color: #f3f3f3;">
+    <div class="col-1"></div>
+    <div class="col-sm-12 col-lg-5 pb-5">
+      <form class="form-contact" id="form-junior">
+        <div class="mt-5">
+          <input type="text" class="name" name="name" required placeholder="Nombre">
+        </div>
+        <div class="mt-4">
+          <input type="text" name="Linkedin" class="linkedin" placeholder="Linkedin">
+        </div>
+        <div class="mt-4">
+            <label for="country-phone" class="form-label">Teléfono</label>
+        </div>
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="row">
+              <div class="col-3">
+                <span>+</span>
+                <input style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="País">
+              </div>
+              <div class="col-3">
+                <input type="text" name="area-phone" class="area-phone" placeholder="Área">
+              </div>
+              <div class="col-6">
+                <input type="text" name="number-phone" class="number-phone" placeholder="Número">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+            <input type="email" name="email" class="email" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="mb-4 mt-4">
+          <textarea name="message" class="message" rows="1" required placeholder="¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?"></textarea>
+        </div>
+        <input id="typeContact" hidden value="junior">
+      </form>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-sm-12 col-lg-4 pb-5" style="background-color: #8080801a;">
+      <div class="row" style="justify-content: flex-end; text-align: right; padding: 5% 3% 0 0;">
+        <img class="mb-4 mt-3 navigate-home" style="width: 40%; margin-right: 3%;" src="media/logo.png" alt="teamcubation">
+        <a class="color-red hover-red mb-0 navigate-organization">ORGANIZACIÓN</a>
+        <a class="color-green hover-green navigate-senior">SENIOR</a>
+        <a class="mb-3 color-turquoise hover-turquoise" target="_blank" href=" https://teamcubation.bamboohr.com/jobs/">Trabajá con nosotros</a>
+        <!-- <h4 class="color-orange mb-3">JUNIOR</h4>
+        <h5 class="color-turquoise mb-0">about us</h5>
+        <h5 class="color-turquoise mb-5">case studies</h5> -->
+        <div class="mb-4" style="height: 2px; background-color: #fff"></div>
+        <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
+        <p class="mb-3">Todos los derechos reservados</p>
+        <!-- <p>Cookies | Privacy policies</p> -->
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row bc-orange VisibleLayer" style="height: 25px"></div>
+</div>
+
+<!--------------------------------------------------- TEAM --------------------------------------------------------------------------------------->
+
+<div id="team" class="container-fluid color">
+  <img class="Float_Tc_" src="media/tc_vertical.svg" alt="tc_vertical">
+  <div class="row VisibleLayer bc-white" style="justify-content: center; overflow: hidden; position:relative">
+    <div class="col-sm-0 col-md-1"></div>
+    <div class="col-sm-10 col-md-6">
+      <div class="row">
+        <a class="flag-mobile" href="http://127.0.0.1:5501/en/#organization/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+        <img class="logo" src="media/logo.png" alt="imgLogo">
+        <img class="imgHeader" src="media/imgHeader.png" alt="imgHeader">
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-4">
+      <div class="row">
+        <div class="row Header-organization">
+          <div class="col-3 decorate-menu bc-red"></div>
+          <div class="col-3 decorate-menu bc-green"></div>
+          <div class="col-3 decorate-menu bc-orange"></div>
+          <div class="col-3 decorate-menu bc-turquoise"></div>
+          <div class="header-organization-leyend">
+            <span class="arrow left" style="margin: 2.2% 3% 0 0"></span><h3 class="color-red">ORGANIZACIÓN</h3>
+          </div>
+          <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ </h3>
+        </div>
+        <div class="row Rotary-legend">
+          <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2800">
+                <h2>“Perdemos oportunidades por falta de gente”</h2>
+                <p style="margin:0">CEO</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2>“Se nos van los devs”</h2>
+                <p style="margin:0">CTO</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2>“Tenemos el equipo a la mitad”</h2>
+                <p style="margin:0">Product Manager</p>
+              </div>
+              <div class="carousel-item" data-bs-interval="2800">
+                <h2>“No hay mas seniors”</h2>
+                <p style="margin:0">People Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row Central-legend">
+          <h1 class="color-red" style="margin-left: 2%">ENTRENAMOS</h1>
+          <h2 class="color-red">DEVELOPERS</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-0 col-md-1">
+      <div class="row flag-desktop">
+        <a href="http://127.0.0.1:5501/en/#organization/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
+      </div>
+    </div>
+    <div class="Descriptive-legend-es">
+      <div class="d-inline color-orange" style="margin-left: -3%; font-size: 3.5vw; line-height: 0.5">< </div>
+      <h5 class="d-inline color-grey">ACUMULANDO EXPERIENCIA MIENTRAS</h5>
+      <h5 class="color-grey">DESARROLLAN EL SOFTWARE </h5>
+      <h5 class="d-block color-red">QUE TU ORGANIZACIÓN NECESITA</h5>
+      <!-- <h5 data-t data-attr-t data-attr-t-interpolate class-t="{{section_1.descriptive_legend.class_line4}}">section_1.descriptive_legend.line_4</h5> -->
       <div class="d-inline color-orange" style="margin-left: 5%; font-size: 3.5vw; line-height: 0">/></div>      
     </div>
     <div class="row" id="learn-more" style="justify-content: right; margin: 2% 0 0 -21%;">
@@ -251,7 +1112,7 @@
   <div class="row VisibleLayer" style="background-color: #f3f3f3;">
     <div class="col-1"></div>
     <div class="col-sm-12 col-lg-5 pb-5">
-      <form id="form-contact">
+      <form class="form-contact">
         <div class="mt-5">
           <input type="text" id="name" name="name" required placeholder="Nombre">
         </div>
@@ -290,9 +1151,9 @@
     <div class="col-sm-12 col-lg-4 pb-5" style="background-color: #8080801a;">
       <div class="row" style="justify-content: flex-end; text-align: right; padding-top: 5%;">
         <img class="mb-4 mt-3" style="width: 40%; margin-right: 3%;" src="media/logo.png" alt="teamcubation">
-        <!-- <h4 class="color-red mb-0">ORGANIZACION</h4>
-        <h4 class="color-green mb-0">SENIOR</h4>
-        <h4 class="color-orange mb-3">JUNIOR</h4>
+        <a class="color-red hover-red mb-0 navigate-organization">ORGANIZACION</a>
+        <a class="color-green hover-green mb-0 navigate-senior">SENIOR</a>
+        <!-- <h4 class="color-orange mb-3">JUNIOR</h4>
         <h5 class="color-turquoise mb-0">about us</h5>
         <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
@@ -305,8 +1166,6 @@
   </div>
   <div class="row bc-red VisibleLayer" style="height: 25px"></div>
 </div>
-
-<!---------------------------------------- JUNIORS -------------------------------------------------------------->
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
