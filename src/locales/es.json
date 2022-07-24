@@ -216,7 +216,7 @@
           "number" : "Número"
         },
         "email": "E-mail",
-        "reason": "¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?",
+        "reason": "¿Hay algo que quieras contarnos?",
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
@@ -309,7 +309,7 @@
           "number" : "Número"
         },
         "email": "E-mail",
-        "reason": "¿Cómo Teamcubation puede solucionar su problema de talento tecnológico?",
+        "reason": "¿Hay algo que quieras contarnos?",
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
