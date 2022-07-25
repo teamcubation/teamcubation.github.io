@@ -14,7 +14,7 @@ const dataByLang = {
         btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
         submitResponse: {
             success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias !!' : 'Your message has been sent, thank you!',
-            error: lang === 'es' ? 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo' : 'An error ocurred while sending the form, please try again.',
+            error: lang === 'es' ? 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo' : 'An error occurred while sending the form, please try again.',
         }
     }
 };

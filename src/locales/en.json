@@ -77,7 +77,7 @@
       "text_3": "ANSWER"
     } ,
     "text_1": "With the surge of digital careers and coding schools, there are plenty of tech professionals with lots of potential and yet not enough experience. Finding and transforming them into rounded and experienced professionals takes effort, money, but most of all time and dedication.",
-    "text_2": "Teamcubation hacks the experience challenge, by providing an opportunity for people who would otherwise not make it to the pipeline. In only 6 months, we onboard and train the new batch of junior programmers, whilst working on one or more projects of your backlog. In turn, the senior devs in your organization can focus on the delivery of your key projects and as a bonus, we easen up a little bit the work of your hiring team."
+    "text_2": "Teamcubation hacks the experience challenge, by providing an opportunity for people who would otherwise not make it to the pipeline. In only 6 months, we onboard and train the new batch of junior programmers, whilst working on one or more projects of your backlog. In turn, the senior devs in your organization can focus on the delivery of your key projects and as a bonus, we ease up a little bit the work of your hiring team."
   },
   "section_4": {
     "tittle": {
@@ -89,7 +89,7 @@
     "img_steps": "media/img_3.png",
     "steps": {
       "1":{
-        "tittle": "ASSESMENT",
+        "tittle": "ASSESSMENT",
         "text": "We seek to understand your organization’s way of working by learning your technology stack, methodologies and culture."
       },
       "2":{
@@ -122,7 +122,7 @@
       "btn_sending": "Sending...",
       "submit-response": {
         "success": "Your message has been sent, thank you!",
-        "error": "An error ocurred while sending the form, please try again."
+        "error": "An error occurred while sending the form, please try again."
       }
     }
   },
@@ -167,7 +167,7 @@
     },
     "section_2": {
       "tittle": "WHAT ARE WE_?",
-      "text": "WE ARE THE COMPANY THAT TEACHES YOU TO TRANSFORM JUNIORS INTO SERNIORS. If you see beyond software, beyond the framework and you understand the key is in in the people, join Teamcubation: learn how to lead teams, while you develop for big companies and share with others what you know."
+      "text": "WE ARE THE COMPANY THAT TEACHES YOU TO TRANSFORM JUNIORS INTO SENIORS. If you see beyond software, beyond the framework and you understand the key is in in the people, join Teamcubation: learn how to lead teams, while you develop for big companies and share with others what you know."
     },
     "section_3": {
       "tittle": {
@@ -175,8 +175,8 @@
         "text_2": "WE",
         "text_3": "SOLVE"
       } ,
-      "text_1": "Organizations ask for senior developers, but the market only has juniors. How do we achive the transformation from one to the other?",
-      "text_2": "Teamcubation takes care of breaking the loop of lack of experience transforming novice developers in a cohesive and afficient team ready to give the best of themselves to the company that hired them. And you will be the on in charge of this transformation."
+      "text_1": "Organizations ask for senior developers, but the market only has juniors. How do we achieve the transformation from one to the other?",
+      "text_2": "Teamcubation takes care of breaking the loop of lack of experience transforming novice developers in a cohesive and efficient team ready to give the best of themselves to the company that hired them. And you will be the on in charge of this transformation."
     },
     "section_4": {
       "tittle": {
@@ -221,7 +221,7 @@
 		"btn_sending": "Sending...",
 		"submit-response": {
 		  "success": "Your message has been sent, thank you!",
-		  "error": "An error ocurred while sending the form, please try again."
+		  "error": "An error occurred while sending the form, please try again."
 		}
 	  }
 	}
@@ -286,11 +286,11 @@
         },
         "2":{
           "tittle": "Incubation and learning:",
-          "text": "Code. Code. A lot code. Code like you've never done it. You'll get to know interesting people and have fun acquiring the abilities that the orgnanization that hired you needs. And remember: it's not only about coding, we'll also teach you communication and leadership skills."
+          "text": "Code. Code. A lot of code. Code like you've never done it. You'll get to know interesting people and have fun acquiring the abilities that the organization that hired you needs. And remember: it's not only about coding, we'll also teach you communication and leadership skills."
         },
         "3":{
           "tittle": "END and farewell:",
-          "text": "We've learned to love you, but every bird has to go their family's nest. You came as a junior, today you are an experienced developer inside an orgnization. Make us proud and hold Teamcubation's name up high!"
+          "text": "We've learned to love you, but every bird has to go their family's nest. You came as a junior, today you are an experienced developer inside an organization. Make us proud and hold Teamcubation's name up high!"
         }
       }
     },
@@ -314,7 +314,7 @@
 		  "btn_sending": "Sending...",
 		  "submit-response": {
 			"success": "Your message has been sent, thank you!",
-			"error": "An error ocurred while sending the form, please try again."
+			"error": "An error occurred while sending the form, please try again."
 		  }
 		}
 	  }
