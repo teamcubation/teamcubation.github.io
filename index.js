@@ -70,8 +70,9 @@ $(document).ready(
 $(".form-contact").append('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
 $(".form-contact").on("submit", function(ev) {
     ev.preventDefault();
-    const currentForm= $(this).attr("id");
-    $(".submit-contact").val(dataByLang.formContact.btnSending)
+    const currentForm =  $(this).attr('id');
+    const btn= $(this).find('.submit-contact');
+    btn.text(dataByLang.formContact.btnSending);
     const data_name = $(`#${currentForm} .name`).val();
     const data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(`#${currentForm} .area-phone`).val()} ${$(`#${currentForm} .number-phone`).val()}` 
     const data_email = $(`#${currentForm} .email`).val();
@@ -96,16 +97,22 @@ $(".form-contact").on("submit", function(ev) {
         dataType: 'json',
         success: (r) => {
             $('.alert').remove(); 
-            $("#form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
+            $(".form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
             $(".alert").text(dataByLang.formContact.submitResponse.success)
-            $(".submit-contact").val(dataByLang.formContact.btnSend +"<span class=_effect>_</span>")
+            $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+                $(".alert").slideUp(500);
+            });
+            btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
             clearForm();
         },
         error: (r) => {
             $('.alert').remove(); 
-            $("#form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
+            $(".form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
             $(".alert").text(dataByLang.formContact.submitResponse.error)
-            $(".submit-contact").val(dataByLang.formContact.btnSend +"<span class=_effect>_</span>")
+            $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+                $(".alert").slideUp(500);
+            });
+            btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
             clearForm();
         }
     });
@@ -113,13 +120,13 @@ $(".form-contact").on("submit", function(ev) {
 });
     
 const clearForm = () => {
-    $("#name").val('');
-    $("#country-phone").val('');
-    $("#area-phone").val('');
-    $("#number-phone").val('')    
-    $("#email").val('');
-    $("#message").val('');
-    $("#organization").val('');
+    $(".name").val('');
+    $(".country-phone").val('');
+    $(".area-phone").val('');
+    $(".number-phone").val('')    
+    $(".email").val('');
+    $(".message").val('');
+    $(".organization").val('');
 }
 
 // hide-show home and pages /////////
