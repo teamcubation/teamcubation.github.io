@@ -141,7 +141,7 @@
       "carousel": {
         "text_1": "“No tengo pichis”",
         "helper_1": "CEO",
-        "text_2": "“No hay mas seniors”",
+        "text_2": "“Perdemos oportunidades por falta de gente”",
         "helper_2": "CTO",
         "text_3": "“Tenemos el equipo a la mitad”",
         "helper_3": "Product Manager",
@@ -149,13 +149,13 @@
         "helper_4": "People Manager"
       },
       "central_legend": {
-        "style_h1": "margin-left: 13%; font-size: calc(1.6em + 2.7vw);",
-        "style_h2": "margin-left: 21%; font-size: calc(1.4em + 2vw);",
+        "style_h1": "margin-left:-10%",
+        "style_h2": "margin-left:-10%",
         "h1": "TRANSFORMAMOS",
         "h2": "JUNIORS EN SENIORS"
       },
       "descriptive_legend": {
-        "class": "Descriptive-legend-senior-es",
+        "class": "Descriptive-legend-es",
         "class_line4": "d-inline color-green weight-600",
         "line_1": "ACUMULANDO EXPERIENCIA MIENTRAS",
         "line_2": "DESARROLLAN EL SOFTWARE ",
