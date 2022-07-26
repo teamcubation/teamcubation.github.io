@@ -57,9 +57,9 @@
       "class": "Descriptive-legend-organization-en",
       "class_line4": "d-none",
       "class_line3": "d-inline color-red",
-      "line_1": "THEY GAIN EXPERIENCE WHILST",
-      "line_2": " DEVELOPING A SOFTWARE ",
-      "line_3": "YOUR ORGANIZATION NEEDS.",
+      "line_1": "WE TRANSFORM JUNIOR DEVELOPERS",
+      "line_2": "INTO READY TO WORK EXPERTS WHILE",
+      "line_3": "THEY DEVELOP THE SOFTWARE YOUR ORGANIZATION NEEDS",
       "line_4": ""
     },
     "learn_more": {
@@ -139,20 +139,20 @@
       "flag": "media/b_english.png",
       "tittle": "SENIOR",
       "carousel": {
-        "text_1": "“I don't have any rookies”",
-        "helper_1": "CEO",
-        "text_2": "“There are no senior devs”",
-        "helper_2": "CTO",
-        "text_3": "“We have half the team we need”",
-        "helper_3": "Product Manager",
-        "text_4": "“There are no more seniors”",
-        "helper_4": "People Manager"
+        "text_1": "“I know a lot about the technology, but I don't get the chance to lead teams”",
+        "helper_1": "Senior Dev",
+        "text_2": "“I want to be the Senior that I would have loved next to me when I was a Junior”",
+        "helper_2": "Senior Dev",
+        "text_3": "“How can I have 4 years of experience if I learnt it 2 years ago!”",
+        "helper_3": "Junior Dev",
+        "text_4": "“It's impossible to have 20 years of experience in Docker when it came out in 2013!”",
+        "helper_4": "Junior Dev"
       },
       "central_legend": {
         "style_h1": "",
         "style_h2": "",
-        "h1": "WE TRANSFORM",
-        "h2": "JUNIORS INTO SENIORS"
+        "h1": "WE TRAIN",
+        "h2": "JUNIOR DEVS"
       },
       "descriptive_legend": {
         "class": "Descriptive-legend-senior-en",
@@ -167,7 +167,7 @@
     },
     "section_2": {
       "tittle": "WHAT ARE WE_?",
-      "text": "WE ARE THE COMPANY THAT TEACHES YOU TO TRANSFORM JUNIORS INTO SENIORS. If you see beyond software, beyond the framework and you understand the key is in in the people, join Teamcubation: learn how to lead teams, while you develop for big companies and share with others what you know."
+      "text": "WE ARE THE COMPANY THAT TEACHES YOU TO TRANSFORM JUNIORS INTO READY TO WORK PEOPLE. If you see beyond software, beyond the framework and you understand the key is in in the people, join Teamcubation: learn how to lead teams, while you develop for big companies and share with others what you know."
     },
     "section_3": {
       "tittle": {
@@ -189,7 +189,7 @@
       "steps": {
         "1":{
           "tittle": "Teamcubation Onboarding:",
-          "text": "Welcome home. In Teamcubation you won't only learn new coding skills, but also to lead teams, teach, mentor and lead a squad of developers."
+          "text": "Welcome home. In Teamcubation you won't only learn new technologies, but also to lead teams, teach, mentor and lead a squad of developers."
         },
         "2":{
           "tittle": "Onboarding to the client's organization:",
@@ -203,8 +203,8 @@
     },
 	"section_5": {
 	  "tittle": {
-		"text_1": "CONTACT",
-		"text_2": "US"
+		"text_1": "APP",
+		"text_2": "LY"
 	  },
 	  "contact-form": {
 		"name": "Name",
@@ -220,7 +220,7 @@
 		"btn_text": "Submit",
 		"btn_sending": "Sending...",
 		"submit-response": {
-		  "success": "Your message has been sent, thank you!",
+		  "success": "Thank you for contacting us!",
 		  "error": "An error occurred while sending the form, please try again."
 		}
 	  }
@@ -233,13 +233,13 @@
       "tittle": "JUNIOR",
       "carousel": {
         "text_1": "“The time machine exists”",
-        "helper_1": "CEO",
-        "text_2": "“There are no more senior developers”",
-        "helper_2": "CTO",
-        "text_3": "“We have half the team we need”",
-        "helper_3": "Product Manager",
-        "text_4": "“There are no more senior developers”",
-        "helper_4": "People Manager"
+        "helper_1": "Ready To Work Junior Dev",
+        "text_2": "“Now I do have the opportunity to work in the place of my dreams”",
+        "helper_2": "Junior Dev",
+        "text_3": "“Without Junior Devs there are no Senior Devs”",
+        "helper_3": "Everybody says this...",
+        "text_4": "“The place where I finished my tech education”",
+        "helper_4": "Former Rookie"
       },
       "central_legend": {
         "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
@@ -313,7 +313,7 @@
 		  "btn_text": "Submit",
 		  "btn_sending": "Sending...",
 		  "submit-response": {
-			"success": "Your message has been sent, thank you!",
+			"success": "Thank you for contacting us!",
 			"error": "An error occurred while sending the form, please try again."
 		  }
 		}

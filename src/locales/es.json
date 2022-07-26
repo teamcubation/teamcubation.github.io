@@ -137,11 +137,11 @@
       "flag": "media/b_english.png",
       "tittle": "SENIOR",
       "carousel": {
-        "text_1": "“Se mucho de tecnología pero no tengo oportunidad de liderar equipos”",
-        "helper_1": "Seniors Devs",
+        "text_1": "“Sé mucho de tecnología pero no tengo oportunidad de liderar equipos”",
+        "helper_1": "Senior Dev",
         "text_2": "“Quiero ser el Senior que hubiera querido tener al lado cuando era Junior”",
-        "helper_2": "Seniors Dev",
-        "text_3": "“Como voy a tener 4 años de experiencia si aprendi hace 2!”",
+        "helper_2": "Senior Dev",
+        "text_3": "“Cómo voy a tener 4 años de experiencia si aprendí hace 2!”",
         "helper_3": "Junior Dev",
         "text_4": "“Imposible tener 20 años de experiencia en Docker si salió en 2013!”",
         "helper_4": "Junior Dev"
@@ -218,7 +218,7 @@
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
-          "success": "Gracias por escribirnos !!",
+          "success": "Gracias por escribirnos!",
           "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
       }
       }
@@ -232,11 +232,11 @@
       "carousel": {
         "text_1": "“La máquina del tiempo existe”",
         "helper_1": "Junior Ready To Work",
-        "text_2": "“Ahora si tengo oportunidad de trabajar donde soñaba”",
+        "text_2": "“Ahora sí tengo la oportunidad de trabajar donde soñaba”",
         "helper_2": "Junior Dev",
         "text_3": "“Sin Juniors no hay Seniors”",
-        "helper_3": "Everybody say this...",
-        "text_4": "“El lugar donde termine de formarme”",
+        "helper_3": "Everybody says this...",
+        "text_4": "“El lugar donde terminé de formarme”",
         "helper_4": "Former Rookies"
       },
       "central_legend": {
@@ -311,7 +311,7 @@
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
-          "success": "Gracias por escribirnos !!",
+          "success": "Gracias por escribirnos!",
           "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
         }
       }
