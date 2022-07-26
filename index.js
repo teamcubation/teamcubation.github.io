@@ -197,6 +197,30 @@ $("#junior-enter").on("click", function(ev){
     }
 });
 
+$("#team-enter").on("click", function(ev){
+    ev.preventDefault;
+    if (screen.width > 1024){
+        $("#home").slideUp('slow');
+        $("#organization").hide();
+        $("#senior").hide('slow');
+        $("#junior").hide('slow');
+        styledScroll('team-scrollbar');
+        $("#team").slideDown(3500);
+        window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
+    }
+    else{
+        if($(this).hasClass('junior-enter')){
+            $("#home").slideUp('slow');
+            $("#junior").slideDown('slow');
+            window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
+        }
+        else{
+           hideShowItemMenu('junior-enter', 'color-orange');    
+        } 
+    }
+});
+
+
 $("#organization-enter").hover(
     function() {
         if (screen.width > 1024){
@@ -260,6 +284,11 @@ $('.navigate-junior').on("click", function(ev){
 $('.navigate-organization').on("click", function(ev){
     hideShowPage('organization', urlBuilder(document.location.href));
 });
+
+$('.navigate-team').on("click", function(ev){
+    hideShowPage('team', urlBuilder(document.location.href));
+});
+
 
 $('.navigate-what').on("click", function(ev){
     const page= $(this).attr("id");

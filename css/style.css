@@ -555,6 +555,9 @@ h5{
 	.bc_tc_grey{
 		height: 420px!important;
 	}
+	#ourAnswer{
+		margin-top: -1%;
+	}
 	#ourAnswer h2{
 		font-size: calc(1.8em + 1vw) !important
 	}
@@ -667,6 +670,12 @@ a:link, a:visited, a:active {
 	cursor: pointer;
 	background-color: var(--color-logo-orange)!important;
 }
+
+.hover-bc-turquoise:hover{
+	cursor: pointer;
+	background-color: var(--color-logo-turquoise)!important;
+}
+
 
 a:hover{
 	font-weight: bold;
@@ -885,6 +894,15 @@ input:focus, textarea:focus{
 .junior-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #fc993c;
 }
+
+.team-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #317287;
+}
+  
+.team-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #317287;
+}
+
 
 /* .scroll-prompt {
 	position: fixed;
