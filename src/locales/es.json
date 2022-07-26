@@ -6,7 +6,8 @@
   "textLinks": {
     "organization": "ORGANIZACIÓN",
     "senior": "SENIOR",
-    "junior": "JUNIOR"
+    "junior": "JUNIOR",
+    "team": "NOSOTROS"
   },
   "home":{
     "url": "https://teamcubation.com/en",
@@ -74,7 +75,7 @@
       "text_2": "SOLUCION",
       "text_3": "AMOS"
     } ,
-    "text_1": "Conseguir desarrolladores capacitados para su organización se hace cada vez más difícil y toma más tiempo. Por eso Teamcubation desarrolló la manera de adelantar el proceso y en solo seis meses, transforma a juniors en colaboradores productivos y los prepara para sumarse a su empresa mientras construyen el software que su organización tiene en backlog.",
+    "text_1": "Conseguir desarrolladores con experiencia para su organización se hace cada vez más difícil y toma más tiempo. Por eso Teamcubation desarrolló la manera de adelantar el proceso y en solo seis meses, transforma a juniors en colaboradores productivos y los prepara para sumarse a su empresa mientras construyen el software que su organización tiene en backlog.",
     "text_2": "Existen muchísimas personas con potencial, pero sin práctica. Encontrarlos y transformarlos en profesionales experimentados, demanda esfuerzo, dinero y sobre todo tiempo. Teamcubation se encarga de romper la trampa de la experiencia, entrenando gente que usualmente no entraría en el hiring pipeline de su organización y encargándose —en solo seis meses— de la inducción del nuevo colaborador, permitiendo que la organización se nutra constantemente de gente nueva sin ralentizar la estructura actual y solucionando necesidades de software en su organización."
   },
   "section_4": {
@@ -264,6 +265,99 @@
       "tittle": {
         "text_1": "QUÉ",
         "text_2": "SOLUCION",
+        "text_3": "AMOS"
+      } ,
+      "text_1": "Ocupamos el engranaje que falta entre la academia y el mundo laboral de la industria digital.",
+      "text_2": "O dicho de otra manera: transformamos a un junior en un developer “ready to work”, a un David en un Goliat, a un Pelé en un Maradona. Te hacemos ganar experiencia en un ambiente transparente, agradable, con buena gente, que sabe mucho sobre cómo programar, pero mejor aún, sabe cómo enseñar."
+    },
+    "section_4": {
+      "tittle": {
+        "text_1": "CÓMO",
+        "text_2": "LO",
+        "text_3": "HACE",
+        "text_4": "MOS"
+      } ,
+      "img_steps": "media/junior/img_3_es.png",
+      "steps": {
+        "1":{
+          "tittle": "Onboarding en Teamcubation:",
+          "text": "¿Listo para viajar en el tiempo y hacer en seis meses lo que a cualquier otra persona le tomaría dos años? Te asignaremos a un Squad, donde te empaparás de las metodologías y tecnologías y desarrollarás un proyecto en la organización de la que eres parte."
+        },
+        "2":{
+          "tittle": "Incubación y aprendizaje:",
+          "text": "Código. Código. Mucho código. Código como nunca. Conocerás gente interesante y te divertirás adquiriendo las habilidades laborales que necesita la organización que te contrató. Y recuerda: no se trata solo de aprender skills de código, también te enseñaremos habilidad de comunicación y liderazgo."
+        },
+        "3":{
+          "tittle": "FIN y adiós:",
+          "text": " Nos hemos encariñado, pero todo pájaro debe ir a vivir al nido de su familia. Llegaste siendo un junior, hoy ya eres un developer experimentado dentro de una gran organización. ¡Haznos sentir orgullosos y lleva el nombre de Teamcubation en alto!"
+        }
+      }
+    },
+    "section_5": {
+      "tittle": {
+        "text_1": "POSTU",
+        "text_2": "LATE"
+      },
+      "contact-form": {
+        "name": "Nombre",
+        "organization": "Compañia",
+        "telephone": {
+          "label": "Teléfono",
+          "country": "País",
+          "area": "Área",
+          "number" : "Número"
+        },
+        "email": "E-mail",
+        "reason": "¿Hay algo que quieras contarnos?",
+        "btn_text": "Enviar",
+        "btn_sending": "Enviando...",
+        "submit-response": {
+          "success": "Gracias por escribirnos!",
+          "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+        }
+      }
+    }
+  },
+  "team":{
+    "section_1": {
+      "url": "https://teamcubation.com/en/#team/",
+      "flag": "media/b_english.png",
+      "tittle": "NOSOTROS",
+      "carousel": {
+        "text_1": "“La máquina del tiempo existe”",
+        "helper_1": "Junior Ready To Work",
+        "text_2": "“Ahora sí tengo la oportunidad de trabajar donde soñaba”",
+        "helper_2": "Junior Dev",
+        "text_3": "“Sin Juniors no hay Seniors”",
+        "helper_3": "Everybody says this...",
+        "text_4": "“El lugar donde terminé de formarme”",
+        "helper_4": "Former Rookies"
+      },
+      "central_legend": {
+        "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
+        "style_h2": "font-size: calc(1em + 2.4vw);",
+        "h1": "HAY EQUIPO !",
+        "h2": "teamcubation_"
+      },
+      "descriptive_legend": {
+        "class": "Descriptive-legend-junior-es",
+        "class_line3": "d-inline color-light-turquoise weight-600",
+        "line_1": "LE DAMOS EXPERIENCIA MIENTRAS",
+        "line_2": "DESARROLLAS EL SOFTWARE ",
+        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+      },
+      "learn_more": {
+        "text": "Conozca más"
+      }
+    },
+    "section_2": {
+      "tittle": "POR QUÉ",
+      "text": "Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañias siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos"
+    },
+    "section_3": {
+      "tittle": {
+        "text_1": "QUIÉNES",
+        "text_2": "SOMOS",
         "text_3": "AMOS"
       } ,
       "text_1": "Ocupamos el engranaje que falta entre la academia y el mundo laboral de la industria digital.",

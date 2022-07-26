@@ -6,7 +6,9 @@
   "textLinks": {
     "organization": "ORGANIZATION",
     "senior": "SENIOR",
-    "junior": "JUNIOR"
+    "junior": "JUNIOR",
+    "team": "ABAOUT US"
+
   },
   "home":{
     "url": "https://teamcubation.com/",

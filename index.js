@@ -28,18 +28,22 @@ const styledScroll = (classToAdd) => {
 }
 
 if(initialLocation.includes('organization')){
+    $("body").css('overflow-y', 'scroll');
     styledScroll('organization-scrollbar');
     $("#organization").show();
 }
 else if(initialLocation.includes('senior')){
+    $("body").css('overflow-y', 'scroll');
     styledScroll('senior-scrollbar');
     $("#senior").show();
 }
 else if(initialLocation.includes('junior')){
+    $("body").css('overflow-y', 'scroll');
     styledScroll('junior-scrollbar');
     $("#junior").show();
 }
 else{
+    $("body").css('overflow-y', 'scroll');
     $("#home").show();
 };
 
@@ -138,6 +142,7 @@ $("#organization-enter").on("click", function(ev){
         $("#senior").slideUp('slow');
         $("#junior").slideUp('slow');
         $("#organization").slideDown(3500);
+        $("body").css('overflow-y', 'scroll');
         styledScroll('organization-scrollbar');
         window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
     }
@@ -159,6 +164,7 @@ $("#senior-enter").on("click", function(ev){
         $("#home").slideUp('slow');
         $("#organization").hide();
         $("#junior").hide();
+        $("body").css('overflow-y', 'scroll');
         styledScroll('senior-scrollbar');
         $("#senior").slideDown(3500);
         window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
@@ -181,6 +187,7 @@ $("#junior-enter").on("click", function(ev){
         $("#home").slideUp('slow');
         $("#organization").hide();
         $("#senior").hide('slow');
+        $("body").css('overflow-y', 'scroll');
         styledScroll('junior-scrollbar');
         $("#junior").slideDown(3500);
         window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
@@ -204,6 +211,7 @@ $("#team-enter").on("click", function(ev){
         $("#organization").hide();
         $("#senior").hide('slow');
         $("#junior").hide('slow');
+        $("body").css('overflow-y', 'scroll');
         styledScroll('team-scrollbar');
         $("#team").slideDown(3500);
         window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
@@ -314,6 +322,7 @@ const hideShowPage = (pageToShow, url) => {
             page !== 'home' ? window.history.pushState(``, '', `${url}#${pageToShow}`) : window.history.replaceState('', '', `${url}`); ;
         }
         else{
+            $("body").css('overflow-y', 'scroll');
             window.scrollTo(0, 0);
             $(`#${page}`).hide()
         }  
