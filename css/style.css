@@ -513,7 +513,7 @@ h5{
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
 	.logo-home{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
