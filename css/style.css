@@ -234,7 +234,7 @@ h5{
 }
 
 .learn-more{
-	margin:10%;
+	margin:7% 10% 10% 10%;
 	text-align: right;
 	font-size: calc(0.5em + 0.8vw);
 }
@@ -295,6 +295,20 @@ h5{
     text-align: right;
 }
 
+.Central-legend > h1{
+	font-size: calc(0.7em + 5.2vw); 
+	line-height: 0.5;
+	font-weight: bold;
+	margin-left: -10%;
+}
+
+.Central-legend > h2{
+	font-size: calc(0.5em + 4.2vw); 
+	font-weight: bold;
+	margin-left: -10%;
+
+}
+
 .Central-legend-organization{
     text-align: right;
 }
@@ -310,20 +324,6 @@ h5{
 	font-size: calc(0.5em + 4.2vw); 
 	font-weight: bold;
 	margin-left: -10%;
-}
-
-.Central-legend > h1{
-	font-size: calc(0.5em + 4vw);
-	line-height: 0.5;
-	font-weight: bold;
-	margin-left: -10%;
-}
-
-.Central-legend > h2{
-	font-size: calc(0.5em + 3vw);
-	font-weight: bold;
-	margin-left: -10%;
-
 }
 
 .Descriptive-legend-organization-es{
@@ -346,7 +346,7 @@ h5{
 
 .Descriptive-legend-senior-es{
 	justify-content: right;
-    margin-top: 8%;
+    margin-top: 6%;
 }
 
 .Descriptive-legend-senior-es > h5,
@@ -436,7 +436,7 @@ h5{
 	}
 	.flag-mobile{
 		display: inline !important;
-		margin: 23% 0 0 2%;
+		margin: 20% 0 0 2%;
 	}
 	.flag-mobile > img,
 	.flag-home-mobile > img{
@@ -454,7 +454,7 @@ h5{
 		margin: 3% 0 0 0!important;
 	}
 	.Rotary-legend h2{
-		font-size: calc(1em + 2.8vw);
+		font-size: calc(1em + 2.6vw);
 		font-weight: 600;
 	}
 	.Central-legend,
@@ -503,8 +503,8 @@ h5{
 	.Descriptive-legend-senior-es >h5,
 	.Descriptive-legend-senior-en > h5,
 	.Descriptive-legend-junior-es > h5{
-		font-size: calc(0.4em + 3vw)!important;
-		line-height: 0.9;
+		font-size: calc(0.4em + 2.8vw)!important;
+		line-height: 0.8;
 		display: inline!important;
 	}
 	.learn-more{
@@ -514,10 +514,25 @@ h5{
 }
 
 @media only screen and (max-width: 500px) {
+	.logo{
+		z-index: 2;
+		position: absolute;
+		margin: 1% 0 0 3%;
+		width: 32vw;
+	}
 	.logo-home{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
 		filter: brightness(0.9);
+	}
+
+	.flag-mobile{
+		display: inline !important;
+		margin: 20% 0 0 2%;
+	}
+	.flag-mobile > img,
+	.flag-home-mobile > img{
+		width: 14%;
 	}
 	.burguer-menu{
 		width: 70%!important;
@@ -609,7 +624,6 @@ h5{
 		height: 90px;	
 	}
 }
-
 
 .navigate-home{
 	cursor: pointer;
@@ -750,7 +764,6 @@ input:focus, textarea:focus{
 #team{
 	display: none;
 }
-
 
 /* home */
 

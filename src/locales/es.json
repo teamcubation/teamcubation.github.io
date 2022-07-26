@@ -52,7 +52,7 @@
       "h2": "DEVELOPERS"
     },
     "descriptive_legend": {
-      "style_closing_tag": "margin-left: 2%; font-size: calc(1em + 2vw); line-height: 0;",
+      "style_closing_tag": "margin-left: 1%; font-size: calc(1em + 2vw); line-height: 0;",
       "class": "Descriptive-legend-organization-es",
       "class_line4": "d-inline color-red",
       "class_line3": "d-inline color-red",
@@ -140,7 +140,7 @@
         "text_1": "“Se mucho de tecnología pero no tengo oportunidad de liderar equipos”",
         "helper_1": "Seniors Devs",
         "text_2": "“Quiero ser el Senior que hubiera querido tener al lado cuando era Junior”",
-        "helper_2": "Junior Dev",
+        "helper_2": "Seniors Dev",
         "text_3": "“Como voy a tener 4 años de experiencia si aprendi hace 2!”",
         "helper_3": "Junior Dev",
         "text_4": "“Imposible tener 20 años de experiencia en Docker si salió en 2013!”",
@@ -149,8 +149,8 @@
       "central_legend": {
         "style_h1": "",
         "style_h2": "",
-        "h1": "TRANSFORMAMOS",
-        "h2": "ENTRENAMOS JUNIORS"
+        "h1": "ENTRENAMOS",
+        "h2": "JUNIORS"
       },
       "descriptive_legend": {
         "class": "Descriptive-legend-senior-es",
