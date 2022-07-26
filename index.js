@@ -44,7 +44,7 @@ else if(initialLocation.includes('junior')){
 }
 else if(initialLocation.includes('team')){
     $("body").css('overflow-y', 'scroll');
-    styledScroll('junior-scrollbar');
+    styledScroll('team-scrollbar');
     $("#team").show();
 }
 else{
