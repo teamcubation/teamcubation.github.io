@@ -42,6 +42,11 @@ else if(initialLocation.includes('junior')){
     styledScroll('junior-scrollbar');
     $("#junior").show();
 }
+else if(initialLocation.includes('team')){
+    $("body").css('overflow-y', 'scroll');
+    styledScroll('junior-scrollbar');
+    $("#team").show();
+}
 else{
     $("body").css('overflow-y', 'scroll');
     $("#home").show();
@@ -307,8 +312,11 @@ $('.navigate-what').on("click", function(ev){
     else if(page.includes('senior')){
         navigate_to = 'senior/what'
     }
-    else{
+    else if(page.includes('junior')){
         navigate_to = 'junior/what'
+    }
+    else{
+        navigate_to = 'team/what'
     }
     document.getElementById(navigate_to).scrollIntoView({behavior: 'smooth'}, true);
 })
