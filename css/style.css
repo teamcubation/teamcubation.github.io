@@ -198,6 +198,15 @@ h5{
 	margin-top: 2%!important;
 }
 
+.flag-home-mobile{
+	display: none;
+	width: 50%; 
+	position:absolute;
+	top: 2%;
+	right: 5%;
+	text-align: right;
+}
+
 .flag-mobile{
 	display: none;
 	width: 50%; 
@@ -247,10 +256,6 @@ h5{
 	margin: 2% 0 0 7%;
 }
 
-/* .section-one > .col-lg-5{
-	padding:0 2% 0 0;
-} */
-
 .Header-organization{
 	margin-left: 35%;
 	width: 57%;
@@ -273,54 +278,101 @@ h5{
 
 .Rotary-legend{
 	text-align: center;
-	margin-top: 10%;
-	min-height: 22vh;
-	width: 95%;
+	margin-top: 6%;
+    min-height: 25vh;
+    width: 95%;
 }
 
 .Rotary-legend h2{
 	color:#5f5f5f;
-	font-weight: bold;
+	font-weight: 600;
 	line-height: 1;
 	font-style: italic;
-	font-size: 2.8vw;
+	font-size: 2.5vw;
 }
 
 .Central-legend{
     text-align: right;
 }
 
+.Central-legend-organization{
+    text-align: right;
+}
+
+.Central-legend-organization > h1{
+	font-size: calc(0.7em + 5.2vw); 
+	line-height: 0.5;
+	font-weight: bold;
+	margin-left: -10%;
+}
+
+.Central-legend-organization > h2{
+	font-size: calc(0.5em + 4.2vw); 
+	font-weight: bold;
+	margin-left: -10%;
+}
+
 .Central-legend > h1{
 	font-size: calc(0.5em + 4vw);
 	line-height: 0.5;
 	font-weight: bold;
+	margin-left: -10%;
 }
 
 .Central-legend > h2{
 	font-size: calc(0.5em + 3vw);
 	font-weight: bold;
+	margin-left: -10%;
+
 }
 
-.Descriptive-legend-es{
+.Descriptive-legend-organization-es{
+    margin: 6% 0 0 -8%;
+}
+
+.Descriptive-legend-organization-es > h5{
+	font-size: 1.8vw;
+	line-height: 0.9;
+}
+
+.Descriptive-legend-organization-en{
+    margin: 6% 0 0 20%;
+}
+
+.Descriptive-legend-organization-en > h5{
+	font-size: 1.8vw;
+	line-height: 0.9;
+}
+
+.Descriptive-legend-senior-es{
 	justify-content: right;
     margin-top: 8%;
 }
 
-.Descriptive-legend-junior-es{
-    margin: -6.5% 0 0 117%;
-}
-
-.Descriptive-legend-en{
-    margin: -6.5% 0 0 122%;
-}
-
-.Descriptive-legend-en > h5,
-.Descriptive-legend-es > h5,
 .Descriptive-legend-senior-es > h5,
-.Descriptive-legend-senior-en > h5,
+.Descriptive-legend-senior-en > h5{
+	font-size: 2vw;
+	line-height: 0.8;
+}
+
+.Descriptive-legend-senior-en{
+	justify-content: right;
+    margin: 8% 0 0 3%;
+}
+
+.Descriptive-legend-junior-es{
+	justify-content: right;
+    margin: 6% 0 0 1vw;
+}
+
 .Descriptive-legend-junior-es > h5{
 	font-size: 2vw;
 	line-height: 0.8;
+}
+
+.Descriptive-legend-junior-en{
+	justify-content: right;
+    margin: 6% 0 0 10%;
 }
 
 .What_is_Tc_tittle{
@@ -351,39 +403,43 @@ h5{
     padding: 0;
 }
 
-
 /* responsive  */
 
 @media only screen and (max-width: 991px) {
-
+	
+	.logo-home{
+		width: 60%!important; 
+		margin: 5% 0 0 5%; 
+		filter: brightness(0.9);
+	}
+	.burguer-menu{
+		width: 70%!important;
+		margin-top: 3%!important;
+	}
+	.flag-home-mobile{
+		display: inline !important;
+	}
 	.logo{
 		z-index: 2;
 		position: absolute;
 		margin: 3% 0 0 3%;
 		width: 30vw;
 	}
-
 	.section-one{
 		overflow: hidden;
 		height: auto;
 	}
-		
 	.section-one > .col-sm-12{
 		margin: 2% 2.5% 0 2.5%;
 		width: 95%;
 		padding:0;
 	}
-	
-	.Rotary-legend{
-		min-height: 16vh!important;
-		text-align: center!important;
-		margin: 3% 0 0 0!important;
-	}
 	.flag-mobile{
 		display: inline !important;
 		margin: 23% 0 0 2%;
 	}
-	.flag-mobile > img{
+	.flag-mobile > img,
+	.flag-home-mobile > img{
 		width: 18%;
 	}
 	.flag-desktop{
@@ -392,10 +448,17 @@ h5{
 	.Header-organization{
 		display: none;
 	}
-	.Rotary-legend h2{
-		font-size: calc(1em + 3.3vw)
+	.Rotary-legend{
+		min-height: 17vh!important;
+		text-align: center!important;
+		margin: 3% 0 0 0!important;
 	}
-	.Central-legend{
+	.Rotary-legend h2{
+		font-size: calc(1em + 2.8vw);
+		font-weight: 600;
+	}
+	.Central-legend,
+	.Central-legend-organization{
 		text-align: center;
 		margin: 3% 0 3% 0!important;
 	}
@@ -408,23 +471,35 @@ h5{
 		font-size: calc(0.9em + 4.2vw)
 	}
 
+	.Central-legend-organization > h1{
+		margin: 0!important;
+		font-size: calc(1.3em + 5.2vw)
+	}
+	.Central-legend-organization > h2{
+		margin: 0!important;
+		font-size: calc(1em + 5.2vw)
+	}
+
 	.Descriptive-legend-es,
 	.Descriptive-legend-senior-es,
 	.Descriptive-legend-senior-en,
-	.Descriptive-legend-junior-es{
+	.Descriptive-legend-organization-es,
+	.Descriptive-legend-organization-en,
+	.Descriptive-legend-junior-es,
+	.Descriptive-legend-junior-en{
 		text-align: center;
 		margin: 0% 2.5% 3% 2.5%!important;
 		width: 95%;
 	}
-	
 	.Descriptive-legend-en{
 		text-align: center;
 		margin: 0% 2.5% 5% 2.5%;
 		width: 95%;
 	}
-	
 	.Descriptive-legend-en > h5,
 	.Descriptive-legend-es > h5,
+	.Descriptive-legend-organization-es > h5,
+	.Descriptive-legend-organization-en > h5,
 	.Descriptive-legend-senior-es >h5,
 	.Descriptive-legend-senior-en > h5,
 	.Descriptive-legend-junior-es > h5{
@@ -449,24 +524,6 @@ h5{
 		margin-top: 3%!important;
 	}
 	
-	/* .logo{
-		z-index: 2;
-		position: absolute;
-		margin: 3% 0 0 3%;
-		width: 25%;
-	} */
-	/* .Rotary-legend h2{
-		font-size: calc(1em + 3.5vw)
-	}
-	.Central-legend{
-		text-align: center;
-		margin: 3% 0 3% 0!important;
-	} */
-	/* .Central-legend > h2,
-	.Central-legend > h1{
-		margin: 0!important;
-		font-size: calc(2em + 3.5vw)
-	} */
 	.What_is_Tc_tittle{
 		margin-left: -2%;
 		font-size: calc(1.8em + 1vw) !important;
@@ -540,41 +597,6 @@ h5{
 	#ContactUs .decorate-lg{
 		margin-top: 5%!important;
 	}
-}
-
-@media only screen and (max-width: 700px) {
-	/* .Descriptive-legend-es,
-	.Descriptive-legend-senior-es,
-	.Descriptive-legend-senior-en,
-	.Descriptive-legend-junior-es{
-		text-align: center;
-		margin: 0% 2.5% 3% 2.5%!important;
-		width: 95%;
-	}
-	
-	.Descriptive-legend-en{
-		text-align: center;
-		margin: 0% 2.5% 5% 2.5%;
-		width: 95%;
-	}
-	
-	.Descriptive-legend-en > h5,
-	.Descriptive-legend-es > h5,
-	.Descriptive-legend-senior-es >h5,
-	.Descriptive-legend-senior-en > h5,
-	.Descriptive-legend-junior-es > h5{
-		font-size: 4.8vw!important;
-		line-height: 0.4;
-		display: inline!important;
-	} */
-	
-	/* .logo{
-		z-index: 2;
-		position: absolute;
-		margin: 3% 0 0 3%;
-		width: 35%;
-	} */
-
 	.bc_tc_grey{
 		height: 280px!important;
 	}
@@ -582,12 +604,12 @@ h5{
 		width: 90%;
 		margin: 0;
 		height: auto;
-		/* filter:none */
 	}
 	.hidden_tc_vertical{
 		height: 90px;	
 	}
 }
+
 
 .navigate-home{
 	cursor: pointer;

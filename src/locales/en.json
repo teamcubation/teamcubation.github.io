@@ -54,7 +54,7 @@
     },
     "descriptive_legend": {
       "style_closing_tag": "margin-left: 2%; font-size: calc(1.1em + 2vw); line-height: 0;",
-      "class": "Descriptive-legend-en",
+      "class": "Descriptive-legend-organization-en",
       "class_line4": "d-none",
       "class_line3": "d-inline color-red",
       "line_1": "THEY GAIN EXPERIENCE WHILST",
@@ -149,8 +149,8 @@
         "helper_4": "People Manager"
       },
       "central_legend": {
-        "style_h1": "margin-left: 23%;; font-size: calc(1.7em + 2.7vw);",
-        "style_h2": "font-size: calc(1em + 2.1vw);",
+        "style_h1": "",
+        "style_h2": "",
         "h1": "WE TRANSFORM",
         "h2": "JUNIORS INTO SENIORS"
       },
@@ -242,8 +242,8 @@
         "helper_4": "People Manager"
       },
       "central_legend": {
-        "style_h1": "margin-left: 19%; line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
-        "style_h2": "margin-left: 19%; font-size: calc(1em + 2.4vw);",
+        "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
+        "style_h2": "font-size: calc(1em + 2.4vw);",
         "h1": "EXPERIENCE",
         "h2": "6 MONTHS = 2 YEARS"
       },

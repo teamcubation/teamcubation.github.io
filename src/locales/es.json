@@ -48,19 +48,17 @@
       "helper_4": "People Manager"
     },
     "central_legend": {
-      "style_h1": "margin-left: 2%",
       "h1": "ENTRENAMOS",
       "h2": "DEVELOPERS"
     },
     "descriptive_legend": {
-      "style_closing_tag": "margin-left: 7%; font-size: calc(1.1em + 2vw); line-height: 0;",
-      "class": "Descriptive-legend-es",
+      "style_closing_tag": "margin-left: 2%; font-size: calc(1em + 2vw); line-height: 0;",
+      "class": "Descriptive-legend-organization-es",
       "class_line4": "d-inline color-red",
-      "class_line3": "d-block color-red",
+      "class_line3": "d-inline color-red",
       "line_1": "TRANSFORMAMOS JUNIORS EN EXPERTOS ",
-      "line_2": "READY-TO-WORK MIENTRAS ",
-      "line_3": "DESARROLLAN EL SOFTWARE QUE ",
-      "line_4": "SU ORGANIZACIÓN NECESITA."
+      "line_2": "READY-TO-WORK MIENTRAS DESARROLLAN EL",
+      "line_3": " SOFTWARE QUE SU ORGANIZACIÓN NECESITA."
     },
     "learn_more": {
       "text": "Conozca más"
@@ -139,23 +137,23 @@
       "flag": "media/b_english.png",
       "tittle": "SENIOR",
       "carousel": {
-        "text_1": "“No tengo pichis”",
-        "helper_1": "CEO",
-        "text_2": "“Perdemos oportunidades por falta de gente”",
-        "helper_2": "CTO",
-        "text_3": "“Tenemos el equipo a la mitad”",
-        "helper_3": "Product Manager",
-        "text_4": "“No hay mas seniors”",
-        "helper_4": "People Manager"
+        "text_1": "“Se mucho de tecnología pero no tengo oportunidad de liderar equipos”",
+        "helper_1": "Seniors Devs",
+        "text_2": "“Quiero ser el Senior que hubiera querido tener al lado cuando era Junior”",
+        "helper_2": "Junior Dev",
+        "text_3": "“Como voy a tener 4 años de experiencia si aprendi hace 2!”",
+        "helper_3": "Junior Dev",
+        "text_4": "“Imposible tener 20 años de experiencia en Docker si salió en 2013!”",
+        "helper_4": "Junior Dev"
       },
       "central_legend": {
-        "style_h1": "margin-left:-10%",
-        "style_h2": "margin-left:-10%",
+        "style_h1": "",
+        "style_h2": "",
         "h1": "TRANSFORMAMOS",
-        "h2": "JUNIORS EN SENIORS"
+        "h2": "ENTRENAMOS JUNIORS"
       },
       "descriptive_legend": {
-        "class": "Descriptive-legend-es",
+        "class": "Descriptive-legend-senior-es",
         "class_line4": "d-inline color-green weight-600",
         "line_1": "ACUMULANDO EXPERIENCIA MIENTRAS",
         "line_2": "DESARROLLAN EL SOFTWARE ",
@@ -167,7 +165,7 @@
     },
     "section_2": {
       "tittle": "QUÉ SOMOS_?",
-      "text": "SOMOS LA EMPRESA QUE TE ENSEÑA A TRANSFORMAR A JUNIORS EN SENIORS. Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."
+      "text": "SOMOS LA EMPRESA QUE TE ENSEÑA A TRANSFORMAR A JUNIORS EN PERSONAS READY TO WORK. Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."
     },
     "section_3": {
       "tittle": {
@@ -189,7 +187,7 @@
       "steps": {
         "1":{
           "tittle": "Onboarding en Teamcubation:",
-          "text": "Bienvenido a casa. En Teamcubation aprenderás no solo nuevo código, sino también a liderar equipos, enseñar, ser mentor y ser el líder de tu squad."
+          "text": "Bienvenido a casa. En Teamcubation aprenderás nuevas tecnologías, sino también a liderar equipos, enseñar, ser mentor y ser el líder de tu squad."
         },
         "2":{
           "tittle": "Onboarding en la organización cliente:",
@@ -203,8 +201,8 @@
     },
     "section_5": {
       "tittle": {
-        "text_1": "CONTACTE",
-        "text_2": "NOS"
+        "text_1": "POSTU",
+        "text_2": "LATE"
       },
       "contact-form": {
         "name": "Nombre",
@@ -220,9 +218,9 @@
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
-          "success": "Su mensaje se ha enviado correctamente, gracias !!",
+          "success": "Gracias por escribirnos !!",
           "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
-        }
+      }
       }
     }
   },
@@ -233,17 +231,17 @@
       "tittle": "JUNIOR",
       "carousel": {
         "text_1": "“La máquina del tiempo existe”",
-        "helper_1": "CEO",
-        "text_2": "“No hay mas seniors”",
-        "helper_2": "CTO",
-        "text_3": "“Tenemos el equipo a la mitad”",
-        "helper_3": "Product Manager",
-        "text_4": "“No hay mas seniors”",
-        "helper_4": "People Manager"
+        "helper_1": "Junior Ready To Work",
+        "text_2": "“Ahora si tengo oportunidad de trabajar donde soñaba”",
+        "helper_2": "Junior Dev",
+        "text_3": "“Sin Juniors no hay Seniors”",
+        "helper_3": "Everybody say this...",
+        "text_4": "“El lugar donde termine de formarme”",
+        "helper_4": "Former Rookies"
       },
       "central_legend": {
-        "style_h1": "margin-left: 17%; line-height: 0.7; font-size: calc(1.8em + 4.2vw);",
-        "style_h2": "margin-left: 24%; font-size: calc(1.4em + 2.5vw);",
+        "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
+        "style_h2": "font-size: calc(1em + 2.4vw);",
         "h1": "EXPERIENCIA",
         "h2": "6 MESES = 2 AÑOS"
       },
@@ -268,7 +266,7 @@
         "text_2": "SOLUCION",
         "text_3": "AMOS"
       } ,
-      "text_1": "Ocupamos el engranaje que falta entre la universidad y el mundo laboral de la industria digital.",
+      "text_1": "Ocupamos el engranaje que falta entre la academia y el mundo laboral de la industria digital.",
       "text_2": "O dicho de otra manera: transformamos a un junior en un developer “ready to work”, a un David en un Goliat, a un Pelé en un Maradona. Te hacemos ganar experiencia en un ambiente transparente, agradable, con buena gente, que sabe mucho sobre cómo programar, pero mejor aún, sabe cómo enseñar."
     },
     "section_4": {
@@ -296,8 +294,8 @@
     },
     "section_5": {
       "tittle": {
-        "text_1": "CONTACTE",
-        "text_2": "NOS"
+        "text_1": "POSTU",
+        "text_2": "LATE"
       },
       "contact-form": {
         "name": "Nombre",
@@ -313,7 +311,7 @@
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
-          "success": "Su mensaje se ha enviado correctamente, gracias !!",
+          "success": "Gracias por escribirnos !!",
           "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
         }
       }
