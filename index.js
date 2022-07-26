@@ -231,7 +231,7 @@ $("#team-enter").on("click", function(ev){
             window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
         }
         else{
-           hideShowItemMenu('junior-enter', 'color-orange');    
+           hideShowItemMenu('team-enter', 'color-turquoise');    
         } 
     }
 });
