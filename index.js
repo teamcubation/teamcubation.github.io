@@ -66,6 +66,9 @@ window.addEventListener("hashchange", function(ev) {
     else if(ev.newURL.includes('junior', ev.newURL)){
         hideShowPage('junior', url);
     }
+    else if(ev.newURL.includes('team', ev.newURL)){
+        hideShowPage('team', url);
+    }
 })
    
 let json_path;
