@@ -225,7 +225,7 @@ $("#team-enter").on("click", function(ev){
         window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
     }
     else{
-        if($(this).hasClass('junior-enter')){
+        if($(this).hasClass('team-enter')){
             $("#home").slideUp('slow');
             $("#junior").slideDown('slow');
             window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
