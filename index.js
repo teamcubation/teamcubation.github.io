@@ -42,7 +42,7 @@ else if(initialLocation.includes('junior')){
     styledScroll('junior-scrollbar');
     $("#junior").show();
 }
-else if(initialLocation.includes('team')){
+else if (initialLocation.includes('/#team')){
     $("body").css('overflow-y', 'scroll');
     styledScroll('team-scrollbar');
     $("#team").show();
@@ -58,7 +58,7 @@ window.addEventListener("hashchange", function(ev) {
         hideShowPage('home', urlBuilder(document.location.href));
     }
     else if(ev.newURL.includes('organization')){
-        hideShowPage('organization', url);
+        hideShowPage('organization', ev.newURL);
     }
     else if(ev.newURL.includes('senior', ev.newURL)){
         hideShowPage('senior', url);
