@@ -222,13 +222,13 @@ $("#team-enter").on("click", function(ev){
         $("body").css('overflow-y', 'scroll');
         styledScroll('team-scrollbar');
         $("#team").slideDown(3500);
-        window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
+        window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
     }
     else{
         if($(this).hasClass('team-enter')){
             $("#home").slideUp('slow');
-            $("#junior").slideDown('slow');
-            window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
+            $("#team").slideDown('slow');
+            window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
         }
         else{
            hideShowItemMenu('team-enter', 'color-turquoise');    
