@@ -249,9 +249,9 @@
       "descriptive_legend": {
         "class": "Descriptive-legend-junior-es",
         "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "ACUMULÁ EXPERIENCIA MIENTRAS",
-        "line_2": "TE ACOMPAÑAMOS EN DESARROLLAR UN PROYECTO REAL",
-        "line_3": "PARA LA EMPRESA EN LA QUE TRABAJAS"
+        "line_1": "ACUMULÁ EXPERIENCIA MIENTRAS TE",
+        "line_2": " ACOMPAÑAMOS EN DESARROLLAR UN PROYECTO ",
+        "line_3": "REAL PARA LA EMPRESA EN LA QUE TRABAJAS"
       },
       "learn_more": {
         "text": "Conozca más"
@@ -342,9 +342,9 @@
       "descriptive_legend": {
         "class": "Descriptive-legend-junior-es",
         "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "RESOLVEMOS EL PROBLEMA DE LA FALTA DE TALENTO",
-        "line_2": "Y DE PRIMER EMPLEO USANDO DATOS ",
-        "line_3": "PERMITIENDO CONTRATAR GENTE SIN EXPERIENCIA "
+        "line_1": "RESOLVEMOS EL PROBLEMA DE LA FALTA DE ",
+        "line_2": "TALENTO Y DE PRIMER EMPLEO USANDO DATOS ",
+        "line_3": "PERMITIENDO CONTRATAR GENTE SIN EXPERIENCIA"
       },
       "learn_more": {
         "text": "Conozca más"

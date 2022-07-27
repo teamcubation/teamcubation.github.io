@@ -362,12 +362,12 @@ h5{
 
 .Descriptive-legend-junior-es{
 	justify-content: right;
-    margin: 6% 0 0 1vw;
+    margin: 6% 0 0 0vw;
 }
 
 .Descriptive-legend-junior-es > h5{
-	font-size: 2vw;
-	line-height: 0.8;
+	font-size: 1.7vw;
+	line-height: 0.9;
 }
 
 .Descriptive-legend-junior-en{
