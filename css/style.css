@@ -306,7 +306,24 @@ h5{
 	font-size: calc(0.5em + 4.2vw); 
 	font-weight: bold;
 	margin-left: -10%;
+}
 
+.Central-legend-senior-en{
+	font-size: calc(0.5em + 4.2vw); 
+	font-weight: bold;
+	margin-left: -10%;
+}
+
+.Central-legend-senior-en > h1{
+	font-size: calc(0.5em + 4.5vw); 
+	font-weight: bold;
+	margin-left: -10%;
+}
+
+.Central-legend-senior-en > h2{
+	font-size: calc(0.5em + 4.2vw); 
+	font-weight: bold;
+	margin-left: -10%;
 }
 
 .Central-legend-organization{

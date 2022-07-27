@@ -336,7 +336,7 @@
         "helper_4": "Former Rookie"
       },
       "central_legend": {
-        "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
+        "style_h1": "line-height: 0.7; font-size: calc(0.5em + 4.1vw);",
         "style_h2": "font-size: calc(1em + 2.4vw);",
         "h1": "WE HAVE A TEAM!",
         "h2": "Teamcubation_"
