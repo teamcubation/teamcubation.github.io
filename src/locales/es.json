@@ -25,7 +25,7 @@
       "junior": {
         "name": "JUNIOR",
         "description-bold": "SOMOS UNA MÁQUINA DEL TIEMPO",
-        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARIAS EN EL TIEMPO EN SOLO 6 MESES"
+        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARÍAS EN EL TIEMPO EN SÓLO 6 MESES"
       },
       "team": {
         "name": "TEAM",
@@ -120,7 +120,7 @@
       "btn_text": "Enviar",
       "btn_sending": "Enviando...",
       "submit-response": {
-        "success": "Su mensaje se ha enviado correctamente, gracias !!",
+        "success": "Su mensaje se ha enviado correctamente, gracias!",
         "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
       }
     }
@@ -251,7 +251,7 @@
         "class_line3": "d-inline color-light-turquoise weight-600",
         "line_1": "ACUMULÁ EXPERIENCIA MIENTRAS TE",
         "line_2": " ACOMPAÑAMOS EN DESARROLLAR UN PROYECTO ",
-        "line_3": "REAL PARA LA EMPRESA EN LA QUE TRABAJAS"
+        "line_3": "REAL PARA LA EMPRESA EN LA QUE TRABAJÁS"
       },
       "learn_more": {
         "text": "Conozca más"
@@ -336,7 +336,7 @@
       "central_legend": {
         "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
         "style_h2": "font-size: calc(1em + 2.4vw);",
-        "h1": "HAY EQUIPO !",
+        "h1": "HAY EQUIPO!",
         "h2": "Teamcubation_"
       },
       "descriptive_legend": {
@@ -357,8 +357,7 @@
     "section_3": {
       "tittle": {
         "text_1": "QUIÉNES",
-        "text_2": "SOMOS",
-        "text_3": "AMOS"
+        "text_2": "SOMOS"
       } ,
       "text_1": "Un equipo con años de experiencia en la industria digital",
       "text_2": ""

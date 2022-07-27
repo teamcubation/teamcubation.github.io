@@ -26,12 +26,12 @@
       "junior": {
         "name": "JUNIOR",
         "description-bold": "WE ARE A TIME MACHINE",
-        "description":"AND WE HELP YOU TO GET 2-YEARS EXPERIENCE IN 6 MONTHS"
+        "description":"AND WE HELP YOU TO GET THE EXPERIENCE THAT YOU'D GET IN A LONG TIME IN ONLY 6 MONTHS"
       },
       "team": {
         "name": "TEAM",
         "description-bold": "GET TO KNOW EVERYTHING ABOUT US",
-        "description":"WHAT AND WHO MAKE US THE FIRST COMPANY IN THE IN-OUT DEVELOPERS LEARNING MARKET"
+        "description":"WHAT AND WHO MAKE US THE FIRST COMPANY IN DEVELOPERS TRAINING MARKET"
       }
     }
   },
@@ -251,9 +251,9 @@
       "descriptive_legend": {
         "class": "Descriptive-legend-junior-es",
         "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "GET MORE EXPERIENCE WHILE YOU",
-        "line_2": "DEVELOP THE SOFTWARE",
-        "line_3": "YOUR ORGANIZATION NEEDS"
+        "line_1": "GET MORE EXPERIENCE WHILE WE",
+        "line_2": "HOLD YOUR HAND DEVELOPING A REAL PROJECT",
+        "line_3": "FOR THE COMPANY THAT HIRED YOU"
       },
       "learn_more": {
         "text": "Learn more"
@@ -324,46 +324,45 @@
     "section_1": {
       "url": "https://teamcubation.com/#team",
       "flag": "media/b_english.png",
-      "tittle": "NOSOTROS",
+      "tittle": "US",
       "carousel": {
-        "text_1": "“La máquina del tiempo existe”",
-        "helper_1": "Junior Ready To Work",
-        "text_2": "“Ahora sí tengo la oportunidad de trabajar donde soñaba”",
+        "text_1": "“The time machine exists”",
+        "helper_1": "Ready To Work Junior Dev",
+        "text_2": "“Now I do have the opportunity to work in the place of my dreams”",
         "helper_2": "Junior Dev",
-        "text_3": "“Sin Juniors no hay Seniors”",
+        "text_3": "“Without Junior Devs there are no Senior Devs”",
         "helper_3": "Everybody says this...",
-        "text_4": "“El lugar donde terminé de formarme”",
-        "helper_4": "Former Rookies"
+        "text_4": "“The place where I finished my tech education”",
+        "helper_4": "Former Rookie"
       },
       "central_legend": {
         "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
         "style_h2": "font-size: calc(1em + 2.4vw);",
-        "h1": "HAY EQUIPO !",
-        "h2": "teamcubation_"
+        "h1": "WE HAVE A TEAM!",
+        "h2": "Teamcubation_"
       },
       "descriptive_legend": {
         "class": "Descriptive-legend-junior-es",
         "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "LE DAMOS EXPERIENCIA MIENTRAS",
-        "line_2": "DESARROLLAS EL SOFTWARE ",
-        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+        "line_1": "WE SOLVE THE LACK OF TALENT",
+        "line_2": "AND FIRST JOB SEARCH WITH DATA",
+        "line_3": "ALLOWING THE HIRE OF UNEXPERIENCED PEOPLE"
       },
       "learn_more": {
-        "text": "Conozca más"
+        "text": "Learn more"
       }
     },
     "section_2": {
-      "tittle": "POR QUÉ",
-      "text": "Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañias siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos"
+      "tittle": "WHY",
+      "text": "After several year in the industry and the academy we feel there is a missing piece that links both worlds. The problem is clear and visible,, we form a lot of people in tech but companies still have a lack of talent to meet their needs"
     },
     "section_3": {
       "tittle": {
-        "text_1": "QUIÉNES",
-        "text_2": "SOMOS",
-        "text_3": "AMOS"
+        "text_1": "WHO",
+        "text_2": "ARE WE"
       } ,
-      "text_1": "Ocupamos el engranaje que falta entre la academia y el mundo laboral de la industria digital.",
-      "text_2": "O dicho de otra manera: transformamos a un junior en un developer “ready to work”, a un David en un Goliat, a un Pelé en un Maradona. Te hacemos ganar experiencia en un ambiente transparente, agradable, con buena gente, que sabe mucho sobre cómo programar, pero mejor aún, sabe cómo enseñar."
+      "text_1": "We are a team with several years of experience in the digital industry",
+      "text_2": ""
     },
     "section_4": {
       "tittle": {
