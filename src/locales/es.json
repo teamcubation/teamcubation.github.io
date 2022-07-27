@@ -25,12 +25,12 @@
       "junior": {
         "name": "JUNIOR",
         "description-bold": "SOMOS UNA MÁQUINA DEL TIEMPO",
-        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA DE 2 AÑOS EN 6 MESES"
+        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARIAS EN EL TIEMPO EN SOLO 6 MESES"
       },
       "team": {
         "name": "TEAM",
         "description-bold": "CONOCÉ TODO SOBRE NOSOTROS",
-        "description":"QUÉ Y QUIÉNES NOS HACEN LA PRIMER EMPRESA EN EL MERCADO DE CAPACITACIÓN DE DESARROLLADORES IN-OUT"
+        "description":"QUÉ Y QUIÉNES NOS HACEN LA PRIMER EMPRESA EN EL MERCADO DE ENTRENAMIENTO DE DEVELOPERS"
       }
     }
   },
@@ -250,8 +250,8 @@
         "class": "Descriptive-legend-junior-es",
         "class_line3": "d-inline color-light-turquoise weight-600",
         "line_1": "ACUMULÁ EXPERIENCIA MIENTRAS",
-        "line_2": "DESARROLLAS EL SOFTWARE ",
-        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+        "line_2": "TE ACOMPAÑAMOS EN DESARROLLAR UN PROYECTO REAL",
+        "line_3": "PARA LA EMPRESA EN LA QUE TRABAJAS"
       },
       "learn_more": {
         "text": "Conozca más"
@@ -337,14 +337,14 @@
         "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
         "style_h2": "font-size: calc(1em + 2.4vw);",
         "h1": "HAY EQUIPO !",
-        "h2": "teamcubation_"
+        "h2": "Teamcubation_"
       },
       "descriptive_legend": {
         "class": "Descriptive-legend-junior-es",
         "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "LE DAMOS EXPERIENCIA MIENTRAS",
-        "line_2": "DESARROLLAS EL SOFTWARE ",
-        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+        "line_1": "RESOLVEMOS EL PROBLEMA DE LA FALTA DE TALENTO",
+        "line_2": "Y DE PRIMER EMPLEO USANDO DATOS ",
+        "line_3": "PERMITIENDO CONTRATAR GENTE SIN EXPERIENCIA "
       },
       "learn_more": {
         "text": "Conozca más"
@@ -360,8 +360,8 @@
         "text_2": "SOMOS",
         "text_3": "AMOS"
       } ,
-      "text_1": "Ocupamos el engranaje que falta entre la academia y el mundo laboral de la industria digital.",
-      "text_2": "O dicho de otra manera: transformamos a un junior en un developer “ready to work”, a un David en un Goliat, a un Pelé en un Maradona. Te hacemos ganar experiencia en un ambiente transparente, agradable, con buena gente, que sabe mucho sobre cómo programar, pero mejor aún, sabe cómo enseñar."
+      "text_1": "Un equipo con años de experiencia en la industria digital",
+      "text_2": ""
     },
     "section_4": {
       "tittle": {
