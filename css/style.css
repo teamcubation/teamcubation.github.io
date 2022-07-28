@@ -641,10 +641,20 @@ h6{
 	.logo-home{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
-		/* filter: brightness(0.9); */
+	}
+	.flag-home-mobile{
+		display: inline;
+	}
+	.flag-mobile{
+		display: inline !important; 
+		margin: 18% 0 0 2%;
+	}
+	.flag-mobile > img,
+	.flag-home-mobile > img{
+		width: 8%;
 	}
 	.flag-desktop{
-		display: none!important;
+		display: none!important; 
 	}
 	.section-one > .col-lg-6{
 		margin-left: 0;
