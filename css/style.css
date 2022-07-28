@@ -440,12 +440,11 @@ h6{
 
 /* responsive  */
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) and (min-width: 501px) {
 	
 	.logo-home{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
-		/* filter: brightness(0.9); */
 	}
 	.burguer-menu{
 		width: 70%!important;
@@ -457,7 +456,7 @@ h6{
 	.logo{
 		z-index: 2;
 		position: absolute;
-		margin: 3% 0 0 3%;
+		/* margin: 3% 0 0 3%; */
 		width: 30vw;
 	}
 	.section-one{
@@ -465,17 +464,15 @@ h6{
 		height: auto;
 	}
 	.section-one > .col-sm-12{
-		margin: 2% 2.5% 0 2.5%;
-		width: 95%;
-		padding:0;
+		margin: 0;
 	}
 	.flag-mobile{
 		display: inline !important;
-		margin: 20% 0 0 2%;
+		margin: 18% 0 0 2%;
 	}
 	.flag-mobile > img,
 	.flag-home-mobile > img{
-		width: 18%;
+		width: 8%;
 	}
 	.flag-desktop{
 		display: none!important;
@@ -489,7 +486,7 @@ h6{
 		margin: 3% 0 0 0!important;
 	}
 	.Rotary-legend h2{
-		font-size: calc(1em + 2.6vw);
+		font-size: calc(1em + 2.6vw)!important;
 		font-weight: 600;
 	}
 	.Central-legend,
@@ -499,20 +496,20 @@ h6{
 	}
 	.Central-legend > h1{
 		margin: 0!important;
-		font-size: calc(1.1em + 5.2vw)
+		font-size: calc(1.3em + 8vw)!important;
 	}
 	.Central-legend > h2{
 		margin: 0!important;
-		font-size: calc(0.9em + 4.2vw)
+		font-size: calc(1em + 6vw)!important;
 	}
 
 	.Central-legend-organization > h1{
 		margin: 0!important;
-		font-size: calc(1.3em + 5.2vw)
+		font-size: calc(1.3em + 8vw)!important;
 	}
 	.Central-legend-organization > h2{
 		margin: 0!important;
-		font-size: calc(1em + 5.2vw)
+		font-size: calc(1em + 6vw)!important;
 	}
 
 	.Descriptive-legend-es,
@@ -523,7 +520,188 @@ h6{
 	.Descriptive-legend-junior-es,
 	.Descriptive-legend-junior-en{
 		text-align: center;
-		margin: 0% 2.5% 3% 2.5%!important;
+		margin: 0% 0% 3% 15%!important;
+		width: 70%;
+	}
+	.Descriptive-legend-en{
+		text-align: center;
+		margin: 0% 0% 3% 15%!important;
+		width: 70%;
+	}
+	.Descriptive-legend-en > h5,
+	.Descriptive-legend-es > h5,
+	.Descriptive-legend-organization-es > h5,
+	.Descriptive-legend-organization-en > h5,
+	.Descriptive-legend-senior-es >h5,
+	.Descriptive-legend-senior-en > h5,
+	.Descriptive-legend-junior-es > h5{
+		font-size: calc(0.4em + 2.3vw)!important;
+		line-height: 1;
+		display: inline!important;
+	}
+	.learn-more{
+		font-size: calc(0.4em + 2.3vw)!important;
+		margin: 5% 5% 5% 0
+	}
+	.What_is_Tc_tittle{
+		margin-left: -2%;
+		font-size: calc(1.8em + 1vw) !important;
+	}	
+	.What_is_Tc_text{
+		text-align: left !important;
+    	margin-top: 8% !important;
+	}
+	.What_is_Tc_text h5{
+		font-size: calc(1em + 1.3vw) !important;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+	.bc_tc_grey{
+		height: 420px!important;
+	}
+	#ourAnswer{
+		margin-top: -1%;
+	}
+	#ourAnswer h2{
+		font-size: calc(1.8em + 1vw) !important
+	}
+	#ourAnswer h5{
+		font-size: calc(1em + 1.3vw) !important;
+	}
+	#ourAnswer .decorate-lg{
+		width: 50% !important;
+	}
+	#ourAnswer .tittle{
+		width: 45% !important;
+	}
+
+	#HowWeDo h2{
+		font-size: calc(2em + 1.2vw) !important;
+	}
+	#HowWeDo h5{
+		font-size: calc(1em + 1.3vw) !important;
+	}
+	#HowWeDo h3{
+		font-size: calc(1.2em + 4vw) !important;
+	}
+	#HowWeDo p{
+		font-size: calc(1em + 2vw) !important;
+	}
+	.numbers{
+		font-size: calc(3em + 4vw) !important;
+	}
+	.arrowOrange{
+		margin: 10px!important;
+		width: 90%!important;
+	}
+	.decorate-menu{
+		width: 70px!important;
+		height: 11px!important;
+	}
+	.tittle{
+		width: 45%;
+		padding: 2%;
+	}
+	.decorate-xs{
+		width: 5%;
+		margin-top: 5%;
+		height: 8px;
+	}
+	.decorate-lg{
+		width: 50%;
+		margin-top: 8%;
+		height: 8px;
+	}
+	#ContactUs h2{
+		font-size: calc(2em + 1.3vw) !important;
+	}
+	#ContactUs .decorate-lg{
+		margin-top: 5%!important;
+	}
+	.bc_tc_grey{
+		height: 280px!important;
+	}
+	.Float_Tc_{
+		width: 90%;
+		margin: 0;
+		height: auto;
+	}
+	.hidden_tc_vertical{
+		height: 130px;	
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+	.logo{
+		z-index: 2;
+		position: absolute;
+		width: 32vw;
+	}
+	.logo-home{
+		width: 60%!important; 
+		margin: 5% 0 0 5%; 
+		/* filter: brightness(0.9); */
+	}
+	.flag-desktop{
+		display: none!important;
+	}
+	.section-one > .col-lg-6{
+		margin-left: 0;
+	}
+	.Header-organization{
+		display: none;
+	}
+	.flag-mobile{
+		display: inline !important;
+		margin: 20% 0 0 8%;
+	}
+	.flag-mobile > img,
+	.flag-home-mobile > img{
+		width: 12%;
+	}
+	.Rotary-legend{
+		min-height: 17vh!important;
+		text-align: center!important;
+		margin: 3% 0 0 0!important;
+	}
+	.Rotary-legend h2{
+		font-size: calc(1em + 2.6vw)!important;
+		font-weight: 600;
+	}
+
+	.Central-legend,
+	.Central-legend-organization{
+		text-align: center;
+		margin: 3% 0 3% 0!important;
+	}
+	.Central-legend > h1{
+		margin: 0!important;
+		font-size: calc(1.3em + 8vw)!important;
+	}
+	.Central-legend > h2{
+		margin: 0!important;
+		font-size: calc(1em + 6vw)!important;
+	}
+
+	.Central-legend-organization > h1{
+		margin: 0!important;
+		font-size: calc(1.3em + 8vw)!important;
+	}
+	.Central-legend-organization > h2{
+		margin: 0!important;
+		font-size: calc(1em + 6vw)!important;
+	}
+
+	.Descriptive-legend-es,
+	.Descriptive-legend-senior-es,
+	.Descriptive-legend-senior-en,
+	.Descriptive-legend-organization-es,
+	.Descriptive-legend-organization-en,
+	.Descriptive-legend-junior-es,
+	.Descriptive-legend-junior-en{
+		text-align: center;
+		margin: 0% 0% 3% 2.5%!important;
 		width: 95%;
 	}
 	.Descriptive-legend-en{
@@ -538,36 +716,13 @@ h6{
 	.Descriptive-legend-senior-es >h5,
 	.Descriptive-legend-senior-en > h5,
 	.Descriptive-legend-junior-es > h5{
-		font-size: calc(0.4em + 2.8vw)!important;
+		font-size: calc(0.4em + 2.2vw)!important;
 		line-height: 0.8;
 		display: inline!important;
 	}
 	.learn-more{
-		font-size: calc(0.4em + 3.3vw)!important;
+		font-size: calc(0.4em + 2.8vw)!important;
 		margin: 5% 5% 5% 0
-	}
-}
-
-@media only screen and (max-width: 500px) {
-	.logo{
-		z-index: 2;
-		position: absolute;
-		margin: 1% 0 0 3%;
-		width: 32vw;
-	}
-	.logo-home{
-		width: 60%!important; 
-		margin: 5% 0 0 5%; 
-		/* filter: brightness(0.9); */
-	}
-
-	.flag-mobile{
-		display: inline !important;
-		margin: 20% 0 0 2%;
-	}
-	.flag-mobile > img,
-	.flag-home-mobile > img{
-		width: 14%;
 	}
 	.burguer-menu{
 		width: 70%!important;
