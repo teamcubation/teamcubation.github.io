@@ -11,7 +11,7 @@
   },
   "home":{
     "url": "https://teamcubation.com/en",
-    "welcome": "Bien_venido",
+    "welcome": "Bienvenido",
     "enter":{
       "organization": {
         "name": "ORGANIZACIÓN",
@@ -20,12 +20,13 @@
       },
       "senior": {
         "name": "SENIOR",
-        "description": "TE ENSEÑAMOS A TRANSFORMAR JUNIORS EN SENIORS RTW"
+        "description-bold": "TE ENSEÑAMOS A TRANSFORMAR JUNIORS EN SENIORS RTW",
+        "description":"SÉ EL SENIOR QUE HUBIERAS QUERIDO TENER A TU LADO CUANDO ERAS JUNIOR"
       },
       "junior": {
         "name": "JUNIOR",
         "description-bold": "SOMOS UNA MÁQUINA DEL TIEMPO",
-        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARÍAS EN EL TIEMPO EN SÓLO 6 MESES"
+        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARÍAS EN 2 AÑOS EN SÓLO 6 MESES"
       },
       "team": {
         "name": "TEAM",
@@ -188,7 +189,7 @@
       "steps": {
         "1":{
           "tittle": "Onboarding en Teamcubation:",
-          "text": "Bienvenido a casa. En Teamcubation aprenderás nuevas tecnologías, sino también a liderar equipos, enseñar, ser mentor y ser el líder de tu squad."
+          "text": "Bienvenido a casa. En Teamcubation no solo aprenderás nuevas tecnologías, sino también a liderar equipos, enseñar, ser mentor y ser el líder de tu squad."
         },
         "2":{
           "tittle": "Onboarding en la organización cliente:",
