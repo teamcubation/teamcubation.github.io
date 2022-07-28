@@ -53,23 +53,26 @@ else{
 };
 
 window.addEventListener("hashchange", function(ev) {
-    ev.preventDefault;
-    if(ev.newURL === url || ev.oldURL.includes('/#')){
-        window.history.replaceState('', '', `${url}`);
-        hideShowPage('home', urlBuilder(document.location.href));
-    }
-    else if(ev.newURL.includes('organization')){
-        hideShowPage('organization', ev.newURL);
-    }
-    else if(ev.newURL.includes('senior', ev.newURL)){
-        hideShowPage('senior', url);
-    }
-    else if(ev.newURL.includes('junior', ev.newURL)){
-        hideShowPage('junior', url);
-    }
-    else if(ev.newURL.includes('team', ev.newURL)){
-        hideShowPage('team', url);
-    }
+    ev.stopPropagation();
+    // if(screen.width > 1024){
+
+    //     if(ev.newURL === url || ev.oldURL.includes('/#')){
+    //         window.history.replaceState('', '', `${url}`);
+    //         hideShowPage('home', urlBuilder(document.location.href));
+    //     }
+    //     else if(ev.newURL.includes('organization')){
+    //         hideShowPage('organization', url);
+    //     }
+    //     else if(ev.newURL.includes('senior')){
+    //         hideShowPage('senior', url);
+    //     }
+    //     else if(ev.newURL.includes('junior')){
+    //         hideShowPage('junior', url);
+    //     }
+    //     else if(ev.newURL.includes('team')){
+    //         hideShowPage('team', url);
+    //     }
+    // }
 })
    
 let json_path;
