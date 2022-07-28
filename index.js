@@ -145,7 +145,7 @@ const clearForm = () => {
 // hide-show home and pages /////////
 
 $("#organization-enter").on("click", function(ev){
-    ev.preventDefault;
+    ev.stopPropagation();
     if (screen.width > 1024){
         $("#home").slideUp('slow');
         $("#senior").slideUp('slow');
@@ -168,7 +168,7 @@ $("#organization-enter").on("click", function(ev){
 });
 
 $("#senior-enter").on("click", function(ev){
-    ev.preventDefault;
+    ev.stopPropagation();
     if (screen.width > 1024){
         $("#home").slideUp('slow');
         $("#organization").hide();
@@ -191,7 +191,7 @@ $("#senior-enter").on("click", function(ev){
 });
 
 $("#junior-enter").on("click", function(ev){
-    ev.preventDefault;
+    ev.stopPropagation();
     if (screen.width > 1024){
         $("#home").slideUp('slow');
         $("#organization").hide();
@@ -214,7 +214,7 @@ $("#junior-enter").on("click", function(ev){
 });
 
 $("#team-enter").on("click", function(ev){
-    ev.preventDefault;
+    ev.stopPropagation();
     if (screen.width > 1024){
         $("#home").slideUp('slow');
         $("#organization").hide();
