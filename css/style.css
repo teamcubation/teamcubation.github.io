@@ -166,7 +166,7 @@ h6{
 
 .logo{
 	position: absolute;
-    width: 13%;
+    width: 15%;
 }
 
 .imgHeader{
@@ -445,7 +445,7 @@ h6{
 	.logo-home{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
-		filter: brightness(0.9);
+		/* filter: brightness(0.9); */
 	}
 	.burguer-menu{
 		width: 70%!important;
@@ -558,7 +558,7 @@ h6{
 	.logo-home{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
-		filter: brightness(0.9);
+		/* filter: brightness(0.9); */
 	}
 
 	.flag-mobile{
@@ -823,7 +823,7 @@ input:focus, textarea:focus{
 .logo-home{
 	width: 35%;
     margin: -45% 0 0 0%;
-    filter: brightness(0.9);
+    /* filter: brightness(0.9); */
 }
 
 .burguer-menu{
@@ -833,6 +833,13 @@ input:focus, textarea:focus{
 	height: 50px;
 	width: 50%;
 	margin-top: 2%;
+	line-height: 50px;
+	text-align: center;
+	font-size: calc(1.1em + 0.5vw)!important;
+}
+
+.burguer-menu:hover{
+	color: white !important;
 }
 
 .enter-item{
