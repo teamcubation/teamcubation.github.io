@@ -53,6 +53,7 @@ else{
 };
 
 window.addEventListener("hashchange", function(ev) {
+    ev.preventDefault;
     if(ev.newURL === url || ev.oldURL.includes('/#')){
         window.history.replaceState('', '', `${url}`);
         hideShowPage('home', urlBuilder(document.location.href));
@@ -238,7 +239,7 @@ $("#team-enter").on("click", function(ev){
 
 
 $("#organization-enter").hover(
-    function() {
+    function(ev) {
         if (screen.width > 1024){
             hideShowItemMenu('organization-enter', 'color-red');
         }
