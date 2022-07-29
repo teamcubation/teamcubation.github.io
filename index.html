@@ -29,14 +29,27 @@
 <!------------------------------------- HOME PAGE-------------------------------------------------------------->
 
   <div id="home" style="height: 100vh">
-    <a class="flag-home-mobile" href="https://teamcubation.com/en">
-      <img alt="redirect_lang" src="media/flag-eu.png">
-    </a>
+    <!-- <a class="flag-home-mobile" data-attr-t data-attr-t-interpolate href-t="{{home.url}}">
+      <img  data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+      <p data-t>lang.text_button</p>
+    </a> -->
+    
     <div class="container-fluid color h-100">
-      <a class="a-flag-desktop" href="https://teamcubation.com/en">
-        <img class="flag-desktop" alt="redirect_lang" src="media/flag-eu.png">
-      </a>
-      <div class="row h-100">
+      <div class="language-select language-select-home">
+        <div class="language-tittle">
+          <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
+          <p>Lenguaje</p>
+        </div>
+        <ul class="lenguage-options">
+          <li data-lang="es">
+            <a href="https://teamcubation.com/en">Español</a>
+          </li>
+          <li data-lang="en">
+            <a href="https://teamcubation.com/en">Inglés</a>
+          </li>
+        </ul>
+      </div>
+        <div class="row h-100">
         <div class="col-12 col-lg-6 no-effect-item">
           <div class="row d-flex flex-column h-100 align-items-center text-center justify-content-center" style="padding-bottom: 25%">
             <img src="media/img_landing.png" class="back_home" alt>
@@ -56,7 +69,7 @@
               <h1 class="color-red">ORGANIZACIÓN</h1>
               <div class="row enter-item-description">
                 <img style="width: 3.5vw; margin: 2% 0 0 15%" fill="#ff1322" src="media/arrow_down_red.svg" alt>
-                <h4 class="color-grey-100 mt-2 weight-600" style="line-height: 1 ; margin: 2% 0 0 0">TRASFORMAMOS JUNIORS EN EXPERTOS RTW</h4>
+                <h4 class="color-grey-100 mt-2 weight-600" style="line-height: 1 ; margin: 2% 0 0 0">TRANSFORMAMOS JUNIORS EN EXPERTOS RTW</h4>
                 <h4 class="color-grey-100 mt-2" style="line-height: 1;">(READY TO WORK) MIENTRAS DESARROLLAN EL SOFTWARE QUE SU ORGANIZACIÓN NECESITA</h4>
               </div>
             </div>
@@ -96,8 +109,21 @@
 <!------------------------------------- ORGANIZATION -------------------------------------------------------------->
 
 <div id="organization" class="container-fluid color">
-  <a class="flag-mobile" href="https://teamcubation.com/en/#organization/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
-  <a class="a-flag-desktop" href="https://teamcubation.com/en/#organization/"><img class="flag-desktop" alt="redirect_lang" src="media/flag-eu.png"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
+      <p>Lenguaje</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a href="https://teamcubation.com/en/#organization/">Español</a>
+      </li>
+      <li data-lang="en">
+        <a href="https://teamcubation.com/en/#organization/">Inglés</a>
+      </li>
+    </ul>
+  </div>
+
   <img class="Float_Tc_" src="media/tc_vertical.svg" alt="tc_vertical">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -308,7 +334,7 @@
           <input type="text" class="name" name="name" required placeholder="Nombre">
         </div>
         <div class="mt-4">
-          <input type="text" name="organization" class="organizationContact" placeholder="Compañia">
+          <input type="text" name="organization" class="organizationContact" placeholder="Compañía">
         </div>
         <div class="mt-4">
             <label for="country-phone" class="form-label">Teléfono</label>
@@ -361,8 +387,23 @@
 <!---------------------------------------- SENIOR -------------------------------------------------------------->
 
 <div id="senior" class="container-fluid color">
-  <a class="flag-mobile" href="https://teamcubation.com/en/#senior/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
-  <a class="a-flag-desktop" href="https://teamcubation.com/en/#senior/"><img class="flag-desktop" alt="redirect_lang" src="media/flag-eu.png"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
+      <p>Lenguaje</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a href="https://teamcubation.com/en/#senior/">Español</a>
+      </li>
+      <li data-lang="en">
+        <a href="https://teamcubation.com/en/#senior/">Inglés</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
+  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -468,7 +509,7 @@
       <div class="hidden-xs col-lg-5"></div>
       <div class="col-sm-11 col-md-9 col-lg-5">
         <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;"><</h5>
-        <h5 class="color-green VisibleLayer" style="font-size: 2.3vw; font-weight:600; text-align: right;">Teamcubation se encarga de romper el loop de la falta de experiencia transformando a desarrolladores novicios en un equipo cohesivo y eficiente listo para dar lo mejor en la compañía en la que fueron contratados. Y quién los transforme, serás tu.</h5>
+        <h5 class="color-green VisibleLayer" style="font-size: 2.3vw; font-weight:600; text-align: right;">Teamcubation se encarga de romper el loop de la falta de experiencia transformando a desarrolladores novicios en un equipo cohesivo y eficiente listo para dar lo mejor en la compañía en la que fueron contratados. Y quien los transforme, serás tú.</h5>
         <h5 class="color-grey" style="font-size: 3.5vw; text-align: end;">/ ></h5>
       </div>
       <div class="col-md-1"></div>
@@ -620,8 +661,23 @@
 <!---------------------------------------- JUNIORS -------------------------------------------------------------->
 
 <div id="junior" class="container-fluid color">
-  <a class="flag-mobile" href="https://teamcubation.com/en/#junior/"><img alt="redirect_lang" src="media/flag-eu.png"></a>
-  <a class="a-flag-desktop" href="https://teamcubation.com/en/#junior/"><img class="flag-desktop" alt="redirect_lang" src="media/flag-eu.png"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
+      <p>Lenguaje</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a href="https://teamcubation.com/en/#junior/">Español</a>
+      </li>
+      <li data-lang="en">
+        <a href="https://teamcubation.com/en/#junior/">Inglés</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
+  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ junior-filter" src="media/junior/tc_vertical.svg" alt="tc_vertical">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -878,8 +934,23 @@
 <!--------------------------------------------------- TEAM --------------------------------------------------------------------------------------->
 
 <div id="team" class="container-fluid color">
-  <a class="flag-mobile" href="https://teamcubation.com/en/#team"><img alt="redirect_lang" src="media/flag-eu.png"></a>
-  <a class="a-flag-desktop" href="https://teamcubation.com/en/#team"><img class="flag-desktop" alt="redirect_lang" src="media/flag-eu.png"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
+      <p>Lenguaje</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a href="https://teamcubation.com/en/#team">Español</a>
+      </li>
+      <li data-lang="en">
+        <a href="https://teamcubation.com/en/#team">Inglés</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
+  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -955,7 +1026,7 @@
       <div class="row What_is_Tc_text" style="text-align:left; margin: 2% 0;">
         <div class="col-lg-6"></div>
         <div class="col-lg-6">
-          <h5 class="color-light-grey VisibleLayer" style="font-size: 2.2vw">Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañias siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos</h5>
+          <h5 class="color-light-grey VisibleLayer" style="font-size: 2.2vw">Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañías siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos</h5>
         </div>
       </div>
     </div>
@@ -1041,7 +1112,7 @@
           <input type="text" id="name" name="name" required placeholder="Nombre">
         </div>
         <div class="mt-4">
-          <input type="text" name="organization" id="organization" placeholder="Compañia">
+          <input type="text" name="organization" id="organization" placeholder="Compañía">
         </div>
         <div class="mt-4">
             <label for="country-phone" class="form-label">Teléfono</label>

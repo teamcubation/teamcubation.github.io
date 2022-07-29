@@ -4,25 +4,6 @@ html,body {
 	font-family: 'Titillium Web', sans-serif; 
 }
 
-.Float_Tc_{
-	margin: 3% 0 0 8%; 
-	height: 80%; 
-	position: fixed; 
-	z-index:0; 
-}
-
-.senior-filter{
-	filter: brightness(0.4) opacity(0.1);
-}
-
-.junior-filter{
-	filter: brightness(0.4) opacity(0.1);
-}
-
-.VisibleLayer{
-	position: relative;
-}
-
 h1{
 	font-size: calc(1.5em + 3.5vw)
 }
@@ -45,6 +26,18 @@ h5{
 
 h6{
 	font-size: calc(0.7vw + 1em);
+}
+
+a{
+	color: var(--color-grey);
+}
+
+a:hover{
+	color: var(--color-grey);
+}
+
+ul {
+    list-style: none;
 }
 
 .color{
@@ -164,6 +157,25 @@ h6{
 
 /* elements */
 
+.Float_Tc_{
+	margin: 3% 0 0 8%; 
+	height: 80%; 
+	position: fixed; 
+	z-index:0; 
+}
+
+.senior-filter{
+	filter: brightness(0.4) opacity(0.1);
+}
+
+.junior-filter{
+	filter: brightness(0.4) opacity(0.1);
+}
+
+.VisibleLayer{
+	position: relative;
+}
+
 .logo{
 	position: absolute;
     width: 15%;
@@ -202,7 +214,43 @@ h6{
 	margin-top: 2%!important;
 }
 
-.flag-home-mobile{
+.lenguage-options{ 
+	display: none;
+}
+
+.flag{
+	width: 30px;
+	height: 30px;
+	z-index: 2;
+}
+
+.language-select{
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	position:absolute;
+	top: 3.3%;
+    right: 30%;
+	text-align: left;
+	color: var(--color-grey-100);
+	min-width: 100px;
+}
+
+.language-select-home{
+}
+
+.language-tittle p{
+	margin-top: 0.2vh;
+}
+
+.language-tittle{
+	display: flex;
+	justify-content: space-around;
+	cursor: pointer;
+
+};
+
+/* .flag-home-mobile{
 	display: none;
 	width: 50%; 
 	position:absolute;
@@ -217,16 +265,9 @@ h6{
 	position:absolute; 
 	margin-top: 2%; 
 	z-index:2
-}
+} */
 
-.flag-desktop{
-	position:absolute;
-	width: 30px;
-	height: 30px;
-	z-index: 2;
-}
-
-.a-flag-desktop{
+.a-flag{
 	position:absolute;
 	top: 7.7%;
 	right: 4%;
@@ -446,12 +487,32 @@ h6{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
 	}
+	.flag{
+		width: 30px;
+		height: 30px;
+		z-index: 2;
+	}	
+	.language-select{
+		top: 12%;
+		right: 80%;
+		min-width: 90px;
+	}
+
+	.language-select-home{
+		top: 2%!important;
+		right: 75%!important;
+		min-width: 80px!important;
+	}
+
+	.language-select-home p,
+	.language-select p{
+		font-size: 1.2em;
+		margin-top: 0;
+	}
+
 	.burguer-menu{
 		width: 70%!important;
 		margin-top: 3%!important;
-	}
-	.flag-home-mobile{
-		display: inline !important;
 	}
 	.logo{
 		z-index: 2;
@@ -465,17 +526,6 @@ h6{
 	}
 	.section-one > .col-sm-12{
 		margin: 0;
-	}
-	.flag-mobile{
-		display: inline !important;
-		margin: 18% 0 0 2%;
-	}
-	.flag-mobile > img,
-	.flag-home-mobile > img{
-		width: 8%;
-	}
-	.flag-desktop{
-		display: none!important;
 	}
 	.Header-organization{
 		display: none;
@@ -633,6 +683,9 @@ h6{
 }
 
 @media only screen and (max-width: 500px) {
+	ul{
+		padding-left: 5px;
+	}
 	.logo{
 		z-index: 2;
 		position: absolute;
@@ -642,33 +695,33 @@ h6{
 		width: 60%!important; 
 		margin: 5% 0 0 5%; 
 	}
-	.flag-home-mobile{
-		display: inline;
+	.flag{
+		width: 20px;
+		height: 20px;
+		z-index: 2;
+	}	
+	.language-select{
+		top: 9%;
+		right: 75%;
+		min-width: 80px;
 	}
-	.flag-mobile{
-		display: inline !important; 
-		margin: 18% 0 0 2%;
+
+	.language-select-home{
+		top: 2%!important;
+		right: 75%!important;
+		min-width: 80px!important;
 	}
-	.flag-mobile > img,
-	.flag-home-mobile > img{
-		width: 8%;
+
+	.language-select-home p,
+	.language-select p{
+		font-size: 0.8em;
 	}
-	.flag-desktop{
-		display: none!important; 
-	}
+	
 	.section-one > .col-lg-6{
 		margin-left: 0;
 	}
 	.Header-organization{
 		display: none;
-	}
-	.flag-mobile{
-		display: inline !important;
-		margin: 20% 0 0 8%;
-	}
-	.flag-mobile > img,
-	.flag-home-mobile > img{
-		width: 12%;
 	}
 	.Rotary-legend{
 		min-height: 17vh!important;
@@ -836,8 +889,14 @@ a,
 a:link, a:visited, a:active {
     text-decoration:none;
 	cursor: pointer;
-	font-size: calc(1em + 0.2vw);
+	/* font-size: calc(1em + 0.2vw); */
 	font-weight: 600;
+}
+
+.a-disbled{
+	pointer-events: none!important;;
+	cursor: auto!important;
+	color: #afafaf;
 }
 
 .hover-red:hover{

@@ -29,14 +29,27 @@
 <!------------------------------------- HOME PAGE-------------------------------------------------------------->
 
   <div id="home" style="height: 100vh">
-    <a class="flag-home-mobile" data-attr-t data-attr-t-interpolate href-t="{{home.url}}">
+    <!-- <a class="flag-home-mobile" data-attr-t data-attr-t-interpolate href-t="{{home.url}}">
       <img  data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
-    </a>
+      <p data-t>lang.text_button</p>
+    </a> -->
+    
     <div class="container-fluid color h-100">
-      <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{home.url}}">
-        <img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
-      </a>
-      <div class="row h-100">
+      <div class="language-select language-select-home">
+        <div class="language-tittle">
+          <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+          <p data-t>lang.text_button</p>
+        </div>
+        <ul class="lenguage-options">
+          <li data-lang="es">
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{home.url}}">lang.spanish</a>
+          </li>
+          <li data-lang="en">
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{home.url}}">lang.english</a>
+          </li>
+        </ul>
+      </div>
+        <div class="row h-100">
         <div class="col-12 col-lg-6 no-effect-item">
           <div class="row d-flex flex-column h-100 align-items-center text-center justify-content-center" style="padding-bottom: 25%">
             <img src="media/img_landing.png" class="back_home" alt="">
@@ -96,8 +109,21 @@
 <!------------------------------------- ORGANIZATION -------------------------------------------------------------->
 
 <div id="organization" class="container-fluid color">
-  <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
-  <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+      <p data-t>lang.text_button</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}">lang.spanish</a>
+      </li>
+      <li data-lang="en">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}">lang.english</a>
+      </li>
+    </ul>
+  </div>
+
   <img class="Float_Tc_" src="media/tc_vertical.svg" alt="tc_vertical"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -368,8 +394,23 @@
 <!---------------------------------------- SENIOR -------------------------------------------------------------->
 
 <div id="senior" class="container-fluid color">
-  <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
-  <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+      <p data-t>lang.text_button</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}">lang.spanish</a>
+      </li>
+      <li data-lang="en">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}">lang.english</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
+  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -634,8 +675,23 @@
 <!---------------------------------------- JUNIORS -------------------------------------------------------------->
 
 <div id="junior" class="container-fluid color">
-  <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
-  <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+      <p data-t>lang.text_button</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}">lang.spanish</a>
+      </li>
+      <li data-lang="en">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}">lang.english</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
+  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ junior-filter" src="media/junior/tc_vertical.svg" alt="tc_vertical"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -899,8 +955,23 @@
 <!--------------------------------------------------- TEAM --------------------------------------------------------------------------------------->
 
 <div id="team" class="container-fluid color">
-  <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
-  <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a>
+  <div class="language-select">
+    <div class="language-tittle">
+      <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+      <p data-t>lang.text_button</p>
+    </div>
+    <ul class="lenguage-options">
+      <li data-lang="es">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">lang.spanish</a>
+      </li>
+      <li data-lang="en">
+        <a data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">lang.english</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
+  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">

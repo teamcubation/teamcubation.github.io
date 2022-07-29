@@ -1,7 +1,10 @@
 {
   "description": "Teamcubation es el engranaje faltante entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando y entrenando equipos de desarrollo para transformar juniors en recursos con experiencia",
   "lang": {
-    "text": "es"
+    "text": "es",
+    "text_button": "Lenguaje",
+    "spanish": "Español",
+    "english": "Inglés"
   },
   "textLinks": {
     "organization": "ORGANIZACIÓN",
@@ -15,7 +18,7 @@
     "enter":{
       "organization": {
         "name": "ORGANIZACIÓN",
-        "description-bold": "TRASFORMAMOS JUNIORS EN EXPERTOS RTW",
+        "description-bold": "TRANSFORMAMOS JUNIORS EN EXPERTOS RTW",
         "description":"(READY TO WORK) MIENTRAS DESARROLLAN EL SOFTWARE QUE SU ORGANIZACIÓN NECESITA"
       },
       "senior": {
@@ -37,7 +40,7 @@
   },
   "section_1": {
     "url": "https://teamcubation.com/en/#organization/",
-    "flag": "media/flag-eu.png",
+    "flag": "media/worl_icon.svg",
     "tittle": "ORGANIZACIÓN",
     "carousel": {
       "text_1": "“Perdemos oportunidades por falta de gente”",
@@ -109,7 +112,7 @@
     },
     "contact-form": {
       "name": "Nombre",
-      "organization": "Compañia",
+      "organization": "Compañía",
       "telephone": {
         "label": "Teléfono",
         "country": "País",
@@ -176,7 +179,7 @@
         "text_3": "AMOS"
       } ,
       "text_1": "Las organizaciones piden desarrolladores senior, pero el mercado solo tiene juniors. ¿Cómo lograr la alquimia de pasar de una condición a otra?.",
-      "text_2": "Teamcubation se encarga de romper el loop de la falta de experiencia transformando a desarrolladores novicios en un equipo cohesivo y eficiente listo para dar lo mejor en la compañía en la que fueron contratados. Y quién los transforme, serás tu."
+      "text_2": "Teamcubation se encarga de romper el loop de la falta de experiencia transformando a desarrolladores novicios en un equipo cohesivo y eficiente listo para dar lo mejor en la compañía en la que fueron contratados. Y quien los transforme, serás tú."
     },
     "section_4": {
       "tittle": {
@@ -208,7 +211,7 @@
       },
       "contact-form": {
         "name": "Nombre",
-        "organization": "Compañia",
+        "organization": "Compañía",
         "telephone": {
           "label": "Teléfono",
           "country": "País",
@@ -301,7 +304,7 @@
       },
       "contact-form": {
         "name": "Nombre",
-        "organization": "Compañia",
+        "organization": "Compañía",
         "telephone": {
           "label": "Teléfono",
           "country": "País",
@@ -353,7 +356,7 @@
     },
     "section_2": {
       "tittle": "POR QUÉ",
-      "text": "Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañias siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos"
+      "text": "Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañías siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos"
     },
     "section_3": {
       "tittle": {
@@ -393,7 +396,7 @@
       },
       "contact-form": {
         "name": "Nombre",
-        "organization": "Compañia",
+        "organization": "Compañía",
         "telephone": {
           "label": "Teléfono",
           "country": "País",

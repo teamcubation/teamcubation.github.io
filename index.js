@@ -351,3 +351,30 @@ $(".no-effect-item").hover(
         $("#welcome").removeClass().addClass('color-light-grey');
     }
 );
+
+$(".language-select").hover(
+    function() {
+        if (screen.width > 1024){
+            $(`.lenguage-options li`).each(function(){
+                if($(this).data("lang") === lang){
+                    $(this).find('a').addClass('a-disbled');
+                }
+        	});
+            $(`.lenguage-options`).slideDown();
+        }
+    },
+    function() {
+        $(`.lenguage-options`).slideUp();
+    }
+);
+
+$(".language-select").on('click',
+    function() {
+        $(`.lenguage-options li`).each(function(){
+            if($(this).data("lang") === lang){
+                $(this).find('a').addClass('a-disbled');
+            }
+        });
+        $(`.lenguage-options`).toggle('slow');
+    },
+);
