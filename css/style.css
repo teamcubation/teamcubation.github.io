@@ -826,6 +826,9 @@ h6{
 	.hidden_tc_vertical{
 		height: 90px;	
 	}
+	.bottom-button-cont{
+		text-align: center;
+	}
 }
 
 .navigate-home{
