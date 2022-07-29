@@ -237,6 +237,8 @@ ul {
 }
 
 .language-select-home{
+	top: 3.3%;
+    right: 5%!important;
 }
 
 .language-tittle p{
@@ -705,7 +707,12 @@ ul {
 		right: 75%;
 		min-width: 80px;
 	}
-
+	.lenguage-options{
+		background: white;
+		border-radius: 5px;
+		border: 1px solid #cacaca96;
+		padding: 2px 0 2px 5px;
+	}
 	.language-select-home{
 		top: 2%!important;
 		right: 75%!important;
