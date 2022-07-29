@@ -21,7 +21,8 @@
       },
       "senior": {
         "name": "SENIOR",
-        "description": "WE TEACH YOU TO TRANSFORM JUNIOR DEVELOPERS IN RTW SENIORS"
+        "description-bold": "WE TEACH YOU TO TRANSFORM JUNIOR DEVELOPERS IN RTW SENIORS",
+        "description": "BE THE SENIOR DEV THAT YOU'D HAVE LIKED BY YOUR SIDE WHEN YOU WERE A JUNIOR"
       },
       "junior": {
         "name": "JUNIOR",
@@ -131,7 +132,8 @@
     "legal": "All rights reserved",
     "searches": {
       "link": " https://teamcubation.bamboohr.com/jobs/",
-      "text": "Work with us"
+      "text": "Work with us",
+      "text_left": "Take a look at our open positions<span class=_effect>_</span>"
     }
   },
   "senior":{

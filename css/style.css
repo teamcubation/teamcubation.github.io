@@ -926,6 +926,18 @@ input:focus, textarea:focus{
 	border-radius: 3px;
 }
 
+a.btn-tc-lnk{
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
+	color: #fff;
+	text-decoration: none;
+}
+
 .btn-green{
 	background: linear-gradient( 90deg, #446e5c, #317287);
 	box-shadow: 0px 2px 10px 1px #317287;
