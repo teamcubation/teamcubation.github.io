@@ -334,17 +334,17 @@
           <input type="text" class="name" name="name" required placeholder="Name">
         </div>
         <div class="mt-4">
-          <input type="text" name="organization" class="organizationContact" placeholder="Organization">
+          <input type="text" class="organizationContact" placeholder="Organization">
         </div>
         <div class="mt-4">
-            <label for="country-phone" class="form-label">Telephone</label>
+            <label for="country-phone-org" class="form-label">Telephone</label>
         </div>
         <div class="row">
           <div class="col-md-7 col-sm-12">
             <div class="row">
               <div class="col-3">
                 <span>+</span>
-                <input style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="Country">
+                <input id="country-phone-org" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="Country">
               </div>
               <div class="col-3">
                 <input type="text" name="area-phone" class="area-phone" placeholder="Area">
@@ -361,7 +361,7 @@
         <div class="mb-4 mt-4">
           <textarea name="message" class="message" rows="1" required placeholder="Is there anything you want to tell us?"></textarea>
         </div>
-        <input class="typeContact" hidden value="organization">
+        <input class="typeContact" hidden value="Organization">
       </form>
     </div>
     <div class="col-1"></div>
@@ -1041,38 +1041,36 @@
   <div class="row VisibleLayer" style="background-color: #f3f3f3;">
     <div class="col-1"></div>
     <div class="col-sm-12 col-lg-5 pb-5">
-      <form class="form-contact">
+      <form class="form-contact" id="form-team">
         <div class="mt-5">
-          <input type="text" id="name" name="name" required placeholder="Name">
+          <input type="text" class="name" name="name" required placeholder="Name">
         </div>
         <div class="mt-4">
-          <input type="text" name="organization" id="organization" placeholder="Organization">
-        </div>
-        <div class="mt-4">
-            <label for="country-phone" class="form-label">Telephone</label>
+            <label for="country-phone-team" class="form-label">Telephone</label>
         </div>
         <div class="row">
           <div class="col-md-7 col-sm-12">
             <div class="row">
               <div class="col-3">
                 <span>+</span>
-                <input style="width: calc(100% - 15px)" type="text" name="country-phone" id="country-phone" placeholder="Country">
+                <input id="country-phone-team" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="Country">
               </div>
               <div class="col-3">
-                <input type="text" name="area-phone" id="area-phone" placeholder="Area">
+                <input type="text" name="area-phone" class="area-phone" placeholder="Area">
               </div>
               <div class="col-6">
-                <input type="text" name="number-phone" id="number-phone" placeholder="Number">
+                <input type="text" name="number-phone" class="number-phone" placeholder="Number">
               </div>
             </div>
           </div>
           <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
-            <input type="email" name="email" id="email" placeholder="E-mail">
+            <input type="email" name="email" class="email" placeholder="E-mail">
           </div>
         </div>
         <div class="mb-4 mt-4">
-          <textarea name="message" id="message" rows="1" required placeholder="Is there anything you want to tell us?"></textarea>
+          <textarea name="message" class="message" rows="1" required placeholder="Is there anything you want to tell us?"></textarea>
         </div>
+        <input class="typeContact" hidden value="Team">
       </form>
     </div>
     <div class="col-1"></div>
@@ -1098,7 +1096,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script type="module" src="../index.js"></script>
+<script type="module" src="../index.js?v=2"></script>
 </body>
 
 </html>
