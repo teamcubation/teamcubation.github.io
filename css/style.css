@@ -250,7 +250,7 @@ ul {
 	justify-content: space-around;
 	cursor: pointer;
 
-};
+}
 
 /* .flag-home-mobile{
 	display: none;
@@ -1082,11 +1082,13 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	line-height: 50px;
 	text-align: center;
 	font-size: calc(1.1em + 0.5vw)!important;
+	font-weight: 500!important;
 	color: white;
 }
 
 .burger-menu:hover{
 	color: white !important;
+	font-weight: 600!important;
 }
 
 .enter-item{
