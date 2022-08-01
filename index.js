@@ -28,7 +28,7 @@ const dataByLang = {
         btnSend: lang === 'es' ? 'Enviar' : 'Submit',
         btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
         submitResponse: {
-            success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias !!' : 'Your message has been sent, thank you!',
+            success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias!' : 'Your message has been sent, thank you!',
             error: lang === 'es' ? 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo' : 'An error occurred while sending the form, please try again.',
         }
     }
@@ -101,18 +101,26 @@ $(document).ready(
 $(".form-contact").append('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
 $(".form-contact").on("submit", function(ev) {
     ev.preventDefault();
-    const currentForm =  $(this).attr('id');
+    const currentForm = $(this).attr('id');
     const btn= $(this).find('.submit-contact');
     btn.text(dataByLang.formContact.btnSending);
     const data_name = $(`#${currentForm} .name`).val();
-    const data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(`#${currentForm} .area-phone`).val()} ${$(`#${currentForm} .number-phone`).val()}` 
-    const data_email = $(`#${currentForm} .email`).val();
+    let data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(`#${currentForm} .area-phone`).val()} ${$(`#${currentForm} .number-phone`).val()}`;
+    if (data_number.trim() === '+'){
+        data_number = undefined;
+    }
+    let data_email = $(`#${currentForm} .email`).val();
+    if (data_email.trim() === ''){
+        data_email = undefined;
+    }
     const data_message = $(`#${currentForm} .message`).val();
-    const data_organization = $(`#${currentForm} .organizationContact`).val();
+    let data_organization = $(`#${currentForm} .organizationContact`).val();
+    if (!data_organization){
+        data_organization = undefined;
+    }
     const data_origin = $(`#${currentForm} .typeContact`).val(); 
-    const data_linkedin = $(`#${currentForm} .linkedin`).val();
+
     $.ajax({
-            // url: "ttps://localhost:3000",
         url: 'https://api.prod.tq.teamcubation.com/contact',
         type: 'POST',
         contentType: 'application/json',
@@ -122,8 +130,7 @@ $(".form-contact").on("submit", function(ev) {
             organization: data_organization,
             phone_number: data_number,
             email: data_email,
-            origin: data_origin,
-            linkedin: data_linkedin
+            origin: data_origin
         }),
         dataType: 'json',
         success: (r) => {
@@ -157,7 +164,7 @@ const clearForm = () => {
     $(".number-phone").val('')    
     $(".email").val('');
     $(".message").val('');
-    $(".organization").val('');
+    $(".organizationContact").val('');
 }
 
 // hide-show home and pages /////////
