@@ -6,8 +6,23 @@ const initialLocation = document.location.href;
 const lang = document.documentElement.lang;
 
 const dataByLang = {
-    landing: {
+    home: {
         btnEnter: lang === 'es' ? '> Entrar <' : '> Enter <',
+
+    },
+    enter:{
+        "organization-enter":{
+            defaultLegend: lang === 'es' ? 'Soy una organización' : 'I’m an organization',
+        },
+        "senior-enter":{
+            defaultLegend: lang === 'es' ? 'Soy un dev Senior' : 'I’m a Senior dev',
+        },
+        "junior-enter":{
+            defaultLegend: lang === 'es' ? 'Soy un dev Junior' : 'I’m a Junior dev',
+        },
+        "team-enter":{
+            defaultLegend: lang === 'es' ? 'Nosotros' : 'Us',
+        },
     },
     formContact: {
         btnSend: lang === 'es' ? 'Enviar' : 'Submit',
@@ -277,17 +292,27 @@ const hideShowItemMenu = (itemToShow, classToAdd) => {
     const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
     itemsBurguer.map(item => {
         if(item !== itemToShow){
-            $(`#${item}-item`).hide('slow')
-            $(`#${item}`).text('').removeClass(`${item}`)
+            $(`#${item}-item`).hide('slow');
+            $(`#${item}`).removeClass(`${item}`);
+            $(`#${item}`).text( dataByLang.enter[item].defaultLegend);
         }
         else{
-            $(`#${itemToShow}`).text(dataByLang.landing.btnEnter).addClass(itemToShow)
+            $(`#${itemToShow}`).text(dataByLang.home.btnEnter).addClass(itemToShow)
             $(`#${itemToShow}-item`).slideDown('slow');
             $('.scroll-prompt-arrow-container').hide('slow');
             $("#welcome").removeClass().addClass(classToAdd);
         }  
     });    
 };
+
+$(".no-effect-item").hover(
+    function() {
+        $('.scroll-prompt-arrow-container').show()
+        hideShowItemMenu('');
+        $("#welcome").removeClass().addClass('color-light-grey');
+    }
+);
+
 
 $('.navigate-home').on("click", function(ev){
     hideShowPage('home', urlBuilder(document.location.href));
@@ -334,23 +359,16 @@ const hideShowPage = (pageToShow, url) => {
         if(page === pageToShow){
             $(`#${pageToShow}`).slideDown(page !== 'home' ? 3500 : 1000);
             styledScroll(`${page}-scrollbar`);
-            page !== 'home' ? window.history.pushState(``, '', `${url}#${pageToShow}`) : window.history.replaceState('', '', `${url}`); ;
+            page !== 'home' ? window.history.pushState(``, '', `${url}#${pageToShow}`) : window.history.replaceState('', '', `${url}`);
         }
         else{
             $("body").css('overflow-y', 'scroll');
             window.scrollTo(0, 0);
-            $(`#${page}`).hide()
+            $(`#${page}`).hide();
         }  
     });    
 };
 
-$(".no-effect-item").hover(
-    function() {
-        $('.scroll-prompt-arrow-container').show()
-        hideShowItemMenu('');
-        $("#welcome").removeClass().addClass('color-light-grey');
-    }
-);
 
 $(".language-select").hover(
     function() {

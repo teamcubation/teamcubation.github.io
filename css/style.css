@@ -49,10 +49,10 @@ ul {
 	--color-light-turquoise: #08d9cf;
 	--color-logo-orange: #ff7c00 ;
 	--color-orange: #ffc165;
-	--color-grey: #5f5f5f;
-	--color-grey-100: #7e7e7e;
-	--color-grey-200: #afafaf;
-	--color-light-grey: #bebebe;
+	--color-grey: #6e6e6e;
+	--color-grey-100: #adadad;
+	--color-grey-200: #c9c9c9;
+	--color-light-grey: #dddddd;
 }
 
 .bc-white{
@@ -80,7 +80,7 @@ ul {
 }
 
 .bc-grey{
-	background-color: #545454;
+	background-color: #7e7e7e;
 }
 
 .bc-grey-100{
@@ -512,7 +512,7 @@ ul {
 		margin-top: 0;
 	}
 
-	.burguer-menu{
+	.burger-menu{
 		width: 70%!important;
 		margin-top: 3%!important;
 	}
@@ -794,7 +794,7 @@ ul {
 		font-size: calc(0.4em + 2.8vw)!important;
 		margin: 5% 5% 5% 0
 	}
-	.burguer-menu{
+	.burger-menu{
 		width: 70%!important;
 		margin-top: 3%!important;
 	}
@@ -1072,7 +1072,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
     /* filter: brightness(0.9); */
 }
 
-.burguer-menu{
+.burger-menu{
 	outline: none;
 	border: none;
 	border-radius: 15px;
@@ -1082,9 +1082,10 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	line-height: 50px;
 	text-align: center;
 	font-size: calc(1.1em + 0.5vw)!important;
+	color: white;
 }
 
-.burguer-menu:hover{
+.burger-menu:hover{
 	color: white !important;
 }
 

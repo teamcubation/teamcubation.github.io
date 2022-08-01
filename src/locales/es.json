@@ -18,21 +18,25 @@
     "enter":{
       "organization": {
         "name": "ORGANIZACIÓN",
+        "default-legend":"Soy una organización",
         "description-bold": "TRANSFORMAMOS JUNIORS EN EXPERTOS RTW",
         "description":"(READY TO WORK) MIENTRAS DESARROLLAN EL SOFTWARE QUE SU ORGANIZACIÓN NECESITA"
       },
       "senior": {
         "name": "SENIOR",
+        "default-legend":"Soy un dev Senior",
         "description-bold": "TE ENSEÑAMOS A TRANSFORMAR JUNIORS EN SENIORS RTW",
         "description":"SÉ EL SENIOR QUE HUBIERAS QUERIDO TENER A TU LADO CUANDO ERAS JUNIOR"
       },
       "junior": {
         "name": "JUNIOR",
+        "default-legend":"Soy un dev Junior",
         "description-bold": "SOMOS UNA MÁQUINA DEL TIEMPO",
         "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARÍAS EN 2 AÑOS EN SÓLO 6 MESES"
       },
       "team": {
         "name": "TEAM",
+        "default-legend":"Nosotros",
         "description-bold": "CONOCÉ TODO SOBRE NOSOTROS",
         "description":"QUÉ Y QUIÉNES NOS HACEN LA PRIMER EMPRESA EN EL MERCADO DE ENTRENAMIENTO DE DEVELOPERS"
       }
