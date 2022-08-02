@@ -126,7 +126,7 @@
         "number" : "Number"
       },
       "email": "E-mail",
-      "reason": "Is there anything you want to tell us?",
+      "reason": "Leave your message here",
       "btn_text": "Submit",
       "btn_sending": "Sending...",
       "submit-response": {
