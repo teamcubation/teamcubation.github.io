@@ -281,12 +281,13 @@ ul {
 	border-radius: 100%;
 }
 
-.linkedin-icon{
-	fill: red;
+.ion-logo-linkedin{
+	font-size: 42px;
+	color: #cfcfcf;
 }
 
-.linkedin-icon:hover{
-	fill: red;
+.ion-logo-linkedin:hover{
+	color: #0e76a8;
 }
 
 /* components */
@@ -476,7 +477,6 @@ ul {
     border-bottom: 3px solid turquoise;
     width: 70%;
     max-width: 100%;
-	padding-bottom: 2%;
 }
 
 /* responsive  */
@@ -752,11 +752,11 @@ ul {
 	}
 	.Central-legend > h1{
 		margin: 0!important;
-		font-size: calc(1.3em + 8vw)!important;
+		font-size: calc(1.3em + 5vw)!important;
 	}
 	.Central-legend > h2{
 		margin: 0!important;
-		font-size: calc(1em + 6vw)!important;
+		font-size: calc(1em + 4vw)!important;
 	}
 
 	.Central-legend-organization > h1{
@@ -789,9 +789,14 @@ ul {
 	.Descriptive-legend-organization-es > h5,
 	.Descriptive-legend-organization-en > h5,
 	.Descriptive-legend-senior-es >h5,
-	.Descriptive-legend-senior-en > h5,
-	.Descriptive-legend-junior-es > h5{
+	.Descriptive-legend-senior-en > h5{
 		font-size: calc(0.4em + 2.2vw)!important;
+		line-height: 0.8;
+		display: inline!important;
+	}
+	.Descriptive-legend-junior-es > h5,
+	.Descriptive-legend-junior-en > h5{
+		font-size: calc(0.4em + 2vw)!important;
 		line-height: 0.8;
 		display: inline!important;
 	}
@@ -894,6 +899,9 @@ ul {
 	.bottom-button-cont{
 		text-align: center;
 	}
+	.ion-logo-linkedin{
+		font-size: 30px;
+	}	
 }
 
 .navigate-home{
