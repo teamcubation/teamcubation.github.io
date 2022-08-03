@@ -406,7 +406,9 @@ $(".language-select").on('click',
 const effectShake = (prevElm, nextElm, time) => {
     $(`#${nextElm}`).css("animation-play-state", "running");
     $(`#${prevElm}`).removeClass("shake-effect");
-    $(`#${nextElm}`).addClass("shake-effect");
+    if ($('.enter-item:visible').length === 0) {
+        $(`#${nextElm}`).addClass("shake-effect");
+    }
     return new Promise((resolve, reject) => {
         setTimeout(() =>{
                 resolve('ok');
