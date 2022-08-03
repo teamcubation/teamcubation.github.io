@@ -252,23 +252,6 @@ ul {
 
 }
 
-/* .flag-home-mobile{
-	display: none;
-	width: 50%; 
-	position:absolute;
-	top: 2%;
-	right: 5%;
-	text-align: right;
-}
-
-.flag-mobile{
-	display: none;
-	width: 50%; 
-	position:absolute; 
-	margin-top: 2%; 
-	z-index:2
-} */
-
 .a-flag{
 	position:absolute;
 	top: 7.7%;
@@ -299,7 +282,9 @@ ul {
 }
 
 /* components */
-
+.no-effect-item{
+	padding-bottom: 15%;
+}
 .section-one{
 	overflow: hidden;
 	height: 100vh;
@@ -685,6 +670,9 @@ ul {
 }
 
 @media only screen and (max-width: 500px) {
+	.no-effect-item{
+		padding-bottom: 5%;
+	}	
 	ul{
 		padding-left: 5px;
 	}
@@ -1194,7 +1182,30 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	background: #317287;
 }
 
+.shake-effect{
+	animation: shake 1000ms infinite cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	perspective: 1000px;
+	animation-play-state: paused;
+  }
 
+  @keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80% {
+	  transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+	99%{
+		transform: translate3d(0, 0, 0);
+	}
+  }
 /* .scroll-prompt {
 	position: fixed;
 }

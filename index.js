@@ -4,6 +4,13 @@
 const url= 'https://teamcubation.com/';
 const initialLocation = document.location.href;
 const lang = document.documentElement.lang;
+let json_path;
+
+$(document).ready(
+    document.documentElement.lang === 'es' 
+      ? json_path = './src/locales/es.json' 
+      : json_path = './src/locales/en.json',
+);
 
 const dataByLang = {
     home: {
@@ -88,16 +95,8 @@ window.addEventListener("hashchange", function(ev) {
     //         hideShowPage('team', url);
     //     }
     // }
-})
+});
    
-let json_path;
-
-$(document).ready(
-    document.documentElement.lang === 'es' 
-      ? json_path = './src/locales/es.json' 
-      : json_path = './src/locales/en.json',
-);
-
 $(".form-contact").append('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
 $(".form-contact").on("submit", function(ev) {
     ev.preventDefault();
@@ -187,7 +186,7 @@ $("#organization-enter").on("click", function(ev){
             window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
         }
         else{
-           hideShowItemMenu('organization-enter', 'color-red');    
+           hideShowItemMenu('organization-enter', 'color-red', 'cancelEffect');    
         } 
     }
 });
@@ -210,7 +209,7 @@ $("#senior-enter").on("click", function(ev){
             window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
         }
         else{
-           hideShowItemMenu('senior-enter', 'color-green'); 
+           hideShowItemMenu('senior-enter', 'color-green', 'cancelEffect'); 
         } 
     }
 });
@@ -233,7 +232,7 @@ $("#junior-enter").on("click", function(ev){
             window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
         }
         else{
-           hideShowItemMenu('junior-enter', 'color-orange');    
+           hideShowItemMenu('junior-enter', 'color-orange', 'cancelEffect');    
         } 
     }
 });
@@ -257,7 +256,7 @@ $("#team-enter").on("click", function(ev){
             window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
         }
         else{
-           hideShowItemMenu('team-enter', 'color-turquoise');    
+           hideShowItemMenu('team-enter', 'color-turquoise', 'cancelEffect');    
         } 
     }
 });
@@ -266,7 +265,7 @@ $("#team-enter").on("click", function(ev){
 $("#organization-enter").hover(
     function(ev) {
         if (screen.width > 1024){
-            hideShowItemMenu('organization-enter', 'color-red');
+            hideShowItemMenu('organization-enter', 'color-red', 'cancelEffect');
         }
     }
 );
@@ -274,7 +273,7 @@ $("#organization-enter").hover(
 $("#senior-enter").hover(
     function() {
         if (screen.width > 1024){
-            hideShowItemMenu('senior-enter', 'color-green');
+            hideShowItemMenu('senior-enter', 'color-green', 'cancelEffect');
         }
     }
 );
@@ -282,7 +281,7 @@ $("#senior-enter").hover(
 $("#junior-enter").hover(
     function() {
         if (screen.width > 1024){
-            hideShowItemMenu('junior-enter', 'color-orange');
+            hideShowItemMenu('junior-enter', 'color-orange', 'cancelEffect');
         }
     }
 );
@@ -290,18 +289,19 @@ $("#junior-enter").hover(
 $("#team-enter").hover(
     function() {
         if (screen.width > 1024){
-            hideShowItemMenu('team-enter', 'color-turquoise');
+            hideShowItemMenu('team-enter', 'color-turquoise', 'cancelEffect');
         }
     }
 );
 
-const hideShowItemMenu = (itemToShow, classToAdd) => {
+const hideShowItemMenu = (itemToShow, classToAdd, cancelEffect) => {
+    cancelEffect && cancelEffectShake(); 
     const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
     itemsBurguer.map(item => {
         if(item !== itemToShow){
             $(`#${item}-item`).hide('slow');
             $(`#${item}`).removeClass(`${item}`);
-            $(`#${item}`).text( dataByLang.enter[item].defaultLegend);
+            $(`#${item}`).text('');
         }
         else{
             $(`#${itemToShow}`).text(dataByLang.home.btnEnter).addClass(itemToShow)
@@ -314,7 +314,6 @@ const hideShowItemMenu = (itemToShow, classToAdd) => {
 
 $(".no-effect-item").hover(
     function() {
-        $('.scroll-prompt-arrow-container').show()
         hideShowItemMenu('');
         $("#welcome").removeClass().addClass('color-light-grey');
     }
@@ -403,3 +402,44 @@ $(".language-select").on('click',
         $(`.lenguage-options`).toggle('slow');
     },
 );
+
+const effectShake = (prevElm, nextElm, time) => {
+    $(`#${nextElm}`).css("animation-play-state", "running");
+    $(`#${prevElm}`).removeClass("shake-effect");
+    $(`#${nextElm}`).addClass("shake-effect");
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+                resolve('ok');
+                reject('err');
+            }, 
+            time
+        )
+    });
+}
+const initialEffectShake = setTimeout(
+    () => effectShake('null', 'organization-enter', 1000)
+    .then( response => effectShake('organization-enter', 'senior-enter', 1000))
+    .then( response => effectShake('senior-enter', 'junior-enter', 1000))
+    .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
+    .then( response => effectShake('team-enter', 'null', 1000)),
+    1000 
+);
+
+const constantEffectShake = setInterval(
+    () => effectShake('null', 'organization-enter', 1000)
+    .then( response => effectShake('organization-enter', 'senior-enter', 1000))
+    .then( response => effectShake('senior-enter', 'junior-enter', 1000))
+    .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
+    .then( response => effectShake('team-enter', 'null', 1000)),
+    6000 
+);
+
+const cancelEffectShake = () => {
+    const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
+    itemsBurguer.map(item => {
+        $(`#${item}`).css("translate3d", "none");
+        $(`#${item}`).removeClass('shake-effect');
+    });
+    clearTimeout(initialEffectShake);
+    clearInterval(constantEffectShake);
+};
