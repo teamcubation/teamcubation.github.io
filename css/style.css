@@ -281,6 +281,14 @@ ul {
 	border-radius: 100%;
 }
 
+.linkedin-icon{
+	fill: red;
+}
+
+.linkedin-icon:hover{
+	fill: red;
+}
+
 /* components */
 
 #home{
