@@ -162,15 +162,15 @@
       "central_legend": {
         "style_h1": "",
         "style_h2": "",
-        "h1": "WE TRAIN",
-        "h2": "JUNIOR DEVS"
+        "h1": "TEACH WHAT",
+        "h2": "YOU KNOW"
       },
       "descriptive_legend": {
         "class": "Descriptive-legend-senior-en",
         "class_line4": "d-inline color-green weight-600",
-        "line_1": "GETTING MORE EXPERIENCE WHILE",
-        "line_2": "DEVELOPING THE SOFTWARE ",
-        "line_3": "YOUR ORGANIZATION NEEDS"
+        "line_1": "MENTOR A TEAM JUNIOR",
+        "line_2": "DEVELOPERS WHILE YOU DEVELOP",
+        "line_3": "SOFTWARE FOR BIG COMPANIES"
       },
       "learn_more": {
         "text": "Learn more"

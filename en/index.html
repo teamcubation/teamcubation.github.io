@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.css?v=20">
+  <link rel="stylesheet" href="../css/style.css?v=21">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVX5NJFK14"></script>
   <script>
@@ -30,12 +30,7 @@
 
 <!------------------------------------- HOME PAGE-------------------------------------------------------------->
 
-  <div id="home" style="height: 100vh">
-    <!-- <a class="flag-home-mobile" data-attr-t data-attr-t-interpolate href-t="{{home.url}}">
-      <img  data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
-      <p data-t>lang.text_button</p>
-    </a> -->
-    
+  <div id="home">
     <div class="container-fluid color h-100">
       <div class="language-select language-select-home">
         <div class="language-tittle">
@@ -62,7 +57,6 @@
         <div class="col-12 col-lg-6" style="max-height: 100vh; overflow: hidden">
           <div class="row d-flex flex-column h-100 align-items-center justify-content-center">
             <a href="#organization" class="bc-light-grey burger-menu shake-effect" id="organization-enter"></a>
-            <!-- <a href="#organization" class="bc-light-grey burger-menu shake-effect" id="organization-enter" data-t>home.enter.organization.default-legend</a> -->
             <div class="enter-item text-center" id="organization-enter-item">
               <h1 class="color-red">ORGANIZATION</h1>
               <div class="row enter-item-description">
@@ -72,7 +66,6 @@
               </div>
             </div>
             <a href="#senior" class="burger-menu bc-grey-200 shake-effect" id="senior-enter"></a>
-            <!-- <a href="#senior" class="burger-menu bc-green shake-effect" id="senior-enter"data-t>home.enter.senior.default-legend</a> -->
             <div class="enter-item text-center" id="senior-enter-item">
               <h1 class="color-green">SENIOR</h1>
               <div class="row enter-item-description">
@@ -90,7 +83,6 @@
               </div>
             </div>
             <a href="#junior" class="burger-menu bc-grey-100 shake-effect" id="junior-enter"></a>  
-            <!-- <a href="#junior" class="burger-menu bc-orange shake-effect" id="junior-enter"data-t>home.enter.junior.default-legend</a>   -->
             <div class="enter-item text-center" id="team-enter-item">
               <h1 class="color-turquoise">TEAM</h1>
               <div class="row enter-item-description">
@@ -100,7 +92,6 @@
               </div>
             </div>
             <a href="#team" class="burger-menu bc-grey shake-effect" id="team-enter"></a> 
-            <!-- <a href="#team" class="burger-menu bc-turquoise shake-effect" id="team-enter"data-t>home.enter.team.default-legend</a>  -->
           </div>
         </div>
       </div>
@@ -308,17 +299,6 @@
   <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
     <img style="padding: 0" src="../media/img_4.png" alt>
   </div>
-
-  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
-    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
-    <img style="width: 80%" src="media/clients.png" alt="">
-  </div>
-
-  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
-    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
-    <img style="width: 80%" src="media/inversores.png" alt="">
-  </div> -->
-
   <div class="row VisibleLayer bc-white py-5" id="ContactUs">
     <div class="decorate-tittle decorate-xs bc-light-grey"></div>
     <div class="tittle">
@@ -373,11 +353,9 @@
         <a class="color-orange hover-orange navigate-junior">JUNIOR</a>
         <a class="color-turquoise hover-turquoise navigate-team mb-3">ABOUT US</a>
         <a class="mb-3 color-turquoise hover-turquoise" target="_blank" href=" https://teamcubation.bamboohr.com/jobs/">Work with us</a>
-        <!-- <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
         <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
         <p class="mb-3">All rights reserved</p>
-        <!-- <p>Cookies | Privacy policies</p> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -402,9 +380,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
-  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="../media/senior/tc_vertical.svg" alt="tc_logo">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -447,14 +422,14 @@
         </div>
       </div>
       <div class="row Central-legend">
-        <h1 class="color-green">WE TRAIN</h1>
-        <h2 class="color-green">JUNIOR DEVS</h2>
+        <h1 class="color-green">TEACH WHAT</h1>
+        <h2 class="color-green">YOU KNOW</h2>
       </div>
       <div class="Descriptive-legend-senior-en">
         <div class="d-inline color-orange" style="margin-left: -4%; font-size: calc(1.1em + 2vw); line-height: 0.5">< </div>
-        <h5 class="d-inline color-grey">GETTING MORE EXPERIENCE WHILE</h5>
-        <h5 class="color-grey" style="margin-left: 1.1vw">DEVELOPING THE SOFTWARE </h5>
-        <h5 style="margin-left: 1.1vw" class="d-inline color-green weight-600">YOUR ORGANIZATION NEEDS</h5>
+        <h5 class="d-inline color-grey" style="margin-left: 0.5vw">MENTOR A TEAM JUNIOR</h5>
+        <h5 class="color-grey" style="margin-left: 1.1vw">DEVELOPERS WHILE YOU DEVELOP</h5>
+        <h5 style="margin-left: 1.1vw" class="d-inline color-green weight-600">SOFTWARE FOR BIG COMPANIES</h5>
         <div class="d-inline color-orange" style="margin-left: 3%; font-size: calc(1.1em + 2vw); line-height: 0">/></div>      
       </div>
       <div class="row learn-more">
@@ -581,17 +556,6 @@
   <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
     <img style="padding: 0" src="../media/senior/img_4.png" alt>
   </div>
-
-  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
-    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
-    <img style="width: 80%" src="media/clients.png" alt="">
-  </div>
-
-  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
-    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
-    <img style="width: 80%" src="media/inversores.png" alt="">
-  </div> -->
-
   <div class="row VisibleLayer bc-white py-5" id="ContactUs">
     <div class="decorate-tittle decorate-xs bc-light-grey"></div>
     <div class="tittle">
@@ -613,12 +577,9 @@
         <a class="color-orange hover-orange navigate-junior">JUNIOR</a>
         <a class="color-turquoise hover-turquoise navigate-team mb-3">ABOUT US</a>
         <a class="mb-3 color-turquoise hover-turquoise" target="_blank" href=" https://teamcubation.bamboohr.com/jobs/">Work with us</a>
-        <!-- <h5 class="color-turquoise mb-0">about us</h5>
-        <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
         <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
         <p class="mb-3">All rights reserved</p>
-        <!-- <p>Cookies | Privacy policies</p> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -643,9 +604,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
-  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ junior-filter" src="../media/junior/tc_vertical.svg" alt="tc_vertical">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -694,8 +652,8 @@
       <div class="Descriptive-legend-junior-es">
         <div class="d-inline color-light-turquoise" style="margin-left: -2.5%; font-size: calc(0.9em + 2vw); line-height: 0.5">< </div>
         <h5 class="d-inline color-grey">GET MORE EXPERIENCE WHILE WE</h5>
-        <h5 style="margin-left: 1.3vw;" class="color-grey">HOLD YOUR HAND DEVELOPING A REAL PROJECT</h5>
-        <h5 style="margin-left: 1.3vw;" class="d-inline color-light-turquoise weight-600">FOR THE COMPANY THAT HIRED YOU</h5>
+        <h5 style="margin-left: 1.1vw;" class="color-grey">HOLD YOUR HAND DEVELOPING A REAL PROJECT</h5>
+        <h5 style="margin-left: 1.1vw;" class="d-inline color-light-turquoise weight-600">FOR THE COMPANY THAT HIRED YOU</h5>
         <div class="d-inline color-light-turquoise" style="margin-left: 2%; font-size: calc(0.8em + 2vw); line-height: 0">/></div>      
       </div>
       <div class="row learn-more">
@@ -822,17 +780,6 @@
   <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
     <img style="padding: 0" src="../media/junior/img_4.png" alt>
   </div>
-
-  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
-    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
-    <img style="width: 80%" src="media/clients.png" alt="">
-  </div>
-
-  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
-    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
-    <img style="width: 80%" src="media/inversores.png" alt="">
-  </div> -->
-
   <div class="row VisibleLayer bc-white py-5" id="ContactUs">
     <div class="decorate-tittle decorate-xs bc-light-grey"></div>
     <div class="tittle">
@@ -854,11 +801,9 @@
         <a class="color-green hover-green navigate-senior">SENIOR</a>
         <a class="color-turquoise hover-turquoise mb-3 navigate-team">ABOUT US</a>
         <a class="mb-3 color-turquoise hover-turquoise" target="_blank" href=" https://teamcubation.bamboohr.com/jobs/">Work with us</a>
-        <!-- <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
         <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
         <p class="mb-3">All rights reserved</p>
-        <!-- <p>Cookies | Privacy policies</p> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -883,9 +828,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
-  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="../media/senior/tc_vertical.svg" alt="tc_logo">
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -934,8 +876,8 @@
       <div class="Descriptive-legend-junior-es">
         <div class="d-inline color-light-turquoise" style="margin-left: -4%; font-size: calc(0.9em + 2vw); line-height: 0.5">< </div>
         <h5 class="d-inline color-grey">WE SOLVE THE LACK OF TALENT</h5>
-        <h5 class="color-grey" style="margin-left: 0.7vw">AND FIRST JOB SEARCH USING DATA,</h5>
-        <h5 style="margin-left: 0.7vw; font-size: 1.5vw;" class="d-inline color-light-turquoise weight-600">ALLOWING THE HIRE OF INEXPERIENCED PEOPLE</h5>
+        <h5 class="color-grey" style="margin-left: 0.5vw">AND FIRST JOB SEARCH USING DATA,</h5>
+        <h5 style="margin-left: 0.5vw; font-size: 1.5vw;" class="d-inline color-light-turquoise weight-600">ALLOWING THE HIRE OF INEXPERIENCED PEOPLE</h5>
         <div class="d-inline color-light-turquoise" style="margin-left: 0.8vw; font-size: calc(1em + 1.5vw); line-height: 0;">/></div>      
       </div>
       <div class="row learn-more">

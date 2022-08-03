@@ -160,18 +160,18 @@
       "central_legend": {
         "style_h1": "",
         "style_h2": "",
-        "h1": "ENTRENAMOS",
-        "h2": "JUNIORS"
+        "h1": "TRANSMITÍ ",
+        "h2": "LO QUE SABES"
       },
       "descriptive_legend": {
         "class": "Descriptive-legend-senior-es",
         "class_line4": "d-inline color-green weight-600",
-        "line_1": "ACUMULANDO EXPERIENCIA MIENTRAS",
-        "line_2": "DESARROLLAN EL SOFTWARE ",
-        "line_3": "QUE TU ORGANIZACIÓN NECESITA"
+        "line_1": "MONITOREÁ A UN EQUIPO DE",
+        "line_2": "DESARROLLADORES JUNIORS MIENTRAS ",
+        "line_3": "DESARROLLAS PARA GRANDES COMPAÑÍAS"
       },
       "learn_more": {
-        "text": "Conozca más"
+        "text": "Conocé más"
       }
     },
     "section_2": {
@@ -264,7 +264,7 @@
         "line_3": "REAL PARA LA EMPRESA EN LA QUE TRABAJÁS"
       },
       "learn_more": {
-        "text": "Conozca más"
+        "text": "Conocé más"
       }
     },
     "section_2": {
@@ -357,7 +357,7 @@
         "line_3": "PERMITIENDO CONTRATAR GENTE SIN EXPERIENCIA"
       },
       "learn_more": {
-        "text": "Conozca más"
+        "text": "Conocé más"
       }
     },
     "section_2": {

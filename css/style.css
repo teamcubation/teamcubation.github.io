@@ -282,6 +282,11 @@ ul {
 }
 
 /* components */
+
+#home{
+	height: 100vh;
+}
+
 .no-effect-item{
 	padding-bottom: 12%;
 }
@@ -406,7 +411,7 @@ ul {
 
 .Descriptive-legend-senior-es > h5,
 .Descriptive-legend-senior-en > h5{
-	font-size: 2vw;
+	font-size: 1.7vw;
 	line-height: 0.8;
 }
 
@@ -670,6 +675,10 @@ ul {
 }
 
 @media only screen and (max-width: 500px) {
+	#home{
+		height:calc(100vh - 5%);
+	}
+	
 	.no-effect-item{
 		padding-bottom: 5%;
 	}	

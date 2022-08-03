@@ -30,12 +30,7 @@
 
 <!------------------------------------- HOME PAGE-------------------------------------------------------------->
 
-  <div id="home" style="height: 100vh">
-    <!-- <a class="flag-home-mobile" data-attr-t data-attr-t-interpolate href-t="{{home.url}}">
-      <img  data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
-      <p data-t>lang.text_button</p>
-    </a> -->
-    
+  <div id="home">
     <div class="container-fluid color h-100">
       <div class="language-select language-select-home">
         <div class="language-tittle">
@@ -62,7 +57,6 @@
         <div class="col-12 col-lg-6" style="max-height: 100vh; overflow: hidden">
           <div class="row d-flex flex-column h-100 align-items-center justify-content-center">
             <a href="#organization" class="bc-light-grey burger-menu shake-effect" id="organization-enter" data-t></a>
-            <!-- <a href="#organization" class="bc-light-grey burger-menu shake-effect" id="organization-enter" data-t>home.enter.organization.default-legend</a> -->
             <div class="enter-item text-center" id="organization-enter-item">
               <h1 class="color-red" data-t>home.enter.organization.name</h1>
               <div class="row enter-item-description">
@@ -72,7 +66,6 @@
               </div>
             </div>
             <a href="#senior" class="burger-menu bc-grey-200 shake-effect" id="senior-enter"data-t></a>
-            <!-- <a href="#senior" class="burger-menu bc-green shake-effect" id="senior-enter"data-t>home.enter.senior.default-legend</a> -->
             <div class="enter-item text-center" id="senior-enter-item">
               <h1  class="color-green">SENIOR</h1>
               <div class="row enter-item-description">
@@ -90,7 +83,6 @@
               </div>
             </div>
             <a href="#junior" class="burger-menu bc-grey-100 shake-effect" id="junior-enter"data-t></a>  
-            <!-- <a href="#junior" class="burger-menu bc-orange shake-effect" id="junior-enter"data-t>home.enter.junior.default-legend</a>   -->
             <div class="enter-item text-center" id="team-enter-item">
               <h1  class="color-turquoise">TEAM</h1>
               <div class="row enter-item-description">
@@ -100,7 +92,6 @@
               </div>
             </div>
             <a href="#team" class="burger-menu bc-grey shake-effect" id="team-enter"data-t></a> 
-            <!-- <a href="#team" class="burger-menu bc-turquoise shake-effect" id="team-enter"data-t>home.enter.team.default-legend</a>  -->
           </div>
         </div>
       </div>
@@ -315,17 +306,6 @@
   <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
     <img style="padding: 0" src="media/img_4.png" alt="">
   </div>
-
-  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
-    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
-    <img style="width: 80%" src="media/clients.png" alt="">
-  </div>
-
-  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
-    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
-    <img style="width: 80%" src="media/inversores.png" alt="">
-  </div> -->
-
   <div class="row VisibleLayer bc-white py-5" id="ContactUs">
     <div class="decorate-tittle decorate-xs bc-light-grey"></div>
     <div class="tittle">
@@ -380,11 +360,9 @@
         <a data-attr-t data-attr-t-interpolate class="color-orange hover-orange navigate-junior" data-t>textLinks.junior</a>
         <a class="color-turquoise hover-turquoise navigate-team mb-3" data-t>textLinks.team</a>
         <a class="mb-3 color-turquoise hover-turquoise" data-attr-t data-attr-t-interpolate target="_blank" href-t="{{footer.searches.link}}" data-t>footer.searches.text</a>
-        <!-- <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
         <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
         <p data-t class="mb-3">footer.legal</p>
-        <!-- <p>Cookies | Privacy policies</p> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -409,9 +387,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
-  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{senior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -459,14 +434,14 @@
       </div>
       <div data-attr-t data-attr-t-interpolate class-t="{{senior.section_1.descriptive_legend.class}}">
         <div class="d-inline color-orange" style="margin-left: -4%; font-size: calc(1.1em + 2vw); line-height: 0.5">< </div>
-        <h5 data-t class="d-inline color-grey">senior.section_1.descriptive_legend.line_1</h5>
+        <h5 data-t class="d-inline color-grey" style="margin-left: 0.5vw">senior.section_1.descriptive_legend.line_1</h5>
         <h5 data-t class="color-grey" style="margin-left: 1.1vw">senior.section_1.descriptive_legend.line_2</h5>
         <h5 data-t data-attr-t data-attr-t-interpolate class-t="{{senior.section_1.descriptive_legend.class_line4}}" style="margin-left: 1.1vw">senior.section_1.descriptive_legend.line_3</h5>
         <div class="d-inline color-orange" style="margin-left: 3%; font-size: calc(1.1em + 2vw); line-height: 0">/></div>      
       </div>
       <div class="row learn-more">
         <a id="navigate-senior-what" class="color-grey hover-green navigate-what d-inline" style="padding: 0; font-weight: 600"> 
-          <p class="d-inline" data-t>section_1.learn_more.text</p> <span class="down-angle">︾</span>
+          <p class="d-inline" data-t>senior.section_1.learn_more.text</p> <span class="down-angle">︾</span>
         </a>
       </div>
     </div>
@@ -595,17 +570,6 @@
   <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
     <img style="padding: 0" src="media/senior/img_4.png" alt="">
   </div>
-
-  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
-    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
-    <img style="width: 80%" src="media/clients.png" alt="">
-  </div>
-
-  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
-    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
-    <img style="width: 80%" src="media/inversores.png" alt="">
-  </div> -->
-
   <div class="row VisibleLayer bc-white py-5" id="ContactUs">
     <div class="decorate-tittle decorate-xs bc-light-grey"></div>
     <div class="tittle">
@@ -627,12 +591,9 @@
         <a class="color-orange hover-orange navigate-junior" data-t>textLinks.junior</a>
         <a class="color-turquoise hover-turquoise navigate-team mb-3" data-t>textLinks.team</a>
         <a class="mb-3 color-turquoise hover-turquoise" data-attr-t data-attr-t-interpolate target="_blank" href-t="{{footer.searches.link}}" data-t>footer.searches.text</a>
-        <!-- <h5 class="color-turquoise mb-0">about us</h5>
-        <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
         <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
         <p data-t class="mb-3">footer.legal</p>
-        <!-- <p>Cookies | Privacy policies</p> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -657,9 +618,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
-  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{junior.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ junior-filter" src="media/junior/tc_vertical.svg" alt="tc_vertical"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -708,13 +666,13 @@
       <div data-attr-t data-attr-t-interpolate class-t="{{junior.section_1.descriptive_legend.class}}">
         <div class="d-inline color-light-turquoise" style="margin-left: -2.5%; font-size: calc(0.9em + 2vw); line-height: 0.5">< </div>
         <h5 data-t class="d-inline color-grey">junior.section_1.descriptive_legend.line_1</h5>
-        <h5 style="margin-left: 1.3vw;"data-t class="color-grey">junior.section_1.descriptive_legend.line_2</h5>
-        <h5 style="margin-left: 1.3vw;" data-t data-attr-t data-attr-t-interpolate class-t="{{junior.section_1.descriptive_legend.class_line3}}">junior.section_1.descriptive_legend.line_3</h5>
+        <h5 style="margin-left: 1.1vw;"data-t class="color-grey">junior.section_1.descriptive_legend.line_2</h5>
+        <h5 style="margin-left: 1.1vw;" data-t data-attr-t data-attr-t-interpolate class-t="{{junior.section_1.descriptive_legend.class_line3}}">junior.section_1.descriptive_legend.line_3</h5>
         <div class="d-inline color-light-turquoise" style="margin-left: 2%; font-size: calc(0.8em + 2vw); line-height: 0">/></div>      
       </div>
       <div class="row learn-more">
         <a id="navigate-junior-what" class="color-grey hover-orange navigate-what d-inline" style="padding: 0; font-weight: 600"> 
-          <p class="d-inline" data-t>section_1.learn_more.text</p> <span class="down-angle">︾</span>
+          <p class="d-inline" data-t>junior.section_1.learn_more.text</p> <span class="down-angle">︾</span>
         </a>
       </div>
     </div>
@@ -843,17 +801,6 @@
   <div class="row VisibleLayer bc-white" style="justify-content: flex-start; margin-top: -2px; padding: 0">
     <img style="padding: 0" src="media/junior/img_4.png" alt="">
   </div>
-
-  <!-- <div class="row justify-content-center align-items-center" style="margin-top: -1px; margin-bottom: 2%; background-color: #80808026;">
-    <h3 class="color-grey" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Clients</h3>
-    <img style="width: 80%" src="media/clients.png" alt="">
-  </div>
-
-  <div class="row justify-content-center align-items-center bc-grey" style="margin-top: -1px">
-    <h3 class="color-white" style="text-align: center; margin: 2% 0 -5% 0; position: relative">Investors </h3>
-    <img style="width: 80%" src="media/inversores.png" alt="">
-  </div> -->
-
   <div class="row VisibleLayer bc-white py-5" id="ContactUs">
     <div class="decorate-tittle decorate-xs bc-light-grey"></div>
     <div class="tittle">
@@ -875,11 +822,9 @@
         <a class="color-green hover-green navigate-senior" data-t>textLinks.senior</a>
         <a class="color-turquoise hover-turquoise mb-3 navigate-team" data-t>textLinks.team</a>
         <a class="mb-3 color-turquoise hover-turquoise" data-attr-t data-attr-t-interpolate target="_blank" href-t="{{footer.searches.link}}" data-t>footer.searches.text</a>
-        <!-- <h5 class="color-turquoise mb-5">case studies</h5> -->
         <div class="mb-4" style="height: 2px; background-color: #fff"></div>
         <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
         <p data-t class="mb-3">footer.legal</p>
-        <!-- <p>Cookies | Privacy policies</p> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -904,9 +849,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- <a class="flag-mobile" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
-  <!-- <a class="a-flag-desktop" data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}"><img class="flag-desktop" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang"></a> -->
   <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo"/>
   <div class="row section-one VisibleLayer bc-white">
     <div class="col-sm-12 col-lg-6">
@@ -955,13 +897,13 @@
       <div data-attr-t data-attr-t-interpolate class-t="{{junior.section_1.descriptive_legend.class}}">
         <div class="d-inline color-light-turquoise" style="margin-left: -4%; font-size: calc(0.9em + 2vw); line-height: 0.5">< </div>
         <h5 data-t class="d-inline color-grey">team.section_1.descriptive_legend.line_1</h5>
-        <h5 data-t class="color-grey" style="margin-left: 0.7vw">team.section_1.descriptive_legend.line_2</h5>
-        <h5 data-t data-attr-t data-attr-t-interpolate class-t="{{team.section_1.descriptive_legend.class_line3}}" style="margin-left: 0.7vw; font-size: 1.5vw;">team.section_1.descriptive_legend.line_3</h5>
+        <h5 data-t class="color-grey" style="margin-left: 0.5vw">team.section_1.descriptive_legend.line_2</h5>
+        <h5 data-t data-attr-t data-attr-t-interpolate class-t="{{team.section_1.descriptive_legend.class_line3}}" style="margin-left: 0.5vw; font-size: 1.5vw;">team.section_1.descriptive_legend.line_3</h5>
         <div class="d-inline color-light-turquoise" style="margin-left: 0.8vw; font-size: calc(1em + 1.5vw); line-height: 0;">/></div>      
       </div>
       <div class="row learn-more">
         <a id="navigate-team-what" class="color-grey hover-turquoise navigate-what d-inline" style="padding: 0; font-weight: 600"> 
-          <p class="d-inline" data-t>section_1.learn_more.text</p> <span class="down-angle">︾</span>
+          <p class="d-inline" data-t>team.section_1.learn_more.text</p> <span class="down-angle">︾</span>
         </a>
       </div>
     </div>
