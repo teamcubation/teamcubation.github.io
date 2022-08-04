@@ -690,11 +690,11 @@ ion-icon {
 	#home{
 		height:calc(100vh - 5%);
 	}
-	.hand-effect{
+	/* .hand-effect{
 		position: absolute!important;
 		left: 8%!important;
 		top: 50%!important;
-	}
+	} */
 	.no-effect-item{
 		padding-bottom: 5%;
 	}	
@@ -1244,10 +1244,9 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	animation: handMove 2.3s infinite cubic-bezier(0.4, 0, 1, 1) both;
 	transform: translate3d(0, 0, 0);
 	perspective: 1000px;
-	position: relative;
+	position: absolute;
 	z-index: 2;
-	top: 35%;
-    left: 25%;
+	margin: 14% 0 0 13%;
 	opacity: 0.2;
 }
   
