@@ -75,26 +75,25 @@ else{
 };
 
 window.addEventListener("hashchange", function(ev) {
-    ev.stopPropagation();
-    // if(screen.width > 1024){
-
-    //     if(ev.newURL === url || ev.oldURL.includes('/#')){
-    //         window.history.replaceState('', '', `${url}`);
-    //         hideShowPage('home', urlBuilder(document.location.href));
-    //     }
-    //     else if(ev.newURL.includes('organization')){
-    //         hideShowPage('organization', url);
-    //     }
-    //     else if(ev.newURL.includes('senior')){
-    //         hideShowPage('senior', url);
-    //     }
-    //     else if(ev.newURL.includes('junior')){
-    //         hideShowPage('junior', url);
-    //     }
-    //     else if(ev.newURL.includes('team')){
-    //         hideShowPage('team', url);
-    //     }
-    // }
+    // ev.stopPropagation();
+    if(screen.width > 1024){
+        if(ev.newURL === url || ev.oldURL.includes('/#')){
+            window.history.replaceState('', '', `${url}`);
+            hideShowPage('home', urlBuilder(document.location.href));
+        }
+        else if(ev.newURL.includes('organization')){
+            hideShowPage('organization', url);
+        }
+        else if(ev.newURL.includes('senior')){
+            hideShowPage('senior', url);
+        }
+        else if(ev.newURL.includes('junior')){
+            hideShowPage('junior', url);
+        }
+        else if(ev.newURL.includes('team')){
+            hideShowPage('team', url);
+        }
+    }
 });
    
 $(".form-contact").append('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
