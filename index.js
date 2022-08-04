@@ -295,7 +295,7 @@ $("#team-enter").hover(
 );
 
 const hideShowItemMenu = (itemToShow, classToAdd, cancelEffect) => {
-    cancelEffect && cancelEffectShake(); 
+    // cancelEffect && cancelEffectShake(); 
     const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
     itemsBurguer.map(item => {
         if(item !== itemToShow){
@@ -304,6 +304,8 @@ const hideShowItemMenu = (itemToShow, classToAdd, cancelEffect) => {
             $(`#${item}`).text('');
         }
         else{
+            $('#hand-effect').css("animation-play-state", "paused");
+            $('#hand-effect').css("visibility", "hidden");
             $(`#${itemToShow}`).text(dataByLang.home.btnEnter).addClass(itemToShow)
             $(`#${itemToShow}-item`).slideDown('slow');
             $('.scroll-prompt-arrow-container').hide('slow');
@@ -418,30 +420,32 @@ const effectShake = (prevElm, nextElm, time) => {
         )
     });
 }
-const initialEffectShake = setTimeout(
-    () => effectShake('null', 'organization-enter', 1000)
-    .then( response => effectShake('organization-enter', 'senior-enter', 1000))
-    .then( response => effectShake('senior-enter', 'junior-enter', 1000))
-    .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
-    .then( response => effectShake('team-enter', 'null', 1000)),
-    1000 
-);
 
-const constantEffectShake = setInterval(
-    () => effectShake('null', 'organization-enter', 1000)
-    .then( response => effectShake('organization-enter', 'senior-enter', 1000))
-    .then( response => effectShake('senior-enter', 'junior-enter', 1000))
-    .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
-    .then( response => effectShake('team-enter', 'null', 1000)),
-    6000 
-);
 
-const cancelEffectShake = () => {
-    const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
-    itemsBurguer.map(item => {
-        $(`#${item}`).css("translate3d", "none");
-        $(`#${item}`).removeClass('shake-effect');
-    });
-    clearTimeout(initialEffectShake);
-    clearInterval(constantEffectShake);
-};
+// const initialEffectShake = setTimeout(
+//     () => effectShake('null', 'organization-enter', 1000)
+//     .then( response => effectShake('organization-enter', 'senior-enter', 1000))
+//     .then( response => effectShake('senior-enter', 'junior-enter', 1000))
+//     .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
+//     .then( response => effectShake('team-enter', 'null', 1000)),
+//     1000 
+// );
+
+// const constantEffectShake = setInterval(
+//     () => effectShake('null', 'organization-enter', 1000)
+//     .then( response => effectShake('organization-enter', 'senior-enter', 1000))
+//     .then( response => effectShake('senior-enter', 'junior-enter', 1000))
+//     .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
+//     .then( response => effectShake('team-enter', 'null', 1000)),
+//     6000 
+// );
+
+// const cancelEffectShake = () => {
+//     const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
+//     itemsBurguer.map(item => {
+//         $(`#${item}`).css("translate3d", "none");
+//         $(`#${item}`).removeClass('shake-effect');
+//     });
+//     clearTimeout(initialEffectShake);
+//     clearInterval(constantEffectShake);
+// };
