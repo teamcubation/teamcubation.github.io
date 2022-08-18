@@ -58,7 +58,6 @@
         <div class="col-12 col-lg-6" style="max-height: 100vh; overflow: hidden">
           <img id="hand-effect" class="hand-effect" src="media/hand.svg" alt="">
           <div class="row d-flex flex-column h-100 align-items-center justify-content-center">
-            
             <a href="#organization" class="bc-light-grey burger-menu shake-effect" id="organization-enter" data-t></a>
             <div class="enter-item text-center" id="organization-enter-item">
               <h1 class="color-red" data-t>home.enter.organization.name</h1>
@@ -324,6 +323,30 @@
         <div class="mt-5">
           <input data-attr-t data-attr-t-interpolate  type="text" class="name" name="name" placeholder-t="{{section_5.contact-form.name}}" required>
         </div>
+        <div class="mt-5 w-100">
+          <div class="dropdown-select w-100">
+            <input class="origin-extra" hidden type="text">
+            <div class="select-tc">
+              <p class="label-select" data-t>Como te identificas</p>
+            </div>
+            <ul class="list-options-tc">
+              <li>
+                <div class="option-tc" data-option="organization" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Soy una organizacion</div>
+              </li>
+              <li>
+                <div class="option-tc" data-option="senior" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Soy un senior</div>
+              </li>
+              <li >
+                <div class="option-tc" data-option="junior" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Soy un junior</div>
+              </li>
+              <li>
+                <div class="option-tc" data-option="no-exp" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">No tengo experiencia</div>
+              </li>
+              <li>
+                <div class="option-tc" data-option="other" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Otro...</div>
+              </li>
+            </ul>
+          </div>
         <div class="mt-4">
           <input data-attr-t data-attr-t-interpolate type="text" class="organizationContact" placeholder-t="{{section_5.contact-form.organization}}">
         </div>
@@ -1020,6 +1043,31 @@
         <div class="mt-5">
           <input data-attr-t data-attr-t-interpolate type="text" class="name" name="name" placeholder-t="{{section_5.contact-form.name}}" required>
         </div>
+        <div class="mt-5 w-100">
+          <div class="dropdown-select w-100">
+            <input class="origin-extra" hidden type="text">
+            <div class="select-tc">
+              <p class="label-select" data-t>Como te identificas</p>
+            </div>
+            <ul class="list-options-tc">
+              <li>
+                <div class="option-tc" data-option="organization" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Soy una organizacion</div>
+              </li>
+              <li>
+                <div class="option-tc" data-option="senior" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Soy un senior</div>
+              </li>
+              <li >
+                <div class="option-tc" data-option="junior" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Soy un junior</div>
+              </li>
+              <li>
+                <div class="option-tc" data-option="no-exp" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">No tengo experiencia</div>
+              </li>
+              <li>
+                <div class="option-tc" data-option="other" data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">Otro...</div>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="mt-4">
             <label data-t for="country-phone-team" class="form-label">section_5.contact-form.telephone.label</label>
         </div>
@@ -1068,7 +1116,6 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script type="module" src="index.js?v=6"></script>
 </body>

@@ -117,7 +117,10 @@ $(".form-contact").on("submit", function(ev) {
         data_organization = undefined;
     }
     const data_origin = $(`#${currentForm} .typeContact`).val(); 
-
+    let data_origin_extra = document.getElementsByClassName("origin-extra").value;
+    if (!data_origin_extra){
+        data_origin_extra = undefined;
+    }
     $.ajax({
         url: 'https://api.prod.tq.teamcubation.com/contact',
         type: 'POST',
@@ -128,7 +131,8 @@ $(".form-contact").on("submit", function(ev) {
             organization: data_organization,
             phone_number: data_number,
             email: data_email,
-            origin: data_origin
+            origin: data_origin,
+            origin_extra: data_origin_extra
         }),
         dataType: 'json',
         success: (r) => {
@@ -320,7 +324,6 @@ $(".no-effect-item").hover(
     }
 );
 
-
 $('.navigate-home').on("click", function(ev){
     hideShowPage('home', urlBuilder(document.location.href));
 });
@@ -340,7 +343,6 @@ $('.navigate-organization').on("click", function(ev){
 $('.navigate-team').on("click", function(ev){
     hideShowPage('team', urlBuilder(document.location.href));
 });
-
 
 $('.navigate-what').on("click", function(ev){
     const page= $(this).attr("id");
@@ -376,7 +378,6 @@ const hideShowPage = (pageToShow, url) => {
     });    
 };
 
-
 $(".language-select").hover(
     function() {
         if (screen.width > 1024){
@@ -404,6 +405,35 @@ $(".language-select").on('click',
     },
 );
 
+$('.select-tc').on('click',
+    function() {
+        $('.list-options-tc').slideDown();
+    }
+    // function() {
+    //     $('.list-options-tc').slideUp();
+    // }
+);
+
+$('.option-tc').hover(
+    function() {
+        $(this).css('color', 'red');
+    },
+    function() {
+        $(this).css('color', 'grey');
+    }
+);
+
+$('.option-tc').on('click',
+    function() {
+        const optionSelected= $(this);
+        const valueOption= optionSelected.data("option");
+        $('.select-tc').find('p').text(optionSelected.text());
+        $('.list-options-tc').slideUp();
+        const input= document.getElementsByClassName("origin-extra");
+        input.value= valueOption;
+    }
+);
+
 const effectShake = (prevElm, nextElm, time) => {
     $(`#${nextElm}`).css("animation-play-state", "running");
     $(`#${prevElm}`).removeClass("shake-effect");
@@ -419,7 +449,6 @@ const effectShake = (prevElm, nextElm, time) => {
         )
     });
 }
-
 
 // const initialEffectShake = setTimeout(
 //     () => effectShake('null', 'organization-enter', 1000)
@@ -448,3 +477,4 @@ const effectShake = (prevElm, nextElm, time) => {
 //     clearTimeout(initialEffectShake);
 //     clearInterval(constantEffectShake);
 // };
+

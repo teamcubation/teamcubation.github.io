@@ -885,7 +885,6 @@ ion-icon {
 		width: 22%;
 		margin-top: 15%;
 		height: 8px;
-
 	}
 	#ContactUs h2{
 		font-size: calc(2em + 1.3vw) !important;
@@ -920,7 +919,6 @@ a,
 a:link, a:visited, a:active {
     text-decoration:none;
 	cursor: pointer;
-	/* font-size: calc(1em + 0.2vw); */
 	font-weight: 600;
 }
 
@@ -966,7 +964,6 @@ a:link, a:visited, a:active {
 	background-color: var(--color-logo-turquoise)!important;
 }
 
-
 a:hover{
 	font-weight: bold;
 }
@@ -985,7 +982,7 @@ a:hover{
 	color: var(--color-logo-orange);
 }
 
-input, textarea{
+input, textarea, select{
 	border: none;
     background-color: transparent;
     border-bottom: 2px solid rgba(128, 128, 128, 0.507);
@@ -1054,6 +1051,28 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 56%);
 }
 
+.select-tc{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.507);
+    width: 100%;
+}
+
+.list-options-tc{
+	display: none;
+	background-color: var(--color-light-200);
+	padding-left: 0;
+	width: 100%;
+	cursor: pointer;
+}
+
+.option-hover{
+	font-weight: 600;
+}
+
+.label-select{
+	margin-block-end: 0.1em;
+	color: #6c757d;
+}
+
 /* hide and Show pages  */
 
 #organization{
@@ -1090,7 +1109,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .logo-home{
 	width: 35%;
     margin: -45% 0 0 0%;
-    /* filter: brightness(0.9); */
 }
 
 .burger-menu{
@@ -1159,21 +1177,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	font-size: calc(1em + 0.5vw);
 }
 
-/* button effect */
-
-._effect {
-	font-weight: bold;
-	animation: hide-show infinite .8s;
-	color: #d3031c;
-}
-@keyframes hide-show {
-	0% { opacity: 0; }
-	49% { opacity: 0; }
-	50% { opacity: 1; }
-	100% { opacity: 1; }
-}
-
-
 /* scrollbar styled */
 
 ::-webkit-scrollbar {
@@ -1214,6 +1217,21 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .team-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #317287;
 }
+
+/* effect */
+
+._effect {
+	font-weight: bold;
+	animation: hide-show infinite .8s;
+	color: #d3031c;
+}
+@keyframes hide-show {
+	0% { opacity: 0; }
+	49% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
 
 .shake-effect{
 	animation: shake 1000ms infinite cubic-bezier(.36,.07,.19,.97) both;
