@@ -317,29 +317,30 @@
           <input type="text" class="name" name="name" required placeholder="Name">
         </div>
         <div class="mt-5 w-100">
-          <div class="dropdown-select w-100">
-            <input class="origin-extra" hidden type="text">
-            <div class="select-tc">
-              <p class="label-select">Como te identificas</p>
+          <div class="dropdown-select w-100" id="dropdown-select-org">
+            <div class="select-tc justify-content-between" style="display: flex">
+              <input class="input-select" disabled placeholder="¿Cómo te identificás?">
+              <img id="chevron-select" class="chevron-select" src="../media/chevron-down.svg" alt="arrow"> 
             </div>
             <ul class="list-options-tc">
               <li>
-                <div class="option-tc" data-option="organization" href="https://teamcubation.com/#team">Soy una organizacion</div>
+                <div class="option-tc" data-option="organization">Soy una organización que quiere incorporar desarrolladores Junior</div>
               </li>
               <li>
-                <div class="option-tc" data-option="senior" href="https://teamcubation.com/#team">Soy un senior</div>
+                <div class="option-tc" data-option="senior">Soy un desarrollador Senior y quiero acompañar a Juniors</div>
               </li>
               <li>
-                <div class="option-tc" data-option="junior" href="https://teamcubation.com/#team">Soy un junior</div>
+                <div class="option-tc" data-option="junior">Soy un desarrollador Junior/Trainee con conocimientos de programación</div>
               </li>
               <li>
-                <div class="option-tc" data-option="no-exp" href="https://teamcubation.com/#team">No tengo experiencia</div>
+                <div class="option-tc" data-option="no-exp">No sé programar y quiero aprender </div>
               </li>
               <li>
-                <div class="option-tc" data-option="other" href="https://teamcubation.com/#team">Otro...</div>
+                <div class="option-tc" data-option="other">other</div>
               </li>
             </ul>
           </div>
+        </div>
         <div class="mt-4">
           <input type="text" class="organizationContact" placeholder="Organization">
         </div>
@@ -369,7 +370,7 @@
           <textarea name="message" class="message" rows="1" required placeholder="Leave your message here"></textarea>
         </div>
         <input class="typeContact" hidden value="Organization">
-      </div></form>
+      </form>
     </div>
     <div class="col-1"></div>
     <div class="col-sm-12 col-lg-4 pb-5" style="background-color: #8080801a;">
@@ -1021,26 +1022,26 @@
           <input type="text" class="name" name="name" required placeholder="Name">
         </div>
         <div class="mt-5 w-100">
-          <div class="dropdown-select w-100">
-            <input class="origin-extra" hidden type="text">
-            <div class="select-tc">
-              <p class="label-select">Como te identificas</p>
+          <div class="dropdown-select w-100" id="dropdown-select-team">
+            <div class="select-tc justify-content-between" style="display: flex">
+              <input class="input-select" disabled placeholder="¿Cómo te identificás?">
+              <img id="chevron-select" class="chevron-select" src="../media/chevron-down.svg" alt="arrow"> 
             </div>
             <ul class="list-options-tc">
               <li>
-                <div class="option-tc" data-option="organization" href="https://teamcubation.com/#team">Soy una organizacion</div>
+                <div class="option-tc" data-option="organization">Soy una organización que quiere incorporar desarrolladores Junior</div>
               </li>
               <li>
-                <div class="option-tc" data-option="senior" href="https://teamcubation.com/#team">Soy un senior</div>
+                <div class="option-tc" data-option="senior">Soy un desarrollador Senior y quiero acompañar a Juniors</div>
               </li>
               <li>
-                <div class="option-tc" data-option="junior" href="https://teamcubation.com/#team">Soy un junior</div>
+                <div class="option-tc" data-option="junior">Soy un desarrollador Junior/Trainee con conocimientos de programación</div>
               </li>
               <li>
-                <div class="option-tc" data-option="no-exp" href="https://teamcubation.com/#team">No tengo experiencia</div>
+                <div class="option-tc" data-option="no-exp">No sé programar y quiero aprender </div>
               </li>
               <li>
-                <div class="option-tc" data-option="other" href="https://teamcubation.com/#team">Otro...</div>
+                <div class="option-tc" data-option="other">other</div>
               </li>
             </ul>
           </div>

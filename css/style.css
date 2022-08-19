@@ -161,7 +161,7 @@ ion-icon {
 	color: rgb(112, 112, 112);
 }
 
-  .Float_Tc_{
+.Float_Tc_{
 	margin: 3% 0 0 8%; 
 	height: 80%; 
 	position: fixed; 
@@ -286,6 +286,11 @@ ion-icon {
 }
 
 .ion-logo-linkedin{
+	font-size: 42px;
+	color: #cfcfcf;
+}
+
+.ion-md-arrow{
 	font-size: 42px;
 	color: #cfcfcf;
 }
@@ -1054,6 +1059,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .select-tc{
     border-bottom: 2px solid rgba(128, 128, 128, 0.507);
     width: 100%;
+	cursor: pointer;
 }
 
 .list-options-tc{
@@ -1064,13 +1070,26 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	cursor: pointer;
 }
 
-.option-hover{
-	font-weight: 600;
+.option-tc{
+	border-bottom: 1px solid rgba(182, 182, 182, 0.342);
+	padding: 5px 0px;
+	font-size: calc(0.8em + 0.2vw);
 }
 
-.label-select{
+.input-select{
 	margin-block-end: 0.1em;
-	color: #6c757d;
+	color: rgb(37, 37, 37);
+	border-bottom: 0;
+	cursor:pointer;
+}
+
+.input-select:focus{
+	border-bottom: 0;
+}
+
+.chevron-select{
+	width: 30px;
+	height: 30px;
 }
 
 /* hide and Show pages  */
@@ -1232,7 +1251,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	100% { opacity: 1; }
 }
 
-
 .shake-effect{
 	animation: shake 1000ms infinite cubic-bezier(.36,.07,.19,.97) both;
 	transform: translate3d(0, 0, 0);
@@ -1287,6 +1305,14 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	99%{
 		opacity: 0.2;
 	}
-
   }
 
+.chevron-effect{
+	display: inline-block;
+	animation: rotate 1s;
+	transform: rotate(180deg);
+}
+
+@keyframes rotate {
+	100%{transform: rotate(180deg);}
+}

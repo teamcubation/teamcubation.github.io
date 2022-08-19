@@ -126,6 +126,16 @@
       },
       "email": "E-mail",
       "reason": "Dejanos tu mensaje",
+      "origin-extra": {
+        "placeholder": "¿Cómo te identificás?",
+        "options": {
+          "organization": "Soy una organización que quiere incorporar desarrolladores Junior",
+          "senior": "Soy un desarrollador Senior y quiero acompañar a Juniors",
+          "junior": "Soy un desarrollador Junior/Trainee con conocimientos de programación",
+          "no-exp": "No sé programar y quiero aprender ",
+          "other": "Otro"
+        }
+      }, 
       "btn_text": "Enviar",
       "btn_sending": "Enviando...",
       "submit-response": {
@@ -411,6 +421,7 @@
         },
         "email": "E-mail",
         "reason": "¿Hay algo que quieras contarnos?",
+        "origin-extra": "¿Cómo te identificás?",
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {

@@ -34,6 +34,8 @@ const dataByLang = {
     formContact: {
         btnSend: lang === 'es' ? 'Enviar' : 'Submit',
         btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
+        originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : '¿Cómo te identificás?',
+        originExtraOhterOption: lang === 'es' ? 'otro' : 'other',
         submitResponse: {
             success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias!' : 'Your message has been sent, thank you!',
             error: lang === 'es' ? 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo' : 'An error occurred while sending the form, please try again.',
@@ -101,7 +103,6 @@ $(".form-contact").on("submit", function(ev) {
     ev.preventDefault();
     const currentForm = $(this).attr('id');
     const btn= $(this).find('.submit-contact');
-    btn.text(dataByLang.formContact.btnSending);
     const data_name = $(`#${currentForm} .name`).val();
     let data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(`#${currentForm} .area-phone`).val()} ${$(`#${currentForm} .number-phone`).val()}`;
     if (data_number.trim() === '+'){
@@ -117,46 +118,55 @@ $(".form-contact").on("submit", function(ev) {
         data_organization = undefined;
     }
     const data_origin = $(`#${currentForm} .typeContact`).val(); 
-    let data_origin_extra = document.getElementsByClassName("origin-extra").value;
-    if (!data_origin_extra){
-        data_origin_extra = undefined;
+    let data_origin_extra = $(`#${currentForm} .input-select`).data('value-selected');
+    if (data_origin_extra){
+        if(data_origin_extra === "other") data_origin_extra = `${data_origin_extra}: ${$(`#${currentForm} .input-select`).val()}`;
+        // if(data_origin_extra === "otro" &&  lang === "es") data_origin_extra = `${data_origin_extra}: ${$(`#${currentForm} .input-select`).val()}`;
+        $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
+        btn.text(dataByLang.formContact.btnSending);
+        $.ajax({
+            url: 'https://api.prod.tq.teamcubation.com/contact',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                full_name: data_name,
+                message: data_message,
+                organization: data_organization,
+                phone_number: data_number,
+                email: data_email,
+                origin: data_origin,
+                origin_extra: data_origin_extra,
+                lang: lang
+            }),
+            dataType: 'json',
+            success: (r) => {
+                $('.alert').remove(); 
+                $(".form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
+                $(".alert").text(dataByLang.formContact.submitResponse.success)
+                $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+                    $(".alert").slideUp(500);
+                });
+                btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
+                clearForm();
+            },
+            error: (r) => {
+                $('.alert').remove(); 
+                $(".form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
+                $(".alert").text(dataByLang.formContact.submitResponse.error)
+                $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+                    $(".alert").slideUp(500);
+                });
+                btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
+                clearForm();
+            }
+        });
+        return false;
     }
-    $.ajax({
-        url: 'https://api.prod.tq.teamcubation.com/contact',
-        type: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify({
-            full_name: data_name,
-            message: data_message,
-            organization: data_organization,
-            phone_number: data_number,
-            email: data_email,
-            origin: data_origin,
-            origin_extra: data_origin_extra
-        }),
-        dataType: 'json',
-        success: (r) => {
-            $('.alert').remove(); 
-            $(".form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
-            $(".alert").text(dataByLang.formContact.submitResponse.success)
-            $(".alert").fadeTo(2000, 500).slideUp(500, function() {
-                $(".alert").slideUp(500);
-            });
-            btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
-            clearForm();
-        },
-        error: (r) => {
-            $('.alert').remove(); 
-            $(".form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
-            $(".alert").text(dataByLang.formContact.submitResponse.error)
-            $(".alert").fadeTo(2000, 500).slideUp(500, function() {
-                $(".alert").slideUp(500);
-            });
-            btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
-            clearForm();
-        }
-    });
-    return false;
+    else{
+        $('.select-tc').css('border-bottom', '2px solid red');
+        $('.dropdown-select').append('<p class="text-error" style="color: red">obligatorio</p>');
+        return false;
+    }
 });
     
 const clearForm = () => {
@@ -406,20 +416,25 @@ $(".language-select").on('click',
 );
 
 $('.select-tc').on('click',
-    function() {
-        $('.list-options-tc').slideDown();
+    function(){
+        if($('.option-tc').is(":visible")){
+            $('.list-options-tc').slideUp();
+            $(this).find('.chevron-select').removeClass('chevron-effect');
+        } 
+        else{
+            $('.list-options-tc').slideDown();
+            $(this).find('.chevron-select').addClass('chevron-effect');
+            $('.select-tc').css('border-bottom', ' 2px solid red');
+        };
     }
-    // function() {
-    //     $('.list-options-tc').slideUp();
-    // }
 );
 
 $('.option-tc').hover(
     function() {
-        $(this).css('color', 'red');
+        $(this).css('color', 'red').css('font-weight', '600');
     },
     function() {
-        $(this).css('color', 'grey');
+        $(this).css('color', 'grey').css('font-weight', '400');
     }
 );
 
@@ -427,12 +442,29 @@ $('.option-tc').on('click',
     function() {
         const optionSelected= $(this);
         const valueOption= optionSelected.data("option");
-        $('.select-tc').find('p').text(optionSelected.text());
+        const textOption = optionSelected.text();
+        $('.text-error').remove();
+        if(valueOption === 'other'){
+            $('.input-select').data("value-selected", valueOption);
+            $('.input-select').prop('disabled', false).focus().val('').attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
+        }
+        else{
+            $('.input-select').data("value-selected", valueOption);
+            $('.input-select').val(textOption);
+            $('.input-select').prop('disabled', true);
+        }
         $('.list-options-tc').slideUp();
-        const input= document.getElementsByClassName("origin-extra");
-        input.value= valueOption;
+        $('.chevron-select').removeClass('chevron-effect');
     }
 );
+
+window.addEventListener('click', function(e){
+    if(!document.getElementById('dropdown-select-org').contains(e.target) && !document.getElementById('dropdown-select-team').contains(e.target))  {
+        $('.list-options-tc').slideUp();
+        $('.chevron-select').removeClass('chevron-effect');
+        $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
+    }
+});
 
 const effectShake = (prevElm, nextElm, time) => {
     $(`#${nextElm}`).css("animation-play-state", "running");
