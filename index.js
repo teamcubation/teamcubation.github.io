@@ -34,7 +34,7 @@ const dataByLang = {
     formContact: {
         btnSend: lang === 'es' ? 'Enviar' : 'Submit',
         btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
-        originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : '¿Cómo te identificás?',
+        originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : 'How do you identify yourself?',
         originExtraOhterOption: lang === 'es' ? 'otro' : 'other',
         submitResponse: {
             success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias!' : 'Your message has been sent, thank you!',
