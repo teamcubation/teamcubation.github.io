@@ -164,7 +164,7 @@ $(".form-contact").on("submit", function(ev) {
     }
     else{
         $('.select-tc').css('border-bottom', '2px solid red');
-        $('.dropdown-select').append('<p class="text-error" style="color: red">obligatorio</p>');
+        $('.dropdown-select').append('<p class="text-error" style="color: red">' + (lang == 'es' ? 'Por favor elegí una opción' : 'Please select an option') + '</p>');
         return false;
     }
 });
