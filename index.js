@@ -177,6 +177,10 @@ const clearForm = () => {
     $(".email").val('');
     $(".message").val('');
     $(".organizationContact").val('');
+    $('.list-options-tc').slideUp();
+    $('.chevron-select').removeClass('chevron-effect');
+    $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
+    $('.input-select').prop('disabled', true).val('').attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
 }
 
 // hide-show home and pages /////////
