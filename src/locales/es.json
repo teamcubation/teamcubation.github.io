@@ -132,7 +132,7 @@
           "organization": "Soy una organización que quiere incorporar desarrolladores Junior",
           "senior": "Soy un desarrollador Senior y quiero acompañar a Juniors",
           "junior": "Soy un desarrollador Junior/Trainee con conocimientos de programación",
-          "no-exp": "No sé programar y quiero aprender ",
+          "no-exp": "No sé programar y quiero aprender",
           "other": "Otro"
         }
       }, 

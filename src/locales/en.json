@@ -129,13 +129,13 @@
       "email": "E-mail",
       "reason": "Leave your message here",
       "origin-extra": {
-        "placeholder": "¿Cómo te identificás?",
+        "placeholder": "How do you identify yourself?",
         "options": {
-          "organization": "Soy una organización que quiere incorporar desarrolladores Junior",
-          "senior": "Soy un desarrollador Senior y quiero acompañar a Juniors",
-          "junior": "Soy un desarrollador Junior/Trainee con conocimientos de programación",
-          "no-exp": "No sé programar y quiero aprender ",
-          "other": "other"
+          "organization": "I'm an organization that wishes to incorporate Junior developers",
+          "senior": "I'm a Senior developer and I want to mentor Junior developers",
+          "junior": "I'm a Junior/Trainee developer with coding knowledge",
+          "no-exp": "I don't know how to code and I want to learn",
+          "other": "Other"
         }
       }, 
       "btn_text": "Submit",
