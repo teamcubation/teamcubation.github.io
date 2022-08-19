@@ -119,8 +119,11 @@ $(".form-contact").on("submit", function(ev) {
     }
     const data_origin = $(`#${currentForm} .typeContact`).val(); 
     let data_origin_extra = $(`#${currentForm} .input-select`).data('value-selected');
+    if (data_origin_extra === "other"){
+        const inputSelectText = $(`#${currentForm} .input-select`).val();
+        inputSelectText === "" ? data_origin_extra = null : data_origin_extra = `${data_origin_extra}: ${inputSelectText}`;
+    }; 
     if (data_origin_extra){
-        if (data_origin_extra === "other") data_origin_extra = `${data_origin_extra}: ${$(`#${currentForm} .input-select`).val()}`;
         $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
         btn.text(dataByLang.formContact.btnSending);
         $.ajax({
@@ -179,7 +182,7 @@ const clearForm = () => {
     $('.list-options-tc').slideUp();
     $('.chevron-select').removeClass('chevron-effect');
     $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
-    $('.input-select').prop('disabled', true).val('').attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
+    $('.input-select').prop('disabled', true).val('').attr("placeholder", dataByLang.formContact.originExtraPlaceholder).removeData('value-selected');
 }
 
 // hide-show home and pages /////////
