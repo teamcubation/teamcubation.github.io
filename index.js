@@ -36,6 +36,10 @@ const dataByLang = {
         btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
         originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : 'How do you identify yourself?',
         originExtraOhterOption: lang === 'es' ? 'otro' : 'other',
+        validation: {
+            noOptionSelected: lang == 'es' ? 'Por favor elegí una opción' : 'Please select an option',
+            noTextOtherOption: lang == 'es' ?  'Por favor ingresá un texto' : 'Please enter a text'
+        },
         submitResponse: {
             success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias!' : 'Your message has been sent, thank you!',
             error: lang === 'es' ? 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo' : 'An error occurred while sending the form, please try again.',
@@ -101,6 +105,7 @@ window.addEventListener("hashchange", function(ev) {
 $(".form-contact").append('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
 $(".form-contact").on("submit", function(ev) {
     ev.preventDefault();
+    let data_origin_extra_error_message = dataByLang.formContact.validation.noOptionSelected;
     const currentForm = $(this).attr('id');
     const btn= $(this).find('.submit-contact');
     const data_name = $(`#${currentForm} .name`).val();
@@ -120,6 +125,7 @@ $(".form-contact").on("submit", function(ev) {
     const data_origin = $(`#${currentForm} .typeContact`).val(); 
     let data_origin_extra = $(`#${currentForm} .input-select`).data('value-selected');
     if (data_origin_extra === "other"){
+        data_origin_extra_error_message = dataByLang.formContact.validation.noTextOtherOption;
         const inputSelectText = $(`#${currentForm} .input-select`).val();
         inputSelectText === "" ? data_origin_extra = null : data_origin_extra = `${data_origin_extra}: ${inputSelectText}`;
     }; 
@@ -166,12 +172,13 @@ $(".form-contact").on("submit", function(ev) {
     }
     else{
         $('.select-tc').css('border-bottom', '2px solid red');
-        $('.dropdown-select').append('<p class="text-error" style="color: red">' + (lang == 'es' ? 'Por favor elegí una opción' : 'Please select an option') + '</p>');
+        $('.dropdown-select').append('<p class="text-error" style="color: red">' + data_origin_extra_error_message + '</p>');
         return false;
     }
 });
     
 const clearForm = () => {
+    $('.text-error').remove();
     $(".name").val('');
     $(".country-phone").val('');
     $(".area-phone").val('');
@@ -469,6 +476,7 @@ window.addEventListener('click', function(e){
         $('.list-options-tc').slideUp();
         $('.chevron-select').removeClass('chevron-effect');
         $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
+        if($('.input-select').val() !== "") $('.text-error').remove();
     }
 });
 
