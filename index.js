@@ -34,7 +34,7 @@ const dataByLang = {
     formContact: {
         btnSend: lang === 'es' ? 'Enviar' : 'Submit',
         btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
-        originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : '¿Cómo te identificás?',
+        originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : 'How do you identify yourself?',
         originExtraOhterOption: lang === 'es' ? 'otro' : 'other',
         submitResponse: {
             success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias!' : 'Your message has been sent, thank you!',
@@ -120,8 +120,7 @@ $(".form-contact").on("submit", function(ev) {
     const data_origin = $(`#${currentForm} .typeContact`).val(); 
     let data_origin_extra = $(`#${currentForm} .input-select`).data('value-selected');
     if (data_origin_extra){
-        if(data_origin_extra === "other") data_origin_extra = `${data_origin_extra}: ${$(`#${currentForm} .input-select`).val()}`;
-        // if(data_origin_extra === "otro" &&  lang === "es") data_origin_extra = `${data_origin_extra}: ${$(`#${currentForm} .input-select`).val()}`;
+        if (data_origin_extra === "other") data_origin_extra = `${data_origin_extra}: ${$(`#${currentForm} .input-select`).val()}`;
         $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
         btn.text(dataByLang.formContact.btnSending);
         $.ajax({
@@ -440,8 +439,8 @@ $('.option-tc').hover(
 
 $('.option-tc').on('click',
     function() {
-        const optionSelected= $(this);
-        const valueOption= optionSelected.data("option");
+        const optionSelected = $(this);
+        const valueOption = optionSelected.data("option");
         const textOption = optionSelected.text();
         $('.text-error').remove();
         if(valueOption === 'other'){
