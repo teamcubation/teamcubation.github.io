@@ -82,7 +82,7 @@ else{
 
 window.addEventListener("hashchange", function(ev) {
     // ev.stopPropagation();
-    if(screen.width > 1024){
+    // if(screen.width > 1024){
         if(ev.newURL === url || ev.oldURL.includes('/#')){
             window.history.replaceState('', '', `${url}`);
             hideShowPage('home', urlBuilder(document.location.href));
@@ -98,7 +98,7 @@ window.addEventListener("hashchange", function(ev) {
         }
         else if(ev.newURL.includes('team')){
             hideShowPage('team', url);
-        }
+        // }
     }
 });
    
