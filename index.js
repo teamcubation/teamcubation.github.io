@@ -7,6 +7,12 @@ const lang = document.documentElement.lang;
 let json_path;
 
 $(document).ready(
+    gtag('event', 'page_view', {
+        page_title: `home`,
+        page_location: `${url}`,
+        page_path: `${url}`,
+        send_to: 'G-VVX5NJFK14'
+    }),
     document.documentElement.lang === 'es' 
       ? json_path = './src/locales/es.json' 
       : json_path = './src/locales/en.json',
@@ -81,24 +87,21 @@ else{
 };
 
 window.addEventListener("hashchange", function(ev) {
-    // ev.stopPropagation();
-    // if(screen.width > 1024){
-        if(ev.newURL === url || ev.oldURL.includes('/#')){
-            window.history.replaceState('', '', `${url}`);
-            hideShowPage('home', urlBuilder(document.location.href));
-        }
-        else if(ev.newURL.includes('organization')){
-            hideShowPage('organization', url);
-        }
-        else if(ev.newURL.includes('senior')){
-            hideShowPage('senior', url);
-        }
-        else if(ev.newURL.includes('junior')){
-            hideShowPage('junior', url);
-        }
-        else if(ev.newURL.includes('team')){
-            hideShowPage('team', url);
-        // }
+    if(ev.newURL === url || ev.oldURL.includes('/#')){
+        window.history.replaceState('', '', `${url}`);
+        hideShowPage('home', urlBuilder(document.location.href));
+    }
+    else if(ev.newURL.includes('organization')){
+        hideShowPage('organization', url);
+    }
+    else if(ev.newURL.includes('senior')){
+        hideShowPage('senior', url);
+    }
+    else if(ev.newURL.includes('junior')){
+        hideShowPage('junior', url);
+    }
+    else if(ev.newURL.includes('team')){
+        hideShowPage('team', url);
     }
 });
    
@@ -197,19 +200,21 @@ const clearForm = () => {
 $("#organization-enter").on("click", function(ev){
     ev.preventDefault();
     if (screen.width > 1024){
-        $("#home").slideUp('slow');
-        $("#senior").slideUp('slow');
-        $("#junior").slideUp('slow');
-        $("#organization").slideDown(3500);
-        $("body").css('overflow-y', 'scroll');
-        styledScroll('organization-scrollbar');
-        window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
+        hideShowPage('organization', urlBuilder(document.location.href));
+        // $("#home").slideUp('slow');
+        // $("#senior").slideUp('slow');
+        // $("#junior").slideUp('slow');
+        // $("#organization").slideDown(3500);
+        // $("body").css('overflow-y', 'scroll');
+        // styledScroll('organization-scrollbar');
+        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
     }
     else{
         if($(this).hasClass('organization-enter')){
-            $("#home").slideUp('slow');
-            $("#organization").slideDown('slow');
-            window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
+            hideShowPage('organization', urlBuilder(document.location.href));
+            // $("#home").slideUp('slow');
+            // $("#organization").slideDown('slow');
+            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
         }
         else{
            hideShowItemMenu('organization-enter', 'color-red', 'cancelEffect');    
@@ -220,19 +225,21 @@ $("#organization-enter").on("click", function(ev){
 $("#senior-enter").on("click", function(ev){
     ev.preventDefault();
     if (screen.width > 1024){
-        $("#home").slideUp('slow');
-        $("#organization").hide();
-        $("#junior").hide();
-        $("body").css('overflow-y', 'scroll');
-        styledScroll('senior-scrollbar');
-        $("#senior").slideDown(3500);
-        window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
+        hideShowPage('senior', urlBuilder(document.location.href));
+        // $("#home").slideUp('slow');
+        // $("#organization").hide();
+        // $("#junior").hide();
+        // $("body").css('overflow-y', 'scroll');
+        // styledScroll('senior-scrollbar');
+        // $("#senior").slideDown(3500);
+        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
     }
     else{
         if($(this).hasClass('senior-enter')){
-            $("#home").slideUp('slow');
-            $("#senior").slideDown('slow');
-            window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
+            hideShowPage('senior', urlBuilder(document.location.href));
+            // $("#home").slideUp('slow');
+            // $("#senior").slideDown('slow');
+            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
         }
         else{
            hideShowItemMenu('senior-enter', 'color-green', 'cancelEffect'); 
@@ -243,19 +250,21 @@ $("#senior-enter").on("click", function(ev){
 $("#junior-enter").on("click", function(ev){
     ev.preventDefault();
     if (screen.width > 1024){
-        $("#home").slideUp('slow');
-        $("#organization").hide();
-        $("#senior").hide('slow');
-        $("body").css('overflow-y', 'scroll');
-        styledScroll('junior-scrollbar');
-        $("#junior").slideDown(3500);
-        window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
+        hideShowPage('junior', urlBuilder(document.location.href));
+        // $("#home").slideUp('slow');
+        // $("#organization").hide();
+        // $("#senior").hide('slow');
+        // $("body").css('overflow-y', 'scroll');
+        // styledScroll('junior-scrollbar');
+        // $("#junior").slideDown(3500);
+        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
     }
     else{
         if($(this).hasClass('junior-enter')){
-            $("#home").slideUp('slow');
-            $("#junior").slideDown('slow');
-            window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
+            hideShowPage('junior', urlBuilder(document.location.href));
+            // $("#home").slideUp('slow');
+            // $("#junior").slideDown('slow');
+            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
         }
         else{
            hideShowItemMenu('junior-enter', 'color-orange', 'cancelEffect');    
@@ -266,20 +275,22 @@ $("#junior-enter").on("click", function(ev){
 $("#team-enter").on("click", function(ev){
     ev.preventDefault();
     if (screen.width > 1024){
-        $("#home").slideUp('slow');
-        $("#organization").hide();
-        $("#senior").hide('slow');
-        $("#junior").hide('slow');
-        $("body").css('overflow-y', 'scroll');
-        styledScroll('team-scrollbar');
-        $("#team").slideDown(3500);
-        window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
+        hideShowPage('team', urlBuilder(document.location.href));
+        // $("#home").slideUp('slow');
+        // $("#organization").hide();
+        // $("#senior").hide('slow');
+        // $("#junior").hide('slow');
+        // $("body").css('overflow-y', 'scroll');
+        // styledScroll('team-scrollbar');
+        // $("#team").slideDown(3500);
+        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
     }
     else{
         if($(this).hasClass('team-enter')){
-            $("#home").slideUp('slow');
-            $("#team").slideDown('slow');
-            window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
+            hideShowPage('team', urlBuilder(document.location.href));
+            // $("#home").slideUp('slow');
+            // $("#team").slideDown('slow');
+            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
         }
         else{
            hideShowItemMenu('team-enter', 'color-turquoise', 'cancelEffect');    
@@ -287,6 +298,27 @@ $("#team-enter").on("click", function(ev){
     }
 });
 
+const hideShowPage = (pageToShow, url) => {
+    const pages = ['home', 'organization', 'senior', 'junior', 'team'];
+    pages.map(page => {
+        if(page === pageToShow){
+            $(`#${pageToShow}`).slideDown(page !== 'home' ? 3500 : 1000);
+            styledScroll(`${page}-scrollbar`);
+            page !== 'home' ? window.history.pushState(``, '', `${url}#${pageToShow}`) : window.history.replaceState('', '', `${url}`);
+            gtag('event', 'page_view', {
+                page_title: `${page}`,
+                page_location: `${url}#${pageToShow}`,
+                page_path: `${url}#${pageToShow}`,
+                send_to: 'G-VVX5NJFK14'
+            })
+        }
+        else{
+            $("body").css('overflow-y', 'scroll');
+            window.scrollTo(0, 0);
+            $(`#${page}`).hide();
+        }  
+    });    
+};
 
 $("#organization-enter").hover(
     function(ev) {
@@ -321,7 +353,6 @@ $("#team-enter").hover(
 );
 
 const hideShowItemMenu = (itemToShow, classToAdd, cancelEffect) => {
-    // cancelEffect && cancelEffectShake(); 
     const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
     itemsBurguer.map(item => {
         if(item !== itemToShow){
@@ -384,22 +415,6 @@ $('.navigate-what').on("click", function(ev){
     }
     document.getElementById(navigate_to).scrollIntoView({behavior: 'smooth'}, true);
 })
-
-const hideShowPage = (pageToShow, url) => {
-    const pages = ['home', 'organization', 'senior', 'junior', 'team'];
-    pages.map(page => {
-        if(page === pageToShow){
-            $(`#${pageToShow}`).slideDown(page !== 'home' ? 3500 : 1000);
-            styledScroll(`${page}-scrollbar`);
-            page !== 'home' ? window.history.pushState(``, '', `${url}#${pageToShow}`) : window.history.replaceState('', '', `${url}`);
-        }
-        else{
-            $("body").css('overflow-y', 'scroll');
-            window.scrollTo(0, 0);
-            $(`#${page}`).hide();
-        }  
-    });    
-};
 
 $(".language-select").hover(
     function() {
@@ -495,32 +510,4 @@ const effectShake = (prevElm, nextElm, time) => {
         )
     });
 }
-
-// const initialEffectShake = setTimeout(
-//     () => effectShake('null', 'organization-enter', 1000)
-//     .then( response => effectShake('organization-enter', 'senior-enter', 1000))
-//     .then( response => effectShake('senior-enter', 'junior-enter', 1000))
-//     .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
-//     .then( response => effectShake('team-enter', 'null', 1000)),
-//     1000 
-// );
-
-// const constantEffectShake = setInterval(
-//     () => effectShake('null', 'organization-enter', 1000)
-//     .then( response => effectShake('organization-enter', 'senior-enter', 1000))
-//     .then( response => effectShake('senior-enter', 'junior-enter', 1000))
-//     .then( response => effectShake('junior-enter', 'team-enter', 1000)) 
-//     .then( response => effectShake('team-enter', 'null', 1000)),
-//     6000 
-// );
-
-// const cancelEffectShake = () => {
-//     const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
-//     itemsBurguer.map(item => {
-//         $(`#${item}`).css("translate3d", "none");
-//         $(`#${item}`).removeClass('shake-effect');
-//     });
-//     clearTimeout(initialEffectShake);
-//     clearInterval(constantEffectShake);
-// };
 
