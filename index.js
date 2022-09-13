@@ -1,513 +1,322 @@
 // import data_en from "./src/locales/en.json" assert {type: 'json'};
 // import data_es from "./src/locales/es.json" assert {type: 'json'};
 
-const url= 'https://teamcubation.com/';
+const url = "https://teamcubation.com/";
 const initialLocation = document.location.href;
 const lang = document.documentElement.lang;
 let json_path;
 
 $(document).ready(
-    gtag('event', 'page_view', {
-        page_title: `home`,
-        page_location: `${url}`,
-        page_path: `${url}`,
-        send_to: 'G-VVX5NJFK14'
-    }),
-    document.documentElement.lang === 'es' 
-      ? json_path = './src/locales/es.json' 
-      : json_path = './src/locales/en.json',
+  gtag("event", "page_view", {
+    page_title: `home`,
+    page_location: `${url}`,
+    page_path: `${url}`,
+    send_to: "G-VVX5NJFK14",
+  }),
+  document.documentElement.lang === "es"
+    ? (json_path = "./src/locales/es.json")
+    : (json_path = "./src/locales/en.json")
 );
 
 const dataByLang = {
-    home: {
-        btnEnter: lang === 'es' ? '> Entrar <' : '> Enter <',
-
+  home: {
+    btnEnter: lang === "es" ? "> Entrar <" : "> Enter <",
+  },
+  enter: {
+    "organization-enter": {
+      defaultLegend:
+        lang === "es" ? "Soy una organización" : "I’m an organization",
     },
-    enter:{
-        "organization-enter":{
-            defaultLegend: lang === 'es' ? 'Soy una organización' : 'I’m an organization',
-        },
-        "senior-enter":{
-            defaultLegend: lang === 'es' ? 'Soy un dev Senior' : 'I’m a Senior dev',
-        },
-        "junior-enter":{
-            defaultLegend: lang === 'es' ? 'Soy un dev Junior' : 'I’m a Junior dev',
-        },
-        "team-enter":{
-            defaultLegend: lang === 'es' ? 'Nosotros' : 'Us',
-        },
+    "senior-enter": {
+      defaultLegend: lang === "es" ? "Soy un dev Senior" : "I’m a Senior dev",
     },
-    formContact: {
-        btnSend: lang === 'es' ? 'Enviar' : 'Submit',
-        btnSending : lang === 'es' ? 'Enviando...' : 'Sending...',
-        originExtraPlaceholder: lang === 'es' ? '¿Cómo te identificás?' : 'How do you identify yourself?',
-        originExtraOhterOption: lang === 'es' ? 'otro' : 'other',
-        validation: {
-            noOptionSelected: lang == 'es' ? 'Por favor elegí una opción' : 'Please select an option',
-            noTextOtherOption: lang == 'es' ?  'Por favor ingresá un texto' : 'Please enter a text'
-        },
-        submitResponse: {
-            success: lang === 'es' ? 'Su mensaje se ha enviado correctamente, gracias!' : 'Your message has been sent, thank you!',
-            error: lang === 'es' ? 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo' : 'An error occurred while sending the form, please try again.',
-        }
-    }
+    "junior-enter": {
+      defaultLegend: lang === "es" ? "Soy un dev Junior" : "I’m a Junior dev",
+    },
+    "team-enter": {
+      defaultLegend: lang === "es" ? "Nosotros" : "Us",
+    },
+  },
+  formContact: {
+    btnSend: lang === "es" ? "Enviar" : "Submit",
+    btnSending: lang === "es" ? "Enviando..." : "Sending...",
+    originExtraPlaceholder:
+      lang === "es" ? "¿Cómo te identificás?" : "How do you identify yourself?",
+    originExtraOhterOption: lang === "es" ? "otro" : "other",
+    validation: {
+      noOptionSelected:
+        lang == "es" ? "Por favor elegí una opción" : "Please select an option",
+      noTextOtherOption:
+        lang == "es" ? "Por favor ingresá un texto" : "Please enter a text",
+    },
+    submitResponse: {
+      success:
+        lang === "es"
+          ? "Su mensaje se ha enviado correctamente, gracias!"
+          : "Your message has been sent, thank you!",
+      error:
+        lang === "es"
+          ? "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+          : "An error occurred while sending the form, please try again.",
+    },
+  },
 };
 
 const urlBuilder = (currentUrl) => {
-    return !currentUrl.includes('/en/') ? url : `${url}/en/`
+  return !currentUrl.includes("/en/") ? url : `${url}/en/`;
 };
 
-const styledScroll = (classToAdd) => {
-    $("body").removeClass().addClass(classToAdd);
+// const styledScroll = (classToAdd) => {
+//     $("body").removeClass().addClass(classToAdd);
+// }
+
+if (initialLocation.includes("organization")) {
+  $("body").css("overflow-y", "scroll");
+  styledScroll("organization-scrollbar");
+  $("#organization").show();
+} else if (initialLocation.includes("senior")) {
+  $("body").css("overflow-y", "scroll");
+  styledScroll("senior-scrollbar");
+  $("#senior").show();
+} else if (initialLocation.includes("junior")) {
+  $("body").css("overflow-y", "scroll");
+  styledScroll("junior-scrollbar");
+  $("#junior").show();
+} else if (initialLocation.includes("/#team")) {
+  $("body").css("overflow-y", "scroll");
+  styledScroll("team-scrollbar");
+  $("#team").show();
+} else {
+  $("body").css("overflow-y", "scroll");
+  $("#home").show();
 }
 
-if(initialLocation.includes('organization')){
-    $("body").css('overflow-y', 'scroll');
-    styledScroll('organization-scrollbar');
-    $("#organization").show();
-}
-else if(initialLocation.includes('senior')){
-    $("body").css('overflow-y', 'scroll');
-    styledScroll('senior-scrollbar');
-    $("#senior").show();
-}
-else if(initialLocation.includes('junior')){
-    $("body").css('overflow-y', 'scroll');
-    styledScroll('junior-scrollbar');
-    $("#junior").show();
-}
-else if (initialLocation.includes('/#team')){
-    $("body").css('overflow-y', 'scroll');
-    styledScroll('team-scrollbar');
-    $("#team").show();
-}
-else{
-    $("body").css('overflow-y', 'scroll');
-    $("#home").show();
-};
+window.addEventListener("hashchange", function (ev) {
+  if (ev.newURL === url || ev.oldURL.includes("/#")) {
+    window.history.replaceState("", "", `${url}`);
+    hideShowPage("home", urlBuilder(document.location.href));
+  } else if (ev.newURL.includes("organization")) {
+    hideShowPage("organization", url);
+  } else if (ev.newURL.includes("senior")) {
+    hideShowPage("senior", url);
+  } else if (ev.newURL.includes("junior")) {
+    hideShowPage("junior", url);
+  } else if (ev.newURL.includes("team")) {
+    hideShowPage("team", url);
+  }
+});
 
-window.addEventListener("hashchange", function(ev) {
-    if(ev.newURL === url || ev.oldURL.includes('/#')){
-        window.history.replaceState('', '', `${url}`);
-        hideShowPage('home', urlBuilder(document.location.href));
-    }
-    else if(ev.newURL.includes('organization')){
-        hideShowPage('organization', url);
-    }
-    else if(ev.newURL.includes('senior')){
-        hideShowPage('senior', url);
-    }
-    else if(ev.newURL.includes('junior')){
-        hideShowPage('junior', url);
-    }
-    else if(ev.newURL.includes('team')){
-        hideShowPage('team', url);
-    }
+$(".form-contact").append(
+  '<button type="submit" name="submit-contact" class="btn-tc submit-contact">' +
+    dataByLang.formContact.btnSend +
+    "<span class=_effect>_</span></button>"
+);
+$(".form-contact").on("submit", function (ev) {
+  ev.preventDefault();
+  let data_origin_extra_error_message =
+    dataByLang.formContact.validation.noOptionSelected;
+  const currentForm = $(this).attr("id");
+  const btn = $(this).find(".submit-contact");
+  const data_name = $(`#${currentForm} .name`).val();
+  let data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(
+    `#${currentForm} .area-phone`
+  ).val()} ${$(`#${currentForm} .number-phone`).val()}`;
+  if (data_number.trim() === "+") {
+    data_number = undefined;
+  }
+  let data_email = $(`#${currentForm} .email`).val();
+  if (data_email.trim() === "") {
+    data_email = undefined;
+  }
+  const data_message = $(`#${currentForm} .message`).val();
+  let data_organization = $(`#${currentForm} .organizationContact`).val();
+  if (!data_organization) {
+    data_organization = undefined;
+  }
+  const data_origin = $(`#${currentForm} .typeContact`).val();
+  let data_origin_extra = $(`#${currentForm} .input-select`).data(
+    "value-selected"
+  );
+  if (data_origin_extra === "other") {
+    data_origin_extra_error_message =
+      dataByLang.formContact.validation.noTextOtherOption;
+    const inputSelectText = $(`#${currentForm} .input-select`).val();
+    inputSelectText === ""
+      ? (data_origin_extra = null)
+      : (data_origin_extra = `${data_origin_extra}: ${inputSelectText}`);
+  }
+  if (data_origin_extra) {
+    $(".select-tc").css(
+      "border-bottom",
+      "2px solid rgba(128, 128, 128, 0.507)"
+    );
+    btn.text(dataByLang.formContact.btnSending);
+    $.ajax({
+      url: "https://api.prod.tq.teamcubation.com/contact",
+      type: "POST",
+      contentType: "application/json",
+      data: JSON.stringify({
+        full_name: data_name,
+        message: data_message,
+        organization: data_organization,
+        phone_number: data_number,
+        email: data_email,
+        origin: data_origin,
+        origin_extra: data_origin_extra,
+        lang: lang,
+      }),
+      dataType: "json",
+      success: (r) => {
+        $(".alert").remove();
+        $(".form-contact").prepend(
+          '<div class="alert alert-success mt-5" role="alert"</div>'
+        );
+        $(".alert").text(dataByLang.formContact.submitResponse.success);
+        $(".alert")
+          .fadeTo(2000, 500)
+          .slideUp(500, function () {
+            $(".alert").slideUp(500);
+          });
+        btn.replaceWith(
+          '<button type="submit" name="submit-contact" class="btn-tc submit-contact">' +
+            dataByLang.formContact.btnSend +
+            "<span class=_effect>_</span></button>"
+        );
+        clearForm();
+      },
+      error: (r) => {
+        $(".alert").remove();
+        $(".form-contact").prepend(
+          '<div class="alert alert-danger mt-5" role="alert"</div>'
+        );
+        $(".alert").text(dataByLang.formContact.submitResponse.error);
+        $(".alert")
+          .fadeTo(2000, 500)
+          .slideUp(500, function () {
+            $(".alert").slideUp(500);
+          });
+        btn.replaceWith(
+          '<button type="submit" name="submit-contact" class="btn-tc submit-contact">' +
+            dataByLang.formContact.btnSend +
+            "<span class=_effect>_</span></button>"
+        );
+        clearForm();
+      },
+    });
+    return false;
+  } else {
+    $(".select-tc").css("border-bottom", "2px solid red");
+    $(".dropdown-select").append(
+      '<p class="text-error" style="color: red">' +
+        data_origin_extra_error_message +
+        "</p>"
+    );
+    return false;
+  }
 });
-   
-$(".form-contact").append('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
-$(".form-contact").on("submit", function(ev) {
-    ev.preventDefault();
-    let data_origin_extra_error_message = dataByLang.formContact.validation.noOptionSelected;
-    const currentForm = $(this).attr('id');
-    const btn= $(this).find('.submit-contact');
-    const data_name = $(`#${currentForm} .name`).val();
-    let data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(`#${currentForm} .area-phone`).val()} ${$(`#${currentForm} .number-phone`).val()}`;
-    if (data_number.trim() === '+'){
-        data_number = undefined;
-    }
-    let data_email = $(`#${currentForm} .email`).val();
-    if (data_email.trim() === ''){
-        data_email = undefined;
-    }
-    const data_message = $(`#${currentForm} .message`).val();
-    let data_organization = $(`#${currentForm} .organizationContact`).val();
-    if (!data_organization){
-        data_organization = undefined;
-    }
-    const data_origin = $(`#${currentForm} .typeContact`).val(); 
-    let data_origin_extra = $(`#${currentForm} .input-select`).data('value-selected');
-    if (data_origin_extra === "other"){
-        data_origin_extra_error_message = dataByLang.formContact.validation.noTextOtherOption;
-        const inputSelectText = $(`#${currentForm} .input-select`).val();
-        inputSelectText === "" ? data_origin_extra = null : data_origin_extra = `${data_origin_extra}: ${inputSelectText}`;
-    }; 
-    if (data_origin_extra){
-        $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
-        btn.text(dataByLang.formContact.btnSending);
-        $.ajax({
-            url: 'https://api.prod.tq.teamcubation.com/contact',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({
-                full_name: data_name,
-                message: data_message,
-                organization: data_organization,
-                phone_number: data_number,
-                email: data_email,
-                origin: data_origin,
-                origin_extra: data_origin_extra,
-                lang: lang
-            }),
-            dataType: 'json',
-            success: (r) => {
-                $('.alert').remove(); 
-                $(".form-contact").prepend('<div class="alert alert-success mt-5" role="alert"</div>')
-                $(".alert").text(dataByLang.formContact.submitResponse.success)
-                $(".alert").fadeTo(2000, 500).slideUp(500, function() {
-                    $(".alert").slideUp(500);
-                });
-                btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
-                clearForm();
-            },
-            error: (r) => {
-                $('.alert').remove(); 
-                $(".form-contact").prepend('<div class="alert alert-danger mt-5" role="alert"</div>')
-                $(".alert").text(dataByLang.formContact.submitResponse.error)
-                $(".alert").fadeTo(2000, 500).slideUp(500, function() {
-                    $(".alert").slideUp(500);
-                });
-                btn.replaceWith('<button type="submit" name="submit-contact" class="btn-tc submit-contact">' + dataByLang.formContact.btnSend +'<span class=_effect>_</span></button>')
-                clearForm();
-            }
-        });
-        return false;
-    }
-    else{
-        $('.select-tc').css('border-bottom', '2px solid red');
-        $('.dropdown-select').append('<p class="text-error" style="color: red">' + data_origin_extra_error_message + '</p>');
-        return false;
-    }
-});
-    
+
 const clearForm = () => {
-    $('.text-error').remove();
-    $(".name").val('');
-    $(".country-phone").val('');
-    $(".area-phone").val('');
-    $(".number-phone").val('')    
-    $(".email").val('');
-    $(".message").val('');
-    $(".organizationContact").val('');
-    $('.list-options-tc').slideUp();
-    $('.chevron-select').removeClass('chevron-effect');
-    $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
-    $('.input-select').prop('disabled', true).val('').attr("placeholder", dataByLang.formContact.originExtraPlaceholder).removeData('value-selected');
-}
-
-// hide-show home and pages /////////
-
-$("#organization-enter").on("click", function(ev){
-    ev.preventDefault();
-    if (screen.width > 1024){
-        hideShowPage('organization', urlBuilder(document.location.href));
-        // $("#home").slideUp('slow');
-        // $("#senior").slideUp('slow');
-        // $("#junior").slideUp('slow');
-        // $("#organization").slideDown(3500);
-        // $("body").css('overflow-y', 'scroll');
-        // styledScroll('organization-scrollbar');
-        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
-    }
-    else{
-        if($(this).hasClass('organization-enter')){
-            hideShowPage('organization', urlBuilder(document.location.href));
-            // $("#home").slideUp('slow');
-            // $("#organization").slideDown('slow');
-            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#organization`);
-        }
-        else{
-           hideShowItemMenu('organization-enter', 'color-red', 'cancelEffect');    
-        } 
-    }
-});
-
-$("#senior-enter").on("click", function(ev){
-    ev.preventDefault();
-    if (screen.width > 1024){
-        hideShowPage('senior', urlBuilder(document.location.href));
-        // $("#home").slideUp('slow');
-        // $("#organization").hide();
-        // $("#junior").hide();
-        // $("body").css('overflow-y', 'scroll');
-        // styledScroll('senior-scrollbar');
-        // $("#senior").slideDown(3500);
-        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
-    }
-    else{
-        if($(this).hasClass('senior-enter')){
-            hideShowPage('senior', urlBuilder(document.location.href));
-            // $("#home").slideUp('slow');
-            // $("#senior").slideDown('slow');
-            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#senior`);
-        }
-        else{
-           hideShowItemMenu('senior-enter', 'color-green', 'cancelEffect'); 
-        } 
-    }
-});
-
-$("#junior-enter").on("click", function(ev){
-    ev.preventDefault();
-    if (screen.width > 1024){
-        hideShowPage('junior', urlBuilder(document.location.href));
-        // $("#home").slideUp('slow');
-        // $("#organization").hide();
-        // $("#senior").hide('slow');
-        // $("body").css('overflow-y', 'scroll');
-        // styledScroll('junior-scrollbar');
-        // $("#junior").slideDown(3500);
-        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
-    }
-    else{
-        if($(this).hasClass('junior-enter')){
-            hideShowPage('junior', urlBuilder(document.location.href));
-            // $("#home").slideUp('slow');
-            // $("#junior").slideDown('slow');
-            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#junior`);
-        }
-        else{
-           hideShowItemMenu('junior-enter', 'color-orange', 'cancelEffect');    
-        } 
-    }
-});
-
-$("#team-enter").on("click", function(ev){
-    ev.preventDefault();
-    if (screen.width > 1024){
-        hideShowPage('team', urlBuilder(document.location.href));
-        // $("#home").slideUp('slow');
-        // $("#organization").hide();
-        // $("#senior").hide('slow');
-        // $("#junior").hide('slow');
-        // $("body").css('overflow-y', 'scroll');
-        // styledScroll('team-scrollbar');
-        // $("#team").slideDown(3500);
-        // window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
-    }
-    else{
-        if($(this).hasClass('team-enter')){
-            hideShowPage('team', urlBuilder(document.location.href));
-            // $("#home").slideUp('slow');
-            // $("#team").slideDown('slow');
-            // window.history.pushState('', '', `${urlBuilder(document.location.href)}#team`);
-        }
-        else{
-           hideShowItemMenu('team-enter', 'color-turquoise', 'cancelEffect');    
-        } 
-    }
-});
-
-const hideShowPage = (pageToShow, url) => {
-    const pages = ['home', 'organization', 'senior', 'junior', 'team'];
-    pages.map(page => {
-        if(page === pageToShow){
-            $(`#${pageToShow}`).slideDown(page !== 'home' ? 3500 : 1000);
-            styledScroll(`${page}-scrollbar`);
-            page !== 'home' ? window.history.pushState(``, '', `${url}#${pageToShow}`) : window.history.replaceState('', '', `${url}`);
-            gtag('event', 'page_view', {
-                page_title: `${page}`,
-                page_location: `${url}#${pageToShow}`,
-                page_path: `${url}#${pageToShow}`,
-                send_to: 'G-VVX5NJFK14'
-            })
-        }
-        else{
-            $("body").css('overflow-y', 'scroll');
-            window.scrollTo(0, 0);
-            $(`#${page}`).hide();
-        }  
-    });    
+  $(".text-error").remove();
+  $(".name").val("");
+  $(".country-phone").val("");
+  $(".area-phone").val("");
+  $(".number-phone").val("");
+  $(".email").val("");
+  $(".message").val("");
+  $(".organizationContact").val("");
+  $(".list-options-tc").slideUp();
+  $(".chevron-select").removeClass("chevron-effect");
+  $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
+  $(".input-select")
+    .prop("disabled", true)
+    .val("")
+    .attr("placeholder", dataByLang.formContact.originExtraPlaceholder)
+    .removeData("value-selected");
 };
-
-$("#organization-enter").hover(
-    function(ev) {
-        if (screen.width > 1024){
-            hideShowItemMenu('organization-enter', 'color-red', 'cancelEffect');
-        }
-    }
-);
-
-$("#senior-enter").hover(
-    function() {
-        if (screen.width > 1024){
-            hideShowItemMenu('senior-enter', 'color-green', 'cancelEffect');
-        }
-    }
-);
-
-$("#junior-enter").hover(
-    function() {
-        if (screen.width > 1024){
-            hideShowItemMenu('junior-enter', 'color-orange', 'cancelEffect');
-        }
-    }
-);
-
-$("#team-enter").hover(
-    function() {
-        if (screen.width > 1024){
-            hideShowItemMenu('team-enter', 'color-turquoise', 'cancelEffect');
-        }
-    }
-);
-
-const hideShowItemMenu = (itemToShow, classToAdd, cancelEffect) => {
-    const itemsBurguer = ['organization-enter', 'senior-enter', 'junior-enter', 'team-enter'];
-    itemsBurguer.map(item => {
-        if(item !== itemToShow){
-            $(`#${item}-item`).hide('slow');
-            $(`#${item}`).removeClass(`${item}`);
-            $(`#${item}`).text('');
-        }
-        else{
-            $('#hand-effect').css("animation-play-state", "paused");
-            $('#hand-effect').css("visibility", "hidden");
-            $(`#${itemToShow}`).text(dataByLang.home.btnEnter).addClass(itemToShow)
-            $(`#${itemToShow}-item`).slideDown('slow');
-            $('.scroll-prompt-arrow-container').hide('slow');
-            $("#welcome").removeClass().addClass(classToAdd);
-        }  
-    });    
-};
-
-$(".no-effect-item").hover(
-    function() {
-        hideShowItemMenu('');
-        $("#welcome").removeClass().addClass('color-light-grey');
-    }
-);
-
-$('.navigate-home').on("click", function(ev){
-    hideShowPage('home', urlBuilder(document.location.href));
-});
-
-$('.navigate-senior').on("click", function(ev){
-    hideShowPage('senior', urlBuilder(document.location.href));
-});
-
-$('.navigate-junior').on("click", function(ev){
-    hideShowPage('junior', urlBuilder(document.location.href));
-});
-
-$('.navigate-organization').on("click", function(ev){
-    hideShowPage('organization', urlBuilder(document.location.href));
-});
-
-$('.navigate-team').on("click", function(ev){
-    hideShowPage('team', urlBuilder(document.location.href));
-});
-
-$('.navigate-what').on("click", function(ev){
-    const page= $(this).attr("id");
-    let navigate_to;
-    if(page.includes('organization')){
-        navigate_to = 'organization/what'
-    }
-    else if(page.includes('senior')){
-        navigate_to = 'senior/what'
-    }
-    else if(page.includes('junior')){
-        navigate_to = 'junior/what'
-    }
-    else{
-        navigate_to = 'team/what'
-    }
-    document.getElementById(navigate_to).scrollIntoView({behavior: 'smooth'}, true);
-})
 
 $(".language-select").hover(
-    function() {
-        if (screen.width > 1024){
-            $(`.lenguage-options li`).each(function(){
-                if($(this).data("lang") === lang){
-                    $(this).find('a').addClass('a-disbled');
-                }
-        	});
-            $(`.lenguage-options`).slideDown();
+  function () {
+    if (screen.width > 1024) {
+      $(`.lenguage-options li`).each(function () {
+        if ($(this).data("lang") === lang) {
+          $(this).find("a").addClass("a-disbled");
         }
-    },
-    function() {
-        $(`.lenguage-options`).slideUp();
+      });
+      $(`.lenguage-options`).slideDown();
     }
+  },
+  function () {
+    $(`.lenguage-options`).slideUp();
+  }
 );
 
-$(".language-select").on('click',
-    function() {
-        $(`.lenguage-options li`).each(function(){
-            if($(this).data("lang") === lang){
-                $(this).find('a').addClass('a-disbled');
-            }
-        });
-        $(`.lenguage-options`).toggle('slow');
-    },
-);
-
-$('.select-tc').on('click',
-    function(){
-        if($('.option-tc').is(":visible")){
-            $('.list-options-tc').slideUp();
-            $(this).find('.chevron-select').removeClass('chevron-effect');
-        } 
-        else{
-            $('.list-options-tc').slideDown();
-            $(this).find('.chevron-select').addClass('chevron-effect');
-            $('.select-tc').css('border-bottom', ' 2px solid red');
-        };
+$(".language-select").on("click", function () {
+  $(`.lenguage-options li`).each(function () {
+    if ($(this).data("lang") === lang) {
+      $(this).find("a").addClass("a-disbled");
     }
-);
-
-$('.option-tc').hover(
-    function() {
-        $(this).css('color', 'red').css('font-weight', '600');
-    },
-    function() {
-        $(this).css('color', 'grey').css('font-weight', '400');
-    }
-);
-
-$('.option-tc').on('click',
-    function() {
-        const optionSelected = $(this);
-        const valueOption = optionSelected.data("option");
-        const textOption = optionSelected.text();
-        $('.text-error').remove();
-        if(valueOption === 'other'){
-            $('.input-select').data("value-selected", valueOption);
-            $('.input-select').prop('disabled', false).focus().val('').attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
-        }
-        else{
-            $('.input-select').data("value-selected", valueOption);
-            $('.input-select').val(textOption);
-            $('.input-select').prop('disabled', true);
-        }
-        $('.list-options-tc').slideUp();
-        $('.chevron-select').removeClass('chevron-effect');
-    }
-);
-
-window.addEventListener('click', function(e){
-    if(!document.getElementById('dropdown-select-org').contains(e.target) && !document.getElementById('dropdown-select-team').contains(e.target))  {
-        $('.list-options-tc').slideUp();
-        $('.chevron-select').removeClass('chevron-effect');
-        $('.select-tc').css('border-bottom', '2px solid rgba(128, 128, 128, 0.507)');
-        if($('.input-select').val() !== "") $('.text-error').remove();
-    }
+  });
+  $(`.lenguage-options`).toggle("slow");
 });
 
-const effectShake = (prevElm, nextElm, time) => {
-    $(`#${nextElm}`).css("animation-play-state", "running");
-    $(`#${prevElm}`).removeClass("shake-effect");
-    if ($('.enter-item:visible').length === 0) {
-        $(`#${nextElm}`).addClass("shake-effect");
-    }
-    return new Promise((resolve, reject) => {
-        setTimeout(() =>{
-                resolve('ok');
-                reject('err');
-            }, 
-            time
-        )
-    });
-}
+$(".select-tc").on("click", function () {
+  if ($(".option-tc").is(":visible")) {
+    $(".list-options-tc").slideUp();
+    $(this).find(".chevron-select").removeClass("chevron-effect");
+  } else {
+    $(".list-options-tc").slideDown();
+    $(this).find(".chevron-select").addClass("chevron-effect");
+    $(".select-tc").css("border-bottom", " 2px solid red");
+  }
+});
 
+$(".option-tc").hover(
+  function () {
+    $(this).css("color", "red").css("font-weight", "600");
+  },
+  function () {
+    $(this).css("color", "gray").css("font-weight", "400");
+  }
+);
+
+$(".option-tc").on("click", function () {
+  const optionSelected = $(this);
+  const valueOption = optionSelected.data("option");
+  const textOption = optionSelected.text();
+  $(".text-error").remove();
+  if (valueOption === "other") {
+    $(".input-select").data("value-selected", valueOption);
+    $(".input-select")
+      .prop("disabled", false)
+      .focus()
+      .val("")
+      .attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
+  } else {
+    $(".input-select").data("value-selected", valueOption);
+    $(".input-select").val(textOption);
+    $(".input-select").prop("disabled", true);
+  }
+  $(".list-options-tc").slideUp();
+  $(".chevron-select").removeClass("chevron-effect");
+});
+
+window.addEventListener("click", function (e) {
+  if (
+    !document.getElementById("dropdown-select-org").contains(e.target) &&
+    !document.getElementById("dropdown-select-team").contains(e.target)
+  ) {
+    $(".list-options-tc").slideUp();
+    $(".chevron-select").removeClass("chevron-effect");
+    $(".select-tc").css(
+      "border-bottom",
+      "2px solid rgba(128, 128, 128, 0.507)"
+    );
+    if ($(".input-select").val() !== "") $(".text-error").remove();
+  }
+});
+
+// test effect logo-card
+var card = document.getElementById("cardDuration");
+card.addEventListener("mouseover", function (e) {
+  document.getElementById("pathTest").setAttribute("stroke", "red");
+});

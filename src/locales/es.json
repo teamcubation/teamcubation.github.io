@@ -3,7 +3,7 @@
   "description": "Teamcubation es el engranaje faltante entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando y entrenando equipos de desarrollo para transformar juniors en recursos con experiencia",
   "lang": {
     "text": "es",
-    "text_button": "Lenguaje",
+    "textButton": "Lenguaje",
     "spanish": "Español",
     "english": "Inglés"
   },
@@ -13,35 +13,137 @@
     "junior": "JUNIOR",
     "team": "NOSOTROS"
   },
-  "home":{
+  "navBar":{
+    "what": "Qué ?",
+    "how": "Cómo ?",
+    "clients": "Clientes",
+    "team": "Equipo",
+    "devsJunior": "Devs Juniors",
+    "devsSenior": "Devs con experiencia"
+  },
+  "banner":{
     "url": "https://teamcubation.com/en",
-    "welcome": "Bienvenidos",
-    "enter":{
-      "organization": {
-        "name": "ORGANIZACIÓN",
-        "default-legend":"Soy una organización",
-        "description-bold": "TRANSFORMAMOS JUNIORS EN EXPERTOS RTW",
-        "description":"(READY TO WORK) MIENTRAS DESARROLLAN EL SOFTWARE QUE SU ORGANIZACIÓN NECESITA"
-      },
-      "senior": {
-        "name": "SENIOR",
-        "default-legend":"Soy un dev Senior",
-        "description-bold": "TE ENSEÑAMOS A TRANSFORMAR JUNIORS EN SENIORS RTW",
-        "description":"SÉ EL SENIOR QUE HUBIERAS QUERIDO TENER A TU LADO CUANDO ERAS JUNIOR"
-      },
-      "junior": {
-        "name": "JUNIOR",
-        "default-legend":"Soy un dev Junior",
-        "description-bold": "SOMOS UNA MÁQUINA DEL TIEMPO",
-        "description":"Y HACEMOS QUE TENGAS LA EXPERIENCIA QUE GANARÍAS EN 2 AÑOS EN SÓLO 6 MESES"
-      },
-      "team": {
-        "name": "TEAM",
-        "default-legend":"Nosotros",
-        "description-bold": "CONOCÉ TODO SOBRE NOSOTROS",
-        "description":"QUÉ Y QUIÉNES NOS HACEN LA PRIMER EMPRESA EN EL MERCADO DE ENTRENAMIENTO DE DEVELOPERS"
-      }
+    "descriptionProblem": {
+      "lineOne" : "Se nos va la gente",
+      "lineTwo" : "Perdemos oportunidades",
+      "lineThree" : "Quiero crecer pero cada vez que contrato se van otros",
+      "lineFour" : "Cada vez esta peor...",
+      "lineFive" : "No hay mas seniors",
+      "lineSix" : "Suena conocido?"
+    },
+    "solution": {
+      "lineOne" : "SOMOS LA SOLUCION A LA",
+      "lineTwo" : "FALTA DE DEVELOPERS DE",
+      "lineThree" : "SU COMPAÑIA"
+    }      
+  },
+  "weTrain":{
+    "centralText":{
+      "lineOne": "ENTRENAMOS",
+      "lineTwo": "DEVELOPERS"
+    },
+    "descriptionText":{
+      "lineOne": "Trabajamos juntos para potenciar",
+      "lineTwo": "el nuevo talento"
     }
+  },
+  "residence":{
+    "centralText":{
+      "lineOne":{
+        "text-gray": "Llegó la",
+        "text-white": "residencia"
+      },
+      "lineTwo": "médica de los",
+      "lineThree": "programadores"
+
+    },
+    "descriptionText":{
+      "lineOne": "Trabajamos juntos para potenciar",
+      "lineTwo": "el nuevo talento"
+    }
+  },
+  "weDo": {
+    "title": "¿QUÉ HACEMOS?",
+    "descriptionText": {
+      "lineOne": {
+        "standardTextOne": "Simple. Un proceso de ",
+        "boldTextOne": "seis meses ",
+        "standardTextTwo": "de desarrollo de un proyecto de ",
+        "boldTextTwo": "software"
+      },
+      "lineTwo": {
+        "boldTextOne": "que su compañia necesita ",
+        "standardTextOne": "con un squad mixto: ",
+        "boldTextTwo": " nuestros seniors ",
+        "standardTextTwo": "trabajando "
+      },
+      "lineThree": {
+        "standardTextOne": "junto a sus ",
+        "boldTextOne": " juniors ",
+        "standardTextTwo": "en un squad con dos objetivos de igual importancia: "
+      },
+      "lineFour": {
+        "standardTextOne": "entregar el proyecto de software y entrenar a los juniors."
+      }
+    },
+    "cardDuration":{
+      "title": "EL TIEMPO",
+      "centralText": {
+        "lineOne": "Seis",
+        "lineTwo": "meses"
+      },
+      "text":{
+        "lineOne": "“ Epa! que curso largo no? ”",
+        "lineTwo": "Es que no es un curso! vamos a desarrollar un proyecto, los proyectos no se hacen en 2 o 3 meses y es el tiempo que diseñamos para recorrer todas las instancias de entrenamiento que queremos hacer con los juniors."
+      } 
+    },
+    "cardPlus":{
+      "title": "EL VALOR AGREGADO",
+      "centralText": {
+        "lineOne": "Software que su",
+        "lineTwo": "compañía necesita"
+      },
+      "text":{
+        "lineOne": "Para poder entrenar necesitamos hacer un trabajo real. Que mejor que agarrar esos proyectos del final del backlog que su compañia no va a llegar a hacer? y esa reingenieria que postergaron ya 10 veces por ocuparse del dia dia? o esos proyectos de innovación que nunca entran al backlog por priorizar el core? esos proyectos son los que podemos desarrollar con los equipos mixtos de sus juniors y nuestros señiors"
+      } 
+    },
+    "cardOrganization":{
+      "title": "LA ORGANIZACIÓN",
+      "centralText": {
+        "lineOne": "Un",
+        "lineTwo": "Squad"
+      },
+      "text":{
+        "lineOne": "Cada uno de los squads estará compuesto por 3 de sus juniors que serán liderados técnicamente por uno de nuestros seniors. Al mismo tiempo, un lider de squad estará a cargo de seguir el proceso Teamcubation, velar por la evolución de los juniors y asegurar que el software cumpla con los requerimientos"
+      } 
+    },
+    "cardOurSeniors":{
+      "title": "LA EXPERIENCIA",
+      "centralText": {
+        "lineOne": "Nuestros",
+        "lineTwo": "seniors"
+      },
+      "text":{
+        "lineOne": "Un Senior y un Lider serán asignados a cada squad según el stack tecnológico y las necesidades específicas de su compñía.",
+        "lineTwo": "Ambos son parte del equipo Teamcubation pero serán capacitados en las metodologias de trabajo de su organización para generar una dinámica en el Squad que simule la experiencia de trabajar en desarrollo de software dentro de su empresa."
+
+      } 
+    },
+    "cardYourJuniors":{
+      "title": "LAS GANAS",
+      "centralText": {
+        "lineOne": "Sus",
+        "lineTwo": "juniors"
+      },
+      "text":{
+        "lineOne": "Serán parte de su nómina desde el día cero. Son sus empleados, liderados y trabajando en equipo con nuestros seniors, durante el período de 6 meses en el que adquirirán la experiencia que les falta para integrarse a su organización, mientras construyeb un software que la empresa necesita."
+      } 
+    }
+  },
+  "howDo":{
+    "title": "¿CÓMO LO HACEMOS?",
+    "descriptionText": "Un proceso en 3 etapas en bÚsqueda de la solución al problema del flujo de software developers",
+    "footerText": "Y como ya trabajamos en equipo, hay lideres con experiencia que ya conocen la cultura y las formas de trabajo de la compañia, al finalizar y traspasar a sus equipos a los juniors integramos 3 nuevas personas al squad para seguir asegurando el flujo de developers para su equipo."
   },
   "section_1": {
     "url": "https://teamcubation.com/en/#organization/",
