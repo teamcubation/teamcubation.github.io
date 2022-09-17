@@ -13,7 +13,8 @@
   <link rel="manifest" href="manifest.json"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@200;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css?v=26">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -35,16 +36,16 @@
 
 <nav id="navBar">
   <div class="logo">
-    <img src="../media/logo.jpg" alt="Teamcubation">
+    <img id="logo" src="../media/logo.png" alt="Teamcubation">
   </div>
   <div class="navigate">
-    <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}" >navBar.what</a>
-    <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}" >navBar.how</a>
-    <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}" >navBar.clients</a>
-    <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}" >navBar.team</a>
-    <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}" >navBar.devsJunior</a>
-    <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}" >navBar.devsSenior</a>
-    <div class="language-select">
+    <a data-t data-attr-t data-attr-t-interpolate href="#weDo">navBar.what</a>
+    <a data-t data-attr-t data-attr-t-interpolate href="#howDo">navBar.how</a>
+    <a data-t data-attr-t data-attr-t-interpolate href="#partners">navBar.clients</a>
+    <a data-t data-attr-t data-attr-t-interpolate href="#team">navBar.team</a>
+    <a data-t data-attr-t data-attr-t-interpolate href="#devsJuniors">navBar.devsJunior</a>
+    <a data-t data-attr-t data-attr-t-interpolate href="#devsSeniors">navBar.devsSenior</a>
+    <!-- <div class="language-select">
       <div class="language-tittle">
         <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
         <p data-t>lang.textButton</p>
@@ -57,62 +58,60 @@
           <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}">lang.english</a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
 <div id="pageContent">
-  <section id="banner">
+  <section id="banner" class="color-dark">
     <div class="grid-row align-items-center">
       <div class="col-8">
-        <h4 class="color-gray" data-t>banner.descriptionProblem.lineOne</h4>
-        <h4 class="color-gray" data-t>banner.descriptionProblem.lineTwo</h4>
-        <h4 class="color-gray" data-t>banner.descriptionProblem.lineThree</h4>
-        <h4 class="color-gray" data-t>banner.descriptionProblem.lineFour</h4>
-        <h4 class="color-gray" data-t>banner.descriptionProblem.lineFive</h4>
-        <h4 class="color-gray" data-t>banner.descriptionProblem.lineSix</h4>
+        <h4 data-t>banner.descriptionProblem.lineOne</h4>
+        <h4 data-t>banner.descriptionProblem.lineTwo</h4>
+        <h4 data-t>banner.descriptionProblem.lineThree</h4>
+        <h4 data-t>banner.descriptionProblem.lineFour</h4>
+        <h4 data-t>banner.descriptionProblem.lineFive</h4>
+        <h4 data-t>banner.descriptionProblem.lineSix</h4>
       </div>
       <div class="col-4">
         <div id="bannerDecorationPlus">
-          <img class="position-relative plus-default" width="30%" src="media/plus/default.svg" alt="plus_default">
-          <img class="position-relative plus-orange" width="40%" src="media/plus/orange.svg" alt="plus_orange">
-          <img class="position-relative plus-gray" width="30%" src="media/plus/gray.svg" alt="plus_gray">
-          <img class="position-relative plus-gray" width="30%" src="media/plus/gray.svg" alt="plus_gray">
-          <img class="position-relative plus-default"  width="20%" src="media/plus/default.svg" alt="plus_default">
-          <img class="position-relative plus-gray" width="40%" src="media/plus/gray.svg" alt="plus_gray">
+          <img class="position-relative plus-default" src="media/plus/default.svg" alt="plus_default">
+          <img class="position-relative plus-orange" src="media/plus/orange.svg" alt="plus_orange">
+          <img class="position-relative plus-gray" src="media/plus/gray.svg" alt="plus_gray">
+          <img class="position-relative plus-gray" src="media/plus/gray.svg" alt="plus_gray">
+          <img class="position-relative plus-default" src="media/plus/default.svg" alt="plus_default">
         </div>
       </div>
     </div>
-    <div class="grid-row">
-      <div class="col-12">
-        <h2 class="color-gray" data-t>banner.solution.lineOne</h2>
-        <h2 class="color-gray" data-t>banner.solution.lineTwo</h2>
-        <h2 class="color-gray" data-t>banner.solution.lineThree</h2>
+    <div class="grid-row mt-4">
+      <div class="col-12 color-gray">
+        <h2 data-t>banner.solution.lineOne</h2>
+        <h2 data-t>banner.solution.lineTwo</h2>
+        <h2 data-t>banner.solution.lineThree</h2>
       </div>
     </div>
   </section>
 
   <section id="weTrain">
     <img width="100%" src="media/background/section_green.svg" alt="">
-    <div id="weTrainLayer" class="grid-row flex-column align-items-left">
-      <h1 class="color-white" data-t>weTrain.centralText.lineOne</h1>
-      <h1 class="color-white" data-t>weTrain.centralText.lineTwo</h1>
-      <h3 class="color-white" data-t>weTrain.descriptionText.lineOne</h3>
-      <h3 class="color-white" data-t>weTrain.descriptionText.lineTwo</h3>
+    <div id="weTrainLayer" class="grid-row flex-column align-items-left color-white">
+      <h1 data-t>weTrain.centralText.lineOne</h1>
+      <h1 data-t>weTrain.centralText.lineTwo</h1>
+      <h3 data-t class="subTitle">weTrain.descriptionText.lineOne</h3>
+      <h3 data-t class="subTitle">weTrain.descriptionText.lineTwo</h3>
     </div>
   </section>
 
   <section id="residence">
-    <h1 data-t class="color-gray-100 me-4 d-inline">residence.centralText.lineOne.text-gray</h1>
+    <h1 data-t class="color-gray-100 me-1 d-inline">residence.centralText.lineOne.text-gray</h1>
     <h1 class="color-white d-inline" data-t>residence.centralText.lineOne.text-white</h1> 
     <h1 class="color-white" data-t>residence.centralText.lineTwo</h1>
     <h1 class="color-white" data-t>residence.centralText.lineThree</h1>
   </section>
 
-  <section id="weDo">
-    <img id="logoOrange" style="width: 100%" src="media/logo/orange.svg" alt="">
-    <img style="width: 100%" src="media/background/orange.svg" alt="">
+  <section id="weDo" style="background-image:url(media/background/orange.svg)">
+    <img id="logoOrange" src="media/logo/orange.svg" alt="">
     <div id="weDoLayer">
-      <h3 class="color-dark fw-bold mb-4" data-t>weDo.title</h3>
+      <h3 class="color-dark mb-4" data-t>weDo.title</h3>
       <h4 class="color-dark me-1 d-inline" data-t>weDo.descriptionText.lineOne.standardTextOne</h4>
       <h4 class="color-dark me-1 d-inline fw-600" data-t>weDo.descriptionText.lineOne.boldTextOne</h4>
       <h4 class="color-dark me-1 d-inline" data-t>weDo.descriptionText.lineOne.standardTextTwo</h4>
@@ -131,73 +130,78 @@
       <div class="grid-row mt-4">
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
           <div id="cardDuration" class="card gradientBlackGray">
-            <h4 data-t class="cardTitle color-light-orange mb-4">weDo.cardDuration.title</h4>
+            <h4 data-t class="cardTitle color-light-orange mb-3">weDo.cardDuration.title</h4>
             <svg id="logoCardDuration" width="131" height="92" viewBox="0 0 131 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="pathTest" d="M28.4717 55.494L50.0291 25.9944C50.0291 25.9944 45.9446 22.931 41.4062 19.6407C36.8678 16.3503 27.4506 15.1023 20.3026 23.2714C20.3026 23.2714 14.9766 30.6463 6.2335 42.1057C-2.50957 53.5652 1.21435 64.812 6.46054 69.9034C11.7067 74.9949 24.1601 83.859 24.1601 83.859C14.4026 72.3995 22.7987 63.2093 24.6141 60.7132L28.4717 55.494Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M48.8944 85.4475C48.8944 85.4475 53.1781 80.6767 55.702 76.3707L28.2447 55.8345C25.9755 59.0114 22.6852 63.0959 22.6852 63.0959C10.4313 82.0437 37.3215 98.2685 48.8944 85.4475Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M95.924 43.0991L69.6248 78.9899C69.6248 78.9899 74.5942 82.727 80.1159 86.7411C85.6376 90.7553 97.104 92.29 105.822 82.3528C105.822 82.3528 112.319 73.38 122.985 59.4384C133.65 45.4968 129.133 31.7945 122.752 25.5858C116.371 19.3772 101.219 8.56279 101.219 8.56279C113.084 22.5335 102.845 33.7123 100.63 36.7492L95.924 43.0991Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M71.0997 6.58931C71.0997 6.58931 65.8754 12.3925 62.795 17.6324L96.2005 42.6849C98.969 38.8197 102.982 33.8506 102.982 33.8506C117.935 10.795 85.2135 -9.006 71.0997 6.58931Z" stroke="#423B3B" stroke-width="2"/>
+              <path id="pathDurationOne" d="M28.4717 55.494L50.0291 25.9944C50.0291 25.9944 45.9446 22.931 41.4062 19.6407C36.8678 16.3503 27.4506 15.1023 20.3026 23.2714C20.3026 23.2714 14.9766 30.6463 6.2335 42.1057C-2.50957 53.5652 1.21435 64.812 6.46054 69.9034C11.7067 74.9949 24.1601 83.859 24.1601 83.859C14.4026 72.3995 22.7987 63.2093 24.6141 60.7132L28.4717 55.494Z" stroke="#423B3B" stroke-width="2"/>
+              <path id="pathDurationTwo" d="M48.8944 85.4475C48.8944 85.4475 53.1781 80.6767 55.702 76.3707L28.2447 55.8345C25.9755 59.0114 22.6852 63.0959 22.6852 63.0959C10.4313 82.0437 37.3215 98.2685 48.8944 85.4475Z" stroke="#423B3B" stroke-width="2"/>
+              <path id="pathDurationTrhee" d="M95.924 43.0991L69.6248 78.9899C69.6248 78.9899 74.5942 82.727 80.1159 86.7411C85.6376 90.7553 97.104 92.29 105.822 82.3528C105.822 82.3528 112.319 73.38 122.985 59.4384C133.65 45.4968 129.133 31.7945 122.752 25.5858C116.371 19.3772 101.219 8.56279 101.219 8.56279C113.084 22.5335 102.845 33.7123 100.63 36.7492L95.924 43.0991Z" stroke="#423B3B" stroke-width="2"/>
+              <path id="pathDurationFour" d="M71.0997 6.58931C71.0997 6.58931 65.8754 12.3925 62.795 17.6324L96.2005 42.6849C98.969 38.8197 102.982 33.8506 102.982 33.8506C117.935 10.795 85.2135 -9.006 71.0997 6.58931Z" stroke="#423B3B" stroke-width="2"/>
             </svg>
             <h3 data-t class="cardCentralText color-white">weDo.cardDuration.centralText.lineOne</h3>
-              <br>
-            <h3 data-t class="cardCentralText color-white mb-5">weDo.cardDuration.centralText.lineTwo</h3>
+            <h3 data-t class="cardCentralText color-white mb-3">weDo.cardDuration.centralText.lineTwo</h3>
             <h6 class="color-white" data-t>weDo.cardDuration.text.lineOne</h6>
             <h6 class="color-white" data-t>weDo.cardDuration.text.lineTwo</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
           <div class="card gradientBlackGray">
-            <h4 data-t class="cardTitle color-light-orange mb-4">weDo.cardPlus.title</h4>
-            <svg id="plusCardDuration" width="81" height="90" viewBox="0 0 81 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <h4 data-t class="cardTitle color-light-orange mb-3">weDo.cardPlus.title</h4>
+            <svg id="logoCardPlus" width="81" height="90" viewBox="0 0 81 90" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M39.3237 42.9347L32.3433 78.7987C32.3433 78.7987 37.3425 79.8363 42.8489 80.8865C48.3552 81.9367 57.4104 79.0651 60.41 68.6329C60.41 68.6329 62.0978 59.6939 65.1433 45.6054C68.1888 31.5169 60.0391 22.9181 53.1266 20.5382C46.2142 18.1583 31.1746 15.4256 31.1746 15.4256C44.8766 21.6532 41.1809 33.5401 40.5982 36.571L39.3237 42.9347Z" stroke="#423B3B" stroke-width="2"/>
               <path d="M8.10941 24.4971C8.10941 24.4971 6.25867 30.6359 5.80359 35.6063L39.3848 42.5301C40.0892 38.69 41.3322 33.5945 41.3322 33.5945C44.3741 11.2355 13.1381 7.97369 8.10941 24.4971Z" stroke="#423B3B" stroke-width="2"/>
             </svg>
             <h3 data-t class="cardCentralText color-white">weDo.cardPlus.centralText.lineOne</h3>
-              <br>
-            <h3 data-t class="cardCentralText color-white mb-5">weDo.cardPlus.centralText.lineTwo</h3>
+            <h3 data-t class="cardCentralText color-white mb-3">weDo.cardPlus.centralText.lineTwo</h3>
             <h6 data-t class="color-white">weDo.cardPlus.text.lineOne</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
           <div class="card gradientBlackGray">
-            <h4 data-t class="cardTitle color-light-orange mb-4">weDo.cardOrganization.title</h4>
+            <h4 data-t class="cardTitle color-light-orange mb-3">weDo.cardOrganization.title</h4>
             <svg id="logoCardOrganization" width="106" height="138" viewBox="0 0 106 138" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M52.9825 72.6083L93.7737 17.6043C93.7737 17.6043 86.0448 11.8924 77.4572 5.75735C68.8696 -0.377662 51.0502 -2.70476 37.5247 12.5271C37.5247 12.5271 27.4467 26.2781 10.9029 47.645C-5.64086 69.0119 1.40559 89.9822 11.3325 99.4756C21.2595 108.969 44.8239 125.497 44.8239 125.497C26.3605 104.13 42.2479 86.9939 45.683 82.3397L52.9825 72.6083Z" stroke="#423B3B" stroke-width="2"/>
               <path d="M91.6265 128.459C91.6265 128.459 99.7322 119.563 104.508 111.534L52.5529 73.2432C48.259 79.1667 42.0331 86.7826 42.0331 86.7826C18.846 122.112 69.7281 152.364 91.6265 128.459Z" stroke="#423B3B" stroke-width="2"/>
             </svg>
             <h3 data-t class="cardCentralText color-white">weDo.cardOrganization.centralText.lineOne</h3>
-              <br>
-            <h3 data-t class="cardCentralText color-white mb-5">weDo.cardOrganization.centralText.lineTwo</h3>
+            <h3 data-t class="cardCentralText color-white mb-3">weDo.cardOrganization.centralText.lineTwo</h3>
             <h6 data-t class="color-white">weDo.cardOrganization.text.lineOne</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
           <div class="card gradientBlackGray">
-            <h4 data-t class="cardTitle color-light-orange mb-4">weDo.cardOurSeniors.title</h4>
+            <h4 data-t class="cardTitle color-light-orange mb-3">weDo.cardOurSeniors.title</h4>
             <svg id="logoCardOurSeniors" width="110" height="141" viewBox="0 0 110 141" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M55.1058 66.4536L16.5847 123.071C16.5847 123.071 24.5394 128.464 33.3693 134.244C42.1993 140.025 60.0985 141.626 72.9936 125.857C72.9936 125.857 82.5042 111.707 98.1655 89.6854C113.827 67.6635 105.934 46.997 95.629 37.9151C85.3242 28.8332 61.1073 13.2772 61.1073 13.2772C80.4241 33.8758 65.2466 51.6434 62.0036 56.4334L55.1058 66.4536Z" stroke="#423B3B" stroke-width="2"/>
               <path d="M14.2223 12.2202C14.2223 12.2202 6.48494 21.4378 2.03965 29.6542L55.5085 65.8013C59.5581 59.7082 65.4692 51.8454 65.4692 51.8454C87.2007 15.6025 35.1307 -12.5559 14.2223 12.2202Z" stroke="#423B3B" stroke-width="2"/>
             </svg>
             <h3 data-t class="cardCentralText color-white">weDo.cardOurSeniors.centralText.lineOne</h3>
-              <br>
-            <h3 data-t class="cardCentralText color-white mb-5">weDo.cardOurSeniors.centralText.lineTwo</h3>
+            <h3 data-t class="cardCentralText color-white mb-3">weDo.cardOurSeniors.centralText.lineTwo</h3>
             <h6 data-t class="color-white">weDo.cardOurSeniors.text.lineOne</h6>
             <h6 data-t class="color-white">weDo.cardOurSeniors.text.lineTwo</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
           <div class="card gradientBlackGray">
-            <h4 data-t class="cardTitle color-light-orange mb-4">weDo.cardYourJuniors.title</h4>
+            <h4 data-t class="cardTitle color-light-orange mb-3">weDo.cardYourJuniors.title</h4>
+            <svg id="logoCardOurJuniorsDouble" width="114" height="78" viewBox="0 0 114 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28.9107 42.4263L50.8125 12.8933C50.8125 12.8933 46.6627 9.82636 42.0518 6.53232C37.4409 3.23828 27.8732 1.9888 20.611 10.1672C20.611 10.1672 15.1999 17.5504 6.31713 29.0228C-2.56565 40.4953 1.21777 51.7548 6.54779 56.852C11.8778 61.9492 24.5302 70.8234 24.5302 70.8234C14.6167 59.3509 23.147 50.1503 24.9914 47.6513L28.9107 42.4263Z" stroke="#423B3B" stroke-width="2"/>
+              <path d="M49.6596 72.4136C49.6596 72.4136 54.0118 67.6375 56.5759 63.3266L28.68 42.7671C26.3745 45.9476 23.0316 50.0367 23.0316 50.0367C10.5819 69.006 37.9018 85.2491 49.6596 72.4136Z" stroke="#423B3B" stroke-width="2"/>
+              <path d="M84.9107 39.4263L106.813 9.89326C106.813 9.89326 102.663 6.82636 98.0518 3.53232C93.4409 0.238276 83.8732 -1.0112 76.611 7.16719C76.611 7.16719 71.1999 14.5504 62.3171 26.0228C53.4344 37.4953 57.2178 48.7548 62.5478 53.852C67.8778 58.9492 80.5302 67.8234 80.5302 67.8234C70.6167 56.3509 79.147 47.1503 80.9914 44.6513L84.9107 39.4263Z" stroke="#423B3B" stroke-width="2"/>
+              <path d="M105.66 69.4136C105.66 69.4136 110.012 64.6375 112.576 60.3266L84.68 39.7671C82.3745 42.9476 79.0316 47.0367 79.0316 47.0367C66.5819 66.006 93.9018 82.2491 105.66 69.4136Z" stroke="#423B3B" stroke-width="2"/>
+            </svg>
+            <svg id="logoCardOurJuniorsSingle" width="58" height="75" viewBox="0 0 58 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28.9107 39.4263L50.8125 9.89326C50.8125 9.89326 46.6627 6.82636 42.0518 3.53232C37.4409 0.238276 27.8732 -1.0112 20.611 7.16719C20.611 7.16719 15.1999 14.5504 6.31713 26.0228C-2.56565 37.4953 1.21777 48.7548 6.54779 53.852C11.8778 58.9492 24.5302 67.8234 24.5302 67.8234C14.6167 56.3509 23.147 47.1503 24.9914 44.6513L28.9107 39.4263Z" stroke="#423B3B" stroke-width="2"/>
+              <path d="M49.6596 69.4136C49.6596 69.4136 54.0118 64.6375 56.5759 60.3266L28.68 39.7671C26.3745 42.9476 23.0316 47.0367 23.0316 47.0367C10.5819 66.006 37.9018 82.2491 49.6596 69.4136Z" stroke="#423B3B" stroke-width="2"/>
+            </svg>
             <h3 data-t class="cardCentralText color-white">weDo.cardYourJuniors.centralText.lineOne</h3>
-              <br>
-            <h3 data-t class="cardCentralText color-white mb-5">weDo.cardYourJuniors.centralText.lineTwo</h3>
+            <h3 data-t class="cardCentralText color-white mb-3">weDo.cardYourJuniors.centralText.lineTwo</h3>
             <h6 data-t class="color-white">weDo.cardYourJuniors.text.lineOne</h6>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <img id="weDoDivider" src="media/wave/weDoDivider.svg" alt="">
   <section id="howDo">
     <div id="howDoDecorationPlus">
       <img class="position-relative plus-default" width="40%" src="media/plus/default.svg" alt="plus_orange">
@@ -207,300 +211,291 @@
       <img class="position-relative plus-default" width="40%" src="media/plus/default.svg" alt="plus_gray">
     </div>
     <div id="howDoLayer">
-      <h3 class="color-dark fw-bold mb-5" data-t>howDo.title</h3>
+      <h3 class="color-dark mb-5" data-t>howDo.title</h3>
       <h4 class="color-dark me-1 d-inline" data-t>howDo.descriptionText</h4>
       <div class="grid-row mt-4 mb-5">
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="" class="card">
-            <h4 data-t class="cardTitle color-blue mb-4">weDo.cardDuration.title</h4>
-            <h3 data-t class="cardCentralText color-dark mb-5">weDo.cardDuration.centralText.lineTwo</h3>
-            <h6 class="color-dark" data-t>weDo.cardDuration.text.lineOne</h6>
-            <h6 class="color-dark" data-t>weDo.cardDuration.text.lineTwo</h6>
+          <div id="cardDiscovery" class="card">
+            <h4 data-t class="cardTitle color-blue mb-3">howDo.cardDiscovery.title</h4>
+            <h3 data-t class="cardCentralText color-dark mb-3">howDo.cardDiscovery.centralText.lineOne</h3>
+            <h6 class="color-dark" data-t>howDo.cardDiscovery.text.lineOne</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="cardDuration" class="card">
-            <h4 data-t class="cardTitle color-blue mb-4">weDo.cardDuration.title</h4>
-            <h3 data-t class="cardCentralText color-dark mb-5">weDo.cardDuration.centralText.lineTwo</h3>
-            <h6 class="color-dark" data-t>weDo.cardDuration.text.lineOne</h6>
-            <h6 class="color-dark" data-t>weDo.cardDuration.text.lineTwo</h6>
+          <div id="cardEjecution" class="card">
+            <h4 data-t class="cardTitle color-blue mb-3">howDo.cardEjecution.title</h4>
+            <h3 data-t class="cardCentralText color-dark mb-3">howDo.cardEjecution.centralText.lineOne</h3>
+            <h6 data-t class="color-dark">howDo.cardEjecution.text.lineOne</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="cardDuration" class="card">
-            <h4 data-t class="cardTitle color-blue mb-4">weDo.cardDuration.title</h4>
-            <h3 data-t class="cardCentralText color-dark mb-5">weDo.cardDuration.centralText.lineTwo</h3>
-            <h6 class="color-dark" data-t>weDo.cardDuration.text.lineOne</h6>
-            <h6 class="color-dark" data-t>weDo.cardDuration.text.lineTwo</h6>
+          <div id="cardDelivery" class="card">
+            <h4 data-t class="cardTitle color-blue mb-3">howDo.cardDelivery.title</h4>
+            <h3 data-t class="cardCentralText color-dark mb-3">howDo.cardDelivery.centralText.lineOne</h3>
+            <h6 class="color-dark" data-t>howDo.cardDelivery.text.lineOne</h6>
           </div>
         </div>
       </div>
       <div class="d-flex">
-        <h4 data-t class="color-dark d-inline mt-5 text-center" data-t>howDo.footerText</h4>
+        <h4 data-t class="color-dark d-inline mb-5 text-center" data-t>howDo.footerText</h4>
       </div>
     </div>
   </section>
+  <section id="partners">
+    <h3 data-t class="color-light-gray my-5 text-center">partners.centralText</h3>
+    <div class="grid-row my-5 justify-content-center">
+      <div class="col-5 col-xl-3 text-center mb-5">
+        <img width="80%" src="media/partners/byma.svg" alt="">
+      </div>
+      <div class="col-5 col-xl-3 text-center mb-5">
+        <img width="80%" src="media/partners/iovLabs.svg" alt="">
+      </div>
+      <div class="col-5 col-xl-3 text-center mb-5">
+        <img width="80%" src="media/partners/agroToken.svg" alt="">
+      </div>
+      <div class="col-5 col-xl-3 text-center mb-5">
+        <img width="80%" src="media/partners/meli.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="team" style="background-image:url(media/background/red.svg)">
+    <img id="logoRed" width="100%" src="media/logo/red.svg" alt="">
+    <div id="teamLayer">
+      <h2 data-t class="color-white mb-5">_team.centralText</h2>
+      <h4 data-t class="color-white mb-4 mt-5">_team.text</h4>
+      <div class="grid-row justify-content-center">
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/mariano.png" alt="">
+            <h5 class="member-name">Mariano Wechsler</h5>
+            <h5 class="member-role">CEO</h5>
+            <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/diego.png" alt="">
+            <h5 class="member-name">Diego Jolodenco</h5>
+            <h5 class="member-role">COO</h5>
+            <a href="https://www.linkedin.com/in/diegojolodenco/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/pina.png" alt="">
+            <h5 class="member-name">Agustin Pina</h5>
+            <h5 class="member-role">Head of Training</h5>
+            <a href="https://www.linkedin.com/in/agustin-pina/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/tapi.png" alt="">
+            <h5 class="member-name">Jonathan Tapicer</h5>
+            <h5 class="member-role">CTO</h5>
+            <a href="https://www.linkedin.com/in/tapicer/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/flor.png" alt="">
+            <h5 class="member-name">Florencia Diaz</h5>
+            <h5 class="member-role">Head of People</h5>
+            <a href="https://www.linkedin.com/in/mariaflorenciadiaz/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/pablo.png" alt="">
+            <h5 class="member-name">Pablo Rodriguez</h5>
+            <h5 class="member-role">CFO</h5>
+            <a href="https://www.linkedin.com/in/pablo-g-rodriguez/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 text-center">
+          <div class="card-member">
+            <img class="img-member" src="media/team/eze.jpg" alt="">
+            <h5 class="member-name">Ezequiel Ursztein</h5>
+            <h5 class="member-role">Head of Data & Analytics</h5>
+            <a href="https://www.linkedin.com/in/ezequiel-ursztein-b1b14094/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <img id="teamDivider" src="media/wave/white.svg" alt="">
+  <section id="contact">
+    <div class="grid-row">
+      <div class="col-xs-12 col-lg-6 color-gray-100 mt-5">
+        <h2 class="color-gray-100 mb-5" data-t>contact.description.centralText</h2>
+        <h4 id="formOnlyCompany" data-t>contact.description.centralTextTwo</h4>
+        <div class="grid-row my-5 align-items-center">
+          <div dta-t class="col-1 info-postulations">
+            <h4 data-t class="verticalText color-light-gray">contact.description.text.juniors.verticalText</h4>
+          </div>
+          <div class="col-10 color">
+            <h5 class="d-inline fw-600" data-t>contact.description.text.juniors.text.boldTextOne</h5>
+            <h5 class="d-inline" data-t>contact.description.text.juniors.text.standardTextOne</h5>
+            <a class="d-inline fw-600 linkPostulations" data-t>contact.description.text.juniors.text.linkJuniors</a>
+            <h5 class="d-inline" data-t>contact.description.text.juniors.text.standardTextTwo</h5>
+          </div>
+        </div>
+        <div class="grid-row my-5 align-items-center color-gray">
+          <div dta-t class="col-1 info-postulations">
+            <h4 data-t class="verticalText color-light-gray">contact.description.text.seniors.verticalText</h4>
+          </div>
+          <div class="col-10">
+            <h5 class="d-inline fw-400" data-t>contact.description.text.seniors.text.boldTextOne</h5>
+            <h5 class="d-inline" data-t>contact.description.text.seniors.text.standardTextOne</h5>
+            <a class="d-inline fw-600 linkPostulations" data-t>contact.description.text.seniors.text.linkJuniors</a>
+            <h5 class="d-inline" data-t>contact.description.text.seniors.text.standardTextTwo</h5>
+          </div>
+        </div>
+        <div class="grid-row my-5 align-items-center">
+          <div dta-t class="col-1 info-postulations">
+            <h4 data-t class="verticalText color-light-gray">contact.description.text.noCoders.verticalText</h4>
+          </div>
+          <div class="col-10">
+            <h5 class="d-inline fw-600" data-t>contact.description.text.noCoders.text.boldText</h5>
+            <h5 class="d-inline" data-t>contact.description.text.noCoders.text.standardText</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-5">
+        <h2 class="color-gray-100" data-t>contact.form.centralText</h2>
+        <form class="form-contact" id="form-team">
+          <div class="mt-5">
+            <input data-attr-t data-attr-t-interpolate type="text" class="name" name="name" placeholder-t="{{contact.form.name}}" required>
+          </div>
+          <div class="mt-5 w-100">
+            <div class="dropdown-select w-100" id="dropdown-select-team">
+              <div class="select-tc justify-content-between" style="display: flex">
+                <input class="input-select" data-attr-t data-attr-t-interpolate placeholder-t="{{contact.form.origin-extra.placeholder}}" disabled>
+                <img class="chevron-select" src="media/chevron-down.svg" alt="arrow">
+              </div>
+              <ul class="list-options-tc">
+                <li>
+                  <div class="option-tc" data-option="organization" data-t>contact.form.origin-extra.options.organization</div>
+                </li>
+                <li>
+                  <div class="option-tc" data-option="senior" data-t >contact.form.origin-extra.options.senior</div>
+                </li>
+                <li >
+                  <div class="option-tc" data-option="junior" data-t>contact.form.origin-extra.options.junior</div>
+                </li>
+                <li>
+                  <div class="option-tc" data-option="no-exp" data-t>contact.form.origin-extra.options.no-exp</div>
+                </li>
+                <li>
+                  <div class="option-tc" data-option="other" data-t>contact.form.origin-extra.options.other</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-5">
+            <label data-t for="country-phone-team" class="form-label">contact.form.telephone.label</label>
+          </div>
+          <div class="row">
+            <div class="col-md-7 col-sm-12">
+              <div class="row">
+                <div class="col-3">
+                  <span>+</span>
+                  <input id="country-phone-team" data-attr-t data-attr-t-interpolate style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder-t="{{contact.form.telephone.country}}">
+                </div>
+                <div class="col-3">
+                  <input data-attr-t data-attr-t-interpolate type="text" name="area-phone"  class="area-phone" placeholder-t="{{contact.form.telephone.area}}">
+                </div>
+                <div class="col-6">
+                  <input data-attr-t data-attr-t-interpolate type="text"  name="number-phone" class="number-phone" placeholder-t="{{contact.form.telephone.number}}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+              <input data-attr-t data-attr-t-interpolate type="email" name="email" class="email" required placeholder-t="{{contact.form.email}}">
+            </div>
+          </div>
+          <div class="mb-4 mt-5">
+            <textarea data-attr-t data-attr-t-interpolate name="message" class="message" placeholder-t="{{contact.form.reason}}" rows="1" required></textarea>
+          </div>
+          <input class="typeContact" hidden value="Team">
+        </form>
+      </div>
+    </div>
+  </section>
+  <section id="devsJuniors">
+    <img id="logoBlue" src="media/logo/blue.svg" alt="">
+    <img style="position: relative; margin-bottom: -10%; z-index: 2" width="100%" src="media/wave/devsJuniorsdivider.svg" alt="">
+    <img width="100%" src="media/background/blue.svg" alt="">
+    <div id="devsJuniorsLayer">
+      <div class="grid-row my-5">
+        <h3 class="color-white" data-t>devsJuniors.centralText</h3>
+      </div>
+      <div class="d-flex flex-column justify-content-end my-4">
+        <h3 class="text-r color-light-gray d-inline subtitle-bold" data-t>devsJuniors.subtitle.grayText.lineOne</h3>
+        <h3 class="text-r color-light-gray subtitle-bold" data-t>devsJuniors.subtitle.grayText.lineTwo</h3>
+        <h3 class="text-r color-white subtitle-bold" data-t>devsJuniors.subtitle.standardText.lineOne</h3>
+        <h3 class="text-r color-white subtitle-bold" data-t>devsJuniors.subtitle.standardText.lineTwo</h3>
+      </div>
+      <div class="grid-row">
+        <div class="col-6">
+          <h4 data-t class="color-white">devsJuniors.text</h4>
+        </div>
+        <div class="col-6 mt-5">
+          <a id="linksJuniorsDevs" class="btn-tc btn-tc-lnk" data-attr-t data-attr-t-interpolate target="_blank" href-t="{{searchLinks}}" data-t>devsJuniors.textButton</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="devsSeniors" >
+    <div id="devsSeniorsLayout">
+      <div class="grid-row my-5">
+        <h3 class="color-white" data-t>devsSeniors.centralText</h3>
+      </div>
+      <div class="d-flex flex-column justify-content-end my-5">
+        <h3 class="text-r color-blue d-inline subtitle-bold" data-t>devsSeniors.subtitle.blueText.lineOne</h3>
+        <h3 class="text-r color-blue subtitle-bold" data-t>devsSeniors.subtitle.blueText.lineTwo</h3>
+        <h3 class="text-r color-light-gray subtitle-bold" data-t>devsSeniors.subtitle.standardText.lineOne</h3>
+      </div>
+      <div class="d-flex flex-column justify-content-start my-5">
+        <a style="float: right; max-width: 25%" class="btn-tc btn-tc-lnk" data-attr-t data-attr-t-interpolate target="_blank" href-t="{{searchLinks}}" data-t>devsSeniors.textButton</a>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="grid-row align-items-center">
+      <div class="col-xs-12 col-sm-6">
+        <div class="grid-row">
+          <div class="col-3">
+            <div class="d-flex flex-column">
+              <a class="color-light-gray mb-0 navigate-organization" data-t  href="#weDo">textLinks.whatLink</a>
+              <a class="color-light-gray mb-0 navigate-organization" data-t  href="#howDo">textLinks.howLink</a>
+              <a class="color-light-gray mb-0 navigate-organization" data-t  href="#partners">textLinks.clientsLink</a>
+              <a class="color-light-gray mb-0 navigate-organization" data-t href="#team">textLinks.teamLink</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-flex flex-column">
+              <a class="color-light-gray mb-0 navigate-organization" data-t href="#contact">textLinks.contactLink</a>
+              <a class="color-light-gray mb-0 navigate-organization" data-t href="#devsJuniors">textLinks.devsJuniorsLink</a>
+              <a class="color-light-gray mb-0 navigate-organization" data-t href="#devsSeniors">textLinks.devsSeniorsLink</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="grid-row flex-column align-items-end">
+          <img id="lovsDevs" src="media/loveDevs.svg" style="float: right" alt="iLoveDevs">
+          <p id="copyright" class="color-light-gray">COPYRIGHT TEAMCUBATION</p>
+        </div>
+      </div>  
+    </div>
+  </footer>
 </div>
-
-
-<!-- <div id="team" class="container-fluid color">
-  <div class="language-select">
-    <div class="language-tittle">
-      <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
-      <p data-t>lang.text_button</p>
-    </div>
-    <ul class="lenguage-options">
-      <li data-lang="es">
-        <a data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">lang.spanish</a>
-      </li>
-      <li data-lang="en">
-        <a data-t data-attr-t data-attr-t-interpolate href-t="{{team.section_1.url}}">lang.english</a>
-      </li>
-    </ul>
-  </div>
-  <img class="Float_Tc_ senior-filter" src="media/senior/tc_vertical.svg" alt="tc_logo"/>
-  <div class="row section-one VisibleLayer bc-white">
-    <div class="col-sm-12 col-lg-6">
-      <div class="row">
-        <img class="logo navigate-home" src="media/logo.jpg" alt="imgLogo"/>
-        <img class="imgHeader" src="media/team/imgHeader.png" alt="imgHeader" />
-      </div>
-    </div>
-    <div class="col-sm-12 col-lg-5">
-      <div class="row Header-organization">
-        <div class="col-3 decorate-menu bc-light-gray hover-bc-red navigate-organization"></div>
-        <div class="col-3 decorate-menu bc-gray-200 hover-bc-green navigate-senior"></div>
-        <div class="col-3 decorate-menu bc-gray-100 hover-bc-orange navigate-junior"></div>
-        <div class="col-3 decorate-menu bc-turquoise"></div>
-        <div class="header-organization-leyend">
-          <span class="arrow left " style="margin: 2.2% 3% 0 0"></span><h3 data-t class="color-turquoise weight-600">team.section_1.tittle</h3>
-        </div>
-        <h3 class="underscore">_ _ _ _ _ _ _ _ _ _ _ _ </h3>
-      </div>
-      <div class="row Rotary-legend">
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2800">
-              <h2 data-t>team.section_1.carousel.text_1</h2>
-              <p style="margin:0" data-t>team.section_1.carousel.helper_1</p>
-            </div>
-            <div class="carousel-item" data-bs-interval="2800">
-              <h2 data-t>team.section_1.carousel.text_2</h2>
-              <p style="margin:0" data-t>team.section_1.carousel.helper_2</p>
-            </div>
-            <div class="carousel-item" data-bs-interval="2800">
-              <h2 data-t>team.section_1.carousel.text_3</h2>
-              <p style="margin:0" data-t>team.section_1.carousel.helper_3</p>
-            </div>
-            <div class="carousel-item" data-bs-interval="2800">
-              <h2 data-t>team.section_1.carousel.text_4</h2>
-              <p style="margin:0" data-t>team.section_1.carousel.helper_4</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row Central-legend">
-        <h1 data-t data-attr-t data-attr-t-interpolate class="color-turquoise" style-t="{{team.section_1.central_legend.style_h1}}">team.section_1.central_legend.h1</h1>
-        <h2 data-t data-attr-t data-attr-t-interpolate class="color-turquoise">team.section_1.central_legend.h2</h2>
-      </div>
-      <div data-attr-t data-attr-t-interpolate class-t="{{junior.section_1.descriptive_legend.class}}">
-        <div class="d-inline color-light-turquoise" style="margin-left: -4%; font-size: calc(0.9em + 2vw); line-height: 0.5">< </div>
-        <h5 data-t class="d-inline color-gray">team.section_1.descriptive_legend.line_1</h5>
-        <h5 data-t class="color-gray" style="margin-left: 0.5vw">team.section_1.descriptive_legend.line_2</h5>
-        <h5 data-t data-attr-t data-attr-t-interpolate class-t="{{team.section_1.descriptive_legend.class_line3}}" style="margin-left: 0.5vw; font-size: 1.5vw;">team.section_1.descriptive_legend.line_3</h5>
-        <div class="d-inline color-light-turquoise" style="margin-left: 0.8vw; font-size: calc(1em + 1.5vw); line-height: 0;">/></div>      
-      </div>
-      <div class="row learn-more">
-        <a id="navigate-team-what" class="color-gray hover-turquoise navigate-what d-inline" style="padding: 0; font-weight: 600"> 
-          <p class="d-inline" data-t>team.section_1.learn_more.text</p> <span class="down-angle">︾</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="row bc-turquoise" id="team/what" style="padding: 5% 0;">
-    <div class="col-1"></div>
-    <div class="col-sm-10 col-md-10">
-      <div class="row mt-3">
-        <div class="col-1">
-          <img class="VisibleLayer arrow-left" src="media/arrow_right_orange.svg" alt="tc_vertical"/>
-        </div>
-        <div class="col-11">
-          <h2 data-t class="What_is_Tc_tittle color-light-gray VisibleLayer inline-xs weight-200" >team.section_2.tittle</h2>
-          <h2 data-t class="What_is_Tc_tittle color-white VisibleLayer d-inline" style="font-weight: bold">
-            TEAMCUBATION_</h2><h2 class="What_is_Tc_tittle VisibleLayer d-inline color-light-gray inline-xs weight-200" style="margin: 0">?</h2>
-        </div>
-      </div>
-      <div class="row What_is_Tc_text" style="text-align:left; margin: 2% 0;">
-        <div class="col-lg-6"></div>
-        <div class="col-lg-6">
-          <h5 data-t class="color-light-gray VisibleLayer" style="font-size: 2.2vw">team.section_2.text</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-1"></div>
-  </div>
-  <div id="ourAnswer" class="row bc-white VisibleLayer" style="padding: 10vh 0 0 0">
-    <div class="row p-0">
-      <div class="decorate-tittle decorate-xs bc-orange VisibleLayer"></div>
-      <div class="tittle VisibleLayer">
-        <h2 data-t class="color-gray d-inline inline-md" 
-          style="font-weight:200; padding-left: 0">team.section_3.tittle.text_1</h2>
-          <br>
-        <h2 data-t class="bc-turquoise inline-md" 
-          style="font-weight:bold; color: #fff; display: inline-block">team.section_3.tittle.text_2</h2>
-        <h2 class="color-gray inline-md d-inline" style="font-weight:200">?</h2>
-      </div>
-      <div class="decorate-tittle decorate-lg bc-gray VisibleLayer" ></div>
-    </div>
-    <div class="row VisibleLayer" style="margin: 2% 0 5% 0">
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/mariano.png" alt="">
-          <h6 class="inline-md color-light-turquoise">Mariano Wechsler </h6>
-          <h6 class="weight-600 color-turquoise inline-md">Co founder CEO</h6>
-          <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/diego.png" alt="">
-          <h6 class="inline-md color-light-turquoise">Diego Jolodenco</h6>
-          <h6 class="weight-600 color-turquoise inline-md">Co founder COO</h6>
-          <a href="https://www.linkedin.com/in/diegojolodenco/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/pina.png" alt="">
-          <h6 class="inline-md color-light-turquoise">Agustin Pina</h6>
-          <h6 class="weight-600 inline-md color-turquoise">Head of Training</h6>
-          <a href="https://www.linkedin.com/in/agustin-pina/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/tapi.png" alt="">
-          <h6 class="inline-md color-light-turquoise">Jonathan Tapicer</h6>
-          <h6 class="weight-600 color-turquoise inline-md">CTO</h6>
-          <a href="https://www.linkedin.com/in/tapicer/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/flor.png" alt="">
-          <h6 class="inline-md color-light-turquoise">Florencia Diaz</h6>
-          <h6 class="weight-600 color-turquoise inline-md">Head of People</h6>
-          <a href="https://www.linkedin.com/in/mariaflorenciadiaz/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/pablo.png" alt="">
-          <h6 class="inline-md color-light-turquoise">Pablo Rodriguez</h6>
-          <h6 class="weight-600 color-turquoise inline-md">CFO</h6>
-          <a href="https://www.linkedin.com/in/pablo-g-rodriguez/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <div class="card-member">
-          <img class="img-member" src="media/eze.jpg" alt="">
-          <h6 class="inline-md color-light-turquoise">Ezequiel Ursztein</h6>
-          <h6 class="weight-600 color-turquoise inline-md">Head of Data & Analytics</h6>
-          <a href="https://www.linkedin.com/in/ezequiel-ursztein-b1b14094/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row VisibleLayer bc-white py-5" id="ContactUs">
-    <div class="decorate-tittle decorate-xs bc-light-gray"></div>
-    <div class="tittle">
-      <h2 data-t class="color-white inline-md" style=" background-color: black; font-weight:200;  display: inline-block">section_5.tittle.text_1</h2>
-      <h2 data-t class="color-gray d-inline inline-md" style="font-weight:200; display: inline-block; margin-left: -1%;">section_5.tittle.text_2</h2>
-    </div>
-    <div class="decorate-tittle decorate-lg bc-gray"></div>
-  </div>
-  <div class="row VisibleLayer" style="background-color: #f3f3f3;">
-    <div class="col-1"></div>
-    <div class="col-sm-12 col-lg-5 pb-5">
-      <form class="form-contact" id="form-team">
-        <div class="mt-5">
-          <input data-attr-t data-attr-t-interpolate type="text" class="name" name="name" placeholder-t="{{section_5.contact-form.name}}" required>
-        </div>
-        <div class="mt-5 w-100">
-          <div class="dropdown-select w-100" id="dropdown-select-team">
-            <div class="select-tc justify-content-between" style="display: flex">
-              <input class="input-select" data-attr-t data-attr-t-interpolate placeholder-t="{{section_5.contact-form.origin-extra.placeholder}}" disabled>
-              <img class="chevron-select" src="media/chevron-down.svg" alt="arrow">
-            </div>
-            <ul class="list-options-tc">
-              <li>
-                <div class="option-tc" data-option="organization" data-t>section_5.contact-form.origin-extra.options.organization</div>
-              </li>
-              <li>
-                <div class="option-tc" data-option="senior" data-t >section_5.contact-form.origin-extra.options.senior</div>
-              </li>
-              <li >
-                <div class="option-tc" data-option="junior" data-t>section_5.contact-form.origin-extra.options.junior</div>
-              </li>
-              <li>
-                <div class="option-tc" data-option="no-exp" data-t>section_5.contact-form.origin-extra.options.no-exp</div>
-              </li>
-              <li>
-                <div class="option-tc" data-option="other" data-t>section_5.contact-form.origin-extra.options.other</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-4">
-            <label data-t for="country-phone-team" class="form-label">section_5.contact-form.telephone.label</label>
-        </div>
-        <div class="row">
-          <div class="col-md-7 col-sm-12">
-            <div class="row">
-              <div class="col-3">
-                <span>+</span>
-                <input id="country-phone-team" data-attr-t data-attr-t-interpolate style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder-t="{{section_5.contact-form.telephone.country}}">
-              </div>
-              <div class="col-3">
-                <input data-attr-t data-attr-t-interpolate type="text" name="area-phone"  class="area-phone" placeholder-t="{{section_5.contact-form.telephone.area}}">
-              </div>
-              <div class="col-6">
-                <input data-attr-t data-attr-t-interpolate type="text"  name="number-phone" class="number-phone" placeholder-t="{{section_5.contact-form.telephone.number}}">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
-            <input data-attr-t data-attr-t-interpolate type="email" name="email" class="email" required placeholder-t="{{section_5.contact-form.email}}">
-          </div>
-        </div>
-        <div class="mb-4 mt-4">
-          <textarea data-attr-t data-attr-t-interpolate name="message" class="message" placeholder-t="{{section_5.contact-form.reason}}" rows="1" required></textarea>
-        </div>
-        <input class="typeContact" hidden value="Team">
-      </form>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-sm-12 col-lg-4 pb-5" style="background-color: #8080801a;">
-      <div class="row" style="justify-content: flex-end; text-align: right; padding: 5% 3% 0 0;">
-        <img class="mb-4 mt-3" style="width: 40%;" src="media/logo.png" alt="teamcubation">
-        <a class="color-red hover-red mb-0 navigate-organization" data-t>textLinks.organization</a>
-        <a class="color-green hover-green mb-0 navigate-senior" data-t>textLinks.senior</a>
-        <a class="color-orange hover-orange mb-3 navigate-junior" data-t>textLinks.junior</a>
-        <a class="mb-3 color-turquoise hover-turquoise" data-attr-t data-attr-t-interpolate target="_blank" href-t="{{footer.searches.link}}" data-t>footer.searches.text</a>
-        <div class="mb-4" style="height: 2px; background-color: #fff"></div>
-        <p class="mb-0">2022  © <span style="font-weight: bold;">Teamcubation_</span> </p>
-        <p data-t class="mb-3">footer.legal</p>
-      </div>
-    </div>
-    <div class="col-1"></div>
-  </div>
-  <div class="row bc-turquoise VisibleLayer" style="height: 25px"></div>
-</div> -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script type="module" src="index.js?v=13"></script>
-</body>
 
+</body>
 </html>

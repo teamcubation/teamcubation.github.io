@@ -107,7 +107,7 @@ window.addEventListener("hashchange", function (ev) {
 });
 
 $(".form-contact").append(
-  '<button type="submit" name="submit-contact" class="btn-tc submit-contact">' +
+  '<button type="submit" name="submit-contact" class="btn-tc submit-contact" style="float: right; width: 25%">' +
     dataByLang.formContact.btnSend +
     "<span class=_effect>_</span></button>"
 );
@@ -272,10 +272,10 @@ $(".select-tc").on("click", function () {
 
 $(".option-tc").hover(
   function () {
-    $(this).css("color", "red").css("font-weight", "600");
+    $(this).css("color", "red");
   },
   function () {
-    $(this).css("color", "gray").css("font-weight", "400");
+    $(this).css("color", "gray");
   }
 );
 
@@ -302,7 +302,7 @@ $(".option-tc").on("click", function () {
 
 window.addEventListener("click", function (e) {
   if (
-    !document.getElementById("dropdown-select-org").contains(e.target) &&
+    // !document.getElementById("dropdown-select-org").contains(e.target) &&
     !document.getElementById("dropdown-select-team").contains(e.target)
   ) {
     $(".list-options-tc").slideUp();
@@ -316,7 +316,10 @@ window.addEventListener("click", function (e) {
 });
 
 // test effect logo-card
-var card = document.getElementById("cardDuration");
-card.addEventListener("mouseover", function (e) {
-  document.getElementById("pathTest").setAttribute("stroke", "red");
-});
+// var card = document.getElementById("cardDuration");
+// card.addEventListener("mouseover", function (e) {
+//   document.getElementById("pathDurationOne").setAttribute("stroke", "#ff7c00");
+//   document.getElementById("pathDurationTwo").setAttribute("stroke", "#ff7c00");
+//   document.getElementById("pathDurationThree").setAttribute("stroke", "#ff7c00");
+//   document.getElementById("pathDurationFour").setAttribute("stroke", "#ff7c00");
+// });
