@@ -1,6 +1,7 @@
 html,body {
 	background-color: #F2EEEE;
 	font-family: 'Inter', sans-serif;
+	/* scroll-behavior: smooth; */
 }
 
 /* style elements */
@@ -300,15 +301,17 @@ ul{
 }
 
 #partners{
+	position: relative;
 	padding: 5% 5% 10% 5%;
 	background-color: #2B2A2A;
 }
 
 #team{
-	margin-top: -10%;
+	margin: -10% 0 0 -1%;
 	padding-bottom: 20%;
 	background-repeat: no-repeat;
     background-size: cover;
+	position: relative;
 }
 
 #contact{
@@ -570,6 +573,7 @@ a.btn-tc-lnk{
 	float: right;
 	max-width: 25%;
 }
+
 /* positioning */
 
 #bannerDecorationPlus{
@@ -714,6 +718,29 @@ a.btn-tc-lnk{
 #logoRed{
 	position: relative;
 	margin-bottom: -100%;
+}
+
+#plusRedTeamOne{
+	position: absolute;
+	top: 3%;
+	left:35%;
+	width: 10%;
+	filter: opacity(0.5);
+}
+
+#plusRedTeamTwo{
+	position: absolute;
+	top: 15%;
+	left:10%;
+	width: 10%;
+}
+
+#plusRedTeamThree{
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    width: 10%;
+    filter: opacity(0.2);
 }
 
 /* responsive  */
