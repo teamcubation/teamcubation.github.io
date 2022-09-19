@@ -288,18 +288,18 @@ ul{
 	background: linear-gradient(90deg, rgb(49, 49, 49) 0%, rgba(56,56,56,1) 35%, rgb(12, 12, 12) 100%);
 }
 
-#weDo{
+#what{
 	margin-top: -30%;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 25% 0% 10% 0%;
 }
 
-#howDo{
+#how{
 	background-color: #f0f0f0;
 }
 
-#partners{
+#clients{
 	padding: 5% 5% 10% 5%;
 	background-color: #2B2A2A;
 }
@@ -680,7 +680,7 @@ a.btn-tc-lnk{
 	right: 10%;
 }
 
-#howDo{
+#how{
 	position: relative;
     padding-top: 10%;
     z-index: 2;
@@ -823,14 +823,14 @@ a.btn-tc-lnk{
 
 
 @media only screen and (min-width: 901px) and (max-width: 1199px)   {
-	#weDo {
+	#what {
 		margin-top: -35%;
 		padding: 40% 0% 15% 0%;
 	}
 }
 
 @media only screen and (min-width: 801px) and (max-width: 900px)   {
-	#weDo {
+	#what {
 		margin-top: -37%;
 		padding: 40% 0% 15% 0%;
 	}
@@ -841,7 +841,7 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 701px) and (max-width: 800px)   {
-	#weDo {
+	#what {
 		margin-top: -45%;
 		padding: 40% 0% 15% 0%;
 	}
@@ -849,13 +849,13 @@ a.btn-tc-lnk{
 		margin-top: -20%;
 		padding: 10% 0 20% 0;	
 	}
-	#partners {
+	#clients {
 		padding: 5% 5% 20% 5%;
 	}
 }
 
 @media only screen and (min-width: 601px) and (max-width: 700px)   {
-	#weDo {
+	#what {
 		margin-top: -43%;
 		padding: 40% 0% 15% 0%;
 	}
@@ -863,13 +863,13 @@ a.btn-tc-lnk{
 		margin-top: -20%;
 		padding: 5% 0 20% 0;
 	}
-	#partners {
+	#clients {
 		padding: 5% 5% 20% 5%;
 	}
 }
 
 @media only screen and (min-width: 501px) and (max-width: 600px) {
-	#weDo {
+	#what {
 		margin-top: -50%;
 		padding: 40% 0% 15% 0%;
 	}
@@ -877,7 +877,7 @@ a.btn-tc-lnk{
 		margin-top: -42%;
 		padding: 15% 0 20% 0;	
 	}
-	#partners {
+	#clients {
 		padding: 5% 5% 35% 5%;
 	}
 	#devsJuniorsDivider{
@@ -886,7 +886,7 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 401px) and (max-width: 500px) {
-	#weDo {
+	#what {
 		margin-top: -52%;
 		padding: 50% 0% 15% 0%;
 	}
@@ -894,7 +894,7 @@ a.btn-tc-lnk{
 		margin-top: -50%;
 		padding: 15% 0 20% 0;	
 	}
-	#partners {
+	#clients {
 		padding: 5% 5% 35% 5%;
 	}
 	#devsJuniorsDivider{
@@ -903,7 +903,7 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 301px) and (max-width: 400px) {
-	#weDo {
+	#what {
 		margin-top: -60%;
 		padding: 60% 0% 15% 0%;
 	}
@@ -911,7 +911,7 @@ a.btn-tc-lnk{
 		margin-top: -55%;
 		padding: 20% 0 20% 0;	
 	}
-	#partners {
+	#clients {
 		padding: 5% 5% 40% 5%;
 	}
 	#devsJuniorsDivider{
@@ -921,7 +921,7 @@ a.btn-tc-lnk{
 
 
 @media only screen and (max-width: 300px) {
-	#weDo {
+	#what {
 		margin-top: -70%;
 		padding: 65% 0% 15% 0%;
 	}
@@ -929,7 +929,7 @@ a.btn-tc-lnk{
 		margin-top: -55%;
 		padding: 25% 0 20% 0;	
 	}
-	#partners {
+	#clients {
 		padding: 5% 5% 40% 5%;
 	}
 	#devsJuniorsDivider{
