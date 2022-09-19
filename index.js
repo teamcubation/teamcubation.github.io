@@ -315,6 +315,13 @@ window.addEventListener("click", function (e) {
   }
 });
 
+$(".ion-md-menu").on("click", function () {
+  $("#navBarMobile").toggle("slow");
+});
+
+$("a").on("click", function () {
+  $("#navBarMobile").toggle("slow");
+});
 // test effect logo-card
 // var card = document.getElementById("cardDuration");
 // card.addEventListener("mouseover", function (e) {

@@ -202,11 +202,15 @@ ul{
 	margin:0;
 }
 
-#navBar{
+nav{
 	position: sticky;
-	display: flex;
+	top: -1%;
 	z-index: 4;
-	top: 0;
+	width: 101%;
+}
+
+#navBar{
+	display: flex;
 	width: 100%;
 	padding: 15px 5%;
 	background-color: #f2eeeef7;
@@ -226,6 +230,29 @@ ul{
 	padding-bottom: 0.5%;
 	color: var(--color-dark);
 	font-family: 'Anek Bangla';
+}
+
+#navBar .btn-menu-mobile{
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#navBarMobile{
+	position: absolute;
+	width: 100%;
+	background-color: #f2eeeef7;
+	display: none;
+}
+
+.navigate-mobile{
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+}
+
+.navigate-mobile > a{
+	margin: 5px 0;
 }
 
 #weTrainLayer{
@@ -461,6 +488,11 @@ input, textarea, select{
 ion-icon {
 	font-size: 24px;
 	color: rgb(112, 112, 112);
+}
+
+.ion-md-menu{
+	font-size: 35px;
+	color: grey;
 }
 
 .ion-logo-linkedin{
@@ -783,11 +815,17 @@ a.btn-tc-lnk{
 	#logo{
 		width: calc(50% + 10vw);
 	}
+	#navBar{
+		justify-content: space-between;
+	}
 	#navBar .logo{
 		width: 30%;
 	}
 	#navBar .navigate{
 		display: none;
+	}
+	#navBar .btn-menu-mobile{
+		display: flex;
 	}
 	.flag{
 		width: 20px;
@@ -900,7 +938,7 @@ a.btn-tc-lnk{
 		padding: 40% 0% 15% 0%;
 	}
 	#team {
-		margin-top: -42%;
+		margin-top: -45%;
 		padding: 15% 0 20% 0;	
 	}
 	#clients {
