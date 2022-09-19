@@ -320,7 +320,8 @@ $(".ion-md-menu").on("click", function () {
 });
 
 $("a").on("click", function () {
-  $("#navBarMobile").toggle("slow");
+  $("#navBarMobile").css("display", "none");
+  // $("#navBarMobile").toggle("slow");
 });
 // test effect logo-card
 // var card = document.getElementById("cardDuration");
