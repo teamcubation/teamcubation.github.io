@@ -263,7 +263,7 @@ nav{
 	margin: 0% 5% 0 5%;
 }
 
-#howDoLayer{
+#howLayer{
 	margin: 0% 5% 0 5%;
 }
 
@@ -281,7 +281,7 @@ nav{
 	padding-top: 10%;
 }
 
-#devsSeniorsLayout{
+#devsSeniorsLayer{
 	position: relative;
 	margin: 0% 5% 0% 5%;
 	padding: 1% 0 5% 0;
@@ -333,7 +333,7 @@ nav{
 }
 
 #team{
-	margin: -10% 0 0 0%;
+	margin: -10% 0 0 -1%;
 	padding-bottom: 20%;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -358,6 +358,8 @@ nav{
 
 #devsSeniors{
 	background-color: #2A2A2A;
+    padding-top: 10%;
+    margin-top: -10%;
 }
 
 #footer{

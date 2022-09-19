@@ -38,12 +38,12 @@
       <img id="logo" src="media/logo.png" alt="Teamcubation">
     </div>
     <div class="navigate">
-      <a href="#what">¿Qué?</a>
-      <a href="#how">¿Cómo?</a>
-      <a href="#clients">Clientes</a>
-      <a href="#team">Equipo</a>
-      <a href="#devsJuniors">Devs Junior</a>
-      <a href="#devsSeniors">Devs con experiencia</a>
+      <a class="what" href="#what">¿Qué?</a>
+      <a class="how" href="#how">¿Cómo?</a>
+      <a class="clients" href="#clients">Clientes</a>
+      <a class="team" href="#team">Equipo</a>
+      <a class="devsJuniors" href="#devsJuniors">Devs Junior</a>
+      <a class="devsSeniors" href="#devsSeniors">Devs con experiencia</a>
       <!-- <div class="language-select">
         <div class="language-tittle">
           <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
@@ -65,12 +65,12 @@
   </div>
   <div id="navBarMobile">
     <div class="navigate-mobile">
-      <a href="#what">¿Qué?</a>
-      <a href="#how">¿Cómo?</a>
-      <a href="#clients">Clientes</a>
-      <a href="#team">Equipo</a>
-      <a href="#devsJuniors">Devs Junior</a>
-      <a href="#devsSeniors">Devs con experiencia</a>
+      <a class="what" href="#what">¿Qué?</a>
+      <a class="how" href="#how">¿Cómo?</a>
+      <a class="clients" href="#clients">Clientes</a>
+      <a class="team" href="#team">Equipo</a>
+      <a class="devsJuniors" href="#devsJuniors">Devs Junior</a>
+      <a class="devsSeniors" href="#devsSeniors">Devs con experiencia</a>
     </div>
   </div>
 </nav>
@@ -216,7 +216,7 @@
     </div>
   </section>
   <img id="weDoDivider" src="media/wave/weDoDivider.svg" alt>
-  
+  <div id="scrolltoHow"></div>
   <section id="how">
     <div id="howDoDecorationPlus">
       <img class="position-relative plus-default" width="40%" src="media/plus/default.svg" alt="plus_orange">
@@ -225,7 +225,7 @@
       <img class="position-relative plus-default" width="20%" src="media/plus/light-gray.svg" alt="plus_default">
       <img class="position-relative plus-default" width="40%" src="media/plus/default.svg" alt="plus_gray">
     </div>
-    <div id="howDoLayer">
+    <div id="howLayer">
       <h3 class="color-dark mb-5">¿CÓMO LO HACEMOS?</h3>
       <h4 class="color-dark me-1 d-inline">Un proceso en 3 etapas en búsqueda de la solución al problema del flujo de software developers</h4>
       <div class="grid-row mt-4 mb-5">
@@ -274,78 +274,79 @@
       </div>
     </div>
   </section>
-
+  
+  <div id="scrolltoTeam"></div>
   <section id="team" style="background-image:url('media/background/red.svg')">
     <img id="logoRed" width="100%" src="media/logo/red.svg" alt>
     <img id="plusRedTeamOne" src="media/plus/red.svg" alt="plus_red">
     <img id="plusRedTeamTwo" src="media/plus/red.svg" alt="plus_red">
     <img id="plusRedTeamThree" src="media/plus/red.svg" alt="plus_red">
     <div id="teamLayer">
-      <h2 class="color-white mb-5">EL EQUIPO</h2>
-      <h4 style="margin: 5% 0 8% 22%" class="color-white">Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañías siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos</h4>
-      <div class="grid-row">
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/mariano.png" alt>
-            <h5 class="member-name">Mariano Wechsler</h5>
-            <h5 class="member-role">CEO</h5>
-            <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+    <h2 class="color-white mb-5">EL EQUIPO</h2>
+    <h4 style="margin: 5% 0 8% 22%" class="color-white">Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañías siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos</h4>
+    <div class="grid-row">
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/mariano.png" alt>
+          <h5 class="member-name">Mariano Wechsler</h5>
+          <h5 class="member-role">CEO</h5>
+          <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/diego.png" alt>
-            <h5 class="member-name">Diego Jolodenco</h5>
-            <h5 class="member-role">COO</h5>
-            <a href="https://www.linkedin.com/in/diegojolodenco/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/diego.png" alt>
+          <h5 class="member-name">Diego Jolodenco</h5>
+          <h5 class="member-role">COO</h5>
+          <a href="https://www.linkedin.com/in/diegojolodenco/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/pina.png" alt>
-            <h5 class="member-name">Agustin Pina</h5>
-            <h5 class="member-role">Head of Training</h5>
-            <a href="https://www.linkedin.com/in/agustin-pina/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/pina.png" alt>
+          <h5 class="member-name">Agustin Pina</h5>
+          <h5 class="member-role">Head of Training</h5>
+          <a href="https://www.linkedin.com/in/agustin-pina/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/tapi.png" alt>
-            <h5 class="member-name">Jonathan Tapicer</h5>
-            <h5 class="member-role">CTO</h5>
-            <a href="https://www.linkedin.com/in/tapicer/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/tapi.png" alt>
+          <h5 class="member-name">Jonathan Tapicer</h5>
+          <h5 class="member-role">CTO</h5>
+          <a href="https://www.linkedin.com/in/tapicer/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/flor.png" alt>
-            <h5 class="member-name">Florencia Diaz</h5>
-            <h5 class="member-role">Head of People</h5>
-            <a href="https://www.linkedin.com/in/mariaflorenciadiaz/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/flor.png" alt>
+          <h5 class="member-name">Florencia Diaz</h5>
+          <h5 class="member-role">Head of People</h5>
+          <a href="https://www.linkedin.com/in/mariaflorenciadiaz/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/pablo.png" alt>
-            <h5 class="member-name">Pablo Rodriguez</h5>
-            <h5 class="member-role">CFO</h5>
-            <a href="https://www.linkedin.com/in/pablo-g-rodriguez/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/pablo.png" alt>
+          <h5 class="member-name">Pablo Rodriguez</h5>
+          <h5 class="member-role">CFO</h5>
+          <a href="https://www.linkedin.com/in/pablo-g-rodriguez/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
-        <div class="col-12 col-sm-5 col-md-3 text-center">
-          <div class="card-member">
-            <img class="img-member" src="media/team/eze.jpg" alt>
-            <h5 class="member-name">Ezequiel Ursztein</h5>
-            <h5 class="member-role">Head of Data & Analytics</h5>
-            <a href="https://www.linkedin.com/in/ezequiel-ursztein-b1b14094/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-          </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-3 text-center">
+        <div class="card-member">
+          <img class="img-member" src="media/team/eze.jpg" alt>
+          <h5 class="member-name">Ezequiel Ursztein</h5>
+          <h5 class="member-role">Head of Data & Analytics</h5>
+          <a href="https://www.linkedin.com/in/ezequiel-ursztein-b1b14094/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
       </div>
     </div>
-  </section>
+  </div></section>
 
   <img id="teamDivider" src="media/wave/white.svg" alt="divider">
-
+  
+  <div id="scrolltoContact"></div>
   <section id="contact">
     <div class="grid-row">
       <div class="col-xs-12 col-lg-6 color-gray-100 mt-5">
@@ -444,7 +445,7 @@
       </div>
     </div>
   </section>
-
+  <div id="scrollToJuniors"></div>
   <section id="devsJuniors" style="background-image: url('media/background/blue.svg')">
     <img id="logoBlue" src="media/logo/blue.svg" alt="TEAMCUBATION">
     <img id="devsJuniorsDivider" src="media/wave/devsJuniorsdivider.svg" alt="divider">
@@ -470,7 +471,7 @@
   </section>
 
   <section id="devsSeniors">
-    <div id="devsSeniorsLayout">
+    <div id="devsSeniorsLayer">
       <div class="grid-row my-5">
         <h3 class="color-white">DEVS CON EXPERIENCIA</h3>
       </div>
@@ -491,17 +492,17 @@
         <div class="grid-row">
           <div class="col-5 col-md-3">
             <div class="d-flex flex-column">
-              <a class="color-light-gray mb-0 navigate-organization" href="#what">¿Qué?</a>
-              <a class="color-light-gray mb-0 navigate-organization" href="#how">¿Cómo?</a>
-              <a class="color-light-gray mb-0 navigate-organization" href="#clients">Clientes</a>
-              <a class="color-light-gray mb-0 navigate-organization" href="#team">Equipo</a>
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">¿Qué?</a>
+              <a class="how color-light-gray mb-0 navigate-organization" href="#how">¿Cómo?</a>
+              <a class="clients color-light-gray mb-0 navigate-organization" href="#clients">Clientes</a>
+              <a class="team color-light-gray mb-0 navigate-organization" href="#team">Equipo</a>
             </div>
           </div>
           <div class="col-6 col-md-4">
             <div class="d-flex flex-column">
-              <a class="color-light-gray mb-0 navigate-organization" href="#contact">Contactanos</a>
-              <a class="color-light-gray mb-0 navigate-organization" href="#devsJuniors">Devs Junior</a>
-              <a class="color-light-gray mb-0 navigate-organization" href="#devsSeniors">Devs con experiencia</a>
+              <a class="contact color-light-gray mb-0 navigate-organization" href="#contact">Contactanos</a>
+              <a class="devsJuniors color-light-gray mb-0 navigate-organization" href="#devsJuniors">Devs Junior</a>
+              <a class="devsSeniors color-light-gray mb-0 navigate-organization" href="#devsSeniors">Devs con experiencia</a>
             </div>
           </div>
         </div>

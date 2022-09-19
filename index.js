@@ -70,41 +70,41 @@ const urlBuilder = (currentUrl) => {
 //     $("body").removeClass().addClass(classToAdd);
 // }
 
-if (initialLocation.includes("organization")) {
-  $("body").css("overflow-y", "scroll");
-  styledScroll("organization-scrollbar");
-  $("#organization").show();
-} else if (initialLocation.includes("senior")) {
-  $("body").css("overflow-y", "scroll");
-  styledScroll("senior-scrollbar");
-  $("#senior").show();
-} else if (initialLocation.includes("junior")) {
-  $("body").css("overflow-y", "scroll");
-  styledScroll("junior-scrollbar");
-  $("#junior").show();
-} else if (initialLocation.includes("/#team")) {
-  $("body").css("overflow-y", "scroll");
-  styledScroll("team-scrollbar");
-  $("#team").show();
-} else {
-  $("body").css("overflow-y", "scroll");
-  $("#home").show();
-}
+// if (initialLocation.includes("organization")) {
+//   $("body").css("overflow-y", "scroll");
+//   styledScroll("organization-scrollbar");
+//   $("#organization").show();
+// } else if (initialLocation.includes("senior")) {
+//   $("body").css("overflow-y", "scroll");
+//   styledScroll("senior-scrollbar");
+//   $("#senior").show();
+// } else if (initialLocation.includes("junior")) {
+//   $("body").css("overflow-y", "scroll");
+//   styledScroll("junior-scrollbar");
+//   $("#junior").show();
+// } else if (initialLocation.includes("/#team")) {
+//   $("body").css("overflow-y", "scroll");
+//   styledScroll("team-scrollbar");
+//   $("#team").show();
+// } else {
+//   $("body").css("overflow-y", "scroll");
+//   $("#home").show();
+// }
 
-window.addEventListener("hashchange", function (ev) {
-  if (ev.newURL === url || ev.oldURL.includes("/#")) {
-    window.history.replaceState("", "", `${url}`);
-    hideShowPage("home", urlBuilder(document.location.href));
-  } else if (ev.newURL.includes("organization")) {
-    hideShowPage("organization", url);
-  } else if (ev.newURL.includes("senior")) {
-    hideShowPage("senior", url);
-  } else if (ev.newURL.includes("junior")) {
-    hideShowPage("junior", url);
-  } else if (ev.newURL.includes("team")) {
-    hideShowPage("team", url);
-  }
-});
+// window.addEventListener("hashchange", function (ev) {
+//   if (ev.newURL === url || ev.oldURL.includes("/#")) {
+//     window.history.replaceState("", "", `${url}`);
+//     hideShowPage("home", urlBuilder(document.location.href));
+//   } else if (ev.newURL.includes("organization")) {
+//     hideShowPage("organization", url);
+//   } else if (ev.newURL.includes("senior")) {
+//     hideShowPage("senior", url);
+//   } else if (ev.newURL.includes("junior")) {
+//     hideShowPage("junior", url);
+//   } else if (ev.newURL.includes("team")) {
+//     hideShowPage("team", url);
+//   }
+// });
 
 $(".form-contact").append(
   '<button type="submit" name="submit-contact" class="btn-tc submit-contact" style="float: right; width: 25%">' +
@@ -321,8 +321,60 @@ $(".ion-md-menu").on("click", function () {
 
 $("a").on("click", function () {
   $("#navBarMobile").css("display", "none");
-  // $("#navBarMobile").toggle("slow");
 });
+
+$(".how").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#how`;
+  perfectScroll("scrolltoHow", 0);
+});
+
+$(".what").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#what`;
+  perfectScroll(`weDoLayer`, 0);
+});
+
+$(".clients").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#clients`;
+  perfectScroll(`clients`, 0);
+});
+
+$(".team").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#team`;
+  perfectScroll(`scrolltoTeam`, 50);
+});
+
+$(".devsJuniors").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#devsJuniors`;
+  perfectScroll(`scrollToJuniors`, 0);
+});
+
+$(".devsSeniors").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#devsSeniors`;
+  perfectScroll("devsSeniorsLayer", 0);
+});
+
+$(".contact").on("click", function (e) {
+  e.preventDefault();
+  location.href = `#contact`;
+  perfectScroll("scrolltoContact", 150);
+});
+
+
+const perfectScroll = (section, marginToAdd) => { 
+  const heigthNav = document.getElementById("navBar").clientHeight + 30 + marginToAdd;
+  const scrollToSection = document.getElementById(section).offsetTop;
+  const scrollTo = scrollToSection - heigthNav;
+  console.log(scrollToSection);
+  window.scrollTo({ top: scrollTo, behavior: "smooth" });
+
+};
+
 // test effect logo-card
 // var card = document.getElementById("cardDuration");
 // card.addEventListener("mouseover", function (e) {
