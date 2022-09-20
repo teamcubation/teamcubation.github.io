@@ -338,25 +338,25 @@ $(".what").on("click", function (e) {
 $(".clients").on("click", function (e) {
   e.preventDefault();
   location.href = `#clients`;
-  perfectScroll(`clients`, 0);
+  perfectScroll(`clients`, -40);
 });
 
 $(".team").on("click", function (e) {
   e.preventDefault();
   location.href = `#team`;
-  perfectScroll(`scrolltoTeam`, 50);
+  perfectScroll(`scrolltoTeam`, 100);
 });
 
 $(".devsJuniors").on("click", function (e) {
   e.preventDefault();
   location.href = `#devsJuniors`;
-  perfectScroll(`scrollToJuniors`, 0);
+  perfectScroll(`scrollToJuniors`, -80);
 });
 
 $(".devsSeniors").on("click", function (e) {
   e.preventDefault();
   location.href = `#devsSeniors`;
-  perfectScroll("devsSeniorsLayer", 0);
+  perfectScroll("devsSeniorsLayer", -30);
 });
 
 $(".contact").on("click", function (e) {
