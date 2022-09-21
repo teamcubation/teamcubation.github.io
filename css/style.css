@@ -1189,7 +1189,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	100%{transform: rotate(180deg);}
 }
 
-<<<<<<< HEAD
 /* scrollbar styled */
 
 ::-webkit-scrollbar {
@@ -1231,7 +1230,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .team-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #317287;
 }
-=======
+
 .ah-words-wrapper{
 	width: 100%!important;
 	padding-bottom: 0.25em;
@@ -1240,8 +1239,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .ah-words-wrapper h4{
 	white-space: break-spaces!important;
 }
-
->>>>>>> 9fef076301b35a9f007dd5c795114c9114d0c97a
 
 /* elements */
 
