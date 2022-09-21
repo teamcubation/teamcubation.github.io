@@ -361,7 +361,7 @@ window.addEventListener('mousemove', (e) => {
 $(".scrollToTop").on("click", function (e) {
   e.preventDefault();
   location.href = initialLocation;
-  window.scrollTo({ top: 100, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
