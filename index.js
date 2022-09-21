@@ -168,7 +168,7 @@ $(".form-contact").on("submit", function (ev) {
       success: (r) => {
         $(".alert").remove();
         $(".form-contact").prepend(
-          '<div class="alert alert-success mt-5" role="alert"</div>'
+          '<div class="alert alert-success mt-5" role="alert"></div>'
         );
         $(".alert").text(dataByLang.formContact.submitResponse.success);
         $(".alert")
@@ -186,7 +186,7 @@ $(".form-contact").on("submit", function (ev) {
       error: (r) => {
         $(".alert").remove();
         $(".form-contact").prepend(
-          '<div class="alert alert-danger mt-5" role="alert"</div>'
+          '<div class="alert alert-danger mt-5" role="alert"></div>'
         );
         $(".alert").text(dataByLang.formContact.submitResponse.error);
         $(".alert")
