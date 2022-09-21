@@ -15,7 +15,8 @@ $(document).ready(
   }),
   document.documentElement.lang === "es"
     ? (json_path = "./src/locales/es.json")
-    : (json_path = "./src/locales/en.json")
+    : (json_path = "./src/locales/en.json"),
+  $('.top-quotes').animatedHeadline({ animationType: "push" })
 );
 
 const dataByLang = {
