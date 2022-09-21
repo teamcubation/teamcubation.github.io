@@ -249,12 +249,11 @@
     "centralText": "DEVS JUNIORS",
     "subtitle": {
       "grayText":{
-        "lineOne": "Somos una máquina del tiempo y hacemos que",
-        "lineTwo": " tengas la experiencia de 2 años en 6 meses."
+        "lineOne": "Somos una máquina del tiempo y hacemos que tengas la experiencia de 2 años en 6 meses."
       },
       "standardText":{
         "lineOne": "La máquina del tiempo existe.",
-        "lineTwo": " Hola, Somos Teamcubation."
+        "lineTwo": "Hola, Somos Teamcubation."
       }
     },
     "text": "Teamcubation_ trabaja para empresas, las empresas contratan a los juniors y muchas veces nos piden ayuda para encontrarlos. Asi que no lo dudes! entré a este link que te dejamos acá y dejanos tus datos para que cuando nos soliciten las empresas perfiles podamos pasar tus datos",
@@ -264,8 +263,7 @@
     "centralText": "DEVS CON EXPERIENCIA",
     "subtitle": {
       "blueText":{
-        "lineOne": "Si ves más allá del software, más allá del framework",
-        "lineTwo": "y entendés que la clave está en las personas, sumate a Teamcubation: "
+        "lineOne": "Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: "
       },
       "standardText":{
         "lineOne": "aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."

@@ -349,19 +349,19 @@ window.addEventListener('scroll', (e) => {
 
 // effects - mouseevent
 
-window.addEventListener('mousemove', (e) => {
-  const currentPositionScroll = window.scrollY;
-  if(currentPositionScroll > 500){
-    heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
-  };
-});
+// window.addEventListener('mousemove', (e) => {
+//   const currentPositionScroll = window.scrollY;
+//   if(currentPositionScroll > 500){
+//     heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
+//   };
+// });
 
 // navigation - scroll
 
 $(".scrollToTop").on("click", function (e) {
   e.preventDefault();
   location.href = initialLocation;
-  window.scrollTo({ top: 100, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
