@@ -134,7 +134,6 @@ $(".form-contact").on("submit", function (ev) {
   if (!data_organization) {
     data_organization = undefined;
   }
-  // const data_origin = $(`#${currentForm} .typeContact`).val();
   let data_origin_extra = $(`#${currentForm} .input-select`).data(
     "value-selected"
   );
@@ -162,7 +161,6 @@ $(".form-contact").on("submit", function (ev) {
         organization: data_organization,
         phone_number: data_number,
         email: data_email,
-        origin: data_origin,
         origin_extra: data_origin_extra,
         lang: lang,
       }),

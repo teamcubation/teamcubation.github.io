@@ -401,6 +401,7 @@ nav{
 
 #logo{
 	width: calc(40% + 5vw);
+	cursor: pointer;
 }
 
 .navigate-home{
