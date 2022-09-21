@@ -1,7 +1,6 @@
 html,body {
 	background-color: #F2EEEE;
 	font-family: 'Inter', sans-serif;
-	/* scroll-behavior: smooth; */
 }
 
 /* style elements */
@@ -204,9 +203,11 @@ ul{
 
 nav{
 	position: sticky;
-	top: -1%;
+	top: 0%;
 	z-index: 4;
 	width: 100%;
+	opacity: 1;
+	transition: all 1s;
 }
 
 #navBar{
@@ -224,7 +225,7 @@ nav{
 
 #navBar .navigate{
 	display: flex;
-	width: 70%;
+	width: 80%;
 	justify-content: space-evenly;
 	align-items: end;
 	padding-bottom: 0.5%;
@@ -253,6 +254,16 @@ nav{
 
 .navigate-mobile > a{
 	margin: 5px 0;
+}
+
+.hidden-nav{
+	opacity: 0;
+	transition: all 1s;
+}
+
+.show-nav{
+	opacity: 1!important;
+	transition: all 2s;
 }
 
 #weTrainLayer{
@@ -371,8 +382,24 @@ nav{
 
 /* components */
 
+#backToTop{
+	position: sticky;
+    top: 90%;
+    left: 96%;
+    z-index: 4;
+    width: 32px;
+    transform: rotate(99deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 2s;
+}
+
 #logo{
 	width: calc(40% + 5vw);
+}
+
+.navigate-home{
+	cursor: pointer;
 }
 
 .card{
@@ -602,6 +629,7 @@ a.btn-tc-lnk{
 	z-index: 2;
 	width: 100%
 }
+
 #devsSeniorsButton{
 	float: right;
 	max-width: 25%;
@@ -812,7 +840,11 @@ a.btn-tc-lnk{
 		width: 30vw;
 	} */
 }
-
+@media only screen and (max-width: 1100px) {
+	#backToTop{
+		display: none;
+	}
+}
 @media only screen and (max-width: 768px) {
 	#logo{
 		width: calc(50% + 10vw);
@@ -880,6 +912,30 @@ a.btn-tc-lnk{
 	}
 	#weDoDivider{
 		margin-top: -30%;
+	}
+	#teamLayer .grid-row{
+		justify-content: center;
+	}
+	#plusRedTeamOne {
+		position: absolute;
+		top: 5%;
+		left: 5%;
+		width: 30%;
+		filter: opacity(0.3);
+	}
+	#plusRedTeamTwo {
+		position: absolute;
+		top: 12%;
+		left: 64%;
+		width: 32%;
+		filter: opacity(0.3);
+	}
+	#plusRedTeamThree {
+		position: absolute;
+		top: 24%;
+		left: 7%;
+		width: 30%;
+		filter: opacity(0.3);
 	}
 	#devsSeniorsButton{
 		float: none;
@@ -1073,6 +1129,10 @@ a:link, a:visited, a:active {
 	color: #0e76a8;
 }
 
+#backToTop:hover{
+    filter: drop-shadow(1px 1px 5px #ff7300);
+}
+
 a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	color: #fff;
 	text-decoration: none;
@@ -1120,6 +1180,47 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	100%{transform: rotate(180deg);}
 }
 
+/* scrollbar styled */
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background:transparent;
+} 
+
+.organization-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #ff1322;
+}
+  
+.organization-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #be0a16;
+}
+
+.senior-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #046b5b;
+}
+  
+.senior-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: rgb(44, 194, 6);
+}
+  
+.default-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #a3a3a3;
+	border-radius: 2px;
+}
+  
+.default-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #ff3232;
+}
+
+.team-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #317287;
+}
+  
+.team-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #317287;
+}
 
 /* elements */
 

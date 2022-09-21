@@ -133,7 +133,7 @@ $(".form-contact").on("submit", function (ev) {
   if (!data_organization) {
     data_organization = undefined;
   }
-  const data_origin = $(`#${currentForm} .typeContact`).val();
+  // const data_origin = $(`#${currentForm} .typeContact`).val();
   let data_origin_extra = $(`#${currentForm} .input-select`).data(
     "value-selected"
   );
@@ -323,6 +323,47 @@ $("a").on("click", function () {
   $("#navBarMobile").css("display", "none");
 });
 
+// effects - scroll
+const heigthNav = document.getElementById("navBar").clientHeight
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', (e) => {
+  const currentPositionScroll = window.scrollY;
+  if(currentPositionScroll > 600){
+    $('#logo').addClass('navigate-home');
+    $('#backToTop').addClass('show-nav');
+  }
+  else{
+    $('#logo').removeClass('navigate-home');
+    $('#backToTop').removeClass('show-nav');
+  }
+  if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600){
+    $('nav').addClass('hidden-nav');
+  } 
+  else {
+    $('nav').removeClass('hidden-nav');
+  }
+  lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
+});
+
+// effects - mouseevent
+
+window.addEventListener('mousemove', (e) => {
+  const currentPositionScroll = window.scrollY;
+  if(currentPositionScroll > 500){
+    heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
+  };
+});
+
+// navigation - scroll
+
+$(".scrollToTop").on("click", function (e) {
+  e.preventDefault();
+  location.href = initialLocation;
+  window.scrollTo({ top: 100, behavior: "smooth" });
+});
+
+
 $(".how").on("click", function (e) {
   e.preventDefault();
   location.href = `#how`;
@@ -367,12 +408,10 @@ $(".contact").on("click", function (e) {
 
 
 const perfectScroll = (section, marginToAdd) => { 
-  const heigthNav = document.getElementById("navBar").clientHeight + 30 + marginToAdd;
+  const distanceCalculated = heigthNav + 30 + marginToAdd;
   const scrollToSection = document.getElementById(section).offsetTop;
-  const scrollTo = scrollToSection - heigthNav;
-  console.log(scrollToSection);
+  const scrollTo = scrollToSection - distanceCalculated;
   window.scrollTo({ top: scrollTo, behavior: "smooth" });
-
 };
 
 // test effect logo-card
