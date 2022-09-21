@@ -50,6 +50,11 @@ h4{
 	font-family: 'Anek Bangla';
 }
 
+h4.down{
+	font-size: calc(1.5vw + 0.5em);
+	font-style: italic;
+}
+
 h5{
 	font-size: calc(1vw + 1em);
 	font-weight: 100;
@@ -339,7 +344,7 @@ nav{
 }
 
 #clients{
-	padding: 5% 5% 10% 5%;
+	padding: 3% 5% 10% 5%;
 	background-color: #2B2A2A;
 }
 
@@ -640,6 +645,7 @@ a.btn-tc-lnk{
 #bannerDecorationPlus{
 	display: flex;
 	justify-content: right;
+	margin: -10% 0;
 }
 
 #bannerDecorationPlus :nth-child(1){
@@ -848,6 +854,9 @@ a.btn-tc-lnk{
 @media only screen and (max-width: 768px) {
 	#logo{
 		width: calc(50% + 10vw);
+	}
+	#bannerDecorationPlus{
+		margin-bottom: 0;
 	}
 	#navBar{
 		justify-content: space-between;
@@ -1180,6 +1189,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	100%{transform: rotate(180deg);}
 }
 
+<<<<<<< HEAD
 /* scrollbar styled */
 
 ::-webkit-scrollbar {
@@ -1221,6 +1231,17 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .team-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #317287;
 }
+=======
+.ah-words-wrapper{
+	width: 100%!important;
+	padding-bottom: 0.25em;
+}
+
+.ah-words-wrapper h4{
+	white-space: break-spaces!important;
+}
+
+>>>>>>> 9fef076301b35a9f007dd5c795114c9114d0c97a
 
 /* elements */
 
