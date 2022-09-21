@@ -330,31 +330,35 @@ let lastScrollTop = 0;
 let isNavigate = false;  
 
 window.addEventListener('scroll', (e) => {
-  const currentPositionScroll = window.scrollY;
-  if(currentPositionScroll > 600){
-    $('#logo').addClass('navigate-home');
-    $('#backToTop').addClass('show-nav');
+  if(screen.width > 768){
+    const currentPositionScroll = window.scrollY;
+    if(currentPositionScroll > 600){
+      $('#logo').addClass('navigate-home');
+      $('#backToTop').addClass('show-nav');
+    }
+    else{
+      $('#logo').removeClass('navigate-home');
+      $('#backToTop').removeClass('show-nav');
+    }
+    if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600 && !isNavigate){
+      $('nav').addClass('hidden-nav');
+    } 
+    else {
+      $('nav').removeClass('hidden-nav');
+    }
+    lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
   }
-  else{
-    $('#logo').removeClass('navigate-home');
-    $('#backToTop').removeClass('show-nav');
-  }
-  if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600 && !isNavigate){
-    $('nav').addClass('hidden-nav');
-  } 
-  else {
-    $('nav').removeClass('hidden-nav');
-  }
-  lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
 });
 
 // effects - mouseevent
 
 window.addEventListener('mousemove', (e) => {
-  const currentPositionScroll = window.scrollY;
-  if(currentPositionScroll > 500){
-    heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
-  };
+  if(screen.width > 768){
+    const currentPositionScroll = window.scrollY;
+    if(currentPositionScroll > 500){
+      heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
+    };
+  }
 });
 
 // navigation - scroll
