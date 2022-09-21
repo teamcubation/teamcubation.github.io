@@ -322,9 +322,12 @@ $("a").on("click", function () {
   $("#navBarMobile").css("display", "none");
 });
 
+
 // effects - scroll
-const heigthNav = document.getElementById("navBar").clientHeight
+
+const heigthNav = document.getElementById("navBar").clientHeight;
 let lastScrollTop = 0;
+let isNavigate = false;  
 
 window.addEventListener('scroll', (e) => {
   const currentPositionScroll = window.scrollY;
@@ -336,7 +339,7 @@ window.addEventListener('scroll', (e) => {
     $('#logo').removeClass('navigate-home');
     $('#backToTop').removeClass('show-nav');
   }
-  if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600){
+  if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600 && !isNavigate){
     $('nav').addClass('hidden-nav');
   } 
   else {
@@ -347,12 +350,12 @@ window.addEventListener('scroll', (e) => {
 
 // effects - mouseevent
 
-// window.addEventListener('mousemove', (e) => {
-//   const currentPositionScroll = window.scrollY;
-//   if(currentPositionScroll > 500){
-//     heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
-//   };
-// });
+window.addEventListener('mousemove', (e) => {
+  const currentPositionScroll = window.scrollY;
+  if(currentPositionScroll > 500){
+    heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
+  };
+});
 
 // navigation - scroll
 
@@ -365,6 +368,7 @@ $(".scrollToTop").on("click", function (e) {
 
 $(".how").on("click", function (e) {
   e.preventDefault();
+  console.log(e)
   location.href = `#how`;
   perfectScroll("scrolltoHow", 0);
 });
@@ -410,8 +414,24 @@ const perfectScroll = (section, marginToAdd) => {
   const distanceCalculated = heigthNav + 30 + marginToAdd;
   const scrollToSection = document.getElementById(section).offsetTop;
   const scrollTo = scrollToSection - distanceCalculated;
+  isNavigate = true;
   window.scrollTo({ top: scrollTo, behavior: "smooth" });
 };
+
+// determina si hay scroll activo
+
+const  noScroll = (callback, refresh = 100) => {
+  if (!callback || typeof callback !== 'function') return;
+  let isScrolling;
+  window.addEventListener('scroll', function (event) {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(callback, refresh);
+  }, false);
+}
+
+noScroll(function () {
+  isNavigate = false;
+});
 
 // test effect logo-card
 // var card = document.getElementById("cardDuration");
@@ -421,3 +441,4 @@ const perfectScroll = (section, marginToAdd) => {
 //   document.getElementById("pathDurationThree").setAttribute("stroke", "#ff7c00");
 //   document.getElementById("pathDurationFour").setAttribute("stroke", "#ff7c00");
 // });
+
