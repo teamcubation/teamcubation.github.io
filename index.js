@@ -63,65 +63,22 @@ const dataByLang = {
   },
 };
 
-const urlBuilder = (currentUrl) => {
-  return !currentUrl.includes("/en/") ? url : `${url}/en/`;
-};
+// const urlBuilder = (currentUrl) => {
+//   return !currentUrl.includes("/en/") ? url : `${url}/en/`;
+// };
 
-// const styledScroll = (classToAdd) => {
-//     $("body").removeClass().addClass(classToAdd);
-// }
-
-// if (initialLocation.includes("organization")) {
-//   $("body").css("overflow-y", "scroll");
-//   styledScroll("organization-scrollbar");
-//   $("#organization").show();
-// } else if (initialLocation.includes("senior")) {
-//   $("body").css("overflow-y", "scroll");
-//   styledScroll("senior-scrollbar");
-//   $("#senior").show();
-// } else if (initialLocation.includes("junior")) {
-//   $("body").css("overflow-y", "scroll");
-//   styledScroll("junior-scrollbar");
-//   $("#junior").show();
-// } else if (initialLocation.includes("/#team")) {
-//   $("body").css("overflow-y", "scroll");
-//   styledScroll("team-scrollbar");
-//   $("#team").show();
-// } else {
-//   $("body").css("overflow-y", "scroll");
-//   $("#home").show();
-// }
-
-// window.addEventListener("hashchange", function (ev) {
-//   if (ev.newURL === url || ev.oldURL.includes("/#")) {
-//     window.history.replaceState("", "", `${url}`);
-//     hideShowPage("home", urlBuilder(document.location.href));
-//   } else if (ev.newURL.includes("organization")) {
-//     hideShowPage("organization", url);
-//   } else if (ev.newURL.includes("senior")) {
-//     hideShowPage("senior", url);
-//   } else if (ev.newURL.includes("junior")) {
-//     hideShowPage("junior", url);
-//   } else if (ev.newURL.includes("team")) {
-//     hideShowPage("team", url);
-//   }
-// });
 
 $(".form-contact").append(
   '<button type="submit" name="submit-contact" class="btn-tc submit-contact" style="float: right; width: 25%">' +
-    dataByLang.formContact.btnSend +
-    "<span class=_effect>_</span></button>"
+    dataByLang.formContact.btnSend + "<span class=_effect>_</span></button>"
 );
 $(".form-contact").on("submit", function (ev) {
   ev.preventDefault();
-  let data_origin_extra_error_message =
-    dataByLang.formContact.validation.noOptionSelected;
+  let data_origin_extra_error_message = dataByLang.formContact.validation.noOptionSelected;
   const currentForm = $(this).attr("id");
   const btn = $(this).find(".submit-contact");
   const data_name = $(`#${currentForm} .name`).val();
-  let data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(
-    `#${currentForm} .area-phone`
-  ).val()} ${$(`#${currentForm} .number-phone`).val()}`;
+  let data_number = `+${$(`#${currentForm} .country-phone`).val()} ${$(`#${currentForm} .area-phone`).val()} ${$(`#${currentForm} .number-phone`).val()}`;
   if (data_number.trim() === "+") {
     data_number = undefined;
   }
@@ -146,10 +103,7 @@ $(".form-contact").on("submit", function (ev) {
       : (data_origin_extra = `${data_origin_extra}: ${inputSelectText}`);
   }
   if (data_origin_extra) {
-    $(".select-tc").css(
-      "border-bottom",
-      "2px solid rgba(128, 128, 128, 0.507)"
-    );
+    $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
     btn.text(dataByLang.formContact.btnSending);
     $.ajax({
       url: "https://api.prod.tq.teamcubation.com/contact",
@@ -258,6 +212,8 @@ $(".language-select").on("click", function () {
   $(`.lenguage-options`).toggle("slow");
 });
 
+// input select //
+
 $(".select-tc").on("click", function () {
   if ($(".option-tc").is(":visible")) {
     $(".list-options-tc").slideUp();
@@ -271,10 +227,10 @@ $(".select-tc").on("click", function () {
 
 $(".option-tc").hover(
   function () {
-    $(this).css("color", "red");
+    $(this).addClass("option-hover");
   },
   function () {
-    $(this).css("color", "gray");
+    $(this).removeClass("option-hover");
   }
 );
 
@@ -284,16 +240,28 @@ $(".option-tc").on("click", function () {
   const textOption = optionSelected.text();
   $(".text-error").remove();
   if (valueOption === "other") {
+    $('.form-message').css('display', 'none');
+    $("#formInformation").css('visibility', 'visible');
+    $(".submit-contact").css('visibility', 'visible');
     $(".input-select").data("value-selected", valueOption);
-    $(".input-select")
-      .prop("disabled", false)
-      .focus()
-      .val("")
+    $(".input-select").prop("disabled", false).focus().val("")
       .attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
-  } else {
+  } 
+  else if (valueOption === "organization") {
+    $('.form-message').css('display', 'none');
+    $("#formInformation").css('visibility', 'visible');
+    $(".submit-contact").css('visibility', 'visible');
     $(".input-select").data("value-selected", valueOption);
     $(".input-select").val(textOption);
     $(".input-select").prop("disabled", true);
+  } 
+  else {
+    $("#formInformation").css('visibility', 'hidden');
+    $(".submit-contact").css('visibility', 'hidden');
+    $('.form-message').css('display', 'none');
+    valueOption === "senior" && $("#seniorsMessage").css('display', 'block');
+    valueOption === "junior" && $("#juniorsMessage").css('display', 'block');
+    valueOption === "no-exp" && $('#noCodersMessage').css('display', 'block');
   }
   $(".list-options-tc").slideUp();
   $(".chevron-select").removeClass("chevron-effect");
@@ -301,8 +269,7 @@ $(".option-tc").on("click", function () {
 
 window.addEventListener("click", function (e) {
   if (
-    // !document.getElementById("dropdown-select-org").contains(e.target) &&
-    !document.getElementById("dropdown-select-team").contains(e.target)
+    !document.getElementById("dropdown-select").contains(e.target)
   ) {
     $(".list-options-tc").slideUp();
     $(".chevron-select").removeClass("chevron-effect");
@@ -313,6 +280,8 @@ window.addEventListener("click", function (e) {
     if ($(".input-select").val() !== "") $(".text-error").remove();
   }
 });
+
+// mobile navbar 
 
 $(".ion-md-menu").on("click", function () {
   $("#navBarMobile").toggle("slow");
@@ -374,13 +343,13 @@ $(".how").on("click", function (e) {
   e.preventDefault();
   console.log(e)
   location.href = `#how`;
-  perfectScroll("scrolltoHow", 0);
+  perfectScroll("scrolltoHow", screen.width > 768 ? 150 : 10);
 });
 
 $(".what").on("click", function (e) {
   e.preventDefault();
   location.href = `#what`;
-  perfectScroll(`weDoLayer`, 0);
+  perfectScroll(`weDoLayer`, screen.width > 768 ? 100 : -10);
 });
 
 $(".clients").on("click", function (e) {
@@ -410,7 +379,7 @@ $(".devsSeniors").on("click", function (e) {
 $(".contact").on("click", function (e) {
   e.preventDefault();
   location.href = `#contact`;
-  perfectScroll("scrolltoContact", 150);
+  perfectScroll("contact", 45);
 });
 
 
@@ -437,6 +406,20 @@ noScroll(function () {
   isNavigate = false;
 });
 
+AOS.init({
+  once: true,
+  duration: 1500,
+  easing: 'ease'
+});
+
+
+//plus parallax effect
+let parallaxSceneOne = document.getElementById('parallaxOne');
+let parallaxSceneThree = document.getElementById('parallaxThree');
+let parallaxInstanceOne = new Parallax(parallaxSceneOne);
+let parallaxInstanceThree = new Parallax(parallaxSceneThree);
+
+
 // test effect logo-card
 // var card = document.getElementById("cardDuration");
 // card.addEventListener("mouseover", function (e) {
@@ -446,3 +429,26 @@ noScroll(function () {
 //   document.getElementById("pathDurationFour").setAttribute("stroke", "#ff7c00");
 // });
 
+$(function(){
+  var texto = "CEO ";
+  writer("ceoEffect", texto, 150, 0);
+ });
+ 
+const writer = (contenedor,texto,intervalo,n) => {
+  var i=0,
+   timer = setInterval(function() {
+    if ( i<texto.length ) {
+      $("#"+contenedor).html( texto.substr(0,i++) + '<span id="underscore">_</span>');
+      $("#underscore").addClass('_effect_style'); 
+    } 
+    else {
+      $("#underscore").addClass('_effect')
+      clearInterval(timer);
+      if ( --n!=0 ) {
+        setTimeout(function() {
+          writer(contenedor,texto,intervalo,n);
+        },2000);
+      }
+    }
+  },intervalo);
+};

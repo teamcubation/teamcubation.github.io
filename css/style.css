@@ -1,5 +1,5 @@
 html,body {
-	background-color: #F2EEEE;
+	background-color: #fff;
 	font-family: 'Inter', sans-serif;
 }
 
@@ -22,14 +22,14 @@ html,body {
 }
 
 h1{
-	font-size: calc(6.8vw + 0.4em);
+	font-size:calc(6.5vw + 0.5em);
 	margin-bottom: 0;
 	line-height: 1em;
 	font-weight: 800;
 }
 
 h2{
-	font-size: calc(4.5vw + 0.4em);
+	font-size:calc(4.5vw + 0.5em);
 	margin-bottom: 0;
 	line-height: 1em;
 	font-weight: 800;
@@ -43,9 +43,9 @@ h3{
 }
 
 h4{
-	font-size: calc(1.5vw + 1em);
+	font-size: calc(2vw + 0.8em);
 	margin-bottom: 0;
-	line-height: 1.1em;
+	line-height: 1em;
 	font-weight: 200;
 	font-family: 'Anek Bangla';
 }
@@ -70,7 +70,7 @@ h6{
 
 .subTitle{
 	font-family: 'Anek Bangla';
-	font-size: calc(4vw + 0.2em);
+	font-size: calc(3vw + 0.6em);
 	font-weight: 300;
 }
 
@@ -86,7 +86,7 @@ a{
 }
 
 .linkPostulations{
-	font-size: calc(1vw + 0.8em);
+	font-size: calc(0.5vw + 1em);
 	font-weight: 100;
 	line-height:1.3em;
 	color: var(--color-gray-100);
@@ -192,6 +192,11 @@ ul{
 .gradientBlackGray{
 	background: linear-gradient(0deg, rgb(176 176 176 / 76%) 0%, rgb(0 0 0 / 97%) 95%);
 }
+	#banner_img{
+	position: absolute;
+	margin-top: -35%;
+	width: 100%;
+}
 
 /* components layouts */
 
@@ -271,6 +276,13 @@ nav{
 	transition: all 2s;
 }
 
+#bannerLayer{
+	padding-top: 1%;
+	padding-left: 20%;
+	position: relative;
+	z-index: 2;
+}
+
 #weTrainLayer{
 	margin: -45% 0 0 20%;
 }
@@ -322,22 +334,21 @@ nav{
 /* sections */
 
 #banner{
-	padding: 0 5%;
+	padding: 0%;
 }
 
 #residence{
-    margin-top: -10%;
-    text-align: right;
-    padding: 35% 10% 30% 5%;
+    margin-top: -15%;
+    padding: 40% 10% 30% 5%;
+	margin-bottom: 500px;
 	background: linear-gradient(90deg, rgb(49, 49, 49) 0%, rgba(56,56,56,1) 35%, rgb(12, 12, 12) 100%);
 }
 
 #what{
-	margin-top: -30%;
+margin-top: -50%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 25% 0% 10% 0%;
-}
+    padding: 55% 0% 10% 0%;}
 
 #how{
 	background-color: #f0f0f0;
@@ -361,7 +372,7 @@ nav{
 	position: relative;
 	z-index: 2;
 	margin-top: -15%;
-	padding: 5% 5% 3% 5%;
+	padding: 1% 5% 3% 5%;
 }
 
 #devsJuniors{
@@ -425,6 +436,12 @@ nav{
 	color: #fff;
 }
 
+#ceoEffect{
+	font-size: calc(0.4vw + 1.2em);
+	line-height: 1;
+	color: #fff;
+}
+
 .member-role{
 	font-size: calc(0.4vw + 1.2em);
 	line-height: 1;
@@ -474,27 +491,42 @@ input, textarea, select{
     border-bottom: 2px solid rgba(128, 128, 128, 0.507);
     width: 100%;
 	outline: none;
-	font-size: calc(0.5em + 1vw);
+	font-size: calc(0.5em + 0.8vw);
 }
 
 .select-tc{
+	display: flex;
+	justify-content: space-between;
     border-bottom: 2px solid rgba(128, 128, 128, 0.507);
     width: 100%;
 	cursor: pointer;
+	position: relative;
+	z-index: 3;
 }
 
 .list-options-tc{
 	display: none;
+	position: absolute;
+	z-index: 4;
 	background-color: var(--color-light-200);
 	padding-left: 0;
 	width: 100%;
 	cursor: pointer;
+	background-color: #ffffff;
+	padding: 10px 10px;
+	box-shadow: 0px 5px 5px 1px rgb(218, 218, 218);
+	border-radius: 10px;
 }
 
 .option-tc{
-	border-bottom: 1px solid rgba(182, 182, 182, 0.342);
-	padding: 5px 0px;
-	font-size: calc(0.8em + 0.7vw);
+	border: 1px solid rgba(196, 196, 196, 0.342);
+	border-radius: 10px;
+	margin: 10px 5px;
+	padding: 10px 15px;
+	font-size: calc(0.7em + 0.4vw);
+	line-height: 1.1em;
+	background-color: white;
+	transition: 1s;
 }
 
 .input-select{
@@ -507,6 +539,19 @@ input, textarea, select{
 .chevron-select{
 	width: 30px;
 	height: 30px;
+}
+
+.form-message{
+	position: absolute;
+    display: none;
+    transition: 1s;
+    width: 100%;
+    border-left: 5px solid red;
+    background-color: white;
+    padding: 25px;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px #d1d1d14a;
 }
 
 .btn-tc{
@@ -602,7 +647,7 @@ a.btn-tc-lnk{
 #logoBlue{
 	width: 100%;
 	position: absolute; 
-	top: -80%; 
+	top: -50%; 
 	left: 0;
 	filter:  brightness(0.5) opacity(0.8);
 }
@@ -644,7 +689,7 @@ a.btn-tc-lnk{
 
 /* positioning */
 
-#bannerDecorationPlus{
+/* #bannerDecorationPlus{
 	display: flex;
 	justify-content: right;
 	margin: -10% 0;
@@ -676,7 +721,7 @@ a.btn-tc-lnk{
 	width:20%;
     margin: 0 0 -25% 0%;
 	z-index: 3;
-}
+} */
 
 #weTrain{
 	margin-top: -18%;
@@ -702,7 +747,7 @@ a.btn-tc-lnk{
 #logoOrange{
 	width: 100%;
 	position: absolute;
-	margin-top: -40%;
+	margin-top: -35%;
 	filter: opacity(0.3) brightness(0.8);
 }
 
@@ -731,7 +776,7 @@ a.btn-tc-lnk{
 	position: absolute;
     top: 1%;
     right: 10%;
-    width: 25%;
+    width: 20%;
     height: 30%;
 }
 
@@ -739,7 +784,7 @@ a.btn-tc-lnk{
 	position: absolute;
     top: 1%;
     right: 10%;
-    width: 25%;
+    width: 20%;
     height: 30%;
 }
 
@@ -755,12 +800,12 @@ a.btn-tc-lnk{
 
 #how{
 	position: relative;
-    padding-top: 10%;
+    padding-top: 5%;
     z-index: 2;
     margin-top: -10%;
 }
 
-#howDoDecorationPlus{
+/* #howDoDecorationPlus{
 	position: absolute;
     right: 0%;
     top: 0%;
@@ -782,7 +827,7 @@ a.btn-tc-lnk{
 
 #howDoDecorationPlus :nth-child(5){
 	margin: 0 0 -27% -17%;
-}
+} */
 
 #logoRed{
 	position: relative;
@@ -849,17 +894,6 @@ a.btn-tc-lnk{
 	} */
 }
 @media only screen and (max-width: 1100px) {
-	#backToTop{
-		display: none;
-	}
-}
-@media only screen and (max-width: 768px) {
-	#logo{
-		width: calc(50% + 10vw);
-	}
-	#bannerDecorationPlus{
-		margin-bottom: 0;
-	}
 	#navBar{
 		justify-content: space-between;
 	}
@@ -871,6 +905,29 @@ a.btn-tc-lnk{
 	}
 	#navBar .btn-menu-mobile{
 		display: flex;
+	}
+
+	#backToTop{
+		display: none;
+	}
+	#teamDivider{
+		margin-top: -45%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.sceneOne,
+	.sceneThree{
+		display: none;
+	}
+	#residence{
+		padding: 50% 10% 30% 5%;
+		margin-top: -35%;
+	}
+	#logo{
+		width: calc(50% + 10vw);
+	}
+	#bannerDecorationPlus{
+		margin-bottom: 0;
 	}
 	.flag{
 		width: 20px;
@@ -898,7 +955,7 @@ a.btn-tc-lnk{
 		font-size: 0.8em;
 	}
 	#rotateText{
-		min-height: 90px;
+		min-height: 65px;
 	}
 	#bannerDecorationPlus :nth-child(1){
 		width:35%;
@@ -959,16 +1016,22 @@ a.btn-tc-lnk{
 
 
 @media only screen and (min-width: 901px) and (max-width: 1199px)   {
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -35%;
-		padding: 40% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 }
 
 @media only screen and (min-width: 801px) and (max-width: 900px)   {
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -37%;
-		padding: 40% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -15%;
@@ -977,9 +1040,12 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 701px) and (max-width: 800px)   {
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -45%;
-		padding: 40% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -20%;
@@ -991,9 +1057,16 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 601px) and (max-width: 700px)   {
+	#residence{
+		margin-top: -45%;
+	}
+
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -43%;
-		padding: 40% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -20%;
@@ -1005,9 +1078,24 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 501px) and (max-width: 600px) {
+	#residence{
+		margin-top: -45%;
+	}
+
+	#bannerLayer {
+		padding-left: 15%;
+		padding-top: 5%;
+	}
+
+	#banner_img {
+		margin-top: -32%;
+	}
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -50%;
-		padding: 40% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -45%;
@@ -1022,9 +1110,23 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 401px) and (max-width: 500px) {
+	#residence{
+		margin-top: -45%;
+	}
+
+	#bannerLayer {
+		padding-left: 10%;
+		padding-top: 7%;
+	}
+	#banner_img {
+		margin-top: -30%;
+	}
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -52%;
-		padding: 50% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -50%;
@@ -1039,9 +1141,16 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 301px) and (max-width: 400px) {
+	#bannerLayer {
+		padding-left: 10%;
+		padding-top: 5%
+	}
+	#darkDivider{
+		margin-top: -58%;
+	}
 	#what {
-		margin-top: -60%;
-		padding: 60% 0% 15% 0%;
+		margin-top: -150%;
+		padding: 160% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -55%;
@@ -1057,9 +1166,12 @@ a.btn-tc-lnk{
 
 
 @media only screen and (max-width: 300px) {
+	#bannerLayer {
+		padding-left: 10%
+	}
 	#what {
 		margin-top: -70%;
-		padding: 65% 0% 15% 0%;
+		padding: 60% 0% 15% 0%;
 	}
 	#team {
 		margin-top: -55%;
@@ -1164,6 +1276,13 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	border-bottom: 0;
 }
 
+.option-hover{
+	border-color: rgb(255, 47, 47);
+	color: red;
+	box-shadow: 0px 3px 5px 1px rgba(207, 207, 207, 0.295);
+	transition: all 0.5s;
+}
+
 .verticalText{
 	-webkit-transform: rotate(270deg); 
 	-moz-transform: rotate(270deg);
@@ -1172,10 +1291,15 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	font-family: 'Inter';
 }
 
+._effect_style{
+	font-weight: bold;
+	color: #ff203a;
+}
+
 ._effect {
 	font-weight: bold;
 	animation: hide-show infinite .8s;
-	color: #d3031c;
+	color: #ff2942;
 }
 @keyframes hide-show {
 	0% { opacity: 0; }
@@ -1193,6 +1317,30 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 @keyframes rotate {
 	100%{transform: rotate(180deg);}
 }
+
+#ceoRole{
+	position: relative; 
+	float: left;
+	font-family: monospace;
+}
+
+.typingEffect{
+	background-color: #cbcbcb;
+	color: white;
+}
+
+#ceoRole span {
+    position:absolute;
+    right:0;
+    width:0;
+    animation: typing 1.5s steps(4) infinite;
+}
+
+@keyframes typing {
+    from { width: 100% }
+    to { width:0; margin-left: 100%; }
+}
+
 
 /* scrollbar styled */
 
@@ -1244,6 +1392,115 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 .ah-words-wrapper h4{
 	white-space: break-spaces!important;
 }
+
+.parallax {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+	z-index: 3;
+}
+
+.sceneOne {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 10%;
+    right: 0%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+#parallaxOne :nth-child(1) {
+    width: 5%;
+	top: 40% !important;
+    left: 82% !important;
+}
+
+#parallaxOne :nth-child(2) {
+    width: 7%;
+	top: 48% !important;
+    left: 77% !important;
+}
+
+#parallaxOne :nth-child(3) {
+    width: 10%;
+	top: 43% !important;
+    left: 85% !important;
+}
+
+#parallaxOne :nth-child(4) {
+    width: 12%;
+    top: 65% !important;
+    left: 80% !important;
+}
+
+#parallaxOne :nth-child(5) {
+    width: 10%;
+	top: 55% !important;
+    left: 80% !important;
+}
+
+#parallaxOne :nth-child(6) {
+	width: 8%;
+    top: 35% !important;
+    left: 70% !important;
+}
+
+.sceneThree {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    right: 0%;
+	top: -60%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+#parallaxThree :nth-child(1) {
+	width: 12%;
+    top: 7% !important;
+    left: 75% !important;
+}
+
+#parallaxThree :nth-child(2) {
+	width: 5%;
+    top: 14% !important;
+    left: 87% !important;
+}
+
+#parallaxThree :nth-child(3) {
+	width: 10%;
+    top: 19% !important;
+    left: 82% !important;
+}
+
+#parallaxThree :nth-child(4) {
+	width: 10%;
+    top: 13% !important;
+    left: 68% !important;
+}
+
+#parallaxThree :nth-child(5) {
+	width: 8%;
+    top: 40% !important;
+    left: 75% !important;
+}
+
+#parallaxThree :nth-child(6) {
+	width: 9%;
+    top: 35% !important;
+    left: 82% !important;
+}
+
+#parallaxThree :nth-child(7) {
+	width: 7%;
+    top: 30% !important;
+    left: 75% !important;
+}
+
 
 /* elements */
 

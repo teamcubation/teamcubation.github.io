@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../css/style.css?v=26">
   <link rel="stylesheet" href="../jquery.animatedheadline/css/jquery.animatedheadline.css">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVX5NJFK14"></script>
   <script>
@@ -32,6 +33,15 @@
 </head>
 
 <body class="themeColor default-scrollbar">
+<div class="sceneOne">
+  <div id="parallaxOne" class="parallax">
+    <img src="../media/plus/orange.svg" data-depth="0.2">
+    <img src="../media/plus/default.svg" data-depth="0.5">
+    <img src="../media/plus/default.svg" data-depth="0.4">
+    <img src="../media/plus/default.svg" data-depth="0.5">
+  </div>
+</div>
+
 <nav>
   <div id="navBar">
     <div class="logo">
@@ -70,6 +80,7 @@
       <a class="how" href="#how">navBar.how</a>
       <a class="clients" href="#clients">navBar.clients</a>
       <a class="team" href="#team">navBar.team</a>
+      <a class="contact" href="#contact">navBar.contact</a>
       <a class="devsJuniors" href="#devsJuniors">navBar.devsJunior</a>
       <a class="devsSeniors" href="#devsSeniors">navBar.devsSenior</a>
     </div>
@@ -77,76 +88,81 @@
 </nav>
 
 <div id="pageContent">
+
   <img id="backToTop" class="scrollToTop" src="../media/logo/logo-btn.svg" alt>
-  <section id="banner" class="color-dark">
-    <div class="grid-row align-items-center">
-      <div id="rotateText" class="col-8 top-quotes overflow-hidden">
-        <div class="ah-headline">
-          <div class="ah-words-wrapper">
-            <h4 class="is-visible">banner.descriptionProblem.lineOne</h4>
-            <h4>banner.descriptionProblem.lineTwo</h4>
-            <h4>banner.descriptionProblem.lineThree</h4>
-            <h4>banner.descriptionProblem.lineFour</h4>
-            <h4>banner.descriptionProblem.lineFive</h4>
+
+  <section id="banner" class="color-white">
+    <img id="banner_img" src="../media/background/green_6.svg" alt="banner_img">
+    <div id="bannerLayer">
+      <div class="grid-row align-items-center">
+        <div id="rotateText" class="col-12 top-quotes overflow-hidden">
+          <div class="ah-headline">
+            <div class="ah-words-wrapper">
+              <h4 class="is-visible">banner.descriptionProblem.lineOne</h4>
+              <h4>banner.descriptionProblem.lineTwo</h4>
+              <h4>banner.descriptionProblem.lineThree</h4>
+              <h4>banner.descriptionProblem.lineFour</h4>
+              <h4>banner.descriptionProblem.lineFive</h4>
+            </div>
           </div>
-        </div>
-        <h4 class="down">banner.descriptionProblem.lineSix</h4>
-      </div>
-      <div class="col-4">
-        <div id="bannerDecorationPlus">
-          <img class="position-relative plus-default" src="../media/plus/default.svg" alt="plus_default">
-          <img class="position-relative plus-orange" src="../media/plus/orange.svg" alt="plus_orange">
-          <img class="position-relative plus-gray" src="../media/plus/gray.svg" alt="plus_gray">
-          <img class="position-relative plus-gray" src="../media/plus/gray.svg" alt="plus_gray">
-          <img class="position-relative plus-default" src="../media/plus/default.svg" alt="plus_default">
+          <h4 class="down">banner.descriptionProblem.lineSix</h4>
         </div>
       </div>
-    </div>
-    <div class="grid-row mt-4">
-      <div class="col-12 color-gray">
-        <h2>banner.solution.lineOne</h2>
-        <h2>banner.solution.lineTwo</h2>
-        <h2>banner.solution.lineThree</h2>
+      <div class="grid-row">
+        <div class="col-12 color-white mt-4">
+          <h1>banner.solution.centralText.lineOne</h1>
+          <h1 class="mb-4">banner.solution.centralText.lineTwo</h1>
+          <h4 class="subTitle">banner.solution.descriptionText.lineOne</h4>
+          <h4 class="subTitle">banner.solution.descriptionText.lineTwo</h4>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="weTrain">
-    <img width="100%" src="../media/background/section_green.svg" alt="section_green">
-    <div id="weTrainLayer" class="grid-row flex-column align-items-left color-white">
-      <h1>weTrain.centralText.lineOne</h1>
-      <h1>weTrain.centralText.lineTwo</h1>
-      <h3 class="subTitle">weTrain.descriptionText.lineOne</h3>
-      <h3 class="subTitle">weTrain.descriptionText.lineTwo</h3>
-    </div>
-  </section>
+  <!-- <img style="position:relative; margin-top:4%" src="media/train.png" width="100%" alt="">
+  <img style="filter:drop-shadow(2px 4px 10px #656565) opacity(1) brightness(1); position: absolute; left: 54%; width: 30%;" src="media/img_landing.png" alt=""> -->
 
-  <section id="residence">
-    <h1 class="color-gray-100 me-1 d-inline">residence.centralText.lineOne.text-gray</h1>
-    <h1 class="color-white d-inline">residence.centralText.lineOne.text-white</h1> 
-    <h1 class="color-white">residence.centralText.lineTwo</h1>
-    <h1 class="color-white">residence.centralText.lineThree</h1>
-  </section>
+
+  <img id="darkDivider" width="100%" style="margin-top:-58%" src="../media/background/dark.svg">
 
   <section id="what" style="background-image:url('../media/background/orange.svg')">
     <img id="logoOrange" src="../media/logo/orange.svg" alt>
     <div id="weDoLayer">
-      <h3 class="color-dark mb-4">weDo.title</h3>
-      <h4 class="color-dark me-1 d-inline">weDo.descriptionText.lineOne.standardTextOne</h4>
+      <h3 class="color-dark mb-5">weDo.title</h3>
+      <h4 class="color-dark me-1 mt-5 d-inline">weDo.descriptionText.lineOne.standardTextOne</h4>
       <h4 class="color-dark me-1 d-inline fw-600">weDo.descriptionText.lineOne.boldTextOne</h4>
       <h4 class="color-dark me-1 d-inline">weDo.descriptionText.lineOne.standardTextTwo</h4>
       <h4 class="color-dark me-1 fw-600 d-inline">weDo.descriptionText.lineOne.boldTextTwo</h4>
-      <h4 class="color-dark me-1 d-inline fw-600">weDo.descriptionText.lineTwo.boldTextOne</h4>
       <h4 class="color-dark me-1 d-inline">weDo.descriptionText.lineTwo.standardTextOne</h4>
-      <h4 class="color-dark me-1 d-inline fw-600">weDo.descriptionText.lineTwo.boldTextTwo</h4>
+      <h4 class="color-dark me-1 d-inline fw-600">weDo.descriptionText.lineTwo.boldTextOne</h4>
       <h4 class="color-dark me-1 d-inline">weDo.descriptionText.lineTwo.standardTextTwo</h4>
-      <h4 class="color-dark me-1 d-inline">weDo.descriptionText.lineThree.standardTextOne</h4>
-      <h4 class="color-dark me-1 d-inline fw-600">weDo.descriptionText.lineThree.boldTextOne</h4>
-      <h4 class="color-dark me-1 d-inline">weDo.descriptionText.lineThree.standardTextTwo</h4>
-      <h4 class="color-dark me-1 d-inline mb-5">weDo.descriptionText.lineFour.standardTextOne</h4>
-      <div class="grid-row mt-4">
+      <h4 class="color-dark me-1 d-inline fw-600">weDo.descriptionText.lineTwo.boldTextTwo</h4>
+      <div class="grid-row mt-5">
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="cardDuration" class="card gradientBlackGray">
+          <div data-aos="zoom-in-up" class="card gradientBlackGray">
+            <h4 class="cardTitle color-light-orange mb-5">weDo.cardOrganization.title</h4>
+            <svg id="logoCardOrganization" width="106" height="138" viewbox="0 0 106 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M52.9825 72.6083L93.7737 17.6043C93.7737 17.6043 86.0448 11.8924 77.4572 5.75735C68.8696 -0.377662 51.0502 -2.70476 37.5247 12.5271C37.5247 12.5271 27.4467 26.2781 10.9029 47.645C-5.64086 69.0119 1.40559 89.9822 11.3325 99.4756C21.2595 108.969 44.8239 125.497 44.8239 125.497C26.3605 104.13 42.2479 86.9939 45.683 82.3397L52.9825 72.6083Z" stroke="#423B3B" stroke-width="2"/>
+              <path d="M91.6265 128.459C91.6265 128.459 99.7322 119.563 104.508 111.534L52.5529 73.2432C48.259 79.1667 42.0331 86.7826 42.0331 86.7826C18.846 122.112 69.7281 152.364 91.6265 128.459Z" stroke="#423B3B" stroke-width="2"/>
+            </svg>
+            <h3 class="cardCentralText color-white mb-5">weDo.cardOrganization.centralText.lineOne</h3>
+            <h6 class="color-white mt-5">weDo.cardOrganization.text.lineOne</h6>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
+          <div data-aos="zoom-in-up" class="card gradientBlackGray">
+            <h4 class="cardTitle color-light-orange mb-3">weDo.cardPlus.title</h4>
+            <svg id="logoCardPlus" width="81" height="90" viewbox="0 0 81 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M39.3237 42.9347L32.3433 78.7987C32.3433 78.7987 37.3425 79.8363 42.8489 80.8865C48.3552 81.9367 57.4104 79.0651 60.41 68.6329C60.41 68.6329 62.0978 59.6939 65.1433 45.6054C68.1888 31.5169 60.0391 22.9181 53.1266 20.5382C46.2142 18.1583 31.1746 15.4256 31.1746 15.4256C44.8766 21.6532 41.1809 33.5401 40.5982 36.571L39.3237 42.9347Z" stroke="#423B3B" stroke-width="2"/>
+              <path d="M8.10941 24.4971C8.10941 24.4971 6.25867 30.6359 5.80359 35.6063L39.3848 42.5301C40.0892 38.69 41.3322 33.5945 41.3322 33.5945C44.3741 11.2355 13.1381 7.97369 8.10941 24.4971Z" stroke="#423B3B" stroke-width="2"/>
+            </svg>
+            <h3 class="cardCentralText color-white">weDo.cardPlus.centralText.lineOne</h3>
+            <h3 class="cardCentralText color-white mb-3">weDo.cardPlus.centralText.lineTwo</h3>
+            <h6 class="color-white">weDo.cardPlus.text.lineOne</h6>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
+          <div data-aos="zoom-in-up" id="cardDuration" class="card gradientBlackGray">
             <h4 class="cardTitle color-light-orange mb-3">weDo.cardDuration.title</h4>
             <svg id="logoCardDuration" width="131" height="92" viewbox="0 0 131 92" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path id="pathDurationOne" d="M28.4717 55.494L50.0291 25.9944C50.0291 25.9944 45.9446 22.931 41.4062 19.6407C36.8678 16.3503 27.4506 15.1023 20.3026 23.2714C20.3026 23.2714 14.9766 30.6463 6.2335 42.1057C-2.50957 53.5652 1.21435 64.812 6.46054 69.9034C11.7067 74.9949 24.1601 83.859 24.1601 83.859C14.4026 72.3995 22.7987 63.2093 24.6141 60.7132L28.4717 55.494Z" stroke="#423B3B" stroke-width="2"/>
@@ -161,31 +177,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-3">weDo.cardPlus.title</h4>
-            <svg id="logoCardPlus" width="81" height="90" viewbox="0 0 81 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M39.3237 42.9347L32.3433 78.7987C32.3433 78.7987 37.3425 79.8363 42.8489 80.8865C48.3552 81.9367 57.4104 79.0651 60.41 68.6329C60.41 68.6329 62.0978 59.6939 65.1433 45.6054C68.1888 31.5169 60.0391 22.9181 53.1266 20.5382C46.2142 18.1583 31.1746 15.4256 31.1746 15.4256C44.8766 21.6532 41.1809 33.5401 40.5982 36.571L39.3237 42.9347Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M8.10941 24.4971C8.10941 24.4971 6.25867 30.6359 5.80359 35.6063L39.3848 42.5301C40.0892 38.69 41.3322 33.5945 41.3322 33.5945C44.3741 11.2355 13.1381 7.97369 8.10941 24.4971Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white">weDo.cardPlus.centralText.lineOne</h3>
-            <h3 class="cardCentralText color-white mb-3">weDo.cardPlus.centralText.lineTwo</h3>
-            <h6 class="color-white">weDo.cardPlus.text.lineOne</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-3">weDo.cardOrganization.title</h4>
-            <svg id="logoCardOrganization" width="106" height="138" viewbox="0 0 106 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M52.9825 72.6083L93.7737 17.6043C93.7737 17.6043 86.0448 11.8924 77.4572 5.75735C68.8696 -0.377662 51.0502 -2.70476 37.5247 12.5271C37.5247 12.5271 27.4467 26.2781 10.9029 47.645C-5.64086 69.0119 1.40559 89.9822 11.3325 99.4756C21.2595 108.969 44.8239 125.497 44.8239 125.497C26.3605 104.13 42.2479 86.9939 45.683 82.3397L52.9825 72.6083Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M91.6265 128.459C91.6265 128.459 99.7322 119.563 104.508 111.534L52.5529 73.2432C48.259 79.1667 42.0331 86.7826 42.0331 86.7826C18.846 122.112 69.7281 152.364 91.6265 128.459Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white">weDo.cardOrganization.centralText.lineOne</h3>
-            <h3 class="cardCentralText color-white mb-3">weDo.cardOrganization.centralText.lineTwo</h3>
-            <h6 class="color-white">weDo.cardOrganization.text.lineOne</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div class="card gradientBlackGray">
+          <div data-aos="zoom-in-up" class="card gradientBlackGray">
             <h4 class="cardTitle color-light-orange mb-3">weDo.cardOurSeniors.title</h4>
             <svg id="logoCardOurSeniors" width="110" height="141" viewbox="0 0 110 141" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M55.1058 66.4536L16.5847 123.071C16.5847 123.071 24.5394 128.464 33.3693 134.244C42.1993 140.025 60.0985 141.626 72.9936 125.857C72.9936 125.857 82.5042 111.707 98.1655 89.6854C113.827 67.6635 105.934 46.997 95.629 37.9151C85.3242 28.8332 61.1073 13.2772 61.1073 13.2772C80.4241 33.8758 65.2466 51.6434 62.0036 56.4334L55.1058 66.4536Z" stroke="#423B3B" stroke-width="2"/>
@@ -198,7 +190,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div class="card gradientBlackGray">
+          <div data-aos="zoom-in-up" class="card gradientBlackGray">
             <h4 class="cardTitle color-light-orange mb-3">weDo.cardYourJuniors.title</h4>
             <svg id="logoCardOurJuniorsDouble" width="114" height="78" viewbox="0 0 114 78" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M28.9107 42.4263L50.8125 12.8933C50.8125 12.8933 46.6627 9.82636 42.0518 6.53232C37.4409 3.23828 27.8732 1.9888 20.611 10.1672C20.611 10.1672 15.1999 17.5504 6.31713 29.0228C-2.56565 40.4953 1.21777 51.7548 6.54779 56.852C11.8778 61.9492 24.5302 70.8234 24.5302 70.8234C14.6167 59.3509 23.147 50.1503 24.9914 47.6513L28.9107 42.4263Z" stroke="#423B3B" stroke-width="2"/>
@@ -223,33 +215,37 @@
   <div id="scrolltoHow"></div>
 
   <section id="how">
-    <div id="howDoDecorationPlus">
-      <img class="position-relative plus-default" width="40%" src="../media/plus/default.svg" alt="plus_orange">
-      <img class="position-relative plus-default" width="20%" src="../media/plus/light-gray.svg" alt="plus_default">
-      <img class="position-relative plus-default" width="20%" src="../media/plus/light-gray.svg" alt="plus_default">
-      <img class="position-relative plus-default" width="20%" src="../media/plus/light-gray.svg" alt="plus_default">
-      <img class="position-relative plus-default" width="40%" src="../media/plus/default.svg" alt="plus_gray">
-    </div>
+    <div class="sceneThree">
+      <div id="parallaxThree" class="parallax">
+        <img data-depth="0.5" src="../media/plus/green.svg" alt="plus_orange">
+        <img data-depth="0.4" src="../media/plus/light-gray.svg" alt="plus_default">
+        <img data-depth="0.3" src="../media/plus/red.svg" alt="plus_default">
+        <img data-depth="0.2" src="../media/plus/default.svg" alt="plus_default">
+        <img data-depth="0.1" src="../media/plus/light-gray.svg" alt="plus_gray">
+        <img data-depth="0.5" src="../media/plus/orange.svg" alt="plus_gray">
+        <img data-depth="0.1" src="../media/plus/default.svg" alt="plus_gray">
+      </div>
+    </div>  
     <div id="howLayer">
       <h3 class="color-dark mb-5">howDo.title</h3>
       <h4 class="color-dark me-1 d-inline">howDo.descriptionText</h4>
       <div class="grid-row mt-4 mb-5">
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="cardDiscovery" class="card">
+          <div data-aos="zoom-in-up" id="cardDiscovery" class="card">
             <h4 class="cardTitle color-blue mb-3">howDo.cardDiscovery.title</h4>
             <h3 class="cardCentralText color-dark mb-3">howDo.cardDiscovery.centralText.lineOne</h3>
             <h6 class="color-dark">howDo.cardDiscovery.text.lineOne</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="cardEjecution" class="card">
+          <div data-aos="zoom-in-up" id="cardEjecution" class="card">
             <h4 class="cardTitle color-blue mb-3">howDo.cardEjecution.title</h4>
             <h3 class="cardCentralText color-dark mb-3">howDo.cardEjecution.centralText.lineOne</h3>
             <h6 class="color-dark">howDo.cardEjecution.text.lineOne</h6>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div id="cardDelivery" class="card">
+          <div data-aos="zoom-in-up" id="cardDelivery" class="card">
             <h4 class="cardTitle color-blue mb-3">howDo.cardDelivery.title</h4>
             <h3 class="cardCentralText color-dark mb-3">howDo.cardDelivery.centralText.lineOne</h3>
             <h6 class="color-dark">howDo.cardDelivery.text.lineOne</h6>
@@ -281,6 +277,7 @@
   </section>
   
   <div id="scrolltoTeam"></div>
+
   <section id="team" style="background-image:url('../media/background/red.svg')">
     <img id="logoRed" width="100%" src="../media/logo/red.svg" alt>
     <img id="plusRedTeamOne" src="../media/plus/red.svg" alt="plus_red">
@@ -291,15 +288,17 @@
     <h4 style="margin: 5% 0 8% 22%" class="color-white">_team.text</h4>
     <div class="grid-row">
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/mariano.png" alt>
           <h5 class="member-name">Mariano Wechsler</h5>
-          <h5 class="member-role">CEO</h5>
+          <div id="ceoEffect">
+            <!-- <h5 id="ceoRole" class="member-role"></h5> -->
+          </div>
           <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
         </div>
       </div>
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/diego.png" alt>
           <h5 class="member-name">Diego Jolodenco</h5>
           <h5 class="member-role">COO</h5>
@@ -307,7 +306,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/pina.png" alt>
           <h5 class="member-name">Agustin Pina</h5>
           <h5 class="member-role">Head of Training</h5>
@@ -315,7 +314,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/tapi.png" alt>
           <h5 class="member-name">Jonathan Tapicer</h5>
           <h5 class="member-role">CTO</h5>
@@ -323,7 +322,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/flor.png" alt>
           <h5 class="member-name">Florencia Diaz</h5>
           <h5 class="member-role">Head of People</h5>
@@ -331,7 +330,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/pablo.png" alt>
           <h5 class="member-name">Pablo Rodriguez</h5>
           <h5 class="member-role">CFO</h5>
@@ -339,7 +338,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-5 col-md-3 text-center">
-        <div class="card-member">
+        <div data-aos="zoom-in-up" class="card-member">
           <img class="img-member" src="../media/team/eze.jpg" alt>
           <h5 class="member-name">Ezequiel Ursztein</h5>
           <h5 class="member-role">Head of Data & Analytics</h5>
@@ -350,103 +349,87 @@
   </div></section>
 
   <img id="teamDivider" src="../media/wave/white.svg" alt="divider">
-  <div id="scrolltoContact"></div>
 
   <section id="contact">
     <div class="grid-row justify-content-evenly">
-      <div class="col-xs-12 col-lg-6 color-gray-100 mt-5">
-        <h2 class="color-gray-100 mb-5">contact.description.centralText</h2>
-        <h4 id="formOnlyCompany">contact.description.centralTextTwo</h4>
-        <div class="grid-row my-5 align-items-center">
-          <div dta-t class="col-2 col-md-1 info-postulations">
-            <h4 class="verticalText color-light-gray">contact.description.text.juniors.verticalText</h4>
-          </div>
-          <div class="col-10 color">
-            <h5 class="d-inline fw-600">contact.description.text.juniors.text.boldTextOne</h5>
-            <h5 class="d-inline">contact.description.text.juniors.text.standardTextOne</h5>
-            <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations">contact.description.text.juniors.text.linkJuniors</a>
-            <h5 class="d-inline">contact.description.text.juniors.text.standardTextTwo</h5>
-          </div>
-        </div>
-        <div class="grid-row my-5 align-items-center color-gray">
-          <div dta-t class="col-2 col-md-1 info-postulations">
-            <h4 class="verticalText color-light-gray">contact.description.text.seniors.verticalText</h4>
-          </div>
-          <div class="col-10">
-            <h5 class="d-inline fw-400">contact.description.text.seniors.text.boldTextOne</h5>
-            <h5 class="d-inline">contact.description.text.seniors.text.standardTextOne</h5>
-            <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations">contact.description.text.seniors.text.linkJuniors</a>
-            <h5 class="d-inline">contact.description.text.seniors.text.standardTextTwo</h5>
-          </div>
-        </div>
-        <div class="grid-row my-5 align-items-center">
-          <div dta-t class="col-2 col-md-1 info-postulations">
-            <h4 class="verticalText color-light-gray">contact.description.text.noCoders.verticalText</h4>
-          </div>
-          <div class="col-10">
-            <h5 class="d-inline fw-600">contact.description.text.noCoders.text.boldText</h5>
-            <h5 class="d-inline">contact.description.text.noCoders.text.standardText</h5>
-          </div>
-        </div>
-      </div>
       <div class="col-12 col-lg-5 mt-2 px-2 d-flex flex-column align-items-center">
         <h2 class="color-gray-100 my-3">contact.form.centralText</h2>
-        <form class="form-contact" id="form-team">
-          <div class="mt-5">
-            <input type="text" class="name" name="name" required placeholder="contact.form.name">
-          </div>
-          <div class="mt-5 w-100">
-            <div class="dropdown-select w-100" id="dropdown-select-team">
-              <div class="select-tc justify-content-between" style="display: flex">
+        <form class="form-contact">
+          <div id="formIdenfitication" class="mt-5 w-100 position-relative">
+            <div class="dropdown-select w-100" id="dropdown-select">
+              <div class="select-tc">
                 <input class="input-select" disabled placeholder="contact.form.origin-extra.placeholder">
                 <img class="chevron-select" src="../media/chevron-down.svg" alt="arrow">
               </div>
-              <ul class="list-options-tc">
-                <li>
-                  <div class="option-tc" data-option="organization">contact.form.origin-extra.options.organization</div>
-                </li>
-                <li>
-                  <div class="option-tc" data-option="senior">contact.form.origin-extra.options.senior</div>
-                </li>
-                <li>
-                  <div class="option-tc" data-option="junior">contact.form.origin-extra.options.junior</div>
-                </li>
-                <li>
-                  <div class="option-tc" data-option="no-exp">contact.form.origin-extra.options.no-exp</div>
-                </li>
-                <li>
-                  <div class="option-tc" data-option="other">contact.form.origin-extra.options.other</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-4">
-            <input type="text" class="organizationContact" placeholder="contact.form.organization">
-          </div>
-          <div class="mt-5">
-            <label for="country-phone-team" class="form-label">contact.form.telephone.label</label>
-          </div>
-          <div class="row">
-            <div class="col-md-7 col-sm-12">
-              <div class="row">
-                <div class="col-3">
-                  <span>+</span>
-                  <input id="country-phone-team" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="contact.form.telephone.country">
-                </div>
-                <div class="col-3">
-                  <input type="text" name="area-phone" class="area-phone" placeholder="contact.form.telephone.area">
-                </div>
-                <div class="col-6">
-                  <input type="text" name="number-phone" class="number-phone" placeholder="contact.form.telephone.number">
-                </div>
+              <div style="position: relative; max-width: 100%">
+                <ul class="list-options-tc">
+                  <li>
+                    <div class="option-tc" data-option="organization">contact.form.origin-extra.options.organization</div>
+                  </li>
+                  <li>
+                    <div class="option-tc" data-option="senior">contact.form.origin-extra.options.senior</div>
+                  </li>
+                  <li>
+                    <div class="option-tc" data-option="junior">contact.form.origin-extra.options.junior</div>
+                  </li>
+                  <li>
+                    <div class="option-tc" data-option="no-exp">contact.form.origin-extra.options.no-exp</div>
+                  </li>
+                  <li>
+                    <div class="option-tc" data-option="other">contact.form.origin-extra.options.other</div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
-              <input type="email" name="email" class="email" required placeholder="contact.form.email">
+            <div class="form-message" id="juniorsMessage">
+              <h6 class="d-inline fw-600">contact.description.text.juniors.text.boldTextOne</h6>
+              <h6 class="d-inline">contact.description.text.juniors.text.standardTextOne</h6>
+              <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">contact.description.text.juniors.text.linkJuniors</a>
+              <h6 class="d-inline">contact.description.text.juniors.text.standardTextTwo</h6>
             </div>
+            <div class="form-message" id="seniorsMessage">
+              <h6 class="d-inline fw-400">contact.description.text.seniors.text.boldTextOne</h6>
+              <h6 class="d-inline">contact.description.text.seniors.text.standardTextOne</h6>
+              <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">contact.description.text.seniors.text.linkJuniors</a>
+              <h6 class="d-inline">contact.description.text.seniors.text.standardTextTwo</h6>
+            </div>
+            <div class="form-message" id="noCodersMessage">
+              <h6 class="d-inline fw-600">contact.description.text.noCoders.text.boldText</h6>
+              <h6 class="d-inline">contact.description.text.noCoders.text.standardText</h6>
+            </div>    
           </div>
-          <div class="mb-4 mt-5">
-            <textarea name="message" class="message" rows="1" required placeholder="contact.form.reason"></textarea>
+          <div id="formInformation">
+            <div class="mt-5">
+              <input type="text" class="name" name="name" required placeholder="contact.form.name">
+            </div>
+            <div class="mt-4">
+              <input type="text" class="organizationContact" placeholder="contact.form.organization">
+            </div>
+            <div class="mt-5">
+              <label for="country-phone-team" class="form-label">contact.form.telephone.label</label>
+            </div>
+            <div class="row">
+              <div class="col-md-7 col-sm-12">
+                <div class="row">
+                  <div class="col-3">
+                    <span>+</span>
+                    <input id="country-phone-team" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="contact.form.telephone.country">
+                  </div>
+                  <div class="col-3">
+                    <input type="text" name="area-phone" class="area-phone" placeholder="contact.form.telephone.area">
+                  </div>
+                  <div class="col-6">
+                    <input type="text" name="number-phone" class="number-phone" placeholder="contact.form.telephone.number">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+                <input type="email" name="email" class="email" required placeholder="contact.form.email">
+              </div>
+            </div>
+            <div class="mb-4 mt-5">
+              <textarea name="message" class="message" rows="1" required placeholder="contact.form.reason"></textarea>
+            </div>
           </div>
         </form>
       </div>
@@ -495,9 +478,9 @@
 
   <footer id="footer">
     <div class="grid-row align-items-center">
-      <div class="col-6">
+      <div class="col-8">
         <div class="grid-row">
-          <div class="col-5 col-md-3">
+          <div class="col-6 col-md-3">
             <div class="d-flex flex-column">
               <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.whatLink</a>
               <a class="how color-light-gray mb-0 navigate-organization" href="#how">textLinks.howLink</a>
@@ -514,7 +497,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 d-flex justify-content-end">
+      <div class="col-4 d-flex justify-content-end">
         <div class="grid-row flex-column align-items-center">
           <img width="100%" id="lovsDevs" src="../media/loveDevs.svg" alt="iLoveDevs">
           <p id="copyright" class="color-light-gray">COPYRIGHT TEAMCUBATION</p>
@@ -528,6 +511,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="../jquery.animatedheadline/js/jquery.animatedheadline.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script type="module" src="../index.js?v=14"></script>
 
 </body>
