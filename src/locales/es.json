@@ -180,8 +180,8 @@
         "juniors": {
           "verticalText": "JUNIORS",
           "text":{
-            "boldTextOne": "Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando...",
-            "standardTextOne": "te juramos que no le damos más bolilla a este formulario que a otros... asi que ",
+            "boldTextOne": "",
+            "standardTextOne": "Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando",
             "linkJuniors": "postulate acá",
             "standardTextTwo": "que es donde podemos ayudarte a que una compañía te seleccione para un squad"
           }
@@ -191,7 +191,7 @@
           "text":{
             "boldTextOne": "Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,",
             "standardTextOne": "andá a ",
-            "linkJuniors": "éste y postulate a la búsqueda que más se adecúe a tu perfil",
+            "linkJuniors": "este link y postulate a la búsqueda que más se adecúe a tu perfil",
             "standardTextTwo": "que nos va a permitir entender dónde podemos sumarte en Teamcubation_"
           }
         },
@@ -199,7 +199,7 @@
           "verticalText":  "NO_CODERS",
           "text":{
             "boldText": "Si todavía no aprendiste a programar",
-            "standardText": " te rogamos que lo hagas, te conviertas en developer y después vengas a postularte!. Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear."
+            "standardText": " te rogamos que lo hagas, te conviertas en developer y después vengas a postularte! Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear."
           }
         }
       }

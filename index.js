@@ -184,7 +184,8 @@ const clearForm = () => {
     .prop("disabled", true)
     .val("")
     .attr("placeholder", dataByLang.formContact.originExtraPlaceholder)
-    .removeData("value-selected");
+    .removeData("value-selected")
+    .height('40px');
 };
 
 $(".language-select").hover(
@@ -266,6 +267,8 @@ $(".option-tc").on("click", function () {
     valueOption === "junior" && $("#juniorsMessage").css('display', 'block');
     valueOption === "no-exp" && $('#noCodersMessage').css('display', 'block');
   }
+  $('.input-select').height('40px');
+  $('.input-select').height($('.input-select')[0].scrollHeight - 4);
   $(".list-options-tc").slideUp();
   $(".chevron-select").removeClass("chevron-effect");
 });
