@@ -89,7 +89,7 @@
       },
       "text":{
         "lineOne": "“Epa! ¿Qué curso largo no?”",
-        "lineTwo": "Es que no es un curso! Vamos a desarrollar un proyecto, los proyectos no se hacen en 2 o 3 meses y es el tiempo que diseñamos para recorrer todas las instancias de entrenamiento que queremos hacer con los juniors."
+        "lineTwo": "Es que no es un curso! Vamos a desarrollar un proyecto, los proyectos no se hacen en 2 o 3 meses. 6 meses es el tiempo que diseñamos para recorrer todas las instancias de entrenamiento que queremos hacer con los juniors."
       } 
     },
     "cardPlus":{
@@ -190,8 +190,8 @@
           "verticalText": "SENIORS",
           "text":{
             "boldTextOne": "Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,",
-            "standardTextOne": "tampoco llenes este formulario! Andá a ",
-            "linkJuniors": "éste y postulate a la búsqueda que más se adecúe a tu perfil!",
+            "standardTextOne": "andá a ",
+            "linkJuniors": "éste y postulate a la búsqueda que más se adecúe a tu perfil",
             "standardTextTwo": "que nos va a permitir entender dónde podemos sumarte en Teamcubation_"
           }
         },
@@ -245,7 +245,7 @@
         "lineTwo": "Hola, Somos Teamcubation."
       }
     },
-    "text": "Teamcubation_ trabaja para empresas, las empresas contratan a los juniors y muchas veces nos piden ayuda para encontrarlos. Asi que no lo dudes! entré a este link que te dejamos acá y dejanos tus datos para que cuando nos soliciten las empresas perfiles podamos pasar tus datos",
+    "text": "Teamcubation_ trabaja para empresas, las empresas contratan a los juniors y muchas veces nos piden ayuda para encontrarlos. Asi que no lo dudes! Entrá a este link que te dejamos acá y dejanos tus datos para que cuando nos soliciten las empresas perfiles podamos pasar los tuyos o tu información.",
     "textButton": "Mirá las posiciones abiertas de nuestros clientes para devs sin experiencia<span class=_effect>_</span>"
   },
   "devsSeniors": {
