@@ -244,6 +244,7 @@ $(".option-tc").on("click", function () {
     $("#formInformation").css('visibility', 'visible');
     $(".submit-contact").css('visibility', 'visible');
     $(".input-select").data("value-selected", valueOption);
+    $(".input-select").val(textOption);
     $(".input-select").prop("disabled", false).focus().val("")
       .attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
   } 
@@ -256,6 +257,8 @@ $(".option-tc").on("click", function () {
     $(".input-select").prop("disabled", true);
   } 
   else {
+    $(".input-select").data("value-selected", valueOption);
+    $(".input-select").val(textOption);
     $("#formInformation").css('visibility', 'hidden');
     $(".submit-contact").css('visibility', 'hidden');
     $('.form-message').css('display', 'none');
@@ -292,8 +295,7 @@ $("a").on("click", function () {
 });
 
 
-// effects - scroll
-
+// navbar - scroll
 const heigthNav = document.getElementById("navBar").clientHeight;
 let lastScrollTop = 0;
 let isNavigate = false;  
@@ -320,7 +322,6 @@ window.addEventListener('scroll', (e) => {
 });
 
 // effects - mouseevent
-
 window.addEventListener('mousemove', (e) => {
   if(screen.width > 768){
     const currentPositionScroll = window.scrollY;
@@ -331,7 +332,6 @@ window.addEventListener('mousemove', (e) => {
 });
 
 // navigation - scroll
-
 $(".scrollToTop").on("click", function (e) {
   e.preventDefault();
   location.href = initialLocation;
@@ -379,9 +379,8 @@ $(".devsSeniors").on("click", function (e) {
 $(".contact").on("click", function (e) {
   e.preventDefault();
   location.href = `#contact`;
-  perfectScroll("contact", 45);
+  perfectScroll("contact", 10);
 });
-
 
 const perfectScroll = (section, marginToAdd) => { 
   const distanceCalculated = heigthNav + 30 + marginToAdd;
@@ -391,8 +390,7 @@ const perfectScroll = (section, marginToAdd) => {
   window.scrollTo({ top: scrollTo, behavior: "smooth" });
 };
 
-// determina si hay scroll activo
-
+// is scrolling ?
 const  noScroll = (callback, refresh = 100) => {
   if (!callback || typeof callback !== 'function') return;
   let isScrolling;
@@ -406,6 +404,7 @@ noScroll(function () {
   isNavigate = false;
 });
 
+// scroll effect 
 AOS.init({
   once: true,
   duration: 1500,
@@ -429,26 +428,62 @@ let parallaxInstanceThree = new Parallax(parallaxSceneThree);
 //   document.getElementById("pathDurationFour").setAttribute("stroke", "#ff7c00");
 // });
 
+const team = {
+  ceo: {
+    name: "ceo",
+    role: "CEO "
+  },
+  coo: {
+    name: "coo",
+    role: "COO "
+  },
+  training: {
+    name: "training",
+    role: "Head of Training "
+  },
+  cto: {
+    name: "cto",
+    role: "CTO "
+  },
+  people: {
+    name: "people",
+    role: "Head of People "
+  },
+  cfo: {
+    name: "cfo",
+    role: "CFO "
+  },
+  data: {
+    name: "data",
+    role: "Head of Data & Analytics "
+  }
+}
+
 $(function(){
-  var texto = "CEO ";
-  writer("ceoEffect", texto, 150, 0);
+  writer(team.ceo.name, team.ceo.role, 150, 0);
+  writer(team.coo.name, team.coo.role, 150, 0);
+  writer(team.training.name, team.training.role, 150, 0);
+  writer(team.cto.name, team.cto.role, 150, 0);
+  writer(team.people.name, team.people.role, 150, 0);
+  writer(team.cfo.name, team.cfo.role, 150, 0);
+  writer(team.data.name, team.data.role, 150, 0);
  });
  
-const writer = (contenedor,texto,intervalo,n) => {
+const writer = (container, text, interval, n) => {
   var i=0,
    timer = setInterval(function() {
-    if ( i<texto.length ) {
-      $("#"+contenedor).html( texto.substr(0,i++) + '<span id="underscore">_</span>');
-      $("#underscore").addClass('_effect_style'); 
+    if ( i<text.length ) {
+      $("#"+container).html( text.substr(0,i++) + `<span id=underscore${container}>_</span>`);
+      $(`#underscore${container}`).addClass('_effect_style'); 
     } 
     else {
-      $("#underscore").addClass('_effect')
+      $(`#underscore${container}`).addClass('_effect')
       clearInterval(timer);
       if ( --n!=0 ) {
         setTimeout(function() {
-          writer(contenedor,texto,intervalo,n);
+          writer(container,text,interval,n);
         },2000);
       }
     }
-  },intervalo);
+  },interval);
 };
