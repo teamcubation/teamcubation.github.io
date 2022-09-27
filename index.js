@@ -410,7 +410,7 @@ noScroll(function () {
 // scroll effect 
 AOS.init({
   once: true,
-  duration: 1500,
+  duration: 500,
   easing: 'ease'
 });
 
