@@ -418,6 +418,8 @@ let parallaxSceneThree = document.getElementById('parallaxThree');
 let parallaxInstanceOne = new Parallax(parallaxSceneOne);
 let parallaxInstanceThree = new Parallax(parallaxSceneThree);
 
+parallaxSceneOne.style.display = 'block';
+
 
 // test effect logo-card
 // var card = document.getElementById("cardDuration");
