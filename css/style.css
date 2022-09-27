@@ -496,7 +496,7 @@ input, textarea, select{
     border-bottom: 2px solid rgba(128, 128, 128, 0.507);
     width: 100%;
 	outline: none;
-	font-size: calc(0.5em + 0.8vw);
+	font-size: calc(0.8em + 0.6vw);
 }
 
 .select-tc{
