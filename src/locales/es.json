@@ -31,7 +31,7 @@
     "descriptionProblem": {
       "lineOne" : "“Se nos va la gente”",
       "lineTwo" : "“Perdemos oportunidades”",
-      "lineThree" : "“Quiero crecer pero cada vez que contrato se van otros”",
+      "lineThree" : "“Cada vez que contrato se van otros”",
       "lineFour" : "“Cada vez está peor...”",
       "lineFive" : "“No hay más seniors”",
       "lineSix" : "¿Suena conocido?"
@@ -190,7 +190,7 @@
           "verticalText": "SENIORS",
           "text":{
             "boldTextOne": "Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,",
-            "standardTextOne": "tampoco llenes este formulario! andé a ",
+            "standardTextOne": "tampoco llenes este formulario! Andá a ",
             "linkJuniors": "éste y postulate a la búsqueda que más se adecúe a tu perfil!",
             "standardTextTwo": "que nos va a permitir entender dónde podemos sumarte en Teamcubation_"
           }

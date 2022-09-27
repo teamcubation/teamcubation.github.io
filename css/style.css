@@ -1348,6 +1348,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 
 .ah-words-wrapper h4{
 	white-space: break-spaces!important;
+	opacity: 0;
 }
 
 .parallax {
