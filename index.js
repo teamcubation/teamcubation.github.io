@@ -267,11 +267,17 @@ $(".option-tc").on("click", function () {
     valueOption === "junior" && $("#juniorsMessage").css('display', 'block');
     valueOption === "no-exp" && $('#noCodersMessage').css('display', 'block');
   }
-  $('.input-select').height('40px');
-  $('.input-select').height($('.input-select')[0].scrollHeight - 4);
+  adjustContactTextareaHeight();
   $(".list-options-tc").slideUp();
   $(".chevron-select").removeClass("chevron-effect");
 });
+
+function adjustContactTextareaHeight() {
+  $('.input-select').height(0);
+  $('.input-select').height($('.input-select')[0].scrollHeight - 4);
+}
+
+$(adjustContactTextareaHeight);
 
 window.addEventListener("click", function (e) {
   if (
@@ -290,7 +296,7 @@ window.addEventListener("click", function (e) {
 // mobile navbar 
 
 $(".ion-md-menu").on("click", function () {
-  $("#navBarMobile").toggle("slow");
+  $("#navBarMobile").toggle(250);
 });
 
 $("a").on("click", function () {
@@ -411,7 +417,7 @@ noScroll(function () {
 AOS.init({
   once: true,
   delay: 0,
-  offset: -100,
+  offset: 0,
   duration: 500,
   easing: 'ease'
 });
