@@ -22,7 +22,7 @@ html,body {
 }
 
 h1{
-	font-size:calc(6.5vw + 0.5em);
+	font-size: calc(6.6vw + 0.3em);
 	margin-bottom: 0;
 	line-height: 1em;
 	font-weight: 800;
@@ -70,7 +70,7 @@ h6{
 
 .subTitle{
 	font-family: 'Anek Bangla';
-	font-size: calc(3vw + 0.6em);
+	font-size: calc(3vw + 0.4em);
 	font-weight: 300;
 }
 
@@ -193,11 +193,21 @@ ul{
 	background: linear-gradient(0deg, rgb(176 176 176 / 76%) 0%, rgb(0 0 0 / 97%) 95%);
 }
 
-#banner_img{
+#banner_img_mobile{
+	display: none;
 	position: absolute;
 	margin-top: -35%;
 	width: 100%;
 }
+#banner_img_laptop{
+	display: none;
+}
+#banner_img_desktop{
+	position: absolute;
+	margin-top: -35%;
+	width: 100%;
+}
+
 #darkDivider{
 	margin-top: -62%;
 }
@@ -350,10 +360,11 @@ nav{
 }
 
 #what{
-margin-top: -50%;
+	margin-top: -18%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 55% 0% 10% 0%;}
+    padding: 35% 0% 10% 0%;
+}
 
 #how{
 	background-color: #f0f0f0;
@@ -912,7 +923,22 @@ a.btn-tc-lnk{
 	#navBar .btn-menu-mobile{
 		display: flex;
 	}
-
+	#pageContent{
+		padding-top: 7%;
+	}
+	#banner_img_laptop{
+		display: block;
+		position: absolute;
+		margin-top: -25%;
+		width: 100%;
+	}
+	#banner_img_desktop{
+		display: none;
+	}
+	#what {
+		margin-top: -25%;
+		padding: 42% 0% 15% 0%;	
+	}
 	#backToTop{
 		display: none;
 	}
@@ -920,9 +946,10 @@ a.btn-tc-lnk{
 		margin-top: -40%;
 	}
 }
+
 @media only screen and (max-width: 768px) {
 	#bannerLayer{
-		margin: 0% 5%
+		margin: 0% 10%
 	}
 	.sceneOne,
 	.sceneThree{
@@ -1023,18 +1050,19 @@ a.btn-tc-lnk{
 	}
 }
 
-
-@media only screen and (min-width: 901px) and (max-width: 1199px)   {
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
-	}
-}
-
 @media only screen and (min-width: 801px) and (max-width: 900px)   {
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
+	#pageContent{
+		padding-top: 7%;
+	}
+	#banner_img_laptop{
+		display: block;
+		position: absolute;
+		margin-top: -25%;
+		width: 100%;
+	}
+	#what{
+		margin-top: -30%;
+		padding: 47% 0 20% 0;
 	}
 	#team {
 		margin-top: -15%;
@@ -1043,9 +1071,12 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 701px) and (max-width: 800px)   {
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
+	#banner_img_laptop{
+		margin-top: -23%;
+	}
+	#what{
+		margin-top: -53%;
+		padding: 70% 0 20% 0;
 	}
 	#team {
 		margin-top: -20%;
@@ -1060,9 +1091,12 @@ a.btn-tc-lnk{
 	#residence{
 		margin-top: -45%;
 	}
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
+	#banner_img_laptop{
+		margin-top: -20%;
+	}
+	#what{
+		margin-top: -58%;
+		padding: 75% 0 20% 0;
 	}
 	#team {
 		margin-top: -20%;
@@ -1077,18 +1111,15 @@ a.btn-tc-lnk{
 	#residence{
 		margin-top: -45%;
 	}
-
 	#bannerLayer {
 		padding-top: 5%;
 	}
-
-	#banner_img {
-		margin-top: -32%;
+	#banner_img_laptop{
+		margin-top: -12%;
 	}
-
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
+	#what{
+		margin-top: -68%;
+		padding: 90% 0 20% 0;
 	}
 	#team {
 		margin-top: -45%;
@@ -1103,20 +1134,22 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 401px) and (max-width: 500px) {
-	#residence{
-		margin-top: -45%;
-	}
 
 	#bannerLayer {
 		padding-top: 7%;
 	}
-	#banner_img {
-		margin-top: -30%;
+	#banner_img_laptop{
+		display: none;
 	}
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
+	#banner_img_mobile{
+		display: block;
+		margin-top: -28%;
 	}
+	#what{
+		margin-top: -85%;
+		padding: 120% 0 20% 0;
+	}
+
 	#team {
 		margin-top: -50%;
 		padding: 15% 0 20% 0;	
@@ -1133,9 +1166,13 @@ a.btn-tc-lnk{
 	#bannerLayer {
 		padding-top: 5%
 	}
-	#what {
-		margin-top: -150%;
-		padding: 160% 0% 15% 0%;
+	#banner_img_mobile{
+		display: block;
+		margin-top: -27%;
+	}
+	#what{
+		margin-top: -130%;
+		padding: 160% 0 20% 0;
 	}
 	#team {
 		margin-top: -55%;
@@ -1149,12 +1186,11 @@ a.btn-tc-lnk{
 	}
 }
 
-
 @media only screen and (max-width: 300px) {
-	#what {
+	/* #what {
 		margin-top: -70%;
 		padding: 60% 0% 15% 0%;
-	}
+	} */
 	#team {
 		margin-top: -55%;
 		padding: 25% 0 20% 0;	
@@ -1174,6 +1210,7 @@ a.btn-tc-lnk{
 		height: 55px;
 	}
 }
+
 
 /* effect */
 
