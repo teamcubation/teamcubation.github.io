@@ -61,16 +61,16 @@
     "title": "¿CÓMO LO HACEMOS?",
     "descriptionText": {
       "lineOne": {
-        "standardTextOne": "Diseñamos una experiencia de ",
-        "boldTextOne": "seis meses ",
-        "standardTextTwo": "que permite acelerar el ",
-        "boldTextTwo": "desarrollo del seniority"
+        "standardTextOne": "Diseñamos una ",
+        "boldTextOne": "experiencia de 6 meses ",
+        "standardTextTwo": "que permite ",
+        "boldTextTwo": "acelerar el seniority de tus perfiles junior "
       },
       "lineTwo": {
-        "standardTextOne": "de sus perfiles ",
-        "boldTextOne": "Juniors",
-        "standardTextTwo": " a la vez que desarrollamos un",
-        "boldTextTwo": " Software que tienen en el backlog."
+        "standardTextOne": "mientras desarrollamos un ",
+        "boldTextOne": "software que tu compañía tiene en el backlog",
+        "standardTextTwo": "",
+        "boldTextTwo": ""
       },
       "lineThree": {
         "standardTextOne": "junto a sus ",
@@ -99,7 +99,7 @@
         "lineTwo": "compañía necesita"
       },
       "text":{
-        "lineOne": "El mejor desafío para cualquier Junior es participar de un proyecto real. Por eso en Teamcubation desarrollamos un producto que su compañía tenga en el backlog, pero que nunca logren priorizar."
+        "lineOne": "El mejor desafío para cualquier Junior es participar de un proyecto real. Por eso en Teamcubation desarrollamos un producto que tu compañía tenga en el backlog, pero que nunca logren priorizar."
       } 
     },
     "cardOrganization":{
@@ -118,8 +118,8 @@
         "lineTwo": "seniors"
       },
       "text":{
-        "lineOne": "Un Senior y un Leader serán asignados a cada squad según el stack tecnológico y las necesidades específicas de su compañía.",
-        "lineTwo": "Ambos son parte del equipo Teamcubation pero serán capacitados en las metodologías de trabajo de su organización para generar una dinámica en el Squad que simule la experiencia de trabajar en desarrollo de software dentro de su empresa."
+        "lineOne": "Un Senior y un Leader serán asignados a cada squad según el stack tecnológico y las necesidades específicas de tu compañía.",
+        "lineTwo": "Ambos son parte del equipo Teamcubation pero serán capacitados en las metodologías de trabajo de tu organización para generar una dinámica en el Squad que simule la experiencia de trabajar en desarrollo de software dentro de tu empresa."
       } 
     },
     "cardYourJuniors":{
@@ -129,7 +129,7 @@
         "lineTwo": "juniors"
       },
       "text":{
-        "lineOne": "Serán parte de su nómina desde el día cero. Son sus empleados, pero serán liderados y estarán trabajando en equipo con nuestros Seniors, durante el período de 6 meses en el que adquirirán la experiencia que les falta para integrarse a su organización."
+        "lineOne": "Serán parte de tu nómina desde el día cero. Son sus empleados, pero serán liderados y estarán trabajando en equipo con nuestros Seniors, durante el período de 6 meses en el que adquirirán la experiencia que les falta para integrarse a tu organización."
       } 
     }
   },
@@ -142,7 +142,7 @@
         "lineOne": "Discovery"
       },
       "text":{
-        "lineOne": "Relevamiento inicial de la forma de trabajar de su organización a través de la observación y el aprendizaje de sus metodologías, stack tecnológico y cultura. Juntos evaluaremos los proyectos para elegir el más indicado."
+        "lineOne": "Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de sus metodologías, stack tecnológico y cultura. Juntos evaluaremos los proyectos para elegir el más indicado."
       } 
     },
     "cardEjecution":{
@@ -151,7 +151,7 @@
         "lineOne": "Ejecución"
       },
       "text":{
-        "lineOne": "La experiencia de 6 meses liderada por nuestros Seniors fomenta y potencia el desarrollo técnico de los Juniors y el desarrollo de sus habilidades blandas tales como comunicación, trabajo en equipo, manejo del estrés y adaptación al cambio."
+        "lineOne": "La experiencia de 6 meses liderada por nuestros Seniors potencia el desarrollo técnico de los Juniors y el desarrollo de sus habilidades blandas tales como comunicación, trabajo en equipo, manejo del estrés y adaptación al cambio. A la vez, fomenta la integración a la cultura de tu empresa."
       } 
     },
     "cardDelivery":{
@@ -163,7 +163,7 @@
         "lineOne": "Gracias a nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), podremos potenciar a cada Junior en la habilidad que más necesitan trabajar, asegurándonos que al término del proyecto puedan integrarse de manera productiva a los equipos de la organización."
       } 
     },
-    "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a sus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de su organización."
+    "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a sus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización."
   },
   "partners":{
     "centralText": "¿CON QUIÉNES TRABAJAMOS JUNTOS PARA POTENCIAR EL NUEVO TALENTO DIGITAL?"
