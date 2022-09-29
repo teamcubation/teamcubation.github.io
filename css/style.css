@@ -1163,15 +1163,23 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (min-width: 301px) and (max-width: 400px) {
+	h1{
+		font-size: calc(6.8vw + 0.3em);
+	}
+	.subTitle {
+		font-family: 'Anek Bangla';
+		font-size: calc(3.4vw + 0.4em);
+		font-weight: 300;
+	}
 	#bannerLayer {
 		padding-top: 5%
 	}
 	#banner_img_mobile{
 		display: block;
-		margin-top: -27%;
+		margin-top: -20%;
 	}
 	#what{
-		margin-top: -130%;
+		margin-top: -120%;
 		padding: 160% 0 20% 0;
 	}
 	#team {
@@ -1179,7 +1187,7 @@ a.btn-tc-lnk{
 		padding: 20% 0 20% 0;	
 	}
 	#clients {
-		padding: 5% 5% 40% 5%;
+		padding: 5% 5% 50% 5%;
 	}
 	#devsJuniorsDivider{
 		margin-bottom: -4%;
@@ -1187,10 +1195,15 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (max-width: 300px) {
-	/* #what {
-		margin-top: -70%;
-		padding: 60% 0% 15% 0%;
-	} */
+	#banner_img_mobile{
+		display: block;
+		margin-top: -20%;
+	}
+	#what{
+		margin-top: -140%;
+		padding: 180% 0 20% 0;
+	}
+
 	#team {
 		margin-top: -55%;
 		padding: 25% 0 20% 0;	
