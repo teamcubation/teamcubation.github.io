@@ -351,7 +351,12 @@ nav{
 #banner{
 	color: white;
 }
-
+#bannerProblem{
+	margin-bottom: 3%;
+}
+#bannersolution{
+	margin-bottom: 3%;
+}
 #residence{
     margin-top: -15%;
     padding: 40% 10% 30% 5%;
@@ -948,9 +953,6 @@ a.btn-tc-lnk{
 }
 
 @media only screen and (max-width: 768px) {
-	#bannerLayer{
-		margin: 0% 10%
-	}
 	.sceneOne,
 	.sceneThree{
 		display: none;
@@ -961,6 +963,9 @@ a.btn-tc-lnk{
 	}
 	#logo{
 		width: calc(50% + 10vw);
+	}
+	#bannersolution :nth-child(2){
+		margin-bottom: 5%;
 	}
 	#bannerDecorationPlus{
 		margin-bottom: 0;
@@ -1095,7 +1100,7 @@ a.btn-tc-lnk{
 		margin-top: -20%;
 	}
 	#what{
-		margin-top: -58%;
+		margin-top: -62%;
 		padding: 75% 0 20% 0;
 	}
 	#team {
@@ -1118,7 +1123,7 @@ a.btn-tc-lnk{
 		margin-top: -12%;
 	}
 	#what{
-		margin-top: -68%;
+		margin-top: -75%;
 		padding: 90% 0 20% 0;
 	}
 	#team {
@@ -1146,7 +1151,7 @@ a.btn-tc-lnk{
 		margin-top: -28%;
 	}
 	#what{
-		margin-top: -85%;
+		margin-top: -90%;
 		padding: 120% 0 20% 0;
 	}
 
@@ -1164,23 +1169,25 @@ a.btn-tc-lnk{
 
 @media only screen and (min-width: 301px) and (max-width: 400px) {
 	h1{
-		font-size: calc(6.8vw + 0.3em);
+		font-size: calc(7.3vw + 0.3em);
 	}
 	.subTitle {
 		font-family: 'Anek Bangla';
-		font-size: calc(3.4vw + 0.4em);
-		font-weight: 300;
+		font-size: calc(4vw + 0.4em);
+		font-weight: 400;
+    	color: #a3a3a3;
 	}
 	#bannerLayer {
-		padding-top: 5%
+		padding-top: 10%;
+		margin: 0 5%;
 	}
 	#banner_img_mobile{
 		display: block;
-		margin-top: -20%;
+		margin-top: -15%;
 	}
 	#what{
-		margin-top: -120%;
-		padding: 160% 0 20% 0;
+		margin-top: -130%;
+		padding: 162% 0 20% 0;
 	}
 	#team {
 		margin-top: -55%;
