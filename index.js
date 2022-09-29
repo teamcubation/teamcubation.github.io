@@ -350,7 +350,6 @@ $(".scrollToTop").on("click", function (e) {
 
 $(".how").on("click", function (e) {
   e.preventDefault();
-  console.log(e)
   location.href = `#how`;
   perfectScroll("scrolltoHow", screen.width > 768 ? 150 : 10);
 });
@@ -418,8 +417,8 @@ AOS.init({
   once: true,
   delay: 0,
   offset: 0,
-  duration: 500,
-  easing: 'ease'
+  duration: "1600",
+  easing: 'ease-out-cubic'
 });
 
 
@@ -480,7 +479,7 @@ $(function(){
   writer(team.people.name, team.people.role, 150, 0);
   writer(team.cfo.name, team.cfo.role, 150, 0);
   writer(team.data.name, team.data.role, 150, 0);
- });
+});
  
 const writer = (container, text, interval, n) => {
   var i=0,
