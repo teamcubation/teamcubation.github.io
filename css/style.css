@@ -197,7 +197,8 @@ ul{
 	margin-top: -18%;
 }
 .gradientBlackGray{
-	background: linear-gradient(0deg, rgb(176 176 176 / 76%) 0%, rgb(0 0 0 / 97%) 95%);
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(89,88,90,1) 100%);
 }
 
 /* components layouts */
@@ -774,12 +775,12 @@ a.btn-tc-lnk{
 
 #logoCardOurJuniorsDouble{
 	position: absolute;
-	right: 23%;
+	right: 82px;
 }
 
 #logoCardOurJuniorsSingle{
 	position: absolute;
-	right: 10%;
+	right: 25px;
 }
 
 #how{

@@ -39,11 +39,11 @@
     "solution": {
       "centralText" :{
         "lineOne": "ENTRENAMOS DEVELOPERS",
-        "lineTwo": "PARA TU COMPAÑIA"
+        "lineTwo": "PARA TU COMPAÑÍA"
       } ,
       "descriptionText":{
         "lineOne": "Mientras desarrollamos software",
-        "lineTwo": "que uds necesitan"
+        "lineTwo": "que ustedes necesitan"
       }
     }      
   },
@@ -59,7 +59,7 @@
   },
   "process": {
     "grayTextOne": "Con",
-    "whiteTextOne": " tecnologia y un proceso",
+    "whiteTextOne": " tecnología y un proceso",
     "textTwo": " diseñados para adquirir ",
     "whiteTextThree": "experiencia",
     "grayTextThree": " mientras",
