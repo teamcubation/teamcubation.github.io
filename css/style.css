@@ -1092,7 +1092,7 @@ a.btn-tc-lnk{
 
 @media only screen and (max-width: 300px) {
 	h2 {
-		font-size: calc(4.3vw + 0.1em);
+		font-size: calc(4.2vw + 0.1em);
 	}
 	#bannerLayer{
 		padding-top: 0%;
@@ -1108,11 +1108,11 @@ a.btn-tc-lnk{
 		margin: 0% 5% 0 5%;
 		position: relative;
 		z-index: 3;
-		padding: 11% 2.5%;
+		padding: 7% 2.5%;
 	}
 	#what{
 		margin-top: -170%;
-		padding: 180% 0 20% 0;
+		padding: 187% 0 20% 0;
 	}
 	#team{
 		margin-top: -55%;
