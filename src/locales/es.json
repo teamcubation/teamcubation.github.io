@@ -82,7 +82,7 @@
         "boldTextTwo": ""
       },
       "lineThree": {
-        "standardTextOne": "junto a sus ",
+        "standardTextOne": "junto a tus ",
         "boldTextOne": " juniors ",
         "standardTextTwo": "en un squad con dos objetivos de igual importancia: "
       },
@@ -104,7 +104,7 @@
     "cardPlus":{
       "title": "EL VALOR AGREGADO",
       "centralText": {
-        "lineOne": "Software que su",
+        "lineOne": "Software que tu",
         "lineTwo": "compañía necesita"
       },
       "text":{
@@ -117,7 +117,7 @@
         "lineOne": "Squads"
       },
       "text":{
-        "lineOne": "Cada uno de los squads estará compuesto por 3 de sus juniors que serán liderados técnicamente por uno de nuestros seniors. Al mismo tiempo, un Leader de squad estará a cargo de seguir el proceso Teamcubation, velar por la evolución de los juniors y asegurar que el software cumpla con los requerimientos"
+        "lineOne": "Cada uno de los squads estará compuesto por 3 de tus juniors que serán liderados técnicamente por uno de nuestros seniors. Al mismo tiempo, un Leader de squad estará a cargo de seguir el proceso Teamcubation, velar por la evolución de los juniors y asegurar que el software cumpla con los requerimientos"
       } 
     },
     "cardOurSeniors":{
@@ -134,11 +134,11 @@
     "cardYourJuniors":{
       "title": "LAS GANAS",
       "centralText": {
-        "lineOne": "Sus",
+        "lineOne": "Tus",
         "lineTwo": "juniors"
       },
       "text":{
-        "lineOne": "Serán parte de tu nómina desde el día cero. Son sus empleados, pero serán liderados y estarán trabajando en equipo con nuestros Seniors, durante el período de 6 meses en el que adquirirán la experiencia que les falta para integrarse a tu organización."
+        "lineOne": "Serán parte de tu nómina desde el día cero. Son tus empleados, pero serán liderados y estarán trabajando en equipo con nuestros Seniors, durante el período de 6 meses en el que adquirirán la experiencia que les falta para integrarse a tu organización."
       } 
     }
   },
@@ -151,7 +151,7 @@
         "lineOne": "Discovery"
       },
       "text":{
-        "lineOne": "Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de sus metodologías, stack tecnológico y cultura. Juntos evaluaremos los proyectos para elegir el más indicado."
+        "lineOne": "Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de tus metodologías, stack tecnológico y cultura. Juntos evaluaremos los proyectos para elegir el más indicado."
       } 
     },
     "cardEjecution":{
@@ -172,7 +172,7 @@
         "lineOne": "Gracias a nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), podremos potenciar a cada Junior en la habilidad que más necesitan trabajar, asegurándonos que al término del proyecto puedan integrarse de manera productiva a los equipos de la organización."
       } 
     },
-    "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a sus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización."
+    "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a tus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización."
   },
   "partners":{
     "centralText": "¿CON QUIÉNES TRABAJAMOS JUNTOS PARA POTENCIAR EL NUEVO TALENTO DIGITAL?"
