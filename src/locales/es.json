@@ -38,12 +38,12 @@
     },
     "solution": {
       "centralText" :{
-        "lineOne": "ENTRENAMOS TUS",
-        "lineTwo": "DEVELOPERS"
+        "lineOne": "ENTRENAMOS DEVELOPERS",
+        "lineTwo": "PARA TU COMPAÑIA"
       } ,
       "descriptionText":{
-        "lineOne": "Mientras desarrollamos el software",
-        "lineTwo": "que tu compañía necesita"
+        "lineOne": "Mientras desarrollamos software",
+        "lineTwo": "que uds necesitan"
       }
     }      
   },
@@ -56,6 +56,15 @@
       "lineOne": "Trabajamos juntos para potenciar",
       "lineTwo": "el nuevo talento"
     }
+  },
+  "process": {
+    "grayTextOne": "Con",
+    "whiteTextOne": " tecnologia y un proceso",
+    "textTwo": " diseñados para adquirir ",
+    "whiteTextThree": "experiencia",
+    "grayTextThree": " mientras",
+    "grayTextFour": "construimos",
+    "whiteTextFour": " proyectos reales"
   },
   "weDo": {
     "title": "¿CÓMO LO HACEMOS?",
