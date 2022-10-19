@@ -4,34 +4,25 @@
   "lang": {
     "text": "es",
     "textButton": "Lenguaje",
+    "iconButton": "media/worl_icon.svg",
     "spanish": "Español",
     "english": "Inglés"
   },
-  "searchLinks": "https://teamcubation.bamboohr.com/jobs/",
   "textLinks": {
       "whatLink": "¿Cómo?",
       "howLink": "La experiencia",
       "clientsLink": "Clientes",
       "teamLink": "Equipo",
       "contactLink": "Contactanos",
-      "devsJuniorsLink": "Devs Junior",
-      "devsSeniorsLink": "Devs con experiencia"
-  },
-  "navBar":{
-    "what": "¿Cómo?",
-    "how": "La experiencia",
-    "clients": "Clientes",
-    "team": "Equipo",
-    "devsJunior": "Devs Junior",
-    "devsSenior": "Devs con experiencia",
-    "contact": "Contactanos"
+      "devsJuniorLink": "Devs Junior",
+      "devsSeniorLink": "Devs con experiencia"
   },
   "banner":{
     "url": "https://teamcubation.com/en",
     "descriptionProblem": {
       "lineOne" : "“Se nos va la gente”",
       "lineTwo" : "“Perdemos oportunidades”",
-      "lineThree" : "“Cada vez que contrato se van otros”",
+      "lineThree" : "“Nunca llegamos a cubrir todas las posiciones vacantes”",
       "lineFour" : "“Cada vez está peor...”",
       "lineFive" : "“No hay más seniors”",
       "lineSix" : "¿Suena conocido?"

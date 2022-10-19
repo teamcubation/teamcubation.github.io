@@ -48,41 +48,57 @@
       <img id="logo" class="scrollToTop" src="media/logo.png" alt="Teamcubation">
     </div>
     <div class="navigate">
-      <a class="what" data-t data-attr-t data-attr-t-interpolate href="#what">navBar.what</a>
-      <a class="how" data-t data-attr-t data-attr-t-interpolate href="#how">navBar.how</a>
-      <a class="clients" data-t data-attr-t data-attr-t-interpolate href="#clients">navBar.clients</a>
-      <a class="team" data-t data-attr-t data-attr-t-interpolate href="#team">navBar.team</a>
-      <a class="contact" data-t data-attr-t data-attr-t-interpolate href="#contact">navBar.contact</a>
-      <a class="devsJuniors" data-t data-attr-t data-attr-t-interpolate href="#devsJuniors">navBar.devsJunior</a>
-      <a class="devsSeniors" data-t data-attr-t data-attr-t-interpolate href="#devsSeniors">navBar.devsSenior</a>
-      <!-- <div class="language-select">
+      <a class="what" data-t data-attr-t data-attr-t-interpolate href="#what">textLinks.whatLink</a>
+      <a class="how" data-t data-attr-t data-attr-t-interpolate href="#how">textLinks.howLink</a>
+      <a class="clients" data-t data-attr-t data-attr-t-interpolate href="#clients">textLinks.clientsLink</a>
+      <a class="team" data-t data-attr-t data-attr-t-interpolate href="#team">textLinks.teamLink</a>
+      <a class="contact" data-t data-attr-t data-attr-t-interpolate href="#contact">textLinks.contactLink</a>
+      <a class="devsJuniors" data-t data-attr-t data-attr-t-interpolate href="#devsJuniors">textLinks.devsJuniorLink</a>
+      <a class="devsSeniors" data-t data-attr-t data-attr-t-interpolate href="#devsSeniors">textLinks.devsSeniorLink</a>
+      <div class="language-select">
         <div class="language-tittle">
-          <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{section_1.flag}}" alt="redirect_lang">
+          <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
           <p data-t>lang.textButton</p>
         </div>
-        <ul class="lenguage-options">
+        <ul class="language-options">
           <li data-lang="es">
-            <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}">lang.spanish</a>
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
           </li>
           <li data-lang="en">
-            <a data-t data-attr-t data-attr-t-interpolate href-t="{{section_1.url}}">lang.english</a>
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
           </li>
         </ul>
-      </div> -->
+      </div>
     </div>
-    <div class="btn-menu-mobile">
-      <i class="icon ion-md-menu"></i>
+    <div style="display: flex">
+      <div id="selectLangMobile" class="language-select-mobile">
+        <div class="language-tittle">
+          <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
+          <p data-t>lang.textButton</p>
+        </div>
+        <ul class="language-options">
+          <li data-lang="es">
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
+          </li>
+          <li data-lang="en">
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-menu-mobile">
+        <i class="icon ion-md-menu"></i>
+      </div>
     </div>
   </div>
   <div id="navBarMobile">
     <div class="navigate-mobile">
-      <a class="what" data-t data-attr-t data-attr-t-interpolate href="#what">navBar.what</a>
-      <a class="how" data-t data-attr-t data-attr-t-interpolate href="#how">navBar.how</a>
-      <a class="clients" data-t data-attr-t data-attr-t-interpolate href="#clients">navBar.clients</a>
-      <a class="team" data-t data-attr-t data-attr-t-interpolate href="#team">navBar.team</a>
-      <a class="contact" data-t data-attr-t data-attr-t-interpolate href="#contact">navBar.contact</a>
-      <a class="devsJuniors" data-t data-attr-t data-attr-t-interpolate href="#devsJuniors">navBar.devsJunior</a>
-      <a class="devsSeniors" data-t data-attr-t data-attr-t-interpolate href="#devsSeniors">navBar.devsSenior</a>
+      <a class="what" data-t data-attr-t data-attr-t-interpolate href="#what">textLinks.whatLink</a>
+      <a class="how" data-t data-attr-t data-attr-t-interpolate href="#how">textLinks.howLink</a>
+      <a class="clients" data-t data-attr-t data-attr-t-interpolate href="#clients">textLinks.clientsLink</a>
+      <a class="team" data-t data-attr-t data-attr-t-interpolate href="#team">textLinks.teamLink</a>
+      <a class="contact" data-t data-attr-t data-attr-t-interpolate href="#contact">textLinks.contactLink</a>
+      <a class="devsJuniors" data-t data-attr-t data-attr-t-interpolate href="#devsJuniors">textLinks.devsJuniorLink</a>
+      <a class="devsSeniors" data-t data-attr-t data-attr-t-interpolate href="#devsSeniors">textLinks.devsSeniorLink</a>
     </div>
   </div>
 </nav>
@@ -494,8 +510,8 @@
           <div class="col-6 col-md-4">
             <div class="d-flex flex-column">
               <a class="contact color-light-gray mb-0 navigate-organization" data-t href="#contact">textLinks.contactLink</a>
-              <a class="devsJuniors color-light-gray mb-0 navigate-organization" data-t href="#devsJuniors">textLinks.devsJuniorsLink</a>
-              <a class="devsSeniors color-light-gray mb-0 navigate-organization" data-t href="#devsSeniors">textLinks.devsSeniorsLink</a>
+              <a class="devsJuniors color-light-gray mb-0 navigate-organization" data-t href="#devsJuniors">textLinks.devsJuniorLink</a>
+              <a class="devsSeniors color-light-gray mb-0 navigate-organization" data-t href="#devsSeniors">textLinks.devsSeniorLink</a>
             </div>
           </div>
         </div>

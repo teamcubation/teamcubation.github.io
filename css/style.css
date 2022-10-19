@@ -246,17 +246,24 @@ nav{
 	font-family: 'Anek Bangla';
 }
 
-#navBar .btn-menu-mobile{
-	display: none;
-	justify-content: center;
-	align-items: center;
-}
-
 #navBarMobile{
 	position: absolute;
 	width: 100%;
 	background-color: #f2eeeef7;
 	display: none;
+}
+
+#navBar .language-select-mobile{
+	position: relative;
+	display: none;
+	justify-content: center;
+	margin-right: 1em;
+}
+
+#navBar .btn-menu-mobile{
+	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
 .navigate-mobile{
@@ -610,34 +617,46 @@ ion-icon {
 	margin-top: -5%;
 }
 
-.lenguage-options{ 
+.language-options{ 
 	display: none;
+	position: absolute;
+	margin: 2em 0 1em 0;
+	background: white;
+	border-radius: 5px;
+	padding: 0.5em 0 0.5em 1em;
+	width: 100%;
+	border: 1px solid rgba(224, 224, 224, 0.651);
+}
+
+.language-options a{
+	font-size: calc(0.4vw + 0.8em);;
 }
 
 .flag{
-	width: 30px;
-	height: 30px;
+	width:  calc(0.7vw + 0.7em);
+	height:  calc(0.7vw + 0.7em);
 	z-index: 2;
 }
 
 .language-select{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	color: var(--color-gray-100);
-	min-width: 120px;
-}
-
-.language-tittle p{
-	margin: 0;
-	font-size: 1.3em;
+	min-width: 100px;
 }
 
 .language-tittle{
 	display: flex;
 	justify-content: space-around;
-	align-items: end;
+	align-items: center;
 	cursor: pointer;
+}
+
+.language-tittle p{
+	margin: 0;
+	font-size: calc(0.7vw + 0.7em);
 }
 
 .a-flag{
@@ -832,8 +851,6 @@ a.btn-tc-lnk{
 		z-index: 2;
 	}	
 	.language-select{
-		top: 12%;
-		right: 80%;
 		min-width: 90px;
 	}
 
@@ -862,6 +879,17 @@ a.btn-tc-lnk{
 	#navBar .btn-menu-mobile{
 		display: flex;
 	}
+	#navBar .language-select-mobile{
+		min-width: 90px;
+		justify-content: center;
+		display: flex;
+	}
+
+	.language-options{ 
+		margin: 3.5em 0 1em 0;
+		padding: 0.5em 0 0.5em 1em;
+	}
+	
 	.sceneOne{
 		display: none;
 	}
@@ -906,15 +934,9 @@ a.btn-tc-lnk{
 		z-index: 2;
 	}	
 	.language-select{
-		top: 9%;
-		right: 75%;
+		/* top: 9%;
+		right: 75%; */
 		min-width: 80px;
-	}
-	.lenguage-options{
-		background: white;
-		border-radius: 5px;
-		border: 1px solid #cacaca96;
-		padding: 2px 0 2px 5px;
 	}
 	.language-select-home{
 		top: 2%!important;
@@ -1073,7 +1095,7 @@ a.btn-tc-lnk{
 		margin: 0% 5% 0 5%;
 		position: relative;
 		z-index: 3;
-		padding: 11% 2.5%;
+		padding: 13% 2.5%;
 	}
 	#what{
 		margin-top: -135%;

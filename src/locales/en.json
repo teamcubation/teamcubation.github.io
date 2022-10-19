@@ -3,433 +3,261 @@
   "description": "Teamcubation is the bridge between education and work. we want to contribute to solve the digital senior talent shortage by incubating junior development teams to take on more senior roles.",
   "lang": {
     "text": "en",
-    "text_button": "Language",
+    "iconButton": "media/worl_icon.svg",
+    "textButton": "Language",
     "spanish": "Spanish",
     "english": "English"
   },
   "textLinks": {
-    "organization": "ORGANIZATION",
-    "senior": "SENIOR",
-    "junior": "JUNIOR",
-    "team": "ABOUT US"
-
+    "whatLink": "How",
+    "howLink": "The experience",
+    "clientsLink": "Clients",
+    "teamLink": "Team",
+    "contactLink": "Contact us",
+    "devsJuniorLink": "Junior Devs",
+    "devsSeniorLink": "Experienced devs"
   },
-  "home":{
-    "url": "https://teamcubation.com/",
-    "welcome": "Welcome",
-    "enter":{
-      "organization": {
-        "name": "ORGANIZATION",
-        "default-legend":"I’m an organization",
-        "description-bold": "WE TRANSFORM JUNIOR DEVELOPERS IN RTW (READY TO WORK) EXPERTS",
-        "description":"WHILE THEY DEVELOP THE SOFTWARE YOUR ORGANIZATION NEEDS"
-      },
-      "senior": {
-        "name": "SENIOR",
-        "default-legend":" I’m a Senior dev",
-        "description-bold": "WE TEACH YOU TO TRANSFORM JUNIOR DEVELOPERS IN RTW SENIORS",
-        "description": "BE THE SENIOR DEV THAT YOU'D HAVE LIKED BY YOUR SIDE WHEN YOU WERE A JUNIOR"
-      },
-      "junior": {
-        "name": "JUNIOR",
-        "default-legend":" I’m a Junior dev",
-        "description-bold": "WE ARE A TIME MACHINE",
-        "description":"AND WE HELP YOU TO GET THE EXPERIENCE THAT YOU'D GET IN A LONG TIME IN ONLY 6 MONTHS"
-      },
-      "team": {
-        "name": "TEAM",
-        "default-legend":"Us",
-        "description-bold": "GET TO KNOW EVERYTHING ABOUT US",
-        "description":"WHAT AND WHO MAKE US THE FIRST COMPANY IN DEVELOPERS TRAINING MARKET"
+  "banner":{
+    "url": "https://teamcubation.com",
+    "descriptionProblem": {
+      "lineOne" : "“Senior devs keep leaving”",
+      "lineTwo" : "“We lose opportunities”",
+      "lineThree" : "“We cannot keep up with the hiring”",
+      "lineFour" : "“It's getting worse every day”",
+      "lineFive" : "“Senior developers are hard to find”",
+      "lineSix" : "Sounds familiar?"
+    },
+    "solution": {
+      "centralText" :{
+        "lineOne": "WE TRAIN DEVELOPERS",
+        "lineTwo": "FOR YOUR COMPANY"
+      } ,
+      "descriptionText":{
+        "lineOne": "While developing the software ",
+        "lineTwo": "you need"
       }
+    }      
+  },
+  "weTrain":{
+    "centralText":{
+      "lineOne": "ENTRENAMOS",
+      "lineTwo": "DEVELOPERS"
+    },
+    "descriptionText":{
+      "lineOne": "Trabajamos juntos para potenciar",
+      "lineTwo": "el nuevo talento"
     }
   },
-  "section_1": { 
-    "url": "https://teamcubation.com/#organization",
-    "flag": "media/worl_icon.svg",
-    "tittle": "ORGANIZATION",
-    "carousel": {
-      "text_1": "“We lose opportunities due to lack of people”",
-      "helper_1": "CEO",
-      "text_2": "“The devs are leaving us”",
-      "helper_2": "CTO",
-      "text_3": "“We have half the team we need”",
-      "helper_3": "Product Manager",
-      "text_4": "“There are no more senior developers”",
-      "helper_4": "People Manager"
-    },
-    "central_legend": {
-      "style_h1": "margin-left: 10%",
-      "h1": "WE TRAIN",
-      "h2": "DEVELOPERS"
-    },
-    "descriptive_legend": {
-      "style_closing_tag": "margin-left: 2%; font-size: calc(1.1em + 2vw); line-height: 0;",
-      "class": "Descriptive-legend-organization-en",
-      "class_line4": "d-none",
-      "class_line3": "d-inline color-red",
-      "line_1": "WE TRANSFORM JUNIOR DEVELOPERS INTO ",
-      "line_2": "READY TO WORK EXPERTS WHILE THEY DEVELOP",
-      "line_3": "THE SOFTWARE YOUR ORGANIZATION NEEDS"
-    },
-    "learn_more": {
-      "text": "Learn more"
-    }
+  "process": {
+    "grayTextOne": "With",
+    "whiteTextOne": " tech and a process",
+    "textTwo": " designed to acquire ",
+    "whiteTextThree": "experience",
+    "grayTextThree": " while",
+    "grayTextFour": "we build",
+    "whiteTextFour": " real projects"
   },
-  "section_2": {
-    "tittle": "WHAT IS",
-    "text": "Teamcubation is the bridge between education and work. we want to contribute to solve the digital senior talent shortage by incubating junior development teams to take on more senior roles."
-  },
-  "section_3": {
-    "tittle": {
-      "text_1": "WHAT IS",
-      "text_2": "OUR",
-      "text_3": "ANSWER"
-    } ,
-    "text_1": "With the surge of digital careers and coding schools, there are plenty of tech professionals with lots of potential and yet not enough experience. Finding and transforming them into rounded and experienced professionals takes effort, money, but most of all time and dedication.",
-    "text_2": "Teamcubation hacks the experience challenge, by providing an opportunity for people who would otherwise not make it to the pipeline. In only 6 months, we onboard and train the new batch of junior programmers, whilst working on one or more projects of your backlog. In turn, the senior devs in your organization can focus on the delivery of your key projects and as a bonus, we ease up a little bit the work of your hiring team."
-  },
-  "section_4": {
-    "tittle": {
-      "text_1": "HOW",
-      "text_2": "DO",
-      "text_3": "WE DO",
-      "text_4": "IT"
-    },
-    "img_steps": "media/img_3.png",
-    "steps": {
-      "1":{
-        "tittle": "ASSESSMENT",
-        "text": "We seek to understand your organization’s way of working by learning your technology stack, methodologies and culture."
+  "weDo": {
+    "title": "HOW DO WE DO IT?",
+    "descriptionText": {
+      "lineOne": {
+        "standardTextOne": "We designed  ",
+        "boldTextOne": "a 6-months experience ",
+        "standardTextTwo": "qthat allows ,   ",
+        "boldTextTwo": "you to accelerate the seniority of your junior devs "
       },
-      "2":{
-        "tittle": "EXECUTION",
-        "text": "We pull together a squad between your junior devs and 1 senior dev and 1 scrum lead of ours. This team will work together for 6 months developing a project in your backlog powered by PEP (our proprietary software used to customize the training to each person's needs). PEP stands for Programming Experience Platform but most importantly for PEP Guardiola! During this period we have several demos with your organization to ensure the project is aligned to your needs."
+      "lineTwo": {
+        "standardTextOne": "while we develop a ",
+        "boldTextOne": "software that your company has in the backlog",
+        "standardTextTwo": "",
+        "boldTextTwo": ""
       },
-      "3":{
-        "tittle": "DELIVERY",
-        "text": "The junior devs have acquired more seniority and are ready to take on projects of greater responsibility in your organization. Because all this time they have worked according to the info gathered in the initial assessment, interacted with your teams and even worked from your offices, they understand your company's processes and culture and are ready to hit the ground running."
+      "lineThree": {
+        "standardTextOne": "junto a tus ",
+        "boldTextOne": " juniors ",
+        "standardTextTwo": "en un squad con dos objetivos de igual importancia: "
+      },
+      "lineFour": {
+        "standardTextOne": "entregar el proyecto de software y entrenar a los juniors."
       }
+    },
+    "cardDuration":{
+      "title": "THE TIME",
+      "centralText": {
+        "lineOne": "Six",
+        "lineTwo": "months"
+      },
+      "text":{
+        "lineOne": "“Hey, that's a very long course!”",
+        "lineTwo": "It's not a course! We will develop a project, projects are not fully done in 2 or 3 months. 6 months is the time that a junior needs to go through the full Teamcubation_ training experience."
+      } 
+    },
+    "cardPlus":{
+      "title": "THE ADDED VALUE",
+      "centralText": {
+        "lineOne": "Software your ",
+        "lineTwo": "company needs"
+      },
+      "text":{
+        "lineOne": "The best challenge for any junior dev is being part of a real project. That's why in Teamcubation we develop a product that your company has in the backlog, but that never gets prioritized in your internal pipeline."
+      } 
+    },
+    "cardOrganization":{
+      "title": "THE ORGANIZATION",
+      "centralText": {
+        "lineOne": "Squads"
+      },
+      "text":{
+        "lineOne": "Each squad will be made up of 3 of your juniors devs that will be technically mentored by one of our senior devs. At the same time a squad Leader will ensure the implementation of Teamcubation´s process, overseeing the junior devs' evolution and ensuring the developed software meets the requirements."
+      } 
+    },
+    "cardOurSeniors":{
+      "title": "THE EXPERIENCE",
+      "centralText": {
+        "lineOne": "Our",
+        "lineTwo": "senior devs"
+      },
+      "text":{
+        "lineOne": "A Senior and a Leader will be assigned to each squad according to the tech stack and specific needs of your company.",
+        "lineTwo": "Both are part of the Teamcubation team and will be trained in the work methodologies of your organization in order to simulate the experience of working in software development inside your company."
+      } 
+    },
+    "cardYourJuniors":{
+      "title": "THE ENERGY",
+      "centralText": {
+        "lineOne": "Yours",
+        "lineTwo": "juniors"
+      },
+      "text":{
+        "lineOne": "They will be part of your company from day zero. They are your employees, but will be led by and work alongside our Senior devs during 6 months. During that time they will gain the experience they need to join your development teams."
+      } 
     }
   },
-  "section_5": {
-    "tittle": {
-      "text_1": "CONTACT",
-      "text_2": "US"
+  "howDo":{
+    "title": "THE EXPERIENCE",
+    "descriptionText": "A 3-phase process to keep a constant developers flow in your company.",
+    "cardDiscovery":{
+      "title": "INTEGRATING CULTURE AND TECHNOLOGY",
+      "centralText": {
+        "lineOne": "Discovery"
+      },
+      "text":{
+        "lineOne": "We assess the way your organization works through observation and learning of your methodologies, tech stack and culture. Together we evaluate the projects to choose the one that is most appropriate for our goal."
+      } 
     },
-    "contact-form": {
+    "cardEjecution":{
+      "title": "DEVELOPING THE SOFTWARE",
+      "centralText": {
+        "lineOne": "Execution"
+      },
+      "text":{
+        "lineOne": "The 6-months experience led by our Senior devs enhances  your Juniors´ technical development as well as their soft skills such as communication, teamwork, stress management and adaptation to change. At the same time, the process promotes the integration of your juniors to your company's culture."
+      } 
+    },
+    "cardDelivery":{
+      "title": "COMMITMENTS MET",
+      "centralText": {
+        "lineOne": "Delivery"
+      },
+      "text":{
+        "lineOne": "Thanks to our Programming Experience Platform (PEP), a data-driven analytics learning tool, , we can reinforce the learning in the skill each junior needs the most, ensuring that at the end of the process, each of them can productively and smoothly integrate into your teams."
+      } 
+    },
+    "footerText": "And since we already work as a team, our leaders who already know the culture and methodologies of your company will be able to use their experience to train new squads and ensure your company's growing capacity."
+  },
+  "partners":{
+    "centralText": "WHO ARE WE WORKING WITH TO BOOST THE NEW DIGITAL TALENT?"
+  },
+  "_team":{
+    "centralText": "THE TEAM",
+    "text": "After several years in the industry and the academy we realized there is a missing link between both worlds. The problem is clear and visible: we form a lot of people in tech but companies still have a lack of experienced talent to meet their needs."
+  },
+  "contact": {
+    "description":{
+      "centralText": "ATENCIÓN!",
+      "centralTextTwo": "Este formulario es para compañías!",
+      "text": {
+        "juniors": {
+          "verticalText": "JUNIORS",
+          "text":{
+            "boldTextOne": "",
+            "standardTextOne": "If you are a Junior/Trainee developer looking for your first job,",
+            "linkJuniors": "please apply here",
+            "standardTextTwo": " to be selected by one of our clients"
+          }
+        },
+        "seniors": {
+          "verticalText": "SENIORS",
+          "text":{
+            "boldTextOne": "If you are a seasoned Senior developer and enjoy sharing your knowledge with others,",
+            "standardTextOne": "please follow ",
+            "linkJuniors": "this link",
+            "standardTextTwo": "and apply to the job that best suits your profile"
+          }
+        },
+        "noCoders": {
+          "verticalText":  "NO_CODERS",
+          "text":{
+            "boldText": "If you didn’t learn programming, ",
+            "standardText": " please do it first and then get back to us. We don’t teach coding nor have teachers to do so. We work for companies who hire junior talent that already knows the basics of programming."
+          }
+        }
+      }
+    },
+    "form":{
+      "centralText": "CONTACT US",
       "name": "Name",
-      "organization": "Organization",
+      "organization": "Company",
       "telephone": {
-        "label": "Telephone",
+        "label": "Phone",
         "country": "Country",
         "area": "Area",
-        "number" : "Number"
+        "number" : "Phone number"
       },
-      "email": "E-mail",
-      "reason": "Leave your message here",
+      "email": "Email",
+      "reason": "Leave your comment here",
       "origin-extra": {
         "placeholder": "How do you identify yourself?",
         "options": {
-          "organization": "I'm an organization that wishes to incorporate Junior developers",
-          "senior": "I'm a Senior developer and I want to mentor Junior developers",
-          "junior": "I'm a Junior/Trainee developer with coding knowledge",
-          "no-exp": "I don't know how to code and I want to learn",
+          "organization": "I’m part of an organization, please contact me to tell me more about the service.",
+          "senior": "I’m a senior developer who wants to lead juniors at Teamcubation",
+          "junior": "I’m a junior developer who has basic coding knowledge",
+          "no-exp": "I don’t know anything about programming, but I want to learn.",
           "other": "Other"
         }
       }, 
-      "btn_text": "Submit",
-      "btn_sending": "Sending...",
+      "btn_text": "Send",
+      "btn_sending": "Enviando...",
       "submit-response": {
-        "success": "Your message has been sent, thank you!",
-        "error": "An error occurred while sending the form, please try again."
+        "success": "Su mensaje se ha enviado correctamente, gracias!",
+        "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
       }
     }
   },
-  "footer": {
-    "legal": "All rights reserved",
-    "searches": {
-      "link": " https://teamcubation.bamboohr.com/jobs/",
-      "text": "Work with us",
-      "text_left": "Take a look at our open positions<span class=_effect>_</span>"
-    }
+  "devsJuniors": {
+    "centralText": "DEVS JUNIORS",
+    "subtitle": {
+      "grayText":{
+        "lineOne": "We are a time machine that helps you acquire 2-years experience in 6 months."
+      },
+      "standardText":{
+        "lineOne": "The time machine exists.",
+        "lineTwo": "Hi, we are Teamcubation."
+      }
+    },
+    "text": "Our clients are other companies. They are the ones who hire Junior developers and often ask for our help in the recruitment process. Don’t hesitate! Follow this link and fill in the required information so that we can share with our clients at the next available opportunity.",
+    "textButton": "If you have no experience, apply here to our clients` junior roles<span class=_effect>_</span>"
   },
-  "senior":{
-    "section_1": {
-      "url": "https://teamcubation.com/#senior",
-      "flag": "media/b_english.png",
-      "tittle": "SENIOR",
-      "carousel": {
-        "text_1": "“I know a lot about the technology, but I don't get the chance to lead teams”",
-        "helper_1": "Senior Dev",
-        "text_2": "“I want to be the Senior that I would have loved next to me when I was a Junior”",
-        "helper_2": "Senior Dev",
-        "text_3": "“How can I have 4 years of experience if I learnt it 2 years ago!”",
-        "helper_3": "Junior Dev",
-        "text_4": "“It's impossible to have 20 years of experience in Docker when it came out in 2013!”",
-        "helper_4": "Junior Dev"
+  "devsSeniors": {
+    "centralText": "EXPERIENCED DEVS",
+    "subtitle": {
+      "blueText":{
+        "lineOne": "If you can see beyond the software, beyond the framework and you believe people are the key, join Teamcubation: "
       },
-      "central_legend": {
-        "style_h1": "",
-        "style_h2": "",
-        "h1": "TEACH WHAT",
-        "h2": "YOU KNOW"
-      },
-      "descriptive_legend": {
-        "class": "Descriptive-legend-senior-en",
-        "class_line4": "d-inline color-green weight-600",
-        "line_1": "MENTOR A TEAM JUNIOR",
-        "line_2": "DEVELOPERS WHILE YOU DEVELOP",
-        "line_3": "SOFTWARE FOR BIG COMPANIES"
-      },
-      "learn_more": {
-        "text": "Learn more"
+      "standardText":{
+        "lineOne": "earn how to lead teams, while you develop for big companies and share your knowledge with others."
       }
     },
-    "section_2": {
-      "tittle": "WHAT IS",
-      "text": "WE ARE THE COMPANY THAT TEACHES YOU TO TRANSFORM JUNIORS INTO READY TO WORK PEOPLE. If you see beyond software, beyond the framework and you understand the key is in in the people, join Teamcubation: learn how to lead teams, while you develop for big companies and share with others what you know."
-    },
-    "section_3": {
-      "tittle": {
-        "text_1": "WHAT",
-        "text_2": "WE",
-        "text_3": "SOLVE"
-      } ,
-      "text_1": "Organizations ask for senior developers, but the market only has juniors. How do we achieve the transformation from one to the other?",
-      "text_2": "Teamcubation takes care of breaking the loop of lack of experience transforming novice developers in a cohesive and efficient team ready to give the best of themselves to the company that hired them. And you will be the on in charge of this transformation."
-    },
-    "section_4": {
-      "tittle": {
-        "text_1": "HOW",
-        "text_2": "WE",
-        "text_3": "DO",
-        "text_4": "IT"
-      } ,
-      "img_steps": "media/senior/img_3_es.png",
-      "steps": {
-        "1":{
-          "tittle": "Teamcubation Onboarding:",
-          "text": "Welcome home. In Teamcubation you won't only learn new technologies, but also to lead teams, teach, mentor and lead a squad of developers."
-        },
-        "2":{
-          "tittle": "Onboarding to the client's organization:",
-          "text": "If you are Senior Squad Member, you will focus in understanding the tech stak of the organization: what do they do? with what frameworks? If are a Squad Leader, you will focus in the organization's culture: what methodologies do they use?, how do they do it?"
-        },
-        "3":{
-          "tittle": "Execution:",
-          "text": "We assign you a project, a Squad, and during six month you commit to accelerate the transformation of junior developers into seniors, with the help of our proprietary software of learning analytics, Programming Experience Platform (PEP) which, combined with your mentoring and experience will allow us to detect the areas that need more attention for each of the rookies."
-        }
-      }
-    },
-	"section_5": {
-	  "tittle": {
-		"text_1": "APP",
-		"text_2": "LY"
-	  },
-	  "contact-form": {
-		"name": "Name",
-		"organization": "Organization",
-		"telephone": {
-		  "label": "Telephone",
-		  "country": "Country",
-		  "area": "Area",
-		  "number" : "Number"
-		},
-		"email": "E-mail",
-		"reason": "Is there anything you want to tell us?",
-		"btn_text": "Submit",
-		"btn_sending": "Sending...",
-		"submit-response": {
-		  "success": "Thank you for contacting us!",
-		  "error": "An error occurred while sending the form, please try again."
-		}
-	  }
-	}
-  },
-  "junior":{
-    "section_1": {
-      "url": "https://teamcubation.com/#junior",
-      "flag": "media/b_english.png",
-      "tittle": "JUNIOR",
-      "carousel": {
-        "text_1": "“The time machine exists”",
-        "helper_1": "Ready To Work Junior Dev",
-        "text_2": "“Now I do have the opportunity to work in the place of my dreams”",
-        "helper_2": "Junior Dev",
-        "text_3": "“Without Junior Devs there are no Senior Devs”",
-        "helper_3": "Everybody says this...",
-        "text_4": "“The place where I finished my tech education”",
-        "helper_4": "Former Rookie"
-      },
-      "central_legend": {
-        "style_h1": "line-height: 0.7; font-size: calc(1.6em + 4.2vw);",
-        "style_h2": "font-size: calc(1em + 2.4vw);",
-        "h1": "EXPERIENCE",
-        "h2": "6 MONTHS = 2 YEARS"
-      },
-      "descriptive_legend": {
-        "class": "Descriptive-legend-junior-es",
-        "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "GET MORE EXPERIENCE WHILE WE",
-        "line_2": "HOLD YOUR HAND DEVELOPING A REAL PROJECT",
-        "line_3": "FOR THE COMPANY THAT HIRED YOU"
-      },
-      "learn_more": {
-        "text": "Learn more"
-      }
-    },
-    "section_2": {
-      "tittle": "WHAT WE ARE_?",
-      "text": "WE ARE A TIME MACHINE AND WE HELP YOU TO GET 2-YEARS EXPERIENCE IN 6 MONTHS. The time machine exists. Hi, we are Teamcubation."
-    },
-    "section_3": {
-      "tittle": {
-        "text_1": "WHAT",
-        "text_2": "WE",
-        "text_3": "SOLVE"
-      } ,
-      "text_1": "We are the missing bridge between the programming education world and the digital industry.",
-      "text_2": "In other words: we transform a junior in a “ready to work” developer, a Padawan into a Jedi, a Pelé into a Maradona. We make you gain experience in a transparent and fun environment, with good people, that know how to code, but even better, know how to teach."
-    },
-    "section_4": {
-      "tittle": {
-        "text_1": "HOW",
-        "text_2": "DO",
-        "text_3": "WE",
-        "text_4": "DO IT"
-      } ,
-      "img_steps": "media/junior/img_3_es.png",
-      "steps": {
-        "1":{
-          "tittle": "Teamcubation Onboarding:",
-          "text": "Are you ready to time travel and do in six months what others do in 2 years? We'll assign you a Squad, where you will immerse in the methodologies and technologies, and you will develop a software for your organization."
-        },
-        "2":{
-          "tittle": "Incubation and learning:",
-          "text": "Code. Code. A lot of code. Code like you've never done it. You'll get to know interesting people and have fun acquiring the abilities that the organization that hired you needs. And remember: it's not only about coding, we'll also teach you communication and leadership skills."
-        },
-        "3":{
-          "tittle": "END and farewell:",
-          "text": "We've learned to love you, but every bird has to go their family's nest. You came as a junior, today you are an experienced developer inside an organization. Make us proud and hold Teamcubation's name up high!"
-        }
-      }
-    },
-	  "section_5": {
-		"tittle": {
-		  "text_1": "CONTACT",
-		  "text_2": "US"
-		},
-		"contact-form": {
-		  "name": "Name",
-		  "organization": "Organization",
-		  "telephone": {
-			"label": "Telephone",
-			"country": "Country",
-			"area": "Area",
-			"number" : "Number"
-		  },
-		  "email": "E-mail",
-		  "reason": "Is there anything you want to tell us?",
-		  "btn_text": "Submit",
-		  "btn_sending": "Sending...",
-		  "submit-response": {
-			"success": "Thank you for contacting us!",
-			"error": "An error occurred while sending the form, please try again."
-		  }
-		}
-	  }
-  },
-  "team":{
-    "section_1": {
-      "url": "https://teamcubation.com/#team",
-      "flag": "media/b_english.png",
-      "tittle": "US",
-      "carousel": {
-        "text_1": "“The time machine exists”",
-        "helper_1": "Ready To Work Junior Dev",
-        "text_2": "“Now I do have the opportunity to work in the place of my dreams”",
-        "helper_2": "Junior Dev",
-        "text_3": "“Without Junior Devs there are no Senior Devs”",
-        "helper_3": "Everybody says this...",
-        "text_4": "“The place where I finished my tech education”",
-        "helper_4": "Former Rookie"
-      },
-      "central_legend": {
-        "style_h1": "line-height: 0.7; font-size: calc(0.5em + 4.1vw);",
-        "style_h2": "font-size: calc(1em + 2.4vw);",
-        "h1": "WE HAVE A TEAM!",
-        "h2": "Teamcubation_"
-      },
-      "descriptive_legend": {
-        "class": "Descriptive-legend-junior-es",
-        "class_line3": "d-inline color-light-turquoise weight-600",
-        "line_1": "WE SOLVE THE LACK OF TALENT",
-        "line_2": "AND FIRST JOB SEARCH USING DATA,",
-        "line_3": "ALLOWING THE HIRE OF INEXPERIENCED PEOPLE"
-      },
-      "learn_more": {
-        "text": "Learn more"
-      }
-    },
-    "section_2": {
-      "tittle": "WHY",
-      "text": "After several years in the industry and the academy we feel there is a missing piece that links both worlds. The problem is clear and visible, we form a lot of people in tech but companies still have a lack of talent to meet their needs"
-    },
-    "section_3": {
-      "tittle": {
-        "text_1": "WHO",
-        "text_2": "ARE WE"
-      } ,
-      "text_1": "We are a team with several years of experience in the digital industry",
-      "text_2": ""
-    },
-    "section_4": {
-      "tittle": {
-        "text_1": "CÓMO",
-        "text_2": "LO",
-        "text_3": "HACE",
-        "text_4": "MOS"
-      } ,
-      "img_steps": "media/junior/img_3_es.png",
-      "steps": {
-        "1":{
-          "tittle": "Onboarding en Teamcubation:",
-          "text": "¿Listo para viajar en el tiempo y hacer en seis meses lo que a cualquier otra persona le tomaría dos años? Te asignaremos a un Squad, donde te empaparás de las metodologías y tecnologías y desarrollarás un proyecto en la organización de la que eres parte."
-        },
-        "2":{
-          "tittle": "Incubación y aprendizaje:",
-          "text": "Código. Código. Mucho código. Código como nunca. Conocerás gente interesante y te divertirás adquiriendo las habilidades laborales que necesita la organización que te contrató. Y recuerda: no se trata solo de aprender skills de código, también te enseñaremos habilidad de comunicación y liderazgo."
-        },
-        "3":{
-          "tittle": "FIN y adiós:",
-          "text": " Nos hemos encariñado, pero todo pájaro debe ir a vivir al nido de su familia. Llegaste siendo un junior, hoy ya eres un developer experimentado dentro de una gran organización. ¡Haznos sentir orgullosos y lleva el nombre de Teamcubation en alto!"
-        }
-      }
-    },
-    "section_5": {
-      "tittle": {
-        "text_1": "POSTU",
-        "text_2": "LATE"
-      },
-      "contact-form": {
-        "name": "Nombre",
-        "organization": "Compañía",
-        "telephone": {
-          "label": "Teléfono",
-          "country": "País",
-          "area": "Área",
-          "number" : "Número"
-        },
-        "email": "E-mail",
-        "reason": "¿Hay algo que quieras contarnos?",
-        "btn_text": "Enviar",
-        "btn_sending": "Enviando...",
-        "submit-response": {
-          "success": "Gracias por escribirnos!",
-          "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
-        }
-      }
-    }
+    "textButton": "Apply here to one of our Senior developer roles!<span class=_effect>_</span>"
   }
 }

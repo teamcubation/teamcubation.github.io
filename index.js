@@ -191,26 +191,26 @@ const clearForm = () => {
 $(".language-select").hover(
   function () {
     if (screen.width > 1024) {
-      $(`.lenguage-options li`).each(function () {
+      $(`.language-options li`).each(function () {
         if ($(this).data("lang") === lang) {
           $(this).find("a").addClass("a-disbled");
         }
       });
-      $(`.lenguage-options`).slideDown();
+      $(`.language-options`).toggle();
     }
   },
   function () {
-    $(`.lenguage-options`).slideUp();
+    $(`.language-options`).toggle();
   }
 );
 
-$(".language-select").on("click", function () {
-  $(`.lenguage-options li`).each(function () {
+$(".language-select-mobile").on("click", function () {
+  $(`.language-options li`).each(function () {
     if ($(this).data("lang") === lang) {
       $(this).find("a").addClass("a-disbled");
     }
   });
-  $(`.lenguage-options`).toggle("slow");
+  $(`.language-options`).toggle();
 });
 
 // input select //
@@ -279,6 +279,7 @@ function adjustContactTextareaHeight() {
 
 $(adjustContactTextareaHeight);
 
+// 
 window.addEventListener("click", function (e) {
   if (
     !document.getElementById("dropdown-select").contains(e.target)
@@ -291,6 +292,12 @@ window.addEventListener("click", function (e) {
     );
     if ($(".input-select").val() !== "") $(".text-error").remove();
   }
+  if (
+    !document.getElementById("selectLangMobile").contains(e.target)
+  ) {
+    $(`.language-options`).hide();
+  }
+
 });
 
 // mobile navbar 
