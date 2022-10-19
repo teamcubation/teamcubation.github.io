@@ -49,7 +49,7 @@
     }
   },
   "process": {
-    "grayTextOne": "With",
+    "grayTextOne": "Based on",
     "whiteTextOne": " tech and a process",
     "textTwo": " designed to acquire ",
     "whiteTextThree": "experience",
@@ -58,7 +58,7 @@
     "whiteTextFour": " real projects"
   },
   "weDo": {
-    "title": "HOW DO WE DO IT?",
+    "title": "THIS IS HOW WE DO IT",
     "descriptionText": {
       "lineOne": {
         "standardTextOne": "We designed  ",
