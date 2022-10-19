@@ -506,3 +506,10 @@ const writer = (container, text, interval, n) => {
     }
   },interval);
 };
+
+$(function(){
+  if (localStorage.getItem('lang_redirect') === null && location.href.indexOf('/en/') === -1) {
+    localStorage.setItem('lang_redirect', '1');
+    location.href = 'en/';
+  }
+});
