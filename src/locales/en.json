@@ -23,7 +23,7 @@
       "lineOne" : "“Senior devs keep leaving”",
       "lineTwo" : "“We lose opportunities”",
       "lineThree" : "“We cannot keep up with the hiring”",
-      "lineFour" : "“It's getting worse every day”",
+      "lineFour" : "“It’s getting worse every day”",
       "lineFive" : "“Senior developers are hard to find”",
       "lineSix" : "Sounds familiar?"
     },
@@ -49,7 +49,7 @@
     }
   },
   "process": {
-    "grayTextOne": "With",
+    "grayTextOne": "Based on",
     "whiteTextOne": " tech and a process",
     "textTwo": " designed to acquire ",
     "whiteTextThree": "experience",
@@ -58,12 +58,12 @@
     "whiteTextFour": " real projects"
   },
   "weDo": {
-    "title": "HOW DO WE DO IT?",
+    "title": "THIS IS HOW WE DO IT",
     "descriptionText": {
       "lineOne": {
         "standardTextOne": "We designed  ",
         "boldTextOne": "a 6-months experience ",
-        "standardTextTwo": "qthat allows ,   ",
+        "standardTextTwo": "that allows ",
         "boldTextTwo": "you to accelerate the seniority of your junior devs "
       },
       "lineTwo": {
@@ -88,8 +88,8 @@
         "lineTwo": "months"
       },
       "text":{
-        "lineOne": "“Hey, that's a very long course!”",
-        "lineTwo": "It's not a course! We will develop a project, projects are not fully done in 2 or 3 months. 6 months is the time that a junior needs to go through the full Teamcubation_ training experience."
+        "lineOne": "“Hey, that’s a very long course!”",
+        "lineTwo": "It’s not a course! We will develop a project, projects are not fully done in 2 or 3 months. 6 months is the time that a junior needs to go through the full Teamcubation_ training experience."
       } 
     },
     "cardPlus":{
@@ -99,7 +99,7 @@
         "lineTwo": "company needs"
       },
       "text":{
-        "lineOne": "The best challenge for any junior dev is being part of a real project. That's why in Teamcubation we develop a product that your company has in the backlog, but that never gets prioritized in your internal pipeline."
+        "lineOne": "The best challenge for any junior dev is being part of a real project. That’s why in Teamcubation we develop a product that your company has in the backlog, but that never gets prioritized in your internal pipeline."
       } 
     },
     "cardOrganization":{
@@ -108,7 +108,7 @@
         "lineOne": "Squads"
       },
       "text":{
-        "lineOne": "Each squad will be made up of 3 of your juniors devs that will be technically mentored by one of our senior devs. At the same time a squad Leader will ensure the implementation of Teamcubation´s process, overseeing the junior devs' evolution and ensuring the developed software meets the requirements."
+        "lineOne": "Each squad will be made up of 3 of your juniors devs that will be technically mentored by one of our senior devs. At the same time a squad Leader will ensure the implementation of Teamcubation´s process, overseeing the junior devs’ evolution and ensuring the developed software meets the requirements."
       } 
     },
     "cardOurSeniors":{
@@ -151,7 +151,7 @@
         "lineOne": "Execution"
       },
       "text":{
-        "lineOne": "The 6-months experience led by our Senior devs enhances  your Juniors´ technical development as well as their soft skills such as communication, teamwork, stress management and adaptation to change. At the same time, the process promotes the integration of your juniors to your company's culture."
+        "lineOne": "The 6-months experience led by our Senior devs enhances  your Juniors´ technical development as well as their soft skills such as communication, teamwork, stress management and adaptation to change. At the same time, the process promotes the integration of your juniors to your company’s culture."
       } 
     },
     "cardDelivery":{
@@ -163,7 +163,7 @@
         "lineOne": "Thanks to our Programming Experience Platform (PEP), a data-driven analytics learning tool, , we can reinforce the learning in the skill each junior needs the most, ensuring that at the end of the process, each of them can productively and smoothly integrate into your teams."
       } 
     },
-    "footerText": "And since we already work as a team, our leaders who already know the culture and methodologies of your company will be able to use their experience to train new squads and ensure your company's growing capacity."
+    "footerText": "And since we already work as a team, our leaders who already know the culture and methodologies of your company will be able to use their experience to train new squads and ensure your company’s growing capacity."
   },
   "partners":{
     "centralText": "WHO ARE WE WORKING WITH TO BOOST THE NEW DIGITAL TALENT?"
@@ -246,7 +246,7 @@
       }
     },
     "text": "Our clients are other companies. They are the ones who hire Junior developers and often ask for our help in the recruitment process. Don’t hesitate! Follow this link and fill in the required information so that we can share with our clients at the next available opportunity.",
-    "textButton": "If you have no experience, apply here to our clients` junior roles<span class=_effect>_</span>"
+    "textButton": "If you have no experience, apply here to our clients’ junior roles<span class=_effect>_</span>"
   },
   "devsSeniors": {
     "centralText": "EXPERIENCED DEVS",
@@ -255,7 +255,7 @@
         "lineOne": "If you can see beyond the software, beyond the framework and you believe people are the key, join Teamcubation: "
       },
       "standardText":{
-        "lineOne": "earn how to lead teams, while you develop for big companies and share your knowledge with others."
+        "lineOne": "learn how to lead teams, while you develop for big companies and share your knowledge with others."
       }
     },
     "textButton": "Apply here to one of our Senior developer roles!<span class=_effect>_</span>"
