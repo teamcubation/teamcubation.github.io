@@ -7,12 +7,6 @@ const lang = document.documentElement.lang;
 let json_path;
 
 $(document).ready(
-  gtag("event", "page_view", {
-    page_title: `home`,
-    page_location: `${url}`,
-    page_path: `${url}`,
-    send_to: "G-VVX5NJFK14",
-  }),
   document.documentElement.lang === "es"
     ? (json_path = "./src/locales/es.json")
     : (json_path = "./src/locales/en.json"),
