@@ -13,13 +13,11 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@200;400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css?v=40">
-  <link rel="stylesheet" href="jquery.animatedheadline/css/jquery.animatedheadline.css">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -32,43 +30,36 @@
 <body class="themeColor default-scrollbar">
 <!-- logo on top for google -->
 <img style="display: none" src="media/logo.png" alt="Teamcubation">
-<div class="sceneOne">
-  <div id="parallaxOne" class="parallax" style="display: none">
-    <img src="media/plus/orange.svg" data-depth="0.2">
-    <img src="media/plus/default.svg" data-depth="0.5">
-    <img src="media/plus/default.svg" data-depth="0.4">
-    <img src="media/plus/default.svg" data-depth="0.5">
-  </div>
-</div>
 
 <nav>
   <div id="navBar">
-    <div class="logo">
-      <img id="logo" class="scrollToTop" src="media/logo.png" alt="Teamcubation">
-    </div>
-    <div class="navigate">
-      <a class="what" href="#what">¿Cómo?</a>
-      <a class="how" href="#how">La experiencia</a>
-      <a class="clients" href="#clients">Clientes</a>
-      <a class="team" href="#team">Equipo</a>
-      <a class="contact" href="#contact">Contactanos</a>
-      <a class="devsJuniors" href="#devsJuniors">Devs Junior</a>
-      <a class="devsSeniors" href="#devsSeniors">Devs con experiencia</a>
-      <div class="language-select">
-        <div class="language-tittle">
-          <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
-          <p>Lenguaje</p>
-        </div>
-        <ul class="language-options">
-          <li data-lang="es">
-            <a href="https://teamcubation.com/en">Español</a>
-          </li>
-          <li data-lang="en">
-            <a href="https://teamcubation.com/en">Inglés</a>
-          </li>
-        </ul>
+    <div id="navBarContent">
+      <div class="logo">
+        <img id="logo" class="scrollToTop" src="media/logo.png" alt="Teamcubation">
+      </div>
+      <div class="navigate">
+        <!-- <div class="language-select">
+          <div class="language-tittle">
+            <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
+            <p data-t>lang.textButton</p>
+          </div>
+          <ul class="language-options">
+            <li data-lang="es">
+              <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
+            </li>
+            <li data-lang="en">
+              <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
+            </li>
+          </ul>
+        </div> -->
+        <button id="contactButton">Contactanos</button>
+        <button id="menuButton">
+          <i class="icon ion-md-menu" style="color: white; font-weight:200"></i>
+        </button>
+  
       </div>
     </div>
+
     <div style="display: flex">
       <div id="selectLangMobile" class="language-select-mobile">
         <div class="language-tittle">
@@ -102,436 +93,80 @@
   </div>
 </nav>
 
-<div id="pageContent">
+<div id="pageContent" style="height: 100%;">
 
-  <img id="backToTop" class="scrollToTop" src="media/logo/logo-btn.svg" alt>
+  <!-- <img id="backToTop" class="scrollToTop" src="media/logo/logo-btn.svg" alt=""> -->
 
   <section id="banner">
-    <div id="bannerLayer">
-      <div id="bannerProblem" class="grid-row align-items-center">
-        <div id="rotateText" class="col-12 top-quotes overflow-hidden">
-          <div class="ah-headline">
-            <div class="ah-words-wrapper">
-              <h4 class="is-visible">“Se nos va la gente”</h4>
-              <h4>“Perdemos oportunidades”</h4>
-              <h4>“Nunca llegamos a cubrir todas las posiciones vacantes”</h4>
-              <h4>“Cada vez está peor...”</h4>
-              <h4>“No hay más seniors”</h4>
-            </div>
-          </div>
-          <h4 class="down">¿Suena conocido?</h4>
-        </div>
-      </div>
-      <div class="grid-row">
-        <div id="bannersolution" class="col-12">
-          <h1 class="color-gray">ENTRENAMOS DEVELOPERS</h1>
-          <h1 class="color-gray mb-2">PARA TU COMPAÑÍA</h1>
-          <h4 class="subTitle">Mientras desarrollamos software</h4>
-          <h4 class="subTitle">que ustedes necesitan</h4>
-        </div>
-      </div>
+    <div class="banner-layout">
+      <img id="desktop-banner-img" src="media/background/banner.png" class="banner-img">
+      <img id="mobile-banner-img" src="media/background/mobile-banner.png" class="banner-img">
     </div>
-  </section>
-  <section id="process">
-    <img id="dark" src="media/background/dark.svg" alt="banner_img">
-    <div id="processLayer" class="text-r">
-      <h2 class="d-inline color-light-gray">Con</h2>
-      <h2 class="d-inline color-white"> tecnología y un proceso</h2>
-      <h2 class="d-inline color-white"> diseñados para adquirir </h2>
-      <h2 class="d-inline color-white">experiencia</h2>
-      <h2 class="d-inline color-light-gray"> mientras</h2>
-      <h2 class="d-inline color-light-gray">construimos</h2>
-      <h2 class="d-inline color-white"> proyectos reales</h2>
+    <div class="banner-content">
+      <h1 class="color-white">Desarrolladores de</h1><br>
+      <h1 class="color-white"> experiencia</h1><br>
+    </div>
+    <div id="partners">
+      <div class="logos">
+        <div class="logos-slide">
+          <img src="media/partners/partners.png">
+          <img src="media/partners/partners.png">
+        </div>
+      </div>        
     </div>
   </section>
 
-  <section id="what" style="background-image:url('media/background/orange.svg')">
-    <img id="logoOrange" src="media/logo/orange.svg" alt>
-    <div id="weDoLayer">
-      <h3 class="color-dark mb-5">¿CÓMO LO HACEMOS?</h3>
-      <h4 class="color-dark me-1 mt-5 d-inline">Diseñamos una </h4>
-      <h4 class="color-dark me-1 d-inline fw-600">experiencia de 6 meses </h4>
-      <h4 class="color-dark me-1 d-inline">que permite </h4>
-      <h4 class="color-dark me-1 fw-600 d-inline">acelerar el seniority de tus perfiles junior </h4>
-      <h4 class="color-dark me-1 d-inline">mientras desarrollamos un </h4>
-      <h4 class="color-dark me-1 d-inline fw-600">software que tu compañía tiene en el backlog</h4>
-      <h4 class="color-dark me-1 d-inline"></h4>
-      <h4 class="color-dark me-1 d-inline fw-600"></h4>
-      <div class="grid-row mt-5">
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-in" class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-5">LA ORGANIZACIÓN</h4>
-            <svg id="logoCardOrganization" width="106" height="138" viewbox="0 0 106 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M52.9825 72.6083L93.7737 17.6043C93.7737 17.6043 86.0448 11.8924 77.4572 5.75735C68.8696 -0.377662 51.0502 -2.70476 37.5247 12.5271C37.5247 12.5271 27.4467 26.2781 10.9029 47.645C-5.64086 69.0119 1.40559 89.9822 11.3325 99.4756C21.2595 108.969 44.8239 125.497 44.8239 125.497C26.3605 104.13 42.2479 86.9939 45.683 82.3397L52.9825 72.6083Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M91.6265 128.459C91.6265 128.459 99.7322 119.563 104.508 111.534L52.5529 73.2432C48.259 79.1667 42.0331 86.7826 42.0331 86.7826C18.846 122.112 69.7281 152.364 91.6265 128.459Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white mb-5">Squads</h3>
-            <h6 class="color-white mt-5">Cada uno de los squads estará compuesto por 3 de tus juniors que serán liderados técnicamente por uno de nuestros seniors. Al mismo tiempo, un Leader de squad estará a cargo de seguir el proceso Teamcubation, velar por la evolución de los juniors y asegurar que el software cumpla con los requerimientos</h6>
-          </div>
+  <section id="opportunities">
+    <div class="opportunities-layout">
+      <div class="opportunities-content">
+        <div class="row text-center color-orange">
+          <h3>Nunca más pierdas</h3>
+          <h3>oportunidades por falta</h3>
+          <h3>de talento IT.</h3>
         </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-in" class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-3">EL VALOR AGREGADO</h4>
-            <svg id="logoCardPlus" width="81" height="90" viewbox="0 0 81 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M39.3237 42.9347L32.3433 78.7987C32.3433 78.7987 37.3425 79.8363 42.8489 80.8865C48.3552 81.9367 57.4104 79.0651 60.41 68.6329C60.41 68.6329 62.0978 59.6939 65.1433 45.6054C68.1888 31.5169 60.0391 22.9181 53.1266 20.5382C46.2142 18.1583 31.1746 15.4256 31.1746 15.4256C44.8766 21.6532 41.1809 33.5401 40.5982 36.571L39.3237 42.9347Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M8.10941 24.4971C8.10941 24.4971 6.25867 30.6359 5.80359 35.6063L39.3848 42.5301C40.0892 38.69 41.3322 33.5945 41.3322 33.5945C44.3741 11.2355 13.1381 7.97369 8.10941 24.4971Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white">Software que tu</h3>
-            <h3 class="cardCentralText color-white mb-3">compañía necesita</h3>
-            <h6 class="color-white">El mejor desafío para cualquier Junior es participar de un proyecto real. Por eso en Teamcubation desarrollamos un producto que tu compañía tenga en el backlog, pero que nunca logren priorizar.</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-in" id="cardDuration" class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-3">EL TIEMPO</h4>
-            <svg id="logoCardDuration" width="131" height="92" viewbox="0 0 131 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="pathDurationOne" d="M28.4717 55.494L50.0291 25.9944C50.0291 25.9944 45.9446 22.931 41.4062 19.6407C36.8678 16.3503 27.4506 15.1023 20.3026 23.2714C20.3026 23.2714 14.9766 30.6463 6.2335 42.1057C-2.50957 53.5652 1.21435 64.812 6.46054 69.9034C11.7067 74.9949 24.1601 83.859 24.1601 83.859C14.4026 72.3995 22.7987 63.2093 24.6141 60.7132L28.4717 55.494Z" stroke="#423B3B" stroke-width="2"/>
-              <path id="pathDurationTwo" d="M48.8944 85.4475C48.8944 85.4475 53.1781 80.6767 55.702 76.3707L28.2447 55.8345C25.9755 59.0114 22.6852 63.0959 22.6852 63.0959C10.4313 82.0437 37.3215 98.2685 48.8944 85.4475Z" stroke="#423B3B" stroke-width="2"/>
-              <path id="pathDurationTrhee" d="M95.924 43.0991L69.6248 78.9899C69.6248 78.9899 74.5942 82.727 80.1159 86.7411C85.6376 90.7553 97.104 92.29 105.822 82.3528C105.822 82.3528 112.319 73.38 122.985 59.4384C133.65 45.4968 129.133 31.7945 122.752 25.5858C116.371 19.3772 101.219 8.56279 101.219 8.56279C113.084 22.5335 102.845 33.7123 100.63 36.7492L95.924 43.0991Z" stroke="#423B3B" stroke-width="2"/>
-              <path id="pathDurationFour" d="M71.0997 6.58931C71.0997 6.58931 65.8754 12.3925 62.795 17.6324L96.2005 42.6849C98.969 38.8197 102.982 33.8506 102.982 33.8506C117.935 10.795 85.2135 -9.006 71.0997 6.58931Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white">Seis</h3>
-            <h3 class="cardCentralText color-white mb-3">meses</h3>
-            <h6 class="color-white">“Epa! ¿Qué curso largo no?”</h6>
-            <h6 class="color-white">Es que no es un curso! Vamos a desarrollar un proyecto, los proyectos no se hacen en 2 o 3 meses. 6 meses es el tiempo que diseñamos para recorrer todas las instancias de entrenamiento que queremos hacer con los juniors.</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-out-up" class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-3">LA EXPERIENCIA</h4>
-            <svg id="logoCardOurSeniors" width="110" height="141" viewbox="0 0 110 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M55.1058 66.4536L16.5847 123.071C16.5847 123.071 24.5394 128.464 33.3693 134.244C42.1993 140.025 60.0985 141.626 72.9936 125.857C72.9936 125.857 82.5042 111.707 98.1655 89.6854C113.827 67.6635 105.934 46.997 95.629 37.9151C85.3242 28.8332 61.1073 13.2772 61.1073 13.2772C80.4241 33.8758 65.2466 51.6434 62.0036 56.4334L55.1058 66.4536Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M14.2223 12.2202C14.2223 12.2202 6.48494 21.4378 2.03965 29.6542L55.5085 65.8013C59.5581 59.7082 65.4692 51.8454 65.4692 51.8454C87.2007 15.6025 35.1307 -12.5559 14.2223 12.2202Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white">Nuestros</h3>
-            <h3 class="cardCentralText color-white mb-3">seniors</h3>
-            <h6 class="color-white">Un Senior y un Leader serán asignados a cada squad según el stack tecnológico y las necesidades específicas de tu compañía.</h6>
-            <h6 class="color-white">Ambos son parte del equipo Teamcubation pero serán capacitados en las metodologías de trabajo de tu organización para generar una dinámica en el Squad que simule la experiencia de trabajar en desarrollo de software dentro de tu empresa.</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-out-up" class="card gradientBlackGray">
-            <h4 class="cardTitle color-light-orange mb-3">LAS GANAS</h4>
-            <svg id="logoCardOurJuniorsDouble" width="114" height="78" viewbox="0 0 114 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28.9107 42.4263L50.8125 12.8933C50.8125 12.8933 46.6627 9.82636 42.0518 6.53232C37.4409 3.23828 27.8732 1.9888 20.611 10.1672C20.611 10.1672 15.1999 17.5504 6.31713 29.0228C-2.56565 40.4953 1.21777 51.7548 6.54779 56.852C11.8778 61.9492 24.5302 70.8234 24.5302 70.8234C14.6167 59.3509 23.147 50.1503 24.9914 47.6513L28.9107 42.4263Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M49.6596 72.4136C49.6596 72.4136 54.0118 67.6375 56.5759 63.3266L28.68 42.7671C26.3745 45.9476 23.0316 50.0367 23.0316 50.0367C10.5819 69.006 37.9018 85.2491 49.6596 72.4136Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M84.9107 39.4263L106.813 9.89326C106.813 9.89326 102.663 6.82636 98.0518 3.53232C93.4409 0.238276 83.8732 -1.0112 76.611 7.16719C76.611 7.16719 71.1999 14.5504 62.3171 26.0228C53.4344 37.4953 57.2178 48.7548 62.5478 53.852C67.8778 58.9492 80.5302 67.8234 80.5302 67.8234C70.6167 56.3509 79.147 47.1503 80.9914 44.6513L84.9107 39.4263Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M105.66 69.4136C105.66 69.4136 110.012 64.6375 112.576 60.3266L84.68 39.7671C82.3745 42.9476 79.0316 47.0367 79.0316 47.0367C66.5819 66.006 93.9018 82.2491 105.66 69.4136Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <svg id="logoCardOurJuniorsSingle" width="58" height="75" viewbox="0 0 58 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28.9107 39.4263L50.8125 9.89326C50.8125 9.89326 46.6627 6.82636 42.0518 3.53232C37.4409 0.238276 27.8732 -1.0112 20.611 7.16719C20.611 7.16719 15.1999 14.5504 6.31713 26.0228C-2.56565 37.4953 1.21777 48.7548 6.54779 53.852C11.8778 58.9492 24.5302 67.8234 24.5302 67.8234C14.6167 56.3509 23.147 47.1503 24.9914 44.6513L28.9107 39.4263Z" stroke="#423B3B" stroke-width="2"/>
-              <path d="M49.6596 69.4136C49.6596 69.4136 54.0118 64.6375 56.5759 60.3266L28.68 39.7671C26.3745 42.9476 23.0316 47.0367 23.0316 47.0367C10.5819 66.006 37.9018 82.2491 49.6596 69.4136Z" stroke="#423B3B" stroke-width="2"/>
-            </svg>
-            <h3 class="cardCentralText color-white">Tus</h3>
-            <h3 class="cardCentralText color-white mb-3">juniors</h3>
-            <h6 class="color-white">Serán parte de tu nómina desde el día cero. Son tus empleados, pero serán liderados y estarán trabajando en equipo con nuestros Seniors, durante el período de 6 meses en el que adquirirán la experiencia que les falta para integrarse a tu organización.</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <img id="weDoDivider" src="media/wave/weDoDivider.svg" alt>
-  <div id="scrolltoHow"></div>
-
-  <section id="how">
-    <div class="sceneThree">
-      <div id="parallaxThree" class="parallax">
-        <img data-depth="0.5" src="media/plus/green.svg" alt="plus_orange">
-        <img data-depth="0.4" src="media/plus/light-gray.svg" alt="plus_default">
-        <img data-depth="0.3" src="media/plus/red.svg" alt="plus_default">
-        <img data-depth="0.2" src="media/plus/default.svg" alt="plus_default">
-        <img data-depth="0.1" src="media/plus/light-gray.svg" alt="plus_gray">
-        <img data-depth="0.5" src="media/plus/orange.svg" alt="plus_gray">
-        <img data-depth="0.1" src="media/plus/default.svg" alt="plus_gray">
-      </div>
-    </div>  
-    <div id="howLayer">
-      <h3 class="color-dark mb-5">LA EXPERIENCIA</h3>
-      <h4 class="color-dark me-1 d-inline">Un proceso en 3 etapas en búsqueda de la solución al problema del flujo de software developers.</h4>
-      <div class="grid-row mt-4 mb-5">
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-in" id="cardDiscovery" class="card">
-            <h4 class="cardTitle color-blue mb-3">INTEGRAR CULTURA Y TECNOLOGÍA</h4>
-            <h3 class="cardCentralText color-dark mb-3">Discovery</h3>
-            <h6 class="color-dark">Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de tus metodologías, stack tecnológico y cultura. Juntos evaluaremos los proyectos para elegir el más indicado.</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-in" id="cardEjecution" class="card">
-            <h4 class="cardTitle color-blue mb-3">DESARROLLAR SOFTWARE</h4>
-            <h3 class="cardCentralText color-dark mb-3">Ejecución</h3>
-            <h6 class="color-dark">La experiencia de 6 meses liderada por nuestros Seniors potencia el desarrollo técnico de los Juniors y el desarrollo de sus habilidades blandas tales como comunicación, trabajo en equipo, manejo del estrés y adaptación al cambio. A la vez, fomenta la integración a la cultura de tu empresa.</h6>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-xl-4 d-flex">
-          <div data-aos="zoom-in" id="cardDelivery" class="card">
-            <h4 class="cardTitle color-blue mb-3">COMPROMISOS CUMPLIDOS</h4>
-            <h3 class="cardCentralText color-dark mb-3">Delivery</h3>
-            <h6 class="color-dark">Gracias a nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), podremos potenciar a cada Junior en la habilidad que más necesitan trabajar, asegurándonos que al término del proyecto puedan integrarse de manera productiva a los equipos de la organización.</h6>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex">
-        <h4 class="color-dark d-inline mb-5 text-center">Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a tus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización.</h4>
-      </div>
-    </div>
-  </section>
-
-  <section id="clients">
-    <h3 class="color-light-gray my-5 text-center">¿CON QUIÉNES TRABAJAMOS JUNTOS PARA POTENCIAR EL NUEVO TALENTO DIGITAL?</h3>
-    <div class="grid-row my-5 justify-content-center">
-      <div class="col-6 col-xl-3 text-center mb-5">
-        <a target="_blank" href="https://www.byma.com.ar/"><img width="80%" src="media/partners/byma.svg" alt="BYMA"></a>
-      </div>
-      <div class="col-6 col-xl-3 text-center mb-5">
-        <a target="_blank" href="https://www.iovlabs.org/"><img width="80%" src="media/partners/iovLabs.svg" alt="IOVLabs"></a>
-      </div>
-      <div class="col-6 col-xl-3 text-center mb-5">
-        <a target="_blank" href="https://agrotoken.io/"><img width="80%" src="media/partners/agroToken.svg" alt="Agrotoken"></a>
-      </div>
-      <div class="col-6 col-xl-3 text-center mb-5">
-        <a target="_blank" href="https://www.mercadolibre.com/"><img width="80%" src="media/partners/meli.svg" alt="Mercado Libre"></a>
-      </div>
-    </div>
-  </section>
-  
-  <div id="scrolltoTeam"></div>
-
-  <section id="team" style="background-image:url('media/background/red-new.svg')">
-    <img id="logoRed" width="100%" src="media/logo/red.svg" alt>
-    <img id="plusRedTeamOne" src="media/plus/red.svg" alt="plus_red">
-    <img id="plusRedTeamTwo" src="media/plus/red.svg" alt="plus_red">
-    <img id="plusRedTeamThree" src="media/plus/red.svg" alt="plus_red">
-    <div id="teamLayer">
-    <h2 class="color-white mb-5">EL EQUIPO</h2>
-    <h4 style="margin: 5% 0 8% 22%" class="color-white">Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañías siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos.</h4>
-    <div class="grid-row">
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/mariano.png" alt>
-          <h5 data-aos="fade-down" class="member-name">Mariano Wechsler</h5>
-          <div id="ceo" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/diego.png" alt>
-          <h5 data-aos="fade-down" class="member-name">Diego Jolodenco</h5>
-          <div id="coo" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/diegojolodenco/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/pina.png" alt>
-          <h5 data-aos="fade-down" class="member-name">Agustin Pina</h5>
-          <div id="training" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/agustin-pina/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/tapi.png" alt>
-          <h5 data-aos="fade-down" class="member-name">Jonathan Tapicer</h5>
-          <div id="cto" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/tapicer/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/eze.jpg" alt>
-          <h5 data-aos="fade-down" class="member-name">Ezequiel Ursztein</h5>
-          <div id="data" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/ezequiel-ursztein-b1b14094/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/flor2.png" alt>
-          <h5 data-aos="fade-down" class="member-name">Florencia Diaz</h5>
-          <div id="people" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/mariaflorenciadiaz/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-        <div data-aos="zoom-in" class="card-member">
-          <img class="member-img" src="media/team/pablo.png" alt>
-          <h5 data-aos="fade-down" class="member-name">Pablo Rodriguez</h5>
-          <div id="cfo" class="role_container"></div>
-          <a href="https://www.linkedin.com/in/pablo-g-rodriguez/" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-  </div></section>
-
-  <img id="teamDivider" src="media/wave/white.svg" alt="divider">
-
-  <section id="contact">
-    <div class="grid-row justify-content-evenly">
-      <div class="col-12 col-lg-5 mt-2 px-2 d-flex flex-column align-items-center">
-        <h2 class="color-gray-100 my-3">CONTACTANOS</h2>
-        <form class="form-contact" id="form-contact">
-          <div id="formIdenfitication" class="mt-5 w-100 position-relative">
-            <div class="dropdown-select w-100" id="dropdown-select">
-              <div class="select-tc">
-                <textarea class="input-select" disabled placeholder="¿Cómo te identificás?"></textarea>
-                <img class="chevron-select" src="media/chevron-down.svg" alt="arrow">
-              </div>
-              <div style="position: relative; max-width: 100%">
-                <ul class="list-options-tc">
-                  <li>
-                    <div class="option-tc" data-option="organization">Soy una organización, quiero que me contacten para conocer más del servicio</div>
-                  </li>
-                  <li>
-                    <div class="option-tc" data-option="senior">Soy un desarrollador Senior y quiero acompañar a Juniors</div>
-                  </li>
-                  <li>
-                    <div class="option-tc" data-option="junior">Soy un desarrollador Junior/Trainee con conocimientos de programación</div>
-                  </li>
-                  <li>
-                    <div class="option-tc" data-option="no-exp">No sé programar y quiero aprender</div>
-                  </li>
-                  <li>
-                    <div class="option-tc" data-option="other">Otro</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-message" id="juniorsMessage">
-              <h6 class="d-inline fw-600"></h6>
-              <h6 class="d-inline">Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando</h6>
-              <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">postulate acá</a>
-              <h6 class="d-inline">que es donde podemos ayudarte a que una compañía te seleccione para un squad</h6>
-            </div>
-            <div class="form-message" id="seniorsMessage">
-              <h6 class="d-inline fw-400">Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,</h6>
-              <h6 class="d-inline">andá a </h6>
-              <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">este link y postulate a la búsqueda que más se adecúe a tu perfil</a>
-              <h6 class="d-inline">que nos va a permitir entender dónde podemos sumarte en Teamcubation_</h6>
-            </div>
-            <div class="form-message" id="noCodersMessage">
-              <h6 class="d-inline fw-600">Si todavía no aprendiste a programar</h6>
-              <h6 class="d-inline"> te rogamos que lo hagas, te conviertas en developer y después vengas a postularte! Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear.</h6>
-            </div>    
-          </div>
-          <div id="formInformation">
-            <div class="mt-5">
-              <input type="text" class="name" name="name" required placeholder="Nombre">
-            </div>
-            <div class="mt-4">
-              <input type="text" class="organizationContact" placeholder="Compañía">
-            </div>
-            <div class="mt-5">
-              <label for="country-phone-team" class="form-label">Teléfono</label>
-            </div>
-            <div class="row">
-              <div class="col-md-7 col-sm-12">
-                <div class="row">
-                  <div class="col-3">
-                    <span>+</span>
-                    <input id="country-phone-team" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="País">
-                  </div>
-                  <div class="col-3">
-                    <input type="text" name="area-phone" class="area-phone" placeholder="Área">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" name="number-phone" class="number-phone" placeholder="Número">
-                  </div>
+        <div class="row justify-content-between mt-7">
+          <div class="col-5">
+            <div class="card gradient-border">
+              <div class="row">
+                <div class="arrow-button">
+                  <img class="float-right" src="media/arrow.svg" alt>
                 </div>
               </div>
-              <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
-                <input type="email" name="email" class="email" required placeholder="E-mail">
+              <div class="row">
+                <div class="md-text-card color-purple">
+                  central text
+                </div>
               </div>
             </div>
-            <div class="mb-4 mt-5">
-              <textarea name="message" class="message" rows="1" required placeholder="Dejanos tu mensaje"></textarea>
+          </div>
+          <div class="col-2">
+            <div class="d-flex align-items-center h-100">
+              <img class="w-100" src="media/largeArrow.png" alt>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <div id="scrollToJuniors"></div>
-
-  <section id="devsJuniors" style="background-image: url('media/background/blue.svg')">
-    <img id="logoBlue" src="media/logo/blue.svg" alt="TEAMCUBATION">
-    <img id="devsJuniorsDivider" src="media/wave/devsJuniorsdivider.svg" alt="divider">
-    <div id="devsJuniorsLayer">
-      <div class="grid-row my-5">
-        <h3 class="color-white">DEVS JUNIORS</h3>
-      </div>
-      <div class="d-flex flex-column justify-content-end my-4">
-        <h3 class="text-r color-light-gray d-inline subtitle-bold">Somos una máquina del tiempo y hacemos que tengas la experiencia de 2 años en 6 meses.</h3>
-        <h3 class="text-r color-white d-inline subtitle-bold">La máquina del tiempo existe.</h3>
-        <h3 class="text-r color-white d-inline subtitle-bold">Hola! Somos Teamcubation.</h3>
-      </div>
-      <div class="grid-row">
-        <div class="col-12 col-sm-6">
-          <h4 class="color-white mt-5">Teamcubation_ trabaja para empresas, las empresas contratan a los juniors y muchas veces nos piden ayuda para encontrarlos. Asi que no lo dudes! Entrá a este link que te dejamos acá y dejanos tus datos para que cuando nos soliciten las empresas perfiles podamos pasar los tuyos o tu información.</h4>
-        </div>
-        <div class="col-12 col-sm-6 mt-5">
-          <a id="linksJuniorsDevs" class="btn-tc btn-tc-lnk" target="_blank" href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation">Mirá las posiciones abiertas de nuestros clientes para devs sin experiencia<span class=_effect>_</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="devsSeniors">
-    <div id="devsSeniorsLayer">
-      <div class="grid-row my-5">
-        <h3 class="color-white">DEVS CON EXPERIENCIA</h3>
-      </div>
-      <div class="d-flex flex-column justify-content-end my-5 ml-5">
-        <h3 class="text-r color-blue d-inline subtitle-bold">Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: </h3>
-        <h3 class="text-r color-light-gray subtitle-bold">aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes.</h3>
-      </div>
-      <div class="d-flex flex-column justify-content-start my-5">
-        <a id="devsSeniorsButton" class="btn-tc btn-tc-lnk" target="_blank" href="https://teamcubation.bamboohr.com/jobs/">Mira las posiciones abiertas para devs con experiencia<span class=_effect>_</span></a>
-      </div>
-    </div>
-  </section>
-
-  <footer id="footer">
-    <div class="grid-row align-items-center">
-      <div class="col-8">
-        <div class="grid-row">
-          <div class="col-6 col-md-3">
-            <div class="d-flex flex-column">
-              <a class="what color-light-gray mb-0 navigate-organization" href="#what">¿Cómo?</a>
-              <a class="how color-light-gray mb-0 navigate-organization" href="#how">La experiencia</a>
-              <a class="clients color-light-gray mb-0 navigate-organization" href="#clients">Clientes</a>
-              <a class="team color-light-gray mb-0 navigate-organization" href="#team">Equipo</a>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="d-flex flex-column">
-              <a class="contact color-light-gray mb-0 navigate-organization" href="#contact">Contactanos</a>
-              <a class="devsJuniors color-light-gray mb-0 navigate-organization" href="#devsJuniors">Devs Junior</a>
-              <a class="devsSeniors color-light-gray mb-0 navigate-organization" href="#devsSeniors">Devs con experiencia</a>
-              <a class="color-light-gray mb-0" href="/privacy-policy.html">Privacy Policy</a>
+          <div class="col-5">
+            <div class="card gradient-border">
+              <div class="row">
+                <div class="arrow-button">
+                  <img class="float-right" src="media/arrow.svg" alt>
+                </div>
+              </div>
+              <div class="row">
+                <div class="md-text-card color-purple">
+                  central text
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-4 d-flex justify-content-end">
-        <div class="grid-row flex-column align-items-center">
-          <img width="100%" id="lovsDevs" src="media/loveDevs.svg" alt="iLoveDevs">
-          <p id="copyright" class="color-light-gray">COPYRIGHT TEAMCUBATION</p>
-        </div>
-      </div>  
     </div>
-  </footer>
+  </section>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="jquery.animatedheadline/js/jquery.animatedheadline.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script type="module" src="index.js?v=40"></script>
 
 </body>

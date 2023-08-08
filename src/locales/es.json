@@ -19,24 +19,17 @@
   },
   "banner":{
     "url": "https://teamcubation.com/en",
-    "descriptionProblem": {
-      "lineOne" : "“Se nos va la gente”",
-      "lineTwo" : "“Perdemos oportunidades”",
-      "lineThree" : "“Nunca llegamos a cubrir todas las posiciones vacantes”",
-      "lineFour" : "“Cada vez está peor...”",
-      "lineFive" : "“No hay más seniors”",
-      "lineSix" : "¿Suena conocido?"
-    },
-    "solution": {
-      "centralText" :{
-        "lineOne": "ENTRENAMOS DEVELOPERS",
-        "lineTwo": "PARA TU COMPAÑÍA"
-      } ,
-      "descriptionText":{
-        "lineOne": "Mientras desarrollamos software",
-        "lineTwo": "que ustedes necesitan"
-      }
+    "centralText" :{
+      "lineOne": "Desarrolladores de",
+      "lineTwo": " experiencia"
     }      
+  },
+  "opportunities":{
+    "centralText":{
+      "lineOne": "Nunca más pierdas",
+      "lineTwo": "oportunidades por falta",
+      "lineThree": "de talento IT."
+    }
   },
   "weTrain":{
     "centralText":{

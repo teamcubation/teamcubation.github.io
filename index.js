@@ -10,7 +10,7 @@ $(document).ready(
   document.documentElement.lang === "es"
     ? (json_path = "./src/locales/es.json")
     : (json_path = "./src/locales/en.json"),
-  $('.top-quotes').animatedHeadline({ animationType: "push" })
+  // $('.top-quotes').animatedHeadline({ animationType: "push" })
 );
 
 const dataByLang = {
@@ -266,33 +266,32 @@ $(".option-tc").on("click", function () {
   $(".chevron-select").removeClass("chevron-effect");
 });
 
-function adjustContactTextareaHeight() {
-  $('.input-select').height(0);
-  $('.input-select').height($('.input-select')[0].scrollHeight - 4);
-}
+// function adjustContactTextareaHeight() {
+//   $('.input-select').height(0);
+//   $('.input-select').height($('.input-select')[0].scrollHeight - 4);
+// }
 
-$(adjustContactTextareaHeight);
+// $(adjustContactTextareaHeight);
 
 // 
-window.addEventListener("click", function (e) {
-  if (
-    !document.getElementById("dropdown-select").contains(e.target)
-  ) {
-    $(".list-options-tc").slideUp();
-    $(".chevron-select").removeClass("chevron-effect");
-    $(".select-tc").css(
-      "border-bottom",
-      "2px solid rgba(128, 128, 128, 0.507)"
-    );
-    if ($(".input-select").val() !== "") $(".text-error").remove();
-  }
-  if (
-    !document.getElementById("selectLangMobile").contains(e.target)
-  ) {
-    $(`.language-options`).hide();
-  }
-
-});
+// window.addEventListener("click", function (e) {
+//   if (
+//     !document.getElementById("dropdown-select").contains(e.target)
+//   ) {
+//     $(".list-options-tc").slideUp();
+//     $(".chevron-select").removeClass("chevron-effect");
+//     $(".select-tc").css(
+//       "border-bottom",
+//       "2px solid rgba(128, 128, 128, 0.507)"
+//     );
+//     if ($(".input-select").val() !== "") $(".text-error").remove();
+//   }
+//   if (
+//     !document.getElementById("selectLangMobile").contains(e.target)
+//   ) {
+//     $(`.language-options`).hide();
+//   }
+// });
 
 // mobile navbar 
 
@@ -323,9 +322,15 @@ window.addEventListener('scroll', (e) => {
     }
     if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600 && !isNavigate){
       $('nav').addClass('hidden-nav');
+      $('nav').removeClass('show-nav');
     } 
     else {
       $('nav').removeClass('hidden-nav');
+      $('nav').addClass('show-nav');
+    }
+    if(currentPositionScroll === 0){
+      $('nav').removeClass('hidden-nav');
+      $('nav').removeClass('show-nav');
     }
     lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
   }
@@ -336,7 +341,7 @@ window.addEventListener('mousemove', (e) => {
   if(screen.width > 768){
     const currentPositionScroll = window.scrollY;
     if(currentPositionScroll > 500){
-      heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav');
+      heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav') && $('nav').addClass('show-nav');;
     };
   }
 });
@@ -413,97 +418,12 @@ noScroll(function () {
   isNavigate = false;
 });
 
-// scroll effect 
-AOS.init({
-  once: true,
-  delay: 0,
-  offset: 0,
-  duration: 750,
-  easing: 'ease-out-cubic'
-});
-
-
-//plus parallax effect
-let parallaxSceneOne = document.getElementById('parallaxOne');
-let parallaxSceneThree = document.getElementById('parallaxThree');
-let parallaxInstanceOne = new Parallax(parallaxSceneOne);
-let parallaxInstanceThree = new Parallax(parallaxSceneThree);
-
-parallaxSceneOne.style.display = 'block';
-
-
-// test effect logo-card
-// var card = document.getElementById("cardDuration");
-// card.addEventListener("mouseover", function (e) {
-//   document.getElementById("pathDurationOne").setAttribute("stroke", "#ff7c00");
-//   document.getElementById("pathDurationTwo").setAttribute("stroke", "#ff7c00");
-//   document.getElementById("pathDurationThree").setAttribute("stroke", "#ff7c00");
-//   document.getElementById("pathDurationFour").setAttribute("stroke", "#ff7c00");
-// });
-
-const team = {
-  ceo: {
-    name: "ceo",
-    role: "CEO "
-  },
-  coo: {
-    name: "coo",
-    role: "COO "
-  },
-  training: {
-    name: "training",
-    role: "Head of Training "
-  },
-  cto: {
-    name: "cto",
-    role: "CTO "
-  },
-  people: {
-    name: "people",
-    role: "Head of People "
-  },
-  cfo: {
-    name: "cfo",
-    role: "CFO "
-  },
-  data: {
-    name: "data",
-    role: "Head of Data & Analytics "
-  }
-}
-
-$(function(){
-  writer(team.ceo.name, team.ceo.role, 150, 0);
-  writer(team.coo.name, team.coo.role, 150, 0);
-  writer(team.training.name, team.training.role, 150, 0);
-  writer(team.cto.name, team.cto.role, 150, 0);
-  writer(team.people.name, team.people.role, 150, 0);
-  writer(team.cfo.name, team.cfo.role, 150, 0);
-  writer(team.data.name, team.data.role, 150, 0);
-});
- 
-const writer = (container, text, interval, n) => {
-  var i=0,
-   timer = setInterval(function() {
-    if ( i<text.length ) {
-      $("#"+container).html( text.substr(0,i++) + `<span id=underscore${container}>_</span>`);
-      $(`#underscore${container}`).addClass('_effect_style'); 
-    } 
-    else {
-      $(`#underscore${container}`).addClass('_effect')
-      clearInterval(timer);
-      if ( --n!=0 ) {
-        setTimeout(function() {
-          writer(container,text,interval,n);
-        },2000);
-      }
-    }
-  },interval);
-};
-
 $(function(){
   if (localStorage.getItem('lang_redirect') === null && location.href.indexOf('/en/') === -1) {
     localStorage.setItem('lang_redirect', '1');
     location.href = 'en/';
   }
 });
+
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
