@@ -1,5 +1,6 @@
 // import data_en from "./src/locales/en.json" assert {type: 'json'};
 // import data_es from "./src/locales/es.json" assert {type: 'json'};
+import CarouselAnimator from './animations.js';
 
 const url = "https://teamcubation.com/";
 const initialLocation = document.location.href;
@@ -296,113 +297,74 @@ $(".option-tc").on("click", function () {
 // mobile navbar 
 
 $(".ion-md-menu").on("click", function () {
-  $("#navBarMobile").toggle(250);
+  $("#navbar-content").toggleClass('open-menu');
+  $("#menu").toggleClass('hidden');
+  $('#logo').toggleClass('hidden');
+  $("#footer-menu").toggleClass('hidden');
+  $('#logo-orange').toggleClass('hidden');
 });
 
 $("a").on("click", function () {
-  $("#navBarMobile").css("display", "none");
+  $("#navbarMobile").css("display", "none");
 });
 
 
 // navbar - scroll
-const heigthNav = document.getElementById("navBar").clientHeight;
+const heigthNav = document.getElementById("navbar").clientHeight;
 let lastScrollTop = 0;
 let isNavigate = false;  
 
-window.addEventListener('scroll', (e) => {
-  if(screen.width > 768){
-    const currentPositionScroll = window.scrollY;
-    if(currentPositionScroll > 600){
-      $('#logo').addClass('navigate-home');
-      $('#backToTop').addClass('show-nav');
-    }
-    else{
-      $('#logo').removeClass('navigate-home');
-      $('#backToTop').removeClass('show-nav');
-    }
-    if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600 && !isNavigate){
-      $('nav').addClass('hidden-nav');
-      $('nav').removeClass('show-nav');
-    } 
-    else {
-      $('nav').removeClass('hidden-nav');
-      $('nav').addClass('show-nav');
-    }
-    if(currentPositionScroll === 0){
-      $('nav').removeClass('hidden-nav');
-      $('nav').removeClass('show-nav');
-    }
-    lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
-  }
-});
+// window.addEventListener('scroll', (e) => {
+//   if(screen.width > 768){
+//     const currentPositionScroll = window.scrollY;
+//     if(currentPositionScroll > 600){
+//       $('#logo').addClass('navigate-home');
+//       $('#backToTop').addClass('show-nav');
+//     }
+//     else{
+//       $('#logo').removeClass('navigate-home');
+//     //   // $('#backToTop').removeClass('show-nav');
+//     // }
+//     // // if (currentPositionScroll > lastScrollTop && currentPositionScroll > 600 && !isNavigate){
+//     // //   $('nav').addClass('hidden-nav');
+//     // //   $('nav').removeClass('show-nav');
+//     // // } 
+//     // // else {
+//     // //   $('nav').removeClass('hidden-nav');
+//     // //   $('nav').addClass('show-nav');
+//     // // }
+//     if(currentPositionScroll === 0){
+//       $('nav').removeClass('hidden-nav');
+//       $('nav').removeClass('show-nav');
+//     }
+//     lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
+//   }
+// });
 
 // effects - mouseevent
-window.addEventListener('mousemove', (e) => {
-  if(screen.width > 768){
-    const currentPositionScroll = window.scrollY;
-    if(currentPositionScroll > 500){
-      heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav') && $('nav').addClass('show-nav');;
-    };
-  }
-});
+// window.addEventListener('mousemove', (e) => {
+//   if(screen.width > 768){
+//     const currentPositionScroll = window.scrollY;
+//     if(currentPositionScroll > 500){
+//       heigthNav + 80 > e.clientY && $('nav').removeClass('hidden-nav') && $('nav').addClass('show-nav');;
+//     };
+//   }
+// });
 
 // navigation - scroll
-$(".scrollToTop").on("click", function (e) {
-  e.preventDefault();
-  location.href = initialLocation;
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+// $(".scrollToTop").on("click", function (e) {
+//   e.preventDefault();
+//   location.href = initialLocation;
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// });
 
-
-$(".how").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#how`;
-  perfectScroll("scrolltoHow", screen.width > 768 ? 150 : 10);
-});
-
-$(".what").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#what`;
-  perfectScroll(`weDoLayer`, screen.width > 768 ? 100 : -10);
-});
-
-$(".clients").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#clients`;
-  perfectScroll(`clients`, -40);
-});
-
-$(".team").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#team`;
-  perfectScroll(`scrolltoTeam`, 100);
-});
-
-$(".devsJuniors").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#devsJuniors`;
-  perfectScroll(`scrollToJuniors`, -80);
-});
-
-$(".devsSeniors").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#devsSeniors`;
-  perfectScroll("devsSeniorsLayer", -30);
-});
-
-$(".contact").on("click", function (e) {
-  e.preventDefault();
-  location.href = `#contact`;
-  perfectScroll("contact", 10);
-});
-
-const perfectScroll = (section, marginToAdd) => { 
-  const distanceCalculated = heigthNav + 30 + marginToAdd;
-  const scrollToSection = document.getElementById(section).offsetTop;
-  const scrollTo = scrollToSection - distanceCalculated;
-  isNavigate = true;
-  window.scrollTo({ top: scrollTo, behavior: "smooth" });
-};
+// const perfectScroll = (section, marginToAdd) => { 
+//   const distanceCalculated = heigthNav + 30 + marginToAdd;
+//   const scrollToSection = document.getElementById(section).offsetTop;
+//   const scrollTo = scrollToSection - distanceCalculated;
+//   isNavigate = true;
+//   window.scrollTo({ top: scrollTo, behavior: "smooth" });
+// };
 
 // is scrolling ?
 const  noScroll = (callback, refresh = 100) => {
@@ -425,5 +387,136 @@ $(function(){
   }
 });
 
+// partners slide
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
+
+// opportunities  cards 
+const leftCard = document.getElementById('opportunities-left-card').offsetHeight;
+const rightCard = document.getElementById('opportunities-right-card').offsetHeight;
+const maxHeight = Math.max(leftCard, rightCard);
+let maxOpenHeight;
+document.getElementById('opportunities-left-card').style.height = `${maxHeight}px`;
+document.getElementById('opportunities-right-card').style.height = `${maxHeight}px`;
+document.getElementById('largeArrow').style.height = `${maxHeight}px`;
+
+$("#opportunities-left-card").on("click", function (e) {
+  if ($("#opportunities-left-card-collapsed-content").is(":visible")){
+    $("#opportunities-left-card-collapsed-content").slideUp();
+    $("#opportunities-left-card").css('min-height', maxHeight)
+   
+  }
+  else{
+    $("#opportunities-left-card").css('height', 'fit-content');    
+    $("#opportunities-left-card-collapsed-content").slideDown();
+  }
+})
+
+$("#opportunities-right-card").on("click", function (e) {
+  if ($("#opportunities-right-card-collapsed-content").is(":visible")){
+    $("#opportunities-right-card-collapsed-content").slideUp();
+  }
+  else{
+    $("#opportunities-right-card-collapsed-content").slideDown();
+    $("#opportunities-right-card").css('height', 'fit-content');
+    maxOpenHeight = document.getElementById('opportunities-right-card').offsetHeight;    
+  }
+})
+
+var openCardLeft = false;
+var openCardRight = false;
+
+// arrow effect - open-close card
+document.getElementById('opportunities-right-card').addEventListener('click', function(){
+  var icon = document.getElementById('opportunities-right-card-btn');
+    if(openCardRight){
+    icon.className = 'fa fa-arrow-down';  
+  } else{
+    icon.className = 'fa fa-arrow-down open';
+  }
+  openCardRight = !openCardRight;
+});
+
+document.getElementById('opportunities-left-card').addEventListener('click', function(){
+  var icon = document.getElementById('opportunities-left-card-btn');
+    if(openCardLeft){
+    icon.className = 'fa fa-arrow-down';  
+  } else{
+    icon.className = 'fa fa-arrow-down open';
+  }
+  openCardLeft = !openCardLeft;
+});
+
+
+// carousel animation
+const bannerNav = document.getElementById("banner-layout");
+const bannerContent = document.getElementById("banner-content");
+const partners = document.getElementById("partners");
+const opportunities = document.getElementById("opportunities");
+
+// no-more-devs
+const noMoreDevs = document.getElementById('no-more-devs')
+const noMoreDevsPositionHeight = noMoreDevs.offsetTop;
+const carouselNoMoreDevs = document.getElementById("no-more-devs-carousel");
+const noMoreDevsCarouselItemWidth = document.querySelector(".no-more-devs-item-scroll").scrollWidth;
+
+// how-do
+const howDo = document.getElementById('how-do')
+const howDoPositionHeight = howDo.offsetTop;
+const howDoCarousel = document.getElementById("how-do-carousel");
+const howDoCarouselItemWidth = document.querySelector(".how-do-item-scroll").scrollWidth;
+
+const scrollDirection = (prevPosition, currentPosition) => {
+  return currentPosition > prevPosition ? 'down' : 'up';
+}
+const noMoreDevsAnimation = new CarouselAnimator(carouselNoMoreDevs, noMoreDevsCarouselItemWidth);
+const howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth);
+
+window.addEventListener('scroll', (e) => {
+  // if(screen.width > 768){
+    if(window.scrollY < 500){
+      noMoreDevsAnimation.animate('reverse');
+      howDoAnimation.animate('reverse');
+    }
+    
+    const currentPositionScroll = window.scrollY;
+    const opportunitiesToTop = opportunities.getBoundingClientRect();
+    const noMoreDevsToTop = noMoreDevs.getBoundingClientRect();
+    const howDoToTop = howDo.getBoundingClientRect();
+    const direction = scrollDirection(lastScrollTop, currentPositionScroll)
+
+    if(opportunitiesToTop.top >= 100){
+      bannerNav.classList.add('fixed-scroll-position');
+      opportunities.classList.add('sticky-position-scroll');
+      bannerContent.classList.add('display-none');
+      partners.classList.add('display-none');
+    }
+    
+    if(noMoreDevsToTop.top >= 100){
+      noMoreDevs.classList.add('sticky-position-scroll');
+    }
+
+    if(currentPositionScroll >= noMoreDevsPositionHeight){
+      if(noMoreDevsAnimation.loopCarousel < 2){
+        noMoreDevsAnimation.animate('play');
+      }
+    }
+
+    if(howDoToTop.top <= 0 && !howDoAnimation.finished){
+      howDo.classList.add('sticky-position-scroll-top');
+      if(howDoAnimation.loopCarousel < 2){
+        howDoAnimation.animate('play');
+      }
+    }
+
+  // }
+  if(noMoreDevsAnimation.finished && currentPositionScroll >= noMoreDevsPositionHeight  && direction === 'down'){
+    opportunities.classList.remove('sticky-position-scroll');
+    noMoreDevs.classList.remove('sticky-position-scroll');
+    bannerNav.classList.remove('fixed-scroll-position');
+  }
+  if(howDoAnimation.finished  && direction === 'down'){
+    howDo.classList.remove('sticky-position-scroll-top')
+  }
+  lastScrollTop = currentPositionScroll;
+});

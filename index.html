@@ -29,132 +29,177 @@
 
 <body class="themeColor default-scrollbar">
 <!-- logo on top for google -->
-<img style="display: none" src="media/logo.png" alt="Teamcubation">
+<img style="display: none" src="media/logotipo.svg" alt="Teamcubation">
 
 <nav>
-  <div id="navBar">
-    <div id="navBarContent">
-      <div class="logo">
-        <img id="logo" class="scrollToTop" src="media/logo.png" alt="Teamcubation">
-      </div>
-      <div class="navigate">
-        <!-- <div class="language-select">
-          <div class="language-tittle">
-            <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
-            <p data-t>lang.textButton</p>
+  <div id="navbar">
+    <div id="navbar-content" class="collapsed-menu">      
+      <div style="width: 100%; display: flex; justify-content: space-between;">
+        <div class="logo">
+          <img id="logo" class="scrollToTop" src="media/logotipo.svg" alt="Teamcubation">
+          <img id="logo-orange" class="scrollToTop hidden" src="media/logotipo-orange.svg" alt="Teamcubation">
+        </div>
+        <div class="navigate">
+          <!-- <div class="language-select">
+            <div class="language-tittle">
+              <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
+              <p data-t>lang.textButton</p>
+            </div>
+            <ul class="language-options">
+              <li data-lang="es">
+                <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
+              </li>
+              <li data-lang="en">
+                <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
+              </li>
+            </ul>
+          </div> -->
+          <button class="contact-button outlined">Contactános</button>
+          <button class="menu-button">
+            <i class="icon ion-md-menu"></i>
+          </button>      
+        </div>
+      </div>  
+      <div id="menu" class="hidden">
+        <div class="navigate-menu" style="position:absolute; width: 100%; top:0; left:0; padding: 0 3.5em">
+          <div class="vertical-divider-menu"></div>
+          <div class="vertical-divider-menu"></div>
+          <div class="vertical-divider-menu"></div>
+          <div class="vertical-divider-menu"></div>
+          <div class="vertical-divider-menu"></div>
+          <div class="vertical-divider-menu" style="visibility: hidden;"></div>
+        </div>  
+        <div class="navigate-menu">
+          <div class="link-button">
+            <a class="proposal" href="#no-more-devs">Propuesta</a>
+            <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
-          <ul class="language-options">
-            <li data-lang="es">
-              <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
-            </li>
-            <li data-lang="en">
-              <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
-            </li>
-          </ul>
-        </div> -->
-        <button id="contactButton">Contactanos</button>
-        <button id="menuButton">
-          <i class="icon ion-md-menu" style="color: white; font-weight:200"></i>
-        </button>
-  
+          <div class="link-button">
+            <a class="problem" href="#problem">Problema</a>
+            <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+          </div>
+          <div class="link-button">
+            <a class="cases" href="#cases">Casos</a>
+            <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+          </div>
+          <div class="link-button">
+            <a class="process" href="#process">Proceso</a>
+            <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+          </div>
+          <div class="link-button">
+            <a class="methodology" href="#methodology">Metodología</a>
+            <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+          </div>
+          <div class="link-button">
+            <a class="aboutUs" href="#aboutUs">Quienes somos</a>
+            <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+          </div>
+        </div>
       </div>
     </div>
+    <div id="footer-menu" class="hidden">
 
+    </div>
+<!-- 
     <div style="display: flex">
       <div id="selectLangMobile" class="language-select-mobile">
         <div class="language-tittle">
-          <img class="flag" alt="redirect_lang" src="media/worl_icon.svg">
-          <p>Lenguaje</p>
+          <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
+          <p data-t>lang.textButton</p>
         </div>
         <ul class="language-options">
           <li data-lang="es">
-            <a href="https://teamcubation.com/en">Español</a>
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
           </li>
           <li data-lang="en">
-            <a href="https://teamcubation.com/en">Inglés</a>
+            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
           </li>
         </ul>
       </div>
       <div class="btn-menu-mobile">
         <i class="icon ion-md-menu"></i>
       </div>
-    </div>
-  </div>
-  <div id="navBarMobile">
-    <div class="navigate-mobile">
-      <a class="what" href="#what">¿Cómo?</a>
-      <a class="how" href="#how">La experiencia</a>
-      <a class="clients" href="#clients">Clientes</a>
-      <a class="team" href="#team">Equipo</a>
-      <a class="contact" href="#contact">Contactanos</a>
-      <a class="devsJuniors" href="#devsJuniors">Devs Junior</a>
-      <a class="devsSeniors" href="#devsSeniors">Devs con experiencia</a>
-    </div>
+    </div> -->
   </div>
 </nav>
 
-<div id="pageContent" style="height: 100%;">
 
-  <!-- <img id="backToTop" class="scrollToTop" src="media/logo/logo-btn.svg" alt=""> -->
+<!-- <img id="backToTop" class="scrollToTop" src="media/logo/logo-btn.svg" alt=""> -->
 
-  <section id="banner">
-    <div class="banner-layout">
-      <img id="desktop-banner-img" src="media/background/banner.png" class="banner-img">
+<section id="banner">
+  <div id="banner-layout" class="layout absolute-scroll-position">
+    <div style="height: 100%; overflow: hidden; position: absolute; width: 100%">
+      <img id="desktop-banner-img" src="media/background/banner.jpg" class="banner-img">
       <img id="mobile-banner-img" src="media/background/mobile-banner.png" class="banner-img">
     </div>
-    <div class="banner-content">
-      <h1 class="color-white">Desarrolladores de</h1><br>
-      <h1 class="color-white"> experiencia</h1><br>
-    </div>
-    <div id="partners">
-      <div class="logos">
-        <div class="logos-slide">
-          <img src="media/partners/partners.png">
-          <img src="media/partners/partners.png">
-        </div>
-      </div>        
-    </div>
-  </section>
+  </div>
+  <div id="banner-content">
+    <h1 class="color-white">Desarrolladores de</h1><br>
+    <h1 class="color-white"> experiencia</h1><br>
+  </div>
+  <div id="partners">
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="media/partners/partners.png">
+        <img src="media/partners/partners.png">
+      </div>
+    </div>        
+  </div>
+</section>
+<div id="scroll-page">
 
   <section id="opportunities">
-    <div class="opportunities-layout">
-      <div class="opportunities-content">
+    <div id="opportunities-layout" class="layout">
+      <div id="opportunities-content">
         <div class="row text-center color-orange">
           <h3>Nunca más pierdas</h3>
           <h3>oportunidades por falta</h3>
           <h3>de talento IT.</h3>
         </div>
-        <div class="row justify-content-between mt-7">
+        <div id="opportunities-card" class="grid-row justify-content-between mt-7">
           <div class="col-5">
-            <div class="card gradient-border">
-              <div class="row">
-                <div class="arrow-button">
-                  <img class="float-right" src="media/arrow.svg" alt>
+            <div id="opportunities-left-card" class="card gradient-border">
+              <div class="card-content">
+                <div class="row">
+                  <div class="arrow-button" id="opportunities-left-card-btn-container">
+                    <img id="opportunities-left-card-btn" class="float-right" src="media/arrow.svg" alt>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="md-text-card color-purple">Anímate a contratar devs juniors para completar tu equipo</p>
                 </div>
               </div>
-              <div class="row">
-                <div class="md-text-card color-purple">
-                  central text
+              <div id="opportunities-left-card-collapsed-content" class="collapsed-content">
+                <div class="card-collapse-content">
+                  <p class="sm-text-card color-purple">Diversos, comprometidos y enérgicos, integrados a tu cultura y tecnología, listos para trabajar en tu compañía</p>
+                  <p class="sm-text-card color-purple fw-bold">¡Son miles y están esperando que les des su oportunidad!</p>
                 </div>
+                <img class="card-background-img" src="media/img-left-card.png" alt="img-card">
               </div>
             </div>
           </div>
           <div class="col-2">
-            <div class="d-flex align-items-center h-100">
-              <img class="w-100" src="media/largeArrow.png" alt>
+            <div id="largeArrow" class="d-flex align-items-center w-100">
+              <img style="width: 90%;" src="media/largeArrow.png" alt>
             </div>
           </div>
           <div class="col-5">
-            <div class="card gradient-border">
-              <div class="row">
-                <div class="arrow-button">
-                  <img class="float-right" src="media/arrow.svg" alt>
+            <div id="opportunities-right-card" class="card gradient-border">
+              <div class="card-content">
+                <div class="row">
+                  <div class="arrow-button" id="opportunities-right-card-btn-container">
+                    <img id="opportunities-right-card-btn" class="float-right" src="media/arrow.svg" alt>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="md-text-card color-purple">Nosotros nos ocupamos de su falta de experiencia, desarrollando el software que necesitas para seguir creciendo.</p>
                 </div>
               </div>
-              <div class="row">
-                <div class="md-text-card color-purple">
-                  central text
+              <div id="opportunities-right-card-collapsed-content" class="collapsed-content">
+                <div class="card-collapse-content">
+                  <p class="sm-text-card color-purple">Tu Backlog, si, ese que no lográs priorizar por falta de equipo, es la excusa perfecta para que tus juniors, liderados por nuestros seniors, desarrollen la experiencia real y necesaria que requiere trabajar en tu compañía.</p>
                 </div>
+                <img class="card-background-img" src="media/img-right-card.png" alt="img-card">
               </div>
             </div>
           </div>
@@ -162,12 +207,117 @@
       </div>
     </div>
   </section>
-</div>
 
+  <section id="no-more-devs">
+    <div id="no-more-devs-layout" class="layout">
+      <div id="no-more-devs-content">
+        <img id="quotes" src="media/quote.png" alt="quotes">
+        <div id="no-more-devs-carrousel">
+          <div class="carousel-section">
+            <div id="no-more-devs-carousel" class="carousel mt-2 mb-2">
+              <div class="no-more-devs-item-scroll">
+                <h2>No hay devs con experiencia</h2>
+              </div>
+              <div class="no-more-devs-item-scroll">
+                <h2>Perdemos oportunidades</h2>
+              </div>
+              <div class="no-more-devs-item-scroll">
+                <h2>Nuestro seniors no tienen</h2><br>
+                <h2>tiempo de capacitar</h2>
+              </div>
+            </div>
+          </div>
+          <div class="color-orange">
+            <h6>¿Suena conocido?</h6>
+          </div>
+          <div class="d-flex mt-3">
+              <button class="contact-button white-button ms-auto">¡Contáctanos!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="the-wheel">
+    <div id="the-wheel-layout" class="layout">
+      <div id="the-wheel-content">
+        <div class="text-center">
+          <h3 class="color-purple">No inventamos la rueda,</h3><br>
+          <h3 class="color-purple">la hicimos girar.</h3>
+        </div>
+        <div style="height: 800px; "></div>
+        <div class="text-center">
+          <h3 class="color-purple mb-2">Lo estamos haciendo</h3><br>
+          <iframe style="border-radius: 15px; border: 1px red" width="100%" height="600" src="https://www.youtube.com/embed/1UZCMdtVAq4" title="Tq" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-do">
+    <div id="how-do-layout" class="layout">
+      <div id="how-do-content">
+        <div class="text-center" style="margin-right: 14em;">
+          <h3>¿Cómo lo hacemos?</h3>
+        </div>  
+        <div class="carousel-section">
+          <div id="how-do-carousel" class="carousel mt-2 mb-2">
+            <div class="how-do-item-scroll">
+              <div class="d-flex">
+                <div class="d-flex step-number-container">
+                  <div class="step-number">01</div>
+                </div>
+                <div class="step-leyend-container">
+                  <div class="divider"></div>
+                  <div class="step-leyend">
+                    <p class="md-text-card">Discovery</p>
+                    <p>Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de tus metodologías, stack tecnológico y cultura.</p>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="how-do-item-scroll">
+              <div class="d-flex">
+                <div class="step-number-container">
+                  <div class="step-number">02</div>
+                </div>
+                <div class="step-leyend-container">
+                  <div class="divider"></div>
+                  <div class="step-leyend">
+                    <p class="md-text-card">Discovery</p>
+                    <p>Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de tus metodologías, stack tecnológico y cultura.</p>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="how-do-item-scroll">
+              <div class="d-flex">
+                <div class="step-number-container">
+                  <div class="step-number">03</div>
+                </div>
+                <div class="step-leyend-container">
+                  <div class="divider"></div>
+                  <div class="step-leyend">
+                    <p class="md-text-card">Discovery</p>
+                    <p>Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de tus metodologías, stack tecnológico y cultura.</p>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="squads" style="height: 1500px;"></section>
+
+</div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script type="module" src="index.js?v=40"></script>
+
 
 </body>
 </html>
