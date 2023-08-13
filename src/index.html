@@ -54,7 +54,7 @@
               </li>
             </ul>
           </div> -->
-          <button data-t class="contact-button outlined">textLinks.contactLink</button>
+          <button data-t class="button outlined">textLinks.contact</button>
           <button class="menu-button">
             <i class="icon ion-md-menu"></i>
           </button>      
@@ -71,34 +71,41 @@
         </div>  
         <div class="navigate-menu">
           <div class="link-button">
-            <a class="proposal" data-t data-attr-t data-attr-t-interpolate href="#no-more-devs">textLinks.proposalLink</a>
+            <a class="proposal" data-t data-attr-t data-attr-t-interpolate href="#no-more-devs">textLinks.proposal</a>
             <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
           <div class="link-button">
-            <a class="problem" data-t data-attr-t data-attr-t-interpolate href="#problem">textLinks.problemLink</a>
+            <a class="problem" data-t data-attr-t data-attr-t-interpolate href="#problem">textLinks.problem</a>
             <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
           <div class="link-button">
-            <a class="cases" data-t data-attr-t data-attr-t-interpolate href="#cases">textLinks.casesLink</a>
+            <a class="cases" data-t data-attr-t data-attr-t-interpolate href="#cases">textLinks.cases</a>
             <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
           <div class="link-button">
-            <a class="process" data-t data-attr-t data-attr-t-interpolate href="#process">textLinks.processLink</a>
+            <a class="process" data-t data-attr-t data-attr-t-interpolate href="#process">textLinks.process</a>
             <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
           <div class="link-button">
-            <a class="methodology" data-t data-attr-t data-attr-t-interpolate href="#methodology">textLinks.methodologyLink</a>
+            <a class="methodology" data-t data-attr-t data-attr-t-interpolate href="#methodology">textLinks.methodology</a>
             <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
           <div class="link-button">
-            <a class="aboutUs" data-t data-attr-t data-attr-t-interpolate href="#aboutUs">textLinks.aboutUsLink</a>
+            <a class="aboutUs" data-t data-attr-t data-attr-t-interpolate href="#aboutUs">textLinks.aboutUs</a>
             <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
           </div>
         </div>
       </div>
     </div>
     <div id="footer-menu" class="hidden">
-
+      <div class="navigate-menu h-100">
+        <button data-t data-attr-t data-attr-t-interpolate class="button bg-orange white">textLinks.joinUs</button>
+        <div id="social-links-container">
+          <a class="social-link orange" href="">IG</a>
+          <a class="social-link orange" href="">TWITTER</a>
+          <a class="social-link orange" href="">FB</a>
+        </div>
+      </div>
     </div>
 <!-- 
     <div style="display: flex">
@@ -129,17 +136,17 @@
 <section id="banner">
   <div id="banner-layout" class="layout absolute-scroll-position">
     <div style="height: 100%; overflow: hidden; position: absolute; width: 100%">
-      <img id="desktop-banner-img" src="media/background/banner.jpg" class="banner-img">
+      <img id="desktop-banner-img" src="media/background/banner-min.jpg" class="banner-img">
       <img id="mobile-banner-img" src="media/background/mobile-banner.png" class="banner-img">
     </div>
   </div>
   <div id="banner-content">
-    <h1 data-t class="color-white">banner.centralText.lineOne</h1><br>
-    <h1 data-t class="color-white">banner.centralText.lineTwo</h1><br>
+    <h1 data-t class="white">banner.centralText.lineOne</h1><br>
+    <h1 data-t class="white">banner.centralText.lineTwo</h1><br>
   </div>
   <div id="partners">
     <div class="logos">
-      <div class="logos-slide">
+      <div >
         <img  src="media/partners/partners.png">
         <img  src="media/partners/partners.png">
       </div>
@@ -151,7 +158,7 @@
   <section id="opportunities">
     <div id="opportunities-layout" class="layout">
       <div id="opportunities-content">
-        <div class="row text-center color-orange">
+        <div class="row text-center orange">
           <h3 data-t>opportunities.centralText.lineOne</h3>
           <h3 data-t>opportunities.centralText.lineTwo</h3>
           <h3 data-t>opportunities.centralText.lineThree</h3>
@@ -227,11 +234,11 @@
               </div>
             </div>
           </div>
-          <div class="color-orange">
+          <div class="orange">
             <h6 data-t>noMoreDevs.inlineText</h6>
           </div>
           <div class="d-flex mt-3">
-              <button data-t class="contact-button white-button ms-auto">noMoreDevs.contactButton</button>
+              <button data-t class="button bg-white purple ms-auto" style="z-index: 1;">noMoreDevs.contactButton</button>
           </div>
         </div>
       </div>
@@ -245,8 +252,43 @@
           <h3 class="color-purple" data-t>theWheel.centralText.lineOne</h3><br>
           <h3 class="color-purple" data-t>theWheel.centralText.lineTwo</h3>
         </div>
-        <div style="height: 800px; "></div>
-        <div class="text-center">
+        <div id="venn-diagram-container">
+          <!-- <div class="col-10 col-md-6"> -->
+            <div id="control-switch">
+              <input type="checkbox" id="seniors-switch" /><label for="seniors-switch">Toggle</label>
+              <input type="checkbox" id="juniors-switch" /><label for="juniors-switch">Toggle</label>
+              <input type="checkbox" id="software-switch" /><label for="software-switch">Toggle</label>
+            </div>
+          <!-- </div> -->
+          <!-- <div class="col-10 col-md-6"> -->
+            <div id="venn-diagram">
+              <img style="position: absolute; top: 33%; left: 47.2%; z-index: 10; width: 5%" src="media/logo-white.svg" alt="">
+              <div id="seniors-venn-diagram-item" class="venn-diagram-item">
+                <div class="leyend-diagram-item purple">
+                  <div data-t class="sm-text-card fw-bold">SENIORS</div>
+                  <p data-t>theWheel.veenDiagram.seniors.lineOne</p>
+                  <p data-t>theWheel.veenDiagram.seniors.lineTwo</p>
+                </div>
+              </div>
+              <div id="juniors-venn-diagram-item" class="venn-diagram-item">
+                <div class="leyend-diagram-item white">
+                  <div data-t class="sm-text-card fw-bold">SENIORS</div>
+                  <p data-t>theWheel.veenDiagram.seniors.lineOne</p>
+                  <p data-t>theWheel.veenDiagram.seniors.lineTwo</p>
+                </div>
+              </div>
+              <div id="software-venn-diagram-item" class="venn-diagram-item">
+                <div class="leyend-diagram-item white">
+                  <div data-t class="sm-text-card fw-bold">SENIORS</div>
+                  <p data-t>theWheel.veenDiagram.seniors.lineOne</p>
+                  <p data-t>theWheel.veenDiagram.seniors.lineTwo</p>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+          
+        </div>
+        <div class="row text-center" style="position: relative;">
           <h3 class="color-purple mb-2" data-t>theWheel.centralTextTwo</h3><br>
           <iframe style="border-radius: 15px; border: 1px red" width="100%" height="600" src="https://www.youtube.com/embed/1UZCMdtVAq4" title="Tq"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>

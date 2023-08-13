@@ -54,7 +54,7 @@
               </li>
             </ul>
           </div> -->
-          <button class="contact-button outlined">Contactános</button>
+          <button class="button outlined">Contáctanos</button>
           <button class="menu-button">
             <i class="icon ion-md-menu"></i>
           </button>      
@@ -98,7 +98,14 @@
       </div>
     </div>
     <div id="footer-menu" class="hidden">
-
+      <div class="navigate-menu h-100">
+        <button class="button bg-orange white">¡Unite!</button>
+        <div id="social-links-container">
+          <a class="social-link orange" href>IG</a>
+          <a class="social-link orange" href>TWITTER</a>
+          <a class="social-link orange" href>FB</a>
+        </div>
+      </div>
     </div>
 <!-- 
     <div style="display: flex">
@@ -129,17 +136,17 @@
 <section id="banner">
   <div id="banner-layout" class="layout absolute-scroll-position">
     <div style="height: 100%; overflow: hidden; position: absolute; width: 100%">
-      <img id="desktop-banner-img" src="media/background/banner.jpg" class="banner-img">
+      <img id="desktop-banner-img" src="media/background/banner-min.jpg" class="banner-img">
       <img id="mobile-banner-img" src="media/background/mobile-banner.png" class="banner-img">
     </div>
   </div>
   <div id="banner-content">
-    <h1 class="color-white">Desarrolladores de</h1><br>
-    <h1 class="color-white"> experiencia</h1><br>
+    <h1 class="white">Desarrolladores de</h1><br>
+    <h1 class="white"> experiencia</h1><br>
   </div>
   <div id="partners">
     <div class="logos">
-      <div class="logos-slide">
+      <div>
         <img src="media/partners/partners.png">
         <img src="media/partners/partners.png">
       </div>
@@ -151,7 +158,7 @@
   <section id="opportunities">
     <div id="opportunities-layout" class="layout">
       <div id="opportunities-content">
-        <div class="row text-center color-orange">
+        <div class="row text-center orange">
           <h3>Nunca más pierdas</h3>
           <h3>oportunidades por falta</h3>
           <h3>de talento IT.</h3>
@@ -227,11 +234,11 @@
               </div>
             </div>
           </div>
-          <div class="color-orange">
+          <div class="orange">
             <h6>¿Suena conocido?</h6>
           </div>
           <div class="d-flex mt-3">
-              <button class="contact-button white-button ms-auto">¡Contáctanos!</button>
+              <button class="button bg-white purple ms-auto" style="z-index: 1;">¡Contáctanos!</button>
           </div>
         </div>
       </div>
@@ -245,8 +252,43 @@
           <h3 class="color-purple">No inventamos la rueda,</h3><br>
           <h3 class="color-purple">la hicimos girar.</h3>
         </div>
-        <div style="height: 800px; "></div>
-        <div class="text-center">
+        <div id="venn-diagram-container">
+          <!-- <div class="col-10 col-md-6"> -->
+            <div id="control-switch">
+              <input type="checkbox" id="seniors-switch"><label for="seniors-switch">Toggle</label>
+              <input type="checkbox" id="juniors-switch"><label for="juniors-switch">Toggle</label>
+              <input type="checkbox" id="software-switch"><label for="software-switch">Toggle</label>
+            </div>
+          <!-- </div> -->
+          <!-- <div class="col-10 col-md-6"> -->
+            <div id="venn-diagram">
+              <img style="position: absolute; top: 33%; left: 47.2%; z-index: 10; width: 5%" src="media/logo-white.svg" alt>
+              <div id="seniors-venn-diagram-item" class="venn-diagram-item">
+                <div class="leyend-diagram-item purple">
+                  <div class="sm-text-card fw-bold">SENIORS</div>
+                  <p>con experiencia</p>
+                  <p>en desarrollo</p>
+                </div>
+              </div>
+              <div id="juniors-venn-diagram-item" class="venn-diagram-item">
+                <div class="leyend-diagram-item white">
+                  <div class="sm-text-card fw-bold">SENIORS</div>
+                  <p>con experiencia</p>
+                  <p>en desarrollo</p>
+                </div>
+              </div>
+              <div id="software-venn-diagram-item" class="venn-diagram-item">
+                <div class="leyend-diagram-item white">
+                  <div class="sm-text-card fw-bold">SENIORS</div>
+                  <p>con experiencia</p>
+                  <p>en desarrollo</p>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+          
+        </div>
+        <div class="row text-center" style="position: relative;">
           <h3 class="color-purple mb-2">Lo estamos haciendo</h3><br>
           <iframe style="border-radius: 15px; border: 1px red" width="100%" height="600" src="https://www.youtube.com/embed/1UZCMdtVAq4" title="Tq" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>

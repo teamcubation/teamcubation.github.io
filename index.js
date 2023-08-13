@@ -296,7 +296,7 @@ $(".option-tc").on("click", function () {
 
 // mobile navbar 
 
-$(".ion-md-menu").on("click", function () {
+$(".menu-button").on("click", function () {
   $("#navbar-content").toggleClass('open-menu');
   $("#menu").toggleClass('hidden');
   $('#logo').toggleClass('hidden');
@@ -388,8 +388,15 @@ $(function(){
 });
 
 // partners slide
-var copy = document.querySelector(".logos-slide").cloneNode(true);
-document.querySelector(".logos").appendChild(copy);
+document.addEventListener("DOMContentLoaded", function() {
+  const logosSlide = document.querySelector(".logos div");
+  logosSlide.classList.add("logos-slide");
+  const logosSlideCopy = logosSlide.cloneNode(true);
+  logosSlideCopy.classList.add("logos-slide");
+  document.querySelector(".logos").appendChild(logosSlideCopy);
+});
+
+// document.querySelector(".logos").appendChild(copy);
 
 // opportunities  cards 
 const leftCard = document.getElementById('opportunities-left-card').offsetHeight;

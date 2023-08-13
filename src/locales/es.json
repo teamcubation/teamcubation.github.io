@@ -9,13 +9,14 @@
     "english": "Inglés"
   },
   "textLinks": {
-      "proposalLink": "Propuesta",
-      "problemLink": "Problema",
-      "casesLink": "Casos",
-      "processLink": "Proceso",
-      "methodologyLink": "Metodología",
-      "aboutUsLink": "Quienes somos",
-      "contactLink": "Contactános"
+      "proposal": "Propuesta",
+      "problem": "Problema",
+      "cases": "Casos",
+      "process": "Proceso",
+      "methodology": "Metodología",
+      "aboutUs": "Quienes somos",
+      "contact": "Contáctanos",
+      "joinUs": "¡Unite!"
   },
   "banner":{
     "url": "https://teamcubation.com/en",
@@ -56,6 +57,13 @@
     "centralText": {
       "lineOne": "No inventamos la rueda,",
       "lineTwo": "la hicimos girar."
+    },
+    "veenDiagram":{
+      "seniors": {
+        "lineOne": "con experiencia",
+        "lineTwo": "en desarrollo"
+
+      }
     },
     "centralTextTwo": "Lo estamos haciendo"
   },

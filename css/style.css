@@ -12,10 +12,11 @@ html, body {
 /* style elements */
 
 .themeColor{
-	--color-white: #ffffff;
+	--white: #ffffff;
 	--color-dark: #000000;
 	--color-logo-orange: #F34E1E;
 	--color-logo-purple: #551872;
+	--color-green: #8BDCB3;
 	--color-gray: #414141;
 	--color-gray-100: #656565;
 	--color-gray-200: #b9b9b9;
@@ -26,6 +27,7 @@ h1{
 	font-size: calc(5.5vw + 1em);
 	margin-bottom: 0;
 	line-height: 0.8em;
+	font-weight: 600;
 }
 
 h2{
@@ -38,6 +40,7 @@ h3{
 	font-size: calc(3.75em);
 	margin-bottom: 0;
 	line-height: 1em;
+	font-weight: 600;
 }
 
 h4{
@@ -67,7 +70,7 @@ h6{
 }
 
 a{
-	font-size: calc(0.5vw + 0.5em);
+	font-size: calc(0.5vw + 0.6em);
 	color: var(--color-logo-orange);
 }
 
@@ -75,22 +78,26 @@ ul{
     list-style: none;
 }
 
-.bc-white{
+.bg-white{
 	background-color: var(--color-logo-white);
 }
-
-.bc-red-dark{
-	background-color: var(--color-red-dark);
+.bg-orange{
+	background-color: var(--color-logo-orange);
+}
+.bg-green{
+	background-color: var(--color-logo-green);
 }
 
-.color-white{
-	color: var(--color-white)
+.white{
+	color: var(--white)
 }
 
-.color-orange{
+.orange{
 	color: var(--color-logo-orange)
 }
-
+.purple{
+	color: var(--color-logo-purple);
+}
 .color-purple{
 	color: var(--color-logo-purple)
 }
@@ -198,6 +205,7 @@ nav{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 #footer-menu{
@@ -207,13 +215,21 @@ nav{
 	color: var(--color-logo-orange);
 	margin-top: 10px;
 	height: 6em;
+	padding: 0 3.5em;
 }
+
 .vertical-divider-menu{
 	flex-grow: 1;
 	background-color: transparent;
 	border-right: 1px solid rgba(171, 171, 171, 0.359);
 	height: 25em;
-	/* position: relative; */
+}
+
+#social-links-container{
+	display: flex;
+	justify-content: space-between;
+	max-width: 70%;
+	min-width: 15em;
 }
 /* banner */
 
@@ -226,7 +242,7 @@ nav{
 .banner-img{
 	width: 100%;
 	height: 100%;
-	animation: zoomInOut 15s infinite linear;
+	animation: zoomInOut 18s infinite linear;
 }
 
 #mobile-banner-img{
@@ -369,6 +385,79 @@ nav{
     margin: 0 auto;
 }
 
+#control-switch{
+	height: 700px;
+	padding-top: 15%;
+}
+
+#venn-diagram-container{
+	display: flex;
+	position: relative;
+	min-height: 70vh;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5em 0;
+}
+
+#venn-diagram{
+	position: relative;
+	height: 800px;
+	width: 800px;
+}
+
+.venn-diagram-item{
+	position: absolute;
+	width: 50%; 
+	padding-top: 50%;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5em;
+	color: white;
+}
+
+#seniors-venn-diagram-item{
+	left: 7.5%;
+	background-color: #8bdcb3d9;
+}
+
+#juniors-venn-diagram-item{
+	right: 7.5%;
+	background-color: #f3501ed3;
+}
+
+#software-venn-diagram-item{
+	left: 25%;
+	top: 30%;
+	background-color: #551872de;
+}
+
+.leyend-diagram-item{
+	position: absolute;
+}
+
+#seniors-venn-diagram-item .leyend-diagram-item{
+	top: 35%;
+	left: 20%;
+}
+
+#juniors-venn-diagram-item .leyend-diagram-item{
+	top: 35%;
+	right: 20%;
+	text-align: right;
+}
+
+#software-venn-diagram-item .leyend-diagram-item{
+	top: 40%;
+	text-align: center;
+}
+
+.leyend-diagram-item p{
+	margin-bottom: 0;
+	line-height: 1.3em;
+}
+
 /* how-do */
 
 #how-do-layout{
@@ -415,6 +504,7 @@ nav{
 	height: 50%;
 	border-bottom: 1px solid white;
 }
+
 /* cards */
 
 .card{
@@ -424,14 +514,17 @@ nav{
 	position: relative;
 	background-color: transparent!important;
 }
+
 .card-content{
 	position: relative;
 	padding: 2.5em 3em 1em 3em;
 }
+
 .card-collapse-content{
 	position: relative;
 	padding:0 3em;
 }
+
 .card-
 .gradient-border {
 	position: relative;
@@ -441,11 +534,13 @@ nav{
 	font-size: 1.2em;
 	line-height: 1.475em;
 }
+
 .md-text-card{
 	font-size: 1.525em;
 	line-height: 1.475em;
 	font-weight: 600;
 }
+
 .gradient-border::before {
 	content: "";
 	position: absolute;
@@ -460,9 +555,11 @@ nav{
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
 }
+
 .card-background-img{
 	width: 100%;
 }  
+
 .member-name{
 	font-size: calc(0.4vw + 1.4em);
 	font-weight: 400;
@@ -500,6 +597,7 @@ nav{
 }
 
 /* buttons */
+
 .link-button{
 	position: relative;
 	z-index: 10;
@@ -509,32 +607,38 @@ nav{
 	flex-grow: 1;
 	width: 100%;
 }
+
+.arrow-menu{
+	height: auto;
+	width: 0.9em;
+}
+
+.social-link{
+	font-size: 1.2em;
+	line-height: normal;
+}
+
 .link-button:hover img{
 	transform: translateY(-0.5em);
 	transition: 0.2s all linear;
 }
+
+.button{
+	position: relative;
+	z-index: 10;
+	border: none;
+	border-radius: 50px;
+	padding: 0 2em;
+	height: 3em;
+	font-weight: 600;
+	max-height: 3em;
+	max-width: 200px;
+}
+
 .outlined{
 	color: white;
 	border: 1px solid rgb(255, 255, 255);
 	background-color: transparent;
-}
-.white-button{
-	position: relative;
-	z-index: 10;
-	color: var(--color-logo-purple);
-	background-color: white;
-	border: none;
-	font-weight: 600;
-}
-
-.contact-button{
-	position:relative;
-	z-index: 10;
-	border-radius: 50px;
-	padding: 0 2em;
-	height: 3em;
-	max-height: 3em;
-	max-width: 200px;
 }
 
 .menu-button{
@@ -549,6 +653,7 @@ nav{
 	height: 3em;
 	margin-left: 1em;
 }
+
 .collapsed-menu .menu-button,
 .collapsed-menu .outlined,
 .collapsed-menu ion-icon {
@@ -556,6 +661,7 @@ nav{
 	border: 1px solid white;
 
 }
+
 .open-menu .menu-button,
 .open-menu .outlined,
 .open-menu ion-icon {	
@@ -569,6 +675,58 @@ nav{
 	cursor: pointer;
 	justify-content: flex-end;
 	height: 1em;
+}
+
+/* swich  */
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 100px;
+	height: 50px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 2.5px;
+	width: 40px;
+	height: 80%;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+#seniors-switch:checked + label {
+	background: var(--color-green);
+}
+
+#juniors-switch:checked + label {
+	background: var(--color-logo-orange);
+}
+
+#software-switch:checked + label {
+	background: var(--color-logo-purple);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 50px;
 }
 
 /* form components */
@@ -979,8 +1137,4 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 
 .hidden {
 	display: none;
-	/* opacity: 0;
-	height: 0;
-	overflow: hidden;
-	transition: all 1s linear; */
 }
