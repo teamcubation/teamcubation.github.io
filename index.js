@@ -482,57 +482,57 @@ const scrollDirection = (prevPosition, currentPosition) => {
 const noMoreDevsAnimation = new CarouselAnimator(carouselNoMoreDevs, noMoreDevsCarouselItemWidth);
 const howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth);
 
-window.addEventListener('scroll', (e) => {
-  // if(screen.width > 768){
-    if(window.scrollY < 500){
-      noMoreDevsAnimation.animate('reverse');
-      howDoAnimation.animate('reverse');
-    }
+// window.addEventListener('scroll', (e) => {
+//   // if(screen.width > 768){
+//     if(window.scrollY < 500){
+//       noMoreDevsAnimation.animate('reverse');
+//       howDoAnimation.animate('reverse');
+//     }
     
-    const currentPositionScroll = window.scrollY;
-    const opportunitiesToTop = opportunities.getBoundingClientRect();
-    const noMoreDevsToTop = noMoreDevs.getBoundingClientRect();
-    const howDoToTop = howDo.getBoundingClientRect();
-    const direction = scrollDirection(lastScrollTop, currentPositionScroll)
+//     const currentPositionScroll = window.scrollY;
+//     const opportunitiesToTop = opportunities.getBoundingClientRect();
+//     const noMoreDevsToTop = noMoreDevs.getBoundingClientRect();
+//     const howDoToTop = howDo.getBoundingClientRect();
+//     const direction = scrollDirection(lastScrollTop, currentPositionScroll)
 
-    if(opportunitiesToTop.top >= 100){
-      bannerNav.classList.add('fixed-scroll-position');
-      opportunities.classList.add('sticky-scroll-position');
-      bannerContent.classList.add('display-none');
-      partners.classList.add('display-none');
-      theWheel.style.marginTop= '2000px';
-    }
+//     if(opportunitiesToTop.top >= 100){
+//       bannerNav.classList.add('fixed-scroll-position');
+//       opportunities.classList.add('sticky-scroll-position');
+//       bannerContent.classList.add('display-none');
+//       partners.classList.add('display-none');
+//       theWheel.style.marginTop= '2000px';
+//     }
 
-    if(noMoreDevsToTop.top >= 100){
-      noMoreDevs.classList.add('sticky-scroll-position');
-    }
+//     if(noMoreDevsToTop.top >= 100){
+//       noMoreDevs.classList.add('sticky-scroll-position');
+//     }
    
-    if(currentPositionScroll >= noMoreDevsPositionHeight){
+//     if(currentPositionScroll >= noMoreDevsPositionHeight){
       
-      if(noMoreDevsAnimation.loopCarousel < 2){
-        noMoreDevsAnimation.animate('play');
-      }
-    }
+//       if(noMoreDevsAnimation.loopCarousel < 2){
+//         noMoreDevsAnimation.animate('play');
+//       }
+//     }
 
-    if(howDoToTop.top <= 0 && !howDoAnimation.finished){
-      howDo.classList.add('sticky-scroll-position-top');
-      if(howDoAnimation.loopCarousel < 2){
-        howDoAnimation.animate('play');
-      }
-    }
+//     if(howDoToTop.top <= 0 && !howDoAnimation.finished){
+//       howDo.classList.add('sticky-scroll-position-top');
+//       if(howDoAnimation.loopCarousel < 2){
+//         howDoAnimation.animate('play');
+//       }
+//     }
 
-  // }
-  if(noMoreDevsAnimation.finished && currentPositionScroll >= noMoreDevsPositionHeight  && direction === 'down'){
-    opportunities.classList.remove('sticky-scroll-position');
-    noMoreDevs.classList.remove('sticky-scroll-position');
-    bannerNav.classList.remove('fixed-scroll-position');
-    theWheel.style.marginTop= '200px';
-  }
-  if(howDoAnimation.finished  && direction === 'down'){
-    howDo.classList.remove('sticky-scroll-position-top')
-  }
-  lastScrollTop = currentPositionScroll;
-});
+//   // }
+//   if(noMoreDevsAnimation.finished && currentPositionScroll >= noMoreDevsPositionHeight  && direction === 'down'){
+//     opportunities.classList.remove('sticky-scroll-position');
+//     noMoreDevs.classList.remove('sticky-scroll-position');
+//     bannerNav.classList.remove('fixed-scroll-position');
+//     theWheel.style.marginTop= '200px';
+//   }
+//   if(howDoAnimation.finished  && direction === 'down'){
+//     howDo.classList.remove('sticky-scroll-position-top')
+//   }
+//   lastScrollTop = currentPositionScroll;
+// });
 
 // diagram venn switch control
 
@@ -568,8 +568,7 @@ $("#software-switch").on("click", function(){
 const getCSSVariableValue = (name) => {
   return getComputedStyle(document.documentElement).getPropertyValue('--' + name).trim();
 }
-var padding = getCSSVariableValue('padding');
-console.log(padding)
+
 const itemOne = document.getElementById("step-leyend-container-01").offsetLeft;
 const itemTwo = document.getElementById("step-leyend-container-02").offsetLeft;
 const itemThree = document.getElementById("step-leyend-container-03").offsetLeft;
@@ -579,3 +578,37 @@ const dividerCenter = document.getElementById("divider-center-how-do");
 divider.style.width = `calc(${itemThree - itemOne}px - 3em)`;
 divider.style.left = `calc(${itemOne}px + 3em)`;
 dividerCenter.style.left = `calc(${itemTwo - itemOne}px)`;
+
+
+// pep
+const dropdowns = document.querySelectorAll('.dropdown-standard-item');
+
+dropdowns.forEach(dropdown => {
+  const button = dropdown.querySelector('.card-standard-header .dropdown-item-button');
+  const title = dropdown.querySelector('.card-standard-header .sm-text-card');
+  const content = dropdown.querySelector('.collapsed-content');
+  const image = dropdown.querySelector('.hidden');
+  const iconbutton = button.querySelector('img');
+
+  button.addEventListener('click', () => {
+    dropdowns.forEach(otherDropdown => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.querySelector('.collapsed-content').classList.remove('d-flex');
+        otherDropdown.querySelector('.card-standard-header .dropdown-item-button img').src = 'media/arrow-dropdowns-down.svg';
+        otherDropdown.querySelector('.card-standard-header .sm-text-card').style.color = '#484848';
+      }
+    });
+  
+  iconbutton.src = 'media/arrow-dropdowns.svg';  
+  content.classList.add('d-flex');
+  title.style.color = '#F34E1E';
+   
+  const imageContainer = document.getElementById('pep-img-container');
+  imageContainer.innerHTML = '';
+  const newImage = document.createElement('img');
+  newImage.style.maxWidth = '100%';
+  newImage.src = image.src;
+  imageContainer.appendChild(newImage);
+
+  });
+}); 

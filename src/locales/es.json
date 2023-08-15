@@ -88,6 +88,37 @@
       "itemThree": {"title": "Delivery", "text": "Gracias a nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), podremos potenciar a cada Junior en la habilidad que más necesitan trabajar."}
     }
   },
+  "pep":{
+    "title": "Programming Experience Platform. ",
+    "textLeft": "La magia de nuestra metodología está en los datos.",
+    "textRight": "Nuestro software es el diferencial y gran aliado de nuestro staff. Convierte nuestro entrenamiento en un proceso guiado y medido, para potenciar el desarrollo de cada uno de tus juniors y lograr su mejor versión.",
+    "dropDown": {
+      "one": {
+        "title": "Integración a tu flujo de trabajo",
+        "leyend": "PEP se enlaza con tus herramientas de desarrollo principales como Jira, GitLab, Github, Slack, Discord y más, para recopilar datos clave y optimizar el rendimiento de tus equipos."
+      },
+      "two": {
+        "title": "Insights en tiempo real",
+        "leyend": "Observa la evolución de tus juniors con métricas precisas sobre el código que desarrollan, las metodologías y herramientas de comunicación."
+      },
+      "three": {
+        "title": "Alertas inteligentes",
+        "leyend": "Nos mantienen al tanto del desempeño de tus juniors con notificaciones que identifican comportamientos que no se alinean con las expectativas, necesarias para mejorar la calidad y coherencia del trabajo en tu equipo."
+      },
+      "four": {
+        "title": "Seguimiento personalizable",
+        "leyend": "Evaluamos aspectos clave del desarrollo personal de tus juniors mediante acciones y encuestas a medida que aportan un enfoque humano en el proceso de entrenamiento."
+      },
+      "five": {
+        "title": "Seguimiento personalizable",
+        "leyend": "A través de tests cognitivos y conductuales, tales como PDA (Personal Development Analysis), obtenemos una visión clara de los perfiles de tus colaboradores para gestionar su talento, desarrollar habilidades y obtener su mejor versión."
+      },
+      "six": {
+        "title": "Pulso emocional",
+        "leyend": "Integración con IA que analiza respuestas y detecta automáticamente los sentimientos y emociones del equipo para intervenir oportunamente cuando sea necesario, asegurando un entorno laboral positivo y productivo."
+      }
+    }
+  },
   "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a tus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización.",
   "partners":{
     "centralText": "¿CON QUIÉNES TRABAJAMOS JUNTOS PARA POTENCIAR EL NUEVO TALENTO DIGITAL?"
@@ -161,7 +192,7 @@
   "devsJuniors": {
     "centralText": "DEVS JUNIORS",
     "subtitle": {
-      "grayText":{
+      "greyText":{
         "lineOne": "Somos una máquina del tiempo y hacemos que tengas la experiencia de 2 años en 6 meses."
       },
       "standardText":{

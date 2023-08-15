@@ -49,12 +49,12 @@
     }
   },
   "process": {
-    "grayTextOne": "Based on",
+    "greyTextOne": "Based on",
     "whiteTextOne": " tech and a process",
     "textTwo": " designed to acquire ",
     "whiteTextThree": "experience",
-    "grayTextThree": " while",
-    "grayTextFour": "we build",
+    "greyTextThree": " while",
+    "greyTextFour": "we build",
     "whiteTextFour": " real projects"
   },
   "weDo": {
@@ -237,7 +237,7 @@
   "devsJuniors": {
     "centralText": "DEVS JUNIORS",
     "subtitle": {
-      "grayText":{
+      "greyText":{
         "lineOne": "We are a time machine that helps you acquire 2-years experience in 6 months."
       },
       "standardText":{
