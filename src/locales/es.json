@@ -60,9 +60,22 @@
     },
     "veenDiagram":{
       "seniors": {
-        "lineOne": "con experiencia",
+        "lineOne": "Con experiencia",
         "lineTwo": "en desarrollo"
 
+      },
+      "juniors": {
+        "lineOne": "Con ganas",
+        "lineTwo": "de aprender"
+
+      },
+      "software": {
+        "lineOne": "que necesitas"
+      },
+      "intersections":{
+        "one": "Software Factory",
+        "two": "No existe",
+        "three": "Code School"
       }
     },
     "centralTextTwo": "Lo estamos haciendo"
@@ -71,7 +84,7 @@
     "centralText": "¿Cómo lo hacemos?",
     "carousel": {
       "itemOne": {"title": "Discovery", "text": "Relevamos la forma de trabajar de tu organización a través de la observación y el aprendizaje de tus metodologías, stack tecnológico y cultura."},
-      "itemtwo": {"title": "Ejecución", "text": "La experiencia de 6 meses liderada por nuestros Seniors potencia el desarrollo técnico de los Juniors y el desarrollo de sus habilidades blandas tales comocomunicación, trabajo en equipo, manejo del estrés y adaptación al cambio."},
+      "itemTwo": {"title": "Ejecución", "text": "La experiencia de 6 meses liderada por nuestros Seniors potencia el desarrollo técnico de los Juniors y el desarrollo de sus habilidades blandas tales comocomunicación, trabajo en equipo, manejo del estrés y adaptación al cambio."},
       "itemThree": {"title": "Delivery", "text": "Gracias a nuestra plataforma data-driven de analíticas de aprendizaje, Programming Experience Platform (PEP), podremos potenciar a cada Junior en la habilidad que más necesitan trabajar."}
     }
   },

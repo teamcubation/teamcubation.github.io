@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css?v=40">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
@@ -173,13 +173,13 @@
                   </div>
                 </div>
                 <div class="row">
-                  <p class="md-text-card color-purple">opportunities.leftCard.centralText</p>
+                  <p class="md-text-card purple">opportunities.leftCard.centralText</p>
                 </div>
               </div>
               <div id="opportunities-left-card-collapsed-content" class="collapsed-content">
                 <div class="card-collapse-content">
-                  <p class="sm-text-card color-purple">opportunities.leftCard.descriptionText</p>
-                  <p class="sm-text-card color-purple fw-bold">opportunities.leftCard.helperText</p>
+                  <p class="sm-text-card purple">opportunities.leftCard.descriptionText</p>
+                  <p class="sm-text-card purple fw-bold">opportunities.leftCard.helperText</p>
                 </div>
                 <img class="card-background-img" src="../media/img-left-card.png" alt="img-card">
               </div>
@@ -199,12 +199,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <p class="md-text-card color-purple">opportunities.rightCard.centralText</p>
+                  <p class="md-text-card purple">opportunities.rightCard.centralText</p>
                 </div>
               </div>
               <div id="opportunities-right-card-collapsed-content" class="collapsed-content">
                 <div class="card-collapse-content">
-                  <p class="sm-text-card color-purple">opportunities.rightCard.descriptionText</p>
+                  <p class="sm-text-card purple">opportunities.rightCard.descriptionText</p>
                 </div>
                 <img class="card-background-img" src="../media/img-right-card.png" alt="img-card">
               </div>
@@ -248,21 +248,45 @@
   <section id="the-wheel">
     <div id="the-wheel-layout" class="layout">
       <div id="the-wheel-content">
-        <div class="text-center">
-          <h3 class="color-purple">theWheel.centralText.lineOne</h3><br>
-          <h3 class="color-purple">theWheel.centralText.lineTwo</h3>
+        <div class="text-center mb-5">
+          <h3 class="purple">theWheel.centralText.lineOne</h3><br>
+          <h3 class="purple">theWheel.centralText.lineTwo</h3>
         </div>
         <div id="venn-diagram-container">
-          <!-- <div class="col-10 col-md-6"> -->
             <div id="control-switch">
-              <input type="checkbox" id="seniors-switch"><label for="seniors-switch">Toggle</label>
-              <input type="checkbox" id="juniors-switch"><label for="juniors-switch">Toggle</label>
-              <input type="checkbox" id="software-switch"><label for="software-switch">Toggle</label>
+              <div class="d-flex align-items-center mb-1">
+                <input type="checkbox" id="seniors-switch" checked><label for="seniors-switch">Toggle</label>
+                <h5 class="fw-bold green">SENIORS</h5>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <input type="checkbox" id="junior-switch" checked><label for="junior-switch">Toggle</label>
+                <h5 class="fw-bold orange">JUNIOR</h5>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <input type="checkbox" id="software-switch" checked><label for="software-switch">Toggle</label>
+                <h5 class="fw-bold purple">SOFTWARE</h5>
+              </div>  
             </div>
-          <!-- </div> -->
-          <!-- <div class="col-10 col-md-6"> -->
             <div id="venn-diagram">
-              <img style="position: absolute; top: 33%; left: 47.2%; z-index: 10; width: 5%" src="../media/logo-white.svg" alt>
+              <img id="diagram-logo" style="position: absolute; top: 33%; left: 47.2%; z-index: 10; width: 5%" src="../media/logo-white.svg" alt="tq">
+              <div class="intersection-seniors-software">
+                <div class="intersection-seniors-software-leyend">theWheel.veenDiagram.intersections.one</div>
+                <div>
+                  <img style="float: right; width: 6em" src="../media/diagram-arrow-left.svg" alt="arrow">
+                </div>
+              </div>
+              <div class="intersection-software-junior">
+                <div>
+                  <img style="float: right; width: 6em" src="../media/diagram-arrow-right.svg" alt="arrow">
+                </div>
+                <div class="intersection-software-junior-leyend">theWheel.veenDiagram.intersections.two</div>
+              </div>
+              <div class="intersection-seniors-junior">
+                <div class="intersection-seniors-junior-leyend">theWheel.veenDiagram.intersections.one</div>
+                <div>
+                  <img style=" height: 6em" src="../media/diagram-arrow-top.svg" alt="arrow">
+                </div>
+              </div>
               <div id="seniors-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item purple">
                   <div class="sm-text-card fw-bold">SENIORS</div>
@@ -270,26 +294,23 @@
                   <p>theWheel.veenDiagram.seniors.lineTwo</p>
                 </div>
               </div>
-              <div id="juniors-venn-diagram-item" class="venn-diagram-item">
+              <div id="junior-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item white">
-                  <div class="sm-text-card fw-bold">SENIORS</div>
-                  <p>theWheel.veenDiagram.seniors.lineOne</p>
-                  <p>theWheel.veenDiagram.seniors.lineTwo</p>
+                  <div class="sm-text-card fw-bold">JUNIOR</div>
+                  <p>theWheel.veenDiagram.juniors.lineOne</p>
+                  <p>theWheel.veenDiagram.juniors.lineTwo</p>
                 </div>
               </div>
               <div id="software-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item white">
-                  <div class="sm-text-card fw-bold">SENIORS</div>
-                  <p>theWheel.veenDiagram.seniors.lineOne</p>
-                  <p>theWheel.veenDiagram.seniors.lineTwo</p>
+                  <div class="sm-text-card fw-bold">SOFTWARE</div>
+                  <p>theWheel.veenDiagram.software.lineOne</p>
                 </div>
               </div>
             </div>
-          <!-- </div> -->
-          
         </div>
-        <div class="row text-center" style="position: relative;">
-          <h3 class="color-purple mb-2">theWheel.centralTextTwo</h3><br>
+        <div class="row text-center mb-2" style="position: relative;">
+          <h3 class="purple mb-2">theWheel.centralTextTwo</h3><br>
           <iframe style="border-radius: 15px; border: 1px red" width="100%" height="600" src="https://www.youtube.com/embed/1UZCMdtVAq4" title="Tq" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
@@ -299,18 +320,21 @@
   <section id="how-do">
     <div id="how-do-layout" class="layout">
       <div id="how-do-content">
-        <div class="text-center" style="margin-right: 14em;">
+        <div class="text-center" style="margin-right: 14em; margin-bottom: 2em">
           <h3>howDo.centralText</h3>
         </div>  
         <div class="carousel-section">
           <div id="how-do-carousel" class="carousel mt-2 mb-2">
+            <div id="divider-how-do" class="divider">
+              <div class="divider-content"></div>
+              <div id="divider-center-how-do" class="divider-center"></div>
+            </div>
             <div class="how-do-item-scroll">
               <div class="d-flex">
                 <div class="d-flex step-number-container">
-                  <div class="step-number">01</div>
+                  <div class="step-number">0<span class="step-number-one-one">1</span></div>
                 </div>
-                <div class="step-leyend-container">
-                  <div class="divider"></div>
+                <div id="step-leyend-container-01" class="step-leyend-container">
                   <div class="step-leyend">
                     <p class="md-text-card">howDo.carousel.itemOne.title</p>
                     <p>howDo.carousel.itemOne.text</p>
@@ -323,11 +347,10 @@
                 <div class="step-number-container">
                   <div class="step-number">02</div>
                 </div>
-                <div class="step-leyend-container">
-                  <div class="divider"></div>
+                <div id="step-leyend-container-02" class="step-leyend-container">
                   <div class="step-leyend">
-                    <p class="md-text-card">howDo.carousel.itemOne.title</p>
-                    <p>howDo.carousel.itemOne.text</p>
+                    <p class="md-text-card">howDo.carousel.itemTwo.title</p>
+                    <p>howDo.carousel.itemTwo.text</p>
                   </div>
                 </div>
               </div>  
@@ -338,10 +361,9 @@
                   <div class="step-number">03</div>
                 </div>
                 <div class="step-leyend-container">
-                  <div class="divider"></div>
-                  <div class="step-leyend">
-                    <p class="md-text-card">howDo.carousel.itemOne.title</p>
-                    <p>howDo.carousel.itemOne.text</p>
+                  <div id="step-leyend-container-03" class="step-leyend">
+                    <p class="md-text-card">howDo.carousel.itemThree.title</p>
+                    <p>howDo.carousel.itemThree.text</p>
                   </div>
                 </div>
               </div>  
@@ -351,7 +373,23 @@
       </div>
     </div>
   </section>
-  <section id="squads" style="height: 1500px;"></section>
+
+  <section id="PEP">
+    <div id="PEP-layout" class="layout">
+      <div id="PEP-content">
+      
+      </div>
+    </div>
+
+  </section>
+
+  <section id="squads" style="height: 1500px;">
+    <div id="squad-layout" class="layout">
+      <div id="how-do-content">
+      
+      </div>
+    </div>
+  </section>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

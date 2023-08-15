@@ -396,7 +396,6 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".logos").appendChild(logosSlideCopy);
 });
 
-// document.querySelector(".logos").appendChild(copy);
 
 // opportunities  cards 
 const leftCard = document.getElementById('opportunities-left-card').offsetHeight;
@@ -462,20 +461,24 @@ const partners = document.getElementById("partners");
 const opportunities = document.getElementById("opportunities");
 
 // no-more-devs
-const noMoreDevs = document.getElementById('no-more-devs')
+const noMoreDevs = document.getElementById('no-more-devs');
 const noMoreDevsPositionHeight = noMoreDevs.offsetTop;
 const carouselNoMoreDevs = document.getElementById("no-more-devs-carousel");
 const noMoreDevsCarouselItemWidth = document.querySelector(".no-more-devs-item-scroll").scrollWidth;
 
 // how-do
-const howDo = document.getElementById('how-do')
-const howDoPositionHeight = howDo.offsetTop;
+const howDo = document.getElementById('how-do');
 const howDoCarousel = document.getElementById("how-do-carousel");
 const howDoCarouselItemWidth = document.querySelector(".how-do-item-scroll").scrollWidth;
+
+// the-whell
+
+const theWheel = document.getElementById('the-wheel');
 
 const scrollDirection = (prevPosition, currentPosition) => {
   return currentPosition > prevPosition ? 'down' : 'up';
 }
+
 const noMoreDevsAnimation = new CarouselAnimator(carouselNoMoreDevs, noMoreDevsCarouselItemWidth);
 const howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth);
 
@@ -494,23 +497,25 @@ window.addEventListener('scroll', (e) => {
 
     if(opportunitiesToTop.top >= 100){
       bannerNav.classList.add('fixed-scroll-position');
-      opportunities.classList.add('sticky-position-scroll');
+      opportunities.classList.add('sticky-scroll-position');
       bannerContent.classList.add('display-none');
       partners.classList.add('display-none');
-    }
-    
-    if(noMoreDevsToTop.top >= 100){
-      noMoreDevs.classList.add('sticky-position-scroll');
+      theWheel.style.marginTop= '2000px';
     }
 
+    if(noMoreDevsToTop.top >= 100){
+      noMoreDevs.classList.add('sticky-scroll-position');
+    }
+   
     if(currentPositionScroll >= noMoreDevsPositionHeight){
+      
       if(noMoreDevsAnimation.loopCarousel < 2){
         noMoreDevsAnimation.animate('play');
       }
     }
 
     if(howDoToTop.top <= 0 && !howDoAnimation.finished){
-      howDo.classList.add('sticky-position-scroll-top');
+      howDo.classList.add('sticky-scroll-position-top');
       if(howDoAnimation.loopCarousel < 2){
         howDoAnimation.animate('play');
       }
@@ -518,12 +523,59 @@ window.addEventListener('scroll', (e) => {
 
   // }
   if(noMoreDevsAnimation.finished && currentPositionScroll >= noMoreDevsPositionHeight  && direction === 'down'){
-    opportunities.classList.remove('sticky-position-scroll');
-    noMoreDevs.classList.remove('sticky-position-scroll');
+    opportunities.classList.remove('sticky-scroll-position');
+    noMoreDevs.classList.remove('sticky-scroll-position');
     bannerNav.classList.remove('fixed-scroll-position');
+    theWheel.style.marginTop= '200px';
   }
   if(howDoAnimation.finished  && direction === 'down'){
-    howDo.classList.remove('sticky-position-scroll-top')
+    howDo.classList.remove('sticky-scroll-position-top')
   }
   lastScrollTop = currentPositionScroll;
 });
+
+// diagram venn switch control
+
+const isTqState = () => {
+  const seniors = $("#seniors-venn-diagram-item").is(":visible");
+
+  if($("#seniors-venn-diagram-item").is(":visible") 
+    && $("#junior-venn-diagram-item").is(":visible") 
+    && $("#software-venn-diagram-item").is(":visible")) {
+      $("#diagram-logo").removeClass('hidden');
+  }else{
+    $("#diagram-logo").addClass('hidden');
+  };
+
+} 
+$("#seniors-switch").on("click", function(){
+  $("#seniors-venn-diagram-item").toggleClass('hidden');
+  isTqState();
+});
+
+$("#junior-switch").on("click", function(){
+  $("#junior-venn-diagram-item").toggleClass('hidden');
+  isTqState();
+});
+
+$("#software-switch").on("click", function(){
+  $("#software-venn-diagram-item").toggleClass('hidden');
+  isTqState();
+})
+
+
+// styles for how-do carousel
+const getCSSVariableValue = (name) => {
+  return getComputedStyle(document.documentElement).getPropertyValue('--' + name).trim();
+}
+var padding = getCSSVariableValue('padding');
+console.log(padding)
+const itemOne = document.getElementById("step-leyend-container-01").offsetLeft;
+const itemTwo = document.getElementById("step-leyend-container-02").offsetLeft;
+const itemThree = document.getElementById("step-leyend-container-03").offsetLeft;
+const divider = document.getElementById("divider-how-do");
+const dividerCenter = document.getElementById("divider-center-how-do");
+
+divider.style.width = `calc(${itemThree - itemOne}px - 3em)`;
+divider.style.left = `calc(${itemOne}px + 3em)`;
+dividerCenter.style.left = `calc(${itemTwo - itemOne}px)`;
