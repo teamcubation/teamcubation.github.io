@@ -167,7 +167,7 @@ const clearForm = () => {
   $(".chevron-select").removeClass("chevron-effect");
   $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
   $(".input-select")
-    .prop("disabled", true)
+    .style("disabled", true)
     .val("")
     .attr("placeholder", dataByLang.formContact.originExtraPlaceholder)
     .removeData("value-selected")
@@ -201,7 +201,7 @@ $(".language-select-mobile").on("click", function () {
 
 // input select //
 
-$(".select-tc").on("click", function () {
+$(".open-dropdown-select").on("click", function () {
   if ($(".option-tc").is(":visible")) {
     $(".list-options-tc").slideUp();
     $(this).find(".chevron-select").removeClass("chevron-effect");
@@ -254,24 +254,19 @@ $(".option-tc").on("click", function () {
     valueOption === "junior" && $("#juniorsMessage").css('display', 'block');
     valueOption === "no-exp" && $('#noCodersMessage').css('display', 'block');
   }
-  // adjustContactTextareaHeight();
+  adjustContactTextareaHeight();
   $(".list-options-tc").slideUp();
   $(".chevron-select").removeClass("chevron-effect");
 });
 
-// function adjustContactTextareaHeight() {
-//   $('.input-select').height(0);
-//   $('.input-select').height($('.input-select')[0].scrollHeight - 4);
-// }
+function adjustContactTextareaHeight() {
+ 
+  const selectHeight = $('.input-select')[0].scrollHeight;
+  const height = !selectHeight || selectHeight == 0 ? 50 : selectHeight;   
+  $('.input-select').height(height - 4);
+}
 
-// $(adjustContactTextareaHeight);
-
-// 
-
-// $("a").on("click", function () {
-//   $("#navbarMobile").css("display", "none");
-// });
-
+$(adjustContactTextareaHeight);
 
 // navbar - scroll
 const heigthNav = document.getElementById("navbar").clientHeight;
@@ -334,7 +329,7 @@ const howDoCarousel = document.getElementById("process-carousel");
 const howDoCarouselItemWidth = document.querySelector(".process-item-scroll").scrollWidth;
 
 // results
-// const results = document.getElementById('results');
+const results = document.getElementById('results');
 // const resultsCarousel = document.getElementById("results-carousel");
 // let resultsCarouselItemWidth = document.querySelector(".results-item-scroll").scrollWidth;
 // const margin= parseFloat(getComputedStyle(document.querySelector(".results-item-scroll")).marginRight);
@@ -377,25 +372,6 @@ $(".process-next").on("click", function(){
   }
 });
 
-// const createCardResult = () => {
-//   return `<div class="card results-card">
-//       <img src="${imgPath}" alt="results">
-//       <div class="d-flex justify-content-between mt-2">
-//       <h5 class="md-text-card" data-t>results.cards.five.title</h5>
-//       <img src="${iconPath}" alt="">
-//       </div>
-//       <p data-t class="mt-2">results.cards.five.leyend</p>
-//     </div>` 
-
-// }
-
-// $('.results-slide-conteiner').each(function() {
-//   if(window.innerWidth > 767){
-//     $(this).append('<p class="child">Hijo</p>');
-//   }
-//   $(this).append('<p class="child">Hijo</p>');
-// });
-
 window.addEventListener("click", function (e) {
   if (!document.getElementById("dropdown-select").contains(e.target)) {
     $(".list-options-tc").slideUp();
@@ -434,8 +410,8 @@ window.addEventListener('scroll', (e) => {
       // const proposalToTop = proposal.getBoundingClientRect();
       // const noMoreDevsToTop = noMoreDevs.getBoundingClientRect();
       // const howDoToTop = howDo.getBoundingClientRect();
-      // const resultsToTop = results.getBoundingClientRect();
-      // const direction = scrollDirection(lastScrollTop, currentPositionScroll);
+      const resultsToTop = results.getBoundingClientRect();
+      const direction = scrollDirection(lastScrollTop, currentPositionScroll);
       
       // effect fix cards at top
       // if(proposalToTop.top <= 100 && direction == 'down'){
@@ -445,12 +421,12 @@ window.addEventListener('scroll', (e) => {
       //   partners.classList.add('display-none');
       // }
 
-    // if(resultsToTop.top <= 100 && !resultsAnimation.finished && direction === 'down'){
-    //   // results.classList.add('sticky-scroll-position');
-    //   if(resultsAnimation.loopCarousel < 2){
-    //     resultsAnimation.animate('play');
-    //   };
-    // };
+    if(resultsToTop.top <= 100  && direction === 'down'){
+      // results.classList.add('sticky-scroll-position');
+      // if(resultsAnimation.loopCarousel < 2){
+      //   resultsAnimation.animate('play');
+      // };
+    };
 
     // if(howDoToTop.top <= 0 && !howDoAnimation.finished){
     //   howDo.classList.add('sticky-scroll-position');
@@ -485,6 +461,7 @@ window.addEventListener('scroll', (e) => {
 
 // navbar and menu
 const proposalToTop = proposal.getBoundingClientRect().top;
+
 $(".navigate-home").on("click", function(){
   window.scrollTo({
     top: 0,
@@ -494,7 +471,9 @@ $(".navigate-home").on("click", function(){
 
 $(".link-button").on("click", function(){
   closeMenu();
-})
+  $('#navbar').addClass('hidden-nav');
+});
+
 const openMenu = () => {
   $("#menu").removeClass('hidden');
   $("#navbar-content").addClass('open-menu');

@@ -100,7 +100,7 @@
     "centralText": "¿Cómo lo hacemos?",
     "carousel": {
       "itemOne": {"title": "Discovery", "text": "Luego de relevar las metodologías, stack tecnológico y cultura de su organización, evaluamos sus proyectos en conjunto para elegir la opción más adecuada. Si es necesario, lo ayudamos en la búsqueda del talento jr."},
-      "itemTwo": {"title": "Ejecución", "text": "- Durante un período de 6 meses trabajamos junto a sus devs jr en el desarrollo del software que su compañía necesita. Esto brinda a sus nuevos colaboradores la experiencia real de trabajar en sus equipos."},
+      "itemTwo": {"title": "Ejecución", "text": "Durante un período de 6 meses trabajamos junto a sus devs jr en el desarrollo del software que su compañía necesita. Esto brinda a sus nuevos colaboradores la experiencia real de trabajar en sus equipos."},
       "itemThree": {"title": "Delivery", "text": "Al finalizar el sexto mes, su empresa contará con el software listo para implementar y un equipo de 3 devs con experiencia preparado para asumir su próximo proyecto. ¡Felicitaciones! Su nueva fuente de talento especializado completó su primera entrega con éxito."}
     }
   },

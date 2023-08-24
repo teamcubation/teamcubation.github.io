@@ -275,6 +275,7 @@ nav{
 
 .hidden-nav{
 	opacity: 0;
+	visibility: hidden;
 	/* transition: all 0.5s linear; */
 }
 
@@ -1179,14 +1180,34 @@ nav{
 	width: 100%;
 }
 
+#footer-logo > img{
+	max-width: 100%;
+}
+
 .link-footer{
 	font-size: 1.5em;
 	margin: 0.3em 0;
 }
 
-#footer-logo > img{
-	max-width: 100%;
-}
+.animated-underline {
+	position: relative;
+	text-decoration: none;
+  }
+  
+  .animated-underline::before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--color-logo-orange);
+	transition: width 0.3s ease-in-out;
+  }
+  
+  .animated-underline:hover::before {
+	width: 100%;
+  }
 
 /* buttons */
 
@@ -1227,10 +1248,8 @@ nav{
 	min-height: 3em;
 }
 
-.button-lg{
-	width: 100%;
-	max-width: 12em;
-	padding: 0 2.5em;
+.lg-button{
+	font-size: 1.5em;
 }
 
 .outlined{
@@ -1339,6 +1358,8 @@ input, textarea, select{
     width: 100%;
 	outline: none;
 	color: var(--color-logo-purple);
+	font-size: calc(1em + 0.1vw);
+
 }
 
 .select-tc{
@@ -1369,7 +1390,7 @@ input, textarea, select{
 	border-radius: 10px;
 	margin: 10px 5px;
 	padding: 10px 15px;
-	font-size: calc(0.7em + 0.2vw);
+	font-size: calc(1em + 0.1vw);
 	line-height: 1.1em;
 	background-color: white;
 	transition: 1s;
@@ -1383,6 +1404,7 @@ input, textarea, select{
 	resize: none;
   	overflow: hidden;
 	height: 40px;
+	/* visibility: hidden; */
 }
 
 .form-message{
@@ -1514,7 +1536,7 @@ input:focus, textarea:focus{
 }
 
 a:hover{
-	color: var(--color-logo-purple);
+	color: var(--color-logo-orange);
 }
 
 a,
@@ -1792,9 +1814,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		font-size: calc(1.5em + 3vw);
 	}
 
-	.button-lg{
-		width: 100%;
-		max-width: 100%;
+	.lg-button{
 		font-size: 1.5em;
 	}
 	
@@ -1921,6 +1941,23 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 }
 
 @media only screen and (max-width: 574px) {
+	.option-tc{
+		font-size: 1.3em;
+	}
+	input, textarea, select {
+		font-size: 1.4em;
+	}
+	a{
+		font-size: 1.4em;
+	}
+	.social-link{
+		font-size: 1.4em;
+	}
+
+	.sm-text-card{
+		font-size: 1.4em;
+	}
+
 	#navbar{
 		padding: 0;
 	}
@@ -1967,12 +2004,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		align-items: center;
 	}
 
-	a{
-		font-size: 1.2rem;
-	}
-	.social-link{
-		font-size: 1rem;
-	}
 	#footer-menu{
 		height: 20vh;
 		margin-top: 0;
@@ -1993,9 +2024,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		text-align: left;
 	}
 
-	.sm-text-card{
-		font-size: 1.4em;
-	}
 
 	#venn-diagram{
 		position: relative;
@@ -2130,11 +2158,9 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		padding: 4em;
 		margin-bottom: 5%;
 	}
-	input, textarea, select {
-		font-size: 1.3em;
-	}
-	.button{
-		font-size: 1.1em;
+	#form-container{
+		height: 80vh;
+		width: 90vw;
 	}
 }
 
