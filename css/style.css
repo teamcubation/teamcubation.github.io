@@ -319,7 +319,9 @@ nav{
 	justify-content: space-between;
 	max-width: 70%;
 	min-width: 15em;
+	gap: 5em;
 }
+
 /* banner */
 
 #banner-layout{

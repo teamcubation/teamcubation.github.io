@@ -260,7 +260,6 @@ $(".option-tc").on("click", function () {
 });
 
 function adjustContactTextareaHeight() {
- 
   const selectHeight = $('.input-select')[0].scrollHeight;
   const height = !selectHeight || selectHeight == 0 ? 50 : selectHeight;   
   $('.input-select').height(height - 4);
@@ -286,12 +285,12 @@ noScroll(function () {
   isNavigate = false;
 });
 
-$(function(){
-  if (localStorage.getItem('lang_redirect') === null && location.href.indexOf('/en/') === -1) {
-    localStorage.setItem('lang_redirect', '1');
-    location.href = 'en/';
-  }
-});
+// $(function(){
+//   if (localStorage.getItem('lang_redirect') === null && location.href.indexOf('/en/') === -1) {
+//     localStorage.setItem('lang_redirect', '1');
+//     location.href = 'en/';
+//   }
+// });
 
 // partners slide
 document.addEventListener("DOMContentLoaded", function() {
@@ -382,6 +381,11 @@ window.addEventListener("click", function (e) {
     );
     if ($(".input-select").val() !== "") $(".text-error").remove();
   }
+  if (!document.getElementById("form-container").contains(e.target)) {
+    if(!$('.contact-button').is(event.target)) {
+      $("#form-modal").addClass('hidden'); 
+    }
+  }
 });
 
 window.addEventListener('scroll', (e) => {
@@ -471,7 +475,7 @@ $(".navigate-home").on("click", function(){
 
 $(".link-button").on("click", function(){
   closeMenu();
-  $('#navbar').addClass('hidden-nav');
+  // $('#navbar').addClass('hidden-nav');
 });
 
 const openMenu = () => {
@@ -486,6 +490,7 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
+  debugger
   $("#menu").addClass('hidden');
   $("#navbar-content").removeClass('open-menu');
   $("#navbar-content").removeClass('open-mobile-menu');
