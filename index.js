@@ -485,7 +485,16 @@ window.addEventListener('scroll', (e) => {
 
 // navbar and menu
 const proposalToTop = proposal.getBoundingClientRect().top;
+$(".navigate-home").on("click", function(){
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
 
+$(".link-button").on("click", function(){
+  closeMenu();
+})
 const openMenu = () => {
   $("#menu").removeClass('hidden');
   $("#navbar-content").addClass('open-menu');
@@ -534,7 +543,7 @@ window.addEventListener('scroll', (e) => {
     $('#logo').addClass('navigate-home');
   }
   else{
-    $('#logo').removeClass('#navigate-home');
+    $('#logo').removeClass('navigate-home');
   }
   if(currentPositionScroll < proposalToTop){
     $('#navbar-content').removeClass('display-nav');
@@ -658,7 +667,6 @@ dropdowns.forEach(dropdown => {
   newImage.style.maxWidth = '100%';
   newImage.src = image.src;
   imageContainer.appendChild(newImage);
-
   });
 }); 
 
