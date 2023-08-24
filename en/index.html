@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css?v=40">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
@@ -27,265 +28,310 @@
   <!-- End Google Tag Manager -->
 </head>
 
-<body class="themeColor default-scrollbar">
-<!-- logo on top for google -->
-<img style="display: none" src="../media/logotipo.svg" alt="Teamcubation">
+<body>
+  <!-- logo on top for google -->
+  <img style="display: none" src="../media/logotipo.svg" alt="Teamcubation">
 
-<nav>
-  <div id="navbar">
-    <div id="navbar-content" class="collapsed-menu">      
-      <div style="width: 100%; display: flex; justify-content: space-between;">
-        <div class="logo">
-          <img id="logo" class="scrollToTop" src="../media/logotipo.svg" alt="Teamcubation">
-          <img id="logo-orange" class="scrollToTop hidden" src="../media/logotipo-orange.svg" alt="Teamcubation">
-        </div>
-        <div class="navigate">
-          <!-- <div class="language-select">
-            <div class="language-tittle">
-              <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
-              <p data-t>lang.textButton</p>
-            </div>
-            <ul class="language-options">
-              <li data-lang="es">
-                <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
-              </li>
-              <li data-lang="en">
-                <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
-              </li>
-            </ul>
-          </div> -->
-          <button class="button outlined">textLinks.contact</button>
-          <button class="menu-button">
-            <i class="icon ion-md-menu"></i>
-          </button>      
-        </div>
-      </div>  
-      <div id="menu" class="hidden">
-        <div class="navigate-menu" style="position:absolute; width: 100%; top:0; left:0; padding: 0 3.5em">
-          <div class="vertical-divider-menu"></div>
-          <div class="vertical-divider-menu"></div>
-          <div class="vertical-divider-menu"></div>
-          <div class="vertical-divider-menu"></div>
-          <div class="vertical-divider-menu"></div>
-          <div class="vertical-divider-menu" style="visibility: hidden;"></div>
+  <nav>
+    <div id="navbar">
+      <div id="navbar-content" class="collapsed-menu">      
+        <div id="navbar-container">
+          <div class="logo">
+            <img id="logo" class="scrollToTop" src="../media/logotipo.svg" alt="Teamcubation">
+            <img id="logo-orange" class="scrollToTop hidden" src="../media/logotipo-orange.svg" alt="Teamcubation">
+          </div>
+          <div class="navigate">
+            <!-- <div class="language-select">
+              <div class="language-tittle">
+                <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
+                <p data-t>lang.textButton</p>
+              </div>
+              <ul class="language-options">
+                <li data-lang="es">
+                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
+                </li>
+                <li data-lang="en">
+                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
+                </li>
+              </ul>
+            </div> -->
+            <button class="button outlined contact-button">textLinks.contact</button>
+            <button id="menu-button" class="menu-button">
+              <i class="icon ion-md-menu"></i>
+            </button>      
+          </div>
         </div>  
-        <div class="navigate-menu">
-          <div class="link-button">
-            <a class="proposal" href="#no-more-devs">textLinks.proposal</a>
-            <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
-          </div>
-          <div class="link-button">
-            <a class="problem" href="#problem">textLinks.problem</a>
-            <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
-          </div>
-          <div class="link-button">
-            <a class="cases" href="#cases">textLinks.cases</a>
-            <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
-          </div>
-          <div class="link-button">
-            <a class="process" href="#process">textLinks.process</a>
-            <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
-          </div>
-          <div class="link-button">
-            <a class="methodology" href="#methodology">textLinks.methodology</a>
-            <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
-          </div>
-          <div class="link-button">
-            <a class="aboutUs" href="#aboutUs">textLinks.aboutUs</a>
-            <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+        <div id="menu" class="hidden">
+          <div class="navigate-menu" style="position:absolute; width: 100%; top:0; left:0; padding: 0 3.5em">
+            <div class="vertical-divider-menu"></div>
+            <div class="vertical-divider-menu"></div>
+            <div class="vertical-divider-menu"></div>
+            <div class="vertical-divider-menu"></div>
+            <div class="vertical-divider-menu"></div>
+            <div class="vertical-divider-menu" style="visibility: hidden;"></div>
+          </div>  
+          <div class="navigate-menu">
+            <div class="link-button">
+              <a id="proposal-link" class="proposal" href="#proposal">textLinks.proposal</a>
+              <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+            </div>
+            <div class="link-button">
+              <a class="problem" href="#problem">textLinks.problem</a>
+              <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+            </div>
+            <div class="link-button">
+              <a class="cases" href="#cases">textLinks.cases</a>
+              <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+            </div>
+            <div class="link-button">
+              <a class="process" href="#process">textLinks.process</a>
+              <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+            </div>
+            <div class="link-button">
+              <a class="methodology" href="#squad-description-layout">textLinks.methodology</a>
+              <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+            </div>
+            <div class="link-button">
+              <a class="aboutUs" href="#team">textLinks.aboutUs</a>
+              <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
+            </div>
           </div>
         </div>
       </div>
+      <div id="footer-menu" class="hidden">
+        <div class="navigate-menu h-100">
+          <button class="button bg-orange white">textLinks.joinUs</button>
+          <div id="social-links-container">
+            <a class="social-link orange" href>IG</a>
+            <a class="social-link orange" href>TWITTER</a>
+            <a class="social-link orange" href>FB</a>
+          </div>
+        </div>
+      </div>
+  <!-- 
+      <div style="display: flex">
+        <div id="selectLangMobile" class="language-select-mobile">
+          <div class="language-tittle">
+            <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
+            <p data-t>lang.textButton</p>
+          </div>
+          <ul class="language-options">
+            <li data-lang="es">
+              <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
+            </li>
+            <li data-lang="en">
+              <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-menu-mobile">
+          <i class="icon ion-md-menu"></i>
+        </div>
+      </div> -->
     </div>
-    <div id="footer-menu" class="hidden">
-      <div class="navigate-menu h-100">
-        <button class="button bg-orange white">textLinks.joinUs</button>
-        <div id="social-links-container">
-          <a class="social-link orange" href>IG</a>
-          <a class="social-link orange" href>TWITTER</a>
-          <a class="social-link orange" href>FB</a>
-        </div>
-      </div>
-    </div>
-<!-- 
-    <div style="display: flex">
-      <div id="selectLangMobile" class="language-select-mobile">
-        <div class="language-tittle">
-          <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
-          <p data-t>lang.textButton</p>
-        </div>
-        <ul class="language-options">
-          <li data-lang="es">
-            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
-          </li>
-          <li data-lang="en">
-            <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
-          </li>
-        </ul>
-      </div>
-      <div class="btn-menu-mobile">
-        <i class="icon ion-md-menu"></i>
-      </div>
-    </div> -->
-  </div>
-</nav>
+  </nav>
 
-
-<!-- <img id="backToTop" class="scrollToTop" src="media/logo/logo-btn.svg" alt=""> -->
-
-<section id="banner">
-  <div id="banner-layout" class="layout absolute-scroll-position">
-    <div style="height: 100%; overflow: hidden; position: absolute; width: 100%">
+  <section id="banner">
+    <div id="banner-layout" class="w-100 h-100 absolute-scroll-position">
       <img id="desktop-banner-img" src="../media/background/banner-min.jpg" class="banner-img">
       <img id="mobile-banner-img" src="../media/background/mobile-banner.png" class="banner-img">
     </div>
-  </div>
-  <div id="banner-content">
-    <h1 class="white">banner.centralText.lineOne</h1><br>
-    <h1 class="white">banner.centralText.lineTwo</h1><br>
-  </div>
-  <div id="partners">
-    <div class="logos">
-      <div>
-        <img src="../media/partners/partners.png">
-        <img src="../media/partners/partners.png">
+    <div id="banner-container">
+      <div id="banner-content">
+        <h1 class="white">banner.centralText.lineOne</h1>
+        <h1 class="white">banner.centralText.lineTwo</h1>
       </div>
-    </div>        
-  </div>
-</section>
-
-<div id="scroll-page">
-
-  <section id="opportunities">
-    <div id="opportunities-layout" class="layout">
-      <div id="opportunities-content">
-        <div class="row text-center orange">
-          <h3>opportunities.centralText.lineOne</h3>
-          <h3>opportunities.centralText.lineTwo</h3>
-          <h3>opportunities.centralText.lineThree</h3>
-        </div>
-        <div id="opportunities-card" class="grid-row justify-content-between mt-7">
-          <div class="col-5">
-            <div id="opportunities-left-card" class="card gradient-border">
-              <div class="card-content">
-                <div class="row">
-                  <div class="arrow-button" id="opportunities-left-card-btn-container">
-                    <img id="opportunities-left-card-btn" class="float-right" src="../media/arrow.svg" alt>
-                  </div>
-                </div>
-                <div class="row">
-                  <p class="md-text-card purple">opportunities.leftCard.centralText</p>
-                </div>
-              </div>
-              <div id="opportunities-left-card-collapsed-content" class="collapsed-content">
-                <div class="card-collapse-content">
-                  <p class="sm-text-card purple">opportunities.leftCard.descriptionText</p>
-                  <p class="sm-text-card purple fw-bold">opportunities.leftCard.helperText</p>
-                </div>
-                <img class="card-background-img" src="../media/img-left-card.png" alt="img-card">
-              </div>
-            </div>
+      <div id="partners">
+        <div class="logos">
+          <div>
+            <img src="../media/partners/partners.png">
+            <img src="../media/partners/partners.png">
           </div>
-          <div class="col-2">
-            <div id="largeArrow" class="d-flex align-items-center w-100">
-              <img style="width: 90%;" src="../media/largeArrow.png" alt>
-            </div>
-          </div>
-          <div class="col-5">
-            <div id="opportunities-right-card" class="card gradient-border">
-              <div class="card-content">
-                <div class="row">
-                  <div class="arrow-button" id="opportunities-right-card-btn-container">
-                    <img id="opportunities-right-card-btn" class="float-right" src="../media/arrow.svg" alt>
-                  </div>
-                </div>
-                <div class="row">
-                  <p class="md-text-card purple">opportunities.rightCard.centralText</p>
-                </div>
-              </div>
-              <div id="opportunities-right-card-collapsed-content" class="collapsed-content">
-                <div class="card-collapse-content">
-                  <p class="sm-text-card purple">opportunities.rightCard.descriptionText</p>
-                </div>
-                <img class="card-background-img" src="../media/img-right-card.png" alt="img-card">
-              </div>
-            </div>
-          </div>
-        </div>
+        </div>        
       </div>
     </div>
   </section>
 
-  <section id="no-more-devs">
-    <div id="no-more-devs-layout" class="layout">
-      <div id="no-more-devs-content">
-        <img id="quotes" src="../media/quote.png" alt="quotes">
-        <div id="no-more-devs-carrousel">
-          <div class="carousel-section">
-            <div id="no-more-devs-carousel" class="carousel mt-2 mb-2">
-              <div class="no-more-devs-item-scroll">
-                <h2>noMoreDevs.carouselText.itemOne</h2>
+  <div id="scroll-page">
+    <section id="proposal">
+      <div id="proposal-layout" class="layout">
+        <div id="proposal-content">
+          <div class="text-center orange mb-2">
+            <h3>proposal.centralText.lineOne</h3>
+            <h3>proposal.centralText.lineTwo</h3>
+          </div>
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div class="col-12 col-md-5">
+              <div class="proposal-card bg-green purple">
+                <h1 id="people-number">0</h1>
+                <h4>proposal.people.title.centralText</h4>
+                <p>proposal.people.title.text</p>
               </div>
-              <div class="no-more-devs-item-scroll">
-                <h2>noMoreDevs.carouselText.itemTwo</h2>
-              </div>
-              <div class="no-more-devs-item-scroll">
-                <h2>noMoreDevs.carouselText.itemThree.lineOne</h2><br>
-                <h2>noMoreDevs.carouselText.itemThree.lineTwo</h2>
+            </div>
+            <div class="col-12 col-md-5">
+              <div>
+                <p class="purple white">proposal.people.leyend</p>
               </div>
             </div>
           </div>
-          <div class="orange">
-            <h6>noMoreDevs.inlineText</h6>
+          <div id="cost" class="d-flex justify-content-between align-items-center flex-wrap ">
+            <div class="col-12 col-md-5">
+              <div>
+                <p class="purple">proposal.cost.leyend</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="proposal-card bg-purple white">
+                <div>
+                  <h3 class="fw-bold d-inline">US$</h3><h2 class="fw-bold d-inline" id="cost-from-number"> 0</h2>
+                </div>
+                <div>
+                  <h3 class="fw-bold d-inline">proposal.cost.title.centralText</h3><h2 class="fw-bold d-inline" id="cost-to-number"> 0</h2>
+                </div>
+                <p>proposal.cost.title.text</p>
+              </div>
+            </div>
           </div>
-          <div class="d-flex mt-3">
-              <button class="button bg-white purple ms-auto" style="z-index: 1;">noMoreDevs.contactButton</button>
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div class="col-12 col-md-5">
+              <div class="proposal-card bg-orange grey">
+                <h1 id="turnover-number">0</h1>
+                <h4>proposal.turnover.title.centralText</h4>
+                <p>proposal.turnover.title.text</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <div>
+                <p class="purple">proposal.people.leyend</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="the-wheel">
-    <div id="the-wheel-layout" class="layout">
-      <div id="the-wheel-content">
-        <div class="text-center mb-5">
-          <h3 class="purple">theWheel.centralText.lineOne</h3><br>
-          <h3 class="purple">theWheel.centralText.lineTwo</h3>
-        </div>
-        <div id="venn-diagram-container">
+    <section id="problem">
+      <div id="problem-layout" class="layout">
+        <div id="problem-content">
+          <div class="container-content">
+            <div class="white">
+              <h2 class="title-lg">noMoreDevs.centralText.lineOne</h2>
+              <h2 class="title-lg">noMoreDevs.centralText.lineTwo</h2>
+              <h2 class="title-lg">noMoreDevs.centralText.lineThree</h2>
+            </div>
+          </div>
+          <div class="carousel-boos-container">
+            <img class="mt-3 mb-3" id="quote" src="../media/orange-quote.png" alt="quote">
+            <div id="problem-slide" data-interval="1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner orange">
+                <div class="carousel-item active">
+                  <h3>noMoreDevs.carouselText.itemOne</h3>
+                </div>
+                <div class="carousel-item">
+                  <h3>noMoreDevs.carouselText.itemTwo</h3>
+                </div>
+                <div class="carousel-item">
+                  <h3>noMoreDevs.carouselText.itemThree</h3>
+                </div>
+                <div class="carousel-item">
+                  <h3>noMoreDevs.carouselText.itemFour</h3>
+                </div>
+                <div class="carousel-item">
+                  <h3>noMoreDevs.carouselText.itemFive</h3>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" href="#problem-slide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" href="#problem-slide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+            <!-- <div id="problem-carrousel">
+              <div class="carousel-section">
+                <div data-name="play" class="carousel-button left">
+                  <img src="media/arrow.svg" alt="">
+                </div>
+                <div data-name="play-reverse" class="carousel-button right">
+                  <img src="media/arrow.svg" alt="">
+                </div>
+                <div id="problem-carousel" class="carousel mt-2">
+                  <div class="problem-item-scroll">
+                    <h3 data-t>noMoreDevs.carouselText.itemOne</h3>
+                  </div>
+                  <div class="problem-item-scroll">
+                    <h3 data-t>noMoreDevs.carouselText.itemTwo</h3>
+                  </div>
+                  <div class="problem-item-scroll">
+                    <h3 data-t>noMoreDevs.carouselText.itemThree</h3>
+                  </div>
+                  <div class="problem-item-scroll">
+                    <h3 data-t>noMoreDevs.carouselText.itemFour</h3>
+                  </div>
+                  <div class="problem-item-scroll">
+                    <h3 data-t>noMoreDevs.carouselText.itemFive</h3>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="container-content">
+            <div class="white mt-1">
+              <h6>noMoreDevs.inlineText</h6>
+            </div>
+            <div class="w-100 mt-1">
+              <button class="button contact-button button-lg bg-white purple ms-auto" style="z-index: 1;">noMoreDevs.contactButton</button>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </section>
+
+    <section id="the-wheel">
+      <div id="the-wheel-layout" class="layout">
+        <div id="the-wheel-content">
+          <div class="text-center mb-2">
+            <h3 class="purple">theWheel.centralText.lineOne</h3>
+            <h3 class="purple">theWheel.centralText.lineTwo</h3>
+          </div>
+          <div id="venn-diagram-container">
             <div id="control-switch">
               <div class="d-flex align-items-center mb-1">
-                <input type="checkbox" id="seniors-switch" checked><label for="seniors-switch">Toggle</label>
+                <input type="checkbox" id="seniors-switch" checked><label class="switch-label" for="seniors-switch">Toggle</label>
                 <h5 class="fw-bold green">SENIORS</h5>
               </div>
               <div class="d-flex align-items-center mb-1">
-                <input type="checkbox" id="junior-switch" checked><label for="junior-switch">Toggle</label>
+                <input type="checkbox" id="junior-switch" checked><label class="switch-label" for="junior-switch">Toggle</label>
                 <h5 class="fw-bold orange">JUNIOR</h5>
               </div>
               <div class="d-flex align-items-center mb-1">
-                <input type="checkbox" id="software-switch" checked><label for="software-switch">Toggle</label>
+                <input type="checkbox" id="software-switch" checked><label class="switch-label" for="software-switch">Toggle</label>
                 <h5 class="fw-bold purple">SOFTWARE</h5>
               </div>  
             </div>
             <div id="venn-diagram">
               <img id="diagram-logo" style="position: absolute; top: 33%; left: 47.2%; z-index: 10; width: 5%" src="../media/logo-white.svg" alt="tq">
-              <div class="intersection-seniors-software">
-                <div class="intersection-seniors-software-leyend">theWheel.veenDiagram.intersections.one</div>
+              <div id="intersection-seniors-software" class="intersection-seniors-software">
                 <div>
-                  <img style="float: right; width: 6em" src="../media/diagram-arrow-left.svg" alt="arrow">
+                  <p class="intersection-seniors-software-leyend">Software</p>
+                  <p class="intersection-seniors-software-leyend">Factory</p>
+                </div>
+                <div>
+                  <img class="arrow-diagram" style="float: right" src="../media/diagram-arrow-left.svg" alt="arrow">
                 </div>
               </div>
-              <div class="intersection-software-junior">
+              <div id="intersection-software-junior" class="intersection-software-junior">
                 <div>
-                  <img style="float: right; width: 6em" src="../media/diagram-arrow-right.svg" alt="arrow">
+                  <img class="arrow-diagram" style="float: right" src="../media/diagram-arrow-right.svg" alt="arrow">
                 </div>
                 <div class="intersection-software-junior-leyend">theWheel.veenDiagram.intersections.two</div>
               </div>
-              <div class="intersection-seniors-junior">
-                <div class="intersection-seniors-junior-leyend">theWheel.veenDiagram.intersections.one</div>
+              <div id="intersection-seniors-junior" class="intersection-seniors-junior">
+                <div class="intersection-seniors-junior-leyend">theWheel.veenDiagram.intersections.three</div>
                 <div>
-                  <img style=" height: 6em" src="../media/diagram-arrow-top.svg" alt="arrow">
+                  <img class="arrow-diagram" src="../media/diagram-arrow-top.svg" alt="arrow">
                 </div>
               </div>
               <div id="seniors-venn-diagram-item" class="venn-diagram-item">
@@ -309,212 +355,691 @@
                 </div>
               </div>
             </div>
-        </div>
-        <div class="row text-center mb-2" style="position: relative;">
-          <h3 class="purple mb-2">theWheel.centralTextTwo</h3><br>
-          <iframe style="border-radius: 15px; border: 1px red" width="100%" height="600" src="https://www.youtube.com/embed/1UZCMdtVAq4" title="Tq" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="d-flex flex-column text-center mb-2" style="position: relative;">
+            <h3 class="purple mb-2">theWheel.centralTextTwo</h3><br>
+            <video style="border-radius: 15px; border: 1px red" title="Tq" controls>
+              <source src="https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4">
+            </video>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
+    <section id="process">
+      <div id="process-layout" class="layout">
+        <div id="process-content">
+          <div class="text-center" style="margin-bottom: 2em">
+            <h3>howDo.centralText</h3>
+          </div>  
+          <div class="carousel-section">
+            <button class="carousel-control-prev process-next hidden" type="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next process-prev" type="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+            <div id="process-carousel" class="carousel mt-2 mb-2">
+              <div id="divider-process" class="divider">
+                <div class="divider-content"></div>
+                <div id="divider-center-process" class="divider-center"></div>
+              </div>
+              <div class="process-item-scroll">
+                <div class="d-flex">
+                  <div class="d-flex step-number-container">
+                    <div class="step-number">0<span class="step-number-one-one">1</span></div>
+                  </div>
+                  <div id="step-leyend-container-01" class="step-leyend-container">
+                    <div class="step-leyend">
+                      <p class="md-text-card">howDo.carousel.itemOne.title</p>
+                      <p>howDo.carousel.itemOne.text</p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+              <div class="process-item-scroll">
+                <div class="d-flex">
+                  <div class="step-number-container">
+                    <div class="step-number">02</div>
+                  </div>
+                  <div id="step-leyend-container-02" class="step-leyend-container">
+                    <div class="step-leyend">
+                      <p class="md-text-card">howDo.carousel.itemTwo.title</p>
+                      <p>howDo.carousel.itemTwo.text</p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+              <div class="process-item-scroll">
+                <div class="d-flex">
+                  <div class="step-number-container">
+                    <div class="step-number">03</div>
+                  </div>
+                  <div class="step-leyend-container">
+                    <div id="step-leyend-container-03" class="step-leyend">
+                      <p class="md-text-card">howDo.carousel.itemThree.title</p>
+                      <p>howDo.carousel.itemThree.text</p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="how-do">
-    <div id="how-do-layout" class="layout">
-      <div id="how-do-content">
-        <div class="text-center" style="margin-right: 14em; margin-bottom: 2em">
-          <h3>howDo.centralText</h3>
+    <section id="squad">
+      <div id="squad-layout" class="layout">
+        <div id="squad-content">
+          <div id="squad-description-layout">
+            <div id="squad-description-content">
+              <div class="d-flex">
+                <h3>squad.centralText</h3>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="outlined-text">
+                  <p class="fw-bold">squad.leaders.title</p>
+                </div>
+                <p>squad.leaders.leyend</p>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="outlined-text">
+                  <p class="fw-bold">squad.juniors.title</p>
+                </div>
+                <p>squad.juniors.leyend</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pep">
+      <div id="pep-layout" class="layout">
+        <div id="pep-content">
+          <div class="w-100 orange">
+            <h3>PEP:</h3>
+            <h3>pep.title</h3>
+          </div>
+          <div class="d-flex mt-5 justify-content-between flex-wrap">
+            <div class="col-10 col-sm-5">
+              <h6 class="md-text-card orange fw-bold">pep.textLeft</h6>
+            </div>
+            <div class="col-10 col-sm-6">
+              <p class="grey">pep.textRight</p>
+            </div>
+          </div>
+          <div class="row w-100" style="margin: 0">
+            <div id="pep-attributes-container">
+              <div class="row">
+                <div class="col-12 col-sm-5">
+                  <div class="dropdown-container">
+                    <div class="card dropdown-standard-item">
+                      <div class="card-standard-header">
+                        <div class="fw-bold sm-text-card orange">pep.dropDown.one.title</div>
+                        <div class="dropdown-item-button">
+                          <img class="dropdown-arrow" src="../media/arrow-dropdowns.svg" alt="arrow">
+                        </div>
+                      </div>
+                      <div class="collapsed-content">
+                        <div class="card-collapse-content">
+                          <p class="sm-text-card light-grey">pep.dropDown.one.leyend</p>
+                        </div>
+                      </div>
+                      <img class="hidden" src="../media/pep/pep-1.png" alt>
+                    </div>
+                    <div class="card dropdown-standard-item">
+                      <div class="card-standard-header">
+                        <div class="fw-bold sm-text-card">pep.dropDown.two.title</div>
+                        <div class="dropdown-item-button">
+                          <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                        </div>
+                      </div>
+                      <div class="collapsed-content">
+                        <div class="card-collapse-content">
+                          <p class="sm-text-card light-grey">pep.dropDown.two.leyend</p>
+                        </div>
+                      </div>
+                      <img class="hidden" src="../media/pep/pep-2.png" alt>
+                    </div>
+                    <div class="card dropdown-standard-item">
+                      <div class="card-standard-header">
+                        <div class="fw-bold sm-text-card">pep.dropDown.three.title</div>
+                        <div class="dropdown-item-button">
+                          <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                        </div>
+                      </div>
+                      <div class="collapsed-content">
+                        <div class="card-collapse-content">
+                          <p class="sm-text-card light-grey">pep.dropDown.three.leyend</p>
+                        </div>
+                      </div>
+                      <img class="hidden" src="../media/pep/pep-3.png" alt>
+                    </div>
+                    <div class="card dropdown-standard-item">
+                      <div class="card-standard-header">
+                        <div class="fw-bold sm-text-card">pep.dropDown.four.title</div>
+                        <div class="dropdown-item-button">
+                          <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                        </div>
+                      </div>
+                      <div class="collapsed-content">
+                        <div class="card-collapse-content">
+                          <p class="sm-text-card light-grey">pep.dropDown.four.leyend</p>
+                        </div>
+                      </div>
+                      <img class="hidden" src="../media/pep/pep-4.png" alt>
+                    </div>
+                    <div class="card dropdown-standard-item">
+                      <div class="card-standard-header">
+                        <div class="fw-bold sm-text-card">pep.dropDown.five.title</div>
+                        <div class="dropdown-item-button">
+                          <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                        </div>
+                      </div>
+                      <div class="collapsed-content">
+                        <div class="card-collapse-content">
+                          <p class="sm-text-card light-grey">pep.dropDown.five.leyend</p>
+                        </div>
+                      </div>
+                      <img class="hidden" src="../media/pep/pep-5.png" alt>
+                    </div>
+                    <div class="card dropdown-standard-item">
+                      <div class="card-standard-header">
+                        <div class="fw-bold sm-text-card">pep.dropDown.six.title</div>
+                        <div class="dropdown-item-button">
+                          <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                        </div>
+                      </div>
+                      <div class="collapsed-content">
+                        <div class="card-collapse-content">
+                          <p class="sm-text-card light-grey">pep.dropDown.six.leyend</p>
+                        </div>
+                      </div>
+                      <img class="hidden" src="../media/pep/pep-6.png" alt>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-7">
+                  <div id="pep-img-container">
+                    <img style="max-width: 100%;" src="../media/pep/pep-1.png" alt="pep">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="team">
+      <div id="team-layout" class="layout">
+        <div id="team-content">
+          <div class="text-center orange">
+            <h2 class="fw-bold">team.centralText</h2>
+          </div>
+          <div class="d-flex flex-wrap mt-7 justify-content-center">
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div class="container-img">
+                  <img class="member-img" src="../media/team/marianowechsler.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.mariano</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/marianowechsler/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Mariano Wechsler</h5>
+                    <div class="role_container">CEO</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div class="container-img">
+                  <img class="member-img" src="../media/team/diegojolodenco.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.diego</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around  mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/diegojolodenco/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Diego Jolodenco</h5>
+                    <div class="role_container">COO</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div class="container-img">
+                  <img class="member-img" src="../media/team/agustinpina.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.agustin</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around  mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/agustin-pina/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Agustin Pina</h5>
+                    <div class="role_container">Head of Training</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div class="container-img">
+                  <img class="member-img" src="../media/team/tapicer.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.tapi</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around  mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/tapicer/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Jonathan Tapicer</h5>
+                    <div id="ceo" class="role_container">CTO</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div class="container-img">
+                  <img class="member-img" src="../media/team/ezequielursztein.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.eze</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around  mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/ezequiel-ursztein-b1b14094/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Ezequiel Ursztein</h5>
+                    <div class="role_container">Head of Data & Analytics</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div id="ceo" class="container-img">
+                  <img class="member-img" src="../media/team/mariaflorenciadiaz.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.flor</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around  mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/mariaflorenciadiaz/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Florencia Diaz</h5>
+                    <div class="role_container">Head of People</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+              <div class="card-member">
+                <div class="container-img">
+                  <img class="member-img" src="../media/team/pablorodriguez.png" alt>
+                  <div class="card-member-hover">
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                    <p class="white fw-bold" style="margin-bottom: 0;">team.pablo</p>
+                    <img class="member-quotes" src="../media/quote.png" alt>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2">
+                  <div>
+                    <a href="https://www.linkedin.com/in/pablo-g-rodriguez/" target="_blank"><img src="../media/arrow-menu.svg" alt></a>
+                  </div>
+                  <div class="text-start">
+                    <h5 class="member-name" style="margin-bottom: 0.5em;">Pablo Rodriguez</h5>
+                    <div class="role_container">CFO</div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <section id="results">
+      <div id="results-layout" class="layout">
+        <div class="section-divider"></div>
+        <div class="static-content">
+          <div class="text-center orange">
+            <h2 class="fw-bold">results.title</h2>
+          </div>
+        </div>
+        <div id="carousel-content">
+          <div class="carousel-boos-container">
+            <div id="results-slide-desktop" data-bs-interval="false" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner orange">
+                <div class="carousel-item active">
+                  <div class="container-card-results">
+                    <div class="card results-card">
+                      <img src="../media/results_1.png" alt="results">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h5 class="md-text-card">results.cards.one.title</h5>
+                        <img src="../media/icons/01.svg" alt>
+                      </div>
+                      <p class="mt-2">results.cards.one.leyend</p>
+                    </div>
+                    <div class="card results-card">
+                      <img src="../media/results_2.png" alt="results">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h5 class="md-text-card">results.cards.two.title</h5>
+                        <img src="../media/icons/02.svg" alt>
+                      </div>
+                      <p class="mt-2">results.cards.two.leyend</p>
+                    </div>
+                    <div class="card results-card">
+                      <img src="../media/results_3.png" alt="results">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h5 class="md-text-card">results.cards.three.title</h5>
+                        <img src="../media/icons/03.svg" alt>
+                      </div>
+                      <p class="mt-2">results.cards.three.leyend</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="container-card-results">
+                      <div class="card results-card">
+                        <img src="../media/results_4.png" alt="results">
+                        <div class="d-flex justify-content-between mt-2">
+                          <h5 class="md-text-card">results.cards.four.title</h5>
+                          <img src="../media/icons/05.svg" alt>
+                        </div>
+                        <p class="mt-2">results.cards.four.leyend</p>
+                      </div>
+                    <div class="card results-card">
+                      <img src="../media/results_5.png" alt="results">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h5 class="md-text-card">results.cards.five.title</h5>
+                        <img src="../media/icons/04.svg" alt>
+                      </div>
+                      <p class="mt-2">results.cards.five.leyend</p>
+                    </div>
+                    <div class="card results-card">
+                      <img src="../media/results_6.png" alt="results">
+                      <div class="d-flex justify-content-between mt-2">
+                        <h5 class="md-text-card">results.cards.six.title</h5>
+                        <img src="../media/icons/06.svg" alt>
+                      </div>
+                      <p class="mt-2">results.cards.six.leyend</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" href="#results-slide-desktop" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" href="#results-slide-desktop" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+
+            <div id="results-slide-mobile" data-interval="1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner orange">
+                <div class="carousel-item active">
+                  <div class="card results-card">
+                    <img src="../media/results_1.png" alt="results">
+                    <div class="d-flex justify-content-between mt-2">
+                      <h5 class="md-text-card">results.cards.one.title</h5>
+                      <img src="../media/icons/01.svg" alt>
+                    </div>
+                    <p class="mt-2">results.cards.one.leyend</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card results-card">
+                    <img src="../media/results_2.png" alt="results">
+                    <div class="d-flex justify-content-between mt-2">
+                      <h5 class="md-text-card">results.cards.two.title</h5>
+                      <img src="../media/icons/02.svg" alt>
+                    </div>
+                    <p class="mt-2">results.cards.two.leyend</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card results-card">
+                    <img src="../media/results_3.png" alt="results">
+                    <div class="d-flex justify-content-between mt-2">
+                      <h5 class="md-text-card">results.cards.three.title</h5>
+                      <img src="../media/icons/03.svg" alt>
+                    </div>
+                    <p class="mt-2">results.cards.three.leyend</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card results-card">
+                    <img src="../media/results_4.png" alt="results">
+                    <div class="d-flex justify-content-between mt-2">
+                      <h5 class="md-text-card">results.cards.four.title</h5>
+                      <img src="../media/icons/05.svg" alt>
+                    </div>
+                    <p class="mt-2">results.cards.four.leyend</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card results-card">
+                    <img src="../media/results_5.png" alt="results">
+                    <div class="d-flex justify-content-between mt-2">
+                      <h5 class="md-text-card">results.cards.five.title</h5>
+                      <img src="../media/icons/04.svg" alt>
+                    </div>
+                    <p class="mt-2">results.cards.five.leyend</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card results-card">
+                    <img src="../media/results_6.png" alt="results">
+                    <div class="d-flex justify-content-between mt-2">
+                      <h5 class="md-text-card">results.cards.six.title</h5>
+                      <img src="../media/icons/06.svg" alt>
+                    </div>
+                    <p class="mt-2">results.cards.six.leyend</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" href="#results-slide-mobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" href="#results-slide-mobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="static-content">
+          <div class="carousel-layout bg-white">
+            <div class="carousel-container">
+              <div class="carousel-trainers">
+                <img src="../media/Contactanos.png">
+              </div>
+            </div>
+            <div class="carousel-info-content purple">
+              <h3>results.carouselInfo.centralText</h3>
+              <button class="button contact-button bg-orange purple mt-2">results.carouselInfo.textButton</button>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div id="footer-content">
+        <div class="col-5 col-md-3">
+          <div class="d-flex flex-column">
+            <div class="link-footer">
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.proposal</a>
+            </div>
+            <div class="link-footer">
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.problem</a>
+            </div>
+            <div class="link-footer">
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.cases</a>
+            </div>
+            <div class="link-footer">
+              <a class="color-light-gray mb-0" href="/privacy-policy.html">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="d-flex flex-column">
+            <div class="link-footer">
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.process</a>
+            </div>
+            <div class="link-footer">
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.methodology</a>
+            </div>
+            <div class="link-footer">
+              <a class="what color-light-gray mb-0 navigate-organization" href="#what">textLinks.aboutUs</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col-md-4">
+          <div id="footer-logo">
+            <img src="../media/logotipo.svg" alt="TeamCubation">
+            <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p>
+          </div>
         </div>  
-        <div class="carousel-section">
-          <div id="how-do-carousel" class="carousel mt-2 mb-2">
-            <div id="divider-how-do" class="divider">
-              <div class="divider-content"></div>
-              <div id="divider-center-how-do" class="divider-center"></div>
-            </div>
-            <div class="how-do-item-scroll">
-              <div class="d-flex">
-                <div class="d-flex step-number-container">
-                  <div class="step-number">0<span class="step-number-one-one">1</span></div>
-                </div>
-                <div id="step-leyend-container-01" class="step-leyend-container">
-                  <div class="step-leyend">
-                    <p class="md-text-card">howDo.carousel.itemOne.title</p>
-                    <p>howDo.carousel.itemOne.text</p>
-                  </div>
-                </div>
-              </div>  
-            </div>
-            <div class="how-do-item-scroll">
-              <div class="d-flex">
-                <div class="step-number-container">
-                  <div class="step-number">02</div>
-                </div>
-                <div id="step-leyend-container-02" class="step-leyend-container">
-                  <div class="step-leyend">
-                    <p class="md-text-card">howDo.carousel.itemTwo.title</p>
-                    <p>howDo.carousel.itemTwo.text</p>
-                  </div>
-                </div>
-              </div>  
-            </div>
-            <div class="how-do-item-scroll">
-              <div class="d-flex">
-                <div class="step-number-container">
-                  <div class="step-number">03</div>
-                </div>
-                <div class="step-leyend-container">
-                  <div id="step-leyend-container-03" class="step-leyend">
-                    <p class="md-text-card">howDo.carousel.itemThree.title</p>
-                    <p>howDo.carousel.itemThree.text</p>
-                  </div>
-                </div>
-              </div>  
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </footer>
+  
 
-  <!-- <section id="squads">
-    <div id="squad-layout" class="layout">
-      <div id="how-do-content">
-      
-      </div>
-    </div>
-  </section> -->
-
-  <section id="pep" style="height: 100vh; border: 1px solir red">
-    <div id="pep-layout" class="layout">
-      <div id="pep-content">
-        <div class="w-100 orange">
-          <h3>PEP:</h3>
-          <h3>pep.title</h3>
-        </div>
-        <div class="row mt-5 justify-content-around">
-          <div class="col-10 col-sm-5">
-            <h6 class="md-text-card orange fw-bold">pep.textLeft</h6>
-          </div>
-          <div class="col-10 col-sm-5">
-            <p class="grey">pep.textRight</p>
-          </div>
-        </div>
-        <div class="row w-100">
-          <div id="pep-attributes-container">
-            <div class="row">
-              <div class="col-10 col-sm-5">
-                <div class="dropdown-container">
-
-                  <div class="card dropdown-standard-item">
-                    <div class="card-standard-header">
-                      <div class="fw-bold sm-text-card orange">pep.dropDown.one.title</div>
-                      <div class="dropdown-item-button">
-                        <img class="dropdown-arrow" src="../media/arrow-dropdowns.svg" alt="arrow">
-                      </div>
-                    </div>
-                    <div class="collapsed-content">
-                      <div class="card-collapse-content">
-                        <p class="sm-text-card light-grey">pep.dropDown.one.leyend</p>
-                      </div>
-                    </div>
-                    <img class="hidden" src="../media/pep/pep-1.png" alt>
-                  </div>
-                  
-                  <div class="card dropdown-standard-item">
-                    <div class="card-standard-header">
-                      <div class="fw-bold sm-text-card">pep.dropDown.two.title</div>
-                      <div class="dropdown-item-button">
-                        <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
-                      </div>
-                    </div>
-                    <div id class="collapsed-content">
-                      <div class="card-collapse-content">
-                        <p class="sm-text-card light-grey">pep.dropDown.two.leyend</p>
-                      </div>
-                    </div>
-                    <img class="hidden" src="../media/pep/pep-2.png" alt>
-                  </div>
-                  <div class="card dropdown-standard-item">
-                    <div class="card-standard-header">
-                      <div class="fw-bold sm-text-card">pep.dropDown.three.title</div>
-                      <div class="dropdown-item-button">
-                        <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
-                      </div>
-                    </div>
-                    <div class="collapsed-content">
-                      <div class="card-collapse-content">
-                        <p class="sm-text-card light-grey">pep.dropDown.three.leyend</p>
-                      </div>
-                    </div>
-                    <img class="hidden" src="../media/pep/pep-3.png" alt>
-                  </div>
-                  
-                  <div class="card dropdown-standard-item">
-                    <div class="card-standard-header">
-                      <div class="fw-bold sm-text-card">pep.dropDown.four.title</div>
-                      <div class="dropdown-item-button">
-                        <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
-                      </div>
-                    </div>
-                    <div id class="collapsed-content">
-                      <div class="card-collapse-content">
-                        <p class="sm-text-card light-grey">pep.dropDown.four.leyend</p>
-                      </div>
-                    </div>
-                    <img class="hidden" src="../media/pep/pep-4.png" alt>
-                  </div>
-
-                  <div class="card dropdown-standard-item">
-                    <div class="card-standard-header">
-                      <div class="fw-bold sm-text-card">pep.dropDown.five.title</div>
-                      <div class="dropdown-item-button">
-                        <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
-                      </div>
-                    </div>
-                    <div class="collapsed-content">
-                      <div class="card-collapse-content">
-                        <p class="sm-text-card light-grey">pep.dropDown.five.leyend</p>
-                      </div>
-                    </div>
-                    <img class="hidden" src="../media/pep/pep-5.png" alt>
-                  </div>
-                  
-                  <div class="card dropdown-standard-item">
-                    <div class="card-standard-header">
-                      <div class="fw-bold sm-text-card">pep.dropDown.six.title</div>
-                      <div class="dropdown-item-button">
-                        <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
-                      </div>
-                    </div>
-                    <div class="collapsed-content">
-                      <div class="card-collapse-content">
-                        <p class="sm-text-card light-grey">pep.dropDown.six.leyend</p>
-                      </div>
-                    </div>
-                    <img class="hidden" src="../media/pep/pep-6.png" alt>
-                  </div>
-
+    <div id="form-modal" class="hidden d-flex">
+      <div id="form-container">
+        <div class="col-12 d-flex flex-column align-items-center">
+          <form class="form-contact" id="form-contact">
+            <div type="button" id="close-modal" style="float: right; padding: 0 0 2em 0"><img src="../media/close-icon.svg" alt="close-icon"></div>
+            <div id="formIdenfitication" class="mt-2 w-100 position-relative">
+              <div class="dropdown-select w-100" id="dropdown-select">
+                <div class="select-tc">
+                  <textarea class="input-select" disabled placeholder="How do you identify yourself?"></textarea>
+                  <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                </div>
+                <div style="position: relative; max-width: 100%">
+                  <ul class="list-options-tc">
+                    <li>
+                      <div class="option-tc" data-option="organization">I’m part of an organization, please contact me to tell me more about the service.</div>
+                    </li>
+                    <li>
+                      <div class="option-tc" data-option="senior">I’m a senior developer who wants to lead juniors at Teamcubation</div>
+                    </li>
+                    <li>
+                      <div class="option-tc" data-option="junior">I’m a junior developer who has basic coding knowledge</div>
+                    </li>
+                    <li>
+                      <div class="option-tc" data-option="no-exp">I don’t know anything about programming, but I want to learn.</div>
+                    </li>
+                    <li>
+                      <div class="option-tc" data-option="other">Other</div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-10 col-sm-7">
-                <div id="pep-img-container">
-                  <img style="max-width: 100%;" src="../media/pep/pep-1.png" alt="pep">
+              <div class="form-message" id="juniorsMessage">
+                <p class="d-inline fw-600"></p>
+                <p class="d-inline">If you are a Junior/Trainee developer looking for your first job,</p>
+                <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">please apply here</a>
+                <p class="d-inline"> to be selected by one of our clients</p>
+              </div>
+              <div class="form-message" id="seniorsMessage">
+                <p class="d-inline fw-400">If you are a seasoned Senior developer and enjoy sharing your knowledge with others,</p>
+                <p class="d-inline">please follow </p>
+                <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">this link</a>
+                <p class="d-inline">and apply to the job that best suits your profile</p>
+              </div>
+              <div class="form-message" id="noCodersMessage">
+                <p class="d-inline fw-600">If you didn’t learn programming, </p>
+                <p class="d-inline"> please do it first and then get back to us. We don’t teach coding nor have teachers to do so. We work for companies who hire junior talent that already knows the basics of programming.</p>
+              </div>    
+            </div>
+            <div id="formInformation">
+              <div class="mt-2">
+                <input type="text" class="name" name="name" required placeholder="Name">
+              </div>
+              <div class="mt-2">
+                <input type="text" class="organizationContact" placeholder="Company">
+              </div>
+              <div class="mt-2">
+                <label for="country-phone-team" class="form-label">Phone</label>
+              </div>
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="row">
+                    <div class="col-3">
+                      <span>+</span>
+                      <input id="country-phone-team" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="Country">
+                    </div>
+                    <div class="col-3">
+                      <input type="text" name="area-phone" class="area-phone" placeholder="Area">
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="number-phone" class="number-phone" placeholder="Phone number">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
+                  <input type="email" name="email" class="email" required placeholder="Email">
                 </div>
               </div>
+              <div class="mb-4 mt-2">
+                <textarea name="message" class="message" rows="1" required placeholder="Leave your comment here"></textarea>
+              </div>
             </div>
-          </div>
+            <button type="submit" name="submit-contact" class="button submit-contact bg-white purple" style="float: right;">Enviar</button>
+          </form>
         </div>
       </div>
     </div>
 
-  </section>
+  </div>
 
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script type="module" src="../index.js?v=40"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="../index.js?v=40"></script>
 
 </body>
 </html>
