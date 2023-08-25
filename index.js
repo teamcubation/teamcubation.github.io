@@ -670,5 +670,5 @@ video.addEventListener('play', function() {
 });
 
 document.getElementById('button-redirect-youtube').addEventListener('click', function() {
-  window.open('https://www.youtube.com/@teamcubation/playlists', '_blank');
+  window.open('https://www.youtube.com/@teamcubation/videos', '_blank');
 });

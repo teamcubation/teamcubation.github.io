@@ -1340,7 +1340,13 @@ nav{
 .button-link-video{
 	color: var(--color-logo-orange);
 	border: 1px solid var(--color-logo-orange);
-	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-link-video:hover{
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: var(--color-logo-orange);
 }
 
 /* swich  */
