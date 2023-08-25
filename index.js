@@ -476,6 +476,7 @@ $(".link-button").on("click", function (e) {
   e.preventDefault();
   var section = $(this).data('navigate');
   location.href = `#${section}`;
+  closeMenu();
 });
 
 
