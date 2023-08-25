@@ -80,7 +80,7 @@
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div class="link-button">
-              <a class="cases" target="_blank" href="https://www.youtube.com/@teamcubation/playlists">textLinks.cases</a>
+              <a class="cases" href="#cases">textLinks.cases</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div class="link-button">
@@ -356,11 +356,17 @@
               </div>
             </div>
           </div>
-          <div class="d-flex flex-column text-center mb-2" style="position: relative;">
+          <div id="cases" class="mb-2">
             <h3 class="purple mb-2">theWheel.centralTextTwo</h3><br>
-            <video style="border-radius: 15px; border: 1px red" title="Tq" controls>
-              <source src="https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4">
-            </video>
+            <div id="video-container">
+              <div class="video-overlay"></div>
+              <div id="link-button-video-container">
+                <button id="button-redirect-youtube" class="button button-link-video">Ver mas testimonios</button>
+              </div>  
+              <video id="video-cases" title="Tq" controls>
+                <source src="https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4">
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -915,7 +921,7 @@
               <a class="animated-underline" href="#problem">textLinks.problem</a>
             </div>
             <div class="link-footer">
-              <a class="animated-underline" href="#">textLinks.cases</a>
+              <a class="animated-underline" href="#cases">textLinks.cases</a>
             </div>
             <div class="link-footer">
               <a class="animated-underline" href="/privacy-policy.html">Privacy Policy</a>

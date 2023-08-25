@@ -652,7 +652,47 @@ nav{
 	color: var(--color-logo-orange);
 }
 
+#cases{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+#video-container{
+	position: relative;
+	border-radius: 20px;
+	border: 2px solid #000000;
+	background-color: #000000;
+}
+.video-overlay{
+	display: none;
+	background-color: #561872b2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 20px;
+}
+
+#video-cases{
+	border-radius: 20px;
+	width: 100%;
+	height: auto;
+}
+
+#link-button-video-container{
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+}
+
 /* how do */
+
 #process{
 	z-index: 900;
 }
@@ -1243,10 +1283,9 @@ nav{
 	z-index: 10;
 	border: none;
 	border-radius: 50px;
-	padding: 0 2.5em;
+	padding: 0 2em;
 	font-weight: 600;
 	width: fit-content;
-	max-width: 12em;
 	min-height: 3em;
 }
 
@@ -1296,6 +1335,12 @@ nav{
 	display: flex;
 	cursor: pointer;
 	justify-content: flex-end;
+}
+
+.button-link-video{
+	color: var(--color-logo-orange);
+	border: 1px solid var(--color-logo-orange);
+	background-color: transparent;
 }
 
 /* swich  */

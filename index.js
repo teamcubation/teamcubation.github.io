@@ -132,7 +132,6 @@ $(".form-contact").on("submit", function (ev) {
           '<div class="alert alert-danger" role="alert" style="position: absolute; z-index: 101"></div>'
         );
         $(".alert").text(dataByLang.formContact.submitResponse.error);
-        debugger
         $(".alert")
           .fadeTo(2000, 500)
           .slideUp(500, function () {
@@ -490,7 +489,6 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
-  debugger
   $("#menu").addClass('hidden');
   $("#navbar-content").removeClass('open-menu');
   $("#navbar-content").removeClass('open-mobile-menu');
@@ -654,8 +652,23 @@ dropdowns.forEach(dropdown => {
   });
 }); 
 
-// restore in top sin scrollTo 
+// restore in top sin scrollTop
 history.scrollRestoration = "manual";
 $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
+});
+
+const video = document.getElementById("video-cases")
+video.addEventListener('ended', function() {
+  $(".video-overlay").css("display", "block");
+  $("#link-button-video-container").css("display", "block");
+});
+
+video.addEventListener('play', function() {
+  $(".video-overlay").css("display", "none");
+  $("#link-button-video-container").css("display", "none");
+});
+
+document.getElementById('button-redirect-youtube').addEventListener('click', function() {
+  window.open('https://www.youtube.com/@teamcubation/playlists', '_blank');
 });
