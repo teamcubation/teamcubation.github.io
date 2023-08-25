@@ -554,11 +554,17 @@ window.addEventListener('scroll', (e) => {
 
 const isTqState = () => {
   if($("#seniors-venn-diagram-item").hasClass('venn-diagram-item-disabled') 
-    || $("#junior-venn-diagram-item").hasClass('venn-diagram-item-disabled') 
-    || $("#software-venn-diagram-item").hasClass('venn-diagram-item-disabled')) {
-      $("#diagram-logo").addClass('hidden');
+  || $("#junior-venn-diagram-item").hasClass('venn-diagram-item-disabled') 
+  || $("#software-venn-diagram-item").hasClass('venn-diagram-item-disabled')) {
+    $("#diagram-logo").addClass('hidden');
+    isCodeSchoolState();
+    isSoftWareFactoryState();
+    isNotExistState();
   } else {
     $("#diagram-logo").removeClass('hidden');
+    $("#intersection-seniors-junior").addClass('hidden');
+    $("#intersection-seniors-software").addClass('hidden');
+    $("#intersection-software-junior").addClass('hidden');
   };
 };
 
@@ -584,30 +590,30 @@ const isNotExistState = () => {
   if($("#software-venn-diagram-item").hasClass('venn-diagram-item-disabled')
     || $("#junior-venn-diagram-item").hasClass('venn-diagram-item-disabled')) {
       $("#intersection-software-junior").addClass('hidden');
-  } else {
+  } else{
     $("#intersection-software-junior").removeClass('hidden');
   };
 } 
 
 $("#seniors-switch").on("click", function(){
   $("#seniors-venn-diagram-item").toggleClass('venn-diagram-item-disabled');
-  isTqState();
   isSoftWareFactoryState();
   isCodeSchoolState();
+  isTqState();
 });
 
 $("#junior-switch").on("click", function(){
   $("#junior-venn-diagram-item").toggleClass('venn-diagram-item-disabled');
-  isTqState();
   isCodeSchoolState();
   isNotExistState();
+  isTqState();
 });
 
 $("#software-switch").on("click", function(){
   $("#software-venn-diagram-item").toggleClass('venn-diagram-item-disabled');
-  isTqState();
   isSoftWareFactoryState();
   isNotExistState();
+  isTqState();
 })
 
 

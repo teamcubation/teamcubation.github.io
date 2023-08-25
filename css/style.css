@@ -652,6 +652,14 @@ nav{
 	color: var(--color-logo-orange);
 }
 
+#diagram-logo{
+	position: absolute; 
+	top: 33%; 
+	left: 47.2%; 
+	z-index: 10; 
+	width: 5%
+}
+
 #cases{
 	position: relative;
 	display: flex;
