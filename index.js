@@ -472,10 +472,12 @@ $(".navigate-home").on("click", function(){
   })
 })
 
-$(".link-button").on("click", function(){
-  closeMenu();
-  // $('#navbar').addClass('hidden-nav');
+$(".link-button").on("click", function (e) {
+  e.preventDefault();
+  var section = $(this).data('navigate');
+  location.href = `#${section}`;
 });
+
 
 const openMenu = () => {
   $("#menu").removeClass('hidden');
