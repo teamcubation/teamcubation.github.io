@@ -35,22 +35,30 @@
         "centralText": "Vacantes IT",
         "text": " quedaron sin cubrir el último año."
       },
-      "leyend": "En lugar de enfocarnos en la escasez de seniors, desarrollamos el potencial de los nuevos talentos: Así, ayudamos a nuestros clientes a contratar talentos que antes no tenían en cuenta: Diversos, comprometidos, y con ganas de aportar a la compañía que les de su primera oportunidad."
+      "text": {
+        "title": "En lugar de enfocarnos en la escasez de seniors, desarrollamos el potencial de los nuevos talentos:",
+        "leyend": "así, ayudamos a nuestros clientes a contratar talentos que antes no tenían en cuenta: Diversos, comprometidos, y con ganas de aportar a la compañía que les de su primera oportunidad."
+      }
     },
     "cost": {
       "title":{
         "centralText":"a US$", 
         "text": "son los costos relacionados a cada vacante sin cubrir."
       },
-      "leyend": "Disminuimos el costo de oportunidad. A través de un flujo constante de nuevos colaboradores, garantizamos la capacidad de producción que su compañía necesita para desbloquear nuevas oportunidades de negocio."
+      "text": {
+        "title": "Disminuimos el costo de oportunidad:",
+        "leyend": "a través de un flujo constante de nuevos colaboradores, garantizamos la capacidad de producción que su compañía necesita para desbloquear nuevas oportunidades de negocio."
+      }
     },
     "turnover": {
       "title":{
         "centralText": "de los CTOs",
         "text": "consideran que la rotación está afectando la productividad de su equipo."
       },
-      "leyend": ""
-      
+      "text": {
+        "title": "Desarrollamos experiencia laboral real:",
+        "leyend": "los proyectos en su backlog que no se logran priorizar por falta de equipo, son la oportunidad ideal para que nuestros seniors lideren el entrenamiento on-the-job de sus nuevos devs, bajo los requerimientos y tecnologías de su compañía."
+      }
     }
   },
   "noMoreDevs":{
