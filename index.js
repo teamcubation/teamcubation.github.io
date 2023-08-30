@@ -101,7 +101,7 @@ $(".form-contact").on("submit", function (ev) {
     $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
     btn.text(dataByLang.formContact.btnSending);
     $.ajax({
-      // url: "https://api.prod.tq.teamcubation.com/contact",
+      url: "https://api.prod.tq.teamcubation.com/contact",
       type: "POST",
       contentType: "application/json",
       data: JSON.stringify({
