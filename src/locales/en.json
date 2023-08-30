@@ -3,7 +3,7 @@
   "description": "Teamcubation is the missing link between the educational and work systems. We address the talent shortage in the digital industry by incubating and training development teams to transform juniors into experienced resources.",
   "lang": {
   "text": "en",
-  "textButton": "Eglish",
+  "textButton": "English",
   "iconButton": "media/world_icon.svg",
   "spanish": "Spanish",
   "english": "English"
@@ -20,10 +20,10 @@
   },
   "banner": {
     "url-local" : "http://localhost:5503/index.html",
-  "url": "https://teamcubation.com/en",
+    "url": "https://teamcubation.com/en",
   "centralText": {
-  "lineOne": "Experienced",
-  "lineTwo": " Developers"
+  "lineOne": "Expirience",
+  "lineTwo": " developers"
   }
   },
   "proposal": {
@@ -144,7 +144,7 @@
   },
   "five": {
   "title": "Get to know your collaborators:",
-  "leyend": "1. Through cognitive and behavioral tests, such as the Personal Development Analysis (PDA), we gain a clear insight into your collaborators' profiles to manage their talents, develop skills, and bring out their best version."
+  "leyend": "Through cognitive and behavioral tests, such as the Personal Development Analysis (PDA), we gain a clear insight into your collaborators' profiles to manage their talents, develop skills, and bring out their best version."
   },
   "six": {
   "title": "Emotional pulse",
@@ -257,7 +257,7 @@
   "other": "Other"
   }
   },
-  "btn_text": "Send",
+  "btn_text": "Submit",
   "btn_sending": "Sending...",
   "submit-response": {
   "success": "Your message has been successfully sent, thank you!",

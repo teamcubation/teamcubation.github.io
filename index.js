@@ -3,8 +3,10 @@ import {CarouselAnimator, CounterAnimator} from './animations.js';
 const url = "https://teamcubation.com/";
 const initialLocation = document.location.href;
 const lang = document.documentElement.lang;
-let json_path;
+const mediaPath = window.location.href.replace('/en', '').replace('index.html', '');
 
+
+let json_path;
 $(document).ready(
   document.documentElement.lang === "es"
     ? (json_path = "./src/locales/es.json")
@@ -711,12 +713,12 @@ dropdowns.forEach(dropdown => {
     dropdowns.forEach(otherDropdown => {
       if (otherDropdown !== dropdown) {
         otherDropdown.querySelector('.collapsed-content').classList.remove('d-flex');
-        otherDropdown.querySelector('.card-standard-header .dropdown-item-button img').src = 'media/arrow-dropdowns-down.svg';
+        otherDropdown.querySelector('.card-standard-header .dropdown-item-button img').src = `${mediaPath}/media/arrow-dropdowns-down.svg`;;
         otherDropdown.querySelector('.card-standard-header .sm-text-card').style.color = '#484848';
       }
     });
   
-  iconbutton.src = 'media/arrow-dropdowns.svg';  
+  iconbutton.src = `${mediaPath}/media/arrow-dropdowns.svg`;
   content.classList.add('d-flex');
   title.style.color = '#F34E1E';
    
