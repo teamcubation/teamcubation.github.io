@@ -74,7 +74,25 @@
             <div class="vertical-divider-menu"></div>
             <div class="vertical-divider-menu"></div>
             <div class="vertical-divider-menu" style="visibility: hidden;"></div>
-          </div>  
+          </div>
+          <div id="language-select-mobile" class="language-select">
+            <div id="language-title" class="language-title">
+              <img id="globe-white-icon" src="media/globe_icon.png" alt="redirect_lang">
+              <img id="globe-orange-icon" class="hidden" src="media/globe-orange-icon.png" alt="redirect_lang">
+              <p data-t>lang.textButton</p>
+              <img src="media/arrow-white.png" alt="arrow">
+              <img src="media/arrow-orange.png" class="hidden" alt="arrow">
+            </div>
+            <ul id="language-options-mobile" class="language-options collapsed-content">
+              <li data-lang="es">
+                <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url-local}}">lang.spanish</a>
+              </li>
+              <li data-lang="en">
+                <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url-local}}">lang.english</a>
+              </li>
+            </ul>
+          </div>
+  
           <div class="navigate-menu">
             <div data-navigate="proposal" class="link-button">
               <a id="proposal-link"  class="proposal" data-t data-attr-t data-attr-t-interpolate href="#proposal">textLinks.proposal</a>
@@ -99,23 +117,6 @@
             <div data-navigate="team" class="link-button">
               <a class="aboutUs" data-t data-attr-t data-attr-t-interpolate href="#team">textLinks.aboutUs</a>
               <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
-            </div>
-            <div id="language-select-mobile" class="language-select">
-              <div id="language-title" class="language-title ">
-                <img id="globe-white-icon" src="media/globe_icon.png" alt="redirect_lang">
-                <img id="globe-orange-icon" class="hidden" src="media/globe-orange-icon.png" alt="redirect_lang">
-                <p data-t>lang.textButton</p>
-                <img src="media/arrow-white.png" alt="arrow">
-                <img src="media/arrow-orange.png" class="hidden" alt="arrow">
-              </div>
-              <ul id="language-options" class="language-options collapsed-content">
-                <li data-lang="es">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url-local}}">lang.spanish</a>
-                </li>
-                <li data-lang="en">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url-local}}">lang.english</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

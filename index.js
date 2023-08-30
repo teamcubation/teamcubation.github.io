@@ -175,24 +175,24 @@ const clearForm = () => {
     .height('40px');
 };
 
-$("#language-select").on("click", function () {
-    // if (screen.width > 1024) {
+$(".language-title").on("click", function (e) {
+    // e.preventDefault();
     $(`.language-options li`).each(function () {
       if ($(this).data("lang") === lang) {
         $(this).find("a").addClass("hidden");
       }
     });
-    $('#language-select .collapsed-content').slideToggle('slow');
+    $('.language-select .collapsed-content').slideToggle('slow');
 });
 
-$(".language-select-mobile").on("click", function () {
-  $(`.language-options li`).each(function () {
-    if ($(this).data("lang") === lang) {
-      $(this).find("a").addClass("a-disbled");
-    }
-  });
-  $(`.language-options`).toggle();
-});
+// $(".language-select-mobile").on("click", function () {
+//   $(`.language-options li`).each(function () {
+//     if ($(this).data("lang") === lang) {
+//       $(this).find("a").addClass("a-disbled");
+//     }
+//   });
+//   $(`.language-options`).toggle();
+// });
 
 
 // input select //
@@ -545,8 +545,10 @@ const openMenu = () => {
   $('#logo').addClass('hidden');
   $('#logo-orange').removeClass('hidden');
   $('#language-select').addClass('language-menu-open');
-  $('#language-title').addClass('language-menu-open');
-  $('#language-options').addClass('language-menu-open');  
+  $('.language-title').addClass('language-menu-open');
+  $('#language-options').addClass('language-menu-open');
+  $('#language-options-mobile').addClass('language-menu-open');  
+  
 
   if(screen.width < 574){
     $("#navbar-content").addClass('open-menu-mobile');
@@ -566,8 +568,10 @@ const closeMenu = () => {
   $('#logo').removeClass('hidden');
   $('#logo-orange').addClass('hidden');
   $('#language-select').removeClass('language-menu-open');
-  $('#language-title').removeClass('language-menu-open');
-  $('#language-options').removeClass('language-menu-open');  
+  $('.language-title').removeClass('language-menu-open');
+  $('#language-options').removeClass('language-menu-open');
+  $('#language-options-mobile').removeClass('language-menu-open');  
+  
 };
 
 const handleControlMenu = (action) => {
@@ -601,8 +605,10 @@ window.addEventListener('scroll', (e) => {
       $('#logo').removeClass('hidden');
       $('#logo-orange').addClass('hidden');
       $('#language-select').removeClass('language-menu-open');
-      $('#language-title').removeClass('language-menu-open');
-      $('#language-options').removeClass('language-menu-open');  
+      $('.language-title').removeClass('language-menu-open');
+      $('#language-options').removeClass('language-menu-open');
+      $('#language-options-mobile').removeClass('language-menu-open');  
+  
     }
   }
   if(currentPositionScroll > proposalToTop && direction == "down"){
@@ -617,8 +623,9 @@ window.addEventListener('scroll', (e) => {
     $('#language-select').addClass('language-menu-open');
     // $('#language-select-mobile').addClass('language-menu-open');
 
-    $('#language-title').addClass('language-menu-open');
-    $('#language-options').addClass('language-menu-open');  
+    $('.language-title').addClass('language-menu-open');
+    $('#language-options').addClass('language-menu-open');
+    $('#language-options-mobile').addClass('language-menu-open');  
   }
   lastScrollTop = currentPositionScroll <= 0 ? 0 : currentPositionScroll;
 });

@@ -1304,7 +1304,7 @@ html[lang="en"] .intersection-software-junior {
 	padding: 0.5em 2em;
 	font-weight: 600;
 	width: fit-content;
-	/* height: 3em; */
+	white-space: nowrap;
 }
 
 .lg-button{
@@ -1569,15 +1569,15 @@ ion-icon {
 	display: none;
 }
 
-#language-title.language-menu-open #globe-white-icon,
-#language-title.language-menu-open img[src="media/arrow-white.png"],
-#language-title.language-menu-open img[src="../media/arrow-white.png"] {
+.language-title.language-menu-open #globe-white-icon,
+.language-title.language-menu-open img[src="media/arrow-white.png"],
+.language-title.language-menu-open img[src="../media/arrow-white.png"] {
     display: none;
 }
 
-#language-title.language-menu-open #globe-orange-icon,
-#language-title.language-menu-open img[src="media/arrow-orange.png"],
-#language-title.language-menu-open img[src="../media/arrow-orange.png"] {
+.language-title.language-menu-open #globe-orange-icon,
+.language-title.language-menu-open img[src="media/arrow-orange.png"],
+.language-title.language-menu-open img[src="../media/arrow-orange.png"] {
     display: block!important;
 }
 
@@ -1605,7 +1605,8 @@ ion-icon {
 	color: white;
 }
 
-#language-options.language-menu-open li a{
+#language-options.language-menu-open li a,
+#language-options-mobile.language-menu-open li a{
 	color: var(--color-logo-orange);
 }
 
@@ -2138,7 +2139,10 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	#language-select-mobile{
 		display: flex;
 		position: relative;
+		float: right;
 		right: 0;
+		width: 100px;
+		border-radius: 20px;
 	}
 
 	.display-nav{
