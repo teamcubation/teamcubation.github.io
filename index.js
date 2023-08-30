@@ -550,6 +550,7 @@ const openMenu = () => {
 
   if(screen.width < 574){
     $("#navbar-content").addClass('open-menu-mobile');
+    $('#language-select-mobile').addClass('language-menu-open');
   }
 };
 
@@ -614,6 +615,8 @@ window.addEventListener('scroll', (e) => {
     $('#logo').addClass('hidden');
     $('#logo-orange').removeClass('hidden');
     $('#language-select').addClass('language-menu-open');
+    // $('#language-select-mobile').addClass('language-menu-open');
+
     $('#language-title').addClass('language-menu-open');
     $('#language-options').addClass('language-menu-open');  
   }

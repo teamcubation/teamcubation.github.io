@@ -1558,9 +1558,15 @@ ion-icon {
     border-radius: 20px;
 }
 
-#language-select.language-menu-open {
+#language-select.language-menu-open,
+#language-select-mobile.language-menu-open
+ {
    color: var(--color-logo-orange);
    border: 1px solid var(--color-logo-orange);
+}
+
+#language-select-mobile{
+	display: none;
 }
 
 #language-title.language-menu-open #globe-white-icon,
@@ -2079,6 +2085,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	a{
 		font-size: 1.4em;
 	}
+
 	.social-link{
 		font-size: 1.4em;
 	}
@@ -2122,6 +2129,16 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		height: 80%;
 		flex-direction: column;
 		justify-content: space-evenly;
+	}
+	
+	#language-select{
+		display: none;
+	}
+
+	#language-select-mobile{
+		display: flex;
+		position: relative;
+		right: 0;
 	}
 
 	.display-nav{
