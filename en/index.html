@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Teamcubation is the bridge between education and work. we want to contribute to solve the digital senior talent shortage by incubating junior development teams to take on more senior roles.">
-  <meta property="og:title" content="Teamcubation - The first company that trains software developers">
-  <meta property="og:description" content="Teamcubation is the bridge between education and work. we want to contribute to solve the digital senior talent shortage by incubating junior development teams to take on more senior roles.">
+  <meta name="description" content="Teamcubation is the missing link between the educational and work systems. We address the talent shortage in the digital industry by incubating and training development teams to transform juniors into experienced resources.">
+  <meta property="og:title" content="Teamcubation - The First Software Developer Training Company">
+  <meta property="og:description" content="Teamcubation is the missing link between the educational and work systems. We address the talent shortage in the digital industry by incubating and training development teams to transform juniors into experienced resources.">
   <meta property="og:image" content="https://teamcubation.com/media/logo-og.png">
-  <title>Teamcubation - The first company that trains software developers</title>
+  <title>Teamcubation - The First Software Developer Training Company</title>
   <link rel="icon" href="../media/favicon.ico">
   <link rel="apple-touch-icon" href="../logo192.png">
   <link rel="manifest" href="../manifest.json">
@@ -41,21 +41,26 @@
             <img id="logo-orange" class="navigate-home hidden" src="../media/logotipo-orange.svg" alt="Teamcubation">
           </div>
           <div class="navigate">
-            <!-- <div class="language-select">
-              <div class="language-tittle">
-                <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
-                <p data-t>lang.textButton</p>
+            <div style="position: relative;">
+              <div id="language-select" class="language-select">
+                <div id="language-title" class="language-title ">
+                  <img id="globe-white-icon" src="../media/globe_icon.png" alt="redirect_lang">
+                  <img id="globe-orange-icon" class="hidden" src="../media/globe-orange-icon.png" alt="redirect_lang">
+                  <p>Eglish</p>
+                  <img src="../media/arrow-white.png" alt="arrow">
+                  <img src="../media/arrow-orange.png" class="hidden" alt="arrow">
+                </div>
+                <ul id="language-options" class="language-options collapsed-content">
+                  <li data-lang="es">
+                    <a href="http://localhost:5503/index.html">Spanish</a>
+                  </li>
+                  <li data-lang="en">
+                    <a href="http://localhost:5503/index.html">English</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="language-options">
-                <li data-lang="es">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
-                </li>
-                <li data-lang="en">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
-                </li>
-              </ul>
-            </div> -->
-            <button class="button outlined contact-button">textLinks.contact</button>
+            </div>
+            <button class="button outlined contact-button" style="margin-left: 1em;">Contact Us</button>
             <button id="menu-button" class="menu-button">
               <i class="icon ion-md-menu"></i>
             </button>      
@@ -72,27 +77,27 @@
           </div>  
           <div class="navigate-menu">
             <div data-navigate="proposal" class="link-button">
-              <a id="proposal-link" class="proposal" href="#proposal">textLinks.proposal</a>
+              <a id="proposal-link" class="proposal" href="#proposal">Proposal</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div data-navigate="problem" class="link-button">
-              <a class="problem" href="#problem">textLinks.problem</a>
+              <a class="problem" href="#problem">Problem</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div data-navigate="cases" class="link-button">
-              <a class="cases" href="#cases">textLinks.cases</a>
+              <a class="cases" href="#cases">Cases</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div data-navigate="process" class="link-button">
-              <a class="process" href="#process">textLinks.process</a>
+              <a class="process" href="#process">Process</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div data-navigate="squad-description-layout" class="link-button">
-              <a class="methodology" href="#squad-description-layout">textLinks.methodology</a>
+              <a class="methodology" href="#squad-description-layout">Methodology</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
             <div data-navigate="team" class="link-button">
-              <a class="aboutUs" href="#team">textLinks.aboutUs</a>
+              <a class="aboutUs" href="#team">About Us</a>
               <img class="arrow-menu" src="../media/arrow-menu.svg" alt="arrow-menu">
             </div>
           </div>
@@ -111,7 +116,7 @@
   <!-- 
       <div style="display: flex">
         <div id="selectLangMobile" class="language-select-mobile">
-          <div class="language-tittle">
+          <div class="language-title">
             <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
             <p data-t>lang.textButton</p>
           </div>
@@ -138,8 +143,8 @@
     </div>
     <div id="banner-container">
       <div id="banner-content">
-        <h1 class="white">banner.centralText.lineOne</h1>
-        <h1 class="white">banner.centralText.lineTwo</h1>
+        <h1 class="white">Experienced</h1>
+        <h1 class="white"> Developers</h1>
       </div>
       <div id="partners">
         <div class="logos">
@@ -157,55 +162,54 @@
       <div id="proposal-layout" class="layout">
         <div id="proposal-content">
           <div class="text-center orange mb-2">
-            <h3>proposal.centralText.lineOne</h3>
-            <h3>proposal.centralText.lineTwo</h3>
+            <h3>We've solved the problem of IT talent scarcity in large companies.</h3>
           </div>
           <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="col-12 col-md-5">
               <div class="proposal-card bg-green purple">
                 <h1 id="people-number">0</h1>
-                <h4>proposal.people.title.centralText</h4>
-                <p>proposal.people.title.text</p>
+                <h4>of IT vacancies go unfilled in LATAM per year.</h4>
+                <!-- <p data-t>proposal.people.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-5">
               <div>
-                <p class="purple fw-bold md-text-card">proposal.people.text.title</p>
-                <p class="grey white">proposal.people.text.leyend</p>
+                <p class="purple fw-bold md-text-card">Rather than focusing on senior shortages, we develop the potential of new talents:</p>
+                <p class="grey white">this way, we help our clients hire talents they previously overlooked: Diverse, committed, and eager to contribute to the company that gives them their first opportunity.</p>
               </div>
             </div>
           </div>
           <div id="cost" class="d-flex justify-content-between align-items-center flex-wrap ">
             <div class="col-12 col-md-5">
               <div>
-                <p class="purple fw-bold  md-text-card">proposal.cost.text.title</p>
-                <p class="grey">proposal.cost.text.leyend</p>
+                <p class="purple fw-bold  md-text-card">We reduce opportunity costs:</p>
+                <p class="grey">through a constant flow of new collaborators, we ensure the production capacity your company needs to unlock new business opportunities.</p>
               </div>
             </div>
             <div class="col-12 col-md-5">
               <div class="proposal-card bg-purple white">
                 <div>
-                  <h3 class="fw-bold d-inline">US$</h3><h2 class="fw-bold d-inline" id="cost-from-number"> 0</h2>
+                  <h1 class="fw-bold d-inline" id="cost-to-number"> 0</h1><h4 class="d-inline" style="font-weight: bold">US$</h4>
                 </div>
-                <div>
-                  <h3 class="fw-bold d-inline">proposal.cost.title.centralText</h3><h2 class="fw-bold d-inline" id="cost-to-number"> 0</h2>
-                </div>
-                <p>proposal.cost.title.text</p>
+                <h4>on average, are the costs related to each unfilled vacancy.</h4>
+                <!-- <p data-t>proposal.cost.title.text.leyend</p> -->
+
+                <!-- <p data-t>proposal.cost.title.text</p> -->
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="col-12 col-md-5">
-              <div class="proposal-card bg-orange grey">
+              <div class="proposal-card bg-orange white">
                 <h1 id="turnover-number">0</h1>
-                <h4>proposal.turnover.title.centralText</h4>
-                <p>proposal.turnover.title.text</p>
+                <h4>of CTOs claim turnover is harming the team.</h4>
+                <!-- <p data-t >proposal.turnover.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-5">
               <div>
-                <p class="purple fw-bold md-text-card">proposal.turnover.text.title</p>
-                <p class="grey">proposal.turnover.text.leyend</p>
+                <p class="purple fw-bold md-text-card">We develop real work experience:</p>
+                <p class="grey">the backlog projects that can't be prioritized due to lack of team are the perfect opportunity for our seniors to lead on-the-job training for your new devs, under your company's requirements and technologies.</p>
               </div>
             </div>
           </div>
@@ -218,9 +222,7 @@
         <div id="problem-content">
           <div class="container-content">
             <div class="white">
-              <h2 class="title-lg">noMoreDevs.centralText.lineOne</h2>
-              <h2 class="title-lg">noMoreDevs.centralText.lineTwo</h2>
-              <h2 class="title-lg">noMoreDevs.centralText.lineThree</h2>
+              <h2 class="title-lg">We develop experience in new devs to help you complete your teams in record time.</h2>
             </div>
           </div>
           <div class="carousel-boos-container">
@@ -228,19 +230,19 @@
             <div id="problem-slide" data-bs-interval="2000" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner orange">
                 <div class="carousel-item active">
-                  <h3>noMoreDevs.carouselText.itemOne</h3>
+                  <h3>There's no experienced devs</h3>
                 </div>
                 <div class="carousel-item">
-                  <h3>noMoreDevs.carouselText.itemTwo</h3>
+                  <h3>We never fill vacant positions</h3>
                 </div>
                 <div class="carousel-item">
-                  <h3>noMoreDevs.carouselText.itemThree</h3>
+                  <h3>We're losing people</h3>
                 </div>
                 <div class="carousel-item">
-                  <h3>noMoreDevs.carouselText.itemFour</h3>
+                  <h3>We're missing out on opportunities</h3>
                 </div>
                 <div class="carousel-item">
-                  <h3>noMoreDevs.carouselText.itemFive</h3>
+                  <h3>Our seniors don't have time to train</h3>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" href="#problem-slide" data-bs-slide="prev">
@@ -282,10 +284,10 @@
           </div>
           <div class="container-content">
             <div class="white mt-1">
-              <h6>noMoreDevs.inlineText</h6>
+              <h6>Sound familiar?</h6>
             </div>
             <div class="w-100 mt-1">
-              <button class="button contact-button lg-button bg-white purple ms-auto" style="z-index: 1;">noMoreDevs.contactButton</button>
+              <button class="button contact-button lg-button bg-white purple ms-auto" style="z-index: 1;">Contact Us!</button>
             </div>
           </div>
         </div>   
@@ -296,8 +298,7 @@
       <div id="the-wheel-layout" class="layout">
         <div id="the-wheel-content">
           <div class="text-center mb-2">
-            <h3 class="purple">theWheel.centralText.lineOne</h3>
-            <h3 class="purple">theWheel.centralText.lineTwo</h3>
+            <h3 class="purple">Not a coding school, not a software factory. A customized solution for large companies.</h3>
           </div>
           <div id="venn-diagram-container">
             <div id="control-switch">
@@ -329,10 +330,10 @@
                 <div>
                   <img class="arrow-diagram" style="float: right" src="../media/diagram-arrow-right.svg" alt="arrow">
                 </div>
-                <div class="intersection-software-junior-leyend">theWheel.veenDiagram.intersections.two</div>
+                <div class="intersection-software-junior-leyend">Non-existent</div>
               </div>
               <div id="intersection-seniors-junior" class="intersection-seniors-junior hidden">
-                <div class="intersection-seniors-junior-leyend">theWheel.veenDiagram.intersections.three</div>
+                <div class="intersection-seniors-junior-leyend">Coding School</div>
                 <div>
                   <img class="arrow-diagram" src="../media/diagram-arrow-top.svg" alt="arrow">
                 </div>
@@ -340,27 +341,27 @@
               <div id="seniors-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item purple">
                   <div class="sm-text-card fw-bold">SENIORS</div>
-                  <p>theWheel.veenDiagram.seniors.lineOne</p>
-                  <p>theWheel.veenDiagram.seniors.lineTwo</p>
+                  <p>Experienced</p>
+                  <p> Developers</p>
                 </div>
               </div>
               <div id="junior-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item white">
                   <div class="sm-text-card fw-bold">JUNIOR</div>
-                  <p>theWheel.veenDiagram.juniors.lineOne</p>
-                  <p>theWheel.veenDiagram.juniors.lineTwo</p>
+                  <p>Eager</p>
+                  <p> to Learn</p>
                 </div>
               </div>
               <div id="software-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item white">
                   <div class="sm-text-card fw-bold">SOFTWARE</div>
-                  <p>theWheel.veenDiagram.software.lineOne</p>
+                  <p>you need</p>
                 </div>
               </div>
             </div>
           </div>
-          <div id="cases" class="mb-2">
-            <h3 class="purple mb-2">theWheel.centralTextTwo</h3><br>
+          <div id="cases" class="mb-1">
+            <h3 class="purple">We're making it happen</h3><br>
             <div id="video-container">
               <div class="video-overlay"></div>
               <div id="link-button-video-container">
@@ -379,7 +380,7 @@
       <div id="process-layout" class="layout">
         <div id="process-content">
           <div class="text-center" style="margin-bottom: 2em">
-            <h3>howDo.centralText</h3>
+            <h3>How do we do it?</h3>
           </div>  
           <div class="carousel-section">
             <button class="carousel-control-prev process-next hidden" type="button" data-bs-slide="prev">
@@ -402,8 +403,8 @@
                   </div>
                   <div id="step-leyend-container-01" class="step-leyend-container">
                     <div class="step-leyend">
-                      <p class="md-text-card">howDo.carousel.itemOne.title</p>
-                      <p>howDo.carousel.itemOne.text</p>
+                      <p class="md-text-card">Discovery</p>
+                      <p>After assessing your methodologies, technological stack, and company culture, we evaluate your projects together to choose the most suitable option. If necessary, we assist in finding junior talent.</p>
                     </div>
                   </div>
                 </div>  
@@ -415,8 +416,8 @@
                   </div>
                   <div id="step-leyend-container-02" class="step-leyend-container">
                     <div class="step-leyend">
-                      <p class="md-text-card">howDo.carousel.itemTwo.title</p>
-                      <p>howDo.carousel.itemTwo.text</p>
+                      <p class="md-text-card">Execution</p>
+                      <p>Over a 6-month period, we work alongside your junior devs to develop the software your company needs. This provides your new collaborators with the real experience of working on your teams.</p>
                     </div>
                   </div>
                 </div>  
@@ -428,8 +429,8 @@
                   </div>
                   <div class="step-leyend-container">
                     <div id="step-leyend-container-03" class="step-leyend">
-                      <p class="md-text-card">howDo.carousel.itemThree.title</p>
-                      <p>howDo.carousel.itemThree.text</p>
+                      <p class="md-text-card">Delivery</p>
+                      <p>At the end of the sixth month, your company will have the software ready for implementation and a team of 3 experienced devs prepared to take on your next project. Congratulations! Your new source of specialized talent has successfully completed their first delivery.</p>
                     </div>
                   </div>
                 </div>  
@@ -446,19 +447,19 @@
           <div id="squad-description-layout">
             <div id="squad-description-content">
               <div class="d-flex">
-                <h3>squad.centralText</h3>
+                <h3>We work in squads to turn beginners into ready-to-work talent.</h3>
               </div>
               <div class="col-12 col-md-5">
                 <div class="outlined-text">
-                  <p class="fw-bold">squad.leaders.title</p>
+                  <p class="fw-bold">Our leaders</p>
                 </div>
-                <p>squad.leaders.leyend</p>
+                <p>Specialized and trained in your company's technological stack and methodologies, they will oversee the evolution of your juniors and ensure the software meets requirements.</p>
               </div>
               <div class="col-12 col-md-5">
                 <div class="outlined-text">
-                  <p class="fw-bold">squad.juniors.title</p>
+                  <p class="fw-bold">Your juniors</p>
                 </div>
-                <p>squad.juniors.leyend</p>
+                <p>Guided by our seniors, they'll gain real experience while developing technical and soft skills, and integrating into your company culture.</p>
               </div>
             </div>
           </div>
@@ -471,14 +472,14 @@
         <div id="pep-content">
           <div class="w-100 orange">
             <h3>PEP:</h3>
-            <h3>pep.title</h3>
+            <h3>Programming Experience Platform.</h3>
           </div>
           <div class="d-flex mt-5 justify-content-between flex-wrap">
             <div class="col-10 col-sm-5">
-              <h6 class="md-text-card orange fw-bold">pep.textLeft</h6>
+              <h6 class="md-text-card orange fw-bold">The magic of our methodology lies in the data.</h6>
             </div>
             <div class="col-10 col-sm-6">
-              <p class="grey">pep.textRight</p>
+              <p class="grey">Our software is the differentiator and a great ally of our staff. It turns our training into a guided and measured process to enhance the development of each of your juniors and achieve their best version.</p>
             </div>
           </div>
           <div class="row w-100" style="margin: 0">
@@ -488,84 +489,84 @@
                   <div class="dropdown-container">
                     <div class="card dropdown-standard-item">
                       <div class="card-standard-header">
-                        <div class="fw-bold sm-text-card orange">pep.dropDown.one.title</div>
+                        <div class="fw-bold sm-text-card orange">Integration into your workflow</div>
                         <div class="dropdown-item-button">
                           <img class="dropdown-arrow" src="../media/arrow-dropdowns.svg" alt="arrow">
                         </div>
                       </div>
                       <div class="collapsed-content">
                         <div class="card-collapse-content">
-                          <p class="sm-text-card light-grey">pep.dropDown.one.leyend</p>
+                          <p class="sm-text-card light-grey">PEP integrates with your main development tools like Jira, GitLab, Github, Slack, Discord, and more, to gather key data and optimize your team's performance.</p>
                         </div>
                       </div>
                       <img class="hidden" src="../media/pep/pep-1.png" alt>
                     </div>
                     <div class="card dropdown-standard-item">
                       <div class="card-standard-header">
-                        <div class="fw-bold sm-text-card">pep.dropDown.two.title</div>
+                        <div class="fw-bold sm-text-card">Real-time insights</div>
                         <div class="dropdown-item-button">
                           <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
                         </div>
                       </div>
                       <div class="collapsed-content">
                         <div class="card-collapse-content">
-                          <p class="sm-text-card light-grey">pep.dropDown.two.leyend</p>
+                          <p class="sm-text-card light-grey">Observe your juniors' evolution with precise metrics on the code they develop, methodologies, and communication tools.</p>
                         </div>
                       </div>
                       <img class="hidden" src="../media/pep/pep-2.png" alt>
                     </div>
                     <div class="card dropdown-standard-item">
                       <div class="card-standard-header">
-                        <div class="fw-bold sm-text-card">pep.dropDown.three.title</div>
+                        <div class="fw-bold sm-text-card">Intelligent alerts</div>
                         <div class="dropdown-item-button">
                           <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
                         </div>
                       </div>
                       <div class="collapsed-content">
                         <div class="card-collapse-content">
-                          <p class="sm-text-card light-grey">pep.dropDown.three.leyend</p>
+                          <p class="sm-text-card light-grey">Keep track of your juniors' performance with notifications that identify behaviors misaligned with expectations, essential to improve your team's quality and consistency of work.</p>
                         </div>
                       </div>
                       <img class="hidden" src="../media/pep/pep-3.png" alt>
                     </div>
                     <div class="card dropdown-standard-item">
                       <div class="card-standard-header">
-                        <div class="fw-bold sm-text-card">pep.dropDown.four.title</div>
+                        <div class="fw-bold sm-text-card">Customizable tracking</div>
                         <div class="dropdown-item-button">
                           <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
                         </div>
                       </div>
                       <div class="collapsed-content">
                         <div class="card-collapse-content">
-                          <p class="sm-text-card light-grey">pep.dropDown.four.leyend</p>
+                          <p class="sm-text-card light-grey">Evaluate key aspects of your juniors' personal development through tailored actions and surveys that provide a human focus in the training process.</p>
                         </div>
                       </div>
                       <img class="hidden" src="../media/pep/pep-4.png" alt>
                     </div>
                     <div class="card dropdown-standard-item">
                       <div class="card-standard-header">
-                        <div class="fw-bold sm-text-card">pep.dropDown.five.title</div>
+                        <div class="fw-bold sm-text-card">Get to know your collaborators:</div>
                         <div class="dropdown-item-button">
                           <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
                         </div>
                       </div>
                       <div class="collapsed-content">
                         <div class="card-collapse-content">
-                          <p class="sm-text-card light-grey">pep.dropDown.five.leyend</p>
+                          <p class="sm-text-card light-grey">1. Through cognitive and behavioral tests, such as the Personal Development Analysis (PDA), we gain a clear insight into your collaborators' profiles to manage their talents, develop skills, and bring out their best version.</p>
                         </div>
                       </div>
                       <img class="hidden" src="../media/pep/pep-5.png" alt>
                     </div>
                     <div class="card dropdown-standard-item">
                       <div class="card-standard-header">
-                        <div class="fw-bold sm-text-card">pep.dropDown.six.title</div>
+                        <div class="fw-bold sm-text-card">Emotional pulse</div>
                         <div class="dropdown-item-button">
                           <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
                         </div>
                       </div>
                       <div class="collapsed-content">
                         <div class="card-collapse-content">
-                          <p class="sm-text-card light-grey">pep.dropDown.six.leyend</p>
+                          <p class="sm-text-card light-grey">Integration with AI analyzes responses and automatically detects team members' feelings and emotions to intervene promptly when necessary, ensuring a positive and productive work environment.</p>
                         </div>
                       </div>
                       <img class="hidden" src="../media/pep/pep-6.png" alt>
@@ -588,7 +589,7 @@
       <div id="team-layout" class="layout">
         <div id="team-content">
           <div class="text-center orange">
-            <h2 class="fw-bold">team.centralText</h2>
+            <h2 class="fw-bold">THE TEAM</h2>
           </div>
           <div class="d-flex flex-wrap mt-7 justify-content-center">
             <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
@@ -748,7 +749,7 @@
         <div class="section-divider"></div>
         <div class="static-content">
           <div class="text-center orange">
-            <h2 class="fw-bold">results.title</h2>
+            <h2 class="fw-bold">The Results</h2>
           </div>
         </div>
         <div id="carousel-content">
@@ -759,27 +760,27 @@
                   <div class="container-card-results">
                     <div class="card results-card">
                       <img src="../media/results_1.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
-                        <h5 class="md-text-card">results.cards.one.title</h5>
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
+                        <h5 class="md-text-card">Frictionless Onboarding</h5>
                         <img src="../media/icons/01.svg" alt>
                       </div>
-                      <p class="mt-2">results.cards.one.leyend</p>
+                      <p class="mt-2">Candidates aligned with the culture and frameworks of your company.</p>
                     </div>
                     <div class="card results-card">
                       <img src="../media/results_2.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
-                        <h5 class="md-text-card">results.cards.two.title</h5>
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
+                        <h5 class="md-text-card">Work Focus</h5>
                         <img src="../media/icons/02.svg" alt>
                       </div>
-                      <p class="mt-2">results.cards.two.leyend</p>
+                      <p class="mt-2">Your seniors dedicated 100% to generating results for your business.</p>
                     </div>
                     <div class="card results-card">
                       <img src="../media/results_3.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
-                        <h5 class="md-text-card">results.cards.three.title</h5>
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
+                        <h5 class="md-text-card">Productive Capacity</h5>
                         <img src="../media/icons/03.svg" alt>
                       </div>
-                      <p class="mt-2">results.cards.three.leyend</p>
+                      <p class="mt-2">A constant flow of candidates minimizing the impact of turnover.</p>
                     </div>
                   </div>
                 </div>
@@ -787,39 +788,39 @@
                   <div class="container-card-results">
                       <div class="card results-card">
                         <img src="../media/results_4.png" alt="results">
-                        <div class="d-flex justify-content-between mt-2">
-                          <h5 class="md-text-card">results.cards.four.title</h5>
+                        <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
+                          <h5 class="md-text-card">Talent Retention</h5>
                           <img src="../media/icons/05.svg" alt>
                         </div>
-                        <p class="mt-2">results.cards.four.leyend</p>
+                        <p class="mt-2">More committed and motivated collaborators.</p>
                       </div>
                     <div class="card results-card">
                       <img src="../media/results_5.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
-                        <h5 class="md-text-card">results.cards.five.title</h5>
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
+                        <h5 class="md-text-card">Smooth TA Process</h5>
                         <img src="../media/icons/04.svg" alt>
                       </div>
-                      <p class="mt-2">results.cards.five.leyend</p>
+                      <p class="mt-2">Simplifying talent selection, eliminating pain points.</p>
                     </div>
                     <div class="card results-card">
                       <img src="../media/results_6.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
-                        <h5 class="md-text-card">results.cards.six.title</h5>
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
+                        <h5 class="md-text-card">Branding</h5>
                         <img src="../media/icons/06.svg" alt>
                       </div>
-                      <p class="mt-2">results.cards.six.leyend</p>
+                      <p class="mt-2">Positive impact on employer branding and organizational culture development.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" href="#results-slide-desktop" data-bs-slide="prev">
+              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" href="#results-slide-desktop" data-bs-slide="next">
+              </div>
+              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
-              </button>
+              </div>
             </div>
 
             <div id="results-slide-mobile" data-bs-interval="false" class="carousel slide" data-bs-ride="carousel">
@@ -828,75 +829,74 @@
                   <div class="card results-card">
                     <img src="../media/results_1.png" alt="results">
                     <div class="d-flex justify-content-between mt-2">
-                      <h5 class="md-text-card">results.cards.one.title</h5>
+                      <h5 class="md-text-card">Frictionless Onboarding</h5>
                       <img src="../media/icons/01.svg" alt>
                     </div>
-                    <p class="mt-2">results.cards.one.leyend</p>
+                    <p class="mt-2">Candidates aligned with the culture and frameworks of your company.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card results-card">
                     <img src="../media/results_2.png" alt="results">
                     <div class="d-flex justify-content-between mt-2">
-                      <h5 class="md-text-card">results.cards.two.title</h5>
+                      <h5 class="md-text-card">Work Focus</h5>
                       <img src="../media/icons/02.svg" alt>
                     </div>
-                    <p class="mt-2">results.cards.two.leyend</p>
+                    <p class="mt-2">Your seniors dedicated 100% to generating results for your business.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card results-card">
                     <img src="../media/results_3.png" alt="results">
                     <div class="d-flex justify-content-between mt-2">
-                      <h5 class="md-text-card">results.cards.three.title</h5>
+                      <h5 class="md-text-card">Productive Capacity</h5>
                       <img src="../media/icons/03.svg" alt>
                     </div>
-                    <p class="mt-2">results.cards.three.leyend</p>
+                    <p class="mt-2">A constant flow of candidates minimizing the impact of turnover.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card results-card">
                     <img src="../media/results_4.png" alt="results">
                     <div class="d-flex justify-content-between mt-2">
-                      <h5 class="md-text-card">results.cards.four.title</h5>
+                      <h5 class="md-text-card">Talent Retention</h5>
                       <img src="../media/icons/05.svg" alt>
                     </div>
-                    <p class="mt-2">results.cards.four.leyend</p>
+                    <p class="mt-2">More committed and motivated collaborators.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card results-card">
                     <img src="../media/results_5.png" alt="results">
                     <div class="d-flex justify-content-between mt-2">
-                      <h5 class="md-text-card">results.cards.five.title</h5>
+                      <h5 class="md-text-card">Smooth TA Process</h5>
                       <img src="../media/icons/04.svg" alt>
                     </div>
-                    <p class="mt-2">results.cards.five.leyend</p>
+                    <p class="mt-2">Simplifying talent selection, eliminating pain points.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card results-card">
                     <img src="../media/results_6.png" alt="results">
                     <div class="d-flex justify-content-between mt-2">
-                      <h5 class="md-text-card">results.cards.six.title</h5>
+                      <h5 class="md-text-card">Branding</h5>
                       <img src="../media/icons/06.svg" alt>
                     </div>
-                    <p class="mt-2">results.cards.six.leyend</p>
+                    <p class="mt-2">Positive impact on employer branding and organizational culture development.</p>
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" href="#results-slide-mobile" data-bs-slide="prev">
+              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" href="#results-slide-mobile" data-bs-slide="next">
+              </div>
+              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
-
         <div class="static-content">
           <div class="carousel-layout bg-white">
             <div class="carousel-container">
@@ -905,8 +905,8 @@
               </div>
             </div>
             <div class="carousel-info-content purple">
-              <h3>results.carouselInfo.centralText</h3>
-              <button class="button contact-button lg-button bg-orange purple mt-2">results.carouselInfo.textButton</button>        
+              <h3>Never miss opportunities due to IT talent shortage again!</h3>
+              <button class="button contact-button lg-button bg-orange purple mt-2">Contact Us!</button>        
             </div>
           </div>
         </div>
@@ -915,45 +915,54 @@
 
     <footer id="footer">
       <div id="footer-content">
-        <div class="col-5 col-md-3">
-          <div class="d-flex flex-column">
-            <div class="link-footer">
-              <a class="animated-underline" href="#proposal">textLinks.proposal</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#problem">textLinks.problem</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#cases">textLinks.cases</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="/privacy-policy.html">Privacy Policy</a>
+        <div class="footer-navigate">
+          <div class="col-6 col-md-4">
+            <div id="footer-logo" class="navigate-home">
+              <img src="../media/logotipo.svg" alt="TeamCubation">
+              <!-- <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p> -->
             </div>
           </div>
-        </div>
-        <div class="col-5 col-md-3">
-          <div class="d-flex flex-column">
-            <div class="link-footer">
-              <a class="animated-underline" href="#process">textLinks.process</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#squad-description-layout">textLinks.methodology</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#team">textLinks.aboutUs</a>
+          <div class="col-3 col-md-2">
+            <div class="d-flex flex-column" style="gap: 0.3em">
+              <div>
+                <a class="animated-underline link-footer" href="#proposal">Proposal</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#problem">Problem</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#cases">Cases</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="/privacy-policy.html">Privacy Policy</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-8 col-md-4">
-          <div id="footer-logo" class="navigate-home">
-            <img src="../media/logotipo.svg" alt="TeamCubation">
-            <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p>
+          <div class="col-3 col-md-2">
+            <div class="d-flex flex-column" style="gap: 0.3em">
+              <div>
+                <a class="animated-underline link-footer" href="#process">Process</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#squad-description-layout">Methodology</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#team">About Us</a>
+              </div>
+            </div>
           </div>
         </div>  
+        <div class="footer-navigate">
+          <div class="col-12">
+            <div class="d-flex w-100 flex-wrap justify-content-end mt-2 mb-2" style="color: #b1b1b187; border-top: 1px solid #b1b1b187">
+              <p style="margin-right: 10px; font-size: 0.8rem">© 2023, </p>
+              <p style="font-size: 0.9rem">Teambucation</p>
+            </div>
+          </div>    
+        </div>
       </div>
     </footer>
   
-
     <div id="form-modal" class="hidden d-flex">
       <div id="form-container">
         <div class="col-12 d-flex flex-column align-items-center">
@@ -969,16 +978,16 @@
                 <div style="position: relative; max-width: 100%">
                   <ul class="list-options-tc">
                     <li>
-                      <div class="option-tc" data-option="organization">I’m part of an organization, please contact me to tell me more about the service.</div>
+                      <div class="option-tc" data-option="organization">I'm an organization, and I want to be contacted to learn more about the service</div>
                     </li>
                     <li>
-                      <div class="option-tc" data-option="senior">I’m a senior developer who wants to lead juniors at Teamcubation</div>
+                      <div class="option-tc" data-option="senior">I'm a Senior developer and want to mentor Juniors</div>
                     </li>
                     <li>
-                      <div class="option-tc" data-option="junior">I’m a junior developer who has basic coding knowledge</div>
+                      <div class="option-tc" data-option="junior">I'm a Junior/Trainee developer with programming knowledge</div>
                     </li>
                     <li>
-                      <div class="option-tc" data-option="no-exp">I don’t know anything about programming, but I want to learn.</div>
+                      <div class="option-tc" data-option="no-exp">I don't know how to code and want to learn</div>
                     </li>
                     <li>
                       <div class="option-tc" data-option="other">Other</div>
@@ -988,19 +997,19 @@
               </div>
               <div class="form-message" id="juniorsMessage">
                 <p class="d-inline fw-600"></p>
-                <p class="d-inline">If you are a Junior/Trainee developer looking for your first job,</p>
-                <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">please apply here</a>
-                <p class="d-inline"> to be selected by one of our clients</p>
+                <p class="d-inline">If you're a Junior, meaning you've learned but lack working experience,</p>
+                <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">apply here</a>
+                <p class="d-inline">where we can assist in connecting you with companies looking to select you for their squads.</p>
               </div>
               <div class="form-message" id="seniorsMessage">
-                <p class="d-inline fw-400">If you are a seasoned Senior developer and enjoy sharing your knowledge with others,</p>
-                <p class="d-inline">please follow </p>
-                <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">this link</a>
-                <p class="d-inline">and apply to the job that best suits your profile</p>
+                <p class="d-inline fw-400">If you're a dev, have experience, excel in your field, and enjoy transmitting your skills,</p>
+                <p class="d-inline">head to </p>
+                <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">this link and apply to the position that suits your profile</a>
+                <p class="d-inline">which will allow us to determine where you fit within Teamcubation</p>
               </div>
               <div class="form-message" id="noCodersMessage">
-                <p class="d-inline fw-600">If you didn’t learn programming, </p>
-                <p class="d-inline"> please do it first and then get back to us. We don’t teach coding nor have teachers to do so. We work for companies who hire junior talent that already knows the basics of programming.</p>
+                <p class="d-inline fw-600">If you haven't learned to code yet,</p>
+                <p class="d-inline"> we kindly ask that you do so, become a developer, and then come apply! We don't offer classes, schedules, or teachers... Our company works for other companies, enabling you to gain experience if you already know how to code.</p>
               </div>    
             </div>
             <div id="formInformation">
@@ -1011,7 +1020,7 @@
                 <input type="text" class="organizationContact" placeholder="Company">
               </div>
               <div class="mt-2">
-                <label for="country-phone-team" class="form-label">Phone</label>
+                <label for="country-phone-team" class="form-label">Telephone</label>
               </div>
               <div class="row">
                 <div class="col-md-7 col-sm-12">
@@ -1024,16 +1033,16 @@
                       <input type="text" name="area-phone" class="area-phone" placeholder="Area">
                     </div>
                     <div class="col-6">
-                      <input type="text" name="number-phone" class="number-phone" placeholder="Phone number">
+                      <input type="text" name="number-phone" class="number-phone" placeholder="Number">
                     </div>
                   </div>
                 </div>
                 <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
-                  <input type="email" name="email" class="email" required placeholder="Email">
+                  <input type="email" name="email" class="email" required placeholder="E-mail">
                 </div>
               </div>
               <div class="mb-4 mt-2">
-                <textarea name="message" class="message" rows="1" required placeholder="Leave your comment here"></textarea>
+                <textarea name="message" class="message" rows="1" required placeholder="Leave us a message"></textarea>
               </div>
             </div>
             <button type="submit" name="submit-contact" class="button submit-contact bg-white purple" style="float: right;">Enviar</button>

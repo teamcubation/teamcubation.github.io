@@ -3,8 +3,8 @@
   "description": "Teamcubation es el engranaje faltante entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando y entrenando equipos de desarrollo para transformar juniors en recursos con experiencia",
   "lang": {
     "text": "es",
-    "textButton": "Lenguaje",
-    "iconButton": "media/worl_icon.svg",
+    "textButton": "Español",
+    "iconButton": "media/globe_icon.png",
     "spanish": "Español",
     "english": "Inglés"
   },
@@ -19,6 +19,7 @@
       "joinUs": "¡Unite!"
   },
   "banner":{
+    "url-local" : "http://localhost:5503/en/index.html",
     "url": "https://teamcubation.com/en",
     "centralText" :{
       "lineOne": "Desarrolladores de",
@@ -26,15 +27,12 @@
     }      
   },
   "proposal":{
-    "centralText":{
-      "lineOne": "Resolvimos el problema de escasez de",
-      "lineTwo": "talento IT de las grandes compañías."
-    },
+    "centralText": "Resolvimos el problema de escasez de talento IT de las grandes compañías.",
+    
     "people": {
       "title": {
-        "centralText": "Vacantes IT",
-        "text": " quedaron sin cubrir el último año."
-      },
+        "centralText": "de las vacantes IT  no logran cubrirse en LATAM por año."
+     },
       "text": {
         "title": "En lugar de enfocarnos en la escasez de seniors, desarrollamos el potencial de los nuevos talentos:",
         "leyend": "así, ayudamos a nuestros clientes a contratar talentos que antes no tenían en cuenta: Diversos, comprometidos, y con ganas de aportar a la compañía que les de su primera oportunidad."
@@ -42,8 +40,10 @@
     },
     "cost": {
       "title":{
-        "centralText":"a US$", 
-        "text": "son los costos relacionados a cada vacante sin cubrir."
+        "centralText":"US$", 
+        "text":{
+          "title": "en promedio, son los costos relacionados a cada vacante sin cubrir."
+        }
       },
       "text": {
         "title": "Disminuimos el costo de oportunidad:",
@@ -52,8 +52,7 @@
     },
     "turnover": {
       "title":{
-        "centralText": "de los CTOs",
-        "text": "consideran que la rotación está afectando la productividad de su equipo."
+        "centralText": "de los CTOs afirman que la rotación está perjudicando al equipo."
       },
       "text": {
         "title": "Desarrollamos experiencia laboral real:",
@@ -62,11 +61,7 @@
     }
   },
   "noMoreDevs":{
-    "centralText":{
-      "lineOne": "Desarrollamos experiencia en nuevos",
-      "lineTwo": "devs para que logre completar",
-      "lineThree": "sus equipos en tiempo récord."
-    },
+    "centralText": "Desarrollamos experiencia en nuevos devs para que logre completar sus equipos en tiempo récord.",
     "carouselText":{
       "itemOne": "No hay devs con experiencia",
       "itemTwo": "Nunca llegamos a cubrir las posiciones vacantes",
@@ -78,10 +73,7 @@
     "contactButton": "¡Contáctanos!" 
   },
   "theWheel":{
-    "centralText": {
-      "lineOne": "Ni un code school, ni una software factory.",
-      "lineTwo": " Una solución a medida de las grandes compañías."
-    },
+    "centralText": "Ni un coding school, ni una software factory. Una solución a medida de las grandes compañías.",
     "veenDiagram":{
       "seniors": {
         "lineOne": "Con experiencia",
@@ -91,7 +83,6 @@
       "juniors": {
         "lineOne": "Con ganas",
         "lineTwo": "de aprender"
-
       },
       "software": {
         "lineOne": "que necesitas"
@@ -99,7 +90,7 @@
       "intersections":{
         "one": "Software Factory",
         "two": "No existe",
-        "three": "Code School"
+        "three": "Coding School"
       }
     },
     "centralTextTwo": "Lo estamos haciendo"

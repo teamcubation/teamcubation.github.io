@@ -41,21 +41,26 @@
             <img id="logo-orange" class="navigate-home hidden" src="media/logotipo-orange.svg" alt="Teamcubation">
           </div>
           <div class="navigate">
-            <!-- <div class="language-select">
-              <div class="language-tittle">
-                <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
-                <p data-t>lang.textButton</p>
+            <div style="position: relative;">
+              <div id="language-select" class="language-select">
+                <div id="language-title" class="language-title ">
+                  <img id="globe-white-icon" src="media/globe_icon.png" alt="redirect_lang">
+                  <img id="globe-orange-icon" class="hidden" src="media/globe-orange-icon.png" alt="redirect_lang">
+                  <p data-t>lang.textButton</p>
+                  <img src="media/arrow-white.png" alt="arrow">
+                  <img src="media/arrow-orange.png" class="hidden" alt="arrow">
+                </div>
+                <ul id="language-options" class="language-options collapsed-content">
+                  <li data-lang="es">
+                    <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url-local}}">lang.spanish</a>
+                  </li>
+                  <li data-lang="en">
+                    <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url-local}}">lang.english</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="language-options">
-                <li data-lang="es">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
-                </li>
-                <li data-lang="en">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
-                </li>
-              </ul>
-            </div> -->
-            <button data-t class="button outlined contact-button">textLinks.contact</button>
+            </div>
+            <button data-t class="button outlined contact-button" style="margin-left: 1em;">textLinks.contact</button>
             <button id="menu-button" class="menu-button">
               <i class="icon ion-md-menu"></i>
             </button>      
@@ -111,7 +116,7 @@
   <!-- 
       <div style="display: flex">
         <div id="selectLangMobile" class="language-select-mobile">
-          <div class="language-tittle">
+          <div class="language-title">
             <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
             <p data-t>lang.textButton</p>
           </div>
@@ -157,15 +162,14 @@
       <div id="proposal-layout" class="layout">
         <div id="proposal-content">
           <div class="text-center orange mb-2">
-            <h3 data-t>proposal.centralText.lineOne</h3>
-            <h3 data-t>proposal.centralText.lineTwo</h3>
+            <h3 data-t>proposal.centralText</h3>
           </div>
           <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="col-12 col-md-5">
               <div class="proposal-card bg-green purple">
                 <h1 id="people-number">0</h1>
                 <h4 data-t>proposal.people.title.centralText</h4>
-                <p data-t>proposal.people.title.text</p>
+                <!-- <p data-t>proposal.people.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -185,21 +189,21 @@
             <div class="col-12 col-md-5">
               <div class="proposal-card bg-purple white">
                 <div>
-                  <h3 class="fw-bold d-inline">US$</h3><h2 class="fw-bold d-inline" id="cost-from-number"> 0</h2>
+                  <h1  class="fw-bold d-inline" id="cost-to-number"> 0</h1><h4 data-t class="d-inline" style="font-weight: bold">proposal.cost.title.centralText</h4>
                 </div>
-                <div>
-                  <h3 data-t class="fw-bold d-inline">proposal.cost.title.centralText</h3><h2  class="fw-bold d-inline" id="cost-to-number"> 0</h2>
-                </div>
-                <p data-t>proposal.cost.title.text</p>
+                <h4 data-t>proposal.cost.title.text.title</h4>
+                <!-- <p data-t>proposal.cost.title.text.leyend</p> -->
+
+                <!-- <p data-t>proposal.cost.title.text</p> -->
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="col-12 col-md-5">
-              <div class="proposal-card bg-orange grey">
+              <div class="proposal-card bg-orange white">
                 <h1 id="turnover-number">0</h1>
                 <h4 data-t >proposal.turnover.title.centralText</h4>
-                <p data-t >proposal.turnover.title.text</p>
+                <!-- <p data-t >proposal.turnover.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -218,9 +222,7 @@
         <div id="problem-content">
           <div class="container-content">
             <div class="white">
-              <h2 class="title-lg" data-t>noMoreDevs.centralText.lineOne</h2>
-              <h2 class="title-lg" data-t>noMoreDevs.centralText.lineTwo</h2>
-              <h2 class="title-lg" data-t>noMoreDevs.centralText.lineThree</h2>
+              <h2 class="title-lg" data-t>noMoreDevs.centralText</h2>
             </div>
           </div>
           <div class="carousel-boos-container">
@@ -296,8 +298,7 @@
       <div id="the-wheel-layout" class="layout">
         <div id="the-wheel-content">
           <div class="text-center mb-2">
-            <h3 class="purple" data-t>theWheel.centralText.lineOne</h3>
-            <h3 class="purple" data-t>theWheel.centralText.lineTwo</h3>
+            <h3 class="purple" data-t>theWheel.centralText</h3>
           </div>
           <div id="venn-diagram-container">
             <div id="control-switch">
@@ -359,8 +360,8 @@
               </div>
             </div>
           </div>
-          <div id="cases" class="mb-2" >
-            <h3 class="purple mb-2" data-t>theWheel.centralTextTwo</h3><br>
+          <div id="cases" class="mb-1" >
+            <h3 class="purple" data-t>theWheel.centralTextTwo</h3><br>
             <div id="video-container">
               <div class="video-overlay"></div>
               <div id="link-button-video-container">
@@ -759,7 +760,7 @@
                   <div class="container-card-results">
                     <div class="card results-card">
                       <img src="media/results_1.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card" data-t>results.cards.one.title</h5>
                         <img src="media/icons/01.svg" alt="">
                       </div>
@@ -767,7 +768,7 @@
                     </div>
                     <div class="card results-card">
                       <img src="media/results_2.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card" data-t>results.cards.two.title</h5>
                         <img src="media/icons/02.svg" alt="">
                       </div>
@@ -775,7 +776,7 @@
                     </div>
                     <div class="card results-card">
                       <img src="media/results_3.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card" data-t>results.cards.three.title</h5>
                         <img src="media/icons/03.svg" alt="">
                       </div>
@@ -787,7 +788,7 @@
                   <div class="container-card-results">
                       <div class="card results-card">
                         <img src="media/results_4.png" alt="results">
-                        <div class="d-flex justify-content-between mt-2">
+                        <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                           <h5 class="md-text-card" data-t>results.cards.four.title</h5>
                           <img src="media/icons/05.svg" alt="">
                         </div>
@@ -795,7 +796,7 @@
                       </div>
                     <div class="card results-card">
                       <img src="media/results_5.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card" data-t>results.cards.five.title</h5>
                         <img src="media/icons/04.svg" alt="">
                       </div>
@@ -803,7 +804,7 @@
                     </div>
                     <div class="card results-card">
                       <img src="media/results_6.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card" data-t>results.cards.six.title</h5>
                         <img src="media/icons/06.svg" alt="">
                       </div>
@@ -812,14 +813,14 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" href="#results-slide-desktop" data-bs-slide="prev">
+              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" href="#results-slide-desktop" data-bs-slide="next">
+              </div>
+              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
-              </button>
+              </div>
             </div>
 
             <div id="results-slide-mobile" data-bs-interval="false"  class="carousel slide" data-bs-ride="carousel">
@@ -885,18 +886,17 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" href="#results-slide-mobile" data-bs-slide="prev">
+              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" href="#results-slide-mobile" data-bs-slide="next">
+              </div>
+              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
-
         <div class="static-content">
           <div class="carousel-layout bg-white">
             <div class="carousel-container">
@@ -915,45 +915,54 @@
 
     <footer id="footer">
       <div id="footer-content">
-        <div class="col-5 col-md-3">
-          <div class="d-flex flex-column">
-            <div class="link-footer">
-              <a data-t class="animated-underline" href="#proposal">textLinks.proposal</a>
-            </div>
-            <div class="link-footer">
-              <a data-t class="animated-underline" href="#problem">textLinks.problem</a>
-            </div>
-            <div class="link-footer">
-              <a data-t class="animated-underline" href="#cases">textLinks.cases</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="/privacy-policy.html">Privacy Policy</a>
+        <div class="footer-navigate">
+          <div class="col-6 col-md-4">
+            <div id="footer-logo" class="navigate-home">
+              <img src="media/logotipo.svg" alt="TeamCubation">
+              <!-- <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p> -->
             </div>
           </div>
-        </div>
-        <div class="col-5 col-md-3">
-          <div class="d-flex flex-column">
-            <div class="link-footer">
-              <a data-t class="animated-underline" href="#process">textLinks.process</a>
-            </div>
-            <div class="link-footer">
-              <a data-t class="animated-underline" href="#squad-description-layout">textLinks.methodology</a>
-            </div>
-            <div class="link-footer">
-              <a data-t class="animated-underline" href="#team">textLinks.aboutUs</a>
+          <div class="col-3 col-md-2">
+            <div class="d-flex flex-column"  style="gap: 0.3em">
+              <div >
+                <a data-t class="animated-underline link-footer" href="#proposal">textLinks.proposal</a>
+              </div>
+              <div>
+                <a data-t class="animated-underline link-footer" href="#problem">textLinks.problem</a>
+              </div>
+              <div>
+                <a data-t class="animated-underline link-footer" href="#cases">textLinks.cases</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="/privacy-policy.html">Privacy Policy</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-8 col-md-4">
-          <div id="footer-logo" class="navigate-home">
-            <img src="media/logotipo.svg" alt="TeamCubation">
-            <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p>
+          <div class="col-3 col-md-2">
+            <div class="d-flex flex-column" style="gap: 0.3em">
+              <div>
+                <a data-t class="animated-underline link-footer" href="#process">textLinks.process</a>
+              </div>
+              <div >
+                <a data-t class="animated-underline link-footer" href="#squad-description-layout">textLinks.methodology</a>
+              </div>
+              <div >
+                <a data-t class="animated-underline link-footer" href="#team">textLinks.aboutUs</a>
+              </div>
+            </div>
           </div>
         </div>  
+        <div class="footer-navigate">
+          <div class="col-12">
+            <div class="d-flex w-100 flex-wrap justify-content-end mt-2 mb-2" style="color: #b1b1b187; border-top: 1px solid #b1b1b187">
+              <p style="margin-right: 10px; font-size: 0.8rem">© 2023, </p>
+              <p style="font-size: 0.9rem">Teambucation</p>
+            </div>
+          </div>    
+        </div>
       </div>
     </footer>
   
-
     <div id="form-modal" class="hidden d-flex">
       <div id="form-container">
         <div class="col-12 d-flex flex-column align-items-center">

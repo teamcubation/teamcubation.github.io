@@ -41,21 +41,26 @@
             <img id="logo-orange" class="navigate-home hidden" src="media/logotipo-orange.svg" alt="Teamcubation">
           </div>
           <div class="navigate">
-            <!-- <div class="language-select">
-              <div class="language-tittle">
-                <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
-                <p data-t>lang.textButton</p>
+            <div style="position: relative;">
+              <div id="language-select" class="language-select">
+                <div id="language-title" class="language-title ">
+                  <img id="globe-white-icon" src="media/globe_icon.png" alt="redirect_lang">
+                  <img id="globe-orange-icon" class="hidden" src="media/globe-orange-icon.png" alt="redirect_lang">
+                  <p>Español</p>
+                  <img src="media/arrow-white.png" alt="arrow">
+                  <img src="media/arrow-orange.png" class="hidden" alt="arrow">
+                </div>
+                <ul id="language-options" class="language-options collapsed-content">
+                  <li data-lang="es">
+                    <a href="http://localhost:5503/en/index.html">Español</a>
+                  </li>
+                  <li data-lang="en">
+                    <a href="http://localhost:5503/en/index.html">Inglés</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="language-options">
-                <li data-lang="es">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.spanish</a>
-                </li>
-                <li data-lang="en">
-                  <a data-t data-attr-t data-attr-t-interpolate href-t="{{banner.url}}">lang.english</a>
-                </li>
-              </ul>
-            </div> -->
-            <button class="button outlined contact-button">Contáctanos</button>
+            </div>
+            <button class="button outlined contact-button" style="margin-left: 1em;">Contáctanos</button>
             <button id="menu-button" class="menu-button">
               <i class="icon ion-md-menu"></i>
             </button>      
@@ -111,7 +116,7 @@
   <!-- 
       <div style="display: flex">
         <div id="selectLangMobile" class="language-select-mobile">
-          <div class="language-tittle">
+          <div class="language-title">
             <img class="flag" data-attr-t data-attr-t-interpolate src-t="{{lang.iconButton}}" alt="redirect_lang">
             <p data-t>lang.textButton</p>
           </div>
@@ -157,15 +162,14 @@
       <div id="proposal-layout" class="layout">
         <div id="proposal-content">
           <div class="text-center orange mb-2">
-            <h3>Resolvimos el problema de escasez de</h3>
-            <h3>talento IT de las grandes compañías.</h3>
+            <h3>Resolvimos el problema de escasez de talento IT de las grandes compañías.</h3>
           </div>
           <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="col-12 col-md-5">
               <div class="proposal-card bg-green purple">
                 <h1 id="people-number">0</h1>
-                <h4>Vacantes IT</h4>
-                <p> quedaron sin cubrir el último año.</p>
+                <h4>de las vacantes IT  no logran cubrirse en LATAM por año.</h4>
+                <!-- <p data-t>proposal.people.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -185,21 +189,21 @@
             <div class="col-12 col-md-5">
               <div class="proposal-card bg-purple white">
                 <div>
-                  <h3 class="fw-bold d-inline">US$</h3><h2 class="fw-bold d-inline" id="cost-from-number"> 0</h2>
+                  <h1 class="fw-bold d-inline" id="cost-to-number"> 0</h1><h4 class="d-inline" style="font-weight: bold">US$</h4>
                 </div>
-                <div>
-                  <h3 class="fw-bold d-inline">a US$</h3><h2 class="fw-bold d-inline" id="cost-to-number"> 0</h2>
-                </div>
-                <p>son los costos relacionados a cada vacante sin cubrir.</p>
+                <h4>en promedio, son los costos relacionados a cada vacante sin cubrir.</h4>
+                <!-- <p data-t>proposal.cost.title.text.leyend</p> -->
+
+                <!-- <p data-t>proposal.cost.title.text</p> -->
               </div>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="col-12 col-md-5">
-              <div class="proposal-card bg-orange grey">
+              <div class="proposal-card bg-orange white">
                 <h1 id="turnover-number">0</h1>
-                <h4>de los CTOs</h4>
-                <p>consideran que la rotación está afectando la productividad de su equipo.</p>
+                <h4>de los CTOs afirman que la rotación está perjudicando al equipo.</h4>
+                <!-- <p data-t >proposal.turnover.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -218,9 +222,7 @@
         <div id="problem-content">
           <div class="container-content">
             <div class="white">
-              <h2 class="title-lg">Desarrollamos experiencia en nuevos</h2>
-              <h2 class="title-lg">devs para que logre completar</h2>
-              <h2 class="title-lg">sus equipos en tiempo récord.</h2>
+              <h2 class="title-lg">Desarrollamos experiencia en nuevos devs para que logre completar sus equipos en tiempo récord.</h2>
             </div>
           </div>
           <div class="carousel-boos-container">
@@ -296,8 +298,7 @@
       <div id="the-wheel-layout" class="layout">
         <div id="the-wheel-content">
           <div class="text-center mb-2">
-            <h3 class="purple">Ni un code school, ni una software factory.</h3>
-            <h3 class="purple"> Una solución a medida de las grandes compañías.</h3>
+            <h3 class="purple">Ni un coding school, ni una software factory. Una solución a medida de las grandes compañías.</h3>
           </div>
           <div id="venn-diagram-container">
             <div id="control-switch">
@@ -332,7 +333,7 @@
                 <div class="intersection-software-junior-leyend">No existe</div>
               </div>
               <div id="intersection-seniors-junior" class="intersection-seniors-junior hidden">
-                <div class="intersection-seniors-junior-leyend">Code School</div>
+                <div class="intersection-seniors-junior-leyend">Coding School</div>
                 <div>
                   <img class="arrow-diagram" src="media/diagram-arrow-top.svg" alt="arrow">
                 </div>
@@ -359,8 +360,8 @@
               </div>
             </div>
           </div>
-          <div id="cases" class="mb-2">
-            <h3 class="purple mb-2">Lo estamos haciendo</h3><br>
+          <div id="cases" class="mb-1">
+            <h3 class="purple">Lo estamos haciendo</h3><br>
             <div id="video-container">
               <div class="video-overlay"></div>
               <div id="link-button-video-container">
@@ -759,7 +760,7 @@
                   <div class="container-card-results">
                     <div class="card results-card">
                       <img src="media/results_1.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card">Onboarding sin fricciones</h5>
                         <img src="media/icons/01.svg" alt>
                       </div>
@@ -767,7 +768,7 @@
                     </div>
                     <div class="card results-card">
                       <img src="media/results_2.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card">Foco de trabajo</h5>
                         <img src="media/icons/02.svg" alt>
                       </div>
@@ -775,7 +776,7 @@
                     </div>
                     <div class="card results-card">
                       <img src="media/results_3.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card">Capacidad productiva</h5>
                         <img src="media/icons/03.svg" alt>
                       </div>
@@ -787,7 +788,7 @@
                   <div class="container-card-results">
                       <div class="card results-card">
                         <img src="media/results_4.png" alt="results">
-                        <div class="d-flex justify-content-between mt-2">
+                        <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                           <h5 class="md-text-card">Fidelización de talento</h5>
                           <img src="media/icons/05.svg" alt>
                         </div>
@@ -795,7 +796,7 @@
                       </div>
                     <div class="card results-card">
                       <img src="media/results_5.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card">Proceso de TA fluído</h5>
                         <img src="media/icons/04.svg" alt>
                       </div>
@@ -803,7 +804,7 @@
                     </div>
                     <div class="card results-card">
                       <img src="media/results_6.png" alt="results">
-                      <div class="d-flex justify-content-between mt-2">
+                      <div class="d-flex justify-content-between mt-2" style="gap: 0.5em;">
                         <h5 class="md-text-card">Branding</h5>
                         <img src="media/icons/06.svg" alt>
                       </div>
@@ -812,14 +813,14 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" href="#results-slide-desktop" data-bs-slide="prev">
+              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" href="#results-slide-desktop" data-bs-slide="next">
+              </div>
+              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
-              </button>
+              </div>
             </div>
 
             <div id="results-slide-mobile" data-bs-interval="false" class="carousel slide" data-bs-ride="carousel">
@@ -885,18 +886,17 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" href="#results-slide-mobile" data-bs-slide="prev">
+              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" href="#results-slide-mobile" data-bs-slide="next">
+              </div>
+              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
-
         <div class="static-content">
           <div class="carousel-layout bg-white">
             <div class="carousel-container">
@@ -915,45 +915,54 @@
 
     <footer id="footer">
       <div id="footer-content">
-        <div class="col-5 col-md-3">
-          <div class="d-flex flex-column">
-            <div class="link-footer">
-              <a class="animated-underline" href="#proposal">Propuesta</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#problem">Problema</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#cases">Casos</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="/privacy-policy.html">Privacy Policy</a>
+        <div class="footer-navigate">
+          <div class="col-6 col-md-4">
+            <div id="footer-logo" class="navigate-home">
+              <img src="media/logotipo.svg" alt="TeamCubation">
+              <!-- <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p> -->
             </div>
           </div>
-        </div>
-        <div class="col-5 col-md-3">
-          <div class="d-flex flex-column">
-            <div class="link-footer">
-              <a class="animated-underline" href="#process">Proceso</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#squad-description-layout">Metodología</a>
-            </div>
-            <div class="link-footer">
-              <a class="animated-underline" href="#team">Quienes somos</a>
+          <div class="col-3 col-md-2">
+            <div class="d-flex flex-column" style="gap: 0.3em">
+              <div>
+                <a class="animated-underline link-footer" href="#proposal">Propuesta</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#problem">Problema</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#cases">Casos</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="/privacy-policy.html">Privacy Policy</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-8 col-md-4">
-          <div id="footer-logo" class="navigate-home">
-            <img src="media/logotipo.svg" alt="TeamCubation">
-            <p id="copyright" class="white">COPYRIGHT TEAMCUBATION</p>
+          <div class="col-3 col-md-2">
+            <div class="d-flex flex-column" style="gap: 0.3em">
+              <div>
+                <a class="animated-underline link-footer" href="#process">Proceso</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#squad-description-layout">Metodología</a>
+              </div>
+              <div>
+                <a class="animated-underline link-footer" href="#team">Quienes somos</a>
+              </div>
+            </div>
           </div>
         </div>  
+        <div class="footer-navigate">
+          <div class="col-12">
+            <div class="d-flex w-100 flex-wrap justify-content-end mt-2 mb-2" style="color: #b1b1b187; border-top: 1px solid #b1b1b187">
+              <p style="margin-right: 10px; font-size: 0.8rem">© 2023, </p>
+              <p style="font-size: 0.9rem">Teambucation</p>
+            </div>
+          </div>    
+        </div>
       </div>
     </footer>
   
-
     <div id="form-modal" class="hidden d-flex">
       <div id="form-container">
         <div class="col-12 d-flex flex-column align-items-center">
