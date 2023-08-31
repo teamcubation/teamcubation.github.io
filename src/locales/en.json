@@ -154,14 +154,13 @@
   },
   "team": {
   "centralText": "Our Team",
-  "mariano": "Imagine the future of TeamCubation (each from their role / area)",
-  "diego": "Imagine the future of TeamCubation (each from their role / area)",
-  "agustin": "Imagine the future of TeamCubation (each from their role / area)",
-  "tapi": "Imagine the future of TeamCubation (each from their role / area)",
-  "eze": "Imagine the future of TeamCubation (each from their role / area)",
-  "flor": "Imagine the future of TeamCubation (each from their role / area)",
-  "pablo": "Imagine the future of TeamCubation (each from their role / area)"
-  },
+  "mariano": "I envision Teamcubation solving companies' huge problems and providing first job opportunities to thousands of people.",
+  "diego": "I envision continuing to grow and scale with excellence.",
+  "agustin": "I envision Teamcubation being recognized for democratizing access to work in the software industry.",
+  "tapi": "I envision Teamcubation setting the comprehensive standard for training and onboarding new talents in companies worldwide.",
+  "eze": "I envision data, used transparently and collaboratively, being the innovation engine that allows us to raise the standard in talent integration worldwide.",
+  "flor": "I envision an amazing place to work, where people always want to come back.",
+  "pablo": "I envision Teamcubation being an exemplary model of operational efficiency, strategic agility, and collaborative culture."  },
   "results": {
   "title": "The Results",
   "cards": {
@@ -198,10 +197,6 @@
   "footerText": "Since we already work together, experienced leaders who know the company's culture and ways of working will conclude and transfer the juniors to your teams, confirming a new squad to continue ensuring your organization's productive capacity.",
   "partners": {
   "centralText": "WHO DO WE WORK TOGETHER WITH TO ENHANCE NEW DIGITAL TALENT?"
-  },
-  "team": {
-  "centralText": "THE TEAM",
-  "text": "After years in the industry and academia, we felt there was a missing link bridging both worlds. The problem is clear and evident: we educate many, yet companies continue to face a shortage of individuals to fill the positions required to achieve their goals."
   },
   "contact": {
   "description": {

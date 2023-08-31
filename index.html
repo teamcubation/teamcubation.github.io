@@ -196,7 +196,6 @@
               <div class="proposal-card bg-orange white">
                 <h1 id="turnover-number">0</h1>
                 <h4>de los CTOs afirman que la rotación está perjudicando al equipo.</h4>
-                <!-- <p data-t >proposal.turnover.title.text</p> -->
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -354,7 +353,7 @@
             </div>
           </div>
           <div id="cases" class="mb-1">
-            <h3 class="purple">Lo estamos haciendo</h3><br>
+            <h3 class="purple">Lo estamos haciendo</h3>
             <div id="video-container">
               <div class="video-overlay"></div>
               <div id="link-button-video-container">
@@ -371,19 +370,32 @@
     
     <section id="process">
       <div id="process-layout" class="layout">
+        <div class="button-carousel-containter">
+          <button class=" button carousel-central-button process-next hidden" type="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class=" button carousel-central-button process-prev" type="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+
         <div id="process-content">
-          <div class="text-center" style="margin-bottom: 2em">
+          <div class="text-center">
             <h3>¿Cómo lo hacemos?</h3>
-          </div>  
+          </div> 
           <div class="carousel-section">
-            <button class="carousel-control-prev process-next hidden" type="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next process-prev" type="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
+            <!-- <div style="position: absolute; bottom: 0; width: 100%">
+              <button class=" button carousel-central-button process-next hidden" type="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class=" button carousel-central-button process-prev" type="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div> -->
             <div id="process-carousel" class="carousel mt-2 mb-2">
               <div id="divider-process" class="divider">
                 <div class="divider-content"></div>
@@ -806,11 +818,11 @@
                   </div>
                 </div>
               </div>
-              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="prev">
+              <div class="carousel-left-button" href="#results-slide-desktop" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
               </div>
-              <div class="carousel-button" href="#results-slide-desktop" data-bs-slide="next">
+              <div class="carousel-right-button" href="#results-slide-desktop" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
               </div>
@@ -879,11 +891,11 @@
                   </div>
                 </div>
               </div>
-              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="prev">
+              <div class="carousel-left-button" href="#results-slide-mobile" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
               </div>
-              <div class="carousel-button" href="#results-slide-mobile" data-bs-slide="next">
+              <div class="carousel-right-button" href="#results-slide-mobile" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
               </div>

@@ -1387,12 +1387,58 @@ html[lang="en"] .intersection-software-junior {
 	position:absolute;
 }
 
-.carousel-button[data-bs-slide="prev"]{
-	left: 1%;
+.button-carousel-containter{
+	position: absolute;
+	width: 20%;
+	bottom: 5%;
+	margin-left: 40%;
 }
 
-.carousel-button[data-bs-slide="next"]{
+.carousel-central-button[data-bs-slide="prev"]{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: absolute;
+	left: 0%;
+	z-index: 100;
+	bottom: 0;
+	background-color: transparent
+
+}
+
+.carousel-central-button[data-bs-slide="next"]{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position:absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	background-color: transparent
+}
+
+.carousel-left-button[data-bs-slide="prev"]{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	height: 100%;
+	position:absolute;
+	left: 1%;
+	top: 0;
+}
+
+.carousel-right-button[data-bs-slide="next"]{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	height: 100%;
+	position:absolute;
 	right: 1%;
+	top: 0;
 }
 
 /* swich  */
@@ -2312,9 +2358,13 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		display: none;
 	}
 
-	/* #footer-content {
-		padding: 4em;
-	} */
+	.button-carousel-containter{
+		position: absolute;
+		width: 50%;
+		bottom: 3%;
+		margin-left: 25%;
+	}
+	
 
 	.footer-navigate{
 		flex-direction: column;
