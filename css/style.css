@@ -1393,7 +1393,9 @@ html[lang="en"] .intersection-software-junior {
 	bottom: 5%;
 	margin-left: 40%;
 }
-
+.disabled > span{
+	opacity: 0.3;
+}
 .carousel-central-button[data-bs-slide="prev"]{
 	display: flex;
 	justify-content: center;

@@ -364,28 +364,32 @@ const scrollDirection = (prevPosition, currentPosition) => {
 }
 
 $(".process-prev").on("click", function(){
-  howDoAnimation.animate('play');
-  if(howDoAnimation.loopCarousel >= 0){
-    $(".process-next").removeClass('hidden')
-  }else{
-    $(".process-next").addClass('hidden')
-  }
-  if(howDoAnimation.loopCarousel >= howDoAnimation.stop){
-    $(".process-prev").addClass('hidden')
-  }else{
-    $(".process-prev").removeClass('hidden')
+  if(!$(this).hasClass('disabled')){
+    howDoAnimation.animate('play');
+    if(howDoAnimation.loopCarousel >= 0){
+      $(".process-next").removeClass('disabled');
+    }else{
+      $(".process-next").addClass('disabled')
+    }
+    if(howDoAnimation.loopCarousel >= howDoAnimation.stop){
+      $(".process-prev").addClass('disabled')
+    }else{
+      $(".process-prev").removeClass('disabled')
+    }
   }
 });
 
 $(".process-next").on("click", function(){
-  howDoAnimation.animate('play-reverse');
-  if(howDoAnimation.loopCarousel == 0){
-    $(".process-next").addClass('hidden')
-  }
-  if(howDoAnimation.loopCarousel >= howDoAnimation.stop){
-    $(".process-prev").addClass('hidden')
-  }else{
-    $(".process-prev").removeClass('hidden')
+  if(!$(this).hasClass('disabled')){
+    howDoAnimation.animate('play-reverse');
+    if(howDoAnimation.loopCarousel == 0){
+      $(".process-next").addClass('disabled')
+    }
+    if(howDoAnimation.loopCarousel >= howDoAnimation.stop){
+      $(".process-prev").addClass('disabled')
+    }else{
+      $(".process-prev").removeClass('disabled')
+    }
   }
 });
 
