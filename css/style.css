@@ -5,8 +5,8 @@ html, body {
 }
 
 :root {
-	--padding: 7em;
-	--container-padding: 0 7em;
+	--padding: 9em;
+	--container-padding: 0 9em;
 	--navbar-height: 80px;
 	--white: #ffffff;
 	--color-dark: #000000;
@@ -40,7 +40,7 @@ h3{
 }
 
 h4{
-	font-size: calc(1.7vw + 0.5em);
+	font-size: calc(1.5vw + 0.5em);
 	margin-bottom: 0;
 }
 
@@ -413,7 +413,7 @@ nav{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 4em;
+	gap: 5em;
 	max-width: 1440px ;	
 	padding: var(--container-padding);
 	padding-top: 10em;
@@ -434,7 +434,7 @@ nav{
 }
 
 .proposal-card h1{
-	font-size: 6em;
+	font-size:5em;
 	margin-bottom: 1rem;
 }
 
@@ -474,6 +474,7 @@ nav{
 	justify-content: space-evenly;
 	text-align: center;
 	min-height: 100vh;
+	padding: 5em 0;
 }
 
 #problem-carrousel{
@@ -678,7 +679,11 @@ html[lang="en"] .intersection-software-junior {
 	border-radius: 20px;
 	border: 2px solid #000000;
 	background-color: #000000;
+	max-height: 70vh;
+	width: fit-content;
+	margin: 0 auto;
 }
+
 .video-overlay{
 	display: none;
 	background-color: #561872b2;
@@ -694,6 +699,7 @@ html[lang="en"] .intersection-software-junior {
 	border-radius: 20px;
 	width: 100%;
 	height: auto;
+	max-height: 70vh;
 }
 
 #link-button-video-container{
@@ -756,7 +762,7 @@ html[lang="en"] .intersection-software-junior {
 }
 
 .step-number{
-	font-size: calc(18em + 20vw);
+	font-size: calc(15em + 20vw);
 	color: rgba(255, 255, 255, 0.30);
 	font-weight: 500;
 	line-height: 1em;
@@ -851,7 +857,12 @@ html[lang="en"] .intersection-software-junior {
 	margin: 0 auto;
 
 }
-
+.card-team-text{
+    margin-bottom: 0;
+    color: white;
+    line-height: 1.2em;
+    font-size: 1em;
+}
 /* results */
 
 #results-layout{
@@ -1174,8 +1185,8 @@ html[lang="en"] .intersection-software-junior {
 }
 
 .member-quotes{
-	height: 2em;
-	width: 2em;
+	height: 1.5em;
+	width: 1.5em;
 }
 
 .card-member-hover .member-quotes:nth-of-type(2) {
@@ -1724,7 +1735,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	}
 
 	h3{
-		font-size: calc(0.7em + 3vw);
+		font-size: calc(0.5em + 2.5vw);
 		margin-bottom: 0;
 		line-height: 1.3em;
 	}
@@ -1748,7 +1759,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	}
 	
 	.title-lg{
-		font-size:calc(0.7em + 4vw);
+		font-size:calc(0.5em + 3vw);
 	}
 	
 	#process-content{
@@ -1804,8 +1815,8 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	}
 
 	:root {
-		--container-padding: 0 3em;
-		--padding: 3em;
+		--container-padding: 0 5em;
+		--padding: 5em;
 		--border-radius: 30px
 	}
 
@@ -2315,7 +2326,10 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		padding: 4em;
 		margin-bottom: 5%;
 	}
-
+	.card-team-text{
+		font-size: 1.5em;
+	}
+	
 	#form-container{
 		height: 80vh;
 		width: 90vw;

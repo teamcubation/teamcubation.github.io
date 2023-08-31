@@ -137,7 +137,7 @@
       },
       "five": {
         "title": "Conoce a tus colaboradores:",
-        "leyend": "1. A través de tests cognitivos y conductuales, tales como PDA (Personal Development Analysis), obtenemos una visión clara de los perfiles de sus colaboradores para gestionar su talento, desarrollar habilidades y obtener su mejor versión."
+        "leyend": "A través de tests cognitivos y conductuales, tales como PDA (Personal Development Analysis), obtenemos una visión clara de los perfiles de sus colaboradores para gestionar su talento, desarrollar habilidades y obtener su mejor versión."
       },
       "six": {
         "title": "Pulso emocional",
@@ -147,13 +147,13 @@
   },
   "team":{
     "centralText": "Nuestro Equipo",
-    "mariano": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)",
-    "diego": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)",
-    "agustin": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)",
-    "tapi": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)",
-    "eze": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)",
-    "flor": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)",
-    "pablo": "Imagina el futuro de TeamCubation (cada uno desde su rol / área)"
+    "mariano": " Imagino a Teamcubation resolviendo el problema gigante de las compañias y brindando oportunidades de primer empleo a miles de personas.",
+    "diego": "Imagino seguir creciendo y escalando con excelencia",
+    "agustin": "Imagino que Teamcubation será reconocida por democratizar el acceso al trabajo en la industria del software.",
+    "tapi": "Imagino que Teamcubation definirá el estándar integral para entrenar y hacer onboarding de nuevos talentos en empresas de todo el mundo.",
+    "eze": "Imagino que los datos, utilizados de manera transparente y colaborativa, serán el motor de innovación que nos permitirá elevar el estándar en la integración de talentos en todo el mundo.",
+    "flor": "Imagino un lugar increible para trabajar, a donde la gente siempre quiera volver",
+    "pablo": "Imagino que Teamcubation será un modelo ejemplar de eficiencia operativa, agilidad estratégica y cultura colaborativa."
   },
   "results":{
     "title": "Los resultados",
