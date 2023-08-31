@@ -20,7 +20,7 @@
   },
   "banner":{
     "url-local" : "http://localhost:5503/en/index.html",
-    "url": "https://teamcubation.com/en",
+    "url": "https://preview.teamcubation.com/en",
     "centralText" :{
       "lineOne": "Desarrolladores de",
       "lineTwo": " experiencia"
