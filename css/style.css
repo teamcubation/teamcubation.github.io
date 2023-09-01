@@ -167,7 +167,11 @@ ul{
 .mb-7{
 	margin-bottom: 7em!important;
 }
-
+.img-responsive{
+	max-width: 90%;
+	height: auto;
+	margin: 5%
+}
 /* components layouts */
 
 .layout{
@@ -827,10 +831,11 @@ html[lang="en"] .intersection-software-junior {
 
 #pep-img-container{
 	height: 100%;
-	width: 100%;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 0 auto;
 }
 
 /* team */
@@ -2367,7 +2372,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		margin-left: 25%;
 	}
 	
-
 	.footer-navigate{
 		flex-direction: column;
 		gap: 2em;

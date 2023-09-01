@@ -553,7 +553,6 @@ const openMenu = () => {
   $('#language-options').addClass('language-menu-open');
   $('#language-options-mobile').addClass('language-menu-open');  
   
-
   if(screen.width < 574){
     $("#navbar-content").addClass('open-menu-mobile');
     $('#language-select-mobile').addClass('language-menu-open');
@@ -625,8 +624,6 @@ window.addEventListener('scroll', (e) => {
     $('#logo').addClass('hidden');
     $('#logo-orange').removeClass('hidden');
     $('#language-select').addClass('language-menu-open');
-    // $('#language-select-mobile').addClass('language-menu-open');
-
     $('.language-title').addClass('language-menu-open');
     $('#language-options').addClass('language-menu-open');
     $('#language-options-mobile').addClass('language-menu-open');  
@@ -715,12 +712,21 @@ dividerCenter.style.left = `calc(${itemTwo - itemOne}px)`;
 
 // pep
 const dropdowns = document.querySelectorAll('.dropdown-standard-item');
+const imageContainer = document.getElementById('pep-img-container');
+const initOpen = document.getElementById("pep-one");
+const imgInitOpen = initOpen.querySelector('img');
+
+if(window.innerWidth < 992){
+  imgInitOpen.classList.remove('hidden');
+  const img = imageContainer.querySelector("img");
+  imageContainer.removeChild(img)
+}
 
 dropdowns.forEach(dropdown => {
   const button = dropdown.querySelector('.card-standard-header .dropdown-item-button');
   const title = dropdown.querySelector('.card-standard-header .sm-text-card');
   const content = dropdown.querySelector('.collapsed-content');
-  const image = dropdown.querySelector('.hidden');
+  const image = content.querySelector('img');
   const iconbutton = button.querySelector('img');
 
   dropdown.addEventListener('click', () => {
@@ -732,16 +738,16 @@ dropdowns.forEach(dropdown => {
       }
     });
   
-  iconbutton.src = `${shortenedURL}/media/arrow-dropdowns.svg`;
-  content.classList.add('d-flex');
-  title.style.color = '#F34E1E';
-   
-  const imageContainer = document.getElementById('pep-img-container');
-  imageContainer.innerHTML = '';
-  const newImage = document.createElement('img');
-  newImage.style.maxWidth = '100%';
-  newImage.src = image.src;
-  imageContainer.appendChild(newImage);
+    iconbutton.src = `${shortenedURL}/media/arrow-dropdowns.svg`;
+    content.classList.add('d-flex');
+    title.style.color = '#F34E1E';
+    image.classList.remove('hidden');
+
+    if(window.innerWidth > 992){
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild(image);
+    }
+
   });
 }); 
 
