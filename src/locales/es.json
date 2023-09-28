@@ -93,7 +93,9 @@
         "three": "Coding School"
       }
     },
-    "centralTextTwo": "Lo estamos haciendo"
+    "centralTextTwo": "Lo estamos haciendo",
+    "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4",
+    "moreTestimonials": "Ver mas testimonios"
   },
   "howDo": {
     "centralText": "¿Cómo lo hacemos?",

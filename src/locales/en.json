@@ -91,7 +91,9 @@
   "three": "Coding School"
   }
   },
-  "centralTextTwo": "We're making it happen"
+  "centralTextTwo": "We're making it happen",
+  "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation_en.mp4",
+  "moreTestimonials": "See more testimonials"
   },
   "howDo": {
   "centralText": "How do we do it?",
