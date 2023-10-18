@@ -759,23 +759,20 @@ $(window).on('beforeunload', function(){
 
 // video 
 const video = document.getElementById("video-cases");
-let initTime = 9 
-video.currentTime = initTime;
-
-video.addEventListener("seeked", function() {
-  if(video.currentTime != 9){initTime = video.currentTime}
-});
 
 video.addEventListener('ended', function() {
-  video.currentTime = 9;
   $(".video-overlay").css("display", "block");
   $("#link-button-video-container").css("display", "block");
 });
 
 video.addEventListener('play', function() {
- if( video.currentTime == 9) video.currentTime = 0;
   $(".video-overlay").css("display", "none");
   $("#link-button-video-container").css("display", "none");
+});
+
+$('#video-play, .video-pre-overlay').click(function() {
+  $('.video-pre-overlay').hide();
+  video.play();
 });
 
 document.getElementById('button-redirect-youtube').addEventListener('click', function() {

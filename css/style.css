@@ -690,7 +690,7 @@ html[lang="en"] .intersection-software-junior {
 
 .video-overlay{
 	display: none;
-	background-color: #561872b2;
+	background-color: #000000c2;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -704,6 +704,47 @@ html[lang="en"] .intersection-software-junior {
 	width: 100%;
 	height: auto;
 	max-height: 70vh;
+}
+
+.video-pre-overlay{
+	background: url('/media/video-overlay.jpg') no-repeat;
+	background-size: cover;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#video-play{
+	width: 100px;
+	height: 100px;
+	background-color: var(--color-logo-orange);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	color: #fff;
+	padding: 6px 0 0 10px;
+	border: 3px solid white;
+}
+
+#video-play::before {
+	content: "\25B6";
+	font-size: 48px;
+	color: #fff;
+}
+
+#video-play:hover {
+	background-color: var(--color-green);
 }
 
 #link-button-video-container{
@@ -1374,7 +1415,7 @@ html[lang="en"] .intersection-software-junior {
 .button-link-video{
 	color: var(--color-logo-orange);
 	border: 1px solid var(--color-logo-orange);
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .button-link-video:hover{
