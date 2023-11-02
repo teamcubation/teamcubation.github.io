@@ -13,6 +13,12 @@ $(document).ready(
     : (json_path = "./src/locales/en.json"),
 );
 
+$(function(){
+  if (window.location.hash === '#contact') {
+    $('#form-modal').removeClass('hidden');
+  }
+});
+
 const dataByLang = {
   home: {
     btnEnter: lang === "es" ? "> Entrar <" : "> Enter <",
@@ -60,6 +66,7 @@ const dataByLang = {
 
 $(".contact-button").on("click", () => {
   $("#form-modal").toggleClass('hidden');
+  window.location.hash = '#contact';
 });
 
 $("#close-modal").on("click", (e) => {
