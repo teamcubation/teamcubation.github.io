@@ -1282,6 +1282,7 @@ html[lang="en"] .intersection-software-junior {
 .footer-navigate{
 	display: flex;
 	width: 100%;
+	justify-content: space-between;
 }
 
 #copyright{
@@ -1304,6 +1305,13 @@ html[lang="en"] .intersection-software-junior {
 .link-footer{
 	font-size: 1.1rem;
 	margin-bottom: 10px;
+}
+
+#holon_iq{
+	max-width: 100%;
+	width: 80%;
+	cursor: pointer;
+	float: right;
 }
 
 .animated-underline {
@@ -1978,6 +1986,18 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 }
 
 @media only screen and (max-width: 767px) {
+	.footer-navigate{
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	#holon_iq{
+		max-width: 100%;
+		width: 90%;
+		cursor: pointer;
+		float: left;
+	}
+	
 	body{
 		font-size: 12px;
 	}
@@ -2152,7 +2172,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 
 	#footer-content{
 		justify-content: start;
-		gap: 4em;
+		/* gap: 2em; */
 	}
 
 
@@ -2416,10 +2436,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		margin-left: 25%;
 	}
 	
-	.footer-navigate{
-		flex-direction: column;
-		gap: 2em;
-	}
 
 	#squad-description-layout {
 		margin: 0 2em;

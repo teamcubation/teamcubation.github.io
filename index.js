@@ -789,3 +789,7 @@ $('#video-play, .video-pre-overlay').click(function() {
 document.getElementById('button-redirect-youtube').addEventListener('click', function() {
   window.open('https://www.youtube.com/@teamcubation/videos', '_blank');
 });
+
+$('#holon_iq').click(function(){
+  window.open('https://credentials.holoniq.com/credentials/6bb15f13-623b-4c19-a87f-78874dd4680a', '_blank');
+})
