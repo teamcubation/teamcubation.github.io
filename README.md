@@ -6,4 +6,4 @@
     
 ### Compile:
     
-    static-i18n -l es -i es -i en -o . src
+    static-i18n -l es -i es -i en -i pt -o . src

@@ -3,14 +3,7 @@ import {CarouselAnimator, CounterAnimator} from './animations.js';
 const url = "https://teamcubation.com/";
 const initialLocation = document.location.href;
 const lang = document.documentElement.lang;
-var shortenedURL = initialLocation.match(/^(https?:\/\/[^\/]+)/)[1];
-
-let json_path;
-$(document).ready(
-  document.documentElement.lang === "es"
-    ? (json_path = "./src/locales/es.json")
-    : (json_path = "./src/locales/en.json"),
-);
+const shortenedURL = initialLocation.match(/^(https?:\/\/[^\/]+)/)[1];
 
 $(function(){
   if (window.location.hash === '#contact') {
@@ -23,47 +16,37 @@ const year = new Date().getFullYear();
 currentYear.textContent = year;
 
 const dataByLang = {
-  home: {
-    btnEnter: lang === "es" ? "> Entrar <" : "> Enter <",
-  },
-  enter: {
-    "organization-enter": {
-      defaultLegend:
-        lang === "es" ? "Soy una organización" : "I’m an organization",
-    },
-    "senior-enter": {
-      defaultLegend: lang === "es" ? "Soy un dev Senior" : "I’m a Senior dev",
-    },
-    "junior-enter": {
-      defaultLegend: lang === "es" ? "Soy un dev Junior" : "I’m a Junior dev",
-    },
-    "team-enter": {
-      defaultLegend: lang === "es" ? "Nosotros" : "Us",
-    },
-  },
   formContact: {
-    btnSend: lang === "es" ? "Enviar" : "Submit",
+    btnSend: {"es": "Enviar", "en": "Submit", "pt": "Enviar"},
     btnSending: lang === "es" ? "Enviando..." : "Sending...",
-    originExtraPlaceholder:
-    lang === "es" ? "¿Cómo te identificás?" :
-    lang === "pt" ? "Como você se identifica?" :
-    "How do you identify yourself?",    
-    originExtraOhterOption: lang === "es" ? "otro" : "other",
+    originExtraPlaceholder: {
+      "es": "¿Cómo te identificás?",
+      "en": "Como você se identifica?",
+      "pt": "How do you identify yourself?"
+    },
     validation: {
-      noOptionSelected:
-        lang == "es" ? "Por favor elegí una opción" : "Please select an option",
-      noTextOtherOption:
-        lang == "es" ? "Por favor ingresá un texto" : "Please enter a text",
+      noOptionSelected: {
+        "es": "Por favor elegí una opción",
+        "en": "Please select an option",
+        "pt": "Por favor escolha uma opção"
+      },
+      noTextOtherOption: {
+        "es": "Por favor ingresá un texto",
+        "en": "Please enter a text",
+        "pt": "Por favor insira um texto"
+      }
     },
     submitResponse: {
-      success:
-        lang === "es"
-          ? "Su mensaje se ha enviado correctamente, gracias!"
-          : "Your message has been sent, thank you!",
-      error:
-        lang === "es"
-          ? "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
-          : "An error occurred while sending the form, please try again.",
+      success: {
+        "es": "Su mensaje se ha enviado correctamente, gracias!",
+        "en": "Your message has been sent, thank you!",
+        "pt": "Sua mensagem foi enviada com sucesso, obrigado!"
+      },
+      error: {
+        "es": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo",
+        "en": "An error occurred while sending the form, please try again.",
+        "pt": "Ocorreu um erro durante o envio do formulário, tente novamente"
+      }
     },
   },
 };
@@ -81,7 +64,7 @@ $("#close-modal").on("click", (e) => {
 
 $(".form-contact").on("submit", function (ev) {
   ev.preventDefault();
-  let data_origin_extra_error_message = dataByLang.formContact.validation.noOptionSelected;
+  let data_origin_extra_error_message = dataByLang.formContact.validation.noOptionSelected[lang];
   const currentForm = $(this).attr("id");
   const btn = $(this).find(".submit-contact");
   const data_name = $(`#${currentForm} .name`).val();
@@ -103,7 +86,7 @@ $(".form-contact").on("submit", function (ev) {
   );
   if (data_origin_extra === "other") {
     data_origin_extra_error_message =
-      dataByLang.formContact.validation.noTextOtherOption;
+      dataByLang.formContact.validation.noTextOtherOption[lang];
     const inputSelectText = $(`#${currentForm} .input-select`).val();
     inputSelectText === ""
       ? (data_origin_extra = null)
@@ -111,7 +94,7 @@ $(".form-contact").on("submit", function (ev) {
   }
   if (data_origin_extra) {
     $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
-    btn.text(dataByLang.formContact.btnSending);
+    btn.text(dataByLang.formContact.btnSending[lang]);
     $.ajax({
       url: "https://api.prod.tq.teamcubation.com/contact",
       type: "POST",
@@ -131,13 +114,13 @@ $(".form-contact").on("submit", function (ev) {
         $(".form-contact").prepend(
           '<div class="alert alert-success" role="alert" style="position: absolute; z-index: 101"></div>'
         );
-        $(".alert").text(dataByLang.formContact.submitResponse.success);
+        $(".alert").text(dataByLang.formContact.submitResponse.success[lang]);
         $(".alert")
           .fadeTo(2000, 500)
           .slideUp(500, function () {
             $(".alert").slideUp(500);
           });
-          btn.text(dataByLang.formContact.btnSend);
+          btn.text(dataByLang.formContact.btnSend[lang]);
         clearForm();
       },
       error: (r) => {
@@ -145,13 +128,13 @@ $(".form-contact").on("submit", function (ev) {
         $(".form-contact").prepend(
           '<div class="alert alert-danger" role="alert" style="position: absolute; z-index: 101"></div>'
         );
-        $(".alert").text(dataByLang.formContact.submitResponse.error);
+        $(".alert").text(dataByLang.formContact.submitResponse.error[lang]);
         $(".alert")
           .fadeTo(2000, 500)
           .slideUp(500, function () {
             $(".alert").slideUp(500);
           });
-          btn.text(dataByLang.formContact.btnSend);
+          btn.text(dataByLang.formContact.btnSend[lang]);
         clearForm();
       },
     });
@@ -182,7 +165,7 @@ const clearForm = () => {
   $(".input-select")
     .style("disabled", true)
     .val("")
-    .attr("placeholder", dataByLang.formContact.originExtraPlaceholder)
+    .attr("placeholder", dataByLang.formContact.originExtraPlaceholder[lang])
     .removeData("value-selected")
     .height('40px');
 };
@@ -241,7 +224,7 @@ $(".option-tc").on("click", function () {
     $(".input-select").data("value-selected", valueOption);
     $(".input-select").val(textOption);
     $(".input-select").prop("disabled", false).focus().val("")
-      .attr("placeholder", dataByLang.formContact.originExtraPlaceholder);
+      .attr("placeholder", dataByLang.formContact.originExtraPlaceholder[lang]);
   } 
   else if (valueOption === "organization") {
     $('.form-message').css('display', 'none');
@@ -292,12 +275,20 @@ noScroll(function () {
   isNavigate = false;
 });
 
-// $(function(){
-//   if (localStorage.getItem('lang_redirect') === null && location.href.indexOf('/en/') === -1) {
-//     localStorage.setItem('lang_redirect', '1');
-//     location.href = 'en/';
-//   }
-// });
+$(function(){
+  if (localStorage.getItem('lang_redirect') === null) {
+    const browser_lang = navigator.language.split('-')[0];
+
+    if (browser_lang !== lang && (['en', 'es', 'pt'].includes(browser_lang))) {
+      localStorage.setItem('lang_redirect', '1');
+      if (browser_lang === 'es') {
+        location.href = '/';
+      } else {
+        location.href = `/${browser_lang}/`;
+      }
+    }
+  }
+});
 
 // partners slide
 document.addEventListener("DOMContentLoaded", function() {

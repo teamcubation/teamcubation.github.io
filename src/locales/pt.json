@@ -97,7 +97,7 @@
         }
       },
       "centralTextTwo": "Estamos fazendo acontecer",
-      "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4",
+      "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation_en.mp4",
       "moreTestimonials": "Veja mais depoimentos"
     },
     "howDo": {
@@ -247,13 +247,13 @@
         }
       },
       "form":{
-        "centralText": "CONTACTANOS",
-        "name": "Nombre",
-        "organization": "Compañía",
+        "centralText": "CONTATE-NOS",
+        "name": "Nome",
+        "organization": "Empresa",
         "telephone": {
           "label": "Telefone",
           "country": "País",
-          "area": "Área",
+            "area": "Área",
           "number" : "Número"
         },
         "email": "E-mail",
@@ -271,8 +271,8 @@
         "btn_text": "Enviar",
         "btn_sending": "Enviando...",
         "submit-response": {
-          "success": "Su mensaje se ha enviado correctamente, gracias!",
-          "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+          "success": "Sua mensagem foi enviada com sucesso, obrigado!",
+          "error": "Ocorreu um erro durante o envio do formulário, tente novamente"
         }
       }
     },
