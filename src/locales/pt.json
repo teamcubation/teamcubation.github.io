@@ -152,13 +152,34 @@
     },
     "team":{
       "centralText": "Nossa Equipe",
-      "mariano": "Imagino a Teamcubation resolvendo grandes problemas das empresas e proporcionando a primeira oportunidade de emprego a milhares de pessoas.",
-      "diego": "Imagino continuar a crescer e escalar com excelência.",
-      "agustin": "Imagino a Teamcubation sendo reconhecida por democratizar o acesso ao trabalho na indústria de software.",
-      "tapi": "Imagino a Teamcubation estabelecendo o padrão abrangente para treinamento e integração de novos talentos em empresas em todo o mundo.",
-      "eze": "Imagino os dados, usados de forma transparente e colaborativa, sendo o motor de inovação que nos permite elevar o padrão na integração de talentos em todo o mundo.",
-      "flor": "Imagino um lugar incrível para trabalhar, onde as pessoas sempre querem voltar.",
-      "pablo": "Imagino a Teamcubation sendo um modelo exemplar de eficiência operacional, agilidade estratégica e cultura colaborativa."
+      "mariano":{
+        "leyend": " Imagino a Teamcubation resolviendo el problema gigante de las compañias y brindando oportunidades de primer empleo a miles de personas.",
+        "position": "CEO"
+      } ,
+      "diego":{
+        "leyend": "Imagino continuar a crescer e escalar com excelência.",
+        "position": "COO"
+      },
+      "agustin": {
+        "leyend": "Imagino a Teamcubation sendo reconhecida por democratizar o acesso ao trabalho na indústria de software.",
+        "position": "Chefe de Treinamento"
+      },
+      "tapi":{
+        "leyend": "Imagino a Teamcubation estabelecendo o padrão abrangente para treinamento e integração de novos talentos em empresas em todo o mundo.",
+        "position": "CTO"
+      },
+      "eze":{
+        "position": "Chefe de Dados & Análise",
+        "leyend": "Imagino os dados, usados de forma transparente e colaborativa, sendo o motor de inovação que nos permite elevar o padrão na integração de talentos em todo o mundo."
+      },
+      "flor": {
+        "position": "Chefe de Pessoas",
+        "leyend": "Imagino um lugar incrível para trabalhar, onde as pessoas sempre querem voltar."
+      },
+      "tomas": {
+        "position": "CFO",
+        "leyend": "Imagino a Teamcubation sendo um modelo exemplar de eficiência operacional, agilidade estratégica e cultura colaborativa."  
+      }
     },
     "results":{
       "title": "Os Resultados",

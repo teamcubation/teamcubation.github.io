@@ -159,13 +159,35 @@
   },
   "team": {
   "centralText": "Our Team",
-  "mariano": "I envision Teamcubation solving companies' huge problems and providing first job opportunities to thousands of people.",
-  "diego": "I envision continuing to grow and scale with excellence.",
-  "agustin": "I envision Teamcubation being recognized for democratizing access to work in the software industry.",
-  "tapi": "I envision Teamcubation setting the comprehensive standard for training and onboarding new talents in companies worldwide.",
-  "eze": "I envision data, used transparently and collaboratively, being the innovation engine that allows us to raise the standard in talent integration worldwide.",
-  "flor": "I envision an amazing place to work, where people always want to come back.",
-  "pablo": "I envision Teamcubation being an exemplary model of operational efficiency, strategic agility, and collaborative culture."  },
+  "mariano":{
+    "leyend": " I envision Teamcubation solving companies' huge problems and providing first job opportunities to thousands of people.",
+    "position": "CEO"
+  } ,
+  "diego":{
+    "leyend": "I envision continuing to grow and scale with excellence.",
+    "position": "COO"
+  },
+  "agustin": {
+    "leyend": "I envision Teamcubation being recognized for democratizing access to work in the software industry.",
+    "position": "Head of Training"
+  },
+  "tapi":{
+    "leyend": "I envision Teamcubation setting the comprehensive standard for training and onboarding new talents in companies worldwide.",
+    "position": "CTO"
+  },
+  "eze": {
+    "position": "Head of Data & Analytics",
+    "leyend": "I envision data, used transparently and collaboratively, being the innovation engine that allows us to raise the standard in talent integration worldwide."
+  },
+  "flor": {
+    "position": "Head of People",
+    "leyend": "I envision an amazing place to work, where people always want to come back."
+  }, 
+  "tomas": {
+    "position": "CFO",
+    "leyend":   "I envision Teamcubation being an exemplary model of operational efficiency, strategic agility, and collaborative culture."  
+  }
+  },
   "results": {
   "title": "The Results",
   "cards": {
