@@ -6,7 +6,8 @@
     "textButton": "Español",
     "iconButton": "media/globe_icon.png",
     "spanish": "Español",
-    "english": "Inglés"
+    "english": "Inglés",
+    "portugues": "Português"
   },
   "textLinks": {
       "proposal": "Propuesta",
@@ -20,7 +21,9 @@
   },
   "banner":{
     "url-local" : "http://localhost:5503/en/index.html",
-    "url": "https://teamcubation.com/en",
+    "url": "https://teamcubation.com",
+    "url-en": "https://teamcubation.com/en",
+    "url-pt": "https://teamcubation.com/pt",
     "centralText" :{
       "lineOne": "Desarrolladores de",
       "lineTwo": " experiencia"
@@ -149,13 +152,34 @@
   },
   "team":{
     "centralText": "Nuestro Equipo",
-    "mariano": " Imagino a Teamcubation resolviendo el problema gigante de las compañias y brindando oportunidades de primer empleo a miles de personas.",
-    "diego": "Imagino seguir creciendo y escalando con excelencia",
-    "agustin": "Imagino que Teamcubation será reconocida por democratizar el acceso al trabajo en la industria del software.",
-    "tapi": "Imagino que Teamcubation definirá el estándar integral para entrenar y hacer onboarding de nuevos talentos en empresas de todo el mundo.",
-    "eze": "Imagino que los datos, utilizados de manera transparente y colaborativa, serán el motor de innovación que nos permitirá elevar el estándar en la integración de talentos en todo el mundo.",
-    "flor": "Imagino un lugar increible para trabajar, a donde la gente siempre quiera volver",
-    "pablo": "Imagino que Teamcubation será un modelo ejemplar de eficiencia operativa, agilidad estratégica y cultura colaborativa."
+    "mariano":{
+      "leyend": " Imagino a Teamcubation resolviendo el problema gigante de las compañias y brindando oportunidades de primer empleo a miles de personas.",
+      "position": "CEO"
+    },
+    "diego":{
+      "leyend": "Imagino seguir creciendo y escalando con excelencia",
+      "position": "COO"
+    },
+    "agustin": {
+      "leyend": "Imagino que Teamcubation será reconocida por democratizar el acceso al trabajo en la industria del software.",
+      "position": "Head of Training"
+    }, 
+    "tapi":{
+      "leyend": "Imagino que Teamcubation definirá el estándar integral para entrenar y hacer onboarding de nuevos talentos en empresas de todo el mundo.",
+      "position": "CTO"
+    },
+    "eze": {
+      "position": "Head of Data & Analytics",
+      "leyend": "Imagino que los datos, utilizados de manera transparente y colaborativa, serán el motor de innovación que nos permitirá elevar el estándar en la integración de talentos en todo el mundo."
+    },
+    "flor": {
+      "position": "Head of People",
+      "leyend": "Imagino un lugar increible para trabajar, a donde la gente siempre quiera volver."
+    }, 
+    "tomas": {
+      "position": "CFO",
+      "leyend":   "Imagino que Teamcubation será un modelo ejemplar de eficiencia operativa, agilidad estratégica y cultura colaborativa."  
+    }
   },
   "results":{
     "title": "Los resultados",
