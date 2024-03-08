@@ -18,11 +18,11 @@ currentYear.textContent = year;
 const dataByLang = {
   formContact: {
     btnSend: {"es": "Enviar", "en": "Submit", "pt": "Enviar"},
-    btnSending: lang === "es" ? "Enviando..." : "Sending...",
+    btnSending: {"es": "Enviando...", "en": "Enviando...", "pt": "Enviar"},
     originExtraPlaceholder: {
       "es": "¿Cómo te identificás?",
-      "en": "Como você se identifica?",
-      "pt": "How do you identify yourself?"
+      "en": "How do you identify yourself?",
+      "pt": "Como você se identifica?"
     },
     validation: {
       noOptionSelected: {
@@ -163,7 +163,7 @@ const clearForm = () => {
   $(".chevron-select").removeClass("chevron-effect");
   $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
   $(".input-select")
-    .style("disabled", true)
+    .prop("disabled", true)
     .val("")
     .attr("placeholder", dataByLang.formContact.originExtraPlaceholder[lang])
     .removeData("value-selected")
