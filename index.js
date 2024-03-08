@@ -18,7 +18,7 @@ currentYear.textContent = year;
 const dataByLang = {
   formContact: {
     btnSend: {"es": "Enviar", "en": "Submit", "pt": "Enviar"},
-    btnSending: {"es": "Enviando...", "en": "Enviando...", "pt": "Enviar"},
+    btnSending: {"es": "Enviando...", "en": "Enviando...", "pt": "Enviando..."},
     originExtraPlaceholder: {
       "es": "¿Cómo te identificás?",
       "en": "How do you identify yourself?",
