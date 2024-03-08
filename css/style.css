@@ -631,6 +631,12 @@ html[lang="es"] .intersection-software-junior {
 	right: -4%; 
 }
 
+html[lang="pt"] .intersection-software-junior {
+	top: 46%; 
+	right: -7%; 
+}
+
+
 html[lang="en"] .intersection-software-junior {
 	top: 46%; 
 	right: -9.5%; 
@@ -661,6 +667,11 @@ html[lang="en"] .intersection-software-junior {
 	font-weight: bold;
 	margin-bottom: 0.5em;
 	color: var(--color-logo-orange);
+}
+
+html[lang="pt"] .intersection-seniors-junior {
+	top: -11.5%;
+    right: 32.7%;
 }
 
 #diagram-logo{
@@ -2390,6 +2401,11 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		margin-bottom: 0.5em;
 	}
 
+	html[lang="pt"] .intersection-seniors-junior {
+		top: -8%;
+		right: 27.3%;
+	}
+	
 	#squad-description-layout {
 		margin: 0 2em;
 		padding: 4em 2em;
@@ -2436,7 +2452,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		margin-left: 25%;
 	}
 	
-
 	#squad-description-layout {
 		margin: 0 2em;
 		padding: 4em;

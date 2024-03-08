@@ -5,7 +5,6 @@ const initialLocation = document.location.href;
 const lang = document.documentElement.lang;
 var shortenedURL = initialLocation.match(/^(https?:\/\/[^\/]+)/)[1];
 
-
 let json_path;
 $(document).ready(
   document.documentElement.lang === "es"
@@ -46,7 +45,9 @@ const dataByLang = {
     btnSend: lang === "es" ? "Enviar" : "Submit",
     btnSending: lang === "es" ? "Enviando..." : "Sending...",
     originExtraPlaceholder:
-      lang === "es" ? "¿Cómo te identificás?" : "How do you identify yourself?",
+    lang === "es" ? "¿Cómo te identificás?" :
+    lang === "pt" ? "Como você se identifica?" :
+    "How do you identify yourself?",    
     originExtraOhterOption: lang === "es" ? "otro" : "other",
     validation: {
       noOptionSelected:

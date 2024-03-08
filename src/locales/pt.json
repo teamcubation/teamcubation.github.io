@@ -1,0 +1,285 @@
+{
+    "title": "Teamcubation - A Primeira Empresa de Treinamento de Desenvolvedores de Software",
+    "description": "Teamcubation é o elo perdido entre os sistemas educacional e de trabalho. Abordamos a escassez de talentos na indústria digital incubando e treinando equipes de desenvolvimento para transformar juniores em recursos experientes.",
+    "lang": {
+      "text": "pt",
+      "textButton": "Português",
+      "iconButton": "media/globe_icon.png",
+      "spanish": "Espanhol",
+      "english": "Inglês",
+      "portugues": "Português"
+    },
+    "textLinks": {
+        "proposal": "Proposta",
+        "problem": "Problema",
+        "cases": "Casos",
+        "process": "Processo",
+        "methodology": "Metodologia",
+        "aboutUs": "Sobre Nós",
+        "contact": "Contate-Nos",
+        "joinUs": "¡Unite!"
+    },
+    "banner":{
+      "url-local" : "http://localhost:5503/en/index.html",
+      "url": "https://teamcubation.com/",
+      "url-en": "https://teamcubation.com/en",
+      "url-pt": "https://teamcubation.com/pt",
+        "centralText" :{
+        "lineOne": "Experiência",
+        "lineTwo": "desenvolvedores"
+      }      
+    },
+    "proposal":{
+      "centralText": "Resolvemos o problema da escassez de talentos de TI em grandes empresas.",
+      
+      "people": {
+        "title": {
+          "centralText": "das vagas de TI não são preenchidas na LATAM por ano."
+       },
+        "text": {
+          "title": "Em vez de focar na falta de seniores, desenvolvemos o potencial de novos talentos:",
+          "leyend": "dessa forma, ajudamos nossos clientes a contratarem talentos que anteriormente eram ignorados: Diversos, comprometidos e ansiosos para contribuir com a empresa que lhes dá a primeira oportunidade."
+        }
+      },
+      "cost": {
+        "title":{
+          "centralText":"US$", 
+          "text":{
+            "title": "em média, são os custos relacionados a cada vaga não preenchida."
+          }
+        },
+        "text": {
+          "title": "Reduzimos os custos de oportunidade:",
+          "leyend": "por meio de um fluxo constante de novos colaboradores, garantimos a capacidade de produção que sua empresa precisa para desbloquear novas oportunidades de negócios."
+        }
+      },
+      "turnover": {
+        "title":{
+          "centralText": "dos CTOs afirmam que a rotatividade está prejudicando a equipe."
+        },
+        "text": {
+          "title": "Desenvolvemos experiência de trabalho real:",
+          "leyend": "os projetos de backlog que não podem ser priorizados devido à falta de equipe são a oportunidade perfeita para nossos seniores liderarem o treinamento no trabalho para seus novos desenvolvedores, sob os requisitos e tecnologias da sua empresa."
+        }
+      }
+    },
+    "noMoreDevs":{
+      "centralText": "Desenvolvemos experiência em novos devs para ajudá-lo a completar suas equipes em tempo recorde.",
+      "carouselText":{
+        "itemOne": "Não há devs experientes",
+        "itemTwo": "Nunca preenchemos vagas",
+        "itemThree": "Estamos perdendo pessoas",
+        "itemFour": "Estamos perdendo oportunidades",
+        "itemFive": "Nossos seniores não têm tempo para treinar"
+      },
+      "inlineText": "Soa familiar?",
+      "contactButton": "Contate-Nos!" 
+    },
+    "theWheel":{
+      "centralText": "Não somos uma escola de programação, nem uma fábrica de software. Uma solução personalizada para grandes empresas.",
+      "veenDiagram":{
+        "seniors": {
+          "lineOne": "Desenvolvedores",
+          "lineTwo": "Experientes"
+  
+        },
+        "juniors": {
+          "lineOne": "Ansioso",
+          "lineTwo": "para Aprender"
+        },
+        "software": {
+          "lineOne": "que você precisa"
+        },
+        "intersections":{
+          "one": "Fábrica de Software",
+          "two": "Inexistente",
+          "three": "Escola de Programação"
+        }
+      },
+      "centralTextTwo": "Estamos fazendo acontecer",
+      "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4",
+      "moreTestimonials": "Veja mais depoimentos"
+    },
+    "howDo": {
+      "centralText": "Como fazemos isso?",
+      "carousel": {
+        "itemOne": {"title": "Descoberta", "text": "Após avaliar suas metodologias, pilha tecnológica e cultura da empresa, avaliamos seus projetos juntos para escolher a opção mais adequada. Se necessário, auxiliamos na busca de talentos juniores."},
+        "itemTwo": {"title": "Execução", "text": "Durante um período de 6 meses, trabalhamos ao lado de seus desenvolvedores juniores para desenvolver o software que sua empresa precisa. Isso fornece a seus novos colaboradores a experiência real de trabalhar em suas equipes."},
+        "itemThree": {"title": "Entrega", "text": "No final do sexto mês, sua empresa terá o software pronto para implementação e uma equipe de 3 desenvolvedores experientes preparados para assumir seu próximo projeto. Parabéns! Sua nova fonte de talento especializado concluiu com sucesso sua primeira entrega."}
+      }
+    },
+    "squad": {
+      "centralText": "Trabalhamos em squads para transformar iniciantes em talentos prontos para o trabalho.",
+      "leaders": {
+        "title": "Nossos líderes",
+        "leyend": "Especializados e treinados na pilha tecnológica e metodologias de sua empresa, eles supervisionarão a evolução de seus juniores e garantirão que o software atenda aos requisitos."
+      },
+      "juniors": {
+        "title": "Seus juniores",
+        "leyend": "Orientados por nossos seniores, eles ganharão experiência real enquanto desenvolvem habilidades técnicas e interpessoais, integrando-se à cultura de sua empresa."
+      }
+    },
+    "pep":{
+      "title": "Plataforma de Experiência em Programação. ",
+      "textLeft": "A magia da nossa metodologia está nos dados.",
+      "textRight": "Nosso software é o diferenciador e um grande aliado da nossa equipe. Ele transforma nosso treinamento em um processo guiado e medido para aprimorar o desenvolvimento de cada um de seus juniores e alcançar a melhor versão deles.",
+      "dropDown": {
+        "one": {
+          "title": "Integração ao seu fluxo de trabalho",
+          "leyend": "O PEP se integra às suas principais ferramentas de desenvolvimento como Jira, GitLab, Github, Slack, Discord e mais, para coletar dados-chave e otimizar o desempenho da sua equipe."
+        },
+        "two": {
+          "title": "Visões em tempo real",
+          "leyend": "Observe a evolução de seus juniores com métricas precisas sobre o código que desenvolvem, metodologias e ferramentas de comunicação."
+        },
+        "three": {
+          "title": "Alertas inteligentes",
+          "leyend": "Acompanhe o desempenho de seus juniores com notificações que identificam comportamentos desalinhados com as expectativas, essenciais para melhorar a qualidade e consistência do trabalho da sua equipe.<"
+        },
+        "four": {
+          "title": "Rastreamento personalizável",
+          "leyend": "Avalie aspectos-chave do desenvolvimento pessoal de seus juniores por meio de ações e pesquisas personalizadas que fornecem um foco humano no processo de treinamento."
+        },
+        "five": {
+          "title": "Conheça seus colaboradores:",
+          "leyend": "Através de testes cognitivos e comportamentais, como a Análise de Desenvolvimento Pessoal (PDA), obtemos uma visão clara dos perfis de seus colaboradores para gerenciar seus talentos, desenvolver habilidades e trazer à tona a melhor versão deles."
+        },
+        "six": {
+          "title": "Pulso emocional",
+          "leyend": "A integração com IA analisa respostas e detecta automaticamente os sentimentos e emoções dos membros da equipe para intervir prontamente quando necessário, garantindo um ambiente de trabalho positivo e produtivo."
+        }
+      }
+    },
+    "team":{
+      "centralText": "Nossa Equipe",
+      "mariano": "Imagino a Teamcubation resolvendo grandes problemas das empresas e proporcionando a primeira oportunidade de emprego a milhares de pessoas.",
+      "diego": "Imagino continuar a crescer e escalar com excelência.",
+      "agustin": "Imagino a Teamcubation sendo reconhecida por democratizar o acesso ao trabalho na indústria de software.",
+      "tapi": "Imagino a Teamcubation estabelecendo o padrão abrangente para treinamento e integração de novos talentos em empresas em todo o mundo.",
+      "eze": "Imagino os dados, usados de forma transparente e colaborativa, sendo o motor de inovação que nos permite elevar o padrão na integração de talentos em todo o mundo.",
+      "flor": "Imagino um lugar incrível para trabalhar, onde as pessoas sempre querem voltar.",
+      "pablo": "Imagino a Teamcubation sendo um modelo exemplar de eficiência operacional, agilidade estratégica e cultura colaborativa."
+    },
+    "results":{
+      "title": "Os Resultados",
+      "cards": {
+        "one": {
+          "title": "Integração Sem Atritos",
+          "leyend": "Candidatos alinhados com a cultura e frameworks da sua empresas"
+        },
+        "two": {
+          "title": "Foco no Trabalho",
+          "leyend": "Seus seniores dedicados 100% a gerar resultados para o seu negócio."
+        },
+        "three": {
+          "title": "Capacidade Produtiva",
+          "leyend": "Um fluxo constante de candidatos minimizando o impacto da rotatividade."
+        },
+        "four": {
+          "title": "Retenção de Talentos",
+          "leyend": "Colaboradores mais comprometidos e motivados."
+        },
+        "five": {
+          "title": "Processo de TA Suave",
+          "leyend": "Simplificando a seleção de talentos, eliminando pontos de dor."
+        },
+        "six": {
+          "title": "Branding",
+          "leyend": "Impacto positivo no branding do empregador e desenvolvimento da cultura organizacional."
+        }
+      },
+      "carouselInfo":{
+        "centralText": "Nunca mais perca oportunidades devido à escassez de talentos em TI!",
+        "textButton": "Contate-Nos!"
+      }
+    },
+    "contact": {
+      "description":{
+        "centralText": "ATENCIÓN!",
+        "centralTextTwo": "Este formulario es para compañías!",
+        "text": {
+          "juniors": {
+            "verticalText": "JUNIORS",
+            "text":{
+              "boldTextOne": "",
+              "standardTextOne": "Se você é um Júnior, ou seja, aprendeu mas não tem experiência de trabalho,",
+              "linkJuniors": "inscreva-se aqui ",
+              "standardTextTwo": "onde podemos ajudar a conectá-lo com empresas que desejam selecioná-lo para seus squads."
+            }
+          },
+          "seniors": {
+            "verticalText": "SENIORS",
+            "text":{
+              "boldTextOne": "Se você é um desenvolvedor, tem experiência, se destaca em sua área e gosta de transmitir suas habilidades,",
+              "standardTextOne": "vá para ",
+              "linkJuniors": "este link e inscreva-se na posição que se adequa ao seu perfil",
+              "standardTextTwo": "o que nos permitirá determinar onde você se encaixa na Teamcubation"
+            }
+          },
+          "noCoders": {
+            "verticalText":  "NO_CODERS",
+            "text":{
+              "boldText": "Se você ainda não aprendeu a programar,",
+              "standardText": " pedimos gentilmente que faça isso, torne-se um desenvolvedor e então venha se inscrever! Não oferecemos aulas, horários ou professores... Nossa empresa trabalha para outras empresas, permitindo que você ganhe experiência se já souber programar."
+            }
+          }
+        }
+      },
+      "form":{
+        "centralText": "CONTACTANOS",
+        "name": "Nombre",
+        "organization": "Compañía",
+        "telephone": {
+          "label": "Telefone",
+          "country": "País",
+          "area": "Área",
+          "number" : "Número"
+        },
+        "email": "E-mail",
+        "reason": "Deixe-nos uma mensagem",
+        "origin-extra": {
+          "placeholder": "Como você se identifica?",
+          "options": {
+            "organization": "Sou uma organização e quero ser contatado para saber mais sobre o serviço",
+            "senior": "Sou um desenvolvedor Sênior e quero orientar Juniores",
+            "junior": "Sou um desenvolvedor Júnior/Trainee com conhecimento em programação",
+            "no-exp": "Não sei programar e quero aprender",
+            "other": "Outro"
+          }
+        }, 
+        "btn_text": "Enviar",
+        "btn_sending": "Enviando...",
+        "submit-response": {
+          "success": "Su mensaje se ha enviado correctamente, gracias!",
+          "error": "Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo"
+        }
+      }
+    },
+    "devsJuniors": {
+      "centralText": "DEVS JUNIORS",
+      "subtitle": {
+        "greyText":{
+          "lineOne": "Somos una máquina del tiempo y hacemos que tengas la experiencia de 2 años en 6 meses."
+        },
+        "standardText":{
+          "lineOne": "La máquina del tiempo existe.",
+          "lineTwo": "Hola! Somos Teamcubation."
+        }
+      },
+      "text": "Teamcubation_ trabaja para empresas, las empresas contratan a los juniors y muchas veces nos piden ayuda para encontrarlos. Asi que no lo dudes! Entrá a este link que te dejamos acá y dejanos tus datos para que cuando nos soliciten las empresas perfiles podamos pasar los tuyos o tu información.",
+      "textButton": "Mirá las posiciones abiertas de nuestros clientes para devs sin experiencia<span class=_effect>_</span>"
+    },
+    "devsSeniors": {
+      "centralText": "DEVS CON EXPERIENCIA",
+      "subtitle": {
+        "blueText":{
+          "lineOne": "Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: "
+        },
+        "standardText":{
+          "lineOne": "aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."
+        }
+      },
+      "textButton": "Mira las posiciones abiertas para devs con experiencia<span class=_effect>_</span>"
+    }
+  }
+  

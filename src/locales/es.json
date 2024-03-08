@@ -6,7 +6,8 @@
     "textButton": "Español",
     "iconButton": "media/globe_icon.png",
     "spanish": "Español",
-    "english": "Inglés"
+    "english": "Inglés",
+    "portugues": "Português"
   },
   "textLinks": {
       "proposal": "Propuesta",
@@ -20,7 +21,9 @@
   },
   "banner":{
     "url-local" : "http://localhost:5503/en/index.html",
-    "url": "https://teamcubation.com/en",
+    "url": "https://teamcubation.com",
+    "url-en": "https://teamcubation.com/en",
+    "url-pt": "https://teamcubation.com/pt",
     "centralText" :{
       "lineOne": "Desarrolladores de",
       "lineTwo": " experiencia"
