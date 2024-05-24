@@ -21,23 +21,23 @@
   },
   "banner": {
     "url-local" : "http://localhost:5503/index.html",
-    "url": "https://teamcubation.com/",
-    "url-en": "https://teamcubation.com/en",
-    "url-pt": "https://teamcubation.com/pt",
+    "url": "/",
+    "url-en": "/en",
+    "url-pt": "/pt",
   "centralText": {
-  "lineOne": "Experience",
-  "lineTwo": " developers"
+  "lineOne": "On-the-job upskilling",
+  "lineTwo": "and reskilling guided by data."
   }
   },
   "proposal": {
-  "centralText": "We've solved the problem of IT talent scarcity in large companies.",
+  "centralText": "We tackle the IT shortage for leading companies",
   "people": {
   "title": {
-  "centralText": "of IT vacancies go unfilled in LATAM per year."
+  "centralText": "of IT vacancies go unfilled in Latin America per year."
   },
   "text": {
-  "title": "Rather than focusing on senior shortages, we develop the potential of new talents:",
-  "leyend": "this way, we help our clients hire talents they previously overlooked: Diverse, committed, and eager to contribute to the company that gives them their first opportunity."
+  "title": "Instead of focusing on the shortage of seniors, we focus on developing potential:",
+  "leyend": "Thus, we help our clients hire, upskill, or reskill talents they hadn't considered before: diverse, committed, and eager to contribute to the company that gives them their growth opportunity."
   }
   },
   "cost": {
@@ -49,7 +49,7 @@
   },
   "text": {
   "title": "We reduce opportunity costs:",
-  "leyend": "through a constant flow of new collaborators, we ensure the production capacity your company needs to unlock new business opportunities."
+  "leyend": "Through a flow of ready-to-work collaborators, we guarantee the constant production capacity your company needs to unlock new business opportunities."
   }
   },
   "turnover": {
@@ -58,24 +58,24 @@
   },
   "text": {
   "title": "We develop real work experience:",
-  "leyend": "the backlog projects that can't be prioritized due to lack of team are the perfect opportunity for our seniors to lead on-the-job training for your new devs, under your company's requirements and technologies."
+  "leyend": "Our entire methodology is based on developing real projects for your company. Unprioritized backlog, innovation, and any projects that are not undertaken due to lack of team are the ideal opportunity for our seniors to lead on-the-job training for your developers, under your company's requirements and technologies."
   }
   }
   },
   "noMoreDevs": {
-  "centralText": "We develop experience in new devs to help you complete your teams in record time.",
+  "centralText": "We develop experience in software developers so that our clients can complete their teams in record time.",
   "carouselText": {
   "itemOne": "There's no experienced devs",
   "itemTwo": "We never fill vacant positions",
   "itemThree": "We're losing people",
-  "itemFour": "We're missing out on opportunities",
-  "itemFive": "Our seniors don't have time to train"
+  "itemFour": "We're missing out on business opportunities",
+  "itemFive": "Our seniors don't have time to train others"
   },
-  "inlineText": "Sound familiar?",
+  "inlineText": "Sounds familiar?",
   "contactButton": "Contact Us!"
   },
   "theWheel": {
-  "centralText": "Not a coding school, not a software factory. A customized solution for large companies.",
+  "centralText": "We are not a coding school, we are not a software factory. We arew a customized solution for large companies.",
   "veenDiagram": {
   "seniors": {
   "lineOne": "Experienced",
@@ -103,26 +103,26 @@
   "carousel": {
   "itemOne": {
   "title": "Discovery",
-  "text": "After assessing your methodologies, technological stack, and company culture, we evaluate your projects together to choose the most suitable option. If necessary, we assist in finding junior talent."
+  "text": "After assessing the methodologies, technology stack, and culture of your organization, we evaluate your projects together to choose the most suitable option. If necessary, we assist in the search for junior talent or evaluate the internal team to understand which skills need improvement."
   },
   "itemTwo": {
   "title": "Execution",
-  "text": "Over a 6-month period, we work alongside your junior devs to develop the software your company needs. This provides your new collaborators with the real experience of working on your teams."
+  "text": "During the project period, we work alongside your developers in the development of the software your company needs. This provides your team with the real experience of working in high-performance teams."
   },
   "itemThree": {
   "title": "Delivery",
-  "text": "At the end of the sixth month, your company will have the software ready for implementation and a team of 3 experienced devs prepared to take on your next project. Congratulations! Your new source of specialized talent has successfully completed their first delivery."
+  "text": "At the end of the process, your company will have software ready to implement and a team of experienced developers prepared to take on your next project. Congratulations! Your new source of specialized talent has successfully completed its first delivery."
   }
   }
   },
   "squad": {
-  "centralText": "We work in squads to turn beginners into ready-to-work talent.",
+  "centralText": "We work in squads to upskill or reskill developers, integrating new skills into your existing teams or incorporating ready-to-work juniors.",
   "leaders": {
   "title": "Our leaders",
   "leyend": "Specialized and trained in your company's technological stack and methodologies, they will oversee the evolution of your juniors and ensure the software meets requirements."
   },
   "juniors": {
-  "title": "Your juniors",
+  "title": "Your developers",
   "leyend": "Guided by our seniors, they'll gain real experience while developing technical and soft skills, and integrating into your company culture."
   }
   },
@@ -193,7 +193,7 @@
   "cards": {
   "one": {
   "title": "Frictionless Onboarding",
-  "leyend": "Candidates aligned with the culture and frameworks of your company."
+  "leyend": "Developers aligned with the culture and frameworks of your company."
   },
   "two": {
   "title": "Work Focus",
@@ -201,7 +201,7 @@
   },
   "three": {
   "title": "Productive Capacity",
-  "leyend": "A constant flow of candidates minimizing the impact of turnover."
+  "leyend": "Constant flow of candidates or internal upskilling that minimizes the impact of turnover."
   },
   "four": {
   "title": "Talent Retention",
@@ -209,7 +209,7 @@
   },
   "five": {
   "title": "Smooth TA Process",
-  "leyend": "Simplifying talent selection, eliminating pain points."
+  "leyend": "Simplifying the selection of both internal and external talent, eliminating pain points."
   },
   "six": {
   "title": "Branding",

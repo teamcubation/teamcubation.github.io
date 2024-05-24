@@ -1,6 +1,6 @@
 {
   "title": "Teamcubation - La primera empresa de entrenamiento de software developers",
-  "description": "Teamcubation es el engranaje faltante entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando y entrenando equipos de desarrollo para transformar juniors en recursos con experiencia",
+  "description": "Teamcubation es el engranaje faltante entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando, haciendo upskill y entrenando equipos de desarrollo para desarrollar experiencias en las personas",
   "lang": {
     "text": "es",
     "textButton": "Español",
@@ -21,12 +21,12 @@
   },
   "banner":{
     "url-local" : "http://localhost:5503/en/index.html",
-    "url": "https://teamcubation.com",
-    "url-en": "https://teamcubation.com/en",
-    "url-pt": "https://teamcubation.com/pt",
+    "url": "/",
+    "url-en": "/en",
+    "url-pt": "/pt",
     "centralText" :{
-      "lineOne": "Desarrolladores de",
-      "lineTwo": " experiencia"
+      "lineOne": "On the job upskilling",
+      "lineTwo": "y reskilling guiado por datos."
     }      
   },
   "proposal":{
@@ -37,8 +37,8 @@
         "centralText": "de las vacantes IT  no logran cubrirse en LATAM por año."
      },
       "text": {
-        "title": "En lugar de enfocarnos en la escasez de seniors, desarrollamos el potencial de los nuevos talentos:",
-        "leyend": "así, ayudamos a nuestros clientes a contratar talentos que antes no tenían en cuenta: Diversos, comprometidos, y con ganas de aportar a la compañía que les de su primera oportunidad."
+        "title": "En lugar de enfocarnos en la escasez de seniors, desarrollamos el potencial de sus talentos:",
+        "leyend": "Así, ayudamos a nuestros clientes a contratar, hacer upskilling o reskilling de talentos que antes no tenían en cuenta: Diversos, comprometidos, y con ganas de aportar a la compañía que les de su oportunidad de crecimiento."
       }
     },
     "cost": {
@@ -50,7 +50,7 @@
       },
       "text": {
         "title": "Disminuimos el costo de oportunidad:",
-        "leyend": "a través de un flujo constante de nuevos colaboradores, garantizamos la capacidad de producción que su compañía necesita para desbloquear nuevas oportunidades de negocio."
+        "leyend": "A través de un flujo constante de colaboradores ready to work, garantizamos la capacidad de producción que su compañía necesita para desbloquear nuevas oportunidades de negocio."
       }
     },
     "turnover": {
@@ -59,12 +59,12 @@
       },
       "text": {
         "title": "Desarrollamos experiencia laboral real:",
-        "leyend": "los proyectos en su backlog que no se logran priorizar por falta de equipo, son la oportunidad ideal para que nuestros seniors lideren el entrenamiento on-the-job de sus nuevos devs, bajo los requerimientos y tecnologías de su compañía."
+        "leyend": "Toda nuestra metodología esta basada en desarrollar proyectos reales para su compañia. Parte del backlog no priorizado, innovacion y todo proyecto que no se hace por falta de equipo, son la oportunidad ideal para que nuestros seniors lideren el entrenamiento on-the-job de sus devs, bajo los requerimientos y tecnologías de su compañía."
       }
     }
   },
   "noMoreDevs":{
-    "centralText": "Desarrollamos experiencia en nuevos devs para que logre completar sus equipos en tiempo récord.",
+    "centralText": "Desarrollamos experiencia en software developers para que nuestros clientes logren completar sus equipos en tiempo récord.",
     "carouselText":{
       "itemOne": "No hay devs con experiencia",
       "itemTwo": "Nunca llegamos a cubrir las posiciones vacantes",
@@ -103,26 +103,26 @@
   "howDo": {
     "centralText": "¿Cómo lo hacemos?",
     "carousel": {
-      "itemOne": {"title": "Discovery", "text": "Luego de relevar las metodologías, stack tecnológico y cultura de su organización, evaluamos sus proyectos en conjunto para elegir la opción más adecuada. Si es necesario, lo ayudamos en la búsqueda del talento jr."},
-      "itemTwo": {"title": "Ejecución", "text": "Durante un período de 6 meses trabajamos junto a sus devs jr en el desarrollo del software que su compañía necesita. Esto brinda a sus nuevos colaboradores la experiencia real de trabajar en sus equipos."},
-      "itemThree": {"title": "Delivery", "text": "Al finalizar el sexto mes, su empresa contará con el software listo para implementar y un equipo de 3 devs con experiencia preparado para asumir su próximo proyecto. ¡Felicitaciones! Su nueva fuente de talento especializado completó su primera entrega con éxito."}
+      "itemOne": {"title": "Discovery", "text": "Luego de relevar las metodologías, stack tecnológico y cultura de su organización, evaluamos sus proyectos en conjunto para elegir la opción más adecuada. Si es necesario, lo ayudamos en la búsqueda del talento jr.o evaluamos al equipo interno para entender que habilidades hay que mejorar."},
+      "itemTwo": {"title": "Ejecución", "text": "Durante el período de los proyectos trabajamos junto a sus devs en el desarrollo del software que su compañía necesita. Esto brinda a sus colaboradores la experiencia real de trabajar en equipos de alta performance."},
+      "itemThree": {"title": "Delivery", "text": "Al finalizar el proceso, su empresa contará con el software listo para implementar y un equipo de devs con experiencia preparado para asumir su próximo proyecto. ¡Felicitaciones! Su nueva fuente de talento especializado completó su primera entrega con éxito."}
     }
   },
   "squad": {
-    "centralText": "Trabajamos en squads para convertir principiantes en talento ready-to-work.",
+    "centralText": "Trabajamos en squads para mejorar o reentrenar a desarrolladores, integrando nuevas habilidades en sus equipos existentes o incorporando juniors listos para trabajar",
     "leaders": {
       "title": "Nuestros líderes",
-      "leyend": "Especializados y capacitados en el stack tecnológico y metodologías de su compañía, velarán por la evolución de tus juniors y se asegurarán de que el software cumpla con los requerimientos."
+      "leyend": "Especializados y capacitados en el stack tecnológico y metodologías de su compañía, velarán por la evolución de sus developers y se asegurarán de que el software cumpla con los requerimientos."
     },
     "juniors": {
-      "title": "Tus juniors",
+      "title": "Sus developers",
       "leyend": "Guiados por nuestros seniors, adquirirán experiencia real mientras desarrollan sus habilidades técnicas y blandas, y se integran a su cultura empresarial."
     }
   },
   "pep":{
     "title": "Programming Experience Platform. ",
     "textLeft": "La magia de nuestra metodología está en los datos.",
-    "textRight": "Nuestro software es el diferencial y gran aliado de nuestro staff. Convierte nuestro entrenamiento en un proceso guiado y medido, para potenciar el desarrollo de cada uno de sus juniors y lograr su mejor versión.",
+    "textRight": "Nuestro software es el diferencial y gran aliado de nuestro staff. Convierte nuestro entrenamiento en un proceso guiado y medido, para potenciar el desarrollo de cada uno de sus developers y lograr su mejor versión.",
     "dropDown": {
       "one": {
         "title": "Integración a su flujo de trabajo",
@@ -130,15 +130,15 @@
       },
       "two": {
         "title": "Insights en tiempo real",
-        "leyend": "Observa la evolución de sus juniors con métricas precisas sobre el código que desarrollan, las metodologías y herramientas de comunicación."
+        "leyend": "Observa la evolución de sus developers con métricas precisas sobre el código que desarrollan, las metodologías y herramientas de comunicación."
       },
       "three": {
         "title": "Alertas inteligentes",
-        "leyend": "Nos mantienen al tanto del desempeño de sus juniors con notificaciones que identifican comportamientos que no se alinean con las expectativas, necesarias para mejorar la calidad y coherencia del trabajo en su equipo."
+        "leyend": "Nos mantienen al tanto del desempeño de sus developers con notificaciones que identifican comportamientos que no se alinean con las expectativas, necesarias para mejorar la calidad y coherencia del trabajo en su equipo."
       },
       "four": {
         "title": "Seguimiento personalizable",
-        "leyend": "Evaluamos aspectos clave del desarrollo personal de sus juniors mediante acciones y encuestas a medida que aportan un enfoque humano en el proceso de entrenamiento."
+        "leyend": "Evaluamos aspectos clave del desarrollo personal de sus developers mediante acciones y encuestas a medida que aportan un enfoque humano en el proceso de entrenamiento."
       },
       "five": {
         "title": "Conoce a tus colaboradores",
@@ -186,7 +186,7 @@
     "cards": {
       "one": {
         "title": "Onboarding sin fricciones",
-        "leyend": "Candidatos alineados con la cultura y los frameworks de su compañía."
+        "leyend": "Developers alineados con la cultura, las metodologias y los frameworks de su compañía."
       },
       "two": {
         "title": "Foco de trabajo",
@@ -194,7 +194,7 @@
       },
       "three": {
         "title": "Capacidad productiva",
-        "leyend": "Flujo constante de candidatos que minimiza el impacto de la rotación."
+        "leyend": "Flujo constante de candidatos o upskill interno que minimiza el impacto de la rotación."
       },
       "four": {
         "title": "Fidelización de talento",
@@ -202,7 +202,7 @@
       },
       "five": {
         "title": "Proceso de TA fluído",
-        "leyend": "Simplificando la selección de talento, eliminando los puntos de dolor."
+        "leyend": "Simplificando la selección de talento tanto interno como externo, eliminando los puntos de dolor."
       },
       "six": {
         "title": "Branding",
@@ -214,7 +214,7 @@
       "textButton": "¡Contáctanos!"
     }
   },
-  "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los juniors a tus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización.",
+  "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los develoeprs a sus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización.",
   "partners":{
     "centralText": "¿CON QUIÉNES TRABAJAMOS JUNTOS PARA POTENCIAR EL NUEVO TALENTO DIGITAL?"
   },
