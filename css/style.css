@@ -1318,11 +1318,14 @@ html[lang="pt"] .intersection-seniors-junior {
 	margin-bottom: 10px;
 }
 
-#holon_iq{
+#holon_iq, #south_summit{
 	max-width: 100%;
-	width: 80%;
+	width: 40%;
 	cursor: pointer;
 	float: right;
+}
+#south_summit {
+	margin-right: 10px;
 }
 
 .animated-underline {
@@ -2002,9 +2005,9 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		gap: 2em;
 	}
 
-	#holon_iq{
+	#holon_iq, #south_summit{
 		max-width: 100%;
-		width: 90%;
+		width: 40%;
 		cursor: pointer;
 		float: left;
 	}

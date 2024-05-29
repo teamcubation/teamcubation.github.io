@@ -785,3 +785,6 @@ document.getElementById('button-redirect-youtube').addEventListener('click', fun
 $('#holon_iq').click(function(){
   window.open('https://credentials.holoniq.com/credentials/6bb15f13-623b-4c19-a87f-78874dd4680a', '_blank');
 })
+$('#south_summit').click(function(){
+  window.open('https://www.southsummit.io/madrid/winners-and-finalists/', '_blank');
+})
