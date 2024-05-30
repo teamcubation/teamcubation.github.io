@@ -34,6 +34,11 @@ h2{
 	margin-bottom: 0;
 }
 
+h2.sub {
+	font-size: 2em;
+	padding-top: 0.5em;
+}
+
 h3{
 	font-size: 3.125em;
 	margin-bottom: 0;

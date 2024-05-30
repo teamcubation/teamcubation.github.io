@@ -10,41 +10,41 @@
     "portugues": "Português"
   },
   "textLinks": {
-      "proposal": "Propuesta",
-      "problem": "Problema",
-      "cases": "Casos",
-      "process": "Proceso",
-      "methodology": "Metodología",
-      "aboutUs": "Quienes somos",
-      "contact": "Contáctanos",
-      "joinUs": "¡Unite!"
+    "proposal": "Propuesta",
+    "problem": "Problema",
+    "cases": "Casos",
+    "process": "Proceso",
+    "methodology": "Metodología",
+    "aboutUs": "Quienes somos",
+    "contact": "Contáctanos",
+    "joinUs": "¡Unite!"
   },
-  "banner":{
-    "url-local" : "http://localhost:5503/en/index.html",
+  "banner": {
+    "url-local": "http://localhost:5503/en/index.html",
     "url": "/",
     "url-en": "/en",
     "url-pt": "/pt",
-    "centralText" :{
+    "centralText": {
       "lineOne": "On the job upskilling",
-      "lineTwo": "y reskilling guiado por datos."
-    }      
+      "lineTwo": "y reskilling guiado por datos.",
+      "lineThree": "Porque no es lo mismo saber que saber hacer."
+    }
   },
-  "proposal":{
+  "proposal": {
     "centralText": "Resolvimos el problema de escasez de talento IT de las grandes compañías.",
-    
     "people": {
       "title": {
         "centralText": "de las vacantes IT  no logran cubrirse en LATAM por año."
-     },
+      },
       "text": {
         "title": "En lugar de enfocarnos en la escasez de seniors, desarrollamos el potencial de sus talentos:",
         "leyend": "Así, ayudamos a nuestros clientes a contratar, hacer upskilling o reskilling de talentos que antes no tenían en cuenta: Diversos, comprometidos, y con ganas de aportar a la compañía que les de su oportunidad de crecimiento."
       }
     },
     "cost": {
-      "title":{
-        "centralText":"US$", 
-        "text":{
+      "title": {
+        "centralText": "US$",
+        "text": {
           "title": "en promedio, son los costos relacionados a cada vacante sin cubrir."
         }
       },
@@ -54,7 +54,7 @@
       }
     },
     "turnover": {
-      "title":{
+      "title": {
         "centralText": "de los CTOs afirman que la rotación está perjudicando al equipo."
       },
       "text": {
@@ -63,9 +63,9 @@
       }
     }
   },
-  "noMoreDevs":{
+  "noMoreDevs": {
     "centralText": "Desarrollamos experiencia en software developers para que nuestros clientes logren completar sus equipos en tiempo récord.",
-    "carouselText":{
+    "carouselText": {
       "itemOne": "No hay devs con experiencia",
       "itemTwo": "Nunca llegamos a cubrir las posiciones vacantes",
       "itemThree": "Se nos va la gente",
@@ -73,15 +73,14 @@
       "itemFive": "Nuestros seniors no tienen tiempo de capacitar"
     },
     "inlineText": "¿Suena conocido?",
-    "contactButton": "¡Contáctanos!" 
+    "contactButton": "¡Contáctanos!"
   },
-  "theWheel":{
+  "theWheel": {
     "centralText": "Ni un coding school, ni una software factory. Una solución a medida de las grandes compañías.",
-    "veenDiagram":{
+    "veenDiagram": {
       "seniors": {
         "lineOne": "Con experiencia",
         "lineTwo": "en desarrollo"
-
       },
       "juniors": {
         "lineOne": "Con ganas",
@@ -90,7 +89,7 @@
       "software": {
         "lineOne": "que necesitas"
       },
-      "intersections":{
+      "intersections": {
         "one": "Software Factory",
         "two": "No existe",
         "three": "Coding School"
@@ -103,9 +102,18 @@
   "howDo": {
     "centralText": "¿Cómo lo hacemos?",
     "carousel": {
-      "itemOne": {"title": "Discovery", "text": "Luego de relevar las metodologías, stack tecnológico y cultura de su organización, evaluamos sus proyectos en conjunto para elegir la opción más adecuada. Si es necesario, lo ayudamos en la búsqueda del talento jr.o evaluamos al equipo interno para entender que habilidades hay que mejorar."},
-      "itemTwo": {"title": "Ejecución", "text": "Durante el período de los proyectos trabajamos junto a sus devs en el desarrollo del software que su compañía necesita. Esto brinda a sus colaboradores la experiencia real de trabajar en equipos de alta performance."},
-      "itemThree": {"title": "Delivery", "text": "Al finalizar el proceso, su empresa contará con el software listo para implementar y un equipo de devs con experiencia preparado para asumir su próximo proyecto. ¡Felicitaciones! Su nueva fuente de talento especializado completó su primera entrega con éxito."}
+      "itemOne": {
+        "title": "Discovery",
+        "text": "Luego de relevar las metodologías, stack tecnológico y cultura de su organización, evaluamos sus proyectos en conjunto para elegir la opción más adecuada. Si es necesario, lo ayudamos en la búsqueda del talento jr.o evaluamos al equipo interno para entender que habilidades hay que mejorar."
+      },
+      "itemTwo": {
+        "title": "Ejecución",
+        "text": "Durante el período de los proyectos trabajamos junto a sus devs en el desarrollo del software que su compañía necesita. Esto brinda a sus colaboradores la experiencia real de trabajar en equipos de alta performance."
+      },
+      "itemThree": {
+        "title": "Delivery",
+        "text": "Al finalizar el proceso, su empresa contará con el software listo para implementar y un equipo de devs con experiencia preparado para asumir su próximo proyecto. ¡Felicitaciones! Su nueva fuente de talento especializado completó su primera entrega con éxito."
+      }
     }
   },
   "squad": {
@@ -119,7 +127,7 @@
       "leyend": "Guiados por nuestros seniors, adquirirán experiencia real mientras desarrollan sus habilidades técnicas y blandas, y se integran a su cultura empresarial."
     }
   },
-  "pep":{
+  "pep": {
     "title": "Programming Experience Platform. ",
     "textLeft": "La magia de nuestra metodología está en los datos.",
     "textRight": "Nuestro software es el diferencial y gran aliado de nuestro staff. Convierte nuestro entrenamiento en un proceso guiado y medido, para potenciar el desarrollo de cada uno de sus developers y lograr su mejor versión.",
@@ -150,21 +158,21 @@
       }
     }
   },
-  "team":{
+  "team": {
     "centralText": "Nuestro Equipo",
-    "mariano":{
+    "mariano": {
       "leyend": " Imagino a Teamcubation resolviendo el problema gigante de las compañias y brindando oportunidades de primer empleo a miles de personas.",
       "position": "CEO"
     },
-    "diego":{
+    "diego": {
       "leyend": "Imagino seguir creciendo y escalando con excelencia",
       "position": "COO"
     },
     "agustin": {
       "leyend": "Imagino que Teamcubation será reconocida por democratizar el acceso al trabajo en la industria del software.",
       "position": "Head of Training"
-    }, 
-    "tapi":{
+    },
+    "tapi": {
       "leyend": "Imagino que Teamcubation definirá el estándar integral para entrenar y hacer onboarding de nuevos talentos en empresas de todo el mundo.",
       "position": "CTO"
     },
@@ -175,13 +183,13 @@
     "flor": {
       "position": "Head of People",
       "leyend": "Imagino un lugar increible para trabajar, a donde la gente siempre quiera volver."
-    }, 
+    },
     "tomas": {
       "position": "CFO",
-      "leyend":   "Imagino que Teamcubation será un modelo ejemplar de eficiencia operativa, agilidad estratégica y cultura colaborativa."  
+      "leyend": "Imagino que Teamcubation será un modelo ejemplar de eficiencia operativa, agilidad estratégica y cultura colaborativa."
     }
   },
-  "results":{
+  "results": {
     "title": "Los resultados",
     "cards": {
       "one": {
@@ -209,27 +217,27 @@
         "leyend": "Impacto positivo en el desarrollo de marca empleadora y cultura organizacional."
       }
     },
-    "carouselInfo":{
+    "carouselInfo": {
       "centralText": "¡Nunca más pierda oportunidades por falta de talento IT!",
       "textButton": "¡Contáctanos!"
     }
   },
   "footerText": "Y como ya trabajamos en equipo, hay líderes con experiencia que ya conocen la cultura y las formas de trabajo de la compañía, al finalizar y traspasar los develoeprs a sus equipos confirmamos un nuevo squad para seguir asegurando la capacidad productiva de tu organización.",
-  "partners":{
+  "partners": {
     "centralText": "¿CON QUIÉNES TRABAJAMOS JUNTOS PARA POTENCIAR EL NUEVO TALENTO DIGITAL?"
   },
-  "_team":{
+  "_team": {
     "centralText": "EL EQUIPO",
     "text": "Después de años en la industria y en la academia sentimos que faltaba un engranaje que vinculara ambos mundos. El problema está claro y a la vista, enseñamos a mucha gente pero las compañías siguen con faltante de personas que cubran los puestos que necesitan para lograr sus objetivos."
   },
   "contact": {
-    "description":{
+    "description": {
       "centralText": "ATENCIÓN!",
       "centralTextTwo": "Este formulario es para compañías!",
       "text": {
         "juniors": {
           "verticalText": "JUNIORS",
-          "text":{
+          "text": {
             "boldTextOne": "",
             "standardTextOne": "Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando",
             "linkJuniors": "postulate acá",
@@ -238,7 +246,7 @@
         },
         "seniors": {
           "verticalText": "SENIORS",
-          "text":{
+          "text": {
             "boldTextOne": "Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,",
             "standardTextOne": "andá a ",
             "linkJuniors": "este link y postulate a la búsqueda que más se adecúe a tu perfil",
@@ -246,15 +254,15 @@
           }
         },
         "noCoders": {
-          "verticalText":  "NO_CODERS",
-          "text":{
+          "verticalText": "NO_CODERS",
+          "text": {
             "boldText": "Si todavía no aprendiste a programar",
             "standardText": " te rogamos que lo hagas, te conviertas en developer y después vengas a postularte! Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear."
           }
         }
       }
     },
-    "form":{
+    "form": {
       "centralText": "CONTACTANOS",
       "name": "Nombre",
       "organization": "Compañía",
@@ -262,7 +270,7 @@
         "label": "Teléfono",
         "country": "País",
         "area": "Área",
-        "number" : "Número"
+        "number": "Número"
       },
       "email": "E-mail",
       "reason": "Dejanos tu mensaje",
@@ -275,7 +283,7 @@
           "no-exp": "No sé programar y quiero aprender",
           "other": "Otro"
         }
-      }, 
+      },
       "btn_text": "Enviar",
       "btn_sending": "Enviando...",
       "submit-response": {
@@ -287,10 +295,10 @@
   "devsJuniors": {
     "centralText": "DEVS JUNIORS",
     "subtitle": {
-      "greyText":{
+      "greyText": {
         "lineOne": "Somos una máquina del tiempo y hacemos que tengas la experiencia de 2 años en 6 meses."
       },
-      "standardText":{
+      "standardText": {
         "lineOne": "La máquina del tiempo existe.",
         "lineTwo": "Hola! Somos Teamcubation."
       }
@@ -301,10 +309,10 @@
   "devsSeniors": {
     "centralText": "DEVS CON EXPERIENCIA",
     "subtitle": {
-      "blueText":{
+      "blueText": {
         "lineOne": "Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: "
       },
-      "standardText":{
+      "standardText": {
         "lineOne": "aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."
       }
     },
