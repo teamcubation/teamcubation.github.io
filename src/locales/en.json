@@ -37,8 +37,8 @@
         "centralText": "of IT vacancies go unfilled in Latin America per year."
       },
       "text": {
-        "title": "Instead of focusing on the shortage of seniors, we focus on developing potential:",
-        "leyend": "Thus, we help our clients hire, upskill, or reskill talents they hadn't considered before: diverse, committed, and eager to contribute to the company that gives them their growth opportunity."
+        "title": "We guarantee the constant production capacity your company needs to unlock new business opportunities.",
+        "leyend": "Our entire methodology is based on developing real projects. Unprioritized backlog, innovation, and any projects that are not undertaken due to lack of team are the ideal opportunity for our seniors to lead on-the-job training for your developers, under your company's requirements and technologies."
       }
     },
     "cost": {
@@ -96,6 +96,7 @@
       }
     },
     "centralTextTwo": "We're making it happen",
+    "secondaryTextTwo": "Discover how we have collaborated with Mercado Libre, not only by developing software but also by developing talent that can become part of their teams with exceptional results.",
     "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation_en.mp4",
     "moreTestimonials": "See more testimonials"
   },

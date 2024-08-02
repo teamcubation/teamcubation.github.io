@@ -37,8 +37,8 @@
         "centralText": "das vagas de TI não são preenchidas na América Latina por ano."
       },
       "text": {
-        "title": "Em vez de focar na escassez de seniors, desenvolvemos o potencial dos talentos:",
-        "leyend": "Assim, ajudamos nossos clientes a contratar, fazer upskilling ou reskilling de talentos que antes não eram considerados: diversos, comprometidos e dispostos a contribuir com a empresa que lhes dá a oportunidade de crescimento."
+        "title": "Garantimos a capacidade de produção constante que sua empresa precisa para desbloquear novas oportunidades de negócios.",
+        "leyend": "Toda a nossa metodologia é baseada no desenvolvimento de projetos reais. Backlog não priorizado, inovação e qualquer projeto que não seja realizado por falta de equipe são a oportunidade ideal para nossos profissionais seniores liderarem o treinamento no trabalho para seus desenvolvedores, de acordo com os requisitos e tecnologias da sua empresa."
       }
     },
     "cost": {
@@ -96,6 +96,7 @@
       }
     },
     "centralTextTwo": "Estamos fazendo acontecer",
+    "secondaryTextTwo": "Descubra como colaboramos com o Mercado Livre, não apenas desenvolvendo software, mas também desenvolvendo talentos que podem fazer parte de suas equipes com resultados excepcionais",
     "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation_en.mp4",
     "moreTestimonials": "Veja mais depoimentos"
   },

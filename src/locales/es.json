@@ -1,6 +1,6 @@
 {
-  "title": "Teamcubation - La primera empresa de entrenamiento de software developers",
-  "description": "Teamcubation es el engranaje faltante entre el sistema educativo y laboral. Solucionamos la escasez de talento en la industria digital incubando, haciendo upskill y entrenando equipos de desarrollo para desarrollar experiencias en las personas",
+  "title": "Teamcubation - La software factory que también fabrica talento",
+  "description": "En Teamcubation no sólo desarrollamos software; también incubamos el talento que impulsará tus futuros proyectos. Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo.",
   "lang": {
     "text": "es",
     "textButton": "Español",
@@ -27,11 +27,11 @@
     "centralText": {
       "lineOne": "Somos la software factory que fabrica talento",
       "lineTwo": "",
-      "lineThree": "Desarrollamos el sofware que necesitás hoy con tu equipo del mañana"
+      "lineThree": "Desarrollamos el sofware que necesitás hoy con tu equipo del mañana."
     }
   },
   "proposal": {
-    "centralText": "Más que una software factory: tu socio en el crecimiento de tu capacidad de desarrollo.",
+    "centralText": "Más que una software factory: socios en el crecimiento de tu capacidad de desarrollo.",
     "people": {
       "title": {
         "centralText": "de las vacantes IT no logran cubrirse en LATAM por año."
@@ -68,7 +68,7 @@
     "carouselText": {
       "itemOne": "No puedo desarrollar este proyecto sin más gente",
       "itemTwo": "Perdemos oportunidades",
-      "itemThree": "Me falta tiempo para encontrar y capacitar a la gente que necesito",
+      "itemThree": "Me falta tiempo para capacitar a la gente que necesito",
       "itemFour": "La falta de equipo nos impide tomar ciertos proyectos",
       "itemFive": "Nuestros seniors no tienen tiempo de capacitar"
     },
