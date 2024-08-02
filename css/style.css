@@ -2005,6 +2005,9 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 }
 
 @media only screen and (max-width: 767px) {
+	#proposalteam{
+		margin-bottom: 4em;
+	}
 	.footer-navigate{
 		flex-direction: column;
 		gap: 2em;
@@ -2288,7 +2291,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		position: relative;
 		float: right;
 		right: 0;
-		width: 100px;
+		/* width: 100px; */
 		border-radius: 20px;
 	}
 
