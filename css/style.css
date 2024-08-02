@@ -422,7 +422,7 @@ nav{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 5em;
+	gap: 2em;
 	max-width: 1440px ;	
 	padding: var(--container-padding);
 	padding-top: 10em;

@@ -417,58 +417,58 @@ window.addEventListener('scroll', (e) => {
   const currentPositionScroll = window.scrollY;
   const direction = scrollDirection(lastScrollTop, currentPositionScroll);
 
-  if(peopleNumber.getBoundingClientRect().top <= 500 && incrementAmountPeopleNumber.step < 2){
-    const text={prev: '', next: '%'}
-    if(!incrementPeopleAnimation.animationInProgress){
-      incrementPeopleAnimation.play(
-        peopleNumber, 
-        incrementAmountPeopleNumber.counterValue, 
-        incrementAmountPeopleNumber.targetValue, 
-        1, 
-        text
-      )  
-      incrementAmountPeopleNumber.step += 1;
-      incrementAmountPeopleNumber.counterValue+= incrementAmountPeopleNumber.targetValue;
-      incrementAmountPeopleNumber.targetValue+= incrementAmountPeopleNumber.targetValue;  
-    }
-  }
+  // if(peopleNumber.getBoundingClientRect().top <= 500 && incrementAmountPeopleNumber.step < 2){
+  //   const text={prev: '', next: '%'}
+  //   if(!incrementPeopleAnimation.animationInProgress){
+  //     incrementPeopleAnimation.play(
+  //       peopleNumber, 
+  //       incrementAmountPeopleNumber.counterValue, 
+  //       incrementAmountPeopleNumber.targetValue, 
+  //       1, 
+  //       text
+  //     )  
+  //     incrementAmountPeopleNumber.step += 1;
+  //     incrementAmountPeopleNumber.counterValue+= incrementAmountPeopleNumber.targetValue;
+  //     incrementAmountPeopleNumber.targetValue+= incrementAmountPeopleNumber.targetValue;  
+  //   }
+  // }
 
-  if(costTopNumber.getBoundingClientRect().top <= 800 && incrementAmountCostNumber.step < 3){
-    if(!incrementCostAnimation.animationInProgress){
-      incrementCostAnimation.play(
-        costTopNumber, 
-        incrementAmountCostNumber.counterValue, 
-        incrementAmountCostNumber.targetValue, 
-        200, 
-      )  
-      incrementAmountCostNumber.step += 1;
-      incrementAmountCostNumber.counterValue+= incrementAmountCostNumber.acumulate;
-      incrementAmountCostNumber.targetValue+= incrementAmountCostNumber.acumulate;  
-    }
-  }
+  // if(costTopNumber.getBoundingClientRect().top <= 800 && incrementAmountCostNumber.step < 3){
+  //   if(!incrementCostAnimation.animationInProgress){
+  //     incrementCostAnimation.play(
+  //       costTopNumber, 
+  //       incrementAmountCostNumber.counterValue, 
+  //       incrementAmountCostNumber.targetValue, 
+  //       200, 
+  //     )  
+  //     incrementAmountCostNumber.step += 1;
+  //     incrementAmountCostNumber.counterValue+= incrementAmountCostNumber.acumulate;
+  //     incrementAmountCostNumber.targetValue+= incrementAmountCostNumber.acumulate;  
+  //   }
+  // }
 
-  if(turnoverNumber.getBoundingClientRect().top <= 800 && incrementAmountTurnOverNumber.step < 3){
-    const text={prev: '', next: '%'}
-    if(!incrementTurnOverAnimation.animationInProgress){
-      incrementTurnOverAnimation.play(
-        turnoverNumber, 
-        incrementAmountTurnOverNumber.counterValue, 
-        incrementAmountTurnOverNumber.targetValue, 
-        1,
-        text 
-      )  
-      incrementAmountTurnOverNumber.step += 1;
-      incrementAmountTurnOverNumber.counterValue+= incrementAmountTurnOverNumber.acumulate;
-      incrementAmountTurnOverNumber.targetValue+= incrementAmountTurnOverNumber.acumulate;  
-    }
-  }
+  // if(turnoverNumber.getBoundingClientRect().top <= 800 && incrementAmountTurnOverNumber.step < 3){
+  //   const text={prev: '', next: '%'}
+  //   if(!incrementTurnOverAnimation.animationInProgress){
+  //     incrementTurnOverAnimation.play(
+  //       turnoverNumber, 
+  //       incrementAmountTurnOverNumber.counterValue, 
+  //       incrementAmountTurnOverNumber.targetValue, 
+  //       1,
+  //       text 
+  //     )  
+  //     incrementAmountTurnOverNumber.step += 1;
+  //     incrementAmountTurnOverNumber.counterValue+= incrementAmountTurnOverNumber.acumulate;
+  //     incrementAmountTurnOverNumber.targetValue+= incrementAmountTurnOverNumber.acumulate;  
+  //   }
+  // }
 
-  const bannerContentToTop = bannerContent.getBoundingClientRect().top; 
-  if(bannerContentToTop <= 200 && direction == 'down'){
-    navBar[0].classList.add('nav-to-top');
-  }else{
-    navBar[0].classList.remove('nav-to-top');
-  }
+  // const bannerContentToTop = bannerContent.getBoundingClientRect().top; 
+  // if(bannerContentToTop <= 200 && direction == 'down'){
+  //   navBar[0].classList.add('nav-to-top');
+  // }else{
+  //   navBar[0].classList.remove('nav-to-top');
+  // }
 
   // if(window.scrollY < 500){
   //   // noMoreDevsAnimation.animate('reverse');
