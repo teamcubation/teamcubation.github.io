@@ -25,9 +25,9 @@
     "url-en": "/en",
     "url-pt": "/pt",
     "centralText": {
-      "lineOne": "Somos la software factory que fabrica talento.",
+      "lineOne": "Somos la primera software+team factory.",
       "lineTwo": "",
-      "lineThree": "Desarrollamos el sofware que necesitás hoy con tu equipo del mañana."
+      "lineThree": "Construímos el software que necesitas hoy mientras incubamos tu equipo del mañana."
     }
   },
   "proposal": {
@@ -37,7 +37,7 @@
         "centralText": "de las vacantes IT no logran cubrirse en LATAM por año."
       },
       "text": {
-        "title": "En Teamcubation no sólo desarrollamos software, también incubamos el talento que impulsará tus futuros proyectos",
+        "title": "En Teamcubation no sólo desarrollamos software, también incubamos el talento que impulsará tus futuros proyectos.",
         "leyend": "Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo. Al finalizar cada proyecto, no sólo recibirás nuevo software desarrollado de acuerdo a tus metodologías y cultura de trabajo, también tendrás la opción de contratar a los nuevos developers que ya contarán con la experiencia que necesitan para trabajar en tu compañía, listos para integrarse a tus equipos de desarrollo interno sin fricción."
       }
     },
@@ -95,7 +95,7 @@
         "three": "Coding School"
       }
     },
-    "centralTextTwo": "Historias de éxito con un toque personal",
+    "centralTextTwo": "Historias de éxito con un toque personal.",
     "secondaryTextTwo": "Descubre cómo hemos colaborado con Mercado Libre, no solo desarrollando software, sino también desarrollando talento para que pueda formar parte de sus equipos con resultados excepcionales.",
     "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4",
     "moreTestimonials": "Ver mas testimonios"
@@ -195,15 +195,15 @@
     "cards": {
       "one": {
         "title": "Software a medida",
-        "leyend": "Software desarrollado acorde a las necesidades y estándares específicos de su empresa."
+        "leyend": "Software desarrollado acorde a las necesidades y estándares específicos de tu empresa."
       },
       "two": {
         "title": "Onboarding sin fricciones",
-        "leyend": "Developers listos para ser incorporados de manera definitiva a tu equipo alineados con la cultura, las metodologias y los frameworks de su compañía."
+        "leyend": "Developers listos para ser incorporados de manera definitiva a tu equipo alineados con la cultura, las metodologías y los frameworks de tu compañía."
       },
       "three": {
         "title": "Foco de trabajo",
-        "leyend": "Sus seniors dedicados 100% a generar resultados para su negocio."
+        "leyend": "Sus seniors dedicados 100% a generar resultados para tu negocio."
       },
       "four": {
         "title": "Fidelización de talento",
