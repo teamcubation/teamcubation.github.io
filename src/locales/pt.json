@@ -1,6 +1,6 @@
 {
-  "title": "Teamcubation - A Primeira Empresa de Treinamento de Desenvolvedores de Software",
-  "description": "Teamcubation é o elo perdido entre os sistemas educacional e de trabalho. Abordamos a escassez de talentos na indústria digital incubando e treinando equipes de desenvolvimento para transformar juniores em recursos experientes.",
+  "title": "Teamcubation - A fábrica de software que também fabrica talentos",
+  "description": "Na Teamcubation não apenas desenvolvemos software; também incubamos o talento que impulsionará seus projetos futuros. Oferecemos um serviço integral que combina desenvolvimento de software chave na mão com a formação de novos membros para sua equipe.",
   "lang": {
     "text": "pt",
     "textButton": "Português",
@@ -15,9 +15,9 @@
     "cases": "Casos",
     "process": "Processo",
     "methodology": "Metodologia",
-    "aboutUs": "Sobre Nós",
-    "contact": "Contate-Nos",
-    "joinUs": "¡Unite!"
+    "aboutUs": "Quem somos",
+    "contact": "Contate-nos",
+    "joinUs": "Junte-se a nós!"
   },
   "banner": {
     "url-local": "http://localhost:5503/en/index.html",
@@ -25,20 +25,20 @@
     "url-en": "/en",
     "url-pt": "/pt",
     "centralText": {
-      "lineOne": "Upskilling e reskilling ",
-      "lineTwo": "on-the-job guiados por dados.",
-      "lineThree": "Porque saber não é o mesmo que saber fazer."
+      "lineOne": "Somos a primeira software+team factory.",
+      "lineTwo": "",
+      "lineThree": "Construímos o software que você precisa hoje enquanto incubamos sua equipe de amanhã."
     }
   },
   "proposal": {
-    "centralText": "Resolvemos o problema de escassez de talentos de TI nas grandes empresas.",
+    "centralText": "Mais do que uma fábrica de software: parceiros no crescimento da sua capacidade de desenvolvimento.",
     "people": {
       "title": {
-        "centralText": "das vagas de TI não são preenchidas na América Latina por ano."
+        "centralText": "das vagas de TI não conseguem ser preenchidas na LATAM por ano."
       },
       "text": {
-        "title": "Garantimos a capacidade de produção constante que sua empresa precisa para desbloquear novas oportunidades de negócios.",
-        "leyend": "Toda a nossa metodologia é baseada no desenvolvimento de projetos reais. Backlog não priorizado, inovação e qualquer projeto que não seja realizado por falta de equipe são a oportunidade ideal para nossos profissionais seniores liderarem o treinamento no trabalho para seus desenvolvedores, de acordo com os requisitos e tecnologias da sua empresa."
+        "title": "Na Teamcubation não apenas desenvolvemos software, também incubamos o talento que impulsionará seus projetos futuros.",
+        "leyend": "Oferecemos um serviço integral que combina desenvolvimento de software chave na mão com a formação de novos membros para sua equipe. Ao finalizar cada projeto, você não apenas receberá um novo software desenvolvido de acordo com suas metodologias e cultura de trabalho, mas também terá a opção de contratar os novos desenvolvedores que já terão a experiência necessária para trabalhar em sua empresa, prontos para se integrar às suas equipes de desenvolvimento interno sem atrito."
       }
     },
     "cost": {
@@ -49,8 +49,8 @@
         }
       },
       "text": {
-        "title": "Reduzimos os custos de oportunidade:",
-        "leyend": "Através de um fluxo constante de colaboradores prontos para trabalhar, garantimos a capacidade de produção que a sua empresa precisa para desbloquear novas oportunidades de negócios."
+        "title": "Desenvolvemos soluções de software e, ao mesmo tempo, preparamos os futuros colaboradores para sua empresa",
+        "leyend": "Nossas equipes incluem seniors experientes e novos desenvolvedores com pouca ou nenhuma experiência."
       }
     },
     "turnover": {
@@ -58,258 +58,265 @@
         "centralText": "dos CTOs afirmam que a rotatividade está prejudicando a equipe."
       },
       "text": {
-        "title": "Desenvolvemos experiência de trabalho real:",
-        "leyend": "A nossa metodologia é baseada na entrega de valor através do desenvolvimento de projetos reais para a sua empresa. Desde um backlog não priorizado, iniciativas de inovação ou qualquer projeto que não seja realizado devido à falta de equipe são oportunidades para que os nossos seniors liderem o treinamento on-the-job dos desenvolvedores, seguindo os requisitos e tecnologias da sua empresa."
+        "title": "Ao finalizar cada projeto, você não apenas receberá um novo software alinhado com suas metodologias e cultura de trabalho",
+        "leyend": "Você também terá a opção de incorporar os juniores já treinados e prontos para se integrar às suas equipes de desenvolvimento interno sem atrito."
       }
     }
   },
   "noMoreDevs": {
-    "centralText": "Fornecemos experiência aos desenvolvedores para que os nossos clientes possam completar as suas equipes em tempo recorde!",
+    "centralText": "Na Teamcubation, entendemos que o desenvolvimento de software é também uma oportunidade para formar futuros membros valiosos da sua equipe.",
     "carouselText": {
-      "itemOne": "Não há devs experientes",
-      "itemTwo": "Nunca preenchemos vagas",
-      "itemThree": "Estamos perdendo pessoas",
-      "itemFour": "Estamos perdendo oportunidades",
-      "itemFive": "Nossos seniores não têm tempo para treinar"
+      "itemOne": "Não consigo desenvolver este projeto sem mais gente",
+      "itemTwo": "Perdemos oportunidades",
+      "itemThree": "Falta tempo para treinar as pessoas que preciso",
+      "itemFour": "A falta de equipe nos impede de aceitar certos projetos",
+      "itemFive": "Nossos seniors não têm tempo para treinar"
     },
-    "inlineText": "Soa familiar?",
-    "contactButton": "Contate-Nos!"
+    "inlineText": "Parece familiar?",
+    "contactButton": "Contate-nos!"
   },
   "theWheel": {
-    "centralText": "Não somos uma escola de programação, nem uma fábrica de software. Somos uma solução personalizada para grandes empresas!",
+    "centralText": "Uma solução sob medida para grandes empresas.",
     "veenDiagram": {
       "seniors": {
-        "lineOne": "Desenvolvedores",
-        "lineTwo": "Experientes"
+        "lineOne": "Com experiência",
+        "lineTwo": "em desenvolvimento"
       },
       "juniors": {
-        "lineOne": "Ansiosos",
-        "lineTwo": "para Aprender"
+        "lineOne": "Com vontade",
+        "lineTwo": "de aprender"
       },
       "software": {
-        "lineOne": "O que você precisa"
+        "lineOne": "que você precisa"
       },
       "intersections": {
-        "one": "Fábrica de Software",
-        "two": "Inexistente",
-        "three": "Escola de Programação"
+        "one": "",
+        "two": "",
+        "three": "Coding School"
       }
     },
-    "centralTextTwo": "Estamos fazendo acontecer",
-    "secondaryTextTwo": "Descubra como colaboramos com o Mercado Livre, não apenas desenvolvendo software, mas também desenvolvendo talentos que podem fazer parte de suas equipes com resultados excepcionais",
-    "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation_en.mp4",
-    "moreTestimonials": "Veja mais depoimentos"
+    "centralTextTwo": "Histórias de sucesso com um toque pessoal.",
+    "secondaryTextTwo": "Descubra como colaboramos com o Mercado Livre, não apenas desenvolvendo software, mas também desenvolvendo talentos para que possam fazer parte de suas equipes com resultados excepcionais.",
+    "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4",
+    "moreTestimonials": "Ver mais depoimentos"
   },
   "howDo": {
     "centralText": "Como fazemos isso?",
     "carousel": {
       "itemOne": {
-        "title": "Descoberta",
-        "text": "Após avaliar as metodologias, stack tecnológico e cultura da sua empresa, avaliamos os seus projetos em conjunto para escolher a opção mais adequada. Se necessário, ajudamos na busca de talentos juniores ou avaliamos a equipe interna para entender quais habilidades precisam ser melhoradas."
+        "title": "Desenvolvimento de software chave na mão",
+        "text": "Criamos soluções personalizadas que atendem às suas necessidades específicas."
       },
       "itemTwo": {
-        "title": "Execução",
-        "text": "Durante o período dos projetos, trabalhamos junto com os seus desenvolvedores no desenvolvimento do software que a sua empresa necessita. Isso proporciona aos seus colaboradores a experiência real de trabalhar em equipes de alta performance."
+        "title": "Formação em ação",
+        "text": "Nossos juniores, que já possuem habilidades de programação, aceleram a aquisição de experiência no desenvolvimento de software real por meio de nossa metodologia e tecnologia proprietárias e acompanhados por nossos seniors."
       },
       "itemThree": {
-        "title": "Entrega",
-        "text": "Ao final do processo, a sua empresa terá o software pronto para implementar e uma equipe de desenvolvedores experientes preparados para assumir seu próximo projeto. Parabéns! A sua nova fonte de talento especializado completou sua primeira entrega com sucesso."
+        "title": "Seleção de talentos",
+        "text": "Escolhemos em conjunto os juniores que melhor se adaptam à sua cultura para que façam parte de nossa equipe. No final do projeto, você pode optar por contratar os juniores já treinados que atendem aos seus padrões para incorporá-los definitivamente à sua equipe."
       }
     }
   },
   "squad": {
-    "centralText": "Trabalhamos em squads para melhorar ou requalificar desenvolvedores, integrando novas habilidades em suas equipes existentes ou incorporando juniores prontos para trabalhar.",
+    "centralText": "Tecnologia e metodologia para potencializar seus potenciais futuros colaboradores.\n",
     "leaders": {
       "title": "Nossos líderes",
-      "leyend": "Especializados e treinados na pilha tecnológica e metodologias de sua empresa, eles supervisionarão a evolução de seus juniores e garantirão que o software atenda aos requisitos."
+      "leyend": "Especializados e treinados na pilha de tecnologia e metodologias da sua empresa, garantirão que o software atenda aos requisitos com qualidade e supervisionarão a evolução dos desenvolvedores."
     },
     "juniors": {
-      "title": "Seus desenvolvedores",
-      "leyend": "Orientados por nossos seniores, eles ganharão experiência real enquanto desenvolvem habilidades técnicas e interpessoais, integrando-se à cultura de sua empresa."
+      "title": "Seus futuros desenvolvedores",
+      "leyend": "Orientados por nossos seniors, eles adquirirão experiência real enquanto desenvolvem suas habilidades técnicas e interpessoais e se integram à sua cultura empresarial."
     }
   },
   "pep": {
     "title": "Plataforma de Experiência em Programação. ",
-    "textLeft": "A magia da nossa metodologia está nos dados.",
-    "textRight": "O nosso software é o diferenciador e um grande aliado da nossa equipe. Ele transforma nosso treinamento em um processo guiado e medido para aprimorar o desenvolvimento de cada um de seus juniores e alcançar a melhor versão deles.",
+    "textLeft": "A mágica da nossa metodologia está nos dados.",
+    "textRight": "Enquanto a equipe trabalha, coletamos e analisamos dados concretos para avaliar e melhorar as habilidades de nossos desenvolvedores juniores com a ajuda de nossa Plataforma de Experiência em Programação (PEP). Isso permite que nossos seniors apoiem cada um de forma personalizada para garantir que se alinhem com a cultura, metodologias e tecnologias de suas equipes, ajudando-os a adquirir a experiência necessária para se juntar a elas e serem produtivos desde o primeiro dia.",
     "dropDown": {
       "one": {
         "title": "Integração ao seu fluxo de trabalho",
-        "leyend": "O PEP se integra às suas principais ferramentas de desenvolvimento como Jira, GitLab, Github, Slack, Discord e mais, para coletar dados-chave e otimizar o desempenho da sua equipe."
-      },
-      "two": {
-        "title": "Visões em tempo real",
-        "leyend": "Observe a evolução de seus juniores com métricas precisas sobre o código que desenvolvem, metodologias e ferramentas de comunicação."
-      },
-      "three": {
-        "title": "Alertas inteligentes",
-        "leyend": "Acompanhe o desempenho de seus juniores com notificações que identificam comportamentos desalinhados com as expectativas, essenciais para melhorar a qualidade e consistência do trabalho da sua equipe."
-      },
-      "four": {
-        "title": "Rastreamento personalizável",
-        "leyend": "Avalie aspectos-chave do desenvolvimento pessoal de seus juniores por meio de ações e pesquisas personalizadas que fornecem um foco humano no processo de treinamento."
-      },
-      "five": {
-        "title": "Conheça seus colaboradores",
-        "leyend": "Através de testes cognitivos e comportamentais, como a Análise de Desenvolvimento Pessoal (PDA), obtemos uma visão clara dos perfis de seus colaboradores para gerenciar seus talentos, desenvolver habilidades e trazer à tona a melhor versão deles."
-      },
-      "six": {
-        "title": "Pulso emocional",
-        "leyend": "A integração com IA analisa respostas e detecta automaticamente os sentimentos e emoções dos membros da equipe para intervir prontamente quando necessário, garantindo um ambiente de trabalho positivo e produtivo."
-      }
-    }
-  },
-  "team": {
-    "centralText": "Nossa Equipe",
-    "mariano": {
-      "leyend": " Imagino a Teamcubation resolviendo el problema gigante de las compañias y brindando oportunidades de primer empleo a miles de personas.",
-      "position": "CEO"
-    },
-    "diego": {
-      "leyend": "Imagino continuar a crescer e escalar com excelência.",
-      "position": "COO"
-    },
-    "agustin": {
-      "leyend": "Imagino a Teamcubation sendo reconhecida por democratizar o acesso ao trabalho na indústria de software.",
-      "position": "Chefe de Treinamento"
-    },
-    "tapi": {
-      "leyend": "Imagino a Teamcubation estabelecendo o padrão abrangente para treinamento e integração de novos talentos em empresas em todo o mundo.",
-      "position": "CTO"
-    },
-    "eze": {
-      "position": "Chefe de Dados & Análise",
-      "leyend": "Imagino os dados, usados de forma transparente e colaborativa, sendo o motor de inovação que nos permite elevar o padrão na integração de talentos em todo o mundo."
-    },
-    "flor": {
-      "position": "Chefe de Pessoas",
-      "leyend": "Imagino um lugar incrível para trabalhar, onde as pessoas sempre querem voltar."
-    },
-    "tomas": {
-      "position": "CFO",
-      "leyend": "Imagino a Teamcubation sendo um modelo exemplar de eficiência operacional, agilidade estratégica e cultura colaborativa."
-    }
-  },
-  "results": {
-    "title": "Os Resultados",
-    "cards": {
-      "one": {
-        "title": "Integração Sem Atritos",
-        "leyend": "Candidatos alinhados com a cultura e frameworks da sua empresas"
-      },
-      "two": {
-        "title": "Foco no Trabalho",
-        "leyend": "Seus seniores dedicados 100% a gerar resultados para o seu negócio."
-      },
-      "three": {
-        "title": "Capacidade Produtiva",
-        "leyend": "Fluxo constante de candidatos ou upskilling interno que minimiza o impacto da rotatividade."
-      },
-      "four": {
-        "title": "Retenção de Talentos",
-        "leyend": "Colaboradores mais comprometidos e motivados."
-      },
-      "five": {
-        "title": "Processo de TA Suave",
-        "leyend": "Simplificando a seleção de talentos internos e externos, eliminando os pontos de dor."
-      },
-      "six": {
-        "title": "Branding",
-        "leyend": "Impacto positivo no branding do empregador e desenvolvimento da cultura organizacional."
-      }
-    },
-    "carouselInfo": {
-      "centralText": "Nunca mais perca oportunidades devido à escassez de talentos em TI!",
-      "textButton": "Contate-Nos!"
-    }
-  },
-  "contact": {
-    "description": {
-      "centralText": "ATENCIÓN!",
-      "centralTextTwo": "Este formulario es para compañías!",
-      "text": {
-        "juniors": {
-          "verticalText": "JUNIORS",
-          "text": {
-            "boldTextOne": "",
-            "standardTextOne": "Se você é um Júnior, ou seja, aprendeu mas não tem experiência de trabalho,",
-            "linkJuniors": "inscreva-se aqui ",
-            "standardTextTwo": "onde podemos ajudar a conectá-lo com empresas que desejam selecioná-lo para seus squads."
-          }
+        "leyend": "A PEP se conecta com ferramentas como GitHub, Jira, Slack e Teams, facilitando tanto o processo de desenvolvimento de software quanto o acompanhamento do progresso dos juniores.",
+        "two": {
+          "title": "Insights em tempo real",
+          "leyend": "Observe a evolução dos desenvolvedores com métricas precisas sobre o código que desenvolvem, as metodologias e ferramentas de comunicação."
         },
-        "seniors": {
-          "verticalText": "SENIORS",
-          "text": {
-            "boldTextOne": "Se você é um desenvolvedor, tem experiência, se destaca em sua área e gosta de transmitir suas habilidades,",
-            "standardTextOne": "vá para ",
-            "linkJuniors": "este link e inscreva-se na posição que se adequa ao seu perfil",
-            "standardTextTwo": "o que nos permitirá determinar onde você se encaixa na Teamcubation"
-          }
+        "three": {
+          "title": "Alertas inteligentes",
+          "leyend": "Nos mantêm informados sobre o desempenho dos desenvolvedores com notificações que identificam comportamentos que não se alinham com as expectativas, necessárias para melhorar a qualidade e a coerência do trabalho e da equipe."
         },
-        "noCoders": {
-          "verticalText": "NO_CODERS",
-          "text": {
-            "boldText": "Se você ainda não aprendeu a programar,",
-            "standardText": " pedimos gentilmente que faça isso, torne-se um desenvolvedor e então venha se inscrever! Não oferecemos aulas, horários ou professores... Nossa empresa trabalha para outras empresas, permitindo que você ganhe experiência se já souber programar."
-          }
+        "four": {
+          "title": "Acompanhamento personalizável",
+          "leyend": "Avaliamos aspectos-chave do desenvolvimento pessoal dos desenvolvedores por meio de ações e pesquisas personalizadas que trazem um enfoque humano ao processo de treinamento."
+        },
+        "five": {
+          "title": "Conheça seus futuros colaboradores",
+          "leyend": "Por meio de testes cognitivos e comportamentais, como o PDA (Análise de Desenvolvimento Pessoal), obtemos uma visão clara dos perfis de seus futuros colaboradores para gerenciar seus talentos, desenvolver habilidades e obter sua melhor versão."
+        },
+        "six": {
+          "title": "Pulso emocional",
+          "leyend": "Integração com IA que analisa respostas e detecta automaticamente os sentimentos e emoções da equipe para intervir oportunamente quando necessário, garantindo um ambiente de trabalho positivo e produtivo."
         }
       }
     },
-    "form": {
-      "centralText": "CONTATE-NOS",
-      "name": "Nome",
-      "organization": "Empresa",
-      "telephone": {
-        "label": "Telefone",
-        "country": "País",
-        "area": "Área",
-        "number": "Número"
+    "team": {
+      "centralText": "Nossa Equipe",
+      "mariano": {
+        "leyend": " Imagino a Teamcubation resolvendo o problema gigante das empresas e oferecendo oportunidades de primeiro emprego a milhares de pessoas.",
+        "position": "CEO"
       },
-      "email": "E-mail",
-      "reason": "Deixe-nos uma mensagem",
-      "origin-extra": {
-        "placeholder": "Como você se identifica?",
-        "options": {
-          "organization": "Sou uma organização e quero ser contatado para saber mais sobre o serviço",
-          "senior": "Sou um desenvolvedor Sênior e quero orientar Juniores",
-          "junior": "Sou um desenvolvedor Júnior/Trainee com conhecimento em programação",
-          "no-exp": "Não sei programar e quero aprender",
-          "other": "Outro"
+      "diego": {
+        "leyend": "Imagino continuar crescendo e escalando com excelência",
+        "position": "COO"
+      },
+      "agustin": {
+        "leyend": "Imagino que a Teamcubation será reconhecida por democratizar o acesso ao trabalho na indústria de software.",
+        "position": "Head of Training"
+      },
+      "tapi": {
+        "leyend": "Imagino que a Teamcubation definirá o padrão integral para treinar e integrar novos talentos em empresas de todo o mundo.",
+        "position": "CTO"
+      },
+      "eze": {
+        "position": "Head of Data & Analytics",
+        "leyend": "Imagino que os dados, utilizados de forma transparente e colaborativa, serão o motor de inovação que nos permitirá elevar o padrão na integração de talentos em todo o mundo."
+      },
+      "flor": {
+        "position": "Head of People",
+        "leyend": "Imagino um lugar incrível para trabalhar, para onde as pessoas sempre queiram voltar."
+      },
+      "tomas": {
+        "position": "CFO",
+        "leyend": "Imagino que a Teamcubation será um modelo exemplar de eficiência operacional, agilidade estratégica e cultura colaborativa."
+      }
+    },
+    "results": {
+      "title": "Os resultados",
+      "cards": {
+        "one": {
+          "title": "Software sob medida",
+          "leyend": "Software desenvolvido de acordo com as necessidades e padrões específicos da sua empresa."
+        },
+        "two": {
+          "title": "Onboarding sem atritos",
+          "leyend": "Desenvolvedores prontos para serem incorporados definitivamente à sua equipe, alinhados com a cultura, as metodologias e os frameworks da sua empresa."
+        },
+        "three": {
+          "title": "Foco no trabalho",
+          "leyend": "Seus seniors dedicados 100% a gerar resultados para o seu negócio."
+        },
+        "four": {
+          "title": "Retenção de talentos",
+          "leyend": "Colaboradores mais comprometidos e motivados."
+        },
+        "five": {
+          "title": "Processo de TA fluido",
+          "leyend": "Simplificando a seleção de talentos tanto internos quanto externos, eliminando os pontos problemáticos."
+        },
+        "six": {
+          "title": "Branding",
+          "leyend": "Impacto positivo no desenvolvimento da marca empregadora e na cultura organizacional."
         }
       },
-      "btn_text": "Enviar",
-      "btn_sending": "Enviando...",
-      "submit-response": {
-        "success": "Sua mensagem foi enviada com sucesso, obrigado!",
-        "error": "Ocorreu um erro durante o envio do formulário, tente novamente"
+      "carouselInfo": {
+        "centralText": "Pronto para desenvolvermos software com a sua equipe do futuro?",
+        "textButton": "Contate-nos!"
       }
+    },
+    "footerText": "E como já trabalhamos em equipe, há líderes com experiência que já conhecem a cultura e as formas de trabalho da empresa, ao finalizar e transferir os desenvolvedores para suas equipes, confirmamos um novo squad para continuar garantindo a capacidade produtiva da sua organização.",
+    "partners": {
+      "centralText": "COM QUEM TRABALHAMOS JUNTOS PARA POTENCIALIZAR O NOVO TALENTO DIGITAL?"
+    },
+    "_team": {
+      "centralText": "A EQUIPE",
+      "text": "Depois de anos na indústria e na academia, sentimos que faltava uma engrenagem que ligasse os dois mundos. O problema é claro e evidente, ensinamos muitas pessoas, mas as empresas continuam com falta de pessoas para preencher os cargos de que precisam para alcançar seus objetivos."
+    },
+    "contact": {
+      "description": {
+        "centralText": "ATENÇÃO!",
+        "centralTextTwo": "Este formulário é para empresas!",
+        "text": {
+          "juniors": {
+            "verticalText": "JUNIORES",
+            "text": {
+              "boldTextOne": "",
+              "standardTextOne": "Se você é júnior, ou seja, já aprendeu, mas não tem experiência profissional,",
+              "linkJuniors": "candidate-se aqui",
+              "standardTextTwo": "que é onde podemos te ajudar a ser selecionado por uma empresa para um squad."
+            }
+          },
+          "seniors": {
+            "verticalText": "SENIORS",
+            "text": {
+              "boldTextOne": "Se você é desenvolvedor, tem experiência, é fera e gosta de transmitir conhecimento,",
+              "standardTextOne": "vá para ",
+              "linkJuniors": "este link e candidate-se à vaga que melhor se adapte ao seu perfil,",
+              "standardTextTwo": "que nos permitirá entender onde podemos te encaixar na Teamcubation."
+            }
+          },
+          "noCoders": {
+            "verticalText": "NÃO_PROGRAMADORES",
+            "text": {
+              "boldText": "Se você ainda não aprendeu a programar,",
+              "standardText": " imploramos que você o faça, se torne um desenvolvedor e depois venha se candidatar! Não damos aulas, nem temos horários, nem professores... Nossa empresa trabalha para outras empresas, permitindo que você adquira experiência se já souber programar."
+            }
+          }
+        }
+      },
+      "form": {
+        "centralText": "CONTATE-NOS",
+        "name": "Nome",
+        "organization": "Empresa",
+        "telephone": {
+          "label": "Telefone",
+          "country": "País",
+          "area": "Área",
+          "number": "Número"
+        },
+        "email": "E-mail",
+        "reason": "Deixe sua mensagem",
+        "origin-extra": {
+          "placeholder": "Como você se identifica?",
+          "options": {
+            "organization": "Sou uma organização, quero ser contatado para saber mais sobre o serviço",
+            "senior": "Sou um desenvolvedor Sênior e quero acompanhar Juniores",
+            "junior": "Sou um desenvolvedor Júnior/Trainee com conhecimento de programação",
+            "no-exp": "Não sei programar e quero aprender",
+            "other": "Outro"
+          }
+        },
+        "btn_text": "Enviar",
+        "btn_sending": "Enviando...",
+        "submit-response": {
+          "success": "Sua mensagem foi enviada com sucesso, obrigado!",
+          "error": "Ocorreu um erro durante o envio do formulário, por favor, tente novamente."
+        }
+      }
+    },
+    "devsJuniors": {
+      "centralText": "Desenvolvedores Juniores",
+      "subtitle": {
+        "greyText": {
+          "lineOne": "Somos uma máquina do tempo e fazemos você ter a experiência de 2 anos em 6 meses."
+        },
+        "standardText": {
+          "lineOne": "A máquina do tempo existe.",
+          "lineTwo": "Olá! Somos a Teamcubation."
+        }
+      },
+      "text": "A Teamcubation trabalha para empresas, as empresas contratam os juniores e muitas vezes nos pedem ajuda para encontrá-los. Então não hesite! Acesse este link que deixamos aqui e deixe seus dados para que, quando as empresas solicitarem perfis, possamos encaminhar os seus ou suas informações.",
+      "textButton": "Veja as vagas abertas de nossos clientes para desenvolvedores sem experiência<span class=_effect>_</span>"
+    },
+    "devsSeniors": {
+      "centralText": "Desenvolvedores com Experiência",
+      "subtitle": {
+        "blueText": {
+          "lineOne": "Se você vê além do software, além do framework e entende que a chave está nas pessoas, junte-se à Teamcubation:"
+        },
+        "standardText": {
+          "lineOne": "aprenda a liderar equipes, enquanto desenvolve para grandes empresas e transmite aos outros o que você sabe."
+        }
+      },
+      "textButton": "Veja as vagas abertas para desenvolvedores com experiência<span class=_effect>_</span>"
     }
-  },
-  "devsJuniors": {
-    "centralText": "DEVS JUNIORS",
-    "subtitle": {
-      "greyText": {
-        "lineOne": "Somos una máquina del tiempo y hacemos que tengas la experiencia de 2 años en 6 meses."
-      },
-      "standardText": {
-        "lineOne": "La máquina del tiempo existe.",
-        "lineTwo": "Hola! Somos Teamcubation."
-      }
-    },
-    "text": "Teamcubation_ trabaja para empresas, las empresas contratan a los juniors y muchas veces nos piden ayuda para encontrarlos. Asi que no lo dudes! Entrá a este link que te dejamos acá y dejanos tus datos para que cuando nos soliciten las empresas perfiles podamos pasar los tuyos o tu información.",
-    "textButton": "Mirá las posiciones abiertas de nuestros clientes para devs sin experiencia<span class=_effect>_</span>"
-  },
-  "devsSeniors": {
-    "centralText": "DEVS CON EXPERIENCIA",
-    "subtitle": {
-      "blueText": {
-        "lineOne": "Si ves más allá del software, más allá del framework y entendés que la clave está en las personas, sumate a Teamcubation: "
-      },
-      "standardText": {
-        "lineOne": "aprendé a liderar equipos, mientras desarrollás para grandes compañías y transmitís a otros lo que sabes."
-      }
-    },
-    "textButton": "Mira las posiciones abiertas para devs con experiencia<span class=_effect>_</span>"
   }
 }
-  
