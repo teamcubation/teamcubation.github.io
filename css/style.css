@@ -2216,9 +2216,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 }
 
 @media only screen and (max-width: 574px) {
-	html[lang="en"] h1{
-		font-size: calc(1.5em + 10vw);
-	}
 	h3{
 		font-size: calc(0.8em + 3vw);;
 	}
