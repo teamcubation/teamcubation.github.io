@@ -53,8 +53,15 @@ const dataByLang = {
 
 
 $(".contact-button").on("click", () => {
-  $("#form-modal").toggleClass('hidden');
-  window.location.hash = '#contact';
+  const modal = $("#form-modal");
+  
+  if (modal.hasClass("hidden")) {
+    modal.removeClass("hidden");
+    window.location.hash = "#contact";
+  } else {
+    modal.addClass("hidden");
+    history.replaceState(null, null, " ");
+  }
 });
 
 $("#close-modal").on("click", (e) => {
@@ -396,22 +403,22 @@ $(".process-next").on("click", function(){
   }
 });
 
-window.addEventListener("click", function (e) {
-  if (!document.getElementById("dropdown-select").contains(e.target)) {
-    $(".list-options-tc").slideUp();
-    $(".chevron-select").removeClass("chevron-effect");
-    $(".select-tc").css(
-      "border-bottom",
-      "2px solid rgba(128, 128, 128, 0.507)"
-    );
-    if ($(".input-select").val() !== "") $(".text-error").remove();
-  }
-  if (!document.getElementById("form-container").contains(e.target)) {
-    if(!$('.contact-button').is(event.target)) {
-      $("#form-modal").addClass('hidden'); 
-    }
-  }
-});
+// window.addEventListener("click", function (e) {
+//   if (!document.getElementById("dropdown-select").contains(e.target)) {
+//     $(".list-options-tc").slideUp();
+//     $(".chevron-select").removeClass("chevron-effect");
+//     $(".select-tc").css(
+//       "border-bottom",
+//       "2px solid rgba(128, 128, 128, 0.507)"
+//     );
+//     if ($(".input-select").val() !== "") $(".text-error").remove();
+//   }
+//   if (!document.getElementById("form-container").contains(e.target)) {
+//     if(!$('.contact-button').is(event.target)) {
+//       $("#form-modal").addClass('hidden'); 
+//     }
+//   }
+// });
 
 window.addEventListener('scroll', (e) => {
   const currentPositionScroll = window.scrollY;
