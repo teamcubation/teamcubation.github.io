@@ -50,6 +50,7 @@ html, body {
 	border-radius: 16px;
 	border: 2px solid #C8C6C5;
 	min-height: 340px;
+	cursor:pointer
 }
 
 .service-card-content{
@@ -81,7 +82,7 @@ html, body {
 	margin-bottom: 0;
 }
 
-.service-card-content p{
+.service-card p{
 	font-family: 'Inter';
 	font-size: 16px;
 	font-style: normal;
@@ -100,6 +101,29 @@ html, body {
 	line-height: 20px;
 	color: var(--color-secondary);
 	background-color: var(--color-tertiary);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.service-card-footer img{
+	width: 8px;
+	color: grey
+}
+
+.service-card:hover{
+	border: 2px solid var(--color-logo-purple);
+}
+
+.service-card:hover .service-card-content h6 {
+  color: var(--color-logo-purple);
+}
+
+.service-card:hover .service-card-footer .button,
+.service-card:hover .service-card-footer .button p{
+  color: white;
+  background-color: var(--color-logo-purple);
 }
 
 /* style elements */
@@ -2415,7 +2439,6 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		position: relative;
 		float: right;
 		right: 0;
-		/* width: 100px; */
 		border-radius: 20px;
 	}
 
@@ -2431,12 +2454,15 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
     #proposal-content {
         padding: 5em 3em;
     }
+
 	.services-container {
 		gap:28px
 	}
+
 	.service-card-content {
 		padding: 34px 24px 0px 24px;
 	}
+
 	.proposal-descripcion{
 		font-size: 16px;
 		line-height: 24px;
