@@ -18,7 +18,9 @@ html, body {
 	--color-grey-200: #b9b9b9;
 	--color-light-grey: rgba(72, 72, 72, 0.50);
 	--border-radius: 70px;
+	--color-primary: #1D1B1B;
 	--color-secondary: #5F5E5E;
+	--color-tertiary: #E6E2E1;
 }
 
 /* re-styling */
@@ -26,16 +28,17 @@ html, body {
 .inter-font{
 	font-family: 'Inter', sans-serif;
 }
+
 .fw-600 {
 	font-weight: 600;
-  }
+}
+
 .services-container{
     display: flex;
+	flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 28px;
-    max-width: 1134px;}
-
+}
 
 .service-card{
 	display: flex;
@@ -46,7 +49,7 @@ html, body {
 	align-self: stretch;
 	border-radius: 16px;
 	border: 2px solid #C8C6C5;
-	height: 300px;
+	min-height: 340px;
 }
 
 .service-card-content{
@@ -67,7 +70,37 @@ html, body {
 	align-self: stretch;
 }
 
+.service-card-content h6{
+	font-family: 'Inter';
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -0.22px;
+	color: var(--color-primary);
+	margin-bottom: 0;
+}
 
+.service-card-content p{
+	font-family: 'Inter';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--color-secondary);
+	margin-bottom: 0;
+}
+
+.service-card-footer .button{
+	text-align: center;
+	font-family: 'Inter';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	color: var(--color-secondary);
+	background-color: var(--color-tertiary);
+}
 
 /* style elements */
 
@@ -498,9 +531,16 @@ nav{
 	gap: 3em;
 	max-width: calc(1300px);	
 	padding: 0 50px;
-	padding-top: 4.2em;
-	padding-bottom: 10em;
+	padding-top: 4.5em;
+	padding-bottom: 9em;
 	margin: 0 auto;
+}
+
+.proposal-descripcion{
+	font-family: 'inter', sans-serif;
+	color: var(--color-secondary);
+	font-size: 22px;
+	line-height: 33px;
 }
 
 .proposal-card{
@@ -1552,9 +1592,11 @@ html[lang="pt"] .intersection-seniors-junior {
 	bottom: 5%;
 	margin-left: 40%;
 }
+
 .disabled > span{
 	opacity: 0.3;
 }
+
 .carousel-central-button[data-bs-slide="prev"]{
 	display: flex;
 	justify-content: center;
@@ -2386,6 +2428,20 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		align-items: center;
 	}
 
+    #proposal-content {
+        padding: 5em 3em;
+    }
+	.services-container {
+		gap:28px
+	}
+	.service-card-content {
+		padding: 34px 24px 0px 24px;
+	}
+	.proposal-descripcion{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
 	#footer-menu{
 		height: 20vh;
 		margin-top: 0;

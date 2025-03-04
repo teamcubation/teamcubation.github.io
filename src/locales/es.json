@@ -43,35 +43,10 @@
       "lineOne": "Todos nuestros servicios se basan en proyectos reales, formando", 
       "lineTwo": "talento nuevo o fortaleciendo el equipo actual de tu empresa."
     },
-    "people": {
-      "title": {
-        "centralText": "de las vacantes IT no logran cubrirse en LATAM por año."
-      },
-      "text": {
-        "title": "En Teamcubation no sólo desarrollamos software, también incubamos el talento que impulsará tus futuros proyectos.",
-        "leyend": "Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo. Al finalizar cada proyecto, no sólo recibirás nuevo software desarrollado de acuerdo a tus metodologías y cultura de trabajo, también tendrás la opción de contratar a los nuevos developers que ya contarán con la experiencia que necesitan para trabajar en tu compañía, listos para integrarse a tus equipos de desarrollo interno sin fricción."
-      }
-    },
-    "cost": {
-      "title": {
-        "centralText": "US$",
-        "text": {
-          "title": "en promedio, son los costos relacionados a cada vacante sin cubrir."
-        }
-      },
-      "text": {
-        "title": "Desarrollamos soluciones de software y al mismo tiempo preparamos a los futuros colaboradores para tu empresa",
-        "leyend": "Nuestros equipos incluyen seniors experimentados y nuevos developers con poca o sin experiencia."
-      }
-    },
-    "turnover": {
-      "title": {
-        "centralText": "de los CTOs afirman que la rotación está perjudicando al equipo."
-      },
-      "text": {
-        "title": " Al finalizar cada proyecto, no sólo recibirás nuevo software alineado con tus metodologías y cultura de trabajo",
-        "leyend": "También tendrás la opción de incorporar a los juniors ya capacitados y listos para integrarse a tus equipos de desarrollo interno sin fricción."
-      }
+    "services": {
+      "talentIncubation": {"title": "Incubación de Equipos", "description": "Desarrollamos software a medida mientras formamos talento para tu equipo. Obtienes tecnología y profesionales alineados y listos para integrarse a tu empresa."},
+      "upskilling&reskilling": {"title": "Upskilling y Reskilling", "description": "Mediante mentoría on-the-job y workshops, impulsamos el crecimiento de tu equipo, fortaleciendo habilidades, incorporando nuevas tecnologías y mejorando sus procesos."},
+      "BoosterAI": {"title": "BoosterAI", "description": "En dos meses, tu equipo aplicará la IA en sus procesos, creando soluciones alineadas a retos concretos de tu negocio. Con un enfoque intensivo y práctico, la IA empezara a trabajar para tu empresa desde el primer día."}
     }
   },
   "noMoreDevs": {
