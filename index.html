@@ -17,6 +17,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -152,14 +153,21 @@
 
   <section id="banner">
     <div id="banner-layout" class="w-100 h-100 absolute-scroll-position">
-      <img id="desktop-banner-img" src="media/background/banner-min.jpg" class="banner-img">
-      <img id="mobile-banner-img" src="media/background/mobile-banner.png" class="banner-img">
+      <img id="desktop-banner-img" src="media/background/200.png" class="banner-img">
+      <img id="mobile-banner-img" src="media/background/200.png" class="banner-img">
     </div>
     <div id="banner-container">
       <div id="banner-content">
-        <h1 class="white">Somos la primera software+team factory.</h1>
-        <h1 class="white"></h1>
-        <h2 class="white sub">Construímos el software que necesitas hoy mientras incubamos tu equipo del mañana.</h2>
+        <h1 class="white inter-font">Somos la primera</h1>
+        <h1 class="white inter-font">Software+Team Factory</h1>
+        <div style="padding-top: 32px;">
+          <h2 class="white sub inter-font">Construímos el software que necesitas hoy mientras</h2>
+          <h2 class="white sub inter-font"> incubamos tu equipo del mañana.</h2>
+        </div>
+        <div style="padding: 60px 0 80px 0">
+          <button class="md-button inter-font bg-orange white mr-2">Servicios</button>
+          <button class="md-button inter-font bg-white  ">Casos de éxito</button>
+        </div>
       </div>
       <div id="partners">
         <div class="logos">
@@ -175,50 +183,26 @@
     <section id="proposal">
       <div id="proposal-layout" class="layout">
         <div id="proposal-content">
-          <div class="text-center orange mb-2">
-            <h3>Más que una software factory: socios en el crecimiento de tu capacidad de desarrollo.</h3>
+          <div class="text-center purple">
+            <h3 class="inline inter-font fw-600 ">Soluciones </h3>
+            <h3 class="orange inline inter-font fw-600 " style="font-style: italic;">on-the-job </h3>
+            <h3 class="inline inter-font fw-600 ">para equipos de tecnología.</h3>
           </div>
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <div class="col-12 col-md-6">
-              <img src="media/proposalteam.webp" id="proposalteam" alt style="max-width: 100%; border-radius: 15px">
+          <div class="text-center ">
+            <h4 class="secondary inter-font" style="font-size: 22px; line-height: 33px">Todos nuestros servicios se basan en proyectos reales, formando</h4>
+            <h4 class="secondary inter-font" style="font-size: 22px; line-height: 33px">talento nuevo o fortaleciendo el equipo actual de tu empresa.</h4>
+          </div>
+          <div class="services-container">
+            <div class="col-12 col-md-4">
+              <div class="service-card"></div>
             </div>
-            <div class="col-12 col-md-5">
-              <div>
-                <p class="purple fw-bold md-text-card">En Teamcubation no sólo desarrollamos software, también incubamos el talento que impulsará tus futuros proyectos.</p>
-                <p class="grey white">Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo. Al finalizar cada proyecto, no sólo recibirás nuevo software desarrollado de acuerdo a tus metodologías y cultura de trabajo, también tendrás la opción de contratar a los nuevos developers que ya contarán con la experiencia que necesitan para trabajar en tu compañía, listos para integrarse a tus equipos de desarrollo interno sin fricción.</p>
-              </div>
+            <div class="col-12 col-md-4">
+              <div class="service-card"></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="service-card"></div>
             </div>
           </div>
-          <!-- <div id="cost" class="d-flex justify-content-between align-items-center flex-wrap ">
-            <div class="col-12 col-md-6">
-              <div>
-                <p data-t class="purple fw-bold  md-text-card" data-t>proposal.cost.text.title</p>
-                <p data-t class="grey">proposal.cost.text.leyend</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-5">
-              <div class="proposal-card bg-purple white">
-                <div>
-                  <h1 class="fw-bold d-inline" id="cost-to-number"> 0</h1><h4 data-t class="d-inline" style="font-weight: bold">proposal.cost.title.centralText</h4>
-                </div>
-                <h4 data-t>proposal.cost.title.text.title</h4>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <div class="col-12 col-md-5">
-              <div class="proposal-card bg-orange white">
-                <h1 id="turnover-number">0</h1>
-                <h4 data-t >proposal.turnover.title.centralText</h4>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div>
-                <p data-t class="purple fw-bold md-text-card">proposal.turnover.text.title</p>
-                <p data-t class="grey">proposal.turnover.text.leyend</p>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>

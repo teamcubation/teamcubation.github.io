@@ -25,13 +25,24 @@
     "url-en": "/en",
     "url-pt": "/pt",
     "centralText": {
-      "lineOne": "Somos la primera software+team factory.",
-      "lineTwo": "",
-      "lineThree": "Construímos el software que necesitas hoy mientras incubamos tu equipo del mañana."
+      "lineOne": "Somos la primera",
+      "lineTwo": "Software+Team Factory",
+      "lineThree": "Construímos el software que necesitas hoy mientras",
+      "lineFour": " incubamos tu equipo del mañana."
+    },
+    "actions": {
+      "services": "Servicios",
+      "successStories": "Casos de éxito"
     }
   },
   "proposal": {
-    "centralText": "Más que una software factory: socios en el crecimiento de tu capacidad de desarrollo.",
+    "lineOne": "Soluciones ",
+    "lineTwo": "on-the-job ",
+    "lineThree": "para equipos de tecnología.",
+    "subTitle": {
+      "lineOne": "Todos nuestros servicios se basan en proyectos reales, formando", 
+      "lineTwo": "talento nuevo o fortaleciendo el equipo actual de tu empresa."
+    },
     "people": {
       "title": {
         "centralText": "de las vacantes IT no logran cubrirse en LATAM por año."
