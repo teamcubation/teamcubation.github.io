@@ -51,10 +51,10 @@ const dataByLang = {
   },
 };
 
+let selectedService = '';
 
-$(".contact-button").on("click", () => {
+const openContacFormModal = () => {
   const modal = $("#form-modal");
-  
   if (modal.hasClass("hidden")) {
     modal.removeClass("hidden");
     window.location.hash = "#contact";
@@ -62,7 +62,20 @@ $(".contact-button").on("click", () => {
     modal.addClass("hidden");
     history.replaceState(null, null, " ");
   }
+}
+
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const serviceName = this.getAttribute('data-service');
+    selectedService = serviceName;
+    openContacFormModal();
+  });
 });
+
+$(".contact-button").on("click", () => {
+  openContacFormModal()
+});
+
 
 $("#close-modal").on("click", (e) => {
   e.preventDefault();
@@ -99,62 +112,63 @@ $(".form-contact").on("submit", function (ev) {
       ? (data_origin_extra = null)
       : (data_origin_extra = `${data_origin_extra}: ${inputSelectText}`);
   }
-  if (data_origin_extra) {
-    $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
-    btn.text(dataByLang.formContact.btnSending[lang]);
-    $.ajax({
-      url: "https://api.prod.tq.teamcubation.com/contact",
-      type: "POST",
-      contentType: "application/json",
-      data: JSON.stringify({
-        full_name: data_name,
-        message: data_message,
-        organization: data_organization,
-        phone_number: data_number,
-        email: data_email,
-        origin_extra: data_origin_extra,
-        lang: lang,
-      }),
-      dataType: "json",
-      success: (r) => {
-        $(".alert").remove();
-        $(".form-contact").prepend(
-          '<div class="alert alert-success" role="alert" style="position: absolute; z-index: 101"></div>'
-        );
-        $(".alert").text(dataByLang.formContact.submitResponse.success[lang]);
-        $(".alert")
-          .fadeTo(2000, 500)
-          .slideUp(500, function () {
-            $(".alert").slideUp(500);
-          });
-          btn.text(dataByLang.formContact.btnSend[lang]);
-        clearForm();
-      },
-      error: (r) => {
-        $(".alert").remove();
-        $(".form-contact").prepend(
-          '<div class="alert alert-danger" role="alert" style="position: absolute; z-index: 101"></div>'
-        );
-        $(".alert").text(dataByLang.formContact.submitResponse.error[lang]);
-        $(".alert")
-          .fadeTo(2000, 500)
-          .slideUp(500, function () {
-            $(".alert").slideUp(500);
-          });
-          btn.text(dataByLang.formContact.btnSend[lang]);
-        clearForm();
-      },
-    });
-    return false;
-  } else {
-    $(".select-tc").css("border-bottom", "2px solid red");
-    $(".dropdown-select").append(
-      '<p class="text-error" style="color: red">' +
-        data_origin_extra_error_message +
-        "</p>"
-    );
-    return false;
-  }
+  // if (data_origin_extra) {
+  //   $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
+  //   btn.text(dataByLang.formContact.btnSending[lang]);
+  //   $.ajax({
+  //     url: "https://api.prod.tq.teamcubation.com/contact",
+  //     type: "POST",
+  //     contentType: "application/json",
+  //     data: JSON.stringify({
+  //       full_name: data_name,
+  //       message: data_message,
+  //       organization: data_organization,
+  //       phone_number: data_number,
+  //       email: data_email,
+  //       origin_extra: data_origin_extra,
+  //       lang: lang,
+          //  selectedService
+  //     }),
+  //     dataType: "json",
+  //     success: (r) => {
+  //       $(".alert").remove();
+  //       $(".form-contact").prepend(
+  //         '<div class="alert alert-success" role="alert" style="position: absolute; z-index: 101"></div>'
+  //       );
+  //       $(".alert").text(dataByLang.formContact.submitResponse.success[lang]);
+  //       $(".alert")
+  //         .fadeTo(2000, 500)
+  //         .slideUp(500, function () {
+  //           $(".alert").slideUp(500);
+  //         });
+  //         btn.text(dataByLang.formContact.btnSend[lang]);
+  //       clearForm();
+  //     },
+  //     error: (r) => {
+  //       $(".alert").remove();
+  //       $(".form-contact").prepend(
+  //         '<div class="alert alert-danger" role="alert" style="position: absolute; z-index: 101"></div>'
+  //       );
+  //       $(".alert").text(dataByLang.formContact.submitResponse.error[lang]);
+  //       $(".alert")
+  //         .fadeTo(2000, 500)
+  //         .slideUp(500, function () {
+  //           $(".alert").slideUp(500);
+  //         });
+  //         btn.text(dataByLang.formContact.btnSend[lang]);
+  //       clearForm();
+  //     },
+  //   });
+  //   return false;
+  // } else {
+  //   $(".select-tc").css("border-bottom", "2px solid red");
+  //   $(".dropdown-select").append(
+  //     '<p class="text-error" style="color: red">' +
+  //       data_origin_extra_error_message +
+  //       "</p>"
+  //   );
+  //   return false;
+  // }
 });
 
 const clearForm = () => {
