@@ -506,7 +506,7 @@ nav{
 .logos-slide {
 	display: inline-block;
 	animation: 15s slide infinite linear;
-	height: 3.7em;
+	height: 4.7em;
 	will-change: transform;
 }
 
@@ -1247,12 +1247,12 @@ html[lang="pt"] .intersection-seniors-junior {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(241, 241, 241);
-	border-radius:var(--border-radius);
+	background-color: rgb(255, 255, 255);
+	border-radius: 16px;
 	padding: 3em;
 	max-width: 90%;
 	max-height: 90vh;
-	width: 700px;
+	width: 600px;
 }
 
 
