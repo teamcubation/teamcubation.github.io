@@ -27,40 +27,27 @@
     "centralText": {
       "lineOne": "We are the first software+team factory.",
       "lineTwo": "",
-      "lineThree": "We build the software you need today while incubating your team of tomorrow."
+      "lineThree": "We build the software you need today while incubating your team of tomorrow.",
+      "lineFour": ""
+    },
+    "actions": {
+      "services": "Services",
+      "successStories": "Success Stories"
     }
   },
   "proposal": {
-    "centralText": "More than a software factory: partners in growing your development capacity.",
-    "people": {
-      "title": {
-        "centralText": "of IT positions cannot be filled in LATAM per year."
-      },
-      "text": {
-        "title": "At Teamcubation, we not only develop software, we also incubate the talent that will drive your future projects.",
-        "leyend": "We offer a comprehensive service that combines turnkey software development with the training of new members for your team. Upon completion of each project, you will not only receive new software developed according to your methodologies and work culture, but you will also have the option to hire the new developers who will already have the necessary experience to work in your company, ready to integrate into your internal development teams without friction."
-      }
+    "lineOne": "On-the-job ",
+    "lineTwo": "solutions for tech teams",
+    "lineThree": "",
+    "subTitle": {
+      "lineOne": "All our services are based on real projects, either developing new talent", 
+      "lineTwo": "or strengthening your company's current team."
     },
-    "cost": {
-      "title": {
-        "centralText": "US$",
-        "text": {
-          "title": "on average, are the costs related to each unfilled position."
-        }
-      },
-      "text": {
-        "title": "We develop software solutions while preparing future collaborators for your company",
-        "leyend": "Our teams include experienced seniors and new developers with little or no experience."
-      }
-    },
-    "turnover": {
-      "title": {
-        "centralText": "of CTOs state that turnover is harming the team."
-      },
-      "text": {
-        "title": "Upon completion of each project, you will not only receive new software aligned with your methodologies and work culture",
-        "leyend": "You will also have the option to incorporate the already trained juniors ready to integrate into your internal development teams without friction."
-      }
+    "services": {
+      "talentIncubation": {"title": "Talent Incubation", "description": "We develop custom software while training talent for your team. You get technology and professionals aligned and ready to integrate into your company."},
+      "upskilling&reskilling": {"title": "Upskilling y Reskilling", "description": "Through on-the-job mentoring and workshops, we drive your team's growth by strengthening skills, incorporating new technologies, and improving processes."},
+      "BoosterAI": {"title": "BoosterAI®", "description": "In two months, your team will apply AI to its processes, creating solutions aligned with your business challenges. With an intensive and practical approach, AI will start working for your company from day one."},
+      "link-button": "Learn More" 
     }
   },
   "noMoreDevs": {
