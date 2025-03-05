@@ -403,136 +403,27 @@ $(".process-next").on("click", function(){
   }
 });
 
-// window.addEventListener("click", function (e) {
-//   if (!document.getElementById("dropdown-select").contains(e.target)) {
-//     $(".list-options-tc").slideUp();
-//     $(".chevron-select").removeClass("chevron-effect");
-//     $(".select-tc").css(
-//       "border-bottom",
-//       "2px solid rgba(128, 128, 128, 0.507)"
-//     );
-//     if ($(".input-select").val() !== "") $(".text-error").remove();
-//   }
-//   if (!document.getElementById("form-container").contains(e.target)) {
-//     if(!$('.contact-button').is(event.target)) {
-//       $("#form-modal").addClass('hidden'); 
-//     }
-//   }
-// });
+$("#services_button").on("click", function() {
+  let target = $("#proposal").offset().top; 
+  window.scrollTo({
+    top: target, 
+    behavior: "smooth" 
+  });
+});
+
+$("#success_stories_button").on("click", function() {
+  let target = $("#cases").offset().top - 25; 
+  window.scrollTo({
+    top: target, 
+    behavior: "smooth" 
+  });
+});
+
 
 window.addEventListener('scroll', (e) => {
   const currentPositionScroll = window.scrollY;
   const direction = scrollDirection(lastScrollTop, currentPositionScroll);
 
-  // if(peopleNumber.getBoundingClientRect().top <= 500 && incrementAmountPeopleNumber.step < 2){
-  //   const text={prev: '', next: '%'}
-  //   if(!incrementPeopleAnimation.animationInProgress){
-  //     incrementPeopleAnimation.play(
-  //       peopleNumber, 
-  //       incrementAmountPeopleNumber.counterValue, 
-  //       incrementAmountPeopleNumber.targetValue, 
-  //       1, 
-  //       text
-  //     )  
-  //     incrementAmountPeopleNumber.step += 1;
-  //     incrementAmountPeopleNumber.counterValue+= incrementAmountPeopleNumber.targetValue;
-  //     incrementAmountPeopleNumber.targetValue+= incrementAmountPeopleNumber.targetValue;  
-  //   }
-  // }
-
-  // if(costTopNumber.getBoundingClientRect().top <= 800 && incrementAmountCostNumber.step < 3){
-  //   if(!incrementCostAnimation.animationInProgress){
-  //     incrementCostAnimation.play(
-  //       costTopNumber, 
-  //       incrementAmountCostNumber.counterValue, 
-  //       incrementAmountCostNumber.targetValue, 
-  //       200, 
-  //     )  
-  //     incrementAmountCostNumber.step += 1;
-  //     incrementAmountCostNumber.counterValue+= incrementAmountCostNumber.acumulate;
-  //     incrementAmountCostNumber.targetValue+= incrementAmountCostNumber.acumulate;  
-  //   }
-  // }
-
-  // if(turnoverNumber.getBoundingClientRect().top <= 800 && incrementAmountTurnOverNumber.step < 3){
-  //   const text={prev: '', next: '%'}
-  //   if(!incrementTurnOverAnimation.animationInProgress){
-  //     incrementTurnOverAnimation.play(
-  //       turnoverNumber, 
-  //       incrementAmountTurnOverNumber.counterValue, 
-  //       incrementAmountTurnOverNumber.targetValue, 
-  //       1,
-  //       text 
-  //     )  
-  //     incrementAmountTurnOverNumber.step += 1;
-  //     incrementAmountTurnOverNumber.counterValue+= incrementAmountTurnOverNumber.acumulate;
-  //     incrementAmountTurnOverNumber.targetValue+= incrementAmountTurnOverNumber.acumulate;  
-  //   }
-  // }
-
-  // const bannerContentToTop = bannerContent.getBoundingClientRect().top; 
-  // if(bannerContentToTop <= 200 && direction == 'down'){
-  //   navBar[0].classList.add('nav-to-top');
-  // }else{
-  //   navBar[0].classList.remove('nav-to-top');
-  // }
-
-  // if(window.scrollY < 500){
-  //   // noMoreDevsAnimation.animate('reverse');
-  //   // howDoAnimation.animate('reverse');
-  //   resultsAnimation.animate('reverse');
-  // }
-  
-  // const proposalToTop = proposal.getBoundingClientRect();
-  // const noMoreDevsToTop = noMoreDevs.getBoundingClientRect();
-  // const howDoToTop = howDo.getBoundingClientRect();
-  // const resultsToTop = results.getBoundingClientRect();
-  
-  
-  
-  // effect fix cards at top
-  // if(proposalToTop.top <= 100 && direction == 'down'){
-  //   bannerNav.classList.add('fixed-scroll-position');
-  //   proposal.classList.add('sticky-scroll-position');
-  //   bannerContent.classList.add('display-none');
-  //   partners.classList.add('display-none');
-  // }
-
-  // if(resultsToTop.top <= 100  && direction === 'down'){
-  //   results.classList.add('sticky-scroll-position');
-  //   if(resultsAnimation.loopCarousel < 2){
-  //     resultsAnimation.animate('play');
-  //   };
-  // };
-
-  // if(howDoToTop.top <= 0 && !howDoAnimation.finished){
-  //   howDo.classList.add('sticky-scroll-position');
-  //   if(howDoAnimation.loopCarousel < 2){
-  //     howDoAnimation.animate('play');
-  //   }
-  // }
-
-  // no more devs
-    // if(direction === 'down' && noMoreDevsToTop.top <= 0 && !noMoreDevsAnimation.finished){
-    //   noMoreDevs.classList.add('sticky-scroll-position');
-    //   if(noMoreDevsAnimation.loopCarousel < 4){
-    //     noMoreDevsAnimation.animate('play');
-    //   }
-    // }
-
-  // }
-  // if(noMoreDevsAnimation.finished && currentPositionScroll >= noMoreDevsPositionHeight  && direction === 'down'){
-  //   // proposal.classList.remove('sticky-scroll-position');
-  //   noMoreDevs.classList.remove('sticky-scroll-position');
-  //   bannerNav.classList.remove('fixed-scroll-position');
-  // }
-  // if(howDoAnimation.finished  && direction === 'down'){
-  //   howDo.classList.remove('sticky-scroll-position')
-  // }
-  // if(resultsAnimation.finished && direction === 'down'){
-  //   results.classList.remove('sticky-scroll-position')
-  // }
-  // lastScrollTop = currentPositionScroll;
 });
 
 // navbar and menu
