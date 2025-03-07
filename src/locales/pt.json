@@ -27,40 +27,27 @@
     "centralText": {
       "lineOne": "Somos a primeira software+team factory.",
       "lineTwo": "",
-      "lineThree": "Construímos o software que você precisa hoje enquanto incubamos sua equipe de amanhã."
+      "lineThree": "Construímos o software que você precisa hoje enquanto incubamos sua equipe de amanhã.",
+      "lineFour": ""
+    },
+    "actions": {
+      "services": "Serviços",
+      "successStories": "Casos de Sucesso"
     }
   },
   "proposal": {
-    "centralText": "Mais do que uma fábrica de software: parceiros no crescimento da sua capacidade de desenvolvimento.",
-    "people": {
-      "title": {
-        "centralText": "das vagas de TI não conseguem ser preenchidas na LATAM por ano."
-      },
-      "text": {
-        "title": "Na Teamcubation não apenas desenvolvemos software, também incubamos o talento que impulsionará seus projetos futuros.",
-        "leyend": "Oferecemos um serviço integral que combina desenvolvimento de software chave na mão com a formação de novos membros para sua equipe. Ao finalizar cada projeto, você não apenas receberá um novo software desenvolvido de acordo com suas metodologias e cultura de trabalho, mas também terá a opção de contratar os novos desenvolvedores que já terão a experiência necessária para trabalhar em sua empresa, prontos para se integrar às suas equipes de desenvolvimento interno sem atrito."
-      }
+    "lineOne": "Soluções  ",
+    "lineTwo": "on-the-job ",
+    "lineThree": "para equipes de tecnologia.",
+    "subTitle": {
+      "lineOne": "Todos os nossos serviços são baseados em projetos reais, formando", 
+      "lineTwo": "novos talentos ou fortalecendo a equipe atual da sua empresa."
     },
-    "cost": {
-      "title": {
-        "centralText": "US$",
-        "text": {
-          "title": "em média, são os custos relacionados a cada vaga não preenchida."
-        }
-      },
-      "text": {
-        "title": "Desenvolvemos soluções de software e, ao mesmo tempo, preparamos os futuros colaboradores para sua empresa",
-        "leyend": "Nossas equipes incluem seniors experientes e novos desenvolvedores com pouca ou nenhuma experiência."
-      }
-    },
-    "turnover": {
-      "title": {
-        "centralText": "dos CTOs afirmam que a rotatividade está prejudicando a equipe."
-      },
-      "text": {
-        "title": "Ao finalizar cada projeto, você não apenas receberá um novo software alinhado com suas metodologias e cultura de trabalho",
-        "leyend": "Você também terá a opção de incorporar os juniores já treinados e prontos para se integrar às suas equipes de desenvolvimento interno sem atrito."
-      }
+    "services": {
+      "talentIncubation": {"title": "Incubação de Equipes", "description": "Desenvolvemos software sob medida enquanto formamos talentos para sua equipe. Você obtém tecnologia e profissionais alinhados e prontos para se integrar à sua empresa."},
+      "upskilling&reskilling": {"title": "Upskilling y Reskilling", "description": "Por meio de mentoria on-the-job e workshops, impulsionamos o crescimento da sua equipe, fortalecendo habilidades, incorporando novas tecnologias e melhorando processos."},
+      "BoosterAI": {"title": "BoosterAI®", "description": "Em dois meses, sua equipe aplicará IA em seus processos, criando soluções alinhadas aos desafios do seu negócio. Com uma abordagem intensiva e prática, a IA começará a trabalhar para sua empresa desde o primeiro dia."},
+      "link-button": "Saiba mais" 
     }
   },
   "noMoreDevs": {
@@ -101,24 +88,24 @@
     "moreTestimonials": "Ver mais depoimentos"
   },
   "howDo": {
-    "centralText": "Como fazemos isso?",
+    "centralText": "Nossos Objetivos",
     "carousel": {
       "itemOne": {
         "title": "Desenvolvimento de software chave na mão",
-        "text": "Criamos soluções personalizadas que atendem às suas necessidades específicas."
+        "text": " Criamos soluções sob medida que atendem às suas necessidades específicas, garantindo funcionalidade, eficiência e facilidade de uso."
       },
       "itemTwo": {
         "title": "Formação em ação",
-        "text": "Nossos juniores, que já possuem habilidades de programação, aceleram a aquisição de experiência no desenvolvimento de software real por meio de nossa metodologia e tecnologia proprietárias e acompanhados por nossos seniors."
+        "text": "Os nossos juniors, que já possuem habilidades de programação, aceleram sua experiência no desenvolvimento de software real para os nossos clientes, acompanhados pelos nossos seniors, o que permite aumentar rapidamente seu seniority e experiência."
       },
       "itemThree": {
-        "title": "Seleção de talentos",
-        "text": "Escolhemos em conjunto os juniores que melhor se adaptam à sua cultura para que façam parte de nossa equipe. No final do projeto, você pode optar por contratar os juniores já treinados que atendem aos seus padrões para incorporá-los definitivamente à sua equipe."
+        "title": "Identificação e seleção de talento",
+        "text": "Selecionamos em conjunto os talentos mais adaptados à sua cultura, que, ao final do projeto, já estão treinados e preparados para se integrar ao seu time sem fricções. Ao atenderem aos seus padrões, você pode optar por contratá-los para aumentar a capacidade de desenvolvimento do seu time de forma imediata."
       }
     }
   },
   "squad": {
-    "centralText": "Tecnologia e metodologia para potencializar seus potenciais futuros colaboradores.\n",
+    "centralText": "Tecnologia e metodologia para acelerar seus potenciais futuros colaboradores.\n",
     "leaders": {
       "title": "Nossos líderes",
       "leyend": "Especializados e treinados na pilha de tecnologia e metodologias da sua empresa, garantirão que o software atenda aos requisitos com qualidade e supervisionarão a evolução dos desenvolvedores."
@@ -264,7 +251,7 @@
       }
     },
     "form": {
-      "centralText": "CONTATE-NOS",
+      "centralText": "Contate",
       "name": "Nome",
       "organization": "Empresa",
       "telephone": {

@@ -25,42 +25,29 @@
     "url-en": "/en",
     "url-pt": "/pt",
     "centralText": {
-      "lineOne": "Somos la primera software+team factory.",
-      "lineTwo": "",
-      "lineThree": "Construímos el software que necesitas hoy mientras incubamos tu equipo del mañana."
+      "lineOne": "Somos la primera",
+      "lineTwo": "Software+Team Factory",
+      "lineThree": "Construímos el software que necesitas hoy mientras",
+      "lineFour": " incubamos tu equipo del mañana."
+    },
+    "actions": {
+      "services": "Servicios",
+      "successStories": "Casos de éxito"
     }
   },
   "proposal": {
-    "centralText": "Más que una software factory: socios en el crecimiento de tu capacidad de desarrollo.",
-    "people": {
-      "title": {
-        "centralText": "de las vacantes IT no logran cubrirse en LATAM por año."
-      },
-      "text": {
-        "title": "En Teamcubation no sólo desarrollamos software, también incubamos el talento que impulsará tus futuros proyectos.",
-        "leyend": "Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo. Al finalizar cada proyecto, no sólo recibirás nuevo software desarrollado de acuerdo a tus metodologías y cultura de trabajo, también tendrás la opción de contratar a los nuevos developers que ya contarán con la experiencia que necesitan para trabajar en tu compañía, listos para integrarse a tus equipos de desarrollo interno sin fricción."
-      }
+    "lineOne": "Soluciones ",
+    "lineTwo": "on-the-job ",
+    "lineThree": "para equipos de tecnología.",
+    "subTitle": {
+      "lineOne": "Todos nuestros servicios se basan en proyectos reales, formando", 
+      "lineTwo": "talento nuevo o fortaleciendo el equipo actual de tu empresa."
     },
-    "cost": {
-      "title": {
-        "centralText": "US$",
-        "text": {
-          "title": "en promedio, son los costos relacionados a cada vacante sin cubrir."
-        }
-      },
-      "text": {
-        "title": "Desarrollamos soluciones de software y al mismo tiempo preparamos a los futuros colaboradores para tu empresa",
-        "leyend": "Nuestros equipos incluyen seniors experimentados y nuevos developers con poca o sin experiencia."
-      }
-    },
-    "turnover": {
-      "title": {
-        "centralText": "de los CTOs afirman que la rotación está perjudicando al equipo."
-      },
-      "text": {
-        "title": " Al finalizar cada proyecto, no sólo recibirás nuevo software alineado con tus metodologías y cultura de trabajo",
-        "leyend": "También tendrás la opción de incorporar a los juniors ya capacitados y listos para integrarse a tus equipos de desarrollo interno sin fricción."
-      }
+    "services": {
+      "talentIncubation": {"title": "Incubación de Equipos", "description": "Desarrollamos software a medida mientras formamos talento para tu equipo. Obtienes tecnología y profesionales alineados y listos para integrarse a tu empresa."},
+      "upskilling&reskilling": {"title": "Upskilling y Reskilling", "description": "Mediante mentoría on-the-job y workshops, impulsamos el crecimiento de tu equipo, fortaleciendo habilidades, incorporando nuevas tecnologías y mejorando sus procesos."},
+      "BoosterAI": {"title": "BoosterAI®", "description": "En dos meses, tu equipo aplicará la IA en sus procesos, creando soluciones alineadas a retos concretos de tu negocio. Con un enfoque intensivo y práctico, la IA empezara a trabajar para tu empresa desde el primer día."},
+      "link-button": "Solicitar información" 
     }
   },
   "noMoreDevs": {
@@ -101,24 +88,24 @@
     "moreTestimonials": "Ver mas testimonios"
   },
   "howDo": {
-    "centralText": "¿Cómo lo hacemos?",
+    "centralText": "Nuestros Objetivos",
     "carousel": {
       "itemOne": {
         "title": "Desarrollo de software llave en mano",
-        "text": "Creamos soluciones a medida que cumplen con tus necesidades específicas."
+        "text": "Creamos soluciones a medida que cumplen con tus necesidades específicas, garantizando funcionalidad, eficiencia y facilidad de uso."
       },
       "itemTwo": {
         "title": "Formación en acción",
-        "text": "Nuestros juniors, que ya cuentan con habilidades de programación, se aceleran en la adquisición de experiencia en el desarrollo de software real mediante nuestra metodología y tecnología propietarias y acompañados por nuestros seniors."
+        "text": "Nuestros juniors, que ya cuentan con habilidades de programación, aceleran su experiencia en el desarrollo de software real para nuestros clientes, acompañados por nuestros seniors, lo que les permite aumentar rápidamente su seniority y experiencia."
       },
       "itemThree": {
-        "title": "Selección de talento",
-        "text": "Elegimos en conjunto a los juniors que mejor se adapten a tu cultura para que formen parte de nuestro equipo. Al final del proyecto, puedes elegir contratar a los juniors ya entrenados que cumplan con tus estándares para incorporarlos de manera definitiva a tu equipo."
+        "title": "Identificación y selección de talento",
+        "text": "Seleccionamos en conjunto a los talentos mejor adaptados a tu cultura, quienes, al finalizar el proyecto, ya están entrenados y preparados para integrarse a tu equipo sin fricción. Al cumplir con tus estándares, puedes optar por contratarlos para aumentar la capacidad de desarrollo de tu equipo de manera inmediata."
       }
     }
   },
   "squad": {
-    "centralText": "Tecnología y metodología para potenciar a tus potenciales futuros colaboradores.\n",
+    "centralText": "Tecnología y metodología para acelerar a tus potenciales futuros colaboradores.\n",
     "leaders": {
       "title": "Nuestros líderes",
       "leyend": "Especializados y capacitados en el stack tecnológico y metodologías de su compañía se asegurarán de que el software cumpla con los requerimientos con calidad y velarán por la evolución de los developers."
@@ -264,7 +251,7 @@
       }
     },
     "form": {
-      "centralText": "CONTACTANOS",
+      "centralText": "Contacto",
       "name": "Nombre",
       "organization": "Compañía",
       "telephone": {
