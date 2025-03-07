@@ -227,7 +227,6 @@ window.addEventListener("click", function (e) {
 
 //  submit form contact
 $(".form-contact").on("submit", function (ev) {
-  debugger
   ev.preventDefault();
   let data_origin_extra_error_message = dataByLang.formContact.validation.noOptionSelected[lang];
   const currentForm = $(this).attr("id");
