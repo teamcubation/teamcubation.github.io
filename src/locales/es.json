@@ -88,24 +88,24 @@
     "moreTestimonials": "Ver mas testimonios"
   },
   "howDo": {
-    "centralText": "¿Cómo lo hacemos?",
+    "centralText": "Nuestros Objetivos",
     "carousel": {
       "itemOne": {
         "title": "Desarrollo de software llave en mano",
-        "text": "Creamos soluciones a medida que cumplen con tus necesidades específicas."
+        "text": "Creamos soluciones a medida que cumplen con tus necesidades específicas, garantizando funcionalidad, eficiencia y facilidad de uso."
       },
       "itemTwo": {
         "title": "Formación en acción",
-        "text": "Nuestros juniors, que ya cuentan con habilidades de programación, se aceleran en la adquisición de experiencia en el desarrollo de software real mediante nuestra metodología y tecnología propietarias y acompañados por nuestros seniors."
+        "text": "Nuestros juniors, que ya cuentan con habilidades de programación, aceleran su experiencia en el desarrollo de software real para nuestros clientes, acompañados por nuestros seniors, lo que les permite aumentar rápidamente su seniority y experiencia."
       },
       "itemThree": {
-        "title": "Selección de talento",
-        "text": "Elegimos en conjunto a los juniors que mejor se adapten a tu cultura para que formen parte de nuestro equipo. Al final del proyecto, puedes elegir contratar a los juniors ya entrenados que cumplan con tus estándares para incorporarlos de manera definitiva a tu equipo."
+        "title": "Identificación y selección de talento",
+        "text": "Seleccionamos en conjunto a los talentos mejor adaptados a tu cultura, quienes, al finalizar el proyecto, ya están entrenados y preparados para integrarse a tu equipo sin fricción. Al cumplir con tus estándares, puedes optar por contratarlos para aumentar la capacidad de desarrollo de tu equipo de manera inmediata."
       }
     }
   },
   "squad": {
-    "centralText": "Tecnología y metodología para potenciar a tus potenciales futuros colaboradores.\n",
+    "centralText": "Tecnología y metodología para acelerar a tus potenciales futuros colaboradores.\n",
     "leaders": {
       "title": "Nuestros líderes",
       "leyend": "Especializados y capacitados en el stack tecnológico y metodologías de su compañía se asegurarán de que el software cumpla con los requerimientos con calidad y velarán por la evolución de los developers."
@@ -251,7 +251,7 @@
       }
     },
     "form": {
-      "centralText": "CONTACTANOS",
+      "centralText": "Contacto",
       "name": "Nombre",
       "organization": "Compañía",
       "telephone": {

@@ -83,29 +83,29 @@
       }
     },
     "centralTextTwo": "Success stories with a personal touch.",
-    "secondaryTextTwo": "Discover how we collaborated with Mercado Livre, not only developing software but also developing talents so they can be part of their teams with exceptional results.",
+    "secondaryTextTwo": "Discover how we collaborated with Mercado Libre, not only developing software but also developing talents so they can be part of their teams with exceptional results.",
     "videoUrl": "https://tq-prod-api-addonsstack-1hk-tqstoragebucketbucket-18dt1u3ncepot.s3.amazonaws.com/presentation.mp4",
     "moreTestimonials": "See more testimonials"
   },
   "howDo": {
-    "centralText": "How do we do it?",
+    "centralText": "Our Goals",
     "carousel": {
       "itemOne": {
         "title": "Turnkey software development",
-        "text": "We create customized solutions that meet your specific needs."
+        "text": "We create tailor-made solutions that meet your specific needs, ensuring functionality, efficiency, and ease of use."
       },
       "itemTwo": {
         "title": "Training in action",
-        "text": "Our juniors, who already have programming skills, accelerate the acquisition of experience in real software development through our proprietary methodology and technology, accompanied by our seniors."
+        "text": "Our juniors, who already have programming skills, accelerate their experience in real software development for our clients, guided by our seniors, allowing them to quickly increase their seniority and experience."
       },
       "itemThree": {
-        "title": "Talent selection",
-        "text": "We jointly choose the juniors that best fit your culture to be part of our team. At the end of the project, you can choose to hire the already trained juniors who meet your standards to permanently incorporate them into your team."
+        "title": "Talent identification and selection",
+        "text": "We collaboratively select the talents best suited to your culture, who, by the end of the project, are fully trained and ready to integrate seamlessly into your team. Once they meet your standards, you can choose to hire them to immediately enhance your team’s development capacity."
       }
     }
   },
   "squad": {
-    "centralText": "Technology and methodology to enhance your potential future collaborators.\n",
+    "centralText": "Technology and methodology to accelerate your potential future collaborators.\n",
     "leaders": {
       "title": "Our leaders",
       "leyend": "Specialized and trained in your company's technology stack and methodologies, they will ensure that the software meets requirements with quality and will oversee the evolution of developers."
@@ -251,7 +251,7 @@
       }
     },
     "form": {
-      "centralText": "CONTACT US",
+      "centralText": "Contact",
       "name": "Name",
       "organization": "Company",
       "telephone": {

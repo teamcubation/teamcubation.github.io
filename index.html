@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css?v=2.11">
+  <link rel="stylesheet" href="css/style.css?v=2.13">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
   <!-- Google Tag Manager -->
@@ -82,14 +82,6 @@
           </div>
         </div>  
         <div id="menu" class="hidden">
-          <div class="navigate-menu" style="position:absolute; width: 100%; top:0; left:0; padding: 0 3.5em">
-            <div class="vertical-divider-menu"></div>
-            <div class="vertical-divider-menu"></div>
-            <div class="vertical-divider-menu"></div>
-            <div class="vertical-divider-menu"></div>
-            <div class="vertical-divider-menu"></div>
-            <div class="vertical-divider-menu" style="visibility: hidden;"></div>
-          </div>
           <div id="language-select-mobile" class="language-select">
             <div id="language-title" class="language-title">
               <img id="globe-white-icon" src="media/globe_icon.png" alt="redirect_lang">
@@ -111,40 +103,36 @@
             </ul>
           </div>
           <div class="navigate-menu">
-            <div data-navigate="proposal" class="link-button">
+            <div data-navigate="proposal" class="link-button divider-button">
               <a id="proposal-link" class="proposal" href="#proposal">Propuesta</a>
-              <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+              <!-- <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu"> -->
             </div>
-            <div data-navigate="problem" class="link-button">
+            <div data-navigate="problem" class="link-button divider-button">
               <a class="problem" href="#problem">Problema</a>
-              <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+              <!-- <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu"> -->
             </div>
-            <div data-navigate="cases" class="link-button">
+            <div data-navigate="cases" class="link-button divider-button">
               <a class="cases" href="#cases">Casos</a>
-              <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+              <!-- <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu"> -->
             </div>
-            <div data-navigate="process" class="link-button">
+            <div data-navigate="process" class="link-button divider-button">
               <a class="process" href="#process">Proceso</a>
-              <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+              <!-- <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu"> -->
             </div>
-            <div data-navigate="squad-description-layout" class="link-button">
+            <div data-navigate="squad-description-layout" class="link-button divider-button">
               <a class="methodology" href="#squad-description-layout">Metodología</a>
-              <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+              <!-- <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu"> -->
             </div>
-            <div data-navigate="team" class="link-button">
+            <div data-navigate="team" class="link-button divider-button">
               <a class="aboutUs" href="#team">Quienes somos</a>
-              <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu">
+              <!-- <img class="arrow-menu" src="media/arrow-menu.svg" alt="arrow-menu"> -->
             </div>
-          </div>
-        </div>
-      </div>
-      <div id="footer-menu" class="hidden">
-        <div class="navigate-menu h-100">
-          <!-- <button data-t data-attr-t data-attr-t-interpolate class="button bg-orange white">textLinks.joinUs</button> -->
-          <div id="social-links-container">
-            <a class="social-link orange" target="_blank" href="https://www.facebook.com/Teamcubation">Facebook</a>
-            <a class="social-link orange" target="_blank" href=" https://twitter.com/Teamcubation_">Twitter</a>
-            <a class="social-link orange" target="_blank" href="https://www.linkedin.com/company/teamcubation">LinkedIn</a>
+            <div data-navigate="external" class="link-button" style="height: 20px;">
+              <div style="display: flex;justify-content: center;align-items: center;">
+                <a style="color:#0A66C2; margin-right: 5px" href="https://www.linkedin.com/company/teamcubation">LinkedIn</a>
+                <img class="arrow-menu" style="color:#0A66C2" src="media/arrow-link.svg" alt="arrow-menu">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -195,7 +183,7 @@
           <div class="services-container">
             <div class="col-12 col-md-6 col-lg-4">
               <div style="padding: 0 14px; height: 100%">
-                <div class="service-card " data-service="talentIncubation">
+                <div class="service-card" data-service="talentIncubation">
                   <div class="service-card-content">
                     <h6>Incubación de Equipos</h6>
                     <p>Desarrollamos software a medida mientras formamos talento para tu equipo. Obtienes tecnología y profesionales alineados y listos para integrarse a tu empresa.</p>
@@ -227,7 +215,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
               <div style="padding: 0 14px; height: 100%">
-                <div class="service-card " data-service="BoosterAI">
+                <div class="service-card" data-service="BoosterAI">
                   <div class="service-card-content">
                     <div class="d-flex justify-content-between align-items-center">
                       <h6 style="margin-right: 0.5em;">BoosterAI®</h6>
@@ -286,33 +274,6 @@
                 <span class="visually-hidden">Siguiente</span>
               </button>
             </div>
-            <!-- <div id="problem-carrousel">
-              <div class="carousel-section">
-                <div data-name="play" class="carousel-button left">
-                  <img src="media/arrow.svg" alt="">
-                </div>
-                <div data-name="play-reverse" class="carousel-button right">
-                  <img src="media/arrow.svg" alt="">
-                </div>
-                <div id="problem-carousel" class="carousel mt-2">
-                  <div class="problem-item-scroll">
-                    <h3 data-t>noMoreDevs.carouselText.itemOne</h3>
-                  </div>
-                  <div class="problem-item-scroll">
-                    <h3 data-t>noMoreDevs.carouselText.itemTwo</h3>
-                  </div>
-                  <div class="problem-item-scroll">
-                    <h3 data-t>noMoreDevs.carouselText.itemThree</h3>
-                  </div>
-                  <div class="problem-item-scroll">
-                    <h3 data-t>noMoreDevs.carouselText.itemFour</h3>
-                  </div>
-                  <div class="problem-item-scroll">
-                    <h3 data-t>noMoreDevs.carouselText.itemFive</h3>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
           <div class="container-content">
             <div class="white mt-1">
@@ -329,69 +290,69 @@
     <section id="the-wheel">
       <div id="the-wheel-layout" class="layout">
         <div id="the-wheel-content">
-          <div class="text-center mb-2">
-            <h3 class="purple">Una solución a medida de las grandes compañías.</h3>
-          </div>
-          <div id="venn-diagram-container">
+          <!-- <div class="text-center mb-2">
+            <h3 class="purple" data-t>theWheel.centralText</h3>
+          </div> -->
+          <!-- <div id="venn-diagram-container">
             <div id="control-switch">
               <div class="d-flex align-items-center mb-1">
-                <input type="checkbox" id="seniors-switch" checked><label class="switch-label" for="seniors-switch">Toggle</label>
+                <input type="checkbox" id="seniors-switch" checked /><label class="switch-label" for="seniors-switch">Toggle</label>
                 <h5 class="fw-bold green">SENIORS</h5>
               </div>
               <div class="d-flex align-items-center mb-1">
-                <input type="checkbox" id="junior-switch" checked><label class="switch-label" for="junior-switch">Toggle</label>
+                <input type="checkbox" id="junior-switch" checked /><label class="switch-label" for="junior-switch">Toggle</label>
                 <h5 class="fw-bold orange">DEVELOPERS</h5>
               </div>
               <div class="d-flex align-items-center mb-1">
-                <input type="checkbox" id="software-switch" checked><label class="switch-label" for="software-switch">Toggle</label>
+                <input type="checkbox" id="software-switch" checked /><label class="switch-label" for="software-switch">Toggle</label>
                 <h5 class="fw-bold purple">SOFTWARE</h5>
               </div>  
-            </div>
-            <div id="venn-diagram">
+            </div> -->
+            <!-- <div id="venn-diagram">
               <img id="diagram-logo" src="media/logo-white.svg" alt="tq">
               <div id="intersection-seniors-software" class="intersection-seniors-software hidden">
                 <div>
-                  <!-- <p data-t class="intersection-seniors-software-leyend">Software</p>
-                  <p data-t class="intersection-seniors-software-leyend">Factory</p> -->
+                   <p data-t class="intersection-seniors-software-leyend">Software</p>
+                  <p data-t class="intersection-seniors-software-leyend">Factory</p>
                 </div>
-                <!-- <div>
+                <div>
                   <img class="arrow-diagram" style="float: right"  src="media/diagram-arrow-left.svg" alt="arrow">
-                </div> -->
+                </div> 
               </div>
               <div id="intersection-software-junior" class="intersection-software-junior hidden">
-                <!-- <div>
+                <div>
                   <img class="arrow-diagram" style="float: right"  src="media/diagram-arrow-right.svg" alt="arrow">
-                </div> -->
-                <!-- <div data-t class="intersection-software-junior-leyend">theWheel.veenDiagram.intersections.two</div> -->
+                </div> 
+                <div data-t class="intersection-software-junior-leyend">theWheel.veenDiagram.intersections.two</div> 
               </div>
               <div id="intersection-seniors-junior" class="intersection-seniors-junior hidden">
-                <!-- <div data-t  class="intersection-seniors-junior-leyend">theWheel.veenDiagram.intersections.three</div> -->
-                <!-- <div>
+               <div data-t  class="intersection-seniors-junior-leyend">theWheel.veenDiagram.intersections.three</div> 
+                 <div>
                   <img class="arrow-diagram" class="arrow-diagram"  src="media/diagram-arrow-top.svg" alt="arrow">
-                </div> -->
+                </div> 
               </div>
               <div id="seniors-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item purple">
-                  <div class="sm-text-card fw-bold">SENIORS</div>
-                  <p>Con experiencia</p>
-                  <p>en desarrollo</p>
+                  <div data-t class="sm-text-card fw-bold">SENIORS</div>
+                  <p data-t>theWheel.veenDiagram.seniors.lineOne</p>
+                  <p data-t>theWheel.veenDiagram.seniors.lineTwo</p>
                 </div>
               </div>
               <div id="junior-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item white">
-                  <div class="sm-text-card fw-bold">DEVELOPERS</div>
-                  <p>Con ganas</p>
-                  <p>de aprender</p>
+                  <div data-t class="sm-text-card fw-bold">DEVELOPERS</div>
+                  <p data-t>theWheel.veenDiagram.juniors.lineOne</p>
+                  <p data-t>theWheel.veenDiagram.juniors.lineTwo</p>
                 </div>
               </div>
               <div id="software-venn-diagram-item" class="venn-diagram-item">
                 <div class="leyend-diagram-item white">
-                  <div class="sm-text-card fw-bold">SOFTWARE</div>
-                  <p>que necesitas</p>
+                  <div data-t class="sm-text-card fw-bold">SOFTWARE</div>
+                  <p data-t>theWheel.veenDiagram.software.lineOne</p>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div id="cases" class="mb-1">
             <h3 class="purple">Historias de éxito con un toque personal.</h3>
             <div style="margin: 30px auto">
@@ -429,7 +390,7 @@
 
         <div id="process-content">
           <div class="text-center">
-            <h3>¿Cómo lo hacemos?</h3>
+            <h3>Nuestros Objetivos</h3>
           </div> 
           <div class="carousel-section">
             <div id="process-carousel" class="carousel mt-2 mb-2">
@@ -445,7 +406,7 @@
                   <div id="step-leyend-container-01" class="step-leyend-container">
                     <div class="step-leyend">
                       <p class="md-text-card">Desarrollo de software llave en mano</p>
-                      <p>Creamos soluciones a medida que cumplen con tus necesidades específicas.</p>
+                      <p>Creamos soluciones a medida que cumplen con tus necesidades específicas, garantizando funcionalidad, eficiencia y facilidad de uso.</p>
                     </div>
                   </div>
                 </div>  
@@ -458,7 +419,7 @@
                   <div id="step-leyend-container-02" class="step-leyend-container">
                     <div class="step-leyend">
                       <p class="md-text-card">Formación en acción</p>
-                      <p>Nuestros juniors, que ya cuentan con habilidades de programación, se aceleran en la adquisición de experiencia en el desarrollo de software real mediante nuestra metodología y tecnología propietarias y acompañados por nuestros seniors.</p>
+                      <p>Nuestros juniors, que ya cuentan con habilidades de programación, aceleran su experiencia en el desarrollo de software real para nuestros clientes, acompañados por nuestros seniors, lo que les permite aumentar rápidamente su seniority y experiencia.</p>
                     </div>
                   </div>
                 </div>  
@@ -470,8 +431,8 @@
                   </div>
                   <div class="step-leyend-container">
                     <div id="step-leyend-container-03" class="step-leyend">
-                      <p class="md-text-card">Selección de talento</p>
-                      <p>Elegimos en conjunto a los juniors que mejor se adapten a tu cultura para que formen parte de nuestro equipo. Al final del proyecto, puedes elegir contratar a los juniors ya entrenados que cumplan con tus estándares para incorporarlos de manera definitiva a tu equipo.</p>
+                      <p class="md-text-card">Identificación y selección de talento</p>
+                      <p>Seleccionamos en conjunto a los talentos mejor adaptados a tu cultura, quienes, al finalizar el proyecto, ya están entrenados y preparados para integrarse a tu equipo sin fricción. Al cumplir con tus estándares, puedes optar por contratarlos para aumentar la capacidad de desarrollo de tu equipo de manera inmediata.</p>
                     </div>
                   </div>
                 </div>  
@@ -488,7 +449,7 @@
           <div id="squad-description-layout">
             <div id="squad-description-content">
               <div class="d-flex">
-                <h3>Tecnología y metodología para potenciar a tus potenciales futuros colaboradores.
+                <h3>Tecnología y metodología para acelerar a tus potenciales futuros colaboradores.
 </h3>
               </div>
               <div class="col-12 col-md-5">
@@ -1011,89 +972,122 @@
   
     <div id="form-modal" class="hidden d-flex">
       <div id="form-container">
-        <div class="col-12 d-flex flex-column align-items-center">
-          <form class="form-contact" id="form-contact">
-            <div type="button" id="close-modal" style="float: right; padding: 0 0 2em 0"><img src="media/close-icon.svg" alt="close-icon"></div>
-            <div id="formIdenfitication" class="mt-2 w-100 position-relative">
-              <div class="dropdown-select w-100" id="dropdown-select">
-                <div class="select-tc">
-                  <textarea class="input-select" disabled placeholder="¿Cómo te identificás?"></textarea>
-                  <span class="open-dropdown-select" style="width: 100%; height: 100%; position:absolute"></span>
-                  <img class="dropdown-arrow" src="media/arrow-dropdowns-down.svg" alt="arrow">
-                </div>
-                <div style="position: relative; max-width: 100%">
-                  <ul class="list-options-tc">
-                    <li>
-                      <div class="option-tc" data-option="organization">Soy una organización, quiero que me contacten para conocer más del servicio</div>
-                    </li>
-                    <li>
-                      <div class="option-tc" data-option="senior">Soy un desarrollador Senior y quiero acompañar a Juniors</div>
-                    </li>
-                    <li>
-                      <div class="option-tc" data-option="junior">Soy un desarrollador Junior/Trainee con conocimientos de programación</div>
-                    </li>
-                    <li>
-                      <div class="option-tc" data-option="no-exp">No sé programar y quiero aprender</div>
-                    </li>
-                    <li>
-                      <div class="option-tc" data-option="other">Otro</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="form-message" id="juniorsMessage">
-                <p class="d-inline fw-600"></p>
-                <p class="d-inline">Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando</p>
-                <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">postulate acá</a>
-                <p class="d-inline">que es donde podemos ayudarte a que una compañía te seleccione para un squad</p>
-              </div>
-              <div class="form-message" id="seniorsMessage">
-                <p class="d-inline fw-400">Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,</p>
-                <p class="d-inline">andá a </p>
-                <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">este link y postulate a la búsqueda que más se adecúe a tu perfil</a>
-                <p class="d-inline">que nos va a permitir entender dónde podemos sumarte en Teamcubation_</p>
-              </div>
-              <div class="form-message" id="noCodersMessage">
-                <p class="d-inline fw-600">Si todavía no aprendiste a programar</p>
-                <p class="d-inline"> te rogamos que lo hagas, te conviertas en developer y después vengas a postularte! Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear.</p>
-              </div>    
-            </div>
-            <div id="formInformation">
-              <div class="mt-2">
-                <input type="text" class="name" name="name" required placeholder="Nombre">
-              </div>
-              <div class="mt-2">
-                <input type="text" class="organizationContact" placeholder="Compañía">
-              </div>
-              <div class="mt-2">
-                <label for="country-phone-team" class="form-label">Teléfono</label>
-              </div>
-              <div class="row">
-                <div class="col-md-7 col-sm-12">
-                  <div class="row">
-                    <div class="col-3">
-                      <span>+</span>
-                      <input id="country-phone-team" style="width: calc(100% - 15px)" type="text" name="country-phone" class="country-phone" placeholder="País">
+        <form class="form-contact" id="form-contact">
+          <div style="padding: 0 14px; display: flex; justify-content: space-between; align-items: center">
+            <h6 class="inter-font" style="font-size: 22px; font-weight: 600; margin-bottom: 0">Contacto</h6>
+            <div type="button" id="close-modal"><img src="media/close-icon.svg" style="width: 12px" alt="close-icon"></div>
+          </div>
+          <div style="padding: 0 14px; display: flex; justify-content: space-between; align-items: center">
+            <div style="height: 1px; background:#C8C6C5; width: calc(100%); margin: 0.5em 0"></div>
+          </div>
+          <div class="row justify-content-around align-items-end">
+            <div class="col-12 col-md-6" style="margin-top: 1.5em !important;">
+              <div style="padding: 0 14px;">
+                <div id="formIdenfitication" class=" w-100">
+                  <div class="dropdown-select w-100" id="dropdown-select">
+                    <label>¿Cómo te identificás?</label>
+                    <div class="select-tc">
+                      <input class="input-select" id="identify-input-select" disabled>
+                      <span class="open-dropdown-select" style="width: 100%; height: 100%; position:absolute"></span>
+                      <img class="dropdown-arrow" src="media/arrow-dropdowns-down.svg" alt="arrow">
                     </div>
-                    <div class="col-3">
-                      <input type="text" name="area-phone" class="area-phone" placeholder="Área">
-                    </div>
-                    <div class="col-6">
-                      <input type="text" name="number-phone" class="number-phone" placeholder="Número">
+                    <div style="max-width: 100%">
+                      <ul class="list-options-tc">
+                        <li>
+                          <div class="option-tc" data-option="organization">Soy una organización, quiero que me contacten para conocer más del servicio</div>
+                        </li>
+                        <li>
+                          <div class="option-tc" data-option="senior">Soy un desarrollador Senior y quiero acompañar a Juniors</div>
+                        </li>
+                        <li>
+                          <div class="option-tc" data-option="junior">Soy un desarrollador Junior/Trainee con conocimientos de programación</div>
+                        </li>
+                        <li>
+                          <div class="option-tc" data-option="no-exp">No sé programar y quiero aprender</div>
+                        </li>
+                        <li>
+                          <div class="option-tc" data-option="other">Otro</div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5 col-sm-12 mt-md-0 mt-4">
-                  <input type="email" name="email" class="email" required placeholder="E-mail">
+              </div>
+            </div> 
+            <div class="col-12 col-md-6 " style="margin-top: 1.5em !important;">
+              <div style="padding: 0 14px;" class="name-form-container">
+                <label>Nombre</label>
+                <input type="text" class="name" name="name" required>
+              </div>
+              <div style="padding: 0 14px; position: relative; max-width: 100%;">
+                <div class="form-message" id="juniorsMessage">
+                  <p class="d-inline fw-600"></p>
+                  <p class="d-inline">Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando</p>
+                  <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">postulate acá</a>
+                  <p class="d-inline">que es donde podemos ayudarte a que una compañía te seleccione para un squad</p>
+                </div>
+                <div class="form-message" id="seniorsMessage">
+                  <p class="d-inline fw-400">Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,</p>
+                  <p class="d-inline">andá a </p>
+                  <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">este link y postulate a la búsqueda que más se adecúe a tu perfil</a>
+                  <p class="d-inline">que nos va a permitir entender dónde podemos sumarte en Teamcubation_</p>
+                </div>
+                <div class="form-message" id="noCodersMessage">
+                  <p class="d-inline fw-600">Si todavía no aprendiste a programar</p>
+                  <p class="d-inline"> te rogamos que lo hagas, te conviertas en developer y después vengas a postularte! Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear.</p>
+                </div>    
+              </div>
+
+            </div> 
+          </div>
+
+          <div id="formInformation">
+            <!-- <div class="mt-2">
+              <label data-t>contact.form.organization</label>
+              <input data-attr-t data-attr-t-interpolate type="text" class="organizationContact">
+            </div> -->
+            <div class="row justify-content-around align-items-end">
+              <div class="col-12 col-md-6" style="margin-top: 1.5em !important;">
+                <div style="padding: 0 14px;">
+                  <label>E-mail</label>
+                  <input type="email" name="email" class="email" required>
                 </div>
               </div>
-              <div class="mb-4 mt-2">
-                <textarea name="message" class="message" rows="1" required placeholder="Dejanos tu mensaje"></textarea>
+              <div class="col-12 col-md-6" style="margin-top: 1.5em !important;"> 
+                <div style="padding: 0 8px 0 14px;">
+                  <label>Teléfono</label>
+                  <div class="row">
+                    <div class="col-3">
+                      <div style="padding: 0 6px; display: flex; align-items: center; align-items: center;">
+                        <span style="width: 25px;">+</span>
+                        <input id="country-phone-team" type="text" name="country-phone" class="country-phone" placeholder="País">
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div style="padding: 0 6px;">
+                        <input type="text" name="area-phone" class="area-phone" placeholder="Área">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div style="padding: 0 6px;">
+                        <input type="text" name="number-phone" class="number-phone" placeholder="Número">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <button type="submit" name="submit-contact" class="button submit-contact purple" style="float: right;">Enviar</button>
-          </form>
-        </div>
+            <div class="row justify-content-around align-items-end" style="margin-top: 1.5em !important;">
+              <div class="col-12">
+                <div style="padding: 0 14px;">
+                  <label>Dejanos tu mensaje</label>
+                  <textarea name="message" class="message" rows="1" required style="height: 90px;"></textarea>
+                  <button type="submit" name="submit-contact" class="w-100 button submit-contact bg-orange white" style="margin-top: 2em; font-size: 1.2em">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -1103,7 +1097,7 @@
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script type="module" src="index.js?v=2.8"></script>
+  <script type="module" src="index.js?v=3.1"></script>
 
 </body>
 </html>

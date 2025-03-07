@@ -88,24 +88,24 @@
     "moreTestimonials": "Ver mais depoimentos"
   },
   "howDo": {
-    "centralText": "Como fazemos isso?",
+    "centralText": "Nossos Objetivos",
     "carousel": {
       "itemOne": {
         "title": "Desenvolvimento de software chave na mão",
-        "text": "Criamos soluções personalizadas que atendem às suas necessidades específicas."
+        "text": " Criamos soluções sob medida que atendem às suas necessidades específicas, garantindo funcionalidade, eficiência e facilidade de uso."
       },
       "itemTwo": {
         "title": "Formação em ação",
-        "text": "Nossos juniores, que já possuem habilidades de programação, aceleram a aquisição de experiência no desenvolvimento de software real por meio de nossa metodologia e tecnologia proprietárias e acompanhados por nossos seniors."
+        "text": "Os nossos juniors, que já possuem habilidades de programação, aceleram sua experiência no desenvolvimento de software real para os nossos clientes, acompanhados pelos nossos seniors, o que permite aumentar rapidamente seu seniority e experiência."
       },
       "itemThree": {
-        "title": "Seleção de talentos",
-        "text": "Escolhemos em conjunto os juniores que melhor se adaptam à sua cultura para que façam parte de nossa equipe. No final do projeto, você pode optar por contratar os juniores já treinados que atendem aos seus padrões para incorporá-los definitivamente à sua equipe."
+        "title": "Identificação e seleção de talento",
+        "text": "Selecionamos em conjunto os talentos mais adaptados à sua cultura, que, ao final do projeto, já estão treinados e preparados para se integrar ao seu time sem fricções. Ao atenderem aos seus padrões, você pode optar por contratá-los para aumentar a capacidade de desenvolvimento do seu time de forma imediata."
       }
     }
   },
   "squad": {
-    "centralText": "Tecnologia e metodologia para potencializar seus potenciais futuros colaboradores.\n",
+    "centralText": "Tecnologia e metodologia para acelerar seus potenciais futuros colaboradores.\n",
     "leaders": {
       "title": "Nossos líderes",
       "leyend": "Especializados e treinados na pilha de tecnologia e metodologias da sua empresa, garantirão que o software atenda aos requisitos com qualidade e supervisionarão a evolução dos desenvolvedores."
@@ -251,7 +251,7 @@
       }
     },
     "form": {
-      "centralText": "CONTATE-NOS",
+      "centralText": "Contate",
       "name": "Nome",
       "organization": "Empresa",
       "telephone": {
