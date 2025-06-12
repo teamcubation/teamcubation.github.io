@@ -6,7 +6,7 @@ html, body {
 
 :root {
 	--padding: 9em;
-	--container-padding: 0 9em;
+	--container-padding: 0 8em;
 	--navbar-height: 80px;
 	--white: #ffffff;
 	--color-dark: #000000;
@@ -22,6 +22,7 @@ html, body {
 	--color-secondary: #5F5E5E;
 	--color-tertiary: #E6E2E1;
 	--color-positive: #01A480;
+	--color-tb_primary: #4B1FFC;
 }
 
 form{ 
@@ -161,6 +162,53 @@ label{
 	margin-bottom: 0.4em;
 }
 
+.product-card{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1 0 0;
+	align-self: stretch;
+	border-radius: 16px;
+	border: 1px solid #C8C6C5;
+	padding: 24px 20px
+}
+
+.product-card-content{
+	display: flex;
+	align-items: flex-start;
+	flex-direction:column;
+	gap: 12px;
+	align-self: stretch;
+}
+
+.product-card-content h6{
+	font-family: 'Inter';
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 140%;
+	letter-spacing: -0.22px;
+	color: var(--color-primary);
+	margin-bottom: 0;
+	color: #1D1B1B
+}
+
+.product-card-content p{
+	font-family: 'Inter';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--color-secondary);
+	margin-bottom: 0;
+}
+
+.col-gap-32 {
+    padding-left: 16px!important;
+    padding-right: 16px!important;
+}
+
 /* style elements */
 
 h1{
@@ -253,6 +301,10 @@ ul{
 
 .bg-green{
 	background-color: var(--color-green);
+}
+
+.bg-tb_primary{
+	background-color: var(--color-tb_primary);
 }
 
 .white{
@@ -1039,23 +1091,23 @@ html[lang="pt"] .intersection-seniors-junior {
 
 /* PEP */
 
-#pep-content{
+#product-content{
 	position: relative;
 	max-width: 1440px ;	
-	padding: var(--container-padding);
-	padding-top: 10em;
-	padding-bottom: 10em;
+	padding: 0 8em;
+	padding-top: 7em;
+	padding-bottom: 7em;
 	margin: 0 auto;
 }
 
-#pep-attributes-container{
+#product-attributes-container{
 	border-radius: 50px;
 	border: 1px solid var(--color-logo-orange);
 	padding: 2em;
 	margin-top: 4em;
 }
 
-#pep-img-container{
+#product-img-container{
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -1574,7 +1626,8 @@ html[lang="pt"] .intersection-seniors-junior {
 }
 
 .lg-button{
-	font-size: 1.5em;
+	font-size: 1em;
+	padding: 0.9em 2em;
 }
 
 .outlined{
@@ -2381,11 +2434,11 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		gap: 1em;
 	}
 
-	#pep-content{
+	#product-content{
 		padding-top: 5em;
 	}
 
-	#pep-attributes-container {
+	#product-attributes-container {
 		padding: 2em;
 	}
 
@@ -2658,11 +2711,13 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 		gap: 2em;
 	}
 
-	#pep-content{
-		padding-top: 10em;
+	#product-content{
+		padding: 5em 3em 5em 3em;
+		
+		
 	}
 
-	#pep-attributes-container {
+	#product-attributes-container {
 		padding: 2em;
 	}
 	

@@ -121,6 +121,11 @@ $("#close-modal").on("click", (e) => {
   handleControlFormModal();
 });
 
+$('#open_team_boarding').click(function(e) {
+  e.preventDefault();
+  window.open('https://teamboarding.com/', '_blank');
+});
+
 const openMenu = () => {
   $("#menu").removeClass('hidden');
   $("#navbar-content").addClass('open-menu');

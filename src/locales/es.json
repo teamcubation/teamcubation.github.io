@@ -15,6 +15,7 @@
     "cases": "Casos",
     "process": "Proceso",
     "methodology": "Metodología",
+    "product": "Producto",
     "aboutUs": "Quienes somos",
     "contact": "Contáctanos",
     "joinUs": "¡Unite!"
@@ -115,36 +116,41 @@
       "leyend": "Guiados por nuestros seniors, adquirirán experiencia real mientras desarrollan sus habilidades técnicas y blandas, y se integran a tu cultura empresarial."
     }
   },
-  "pep": {
-    "title": "Programming Experience Platform. ",
-    "textLeft": "La magia de nuestra metodología está en los datos.",
-    "textRight": "Mientras el equipo trabaja, recolectamos y analizamos datos concretos para evaluar y mejorar las habilidades de nuestros desarrolladores juniors con la ayuda de nuestra Plataforma de Experiencia en Programación (PEP). Esto permite a nuestros seniors, apoyar a cada uno de forma personalizada para garantizar que se alineen con la cultura, metodologías y tecnologías de tus equipos, ayudándolos a adquirir la experiencia necesaria para poder incorporarse a estos y ser productivos desde el primer día.",
-    "dropDown": {
-      "one": {
-        "title": "Integración a su flujo de trabajo",
-        "leyend": "PEP se conecta con herramientas como GitHub, Jira, Slack y Teams, facilitando tanto el proceso de desarrollo de software como el seguimiento del progreso de los juniors."
+  "product": {
+    "title": "Onboarding claro y estructurado, sin complicaciones.",
+    "centralText": "Mientras el equipo trabaja, recopilamos y analizamos datos concretos para evaluar y mejorar las habilidades de nuestros desarrolladores con la ayuda de Teamboarding.",
+    "subTitle": "Descubrí una forma simple y efectiva de integrar personas a tu equipo.",
+    "cards": {
+      "customized_processes": {
+        "title": "Procesos Personalizados",
+        "leyend": "Crea y gestiona flujos de trabajo adaptados a cada rol dentro del equipo."
       },
-      "two": {
-        "title": "Insights en tiempo real",
-        "leyend": "Observa la evolución de los developers con métricas precisas sobre el código que desarrollan, las metodologías y herramientas de comunicación."
+      "detailed_metrics": {
+        "title": "Métricas Detalladas",
+        "leyend": "Supervisa el avance con informes y análisis precisos que permiten tomar decisiones informadas."
       },
-      "three": {
-        "title": "Alertas inteligentes",
-        "leyend": "Nos mantienen al tanto del desempeño de los developers con notificaciones que identifican comportamientos que no se alinean con las expectativas, necesarias para mejorar la calidad y coherencia del trabajo y del equipo."
+      "automatic_alerts": {
+        "title": "Alertas Automáticas",
+        "leyend": "Recibe notificaciones en tiempo real sobre hitos importantes o situaciones que requieren atención."
       },
-      "four": {
-        "title": "Seguimiento personalizable",
-        "leyend": "Evaluamos aspectos clave del desarrollo personal de los developers mediante acciones y encuestas a medida que aportan un enfoque humano en el proceso de entrenamiento."
+      "activity_logs": {
+        "title": "Registros de Actividad",
+        "leyend": "Lleva un seguimiento completo de cada acción para facilitar el feedback y la mejora continua."
       },
-      "five": {
-        "title": "Conoce a tus futuros colaboradores",
-        "leyend": "A través de tests cognitivos y conductuales, tales como PDA (Personal Development Analysis), obtenemos una visión clara de los perfiles de tus futuros colaboradores para gestionar su talento, desarrollar habilidades y obtener su mejor versión."
+      "simple_role_assignment": {
+        "title": "Asignación Simple de Roles",
+        "leyend": "Asigna fácilmente líderes o mentores a los nuevos integrantes para asegurar un acompañamiento efectivo."
       },
-      "six": {
-        "title": "Pulso emocional",
-        "leyend": "Integración con IA que analiza respuestas y detecta automáticamente los sentimientos y emociones del equipo para intervenir oportunamente cuando sea necesario, asegurando un entorno laboral positivo y productivo."
+      "easy_connection": {
+        "title": "Integración con Herramientas de Uso Diario",
+        "leyend": "Conecta las herramientas que tu equipo ya utiliza para recopilar datos y seguir el progreso sin fricciones."
+      },
+      "progress_monitoring": {
+        "title": "Monitoreo Detallado del Progreso", 
+        "leyend": "Visualiza y evalúa todo el proceso, tanto para nuevos ingresos como para líderes, desde una única plataforma."
       }
-    }
+    },
+    "button_text": "Más información"
   },
   "team": {
     "centralText": "Nuestro Equipo",

@@ -15,6 +15,7 @@
     "cases": "Casos",
     "process": "Processo",
     "methodology": "Metodologia",
+    "product": "Produto",
     "aboutUs": "Quem somos",
     "contact": "Contate-nos",
     "joinUs": "Junte-se a nós!"
@@ -115,38 +116,43 @@
       "leyend": "Orientados por nossos seniors, eles adquirirão experiência real enquanto desenvolvem suas habilidades técnicas e interpessoais e se integram à sua cultura empresarial."
     }
   },
-  "pep": {
-    "title": "Plataforma de Experiência em Programação. ",
-    "textLeft": "A mágica da nossa metodologia está nos dados.",
-    "textRight": "Enquanto a equipe trabalha, coletamos e analisamos dados concretos para avaliar e melhorar as habilidades de nossos desenvolvedores juniores com a ajuda de nossa Plataforma de Experiência em Programação (PEP). Isso permite que nossos seniors apoiem cada um de forma personalizada para garantir que se alinhem com a cultura, metodologias e tecnologias de suas equipes, ajudando-os a adquirir a experiência necessária para se juntar a elas e serem produtivos desde o primeiro dia.",
-    "dropDown": {
-      "one": {
-        "title": "Integração ao seu fluxo de trabalho",
-        "leyend": "A PEP se conecta com ferramentas como GitHub, Jira, Slack e Teams, facilitando tanto o processo de desenvolvimento de software quanto o acompanhamento do progresso dos juniores.",
-        "two": {
-          "title": "Insights em tempo real",
-          "leyend": "Observe a evolução dos desenvolvedores com métricas precisas sobre o código que desenvolvem, as metodologias e ferramentas de comunicação."
-        },
-        "three": {
-          "title": "Alertas inteligentes",
-          "leyend": "Nos mantêm informados sobre o desempenho dos desenvolvedores com notificações que identificam comportamentos que não se alinham com as expectativas, necessárias para melhorar a qualidade e a coerência do trabalho e da equipe."
-        },
-        "four": {
-          "title": "Acompanhamento personalizável",
-          "leyend": "Avaliamos aspectos-chave do desenvolvimento pessoal dos desenvolvedores por meio de ações e pesquisas personalizadas que trazem um enfoque humano ao processo de treinamento."
-        },
-        "five": {
-          "title": "Conheça seus futuros colaboradores",
-          "leyend": "Por meio de testes cognitivos e comportamentais, como o PDA (Análise de Desenvolvimento Pessoal), obtemos uma visão clara dos perfis de seus futuros colaboradores para gerenciar seus talentos, desenvolver habilidades e obter sua melhor versão."
-        },
-        "six": {
-          "title": "Pulso emocional",
-          "leyend": "Integração com IA que analisa respostas e detecta automaticamente os sentimentos e emoções da equipe para intervir oportunamente quando necessário, garantindo um ambiente de trabalho positivo e produtivo."
-        }
+ "product": {
+    "title": "Onboarding claro e estruturado, sem complicações",
+    "centralText": "Enquanto a equipe trabalha, coletamos e analisamos dados concretos para avaliar e aprimorar as habilidades dos nossos desenvolvedores com a ajuda do Teamboarding.",
+    "subTitle": "Descubra uma forma simples e eficaz de integrar pessoas à sua equipe.",
+    "cards": {
+      "customized_processes": {
+        "title": "Processos Personalizados",
+        "leyend": "Crie e gerencie fluxos de trabalho adaptados a cada função dentro da equipe."
+      },
+      "detailed_metrics": {
+        "title": "Métricas Detalhadas",
+        "leyend": "Acompanhe o progresso com relatórios e análises precisas que apoiam a tomada de decisões."
+      },
+      "automatic_alerts": {
+        "title": "Alertas Automáticos",
+        "leyend": "Receba notificações em tempo real sobre marcos importantes ou situações que exigem atenção."
+      },
+      "activity_logs": {
+        "title": "Registros de Atividades",
+        "leyend": "Mantenha o controle de todas as ações para facilitar o feedback e a melhoria contínua."
+      },
+      "simple_role_assignment": {
+        "title": "Atribuição Simples de Papéis",
+        "leyend": "Atribua facilmente líderes ou mentores aos novos integrantes para garantir um acompanhamento eficaz."
+      },
+      "easy_connection": {
+        "title": "Integração com Ferramentas do Dia a Dia",
+        "leyend": "Conecte as ferramentas que sua equipe já utiliza para coletar dados e acompanhar o progresso sem complicações."
+      },
+      "progress_monitoring": {
+        "title": "Monitoramento Detalhado do Progresso",
+        "leyend": "Visualize e avalie toda a jornada do processo, tanto para novos colaboradores quanto para líderes, a partir de uma plataforma centralizada."
       }
-    }
-  },
-  "team": {
+      },
+      "button_text": "Mais informações"
+    },
+    "team": {
     "centralText": "Nossa Equipe",
     "mariano": {
       "leyend": " Imagino a Teamcubation resolvendo o problema gigante das empresas e oferecendo oportunidades de primeiro emprego a milhares de pessoas.",

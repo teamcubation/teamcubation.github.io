@@ -15,6 +15,7 @@
     "cases": "Cases",
     "process": "Process",
     "methodology": "Methodology",
+    "product": "Product",
     "aboutUs": "About Us",
     "contact": "Contact Us",
     "joinUs": "Join Us!"
@@ -115,36 +116,41 @@
       "leyend": "Guided by our seniors, they will gain real experience while developing their technical and interpersonal skills and integrating into your corporate culture."
     }
   },
-  "pep": {
-    "title": "Programming Experience Platform. ",
-    "textLeft": "The magic of our methodology is in the data.",
-    "textRight": "While the team works, we collect and analyze concrete data to evaluate and improve the skills of our junior developers with the help of our Programming Experience Platform (PEP). This allows our seniors to support each one in a personalized way to ensure they align with the culture, methodologies, and technologies of your teams, helping them acquire the necessary experience to join them and be productive from day one.",
-    "dropDown": {
-      "one": {
-        "title": "Integration into your workflow",
-        "leyend": "PEP connects with tools like GitHub, Jira, Slack, and Teams, facilitating both the software development process and tracking junior progress."
+  "product": {
+    "title": "Streamlined and Organized Onboarding Made Simple",
+    "centralText": "While the team works, we collect and analyze concrete data to evaluate and improve the skills of our developers with the help of Teamboarding.",
+    "subTitle": "Discover how effortless integration can be like never before",
+    "cards": {
+      "customized_processes": {
+        "title": "Customized Processes",
+        "leyend": "Design and manage onboarding workflows tailored to each technical role."
       },
-      "two": {
-        "title": "Real-time insights",
-        "leyend": "Observe the evolution of developers with precise metrics on the code they develop, methodologies, and communication tools."
+      "detailed_metrics": {
+        "title": "Detailed Metrics",
+        "leyend": "Assess onboarding progress and with reports and precise analysis."
       },
-      "three": {
-        "title": "Intelligent alerts",
-        "leyend": "Keep us informed about developer performance with notifications that identify behaviors that don't align with expectations, necessary to improve the quality and consistency of work and team."
+      "automatic_alerts": {
+        "title": "Automatic Alerts",
+        "leyend": "Receive notifications about key milestones and potential issues in real time."
       },
-      "four": {
-        "title": "Customizable monitoring",
-        "leyend": "We evaluate key aspects of developers' personal development through customized actions and surveys that bring a human approach to the training process."
+      "activity_logs": {
+        "title": "Activity Logs",
+        "leyend": "Record and track all activities to provide detailed feedback and insights later."
       },
-      "five": {
-        "title": "Meet your future collaborators",
-        "leyend": "Through cognitive and behavioral tests, such as PDA (Personal Development Analysis), we get a clear view of your future collaborators' profiles to manage their talents, develop skills, and get their best version."
+      "simple_role_assignment": {
+        "title": "Simple Role Assignment",
+        "leyend": "Easily pair buddies and leaders with teammates for effective guidance and support."
       },
-      "six": {
-        "title": "Emotional pulse",
-        "leyend": "Integration with AI that automatically analyzes responses and detects the team's feelings and emotions to intervene timely when necessary, ensuring a positive and productive work environment."
+      "easy_connection": {
+        "title": "Easy Connection with Daily Tools",
+        "leyend": "Link with developers' regular tools to gather metrics and track teammate progress."
+      },
+      "progress_monitoring": {
+        "title": "In-Depth Progress Monitoring", 
+        "leyend": "Track and evaluate the onboarding journey for new hires or leaders, all from a centralized platform."
       }
-    }
+    },
+    "button_text": "Learn more"
   },
   "team": {
     "centralText": "Our Team",
