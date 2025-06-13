@@ -47,7 +47,7 @@
     "services": {
       "talentIncubation": {"title": "Talent Incubation", "description": "We develop custom software while training talent for your team. You get technology and professionals aligned and ready to integrate into your company."},
       "upskilling&reskilling": {"title": "Upskilling and Reskilling", "description": "Through on-the-job mentoring and workshops, we drive your team's growth by strengthening skills, incorporating new technologies, and improving processes."},
-      "BoosterAI": {"title": "BoosterAI®", "description": "In two months, your team will apply AI to its processes, creating solutions aligned with your business challenges. With an intensive and practical approach, AI will start working for your company from day one."},
+      "BoosterAI": {"title": "BoosterAI", "description": "In a month, your team will apply AI to its processes, creating solutions aligned with your business challenges. With an intensive and practical approach, AI will start working for your company from day one."},
       "link-button": "Learn More" 
     }
   },

@@ -619,45 +619,45 @@ dividerCenter.style.left = `calc(${itemTwo - itemOne}px)`;
 
 
 // pep
-const dropdowns = document.querySelectorAll('.dropdown-standard-item');
-const imageContainer = document.getElementById('pep-img-container');
-const initOpen = document.getElementById("pep-one");
-const imgInitOpen = initOpen.querySelector('img');
+// const dropdowns = document.querySelectorAll('.dropdown-standard-item');
+// const imageContainer = document.getElementById('pep-img-container');
+// const initOpen = document.getElementById("pep-one");
+// const imgInitOpen = initOpen.querySelector('img');
 
-if(window.innerWidth < 992){
-  imgInitOpen.classList.remove('hidden');
-  const img = imageContainer.querySelector("img");
-  imageContainer.removeChild(img)
-}
+// if(window.innerWidth < 992){
+//   imgInitOpen.classList.remove('hidden');
+//   const img = imageContainer.querySelector("img");
+//   imageContainer.removeChild(img)
+// }
 
-dropdowns.forEach(dropdown => {
-  const button = dropdown.querySelector('.card-standard-header .dropdown-item-button');
-  const title = dropdown.querySelector('.card-standard-header .sm-text-card');
-  const content = dropdown.querySelector('.collapsed-content');
-  const image = content.querySelector('img');
-  const iconbutton = button.querySelector('img');
+// dropdowns.forEach(dropdown => {
+//   const button = dropdown.querySelector('.card-standard-header .dropdown-item-button');
+//   const title = dropdown.querySelector('.card-standard-header .sm-text-card');
+//   const content = dropdown.querySelector('.collapsed-content');
+//   const image = content.querySelector('img');
+//   const iconbutton = button.querySelector('img');
 
-  dropdown.addEventListener('click', () => {
-    dropdowns.forEach(otherDropdown => {
-      if (otherDropdown !== dropdown) {
-        otherDropdown.querySelector('.collapsed-content').classList.remove('d-flex');
-        otherDropdown.querySelector('.card-standard-header .dropdown-item-button img').src = `${shortenedURL}/media/arrow-dropdowns-down.svg`;;
-        otherDropdown.querySelector('.card-standard-header .sm-text-card').style.color = '#484848';
-      }
-    });
+//   dropdown.addEventListener('click', () => {
+//     dropdowns.forEach(otherDropdown => {
+//       if (otherDropdown !== dropdown) {
+//         otherDropdown.querySelector('.collapsed-content').classList.remove('d-flex');
+//         otherDropdown.querySelector('.card-standard-header .dropdown-item-button img').src = `${shortenedURL}/media/arrow-dropdowns-down.svg`;;
+//         otherDropdown.querySelector('.card-standard-header .sm-text-card').style.color = '#484848';
+//       }
+//     });
   
-    iconbutton.src = `${shortenedURL}/media/arrow-dropdowns.svg`;
-    content.classList.add('d-flex');
-    title.style.color = '#F34E1E';
-    image.classList.remove('hidden');
+//     iconbutton.src = `${shortenedURL}/media/arrow-dropdowns.svg`;
+//     content.classList.add('d-flex');
+//     title.style.color = '#F34E1E';
+//     image.classList.remove('hidden');
 
-    if(window.innerWidth > 992){
-      imageContainer.innerHTML = '';
-      imageContainer.appendChild(image);
-    }
+//     if(window.innerWidth > 992){
+//       imageContainer.innerHTML = '';
+//       imageContainer.appendChild(image);
+//     }
 
-  });
-}); 
+//   });
+// }); 
 
 // restore in top sin scrollTop
 history.scrollRestoration = "manual";
