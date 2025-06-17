@@ -1093,10 +1093,8 @@ html[lang="pt"] .intersection-seniors-junior {
 
 #product-content{
 	position: relative;
-	max-width: 1440px ;	
-	padding: 0 8em;
-	padding-top: 7em;
-	padding-bottom: 7em;
+	max-width: 1440px;
+	padding: 10em 8em;
 	margin: 0 auto;
 }
 
@@ -2712,7 +2710,7 @@ a.btn-tc-lnk:hover, a.btn-tc-lnk:focus{
 	}
 
 	#product-content{
-		padding: 5em 3em 5em 3em;
+		padding: 10em 3em 5em 3em;
 		
 		
 	}
