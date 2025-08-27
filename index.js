@@ -12,7 +12,7 @@ $(function(){
 });
 
 $(function(){
-  if (localStorage.getItem('lang_redirect') === null) {
+  if (localStorage.getItem('lang_redirect') === null && window.location.pathname.indexOf('/contact') === -1) {
     const browser_lang = navigator.language.split('-')[0];
 
     if (browser_lang !== lang && (['en', 'es', 'pt'].includes(browser_lang))) {
@@ -28,7 +28,7 @@ $(function(){
 
 const currentYear = document.getElementById("currentYear");
 const year = new Date().getFullYear();
-currentYear.textContent = year;
+if (currentYear) currentYear.textContent = year;
 
 const dataByLang = {
   formContact: {
@@ -265,7 +265,8 @@ $(".form-contact").on("submit", function (ev) {
     // $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
     btn.text(dataByLang.formContact.btnSending[lang]);
     $.ajax({
-      url: "https://api.prod.tq.teamcubation.com/contact",
+      // url: "https://api.prod.tq.teamcubation.com/contact",
+      url: "http://localhost/contact",
       type: "POST",
       contentType: "application/json",
       data: JSON.stringify({
@@ -434,9 +435,11 @@ noScroll(function () {
 
 const proposal = document.getElementById("proposal");
 const howDoCarousel = document.getElementById("process-carousel");
-const howDoCarouselItemWidth = document.querySelector(".process-item-scroll").scrollWidth;
-// const results = document.getElementById('results');
-const howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth, 2);
+const howDoCarouselItem = document.querySelector(".process-item-scroll");
+if (howDoCarouselItem) {
+    const howDoCarouselItemWidth = document.querySelector(".process-item-scroll").scrollWidth;
+    const howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth, 2);
+}
 
 let lastScrollTop = 0;
 
@@ -478,10 +481,12 @@ $(".process-next").on("click", function(){
 // partners slide
 document.addEventListener("DOMContentLoaded", function() {
   const logosSlide = document.querySelector(".logos div");
-  logosSlide.classList.add("logos-slide");
-  const logosSlideCopy = logosSlide.cloneNode(true);
-  logosSlideCopy.classList.add("logos-slide");
-  document.querySelector(".logos").appendChild(logosSlideCopy);
+  if (logosSlide) {
+    const logosSlideCopy = logosSlide.cloneNode(true);
+    logosSlide.classList.add("logos-slide");
+    logosSlideCopy.classList.add("logos-slide");
+    document.querySelector(".logos").appendChild(logosSlideCopy);
+  }
 });
 
 // window.addEventListener('scroll', (e) => {
@@ -491,7 +496,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // });
 
 // navbar and menu
-const proposalToTop = proposal.getBoundingClientRect().top;
+const proposalToTop = proposal ? proposal.getBoundingClientRect().top : 0;
 
 $(".navigate-home").on("click", function(){
   window.scrollTo({
@@ -607,15 +612,20 @@ $("#software-switch").on("click", function(){
 
 
 // styles for process carousel
-const itemOne = document.getElementById("step-leyend-container-01").offsetLeft;
-const itemTwo = document.getElementById("step-leyend-container-02").offsetLeft;
-const itemThree = document.getElementById("step-leyend-container-03").offsetLeft;
+const leyend1 = document.getElementById("step-leyend-container-01");
+const leyend2 = document.getElementById("step-leyend-container-02");
+const leyend3 = document.getElementById("step-leyend-container-03");
+const itemOne = leyend1 ? leyend1.offsetLeft : 0;
+const itemTwo = leyend2 ? leyend2.offsetLeft : 0;
+const itemThree = leyend3 ? leyend3.offsetLeft : 0;
 const divider = document.getElementById("divider-process");
 const dividerCenter = document.getElementById("divider-center-process");
 
-divider.style.width = `calc(${itemThree - itemOne}px - 3em)`;
-divider.style.left = `calc(${itemOne}px + 3em)`;
-dividerCenter.style.left = `calc(${itemTwo - itemOne}px)`;
+if (divider && dividerCenter) {
+    divider.style.width = `calc(${itemThree - itemOne}px - 3em)`;
+    divider.style.left = `calc(${itemOne}px + 3em)`;
+    dividerCenter.style.left = `calc(${itemTwo - itemOne}px)`;
+}
 
 
 // pep
@@ -668,24 +678,29 @@ $(window).on('beforeunload', function(){
 // video 
 const video = document.getElementById("video-cases");
 
-video.addEventListener('ended', function() {
-  $(".video-overlay").css("display", "block");
-  $("#link-button-video-container").css("display", "block");
-});
+if (video) {
+    video.addEventListener('ended', function () {
+        $(".video-overlay").css("display", "block");
+        $("#link-button-video-container").css("display", "block");
+    });
 
-video.addEventListener('play', function() {
-  $(".video-overlay").css("display", "none");
-  $("#link-button-video-container").css("display", "none");
-});
+    video.addEventListener('play', function () {
+        $(".video-overlay").css("display", "none");
+        $("#link-button-video-container").css("display", "none");
+    });
+}
 
 $('#video-play, .video-pre-overlay').click(function() {
   $('.video-pre-overlay').hide();
   video.play();
 });
 
-document.getElementById('button-redirect-youtube').addEventListener('click', function() {
-  window.open('https://www.youtube.com/@teamcubation/videos', '_blank');
-});
+const youtubeButton = document.getElementById('button-redirect-youtube');
+if (youtubeButton) {
+    youtubeButton.addEventListener('click', function () {
+        window.open('https://www.youtube.com/@teamcubation/videos', '_blank');
+    });
+}
 
 $('#holon_iq').click(function(){
   window.open('https://credentials.holoniq.com/credentials/6bb15f13-623b-4c19-a87f-78874dd4680a', '_blank');
