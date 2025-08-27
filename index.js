@@ -215,20 +215,22 @@ $(".menu-button").on("click", function () {
   handleControlMenu(isOpen);
 });
 
-window.addEventListener("click", function (e) {
-  if (!document.getElementById("dropdown-select").contains(e.target)) {
-    $(".list-options-tc").slideUp();
-    $(".chevron-select").removeClass("chevron-effect");
-    if ($(".input-select").val() !== "") $(".text-error").remove();
-  }
-  if (
-    !document.getElementById("form-container").contains(e.target) &&
-    !e.target.closest(".service-card") &&
-    !$(".contact-button").is(e.target)
-  ) {
-    closeFormModal();
-  }
-});
+if (window.location.pathname.indexOf('/contact') === -1) {
+    window.addEventListener("click", function (e) {
+        if (!document.getElementById("dropdown-select").contains(e.target)) {
+            $(".list-options-tc").slideUp();
+            $(".chevron-select").removeClass("chevron-effect");
+            if ($(".input-select").val() !== "") $(".text-error").remove();
+        }
+        if (
+            !document.getElementById("form-container").contains(e.target) &&
+            !e.target.closest(".service-card") &&
+            !$(".contact-button").is(e.target)
+        ) {
+            closeFormModal();
+        }
+    });
+}
 
 //  submit form contact
 $(".form-contact").on("submit", function (ev) {
@@ -265,8 +267,7 @@ $(".form-contact").on("submit", function (ev) {
     // $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
     btn.text(dataByLang.formContact.btnSending[lang]);
     $.ajax({
-      // url: "https://api.prod.tq.teamcubation.com/contact",
-      url: "http://localhost/contact",
+      url: "https://api.prod.tq.teamcubation.com/contact",
       type: "POST",
       contentType: "application/json",
       data: JSON.stringify({
