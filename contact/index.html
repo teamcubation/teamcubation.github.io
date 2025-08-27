@@ -23,6 +23,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css?v=5">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<style>
+    #form-modal{
+        background: #fff;
+        height: auto;
+        padding: 0;
+        position: relative;
+    }
+    #form-container{
+        width: auto;
+        max-width: none;
+        padding: 0;
+        max-height: none;
+    }
+</style>
 </head>
 
 <body>
@@ -32,15 +46,15 @@
   <div id="form-modal" class="d-flex">
       <div id="form-container">
         <form class="form-contact" id="form-contact">
-          <div style="padding: 0 14px; display: flex; justify-content: space-between; align-items: center">
+          <div style="padding: 0 5px; display: flex; justify-content: space-between; align-items: center">
             <h6 class="inter-font" style="font-size: 22px; font-weight: 600; margin-bottom: 0">Contacto</h6>
           </div>
-          <div style="padding: 0 14px; display: flex; justify-content: space-between; align-items: center">
+          <div style="padding: 0 5px; display: flex; justify-content: space-between; align-items: center">
             <div style="height: 1px; background:#C8C6C5; width: calc(100%); margin: 0.5em 0"></div>
           </div>
           <div class="row justify-content-around align-items-end">
             <div class="col-12 col-md-6" style="margin-top: 1.5em !important;">
-              <div style="padding: 0 14px;">
+              <div style="padding: 0 5px;">
                 <div id="formIdenfitication" class=" w-100">
                   <div class="dropdown-select w-100" id="dropdown-select">
                     <label>¿Cómo te identificás?</label>
@@ -73,11 +87,11 @@
               </div>
             </div>
             <div class="col-12 col-md-6 " style="margin-top: 1.5em !important;">
-              <div style="padding: 0 14px;" class="name-form-container">
+              <div style="padding: 0 5px;" class="name-form-container">
                 <label>Nombre</label>
                 <input type="text" class="name" name="name" required>
               </div>
-              <div style="padding: 0 14px; position: relative; max-width: 100%;">
+              <div style="padding: 0 5px; position: relative; max-width: 100%;">
                 <div class="form-message" id="juniorsMessage">
                   <p class="d-inline fw-600"></p>
                   <p class="d-inline">Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando</p>
@@ -106,7 +120,7 @@
             </div> -->
             <div class="row justify-content-around align-items-end">
               <div class="col-12 col-md-6" style="margin-top: 1.5em !important;">
-                <div style="padding: 0 14px;">
+                <div style="padding: 0 5px;">
                   <label>E-mail</label>
                   <input type="email" name="email" class="email" required>
                 </div>
@@ -137,7 +151,7 @@
             </div>
             <div class="row justify-content-around align-items-end" style="margin-top: 1.5em !important;">
               <div class="col-12">
-                <div style="padding: 0 14px;">
+                <div style="padding: 0 5px;">
                   <label>Dejanos tu mensaje</label>
                   <textarea name="message" class="message" rows="1" required style="height: 90px;"></textarea>
                   <button type="submit" name="submit-contact" class="w-100 button submit-contact bg-orange white" style="margin-top: 2em; font-size: 1.2em">Enviar</button>
