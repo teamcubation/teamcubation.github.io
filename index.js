@@ -437,11 +437,13 @@ noScroll(function () {
 const proposal = document.getElementById("proposal");
 const howDoCarousel = document.getElementById("process-carousel");
 const howDoCarouselItem = document.querySelector(".process-item-scroll");
-if (howDoCarouselItem) {
-    const howDoCarouselItemWidth = document.querySelector(".process-item-scroll").scrollWidth;
-    const howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth, 2);
-}
 
+let howDoAnimation;
+
+if (howDoCarouselItem) {
+    const howDoCarouselItemWidth = howDoCarouselItem.scrollWidth;
+    howDoAnimation = new CarouselAnimator(howDoCarousel, howDoCarouselItemWidth, 2);
+}
 let lastScrollTop = 0;
 
 const scrollDirection = (prevPosition, currentPosition) => {
