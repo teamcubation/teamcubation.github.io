@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="En Teamcubation no sólo desarrollamos software; también incubamos el talento que impulsará tus futuros proyectos. Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo.">
-  <meta property="og:title" content="Teamcubation - La software factory que también fabrica talento">
-  <meta property="og:description" content="En Teamcubation no sólo desarrollamos software; también incubamos el talento que impulsará tus futuros proyectos. Ofrecemos un servicio integral que combina desarrollo de software llave en mano con la formación de nuevos integrantes para tu equipo.">
+  <meta name="description" content="Na Teamcubation não apenas desenvolvemos software; também incubamos o talento que impulsionará seus projetos futuros. Oferecemos um serviço integral que combina desenvolvimento de software chave na mão com a formação de novos membros para sua equipe.">
+  <meta property="og:title" content="Teamcubation - A fábrica de software que também fabrica talentos">
+  <meta property="og:description" content="Na Teamcubation não apenas desenvolvemos software; também incubamos o talento que impulsionará seus projetos futuros. Oferecemos um serviço integral que combina desenvolvimento de software chave na mão com a formação de novos membros para sua equipe.">
   <meta property="og:image" content="https://teamcubation.com/media/logo-og-full.png">
-  <title>Teamcubation - La software factory que también fabrica talento</title>
+  <title>Teamcubation - A fábrica de software que também fabrica talentos</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.css?v=5">
+  <link rel="stylesheet" href="../../css/style.css?v=5">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 <style>
     #form-modal{
@@ -38,7 +38,7 @@
 
 <body>
   <!-- logo on top for google -->
-  <img style="display: none" src="../media/logo-og-full.png" alt="Teamcubation">
+  <img style="display: none" src="../../media/logo-og-full.png" alt="Teamcubation">
 
   <div id="form-modal" class="d-flex">
       <div id="form-container">
@@ -48,28 +48,28 @@
               <div style="padding: 0 5px;">
                 <div id="formIdenfitication" class=" w-100">
                   <div class="dropdown-select w-100" id="dropdown-select">
-                    <label>¿Cómo te identificás?</label>
+                    <label>Como você se identifica?</label>
                     <div class="select-tc">
                       <input class="input-select" id="identify-input-select" disabled>
                       <span class="open-dropdown-select" style="width: 100%; height: 100%; position:absolute"></span>
-                      <img class="dropdown-arrow" src="../media/arrow-dropdowns-down.svg" alt="arrow">
+                      <img class="dropdown-arrow" src="../../media/arrow-dropdowns-down.svg" alt="arrow">
                     </div>
                     <div style="max-width: 100%">
                       <ul class="list-options-tc">
                         <li>
-                          <div class="option-tc" data-option="organization">Soy una organización, quiero que me contacten para conocer más del servicio</div>
+                          <div class="option-tc" data-option="organization">Sou uma organização, quero ser contatado para saber mais sobre o serviço</div>
                         </li>
                         <li>
-                          <div class="option-tc" data-option="senior">Soy un desarrollador Senior y quiero acompañar a Juniors</div>
+                          <div class="option-tc" data-option="senior">Sou um desenvolvedor Sênior e quero acompanhar Juniores</div>
                         </li>
                         <li>
-                          <div class="option-tc" data-option="junior">Soy un desarrollador Junior/Trainee con conocimientos de programación</div>
+                          <div class="option-tc" data-option="junior">Sou um desenvolvedor Júnior/Trainee com conhecimento de programação</div>
                         </li>
                         <li>
-                          <div class="option-tc" data-option="no-exp">No sé programar y quiero aprender</div>
+                          <div class="option-tc" data-option="no-exp">Não sei programar e quero aprender</div>
                         </li>
                         <li>
-                          <div class="option-tc" data-option="other">Otro</div>
+                          <div class="option-tc" data-option="other">Outro</div>
                         </li>
                       </ul>
                     </div>
@@ -79,25 +79,25 @@
             </div>
             <div class="col-12 col-md-6 " style="margin-top: 1.5em !important;">
               <div style="padding: 0 5px;" class="name-form-container">
-                <label>Nombre</label>
+                <label>Nome</label>
                 <input type="text" class="name" name="name" required>
               </div>
               <div style="padding: 0 5px; position: relative; max-width: 100%;">
                 <div class="form-message" id="juniorsMessage">
                   <p class="d-inline fw-600"></p>
-                  <p class="d-inline">Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando</p>
-                  <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">postulate acá</a>
-                  <p class="d-inline">que es donde podemos ayudarte a que una compañía te seleccione para un squad</p>
+                  <p class="d-inline">Se você é júnior, ou seja, já aprendeu, mas não tem experiência profissional,</p>
+                  <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" class="d-inline fw-600 linkPostulations" target="_blank">candidate-se aqui</a>
+                  <p class="d-inline">que é onde podemos te ajudar a ser selecionado por uma empresa para um squad.</p>
                 </div>
                 <div class="form-message" id="seniorsMessage">
-                  <p class="d-inline fw-400">Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades,</p>
-                  <p class="d-inline">andá a </p>
-                  <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">este link y postulate a la búsqueda que más se adecúe a tu perfil</a>
-                  <p class="d-inline">que nos va a permitir entender dónde podemos sumarte en Teamcubation_</p>
+                  <p class="d-inline fw-400">Se você é desenvolvedor, tem experiência, é fera e gosta de transmitir conhecimento,</p>
+                  <p class="d-inline">vá para </p>
+                  <a href="https://teamcubation.bamboohr.com/jobs/" class="d-inline fw-600 linkPostulations" target="_blank">este link e candidate-se à vaga que melhor se adapte ao seu perfil,</a>
+                  <p class="d-inline">que nos permitirá entender onde podemos te encaixar na Teamcubation.</p>
                 </div>
                 <div class="form-message" id="noCodersMessage">
-                  <p class="d-inline fw-600">Si todavía no aprendiste a programar</p>
-                  <p class="d-inline"> te rogamos que lo hagas, te conviertas en developer y después vengas a postularte! Nosotros no damos clases, ni tenemos horarios, ni profes... Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear.</p>
+                  <p class="d-inline fw-600">Se você ainda não aprendeu a programar,</p>
+                  <p class="d-inline"> imploramos que você o faça, se torne um desenvolvedor e depois venha se candidatar! Não damos aulas, nem temos horários, nem professores... Nossa empresa trabalha para outras empresas, permitindo que você adquira experiência se já souber programar.</p>
                 </div>
               </div>
 
@@ -118,7 +118,7 @@
               </div>
               <div class="col-12 col-md-6" style="margin-top: 1.5em !important;">
                 <div style="padding: 0 8px 0 14px;">
-                  <label>Teléfono</label>
+                  <label>Telefone</label>
                   <div class="row">
                     <div class="col-3">
                       <div style="padding: 0 6px; display: flex; align-items: center; align-items: center;">
@@ -143,7 +143,7 @@
             <div class="row justify-content-around align-items-end" style="margin-top: 1.5em !important;">
               <div class="col-12">
                 <div style="padding: 0 5px;">
-                  <label>Dejanos tu mensaje</label>
+                  <label>Deixe sua mensagem</label>
                   <textarea name="message" class="message" rows="1" required style="height: 90px;"></textarea>
                   <button type="submit" name="submit-contact" class="w-100 button submit-contact bg-orange white" style="margin-top: 2em; font-size: 1.2em">Enviar</button>
                 </div>
@@ -158,7 +158,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js" nomodule></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script type="module" src="../index.js?v=5"></script>
+  <script type="module" src="../../index.js?v=5"></script>
 
 </body>
 </html>

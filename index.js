@@ -33,7 +33,7 @@ if (currentYear) currentYear.textContent = year;
 const dataByLang = {
   formContact: {
     btnSend: {"es": "Enviar", "en": "Submit", "pt": "Enviar"},
-    btnSending: {"es": "Enviando...", "en": "Enviando...", "pt": "Enviando..."},
+    btnSending: {"es": "Enviando...", "en": "Sending...", "pt": "Enviando..."},
     originExtraPlaceholder: {
       "es": "¿Cómo te identificás?",
       "en": "How do you identify yourself?",
@@ -266,6 +266,9 @@ $(".form-contact").on("submit", function (ev) {
   if (data_origin_extra) {
     // $(".select-tc").css("border-bottom", "2px solid rgba(128, 128, 128, 0.507)");
     btn.text(dataByLang.formContact.btnSending[lang]);
+    if (window.location.search.indexOf('?selectedService=') !== -1) {
+        selectedService = window.location.search.split('?selectedService=')[1];
+    }
     $.ajax({
       url: "https://api.prod.tq.teamcubation.com/contact",
       type: "POST",
@@ -278,13 +281,13 @@ $(".form-contact").on("submit", function (ev) {
         email: data_email,
         origin_extra: data_origin_extra,
         lang: lang,
-           selectedService
+        selectedService
       }),
       dataType: "json",
       success: (r) => {
         $(".alert").remove();
         $("#form-container").prepend(
-          '<div class="alert alert-success" role="alert" style="position: absolute; top: 25px; width: 90%, margin: 0 auto; z-index: 101"></div>'
+          '<div class="alert alert-success" role="alert" style="position: absolute; top: 25px; width: 90%; margin: 0 auto; z-index: 101"></div>'
         );
         $(".alert").text(dataByLang.formContact.submitResponse.success[lang]);
         $(".alert")
