@@ -1,0 +1,378 @@
+---
+interface Props {
+  lang?: 'es' | 'en' | 'pt'
+  title?: string
+  submitClass?: string
+  titleTag?: 'h1' | 'h2'
+}
+
+const { lang = 'es', title, submitClass = '', titleTag = 'h2' } = Astro.props
+const TitleTag = titleTag
+
+const ENDPOINT = 'https://api.prod.tq.teamcubation.com/contact'
+
+const T = {
+  es: {
+    title: 'Contacto',
+    identify: '¿Cómo te identificás?',
+    options: {
+      organization: 'Soy una organización, quiero que me contacten para conocer más del servicio',
+      senior: 'Soy un desarrollador Senior y quiero acompañar a Juniors',
+      junior: 'Soy un desarrollador Junior/Trainee con conocimientos de programación',
+      'no-exp': 'No sé programar y quiero aprender',
+      other: 'Otro',
+    },
+    name: 'Nombre',
+    email: 'E-mail',
+    phone: 'Teléfono',
+    country: 'País',
+    area: 'Área',
+    number: 'Número',
+    message: 'Dejanos tu mensaje',
+    send: 'Enviar',
+    sending: 'Enviando...',
+    noOption: 'Por favor elegí una opción',
+    noText: 'Por favor ingresá un texto',
+    success: 'Su mensaje se ha enviado correctamente, gracias!',
+    error: 'Ocurrió un error durante el envío del formulario, por favor vuelva a intentarlo',
+    messages: {
+      junior: 'Si sos Junior, o sea, ya aprendiste pero no tenés experiencia trabajando <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" target="_blank" rel="noopener" class="font-semibold underline">postulate acá</a> que es donde podemos ayudarte a que una compañía te seleccione para un squad.',
+      senior: 'Si sos dev, tenés experiencia, sos crack y te gusta transmitir habilidades, andá a <a href="https://teamcubation.bamboohr.com/jobs/" target="_blank" rel="noopener" class="font-semibold underline">este link y postulate a la búsqueda que más se adecúe a tu perfil</a> que nos va a permitir entender dónde podemos sumarte en Teamcubation_',
+      'no-exp': 'Si todavía no aprendiste a programar te rogamos que lo hagas, te conviertas en developer y después vengas a postularte. Nosotros no damos clases, ni tenemos horarios, ni profes… Nuestra compañía trabaja para empresas permitiendo que adquieras experiencia si ya sabés codear.',
+    },
+  },
+  en: {
+    title: 'Contact',
+    identify: 'How do you identify yourself?',
+    options: {
+      organization: 'I am an organization, I want to be contacted to learn more about the service',
+      senior: 'I am a Senior developer and want to accompany Juniors',
+      junior: 'I am a Junior/Trainee developer with programming knowledge',
+      'no-exp': "I don't know how to code and want to learn",
+      other: 'Other',
+    },
+    name: 'Name',
+    email: 'Email',
+    phone: 'Phone',
+    country: 'Country',
+    area: 'Area',
+    number: 'Number',
+    message: 'Leave your message',
+    send: 'Submit',
+    sending: 'Sending...',
+    noOption: 'Please select an option',
+    noText: 'Please enter a text',
+    success: 'Your message has been sent, thank you!',
+    error: 'An error occurred while sending the form, please try again.',
+    messages: {
+      junior: 'If you are a junior, meaning you have already learned but have no professional experience, <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" target="_blank" rel="noopener" class="font-semibold underline">apply here</a> which is where we can help you be selected by a company for a squad.',
+      senior: 'If you are a developer, have experience, are skilled, and like to transmit knowledge, go to <a href="https://teamcubation.bamboohr.com/jobs/" target="_blank" rel="noopener" class="font-semibold underline">this link and apply for the position that best suits your profile,</a> which will allow us to understand where we can fit you in Teamcubation.',
+      'no-exp': "If you haven't learned to code yet, we implore you to do so, become a developer, and then come apply. We don't give classes, nor do we have schedules or teachers… Our company works for other companies, allowing you to gain experience if you already know how to code.",
+    },
+  },
+  pt: {
+    title: 'Contato',
+    identify: 'Como você se identifica?',
+    options: {
+      organization: 'Sou uma organização, quero ser contatado para saber mais sobre o serviço',
+      senior: 'Sou um desenvolvedor Sênior e quero acompanhar Juniores',
+      junior: 'Sou um desenvolvedor Júnior/Trainee com conhecimento de programação',
+      'no-exp': 'Não sei programar e quero aprender',
+      other: 'Outro',
+    },
+    name: 'Nome',
+    email: 'E-mail',
+    phone: 'Telefone',
+    country: 'País',
+    area: 'Área',
+    number: 'Número',
+    message: 'Deixe sua mensagem',
+    send: 'Enviar',
+    sending: 'Enviando...',
+    noOption: 'Por favor escolha uma opção',
+    noText: 'Por favor insira um texto',
+    success: 'Sua mensagem foi enviada com sucesso, obrigado!',
+    error: 'Ocorreu um erro durante o envio do formulário, tente novamente',
+    messages: {
+      junior: 'Se você é júnior, ou seja, já aprendeu, mas não tem experiência profissional, <a href="https://teamcubation.bamboohr.com/jobs/view.php?id=30&source=teamcubation" target="_blank" rel="noopener" class="font-semibold underline">candidate-se aqui</a> que é onde podemos te ajudar a ser selecionado por uma empresa para um squad.',
+      senior: 'Se você é desenvolvedor, tem experiência, é fera e gosta de transmitir conhecimento, vá para <a href="https://teamcubation.bamboohr.com/jobs/" target="_blank" rel="noopener" class="font-semibold underline">este link e candidate-se à vaga que melhor se adapte ao seu perfil,</a> que nos permitirá entender onde podemos te encaixar na Teamcubation.',
+      'no-exp': 'Se você ainda não aprendeu a programar, imploramos que você o faça, se torne um desenvolvedor e depois venha se candidatar. Não damos aulas, nem temos horários, nem professores… Nossa empresa trabalha para outras empresas, permitindo que você adquira experiência se já souber programar.',
+    },
+  },
+}
+
+const t = T[lang] ?? T.es
+const optionKeys = ['organization', 'senior', 'junior', 'no-exp', 'other'] as const
+
+const labelClass = 'mb-2 block text-[12px] font-extrabold uppercase tracking-[0.5px] text-content-secondary'
+const inputClass =
+  'w-full rounded-lg border border-border-main bg-white px-4 py-3 text-[15px] text-content-primary outline-none transition-colors placeholder:text-content-light focus:border-content-primary'
+---
+
+<div
+  class="form-contact"
+  style="font-family: 'Inter', sans-serif;"
+  data-endpoint={ENDPOINT}
+  data-lang={lang}
+  data-send={t.send}
+  data-sending={t.sending}
+  data-success={t.success}
+  data-error={t.error}
+  data-no-option={t.noOption}
+  data-no-text={t.noText}
+>
+  <form class="relative">
+    {(title ?? t.title) && (
+      <TitleTag class="text-center font-sans text-[24px] font-extrabold tracking-[-0.96px] text-content-primary">{title ?? t.title}</TitleTag>
+    )}
+
+    <div class="alert hidden" role="alert"></div>
+
+    <div class="mt-12 grid gap-x-10 gap-y-6 md:grid-cols-2">
+      <!-- ¿Cómo te identificás? -->
+      <div class="select-tc relative">
+        <label class={labelClass} for="fc-identify">{t.identify}</label>
+        <div class="relative">
+          <input id="fc-identify" class:list={[inputClass, 'input-select cursor-pointer pr-12']} readonly placeholder={t.identify} role="combobox" aria-label={t.identify} aria-haspopup="listbox" aria-controls="fc-identify-list" aria-expanded="false" aria-invalid="false" aria-describedby="fc-identify-error" data-value-selected="" />
+          <button type="button" class="select-toggle absolute bottom-0 right-0 top-0 flex w-12 cursor-pointer items-center justify-center" aria-label={t.identify} tabindex="-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="select-arrow h-5 w-5 text-content-secondary transition-transform"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <ul id="fc-identify-list" role="listbox" aria-label={t.identify} class="options-list absolute left-0 right-0 top-full z-20 mt-1 hidden max-h-[260px] overflow-auto rounded-md border border-border-main bg-white shadow-lg">
+            {optionKeys.map((key) => (
+              <li>
+                <button type="button" role="option" aria-selected="false" class="option-tc block w-full cursor-pointer px-4 py-3 text-left text-[14px] leading-[1.4] text-content-primary hover:bg-gray-light" data-option={key}>{t.options[key]}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p id="fc-identify-error" role="alert" class="select-error mt-1 hidden text-[13px] text-primary"></p>
+      </div>
+
+      <!-- Nombre -->
+      <div class="name-field">
+        <label class={labelClass} for="fc-name">{t.name}</label>
+        <input id="fc-name" type="text" name="name" class:list={[inputClass, 'name']} required />
+      </div>
+    </div>
+
+    <!-- Mensajes para senior / junior / no-exp -->
+    <div class="redirect-message hidden mt-6 text-[14px] leading-[1.6] text-content-secondary" set:html=""></div>
+
+    <!-- Información de contacto -->
+    <div class="form-info">
+      <div class="mt-6 grid gap-x-10 gap-y-6 md:grid-cols-2">
+        <div>
+          <label class={labelClass} for="fc-email">{t.email}</label>
+          <input id="fc-email" type="email" name="email" class:list={[inputClass, 'email']} required />
+        </div>
+        <div>
+          <label class={labelClass} for="fc-number-phone">{t.phone}</label>
+          <div class="flex items-center gap-2">
+            <span class="text-[15px] text-content-secondary" aria-hidden="true">+</span>
+            <input type="text" name="country-phone" aria-label={t.country} class:list={[inputClass, 'country-phone', 'w-[64px]']} placeholder={t.country} />
+            <input type="text" name="area-phone" aria-label={t.area} class:list={[inputClass, 'area-phone', 'w-[72px]']} placeholder={t.area} />
+            <input id="fc-number-phone" type="text" name="number-phone" aria-label={t.number} class:list={[inputClass, 'number-phone']} placeholder={t.number} />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <label class={labelClass} for="fc-message">{t.message}</label>
+        <textarea id="fc-message" name="message" rows="3" class:list={[inputClass, 'message', 'resize-none']} required></textarea>
+      </div>
+
+      <button type="submit" class:list={['submit-contact mt-8 w-full cursor-pointer rounded-[16px_20px_0px_16px] bg-primary px-6 py-4 text-[16px] font-extrabold text-white transition-colors hover:bg-primary-hover', submitClass]}>{t.send}</button>
+    </div>
+  </form>
+
+  <script is:inline type="application/json" class="form-messages" set:html={JSON.stringify(t.messages)} />
+</div>
+
+<script>
+  function initForm(root: HTMLElement) {
+    const form = root.querySelector('form') as HTMLFormElement
+    const endpoint = root.dataset.endpoint!
+    const lang = root.dataset.lang!
+    const messages = JSON.parse(root.querySelector('.form-messages')?.textContent || '{}')
+
+    const select = root.querySelector('.select-tc') as HTMLElement
+    const input = root.querySelector('.input-select') as HTMLInputElement
+    const toggle = root.querySelector('.select-toggle') as HTMLElement
+    const arrow = root.querySelector('.select-arrow') as HTMLElement
+    const list = root.querySelector('.options-list') as HTMLElement
+    const selectError = root.querySelector('.select-error') as HTMLElement
+    const nameField = root.querySelector('.name-field') as HTMLElement
+    const formInfo = root.querySelector('.form-info') as HTMLElement
+    const redirectMsg = root.querySelector('.redirect-message') as HTMLElement
+    const submitBtn = root.querySelector('.submit-contact') as HTMLButtonElement
+    const alertBox = root.querySelector('.alert') as HTMLElement
+    const identifyPlaceholder = input.placeholder
+
+    const openList = () => {
+      list.classList.remove('hidden')
+      arrow.classList.add('rotate-180')
+      input.setAttribute('aria-expanded', 'true')
+    }
+    const closeList = () => {
+      list.classList.add('hidden')
+      arrow.classList.remove('rotate-180')
+      input.setAttribute('aria-expanded', 'false')
+    }
+
+    toggle.addEventListener('click', () => {
+      list.classList.contains('hidden') ? openList() : closeList()
+    })
+
+    input.addEventListener('click', () => {
+      if (input.readOnly) list.classList.contains('hidden') ? openList() : closeList()
+    })
+
+    const options = () => Array.from(list.querySelectorAll('.option-tc')) as HTMLElement[]
+
+    // Keyboard support for the custom combobox (open + move focus into the list).
+    input.addEventListener('keydown', (e) => {
+      if (!input.readOnly) return
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault()
+        if (list.classList.contains('hidden')) openList()
+        options()[0]?.focus()
+      } else if (e.key === 'Escape') {
+        closeList()
+      }
+    })
+
+    list.addEventListener('keydown', (e) => {
+      const opts = options()
+      const idx = opts.indexOf(document.activeElement as HTMLElement)
+      if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        opts[Math.min(idx + 1, opts.length - 1)]?.focus()
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        opts[Math.max(idx - 1, 0)]?.focus()
+      } else if (e.key === 'Escape') {
+        e.preventDefault()
+        closeList()
+        input.focus()
+      }
+    })
+
+    document.addEventListener('click', (e) => {
+      if (!select.contains(e.target as Node)) closeList()
+    })
+
+    const showForm = () => {
+      nameField.classList.remove('hidden')
+      formInfo.classList.remove('hidden')
+      redirectMsg.classList.add('hidden')
+    }
+    const showRedirect = (key: string) => {
+      nameField.classList.add('hidden')
+      formInfo.classList.add('hidden')
+      redirectMsg.innerHTML = messages[key] || ''
+      redirectMsg.classList.remove('hidden')
+    }
+
+    root.querySelectorAll('.option-tc').forEach((opt) => {
+      opt.addEventListener('click', () => {
+        const value = (opt as HTMLElement).dataset.option!
+        const text = (opt as HTMLElement).textContent!.trim()
+        selectError.classList.add('hidden')
+        select.classList.remove('error')
+        input.setAttribute('aria-invalid', 'false')
+        options().forEach((o) => o.setAttribute('aria-selected', String(o === opt)))
+
+        input.dataset.valueSelected = value
+        if (value === 'other') {
+          input.value = ''
+          input.readOnly = false
+          input.placeholder = identifyPlaceholder
+          input.focus()
+          showForm()
+        } else {
+          input.value = text
+          input.readOnly = true
+          if (value === 'organization') showForm()
+          else showRedirect(value)
+        }
+        closeList()
+      })
+    })
+
+    const clearForm = () => {
+      form.reset()
+      input.value = ''
+      input.readOnly = true
+      input.placeholder = identifyPlaceholder
+      delete input.dataset.valueSelected
+      nameField.classList.remove('hidden')
+      formInfo.classList.remove('hidden')
+      redirectMsg.classList.add('hidden')
+    }
+
+    const showAlert = (msg: string, ok: boolean) => {
+      alertBox.textContent = msg
+      alertBox.className =
+        'alert mb-4 rounded-md px-4 py-3 text-[14px] ' +
+        (ok ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-700')
+      setTimeout(() => alertBox.classList.add('hidden'), 5000)
+    }
+
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault()
+      let originExtra: string | null = input.dataset.valueSelected || ''
+      if (originExtra === 'other') {
+        const txt = input.value.trim()
+        originExtra = txt ? `other: ${txt}` : null
+      }
+      if (!originExtra) {
+        select.classList.add('error')
+        input.setAttribute('aria-invalid', 'true')
+        selectError.textContent = input.value.trim() === '' && input.dataset.valueSelected === 'other'
+          ? root.dataset.noText!
+          : root.dataset.noOption!
+        selectError.classList.remove('hidden')
+        return
+      }
+
+      const get = (sel: string) => (root.querySelector(sel) as HTMLInputElement)?.value.trim() || ''
+      const country = get('.country-phone')
+      const area = get('.area-phone')
+      const number = get('.number-phone')
+      let phone: string | undefined = `+${country} ${area} ${number}`
+      if (phone.trim() === '+') phone = undefined
+      const email = get('.email') || undefined
+      const params = new URLSearchParams(window.location.search)
+      const selectedService = params.get('selectedService') || ''
+
+      submitBtn.textContent = root.dataset.sending!
+      submitBtn.disabled = true
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            full_name: get('.name'),
+            message: get('.message'),
+            organization: undefined,
+            phone_number: phone,
+            email,
+            origin_extra: originExtra,
+            lang,
+            selectedService,
+          }),
+        })
+        if (!res.ok) throw new Error('request failed')
+        showAlert(root.dataset.success!, true)
+        clearForm()
+      } catch {
+        showAlert(root.dataset.error!, false)
+      } finally {
+        submitBtn.textContent = root.dataset.send!
+        submitBtn.disabled = false
+      }
+    })
+  }
+
+  document.querySelectorAll<HTMLElement>('.form-contact').forEach(initForm)
+</script>

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-primary: #ff4933;
+  --color-primary-hover: #e63e2a;
+  --color-content-primary: #1d1b1b;
+  --color-content-secondary: #5f5e5e;
+  --color-content-light: #ADABAA;
+  --color-violet-main: #B636FF;
+  --color-gray-light: #F2F2F2;
+  --color-border-main: #C8C6C5;
+  --color-tb-primary-dark: #4B1FFC;
+  --color-warning-light: #F6EC9A;
+
+}
+
+h1{
+  font-size: 40px;
+  letter-spacing: -1.2px;
+  line-height: 1;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 56px;
+    letter-spacing: -1.68px;
+  }
+}
+
+.btn-rounded {
+  border-radius: 24px;
+}
+.btn-cut-br {
+  border-radius: 20px 24px 0 20px;
+}
+.btn-cut-bl {
+  border-radius: 24px 24px 24px 0;
+}
+.btn-cut-tr {
+  border-radius: 24px 0 24px 24px;
+}
+.btn-cut-tl {
+  border-radius: 0 24px 24px 24px;
+}
+
+.link-menu {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.32px;
+  color: var(--color-content-secondary);
+  text-decoration-line: underline;
+  text-underline-position: from-font;
+  text-decoration-thickness: from-font;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(173, 171, 170);
+  cursor: pointer;
+}
+
+.link-menu-active {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.label-menu {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  color: var(--color-content-light);
+}
+
+@media (max-width: 1023px) {
+  .link-menu {
+    font-size: 12px;
+  }
+  .label-menu {
+    font-size: 10px;
+  }
+}
+
+/* Scroll reveal effects (see <script> in Layout.astro) */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+  [data-reveal="down"] {
+    transform: translateY(-24px);
+  }
+  [data-reveal="left"] {
+    transform: translateX(-48px);
+  }
+  [data-reveal="right"] {
+    transform: translateX(48px);
+  }
+  [data-reveal="fade"] {
+    transform: none;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,12 @@
+---
+interface Props {
+  class?: string
+  padding?: string
+}
+
+const { class: className, padding = '20px' } = Astro.props
+---
+
+<div class:list={['mx-auto w-full max-w-[1440px]', className]} style={`padding-inline: ${padding};`}>
+  <slot />
+</div>

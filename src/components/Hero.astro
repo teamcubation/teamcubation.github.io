@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+import Container from './Container.astro'
+import Button from './Button.astro'
+
+interface Props {
+  title?: string
+  image?: ImageMetadata
+  // Pre-optimized image served as-is from public/ (skips astro:assets reprocessing).
+  imageSrc?: string
+  subtitle?: string
+  ctaPrimaryLabel?: string
+  ctaPrimaryHref?: string
+  ctaSecondaryLabel?: string
+  ctaSecondaryHref?: string
+}
+
+const {
+  title = 'Desarrolladores de Experiencia',
+  image,
+  imageSrc,
+  subtitle = 'Tus colaboradores desarrollan habilidades tecnológicas con acompañamiento experto y entrenamientos on the job.',
+  ctaPrimaryLabel = 'Servicios',
+  ctaPrimaryHref = '#servicios',
+  ctaSecondaryLabel = 'Casos de Éxito',
+  ctaSecondaryHref = '#casos-de-exito',
+} = Astro.props
+---
+
+<section class="overflow-hidden">
+  <Container class="!max-w-[1240px] py-10 xl:py-0">
+    <div style="align-items: center" class="flex flex-col items-center xl:flex-row xl:justify-between">
+      <!-- Left content -->
+      <div class="flex flex-col items-center text-center xl:max-w-[440px] xl:items-start xl:text-left">
+        <h1 class="font-extrabold text-primary">
+          {title}
+        </h1>
+
+        <p class="mt-6 max-w-[560px] text-[19px] leading-[1.8] text-content-primary xl:mt-10 xl:max-w-none" style="font-family: 'Inter', sans-serif; font-weight: 500;">
+          {subtitle}
+        </p>
+
+        <div class="mt-10 flex w-full gap-3 xl:w-auto xl:gap-4">
+          <Button href={ctaPrimaryHref} variant="primary" radius={[24, 32, 0, 24]} class="h-[50px] flex-1 cursor-pointer px-[24px] text-[14px] font-extrabold xl:flex-none">{ctaPrimaryLabel}</Button>
+          <Button href={ctaSecondaryHref} radius={[32, 24, 24, 0]} class="h-[50px] flex-1 cursor-pointer bg-gray-light px-[24px] text-[14px] font-extrabold border-0 xl:flex-none" style="color: var(--color-content-primary)">{ctaSecondaryLabel}</Button>
+        </div>
+      </div>
+
+      <!-- Right illustration -->
+      <div class="relative mt-10 xl:mt-0">
+        {imageSrc ? (
+          <img src={imageSrc} alt={title} style="width: 686px; max-width: 100%; height: auto;" />
+        ) : image ? (
+          <Image src={image} alt={title} width={686} densities={[1, 2]} format="avif" quality={80} style="width: 686px; max-width: 100%; height: auto;" />
+        ) : (
+          <div class="aspect-square w-full rounded-full bg-gray-100"></div>
+        )}
+      </div>
+    </div>
+  </Container>
+</section>

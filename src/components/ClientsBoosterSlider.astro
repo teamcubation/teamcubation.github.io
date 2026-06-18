@@ -1,0 +1,72 @@
+---
+type Logo = { name: string; src: string; maxH?: string; class?: string }
+
+interface Props {
+  label?: string
+}
+
+const { label } = Astro.props
+
+// Marcas del carrusel de /booster-ai (los comunes reusan los archivos de index).
+const logos: Logo[] = [
+  { name: 'Geneia', src: '/logos/geneia_logo.svg' },
+  { name: 'Visa',maxH: '20px', src: '/logos/visa_logo.png' },
+  { name: 'Advanta', src: '/logos/advanta_logo.png' },
+  { name: 'Raizen', src: '/logos/raizen_logo.png' },
+  { name: 'Clear', src: '/logos/clear_logo 1.png' },
+  { name: 'Dagma', src: '/logos/header_logo.png' },
+  { name: 'Natura', src: '/logos/natura_logo.png' },
+  { name: 'Vista', src: '/logos/vista.png' },
+  { name: 'IDEA', src: '/logos/idea.png', maxH: '26px', class: 'mix-blend-luminosity opacity-60' },
+  { name: 'Endeavor', src: '/logos/endeavor.png', maxH: '20px', class: 'brightness-150' },
+  { name: 'ABECEB', src: '/logos/abeceb.png', class: 'brightness-0 invert-[0.65]' },
+  { name: 'one618', src: '/logos/one618.png', maxH: '24px', class: 'brightness-0 invert-[0.65]' },
+  { name: 'Greenock', src: '/logos/greenock.png', maxH: '44px' },
+  { name: 'Deheza', src: '/logos/deheza.png', maxH: '48px', class: 'mix-blend-luminosity opacity-60' },
+  { name: 'Consultatio', src: '/logos/consultatio.png', maxH: '24px', class: 'brightness-0 invert-[0.65]' },
+  { name: 'Arcor', src: '/logos/arcor_logo.png' },
+  { name: 'TCA', src: '/logos/tca_logo.png' },
+  { name: 'HP', src: '/logos/hp_logo.png', maxH: '36px', class: '!w-10 object-contain' },
+  { name: 'Comafi', src: '/logos/comafi_logo.png', maxH: '23px' },
+]
+---
+
+<section class="pb-14">
+  {label && (
+    <p class="mb-14 text-center text-[18px] font-extrabold leading-[1.3] tracking-[-0.54px] text-content-primary">{label}</p>
+  )}
+
+  <div class="clients-carousel w-full overflow-hidden">
+    <div class="clients-track flex w-max items-center gap-[40px]">
+      {[...logos, ...logos].map(({ name, src, maxH, class: cls }, i) => (
+        <img
+          src={src}
+          alt={name}
+          aria-hidden={i >= logos.length ? 'true' : undefined}
+          class:list={['w-auto grayscale', cls]}
+          style={`max-height: ${maxH || '33px'};`}
+          loading="lazy"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .clients-track {
+    animation: clients-scroll 60s linear infinite;
+  }
+
+  .clients-carousel:hover .clients-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes clients-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets'
+import teamImg from '../assets/team.png'
+import teamXsImg from '../assets/team_xs.png'
+
+interface Props {
+  rectangle?: string
+  rectangleClass?: string
+  class?: string
+}
+
+const {
+  rectangle = '/rectangle_violet_4.png',
+  rectangleClass = 'right-0 top-0',
+  class: className = '',
+} = Astro.props
+---
+
+<section class:list={[className]}>
+  <div class="relative h-[400px] w-full overflow-hidden max-[800px]:h-[300px]">
+    <Image src={teamXsImg} alt="" aria-hidden="true" widths={[480, 800]} sizes="100vw" class="block h-full w-full object-cover min-[800px]:hidden" />
+    <Image src={teamImg} alt="" aria-hidden="true" widths={[800, 1280, 1920, 2560]} sizes="100vw" class="hidden h-full w-full object-cover min-[800px]:block" />
+    <img
+      src={rectangle}
+      alt=""
+      aria-hidden="true"
+      class:list={[
+        'pointer-events-none absolute h-[160px] w-[160px] min-[800px]:h-[240px] min-[800px]:w-[240px] min-[1280px]:h-[320px] min-[1280px]:w-[320px] min-[1440px]:h-[400px] min-[1440px]:w-[400px]',
+        rectangleClass,
+      ]}
+    />
+  </div>
+</section>

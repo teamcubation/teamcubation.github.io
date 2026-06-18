@@ -1,0 +1,42 @@
+---
+import Container from './Container.astro'
+import Button from './Button.astro'
+
+interface Props {
+  tags?: string[]
+  title?: string
+  subtitle?: string
+  ctaLabel?: string
+  ctaHref?: string
+}
+
+const {
+  tags = ['Producto', 'Para todos'],
+  title = 'Mejora tus procesos de adquisición de experiencia en toda tu organización con Teamboarding',
+  subtitle = 'Acompaña a cada nuevo integrante con un proceso claro, medible y adaptado a tu forma de trabajar.',
+  ctaLabel = 'Conocer más',
+  ctaHref = 'https://teamboarding.com/',
+} = Astro.props
+---
+
+<section class="pt-9 pb-12">
+  <Container class="!max-w-[1240px]">
+    <div data-reveal class="overflow-hidden rounded-lg bg-gray-light px-10 pt-10 text-center">
+      <div class="flex flex-wrap justify-center gap-2">
+        {tags.map((tag) => (
+          <span class="rounded-md border border-border-main bg-white px-[10px] py-2 text-[10px] font-extrabold uppercase leading-none tracking-[0.3px] text-content-primary" style="font-family: 'Inter', sans-serif;">{tag}</span>
+        ))}
+      </div>
+
+      <h2 class="mx-auto mt-6 max-w-[760px] text-[32px] font-extrabold leading-[1.2] tracking-[-0.96px] text-content-primary">{title}</h2>
+
+      <p class="mx-auto mt-4 max-w-[520px] text-[20px] leading-[1.5] tracking-[0px] text-content-secondary" style="font-family: 'Inter', sans-serif; font-weight: 400;">{subtitle}</p>
+
+      <div class="mt-8 flex justify-center">
+        <Button href={ctaHref} target="_blank" rel="noopener noreferrer" aria-label={`${ctaLabel} — Teamboarding`} variant="primary" radius={[24, 32, 0, 24]} class="!bg-tb-primary-dark px-[24px] py-[13px] text-[14px] font-extrabold leading-none hover:!bg-tb-primary-dark">{ctaLabel}</Button>
+      </div>
+
+      <img src="/teamboarding_producto.png" alt="Teamboarding" class="mx-auto mt-12 w-full max-w-[1040px] rounded-t-[8px]" loading="lazy" />
+    </div>
+  </Container>
+</section>

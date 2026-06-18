@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import IncubationHero from '../../components/IncubationHero.astro'
+import Methodology from '../../components/Methodology.astro'
+import CtaBanner from '../../components/CtaBanner.astro'
+import TechMethodology from '../../components/TechMethodology.astro'
+import Differential from '../../components/Differential.astro'
+import SuccessStories from '../../components/SuccessStories.astro'
+import Testimonials from '../../components/Testimonials.astro'
+import ReadyBanner from '../../components/ReadyBanner.astro'
+import Container from '../../components/Container.astro'
+import FormContact from '../../components/FormContact.astro'
+---
+
+<Layout
+  title="IncubatION | La primera Software + Team Factory"
+  description="Somos la primera Software + Team Factory, implementamos proyectos tecnológicos para nuestros clientes mientras aceleramos el desarrollo de habilidades tech de sus potenciales colaboradores."
+  ogImage="/IncubatiON_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/incubation' },
+    { lang: 'en', href: 'https://teamcubation.com/en/incubation' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt/incubation' },
+  ]}
+>
+  <Header lang="es" currentPage="/incubation" />
+
+  <main>
+    <IncubationHero />
+    <Methodology />
+    <CtaBanner containerClass="!max-w-[960px]" ctaHref="#contacto" />
+    <TechMethodology rectangle="/rectangule_orange.png" />
+    <Differential />
+    <SuccessStories />
+    <Testimonials />
+    <section id="contacto" class="scroll-mt-24 pt-12 pb-20">
+      <Container class="!max-w-[860px]">
+        <FormContact lang="es" />
+      </Container>
+    </section>
+    <ReadyBanner />
+  </main>
+
+  <Footer lang="es" />
+</Layout>

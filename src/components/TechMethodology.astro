@@ -1,0 +1,53 @@
+---
+import Container from './Container.astro'
+import TeamBand from './TeamBand.astro'
+
+interface Card {
+  title: string
+  description: string
+}
+
+interface Props {
+  title?: string
+  cards?: Card[]
+  rectangle?: string
+  rectangleClass?: string
+}
+
+const {
+  rectangle = '/rectangle_yellow.png',
+  rectangleClass = 'right-0 top-0',
+  title = 'Tecnología y metodología para acelerar a tus potenciales futuros colaboradores',
+  cards = [
+    {
+      title: 'Nuestros líderes',
+      description: 'Especializados y capacitados en el stack tecnológico y metodologías de su compañía se asegurarán de que el software cumpla con los requerimientos con calidad y velarán por la evolución de los developers.',
+    },
+    {
+      title: 'Tus futuros developers',
+      description: 'Guiados por nuestros seniors, adquirirán experiencia real mientras desarrollan sus habilidades técnicas y blandas, y se integran a tu cultura empresarial.',
+    },
+  ],
+} = Astro.props
+
+// Card images are the same across languages (positional).
+const images = ['/incubation_2.png', '/incubation_3.png']
+---
+
+<section class="overflow-x-clip">
+  <Container class="!max-w-[960px] py-12">
+    <h2 data-reveal class="mx-auto max-w-[760px] text-center text-[32px] font-extrabold leading-[1.2] tracking-[-0.96px] text-content-primary">{title}</h2>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      {cards.map((c, i) => (
+        <article data-reveal={i === 0 ? 'left' : 'right'} class="flex flex-col rounded-lg border border-border-main bg-white py-10 px-8">
+          <h3 class="text-[20px] font-extrabold leading-none tracking-[0px] text-content-primary">{c.title}</h3>
+          <p class="mt-6 mb-6 text-[16px] leading-[1.5] text-content-secondary" style="font-family: 'Inter', sans-serif; font-weight: 400;">{c.description}</p>
+          <img src={images[i]} alt="" aria-hidden="true" class="mt-auto h-[240px] w-[380px] max-w-full rounded-lg object-cover" loading="lazy" />
+        </article>
+      ))}
+    </div>
+  </Container>
+
+  <TeamBand rectangle={rectangle} rectangleClass={rectangleClass} class="mt-12" />
+</section>

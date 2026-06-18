@@ -1,0 +1,125 @@
+---
+import Container from './Container.astro'
+import Button from './Button.astro'
+import MenuToggle from './MenuToggle.astro'
+
+interface Props {
+  lang?: string
+  currentPage?: string
+  contactLabel?: string
+  servicesLabel?: string
+  productLabel?: string
+  languageLabel?: string
+  langUrls?: Record<string, string>
+}
+
+const {
+  lang = 'es',
+  currentPage = '/',
+  contactLabel = 'Contacto',
+  servicesLabel = 'SERVICIOS',
+  productLabel = 'PRODUCTO',
+  languageLabel = 'IDIOMA',
+  langUrls,
+} = Astro.props
+
+const langPrefix = (code: string) => code === 'es' ? '' : `/${code}`
+
+const newTabLabel = { es: ' (abre en nueva pestaña)', en: ' (opens in a new tab)', pt: ' (abre em nova aba)' }[lang] ?? ' (abre en nueva pestaña)'
+
+// Contact page slug differs per language, so it can't be derived from a prefix.
+const contactPaths: Record<string, string> = { es: '/contacto', en: '/en/contact', pt: '/pt/contato' }
+const contactHref = contactPaths[lang] ?? contactPaths.es
+
+// Language switcher: pages with a per-language slug (e.g. contact) pass langUrls;
+// the rest derive the target from the current path + language prefix.
+const languages = [
+  { code: 'es', label: 'Español', href: langUrls?.es ?? `${langPrefix('es')}${currentPage}` },
+  { code: 'en', label: 'English', href: langUrls?.en ?? `${langPrefix('en')}${currentPage}` },
+  { code: 'pt', label: 'Português', href: langUrls?.pt ?? `${langPrefix('pt')}${currentPage}` },
+]
+---
+
+<!-- Sticky top bar -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+  <Container class="!max-w-[1240px] flex items-center justify-between !px-4 !py-5 lg:!px-5">
+
+    <!-- Logo -->
+    <a href={langPrefix(lang) || '/'} aria-label="Teamcubation">
+      <img src="/logo.svg" alt="Teamcubation" width="191" height="26" class="hidden lg:block" />
+      <img src="/isotipo.svg" alt="Teamcubation" class="block lg:hidden" />
+    </a>
+
+    <div class="flex items-center gap-6">
+      <Button href={contactHref} style="height: 40px; letter-spacing: -0.24px" class="btn-cut-br px-6 py-2 text-xs font-bold">{contactLabel}</Button>
+      <MenuToggle id="menu-toggle" aria-controls="menu-panel" />
+    </div>
+  </Container>
+
+  <!-- Menu panel -->
+  <div id="menu-panel" inert class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+    <div class="overflow-hidden">
+    <Container class="!max-w-[1240px] !px-5">
+    <nav class="flex flex-row justify-center gap-3 px-5 pb-4 lg:h-[48px] lg:items-center lg:gap-3 lg:pb-3">
+      <!-- Servicios -->
+      <div class="flex flex-col gap-2 px-6 py-2 lg:flex-row lg:items-center lg:gap-3">
+        <span class="label-menu">{servicesLabel}</span>
+        <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-5">
+          <a href={`${langPrefix(lang)}/incubation`} class="link-menu">Incubat<span class="text-primary">ION</span></a>
+          <a href={`${langPrefix(lang)}/booster-ai`} class="link-menu">Booster<span class="text-violet-main">AI</span></a>
+        </div>
+      </div>
+
+      <!-- Producto -->
+      <div class="flex flex-col gap-2 px-6 py-2 lg:flex-row lg:items-center lg:gap-3">
+        <span class="label-menu">{productLabel}</span>
+        <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-5">
+          <a href="https://teamboarding.com/" target="_blank" rel="noopener noreferrer" class="link-menu">Teamboarding<span class="sr-only">{newTabLabel}</span></a>
+        </div>
+      </div>
+
+      <!-- Idioma -->
+      <div class="flex flex-col gap-2 px-6 py-2 lg:flex-row lg:items-center lg:gap-3">
+        <span class="label-menu">{languageLabel}</span>
+        <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-5">
+          {languages.map(({ code, label, href }) => (
+            <a
+              href={href}
+              class:list={[
+                'link-menu',
+                code === lang ? 'link-menu-active' : '',
+              ]}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
+    </Container>
+    </div>
+  </div>
+</header>
+
+<script>
+  function setupMenu() {
+    const panel = document.getElementById('menu-panel')
+    const toggleBtn = document.getElementById('menu-toggle')
+
+    toggleBtn?.addEventListener('click', () => {
+      const isOpen = panel?.classList.contains('grid-rows-[1fr]')
+
+      panel?.classList.toggle('grid-rows-[1fr]')
+      panel?.classList.toggle('grid-rows-[0fr]')
+
+      document.getElementById('menu-toggle-lines')?.classList.toggle('hidden', !isOpen)
+      document.getElementById('menu-toggle-close')?.classList.toggle('hidden', isOpen)
+
+      if (panel) (panel as HTMLElement).inert = !!isOpen
+      toggleBtn.setAttribute('aria-expanded', String(!isOpen))
+    })
+  }
+
+  setupMenu()
+  document.addEventListener('astro:after-swap', setupMenu)
+</script>

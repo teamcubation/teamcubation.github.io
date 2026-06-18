@@ -1,0 +1,65 @@
+---
+import Container from './Container.astro'
+import FeatureCard from './FeatureCard.astro'
+
+interface Feature {
+  title: string
+  description: string
+}
+
+interface Props {
+  title?: string
+  titleAccent?: string
+  features?: Feature[]
+}
+
+const {
+  title = 'Nuestro',
+  titleAccent = 'Diferencial',
+  features = [
+    { title: 'Entrenamos Trabajando', description: 'Nuestra metodología es on the job: la forma más efectiva.' },
+    { title: 'Equipos Full-time', description: 'Personalizamos la experiencia de cada uno de tus potenciales colaboradores.' },
+    { title: 'Desarrollamos Habilidades', description: 'Potenciamos competencias tanto técnicas como interpersonales que se necesitan en tus equipos IT.' },
+    { title: 'Amamos lo que hacemos', description: 'Nos motiva el desarrollo de software y el de las personas.' },
+    { title: 'Vivimos tu Cultura', description: 'Trabajamos alineados con tus valores, procesos y objetivos.' },
+  ],
+} = Astro.props
+---
+
+<section class="py-20">
+  <Container class="!max-w-[960px]">
+    <h2 class="text-center text-[32px] font-extrabold leading-none tracking-[-0.96px] text-content-primary">{title} <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(to right, #FFA232 0%, #FF5633 23%, #FF4933 50%, #FF2E5B 100%);">{titleAccent}</span></h2>
+  </Container>
+
+  <div class="diff-carousel mt-12 w-full overflow-hidden">
+    <div class="diff-track flex w-max gap-[24px]">
+      {[...features, ...features].map((f, i) => (
+        <div class="w-[288px] shrink-0" aria-hidden={i >= features.length ? 'true' : undefined}>
+          <FeatureCard icon="/check.png" titleClass="text-primary" title={f.title} description={f.description} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .diff-track {
+      animation: diff-scroll 30s linear infinite;
+    }
+  }
+
+  .diff-carousel:hover .diff-track,
+  .diff-carousel:focus-within .diff-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes diff-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

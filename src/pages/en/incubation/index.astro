@@ -1,0 +1,117 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import Header from '../../../components/Header.astro'
+import Footer from '../../../components/Footer.astro'
+import IncubationHero from '../../../components/IncubationHero.astro'
+import Methodology from '../../../components/Methodology.astro'
+import CtaBanner from '../../../components/CtaBanner.astro'
+import TechMethodology from '../../../components/TechMethodology.astro'
+import Differential from '../../../components/Differential.astro'
+import SuccessStories from '../../../components/SuccessStories.astro'
+import Testimonials from '../../../components/Testimonials.astro'
+import ReadyBanner from '../../../components/ReadyBanner.astro'
+---
+
+<Layout
+  lang="en"
+  title="IncubatION | The first Software + Team Factory"
+  description="We are the first Software + Team Factory, implementing technology projects for our clients while accelerating the development of tech skills in their potential collaborators."
+  ogImage="/IncubatiON_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/incubation' },
+    { lang: 'en', href: 'https://teamcubation.com/en/incubation' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt/incubation' },
+  ]}
+>
+  <Header
+    lang="en"
+    currentPage="/incubation"
+    contactLabel="Contact"
+    servicesLabel="SERVICES"
+    productLabel="PRODUCT"
+    languageLabel="LANGUAGE"
+  />
+
+  <main>
+    <IncubationHero
+      subtitle="We are the first Software+Team Factory, implementing technology projects for our clients while accelerating the development of tech skills in their potential collaborators."
+      highlight="We build the software you need today while incubating your team of tomorrow."
+      ctaLabel="Schedule Meeting"
+      points={[
+        {
+          title: 'Turnkey software development',
+          subtitle: 'We create tailor-made solutions that meet your specific needs, guaranteeing delivery.',
+        },
+        {
+          title: 'Training on real projects',
+          subtitle: 'Juniors, trained in programming, gain experience on real projects alongside our seniors, accelerating their professional growth and work culture.',
+        },
+        {
+          title: 'Talent identification and selection',
+          subtitle: 'We select the talent best suited to your culture, who, by the end of the project, are already trained and ready to join your team without friction.',
+        },
+      ]}
+    />
+    <Methodology
+      title="Our Methodology"
+      items={[
+        'We build teams with your potential collaborators, led by our dedicated Seniors.',
+        'These teams work and learn: they develop for your company with your technologies and methodologies.',
+        "We measure each collaborator's evolution through our Teamboarding platform, which personalizes their experience-acquisition process.",
+        'At the end of the process you receive new implemented software projects and the option to bring on board the new talent who took part in the development.',
+      ]}
+    />
+    <CtaBanner
+      containerClass="!max-w-[960px]"
+      title="Ready for us to build software with your team of the future?"
+      ctaLabel="Contact us"
+      ctaHref="/en/contact"
+    />
+    <TechMethodology
+      rectangle="/rectangule_orange.png"
+      title="Technology and methodology to accelerate your potential future collaborators"
+      cards={[
+        {
+          title: 'Our leaders',
+          description: "Specialized and trained in your company's tech stack and methodologies, they ensure the software meets requirements with quality and look after the developers' growth.",
+        },
+        {
+          title: 'Your future developers',
+          description: 'Guided by our seniors, they gain real experience while developing their technical and soft skills, and integrate into your company culture.',
+        },
+      ]}
+    />
+    <Differential
+      title="Our"
+      titleAccent="Difference"
+      features={[
+        { title: 'We Train by Working', description: 'Our methodology is on the job: the most effective way.' },
+        { title: 'Full-time Teams', description: 'We personalize the experience of each of your potential collaborators.' },
+        { title: 'We Develop Skills', description: 'We boost both the technical and interpersonal skills needed in your IT teams.' },
+        { title: 'We Love What We Do', description: 'We are driven by developing software and people.' },
+        { title: 'We Live Your Culture', description: 'We work aligned with your values, processes and goals.' },
+      ]}
+    />
+    <SuccessStories
+      tag="Success story"
+      title="Success stories"
+      description="Discover how we have collaborated with Mercado Libre, not only developing software, but also developing talent so they can become part of their teams with exceptional results."
+    />
+    <Testimonials
+      title="The value of working together, told by our clients"
+      testimonials={[
+        { quote: 'Teamcubation drives the growth of people without experience in a market as challenging as IT', name: 'Julieta Carreras', company: 'Mercado Libre' },
+        { quote: 'We made our talent plan a reality, building powerful teams with surprising results', name: 'Norberto Santoro', company: 'Banco Comafi' },
+        { quote: "Teamcubation's proposal is very aligned with what we want and expect from a partner", name: 'Pablo Cassina', company: 'Mercado Libre' },
+      ]}
+    />
+    <ReadyBanner
+      title="Ready to start?"
+      text="Companies that bring in new talent build loyalty and competitive, highly committed teams. Daring to innovate is what makes the difference."
+      ctaLabel="Talk to an Expert"
+      ctaHref="/en/contact"
+    />
+  </main>
+
+  <Footer lang="en" />
+</Layout>

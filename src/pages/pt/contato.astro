@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import Container from '../../components/Container.astro'
+import FormContact from '../../components/FormContact.astro'
+---
+
+<Layout
+  lang="pt"
+  title="Contato | Teamcubation"
+  description="Entre em contato para saber mais sobre nossos serviços de desenvolvimento de software e incubação de talento."
+  ogImage="/teamcubation_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/contacto' },
+    { lang: 'en', href: 'https://teamcubation.com/en/contact' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt/contato' },
+  ]}
+>
+  <Header
+    lang="pt"
+    currentPage="/contacto"
+    contactLabel="Contato"
+    servicesLabel="SERVIÇOS"
+    productLabel="PRODUTO"
+    languageLabel="IDIOMA"
+    langUrls={{ es: '/contacto', en: '/en/contact', pt: '/pt/contato' }}
+  />
+
+  <main>
+    <section class="py-20">
+      <Container class="!max-w-[860px]">
+        <FormContact lang="pt" titleTag="h1" />
+      </Container>
+    </section>
+  </main>
+
+  <Footer lang="pt" />
+</Layout>

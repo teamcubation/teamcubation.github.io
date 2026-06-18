@@ -1,0 +1,106 @@
+---
+import Container from './Container.astro'
+import Button from './Button.astro'
+
+interface Cta {
+  label: string
+  href: string
+}
+
+interface Card {
+  tags: string[]
+  title: string
+  subtitle?: string
+  description: string
+  image?: string
+  ctaPrimary: Cta
+  ctaSecondary: Cta
+}
+
+interface Props {
+  title?: string
+  subtitle?: string
+  cards?: Card[]
+}
+
+const {
+  title = 'Servicios on-the-job',
+  subtitle = 'Todos nuestros servicios se basan en proyectos reales, formando talento nuevo o fortaleciendo el equipo actual de tu empresa.',
+  cards = [
+    {
+      tags: ['Servicio', 'Para IT'],
+      title: 'IncubatiON',
+      subtitle: 'La primera Software + Team Factory',
+      description: 'Construimos el software que necesitas hoy mientras incubamos a tus devs del mañana. Obtienes tecnología y profesionales listos para integrarse a tu empresa.',
+      ctaPrimary: { label: 'Agendar Reunión', href: 'https://teamcubation.pipedrive.com/scheduler/kOBXpjiw/meeting' },
+      ctaSecondary: { label: 'Conocer más', href: '/incubation' },
+    },
+    {
+      tags: ['Servicio', 'Para todos'],
+      title: 'BoosterAI',
+      subtitle: 'Todo equipo de tu empresa podría ser un equipo IT',
+      description: 'Entrenamos a todos tus colaboradores en la automatización de procesos reales con agentes AI y RPA. En un mes, tus equipos aprenderán a pensar como devs y a aplicar IA.',
+      ctaPrimary: { label: 'Agendar Reunión', href: 'https://teamcubation.pipedrive.com/scheduler/kOBXpjiw/meeting' },
+      ctaSecondary: { label: 'Conocer más', href: '/booster-ai' },
+    },
+  ],
+} = Astro.props
+
+// Visuals are the same across languages, so they live here (positional, per card)
+const visuals = [
+  { image: '/incubation_service.avif', accent: '/rectangle_yellow.png', corner: 'bl', titleAccent: 'ON', titleAccentClass: 'text-primary', objectClass: 'object-top', ctaPrimaryClass: '' },
+  { image: '/booster_service.avif', accent: '/rectangle_blue.png', corner: 'br', titleAccent: 'AI', titleAccentClass: 'text-violet-main', objectClass: 'object-center', ctaPrimaryClass: '!bg-violet-main hover:!bg-violet-main' },
+]
+---
+
+<section id="servicios" class="scroll-mt-24 overflow-hidden pt-12 pb-9">
+  <Container class="!max-w-[1240px]">
+    <h2 data-reveal="down" class="text-center text-[32px] font-extrabold leading-[1] tracking-[-0.96px] text-content-primary">{title}</h2>
+    <p class="mx-auto mt-6 max-w-[640px] text-center text-[20px] leading-[1.5] tracking-[0px] text-content-secondary" style="font-family: 'Inter', sans-serif; font-weight: 400;">{subtitle}</p>
+
+    <div class="mt-12 grid gap-10 lg:grid-cols-2">
+      {cards.map((card, i) => (
+        <article data-reveal={i === 0 ? 'left' : 'right'} class="flex flex-col rounded-lg border border-border-main bg-white p-8">
+          <div class="flex flex-wrap gap-2">
+            {card.tags.map((tag) => (
+              <span class="rounded-md border border-border-main bg-white px-[10px] py-2 text-[10px] font-extrabold uppercase leading-none tracking-[0.3px] text-content-primary" style="font-family: 'Inter', sans-serif;">{tag}</span>
+            ))}
+          </div>
+
+          <h3 class="mt-6 text-[28px] font-extrabold leading-[1.2] tracking-[-0.72px] text-content-primary">{card.title.slice(0, -visuals[i].titleAccent.length)}<span class={visuals[i].titleAccentClass}>{visuals[i].titleAccent}</span></h3>
+          {card.subtitle && (
+            <p class="mt-1 text-[16px] font-extrabold leading-[1.5] tracking-[0px] text-content-primary">{card.subtitle}</p>
+          )}
+          <p class="mt-6 text-[16px] leading-[1.6] text-content-secondary">{card.description}</p>
+
+          <div class="relative mt-6">
+            <img
+              src={visuals[i].image}
+              alt={card.title}
+              class:list={['relative z-10 w-full rounded-[4px] object-cover', visuals[i].objectClass]}
+              style="height: 240px;"
+              loading="lazy"
+            />
+            <img
+              src={visuals[i].accent}
+              alt=""
+              aria-hidden="true"
+              class:list={[
+                'pointer-events-none absolute bottom-0 z-20 rounded-[4px]',
+                visuals[i].corner === 'bl' ? 'left-0' : 'right-0',
+              ]}
+            />
+          </div>
+
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:gap-8">
+            <Button href={card.ctaPrimary.href} target="_blank" rel="noopener noreferrer" variant="primary" radius={[24, 32, 0, 24]} class:list={['w-full gap-2 pt-[13px] pr-[24px] pb-[13px] pl-[20px] text-[14px] font-extrabold leading-none sm:flex-1', visuals[i].ctaPrimaryClass]}>
+              <img src="/calendar.svg" alt="" aria-hidden="true" class="h-6 w-6" />
+              {card.ctaPrimary.label}
+            </Button>
+            <Button href={card.ctaSecondary.href} aria-label={`${card.ctaSecondary.label} — ${card.title}`} radius={[32, 24, 24, 0]} class="w-full border-0 bg-gray-light pt-[13px] pr-[24px] pb-[13px] pl-[20px] text-[14px] font-extrabold leading-none sm:flex-1" style="color: var(--color-content-primary)">{card.ctaSecondary.label}</Button>
+          </div>
+        </article>
+      ))}
+    </div>
+  </Container>
+</section>

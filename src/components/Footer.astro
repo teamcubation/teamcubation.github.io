@@ -1,0 +1,57 @@
+---
+import Container from './Container.astro'
+
+interface Props {
+  lang?: string
+}
+
+const { lang = 'es' } = Astro.props
+
+const langPrefix = (code: string) => code === 'es' ? '' : `/${code}`
+
+const currentYear = new Date().getFullYear()
+
+const newTabLabel = { es: ' (abre en nueva pestaña)', en: ' (opens in a new tab)', pt: ' (abre em nova aba)' }[lang] ?? ' (abre en nueva pestaña)'
+const followLabel = { es: 'Seguinos', en: 'Follow us', pt: 'Siga-nos' }[lang] ?? 'Seguinos'
+const rightsLabel = { es: 'Todos los derechos reservados', en: 'All rights reserved', pt: 'Todos os direitos reservados' }[lang] ?? 'Todos los derechos reservados'
+---
+
+<footer class="py-20 ">
+  <Container class="!max-w-[1240px] flex flex-col items-center justify-between gap-6 md:flex-row">
+    <!-- Logo + copyright -->
+    <div class="flex flex-col items-center gap-5 md:items-start">
+      <a href={langPrefix(lang) || '/'} aria-label="Teamcubation">
+        <img src="/logo.svg" alt="Teamcubation" width="176" height="24" />
+      </a>
+      <p class="text-[12px] text-[#5f5e5e]">{currentYear}. {rightsLabel}.</p>
+    </div>
+
+    <!-- Social -->
+    <div class="flex flex-col items-center gap-3 md:items-start">
+      <span class="text-[10px] font-extrabold uppercase tracking-[0.5px] text-content-light">{followLabel}</span>
+      <div class="flex items-center gap-3">
+      <a
+        href="https://www.linkedin.com/company/teamcubation"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`LinkedIn${newTabLabel}`}
+        class="flex items-center gap-2 rounded-[17px_24px_0px_17px] bg-[#0a66c2] h-[34px] px-4 py-0 text-sm font-semibold leading-[1.5] tracking-[-0.28px] text-white transition hover:opacity-90"
+      >
+        <img src="/IN.png" alt="" aria-hidden="true" class="h-4 w-4" />
+        LinkedIn
+      </a>
+      <a
+        href="https://www.instagram.com/teamcubation_"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Instagram${newTabLabel}`}
+        class="flex items-center gap-2 rounded-[24px_17px_17px_0px] h-[34px] px-4 py-0 text-sm font-semibold leading-[1.5] tracking-[-0.28px] text-white transition hover:opacity-90"
+        style="background-image: url('/ig_bg.svg'); background-size: 100% 100%; background-repeat: no-repeat;"
+      >
+        <img src="/IG.png" alt="" aria-hidden="true" class="h-4 w-4" />
+        Instagram
+      </a>
+      </div>
+    </div>
+  </Container>
+</footer>

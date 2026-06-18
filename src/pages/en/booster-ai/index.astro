@@ -1,0 +1,164 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import Header from '../../../components/Header.astro'
+import Footer from '../../../components/Footer.astro'
+import BoosterHero from '../../../components/BoosterHero.astro'
+import ClientsBoosterSlider from '../../../components/ClientsBoosterSlider.astro'
+import BoosterBand from '../../../components/BoosterBand.astro'
+import BoosterAreas from '../../../components/BoosterAreas.astro'
+import CtaBanner from '../../../components/CtaBanner.astro'
+import BoosterTraining from '../../../components/BoosterTraining.astro'
+import TeamBand from '../../../components/TeamBand.astro'
+import BoosterDifference from '../../../components/BoosterDifference.astro'
+import ReadyBanner from '../../../components/ReadyBanner.astro'
+---
+
+<Layout
+  lang="en"
+  title="Booster AI | Implement AI in your company in 30 days"
+  description="Your teams, guided by our mentors, automate repetitive tasks, freeing up hours to focus on the business. Efficiency + Training. We've already trained AI.. now it's time to train humans."
+  ogImage="/Booster_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/booster-ai' },
+    { lang: 'en', href: 'https://teamcubation.com/en/booster-ai' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt/booster-ai' },
+  ]}
+>
+  <Header
+    lang="en"
+    currentPage="/booster-ai"
+    contactLabel="Contact"
+    servicesLabel="SERVICES"
+    productLabel="PRODUCT"
+    languageLabel="LANGUAGE"
+  />
+
+  <main>
+    <BoosterHero
+      highlight="Your teams, guided by our mentors, automate repetitive tasks, freeing up hours to focus on the business. Efficiency + training."
+      subtitle="An agile, human, on-the-job training program so your team learns to use AI in real processes. No friction and no dependence on IT: with BoosterAI each person empowers their own “square meter” and multiplies the impact across the organization."
+      highlight2="We've already trained AI… now it's time to train humans."
+      ctaLabel="Schedule Meeting"
+      strip="AI is learned with people, and our Booster AI does exactly that: empowering your teams, human to human."
+      points={[
+        { title: 'Understand', subtitle: 'The potential and limits of AI, and explore tools like n8n, Power Automate, and Agents.' },
+        { title: 'Design', subtitle: 'The first processes with AI, with personalized mentoring support.' },
+        { title: 'Master', subtitle: 'The confidence to explore and apply AI without depending on the IT area.' },
+      ]}
+    />
+    <ClientsBoosterSlider label="Companies where we drive AI adoption" />
+    <BoosterBand />
+    <BoosterAreas
+      title="What does BoosterAI offer to the different areas of your organization?"
+      opportunityLabel="What is the opportunity?"
+      possibleLabel="What is possible?"
+      examplesLabel="Examples of processes that can be automated:"
+      items={[
+        {
+          category: 'Sales',
+          phrase: 'The focus on selling more.',
+          opportunity: 'Free your sales team from repetitive tasks so they can focus on selling more and better.',
+          possible: 'Create AI “copilots” that support each executive in prospecting, follow-up, and closing, accelerating the sales cycle and improving conversion rates.',
+          examples: [
+            'Generation of qualified prospect lists',
+            'Automatic drafting of personalized follow-up emails',
+            'CRM updates and activity logging',
+            'Preparation of commercial proposals',
+          ],
+        },
+        {
+          category: 'Finance',
+          phrase: 'Your numbers in real time.',
+          opportunity: 'Accelerate access to key information for decision-making and reduce operational errors.',
+          possible: 'Implement agents that prepare reports, answer frequent queries, and automate reconciliations, allowing the team to focus on strategic analysis.',
+          examples: [
+            'Bank reconciliations',
+            'Cash flow reports and financial projections',
+            'P&L creation by business unit',
+            'Reminders and follow-up of collections',
+          ],
+        },
+        {
+          category: 'Legal',
+          phrase: 'Compliance without bottlenecks.',
+          opportunity: 'Multiply team productivity without sacrificing accuracy or compliance.',
+          possible: 'Train AI agents to help review contracts, respond to frequent business queries, and flag risk deviations, keeping the legal team focused on higher-impact matters.',
+          examples: [
+            'Clause search and contract comparisons',
+            'Generation of standard minutes and NDAs',
+            'Contract expiration alerts',
+            'Responses to frequent legal queries (internal chat)',
+          ],
+        },
+        {
+          category: 'Marketing',
+          phrase: 'Laser focus to hit the target.',
+          opportunity: 'Create more quality content in less time and improve the performance of each action.',
+          possible: 'Develop intelligent assistants that generate ideas, write versions, measure results, and optimize campaigns, freeing up creative time.',
+          examples: [
+            'Ideation and production of social media content',
+            'Copy versioning and A/B test design',
+            'Consolidation of campaign metrics',
+            'Creation of results reports',
+          ],
+        },
+        {
+          category: 'Human Resources',
+          phrase: 'Culture that scales.',
+          opportunity: 'Turn the area into a strategic enabler of the business while reducing operational workload.',
+          possible: 'Incorporate assistants that accelerate hiring, onboarding, and monitoring, improving the employee experience from day one.',
+          examples: [
+            'Initial candidate screening and shortlist creation',
+            'Generation of job descriptions and internal communications',
+            'Personalized onboarding plans',
+            'Monitoring of climate and performance',
+          ],
+        },
+        {
+          category: 'Operations',
+          phrase: 'Gears moving without friction.',
+          opportunity: 'Increase operational efficiency by reducing downtime and incidents.',
+          possible: 'Implement robots and intelligent workflows that monitor processes, identify bottlenecks, and act automatically, ensuring operational continuity.',
+          examples: [
+            'Inventory / stock reports',
+            'Alerts and automatic ticket assignment',
+            'Order and logistics tracking',
+            'Data entry across multiple systems',
+          ],
+        },
+      ]}
+    />
+    <CtaBanner
+      containerClass="!max-w-[960px]"
+      background="linear-gradient(to right, #B636FF 0%, #6D00FF 50%, #00B2FF 100%)"
+      title="Do you want to know how this service can work for your team?"
+      ctaLabel="Contact us"
+      ctaHref="/en/contact"
+    />
+    <BoosterTraining
+      bold="BoosterAI trains your teams to think and act using AI to enhance creativity + analytical capacity, achieving real business impact."
+      paragraph="It's not just about incorporating technology: it's about how and where we use it. Organizations achieving extraordinary results with AI (more growth, more profitability, more impact) have one thing in common: they invest in their people to use AI strategically, not routinely."
+      highlight="EFFICIENCY = IMPACT ON P&L"
+    />
+    <TeamBand rectangle="/rectangle_violet_4.png" />
+    <BoosterDifference
+      title="How do the companies that are capitalizing best on AI differ?"
+      features={[
+        { title: 'They think big', description: 'They set ambitious goals and allocate significant resources to AI and digital capabilities.' },
+        { title: 'They focus on what truly moves the needle', description: "They don't scatter efforts; they double down on a few priority use cases with clear ROI." },
+        { title: 'They go to the core areas of the business', description: 'They apply AI where it hurts and where efficiency drives the biggest wins.' },
+      ]}
+    />
+    <ReadyBanner
+      title="Ready to get started?"
+      text="Companies that integrate AI into their day-to-day achieve greater efficiency and growth. Having the courage to innovate is what makes the difference."
+      ctaLabel="Talk to an Expert"
+      ctaHref="/en/contact"
+      bgImage="/booster_ready_bg.png"
+      accentImage="/rectangle_violet.png"
+      ctaBackground="linear-gradient(to right, #B636FF 0%, #6D00FF 50%, #00B2FF 100%)"
+    />
+  </main>
+
+  <Footer lang="en" />
+</Layout>

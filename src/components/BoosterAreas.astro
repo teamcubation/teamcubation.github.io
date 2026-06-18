@@ -1,0 +1,158 @@
+---
+import Container from './Container.astro'
+
+interface Item {
+  category: string
+  phrase: string
+  opportunity?: string
+  possible?: string
+  examples?: string[]
+}
+
+interface Props {
+  title?: string
+  opportunityLabel?: string
+  possibleLabel?: string
+  examplesLabel?: string
+  items?: Item[]
+}
+
+const {
+  title = '¿Qué ofrece BoosterAI a las distintas áreas de tu organización?',
+  opportunityLabel = '¿Cuál es la oportunidad?',
+  possibleLabel = '¿Qué es posible?',
+  examplesLabel = 'Ejemplos de procesos que se pueden automatizar:',
+  items = [
+    {
+      category: 'Ventas',
+      phrase: 'El foco puesto en vender más.',
+      opportunity: 'Liberar a tu equipo comercial de tareas repetitivas para que puedan enfocarse en vender más y mejor.',
+      possible: 'Crear “copilotos de IA” que acompañen a cada ejecutivo en la prospección, seguimiento y cierre, acelerando el ciclo comercial y mejorando las tasas de conversión.',
+      examples: [
+        'Generación de listas calificadas de prospectos',
+        'Redacción automática de emails personalizados de seguimiento',
+        'Actualización de CRM y registro de actividades',
+        'Preparación de propuestas comerciales',
+      ],
+    },
+    {
+      category: 'Finanzas',
+      phrase: 'Tus números en tiempo real.',
+      opportunity: 'Acelerar el acceso a información clave para la toma de decisiones y reducir errores operativos.',
+      possible: 'Implementar agentes que preparen reportes, respondan consultas frecuentes y automaticen conciliaciones, permitiendo al equipo enfocarse en análisis estratégico.',
+      examples: [
+        'Conciliaciones bancarias',
+        'Reportes de cashflow y proyecciones financieras',
+        'Armado de P&L por unidad de negocio',
+        'Recordatorios y seguimiento de cobranzas',
+      ],
+    },
+    {
+      category: 'Legales',
+      phrase: 'Compliance sin cuello de botella.',
+      opportunity: 'Multiplicar la productividad del equipo sin sacrificar precisión ni compliance.',
+      possible: 'Entrenar agentes de IA que ayuden a revisar contratos, responder consultas frecuentes del negocio y alertar desvíos de riesgo, manteniendo al equipo legal enfocado en temas de mayor impacto.',
+      examples: [
+        'Búsqueda de cláusulas y comparativas en contratos',
+        'Generación de minutas y NDAs estándar',
+        'Alertas de vencimiento de contratos',
+        'Respuestas a consultas legales frecuentes (chat interno)',
+      ],
+    },
+    {
+      category: 'Marketing',
+      phrase: 'Mira laser para dar en el blanco.',
+      opportunity: 'Crear más contenido de calidad en menos tiempo y mejorar la performance de cada acción.',
+      possible: 'Desarrollar asistentes inteligentes que generen ideas, escriban versiones, midan resultados y optimicen campañas, liberando tiempo creativo.',
+      examples: [
+        'Ideación y producción de contenidos para redes',
+        'Versionado de copies y diseño de A/B tests',
+        'Consolidación de métricas de campañas',
+        'Creación de reportes de resultados',
+      ],
+    },
+    {
+      category: 'Recursos Humanos',
+      phrase: 'Cultura que escala.',
+      opportunity: 'Convertir al área en un habilitador estratégico del negocio, reduciendo carga operativa.',
+      possible: 'Incorporar asistentes que aceleren contratación, onboarding y seguimiento, mejorando la experiencia del colaborador desde el día uno.',
+      examples: [
+        'Screening inicial de candidatos y creación de shortlists',
+        'Generación de descripciones de puesto y comunicaciones internas',
+        'Planes de onboarding personalizados',
+        'Seguimiento de clima y performance',
+      ],
+    },
+    {
+      category: 'Operaciones',
+      phrase: 'Engranajes moviéndose sin fricción.',
+      opportunity: 'Aumentar la eficiencia operativa reduciendo tiempos muertos e incidencias.',
+      possible: 'Implementar robots y flujos inteligentes que monitoreen procesos, identifiquen cuellos de botella y actúen automáticamente, garantizando continuidad operativa.',
+      examples: [
+        'Reportes de inventario / stock',
+        'Alertas y asignación automática de tickets',
+        'Seguimiento de órdenes y logística',
+        'Carga de información en múltiples sistemas',
+      ],
+    },
+  ],
+} = Astro.props
+---
+
+<section class="pt-12 pb-0">
+  <Container class="!max-w-[960px]">
+    <h2 data-reveal class="mx-auto max-w-[720px] text-center text-[28px] font-extrabold leading-[1.2] tracking-[-0.96px] text-content-primary">{title}</h2>
+
+    <div class="mt-12 flex flex-col gap-4">
+      {items.map((item) => (
+        <details name="booster-areas" class="group rounded-lg border border-border-main bg-white">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-8 py-6 [&::-webkit-details-marker]:hidden">
+            <span class="leading-none">
+              <span class="text-[24px] font-extrabold text-violet-main">{item.category}</span>
+              <span class="ml-2 text-[22px] font-bold text-content-primary max-[800px]:hidden group-open:max-[800px]:ml-0 group-open:max-[800px]:mt-2 group-open:max-[800px]:block">{item.phrase}</span>
+            </span>
+
+            <span class="shrink-0">
+              <img src="/icon_arrow_close.png" alt="" aria-hidden="true" class="block h-6 w-6 group-open:hidden" />
+              <img src="/icon_arrow_open.png" alt="" aria-hidden="true" class="hidden h-6 w-6 group-open:block" />
+            </span>
+          </summary>
+
+          {(item.opportunity || item.possible || (item.examples && item.examples.length > 0)) && (
+            <div class="grid gap-x-10 gap-y-6 px-8 pb-6 md:grid-cols-2" style="font-family: 'Inter', sans-serif;">
+              <div>
+                {item.opportunity && (
+                  <Fragment>
+                    <p class="text-[14px] font-bold text-content-primary">{opportunityLabel}</p>
+                    <p class="mt-2 text-[14px] leading-[1.5] text-content-secondary">{item.opportunity}</p>
+                  </Fragment>
+                )}
+
+                {item.possible && (
+                  <Fragment>
+                    <p class="mt-5 text-[14px] font-bold text-content-primary">{possibleLabel}</p>
+                    <p class="mt-2 text-[14px] leading-[1.5] text-content-secondary">{item.possible}</p>
+                  </Fragment>
+                )}
+              </div>
+
+              {item.examples && item.examples.length > 0 && (
+                <div>
+                  <p class="text-[14px] font-bold text-content-primary">{examplesLabel}</p>
+                  <ul class="mt-2 text-[14px] leading-[1.5] text-content-secondary">
+                    {item.examples.map((ex) => (
+                      <li class="flex items-start gap-2 border-b border-border-main py-3 last:border-b-0">
+                        <img src="/check_violet.png" alt="" aria-hidden="true" class="mt-[2px] h-4 w-4 shrink-0" />
+                        <span>{ex}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+        </details>
+      ))}
+    </div>
+  </Container>
+</section>

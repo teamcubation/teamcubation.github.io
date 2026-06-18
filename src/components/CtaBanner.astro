@@ -1,0 +1,39 @@
+
+
+---
+import Container from './Container.astro'
+import Button from './Button.astro'
+
+interface Props {
+  title?: string
+  ctaLabel?: string
+  ctaHref?: string
+  containerClass?: string
+  background?: string
+}
+
+const {
+  title = '¿Listo para que desarrollemos software con tu equipo del futuro?',
+  ctaLabel = 'Contactanos',
+  ctaHref = '/contacto',
+  containerClass = '!max-w-[1240px]',
+  background = "url('/banner_bg.svg')",
+} = Astro.props
+---
+
+<section class="py-12">
+  <Container class={containerClass}>
+    <div
+      data-reveal="fade"
+      class="flex flex-col items-center gap-[60px] rounded-lg p-[60px] text-center md:flex-row md:justify-center md:text-left"
+      style={`background-image: ${background}; background-size: 100% 100%; background-repeat: no-repeat;`}
+    >
+      <div class="flex flex-col items-center gap-6 md:flex-row">
+        <img src="/isotipo.svg" alt="" aria-hidden="true" class="h-16 w-auto shrink-0 brightness-0 invert" />
+        <h2 class="max-w-[560px] text-[28px] font-extrabold leading-[1.2] tracking-[-0.84px] text-white">{title}</h2>
+      </div>
+
+      <Button href={ctaHref} radius={[26, 32, 0, 26]} class="shrink-0 border-0 bg-white px-[24px] py-[18px] text-[14px] font-extrabold leading-none" style="color: var(--color-content-primary)">{ctaLabel}</Button>
+    </div>
+  </Container>
+</section>

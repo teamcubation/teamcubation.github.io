@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import BoosterHero from '../../components/BoosterHero.astro'
+import ClientsBoosterSlider from '../../components/ClientsBoosterSlider.astro'
+import BoosterBand from '../../components/BoosterBand.astro'
+import BoosterAreas from '../../components/BoosterAreas.astro'
+import CtaBanner from '../../components/CtaBanner.astro'
+import BoosterTraining from '../../components/BoosterTraining.astro'
+import TeamBand from '../../components/TeamBand.astro'
+import BoosterDifference from '../../components/BoosterDifference.astro'
+import ReadyBanner from '../../components/ReadyBanner.astro'
+import Container from '../../components/Container.astro'
+import FormContact from '../../components/FormContact.astro'
+---
+
+<Layout
+  title="Booster AI | Implementá IA en tu empresa en 30 días"
+  description="Tus equipos, guiados por nuestros mentores, automatizan tareas repetitivas, liberando horas para enfocarse en el negocio. Eficientización + Entrenamiento."
+  ogImage="/Booster_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/booster-ai' },
+    { lang: 'en', href: 'https://teamcubation.com/en/booster-ai' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt/booster-ai' },
+  ]}
+>
+  <Header lang="es" currentPage="/booster-ai" />
+
+  <main>
+    <BoosterHero />
+    <ClientsBoosterSlider label="Empresas con las que impulsamos la adopción de IA" />
+    <BoosterBand />
+    <BoosterAreas />
+    <CtaBanner
+      containerClass="!max-w-[960px]"
+      background="linear-gradient(to right, #B636FF 0%, #6D00FF 50%, #00B2FF 100%)"
+      title="¿Querés saber cómo este servicio puede funcionar para tu equipo?"
+      ctaLabel="Contactanos"
+      ctaHref="#contacto"
+    />
+    <BoosterTraining />
+    <TeamBand rectangle="/rectangle_violet_4.png" />
+    <BoosterDifference />
+    <section id="contacto" class="scroll-mt-24 pt-12 pb-20">
+      <Container class="!max-w-[860px]">
+        <FormContact lang="es" submitClass="!bg-violet-main hover:!bg-violet-main" />
+      </Container>
+    </section>
+    <ReadyBanner
+      text="Las empresas que integran la IA en su día a día son las que alcanzan más eficiencia y crecimiento. Animarse a innovar es lo que marca la diferencia."
+      bgImage="/booster_ready_bg.png"
+      accentImage="/rectangle_violet.png"
+      ctaBackground="linear-gradient(to right, #B636FF 0%, #6D00FF 50%, #00B2FF 100%)"
+    />
+  </main>
+
+  <Footer lang="es" />
+</Layout>

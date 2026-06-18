@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import Hero from '../../components/Hero.astro'
+import LogoBar from '../../components/LogoBar.astro'
+import Services from '../../components/Services.astro'
+import Product from '../../components/Product.astro'
+import SuccessStories from '../../components/SuccessStories.astro'
+import Testimonials from '../../components/Testimonials.astro'
+import CtaBanner from '../../components/CtaBanner.astro'
+import Team from '../../components/Team.astro'
+import heroImage from '../../assets/hero_image_pt.png'
+
+const services = [
+  {
+    tags: ['Serviço', 'Para TI'],
+    title: 'IncubatiON',
+    subtitle: 'A primeira Software + Team Factory',
+    description: 'Construímos o software que você precisa hoje enquanto incubamos os seus devs do amanhã. Você obtém tecnologia e profissionais prontos para se integrar à sua empresa.',
+    ctaPrimary: { label: 'Agendar Reunião', href: 'https://teamcubation.pipedrive.com/scheduler/kOBXpjiw/meeting' },
+    ctaSecondary: { label: 'Saiba mais', href: '/pt/incubation' },
+  },
+  {
+    tags: ['Serviço', 'Para todos'],
+    title: 'BoosterAI',
+    subtitle: 'Qualquer equipe da sua empresa poderia ser uma equipe de TI',
+    description: 'Treinamos todos os seus colaboradores na automação de processos reais com agentes de IA e RPA. Em um mês, suas equipes aprenderão a pensar como devs e a aplicar IA.',
+    ctaPrimary: { label: 'Agendar Reunião', href: 'https://teamcubation.pipedrive.com/scheduler/kOBXpjiw/meeting' },
+    ctaSecondary: { label: 'Saiba mais', href: '/pt/booster-ai' },
+  },
+]
+---
+
+<Layout
+  lang="pt"
+  title="Teamcubation | Desenvolvedores de Experiência"
+  description="Seus colaboradores desenvolvem habilidades tecnológicas com acompanhamento especializado e treinamentos on the job. Todos os nossos serviços são baseados em projetos reais, formando novos talentos ou fortalecendo a equipe atual da sua empresa."
+  ogImage="/teamcubation_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/' },
+    { lang: 'en', href: 'https://teamcubation.com/en' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt' },
+  ]}
+>
+  <Header
+    lang="pt"
+    currentPage="/"
+    contactLabel="Contato"
+    servicesLabel="SERVIÇOS"
+    productLabel="PRODUTO"
+    languageLabel="IDIOMA"
+  />
+
+  <main>
+    <Hero
+      title="Desenvolvedores de Experiência"
+      image={heroImage}
+      subtitle="Seus colaboradores desenvolvem habilidades tecnológicas com acompanhamento especializado e treinamentos on the job."
+      ctaPrimaryLabel="Serviços"
+      ctaSecondaryLabel="Casos de Sucesso"
+    />
+    <LogoBar label="Empresas com as quais desenvolvemos experiência." />
+    <Services
+      title="Serviços on-the-job"
+      subtitle="Todos os nossos serviços são baseados em projetos reais, formando novos talentos ou fortalecendo a equipe atual da sua empresa."
+      cards={services}
+    />
+    <Product
+      tags={['Produto', 'Para todos']}
+      title="Melhore seus processos de aquisição de experiência em toda a sua organização com o Teamboarding"
+      subtitle="Acompanhe cada novo integrante com um processo claro, mensurável e adaptado à sua forma de trabalhar."
+      ctaLabel="Saiba mais"
+    />
+    <SuccessStories
+      tag="Caso de sucesso"
+      title="Histórias de sucesso"
+      description="Descubra como colaboramos com o Mercado Livre, não apenas desenvolvendo software, mas também desenvolvendo talento para que possa fazer parte de suas equipes com resultados excepcionais."
+    />
+    <Testimonials
+      title="O valor de trabalhar juntos, contado pelos nossos clientes"
+      testimonials={[
+        { quote: 'A Teamcubation impulsiona o crescimento de pessoas sem experiência em um mercado tão desafiador como TI', name: 'Julieta Carreras', company: 'Mercado Livre' },
+        { quote: 'Conseguimos tornar realidade nosso plano de talento, criamos equipes potentes com resultados surpreendentes', name: 'Norberto Santoro', company: 'Banco Comafi' },
+        { quote: 'A proposta da Teamcubation está muito alinhada com o que nós queremos e esperamos de um parceiro', name: 'Pablo Cassina', company: 'Mercado Livre' },
+      ]}
+    />
+    <CtaBanner
+      title="Pronto para desenvolvermos software com a sua equipe do futuro?"
+      ctaLabel="Fale conosco"
+      ctaHref="/pt/contato"
+    />
+    <Team
+      title="Nosso Time"
+      subtitle="Somos um time apaixonado pelo desenvolvimento humano através da tecnologia. Dedicamo-nos a acelerar e medir o desenvolvimento das habilidades tech dos seus colaboradores, enquanto contribuem para o crescimento da sua empresa."
+      descriptions={[
+        'Finanças e gestão para que os projetos escalem com bases sólidas.',
+        'Acelerando o talento em tecnologia da América Latina. Tech Entrepreneur.',
+        'Empreendedor apaixonado por pessoas, ensino e tecnologia.',
+        'Empreendedor tech. Escalando a produtividade do talento com desenvolvimento de software.',
+        'Fazemos seu negócio crescer montando e desenvolvendo as melhores equipes.',
+        'Transformando talento júnior em desenvolvedores de classe mundial através da tecnologia.',
+      ]}
+    />
+  </main>
+
+  <Footer lang="pt" />
+</Layout>

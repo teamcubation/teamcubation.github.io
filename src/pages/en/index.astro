@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import Hero from '../../components/Hero.astro'
+import LogoBar from '../../components/LogoBar.astro'
+import Services from '../../components/Services.astro'
+import Product from '../../components/Product.astro'
+import SuccessStories from '../../components/SuccessStories.astro'
+import Testimonials from '../../components/Testimonials.astro'
+import CtaBanner from '../../components/CtaBanner.astro'
+import Team from '../../components/Team.astro'
+
+const services = [
+  {
+    tags: ['Service', 'For IT'],
+    title: 'IncubatiON',
+    subtitle: 'The first Software + Team Factory',
+    description: "We build the software you need today while incubating your future devs. You get technology and professionals ready to join your company.",
+    ctaPrimary: { label: 'Schedule Meeting', href: 'https://teamcubation.pipedrive.com/scheduler/kOBXpjiw/meeting' },
+    ctaSecondary: { label: 'Learn more', href: '/en/incubation' },
+  },
+  {
+    tags: ['Service', 'For everyone'],
+    title: 'BoosterAI',
+    subtitle: 'Any team in your company could be an IT team',
+    description: 'We train all your collaborators in automating real processes with AI agents and RPA. In one month, your teams will learn to think like devs and apply AI.',
+    ctaPrimary: { label: 'Schedule Meeting', href: 'https://teamcubation.pipedrive.com/scheduler/kOBXpjiw/meeting' },
+    ctaSecondary: { label: 'Learn more', href: '/en/booster-ai' },
+  },
+]
+---
+
+<Layout
+  lang="en"
+  title="Teamcubation | Experience Developers"
+  description="Your collaborators develop technological skills with expert support and on-the-job training. All our services are based on real projects, developing new talent or strengthening your company's current team."
+  ogImage="/teamcubation_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/' },
+    { lang: 'en', href: 'https://teamcubation.com/en' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt' },
+  ]}
+>
+  <Header
+    lang="en"
+    currentPage="/"
+    contactLabel="Contact"
+    servicesLabel="SERVICES"
+    productLabel="PRODUCT"
+    languageLabel="LANGUAGE"
+  />
+
+  <main>
+    <Hero
+      title="Experience Developers"
+      imageSrc="/hero_image_en.avif"
+      subtitle="Your collaborators develop technological skills with expert support and on-the-job training."
+      ctaPrimaryLabel="Services"
+      ctaSecondaryLabel="Success Stories"
+    />
+    <LogoBar label="Companies where we've developed experience." />
+    <Services
+      title="On-the-job services"
+      subtitle="All our services are based on real projects, developing new talent or strengthening your company's current team."
+      cards={services}
+    />
+    <Product
+      tags={['Product', 'For everyone']}
+      title="Improve your experience acquisition processes across your whole organization with Teamboarding"
+      subtitle="Support every new member with a clear, measurable process adapted to the way you work."
+      ctaLabel="Learn more"
+    />
+    <SuccessStories
+      tag="Success story"
+      title="Success stories"
+      description="Discover how we have collaborated with Mercado Libre, not only developing software, but also developing talent so they can become part of their teams with exceptional results."
+    />
+    <Testimonials
+      title="The value of working together, told by our clients"
+      testimonials={[
+        { quote: 'Teamcubation drives the growth of people without experience in a market as challenging as IT', name: 'Julieta Carreras', company: 'Mercado Libre' },
+        { quote: 'We made our talent plan a reality, building powerful teams with surprising results', name: 'Norberto Santoro', company: 'Banco Comafi' },
+        { quote: "Teamcubation's proposal is very aligned with what we want and expect from a partner", name: 'Pablo Cassina', company: 'Mercado Libre' },
+      ]}
+    />
+    <CtaBanner
+      title="Ready for us to build software with your team of the future?"
+      ctaLabel="Contact us"
+      ctaHref="/en/contact"
+    />
+    <Team
+      title="Our Team"
+      subtitle="We are a team passionate about human development through technology. We dedicate ourselves to accelerating and measuring the development of your collaborators' tech skills, while they contribute to your company's growth."
+      descriptions={[
+        'Finance and management so projects scale on solid foundations.',
+        'Accelerating tech talent in Latin America. Tech Entrepreneur.',
+        'Entrepreneur passionate about people, teaching and technology.',
+        'Tech entrepreneur. Scaling talent productivity through software development.',
+        'We grow your business by building and developing the best teams.',
+        'Transforming junior talent into world-class developers through technology.',
+      ]}
+    />
+  </main>
+
+  <Footer lang="en" />
+</Layout>

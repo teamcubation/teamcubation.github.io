@@ -1,0 +1,18 @@
+---
+interface Props {
+  id: string
+  class?: string
+  [key: string]: any
+}
+
+const { id, class: className = '', ...attrs } = Astro.props
+---
+
+<button id={id} aria-label="Abrir menú" aria-expanded="false" class:list={['flex h-10 cursor-pointer flex-col items-end justify-center gap-[6px]', className]} {...attrs}>
+  <div id={`${id}-lines`} class="flex flex-col items-end gap-[6px]">
+    <div class="h-[2px] w-[22px] rounded-[1px] bg-content-secondary"></div>
+    <div class="h-[2px] w-[16px] rounded-[1px] bg-content-secondary"></div>
+    <div class="h-[2px] w-[18px] rounded-[1px] bg-content-secondary"></div>
+  </div>
+  <img id={`${id}-close`} src="/menu_close.svg" alt="Cerrar menú" class="hidden w-[22px] h-[40px]" />
+</button>

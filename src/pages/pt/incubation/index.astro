@@ -1,0 +1,117 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import Header from '../../../components/Header.astro'
+import Footer from '../../../components/Footer.astro'
+import IncubationHero from '../../../components/IncubationHero.astro'
+import Methodology from '../../../components/Methodology.astro'
+import CtaBanner from '../../../components/CtaBanner.astro'
+import TechMethodology from '../../../components/TechMethodology.astro'
+import Differential from '../../../components/Differential.astro'
+import SuccessStories from '../../../components/SuccessStories.astro'
+import Testimonials from '../../../components/Testimonials.astro'
+import ReadyBanner from '../../../components/ReadyBanner.astro'
+---
+
+<Layout
+  lang="pt"
+  title="IncubatION | A primeira Software + Team Factory"
+  description="Somos a primeira Software+Team Factory, implementando projetos de tecnologia para nossos clientes enquanto aceleramos o desenvolvimento de habilidades técnicas de seus potenciais colaboradores."
+  ogImage="/IncubatiON_og.jpg"
+  alternateLanguages={[
+    { lang: 'es', href: 'https://teamcubation.com/incubation' },
+    { lang: 'en', href: 'https://teamcubation.com/en/incubation' },
+    { lang: 'pt', href: 'https://teamcubation.com/pt/incubation' },
+  ]}
+>
+  <Header
+    lang="pt"
+    currentPage="/incubation"
+    contactLabel="Contato"
+    servicesLabel="SERVIÇOS"
+    productLabel="PRODUTO"
+    languageLabel="IDIOMA"
+  />
+
+  <main>
+    <IncubationHero
+      subtitle="Somos a primeira Software+Team Factory, implementando projetos de tecnologia para nossos clientes enquanto aceleramos o desenvolvimento de habilidades técnicas de seus potenciais colaboradores."
+      highlight="Construímos o software que você precisa hoje enquanto incubamos a sua equipe do amanhã."
+      ctaLabel="Agendar Reunião"
+      points={[
+        {
+          title: 'Desenvolvimento de software turnkey',
+          subtitle: 'Criamos soluções sob medida que atendem às suas necessidades específicas, garantindo a entrega.',
+        },
+        {
+          title: 'Formação em projetos reais',
+          subtitle: 'Os juniores, com formação em programação, ganham experiência em projetos reais ao lado dos nossos seniores, acelerando seu crescimento profissional e cultura de trabalho.',
+        },
+        {
+          title: 'Identificação e seleção de talento',
+          subtitle: 'Selecionamos os talentos mais adaptados à sua cultura, que, ao finalizar o projeto, já estão treinados e prontos para integrar a sua equipe sem fricção.',
+        },
+      ]}
+    />
+    <Methodology
+      title="Nossa Metodologia"
+      items={[
+        'Formamos equipes de trabalho com seus potenciais colaboradores, lideradas pelos nossos Seniors dedicados.',
+        'Essas equipes trabalham e aprendem: desenvolvem para a sua empresa com as suas tecnologias e metodologias.',
+        'Medimos a evolução de cada colaborador através da nossa plataforma Teamboarding, que permite personalizar seu processo de aquisição de experiência.',
+        'Ao final do processo você recebe novos projetos de software implementados e a possibilidade de incorporar os novos talentos que participaram do desenvolvimento.',
+      ]}
+    />
+    <CtaBanner
+      containerClass="!max-w-[960px]"
+      title="Pronto para desenvolvermos software com a sua equipe do futuro?"
+      ctaLabel="Fale conosco"
+      ctaHref="/pt/contato"
+    />
+    <TechMethodology
+      rectangle="/rectangule_orange.png"
+      title="Tecnologia e metodologia para acelerar seus potenciais futuros colaboradores"
+      cards={[
+        {
+          title: 'Nossos líderes',
+          description: 'Especializados e capacitados no stack tecnológico e nas metodologias da sua empresa, garantirão que o software cumpra os requisitos com qualidade e cuidarão da evolução dos developers.',
+        },
+        {
+          title: 'Seus futuros developers',
+          description: 'Guiados pelos nossos seniors, adquirirão experiência real enquanto desenvolvem suas habilidades técnicas e comportamentais, e se integram à sua cultura empresarial.',
+        },
+      ]}
+    />
+    <Differential
+      title="Nosso"
+      titleAccent="Diferencial"
+      features={[
+        { title: 'Treinamos Trabalhando', description: 'Nossa metodologia é on the job: a forma mais efetiva.' },
+        { title: 'Equipes Full-time', description: 'Personalizamos a experiência de cada um dos seus potenciais colaboradores.' },
+        { title: 'Desenvolvemos Habilidades', description: 'Potencializamos competências tanto técnicas quanto interpessoais necessárias nas suas equipes de TI.' },
+        { title: 'Amamos o que fazemos', description: 'Somos motivados pelo desenvolvimento de software e de pessoas.' },
+        { title: 'Vivemos a sua Cultura', description: 'Trabalhamos alinhados com seus valores, processos e objetivos.' },
+      ]}
+    />
+    <SuccessStories
+      tag="Caso de sucesso"
+      title="Histórias de sucesso"
+      description="Descubra como colaboramos com o Mercado Livre, não apenas desenvolvendo software, mas também desenvolvendo talento para que possa fazer parte de suas equipes com resultados excepcionais."
+    />
+    <Testimonials
+      title="O valor de trabalhar juntos, contado pelos nossos clientes"
+      testimonials={[
+        { quote: 'A Teamcubation impulsiona o crescimento de pessoas sem experiência em um mercado tão desafiador como TI', name: 'Julieta Carreras', company: 'Mercado Livre' },
+        { quote: 'Conseguimos tornar realidade nosso plano de talento, criamos equipes potentes com resultados surpreendentes', name: 'Norberto Santoro', company: 'Banco Comafi' },
+        { quote: 'A proposta da Teamcubation está muito alinhada com o que nós queremos e esperamos de um parceiro', name: 'Pablo Cassina', company: 'Mercado Livre' },
+      ]}
+    />
+    <ReadyBanner
+      title="Pronto para começar?"
+      text="As empresas que incorporam novos talentos fidelizam e formam equipes competitivas e supercomprometidas. Atrever-se a inovar é o que faz a diferença."
+      ctaLabel="Fale com um Especialista"
+      ctaHref="/pt/contato"
+    />
+  </main>
+
+  <Footer lang="pt" />
+</Layout>

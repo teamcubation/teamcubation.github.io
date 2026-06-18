@@ -1,0 +1,35 @@
+---
+import Container from './Container.astro'
+import FeatureCard from './FeatureCard.astro'
+
+interface Feature {
+  title: string
+  description: string
+}
+
+interface Props {
+  title?: string
+  features?: Feature[]
+}
+
+const {
+  title = '¿En qué se diferencian las compañías que están capitalizando mejor la IA?',
+  features = [
+    { title: 'Piensan en grande', description: 'Plantean objetivos ambiciosos y asignan recursos relevantes a IA y capacidades digitales.' },
+    { title: 'Se enfocan en lo que realmente mueve la aguja', description: 'No dispersan esfuerzos; apuestan fuerte a unos pocos casos de uso prioritarios con ROI claro.' },
+    { title: 'Van a las áreas core del negocio', description: 'Aplican IA donde duele y donde se gana con la eficiencia.' },
+  ],
+} = Astro.props
+---
+
+<section class="overflow-x-clip bg-gray-light py-16">
+  <Container class="!max-w-[960px]">
+    <h2 class="mx-auto max-w-[760px] text-center text-[28px] font-extrabold leading-[1.2] tracking-[-0.96px] text-content-primary">{title}</h2>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {features.map((f, i) => (
+        <FeatureCard icon="/big-tick-circle.png" titleClass="text-violet-main" title={f.title} description={f.description} reveal={i === 0 ? 'left' : i === 2 ? 'right' : 'up'} />
+      ))}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import Container from './Container.astro'
+import robotImg from '../assets/robot.png'
+
+interface Props {
+  bold?: string
+  paragraph?: string
+  highlight?: string
+}
+
+const {
+  bold = 'BoosterAI entrena a tus equipos para pensar y accionar utilizando la IA para potenciar creatividad + capacidad analítica, y lograr impacto real en el negocio.',
+  paragraph = 'No se trata solo de incorporar tecnología: se trata de cómo y dónde la usamos. Las organizaciones que están logrando resultados extraordinarios con IA (más crecimiento, más rentabilidad, más impacto) tienen algo en común: invierten en sus personas para usar IA de forma estratégica, no rutinaria.',
+  highlight = 'EFICIENCIA = IMPACTO EN P&L',
+} = Astro.props
+---
+
+<section class="pt-0 pb-12">
+  <Container class="!max-w-[960px]">
+    <div data-reveal class="grid overflow-hidden rounded-lg bg-gray-light xl:grid-cols-[520px_400px] xl:justify-center">
+      <div class="flex flex-col justify-center p-12 xl:h-[463px]">
+        <p class="text-[18px] font-extrabold leading-[1.6] text-content-primary">{bold}</p>
+        <p class="mt-4 text-[16px] leading-[1.8] text-content-secondary" style="font-family: 'Inter', sans-serif; font-weight: 400;">{paragraph}</p>
+        <p class="mt-6 bg-clip-text text-[24px] font-black leading-[1.3] text-transparent" style="background-image: linear-gradient(to right, #B636FF 0%, #6D00FF 50%, #00B2FF 100%);">{highlight}</p>
+      </div>
+
+      <Image src={robotImg} alt="" aria-hidden="true" widths={[400, 800, 960]} sizes="(min-width: 1280px) 400px, 100vw" class="h-[463px] w-full object-cover xl:w-[400px]" />
+    </div>
+  </Container>
+</section>

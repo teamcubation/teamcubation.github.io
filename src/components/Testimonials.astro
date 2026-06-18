@@ -1,0 +1,70 @@
+---
+import Container from './Container.astro'
+
+interface Testimonial {
+  quote: string
+  name: string
+  company: string
+  avatar?: string
+}
+
+interface Props {
+  title?: string
+  testimonials?: Testimonial[]
+  lang?: string
+}
+
+const {
+  title = 'El valor de trabajar juntos, contado por nuestros clientes',
+  lang = 'es',
+  testimonials = [
+    {
+      quote: 'Teamcubation impulsa el crecimiento de personas sin experiencia en un mercado tan desafiante como IT',
+      name: 'Julieta Carreras',
+      company: 'Mercado Libre',
+    },
+    {
+      quote: 'Logramos hacer realidad nuestro plan de talento, creamos equipos potentes con resultados sorprendentes',
+      name: 'Norberto Santoro',
+      company: 'Banco Comafi',
+    },
+    {
+      quote: 'La propuesta de Teamcubation está muy alineada con lo que nosotros queremos y esperamos de un partner',
+      name: 'Pablo Cassina',
+      company: 'Mercado Libre',
+    },
+  ],
+} = Astro.props
+
+// Avatars are the same across languages (positional, by testimonial).
+const avatars = ['/juileta_carreras.png', '/norberto_santoro.png', '/pablo_cassina.png']
+
+const ratingLabel = { es: 'Calificación: 5 de 5 estrellas', en: 'Rating: 5 out of 5 stars', pt: 'Avaliação: 5 de 5 estrelas' }[lang] ?? 'Calificación: 5 de 5 estrellas'
+---
+
+<section class="py-20">
+  <Container class="!max-w-[1240px]">
+    <h2 class="text-center text-[24px] font-extrabold leading-[1.2] tracking-[-0.72px] text-content-primary">{title}</h2>
+
+    <div class="mt-12 grid gap-10 xl:grid-cols-3">
+      {testimonials.map((t, i) => (
+        <div class="flex flex-col items-center text-center">
+          <div role="img" aria-label={ratingLabel} class="text-[24px] leading-none tracking-[2px] text-primary">★★★★★</div>
+
+          <p class="mt-5 max-w-[320px] text-[16px] italic tracking-[0px] text-content-secondary" style="font-family: 'Inter', sans-serif; font-weight: 500;">{t.quote}</p>
+
+          <div class="mt-6">
+            {(t.avatar || avatars[i]) ? (
+              <img src={t.avatar || avatars[i]} alt={t.name} class="h-10 w-10 rounded-full object-cover" />
+            ) : (
+              <div class="h-10 w-10 rounded-full bg-border-main"></div>
+            )}
+          </div>
+
+          <p class="mt-3 text-[16px] font-extrabold text-content-primary">{t.name}</p>
+          <p class="text-[15px] text-content-secondary">{t.company}</p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

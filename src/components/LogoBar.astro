@@ -1,0 +1,141 @@
+---
+import Container from './Container.astro'
+
+interface Props {
+  label?: string
+}
+
+const { label = 'Empresas en las que desarrollamos experiencia' } = Astro.props
+
+type Logo = { name: string; src: string; maxH?: string; class?: string }
+
+const row1: Logo[] = [
+  { name: 'Mercado Libre', src: '/logos/ml_logo.png' },
+  { name: 'Accenture', src: '/logos/accenture_logo.svg' },
+  { name: 'Comafi', src: '/logos/comafi_logo.png', maxH: '23px' },
+  { name: 'HP', src: '/logos/hp_logo.png', maxH: '40px', class: '!w-10 object-contain' },
+  { name: 'Swiss Medical', src: '/logos/swiss_logo.png' },
+  { name: 'Macro', src: '/logos/macro_logo.png', maxH: '23px' },
+  { name: 'Arcor', src: '/logos/arcor_logo.png' },
+  { name: 'TCA', src: '/logos/tca_logo.png' },
+  { name: 'Geneia', src: '/logos/geneia_logo.svg' },
+]
+
+const row2: Logo[] = [
+  { name: 'Coca-Cola', src: '/logos/cocacola_logo.png', class: 'brightness-[0.6]' },
+  { name: 'Appa', src: '/logos/appa_logo.png' },
+  { name: 'Visa', src: '/logos/visa_logo.png' },
+  { name: 'Payway', src: '/logos/payway_logo.png' },
+  { name: 'Advanta', src: '/logos/advanta_logo.png' },
+  { name: 'Raizen', src: '/logos/raizen_logo.png' },
+  { name: 'Clear', src: '/logos/clear_logo 1.png' },
+  { name: 'Dagma', src: '/logos/header_logo.png' },
+  { name: 'Natura', src: '/logos/natura_logo.png' },
+  { name: 'Vista', src: '/logos/vista.png' },
+]
+---
+
+<section class="pt-8 xl:pt-16 pb-10">
+  <Container class="logo-bar">
+    <p class="mb-8 text-center text-[18px] font-extrabold leading-[1.3] tracking-[-0.54px] text-content-primary">{label}</p>
+    <div class="logo-carousel">
+      <div class="logo-row">
+        <div class="logo-track logo-track--ltr">
+          {row1.map(({ name, src, maxH, class: cls }) => (
+            <img src={src} alt={name} class:list={['w-auto grayscale', cls]} style={`max-height: ${maxH || '33px'};`} loading="lazy" />
+          ))}
+          {row1.map(({ name, src, maxH, class: cls }) => (
+            <img src={src} alt={name} aria-hidden="true" class:list={['logo-dup w-auto grayscale', cls]} style={`max-height: ${maxH || '33px'};`} loading="lazy" />
+          ))}
+        </div>
+      </div>
+      <div class="logo-row pb-10">
+        <div class="logo-track logo-track--rtl">
+          {row2.map(({ name, src, maxH, class: cls }) => (
+            <img src={src} alt={name} class:list={['w-auto grayscale', cls]} style={`max-height: ${maxH || '33px'};`} loading="lazy" />
+          ))}
+          {row2.map(({ name, src, maxH, class: cls }) => (
+            <img src={src} alt={name} aria-hidden="true" class:list={['logo-dup w-auto grayscale', cls]} style={`max-height: ${maxH || '33px'};`} loading="lazy" />
+          ))}
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  :global(.logo-bar) {
+    background-image: url('/bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .logo-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .logo-row {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .logo-track {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    gap: 40px;
+  }
+
+  /* Desktop: estático, todas las imágenes entran en las dos filas */
+  @media (min-width: 1350px) {
+    .logo-track {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .logo-dup {
+      display: none;
+    }
+  }
+
+  /* < 1350px: se activa el carrusel en ambas filas */
+  @media (max-width: 1349.98px) {
+    :global(.logo-bar) {
+      padding-inline: 0 !important;
+    }
+
+    .logo-track {
+      width: max-content;
+    }
+
+    .logo-track--rtl {
+      animation: scroll-rtl 35s linear infinite;
+    }
+
+    .logo-track--ltr {
+      animation: scroll-ltr 35s linear infinite;
+    }
+
+    @keyframes scroll-rtl {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes scroll-ltr {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+</style>

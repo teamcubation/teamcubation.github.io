@@ -1,0 +1,48 @@
+---
+import Container from './Container.astro'
+import TeamSlider from './TeamSlider.astro'
+
+interface Props {
+  title?: string
+  subtitle?: string
+  descriptions?: string[]
+  linkedinLabel?: string
+}
+
+const {
+  title = 'Nuestro Equipo',
+  subtitle = 'Somos un equipo apasionado por el desarrollo humano a través de la tecnología. Nos dedicamos a acelerar y medir el desarrollo de habilidades tech de tus colaboradores, mientras contribuyen al crecimiento de tu empresa.',
+  descriptions = [
+    'Finanzas y gestión para que los proyectos escalen con bases sólidas.',
+    'Acelerando el talento en tecnología de América Latina. Tech Entrepreneur.',
+    'Emprendedor apasionado por las personas, la enseñanza y la tecnología.',
+    'Emprendedor tech. Escalando la productividad del talento con desarrollo de software.',
+    'Hacemos crecer tu negocio armando y desarrollando los mejores equipos.',
+    'Transformando talento junior en desarrolladores de clase mundial a través de la tecnología.',
+  ],
+  linkedinLabel = 'LinkedIn',
+} = Astro.props
+
+// People are the same across languages; only the description is translated.
+const people = [
+  { name: 'Tomás Muñoz', role: 'Head of Finance', avatar: '/equipo/toto.avif', linkedin: 'https://www.linkedin.com/in/tomasmunoz/' },
+  { name: 'Mariano Wechsler', role: 'CEO', avatar: '/equipo/mariano.avif', linkedin: 'https://www.linkedin.com/in/marianowechsler/' },
+  { name: 'Diego Jolodenco', role: 'COO', avatar: '/equipo/jolo.avif', linkedin: 'https://www.linkedin.com/in/diegojolodenco/' },
+  { name: 'Agustín Pina', role: 'Head of Training', avatar: '/equipo/pina.avif', linkedin: 'https://www.linkedin.com/in/agustin-pina/' },
+  { name: 'Florencia Díaz', role: 'Head of People', avatar: '/equipo/flor.avif', linkedin: 'https://www.linkedin.com/in/mariaflorenciadiaz/' },
+  { name: 'Jonathan Tapicer', role: 'CTO', avatar: '/equipo/tapicer.avif', linkedin: 'https://www.linkedin.com/in/tapicer/' },
+]
+
+const members = people.map((p, i) => ({ ...p, description: descriptions[i] }))
+---
+
+<section id="equipo" class="py-12">
+  <Container>
+    <h2 class="text-center text-[32px] font-extrabold leading-none tracking-[-0.96px] text-content-primary">{title}</h2>
+    <p class="mx-auto mt-6 max-w-[700px] text-center text-[16px] leading-[1.5] tracking-[0.16px] text-content-secondary" style="font-family: 'Inter', sans-serif; font-weight: 400;">{subtitle}</p>
+
+    <div class="mt-12 -mx-5 xl:mx-0">
+      <TeamSlider members={members} linkedinLabel={linkedinLabel} />
+    </div>
+  </Container>
+</section>

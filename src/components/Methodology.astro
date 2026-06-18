@@ -1,0 +1,30 @@
+---
+import Container from './Container.astro'
+
+interface Props {
+  title?: string
+  items?: string[]
+}
+
+const {
+  title = 'Nuestra Metodología',
+  items = [
+    'Conformamos equipos de trabajo con tus potenciales colaboradores liderados por nuestros Seniors dedicados.',
+    'Estos equipos trabajan y aprenden: desarrollan para tu empresa con tus tecnologías y metodologías.',
+    'Medimos la evolución de cada colaborador a través de nuestra plataforma Teamboarding, que permite personalizar su proceso de adquisición de experiencia.',
+    'Al final del proceso recibes nuevos proyectos de software implementados y la posibilidad de incorporar a los nuevos talentos que participaron del desarrollo.',
+  ],
+} = Astro.props
+---
+
+<section class="pt-16 pb-2">
+  <Container class="!max-w-[960px]">
+    <h2 data-reveal class="text-center text-[32px] font-extrabold leading-none tracking-[-0.96px] text-content-primary">{title}</h2>
+
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {items.map((text) => (
+        <div data-reveal class="rounded-lg bg-gray-light p-6 text-[14px] leading-[1.5] text-content-primary" style="font-family: 'Inter', sans-serif; font-weight: 400;">{text}</div>
+      ))}
+    </div>
+  </Container>
+</section>

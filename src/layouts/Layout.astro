@@ -1,0 +1,144 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description: string
+  lang?: string
+  canonicalUrl?: string
+  ogImage?: string
+  alternateLanguages?: { lang: string; href: string }[]
+}
+
+const {
+  title,
+  description,
+  lang = 'es',
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  alternateLanguages = [],
+} = Astro.props
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || ''
+const canonical = canonicalUrl || Astro.url.href
+
+const localeMap: Record<string, string> = { es: 'es_ES', en: 'en_US', pt: 'pt_BR' }
+const ogLocale = localeMap[lang] || 'es_ES'
+const altLocales = alternateLanguages
+  .filter((a) => a.lang !== lang)
+  .map((a) => localeMap[a.lang])
+  .filter(Boolean)
+const defaultHref = alternateLanguages.find((a) => a.lang === 'es')?.href
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PS65VB9');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Apollo -->
+    <script is:inline>
+      function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+      o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+      o.onload=function(){window.trackingFunctions.onLoad({appId:"669817d6d1af0c01b288be3b"})},
+      document.head.appendChild(o)}initApollo();
+    </script>
+    <!-- End Apollo -->
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Alternate languages -->
+    {alternateLanguages.map(({ lang, href }) => (
+      <link rel="alternate" hreflang={lang} href={href} />
+    ))}
+    {defaultHref && <link rel="alternate" hreflang="x-default" href={defaultHref} />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Teamcubation" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:locale" content={ogLocale} />
+    {altLocales.map((loc) => (
+      <meta property="og:locale:alternate" content={loc} />
+    ))}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+    <meta name="twitter:image:alt" content={title} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" /></noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Head slot for page-specific tags -->
+    <slot name="head" />
+  </head>
+  <body class="font-sans text-[#1d1b1b] antialiased">
+    <script is:inline>
+      (function() {
+        if (window.location.pathname !== '/') return
+        if (sessionStorage.getItem('lang-redirected')) return
+        var lang = (navigator.language || '').toLowerCase()
+        var target = null
+        if (lang.startsWith('en')) target = '/en'
+        else if (lang.startsWith('pt')) target = '/pt'
+        if (target) {
+          sessionStorage.setItem('lang-redirected', '1')
+          window.location.replace(target)
+        }
+      })()
+    </script>
+    <slot />
+
+    <script>
+      function setupReveal() {
+        const els = document.querySelectorAll('[data-reveal]:not(.is-visible)')
+        if (!els.length) return
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible')
+              io.unobserve(entry.target)
+            }
+          })
+        }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' })
+        els.forEach((el) => io.observe(el))
+      }
+
+      setupReveal()
+      document.addEventListener('astro:after-swap', setupReveal)
+    </script>
+  </body>
+</html>
