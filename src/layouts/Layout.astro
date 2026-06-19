@@ -109,6 +109,10 @@ const defaultHref = alternateLanguages.find((a) => a.lang === 'es')?.href
     <script is:inline>
       (function() {
         if (window.location.pathname !== '/') return
+        // Don't redirect search engine crawlers — let them index every
+        // language version (/, /en, /pt) via the hreflang annotations.
+        var ua = navigator.userAgent || ''
+        if (/bot|crawl|spider|slurp|mediapartners|baidu|yandex|sogou|duckduckgo|applebot|bingpreview|facebookexternalhit|ia_archiver/i.test(ua)) return
         if (sessionStorage.getItem('lang-redirected')) return
         var lang = (navigator.language || '').toLowerCase()
         var target = null

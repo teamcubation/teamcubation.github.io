@@ -7,6 +7,14 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://teamcubation.com',
   outDir: './docs',
+  redirects: {
+    '/incubation-en': '/en/incubation',
+    '/incubation-pt': '/pt/incubation',
+    '/booster-ai-en': '/en/booster-ai',
+    '/booster-ai-pt': '/pt/booster-ai',
+    '/contact': '/en/contact',
+    '/contato': '/pt/contato',
+  },
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]

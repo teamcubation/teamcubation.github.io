@@ -14,6 +14,8 @@ const currentYear = new Date().getFullYear()
 const newTabLabel = { es: ' (abre en nueva pestaña)', en: ' (opens in a new tab)', pt: ' (abre em nova aba)' }[lang] ?? ' (abre en nueva pestaña)'
 const followLabel = { es: 'Seguinos', en: 'Follow us', pt: 'Siga-nos' }[lang] ?? 'Seguinos'
 const rightsLabel = { es: 'Todos los derechos reservados', en: 'All rights reserved', pt: 'Todos os direitos reservados' }[lang] ?? 'Todos los derechos reservados'
+const termsLabel = { es: 'Términos y Condiciones', en: 'Terms & Conditions', pt: 'Termos e Condições' }[lang] ?? 'Términos y Condiciones'
+const privacyLabel = { es: 'Política de Privacidad', en: 'Privacy Policy', pt: 'Política de Privacidade' }[lang] ?? 'Política de Privacidad'
 ---
 
 <footer class="py-20 ">
@@ -24,6 +26,10 @@ const rightsLabel = { es: 'Todos los derechos reservados', en: 'All rights reser
         <img src="/logo.svg" alt="Teamcubation" width="176" height="24" />
       </a>
       <p class="text-[12px] text-[#5f5e5e]">{currentYear}. {rightsLabel}.</p>
+      <nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 md:justify-start">
+        <a href="/terms" class="text-[12px] text-[#5f5e5e] underline decoration-[#C8C6C5] underline-offset-2 transition hover:text-content-primary">{termsLabel}</a>
+        <a href="/privacy-policy" class="text-[12px] text-[#5f5e5e] underline decoration-[#C8C6C5] underline-offset-2 transition hover:text-content-primary">{privacyLabel}</a>
+      </nav>
     </div>
 
     <!-- Social -->
