@@ -1,0 +1,25 @@
+# Teamcubation
+
+> Teamcubation is a "Software + Team Factory" that builds software for companies while developing their people's technology skills through on-the-job training on real projects. Its model — "Experience Developers" — lets organizations create new tech talent and strengthen their existing teams at the same time.
+
+Every Teamcubation engagement is based on real projects with expert mentorship, so a company gets working software and measurable growth in its collaborators' technical skills simultaneously. Teamcubation also offers Teamboarding, a platform to measure and improve experience-acquisition (onboarding) processes across an organization. The site is published in three languages — Spanish (default, at the root), English (`/en/`), and Portuguese (`/pt/`). Clients include Mercado Libre, Banco Comafi, and others.
+
+## Main pages
+- [Home (English)](https://teamcubation.com/en/): Overview of Teamcubation's "Experience Developers" model and its on-the-job services, with client success stories and testimonials.
+- [IncubatION](https://teamcubation.com/en/incubation/): The first Software + Team Factory. Teamcubation builds the software a client needs today while incubating their future developers — delivering both turnkey technology projects and professionals trained and ready to join the company without friction. Each collaborator's progress is tracked with the Teamboarding platform.
+- [BoosterAI](https://teamcubation.com/en/booster-ai/): An agile, human, on-the-job program that helps any team implement AI in about 30 days. Guided by mentors, teams in Sales, Finance, Legal, Marketing, HR, and Operations learn to automate repetitive processes with AI agents and RPA tools (n8n, Power Automate, agents), freeing hours to focus on the business — "any team in your company could be an IT team."
+- [Contact (English)](https://teamcubation.com/en/contact/): Get in touch to learn how Teamcubation's services can work for your team, or schedule a meeting.
+
+## Other languages
+- [Spanish — Home](https://teamcubation.com/): Default language version ("Desarrolladores de Experiencia").
+- [Spanish — IncubatION](https://teamcubation.com/incubation/)
+- [Spanish — BoosterAI](https://teamcubation.com/booster-ai/)
+- [Spanish — Contact](https://teamcubation.com/contacto/)
+- [Portuguese — Home](https://teamcubation.com/pt/): Portuguese version ("Desenvolvedores de Experiência").
+- [Portuguese — IncubatION](https://teamcubation.com/pt/incubation/)
+- [Portuguese — BoosterAI](https://teamcubation.com/pt/booster-ai/)
+- [Portuguese — Contact](https://teamcubation.com/pt/contato/)
+
+## Optional
+- [Privacy Policy](https://teamcubation.com/privacy-policy/): Privacy and cookie policy for Teamcubation's website and services.
+- [Terms & Conditions](https://teamcubation.com/terms/): General terms and conditions for using Teamcubation's products and services.
