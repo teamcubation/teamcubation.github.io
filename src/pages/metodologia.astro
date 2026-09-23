@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MetodologiaBody from "../components/pages/MetodologiaBody.astro";
+import { metodologiaContent } from "../content/metodologia";
+import { breadcrumbSchema } from "../lib/seo";
+
+const c = metodologiaContent.es;
+const translations = { es: "/metodologia", en: "/en/methodology", pt: "/pt/metodologia" };
+---
+
+<Layout
+  title={c.seoTitle}
+  description={c.seoDesc}
+  lang="es"
+  translations={translations}
+  schema={[breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Metodología", path: "/metodologia" }])]}
+>
+  <MetodologiaBody lang="es" />
+</Layout>

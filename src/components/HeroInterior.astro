@@ -1,0 +1,105 @@
+---
+// Hero de páginas interiores — kicker (o breadcrumb) + H1 + bajada + CTA + ilustración.
+// Reutilizable en Metodología, Servicios, programas, Teamboarding, Casos, Nosotros.
+import { Image } from "astro:assets";
+import Cta from "./Cta.astro";
+import Breadcrumb from "./Breadcrumb.astro";
+import { defaultLocale, type Locale } from "../i18n/config";
+
+interface Props {
+  kicker?: string;
+  breadcrumb?: { label: string; href?: string }[];
+  titulo: string; // HTML (permite <span class="resaltado">)
+  bajada: string;
+  imagen: ImageMetadata;
+  imagenAlt: string;
+  maxImg?: number;
+  cols?: string;
+  padTop?: number;
+  padBottom?: number;
+  cta?: boolean;
+  tituloSize?: string;
+  tituloMaxWidth?: string;
+  lang?: Locale;
+}
+
+const {
+  kicker,
+  breadcrumb,
+  titulo,
+  bajada,
+  imagen,
+  imagenAlt,
+  maxImg = 420,
+  cols = "1.1fr 0.9fr",
+  padTop = 72,
+  padBottom = 88,
+  cta = true,
+  tituloSize = "clamp(36px, 4.2vw, 54px)",
+  tituloMaxWidth,
+  lang = defaultLocale,
+} = Astro.props;
+---
+
+<section class="hero-int" style={`padding-block:${padTop}px ${padBottom}px`}>
+  <div class="contenedor hero-int__grid" style={`--cols:${cols}`}>
+    <div class="hero-int__texto">
+      {breadcrumb && <Breadcrumb items={breadcrumb} />}
+      {kicker && <p class="hero-int__kicker">{kicker}</p>}
+      <h1 class="hero-int__titulo" style={`font-size:${tituloSize}${tituloMaxWidth ? `;max-width:${tituloMaxWidth}` : ""}`} set:html={titulo} />
+      <p class="hero-int__bajada">{bajada}</p>
+      {cta && (
+        <div class="hero-int__cta">
+          <Cta lang={lang} />
+        </div>
+      )}
+    </div>
+    <div class="hero-int__media">
+      <Image src={imagen} alt={imagenAlt} style={`max-height:${maxImg}px`} loading="eager" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-int__grid {
+    display: grid;
+    grid-template-columns: var(--cols);
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-int__kicker {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: clamp(17px, 1.5vw, 25px);
+    line-height: 1.2;
+    color: var(--color-coral);
+    margin: 0 0 14px;
+  }
+  .hero-int__titulo {
+    font-size: clamp(36px, 4.2vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
+    margin: 0;
+  }
+  .hero-int__bajada {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    max-width: 64ch;
+    margin: 24px 0 0;
+  }
+  .hero-int__cta { margin-top: 32px; }
+  .hero-int__media :global(img) {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 1100px) {
+    .hero-int__grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServiciosBody from "../components/pages/ServiciosBody.astro";
+import { serviciosContent } from "../content/servicios";
+import { servicios, ORDEN } from "../data/servicios";
+import { breadcrumbSchema, itemListSchema } from "../lib/seo";
+
+const c = serviciosContent.es;
+const translations = { es: "/servicios", en: "/en/services", pt: "/pt/servicos" };
+const schema = [
+  breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Servicios", path: "/servicios" }]),
+  itemListSchema(ORDEN.map((k) => servicios[k])),
+];
+---
+
+<Layout title={c.seoTitle} description={c.seoDesc} lang="es" translations={translations} schema={schema}>
+  <ServiciosBody lang="es" />
+</Layout>

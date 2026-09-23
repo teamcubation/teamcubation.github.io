@@ -1,63 +1,91 @@
 ---
-import Container from './Container.astro'
+import { rutas, ruta, rutaPrograma } from "../i18n/routes";
+import { servicios, ORDEN } from "../data/servicios";
+import { ui, email } from "../i18n/ui";
+import { defaultLocale, type Locale } from "../i18n/config";
 
 interface Props {
-  lang?: string
+  lang?: Locale;
 }
+const { lang = defaultLocale } = Astro.props;
 
-const { lang = 'es' } = Astro.props
-
-const langPrefix = (code: string) => code === 'es' ? '' : `/${code}`
-
-const currentYear = new Date().getFullYear()
-
-const newTabLabel = { es: ' (abre en nueva pestaña)', en: ' (opens in a new tab)', pt: ' (abre em nova aba)' }[lang] ?? ' (abre en nueva pestaña)'
-const followLabel = { es: 'Seguinos', en: 'Follow us', pt: 'Siga-nos' }[lang] ?? 'Seguinos'
-const rightsLabel = { es: 'Todos los derechos reservados', en: 'All rights reserved', pt: 'Todos os direitos reservados' }[lang] ?? 'Todos los derechos reservados'
-const termsLabel = { es: 'Términos y Condiciones', en: 'Terms & Conditions', pt: 'Termos e Condições' }[lang] ?? 'Términos y Condiciones'
-const privacyLabel = { es: 'Política de Privacidad', en: 'Privacy Policy', pt: 'Política de Privacidade' }[lang] ?? 'Política de Privacidad'
+const t = ui[lang];
+const conoce = ["metodologia", "servicios", "teamboarding", "casos", "nosotros", "contacto"].map(
+  (k) => rutas[k][lang]
+);
+const programas = ORDEN.map((k) => ({
+  label: servicios[k].nombre,
+  href: rutaPrograma(servicios[k].slug, lang),
+}));
 ---
 
-<footer class="py-20 ">
-  <Container class="!max-w-[1240px] flex flex-col items-center justify-between gap-6 md:flex-row">
-    <!-- Logo + copyright -->
-    <div class="flex flex-col items-center gap-5 md:items-start">
-      <a href={langPrefix(lang) || '/'} aria-label="Teamcubation">
-        <img src="/logo.svg" alt="Teamcubation" width="176" height="24" />
+<footer class="pie">
+  <div class="pie__grid">
+    <div class="pie__marca">
+      <a href={ruta("home", lang)} aria-label="Teamcubation" class="pie__logo">
+        <img src="/brand/logo-horizontal-color.svg" alt="Teamcubation" width="177" height="39" decoding="async" />
       </a>
-      <p class="text-[12px] text-[#5f5e5e]">{currentYear}. {rightsLabel}.</p>
-      <nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 md:justify-start">
-        <a href="/terms" class="text-[12px] text-[#5f5e5e] underline decoration-[#C8C6C5] underline-offset-2 transition hover:text-content-primary">{termsLabel}</a>
-        <a href="/privacy-policy" class="text-[12px] text-[#5f5e5e] underline decoration-[#C8C6C5] underline-offset-2 transition hover:text-content-primary">{privacyLabel}</a>
-      </nav>
+      <p class="pie__claim">{t.footerClaim}</p>
+      <p class="pie__desc">{t.footerDesc}</p>
+      <a class="pie__email" href={`mailto:${email}`}>{email}</a>
     </div>
 
-    <!-- Social -->
-    <div class="flex flex-col items-center gap-3 md:items-start">
-      <span class="text-[10px] font-extrabold uppercase tracking-[0.5px] text-content-light">{followLabel}</span>
-      <div class="flex items-center gap-3">
-      <a
-        href="https://www.linkedin.com/company/teamcubation"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`LinkedIn${newTabLabel}`}
-        class="flex items-center gap-2 rounded-[17px_24px_0px_17px] bg-[#0a66c2] h-[34px] px-4 py-0 text-sm font-semibold leading-[1.5] tracking-[-0.28px] text-white transition hover:opacity-90"
-      >
-        <img src="/IN.png" alt="" aria-hidden="true" class="h-4 w-4" />
-        LinkedIn
-      </a>
-      <a
-        href="https://www.instagram.com/teamcubation_"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Instagram${newTabLabel}`}
-        class="flex items-center gap-2 rounded-[24px_17px_17px_0px] h-[34px] px-4 py-0 text-sm font-semibold leading-[1.5] tracking-[-0.28px] text-white transition hover:opacity-90"
-        style="background-image: url('/ig_bg.svg'); background-size: 100% 100%; background-repeat: no-repeat;"
-      >
-        <img src="/IG.png" alt="" aria-hidden="true" class="h-4 w-4" />
-        Instagram
-      </a>
+    <nav class="pie__nav" aria-label={t.footerAria}>
+      <div class="pie__grupo">
+        <h2 class="pie__titulo">{t.footerConoce}</h2>
+        <ul>
+          {conoce.map((i) => (
+            <li><a href={i.path}>{i.label}</a></li>
+          ))}
+        </ul>
       </div>
-    </div>
-  </Container>
+      <div class="pie__grupo">
+        <h2 class="pie__titulo">{t.footerProgramas}</h2>
+        <ul>
+          {programas.map((i) => (
+            <li><a href={i.href}>{i.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="pie__bottom">
+    <p class="pie__copy">{t.footerCopy}</p>
+    <nav class="pie__legal" aria-label={t.legalTerminos}>
+      <a href="/terms">{t.legalTerminos}</a>
+      <a href="/privacy-policy">{t.legalPrivacidad}</a>
+    </nav>
+  </div>
 </footer>
+
+<style>
+  .pie { background: var(--color-gris-claro); padding: 64px; }
+  .pie__grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; max-width: 1200px; margin: 0 auto; }
+  .pie__logo img { height: 39px; width: auto; display: block; }
+  .pie__claim { font-family: var(--font-display); font-weight: 650; font-size: 22px; line-height: 1.15; letter-spacing: -0.02em; margin: 20px 0 0; }
+  .pie__desc { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-secundario); line-height: 1.5; margin: 12px 0 0; max-width: 42ch; }
+  .pie__email { display: inline-block; margin-top: 16px; font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-secundario); text-decoration: underline; text-decoration-thickness: 1px; }
+  .pie__nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .pie__titulo { font-family: var(--font-body); font-weight: var(--peso-cuerpo-bold); font-size: var(--fs-secundario); margin: 0 0 12px; }
+  .pie__grupo ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .pie__grupo a { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-secundario); color: var(--color-tinta); text-decoration: none; }
+  .pie__grupo a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .pie__bottom { max-width: 1200px; margin: 40px auto 0; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 32px; }
+  .pie__copy { margin: 0; color: var(--color-gris-texto); font-size: var(--fs-secundario); }
+  .pie__legal { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .pie__legal a { color: var(--color-gris-texto); font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-secundario); text-decoration: none; }
+  .pie__legal a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+
+  @media (max-width: 1100px) {
+    .pie { padding: 48px 40px; }
+    .pie__grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 720px) {
+    .pie { padding-left: 24px; padding-right: 24px; }
+  }
+  @media (max-width: 480px) {
+    .pie { padding: 48px 24px; }
+    .pie__nav { grid-template-columns: 1fr; }
+  }
+</style>

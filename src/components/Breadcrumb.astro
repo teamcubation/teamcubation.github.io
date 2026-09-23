@@ -1,0 +1,54 @@
+---
+// Breadcrumb de interiores. El último ítem es la página actual (sin enlace).
+interface Props {
+  items: { label: string; href?: string }[];
+}
+const { items } = Astro.props;
+---
+
+<nav class="miga" aria-label="Migas de pan">
+  <ol>
+    {items.map((it, i) => (
+      <li>
+        {it.href && i < items.length - 1 ? (
+          <a href={it.href}>{it.label}</a>
+        ) : (
+          <span aria-current="page">{it.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .miga {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-gris-texto);
+  }
+  .miga ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .miga li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .miga li:not(:last-child)::after {
+    content: "/";
+    color: var(--color-gris-texto);
+  }
+  .miga a {
+    color: var(--color-gris-texto);
+    text-decoration: none;
+  }
+  .miga a:hover { text-decoration: underline; }
+  .miga [aria-current="page"] { color: var(--color-tinta); }
+</style>

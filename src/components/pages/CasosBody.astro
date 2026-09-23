@@ -1,0 +1,137 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Cta from "../Cta.astro";
+import CierreCoral from "../CierreCoral.astro";
+import equipoReunion from "../../assets/fotos/equipo-reunion-mate.png";
+import { casosContent, clientesGrilla } from "../../content/casos";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = casosContent[lang];
+
+const logos = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/clientes/grilla/*.png",
+  { eager: true },
+);
+const logoDe = (key: string) => logos[`../../assets/clientes/grilla/${key}.png`].default;
+---
+
+<main id="contenido">
+  <!-- Hero -->
+  <section class="hero-casos">
+    <div class="contenedor hero-casos__grid">
+      <div>
+        <p class="kicker">{c.kicker}</p>
+        <h1 class="hero-casos__h1">{c.heroH1}</h1>
+        <p class="hero-casos__bajada">{c.heroBajada}</p>
+        <div class="hero-casos__cta"><Cta lang={lang} /></div>
+      </div>
+      <div class="hero-casos__foto">
+        <Image src={equipoReunion} alt={c.heroImgAlt} loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Industrias + clientes -->
+  <section class="sec-b96">
+    <div class="contenedor">
+      <h2 class="h2-36 mb32">{c.industriasH2}</h2>
+      <div class="cards3">
+        {c.stats.map((s) => (
+          <div class:list={["stat", !s.num && "stat--texto"]}>
+            {s.num && <p class="stat__num">{s.num}</p>}
+            <p class="stat__lbl">{s.lbl}</p>
+          </div>
+        ))}
+      </div>
+      <h3 class="h3-28">{c.clientesH3}</h3>
+      <div class="logos-grilla">
+        {clientesGrilla.map((cl) => (
+          <div class="logo-card">
+            <Image src={logoDe(cl.logo)} alt={cl.alt} width={280} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Impacto -->
+  <section class="sec-b96">
+    <div class="contenedor">
+      <div class="angosto">
+        <h2 class="h2-36 mb20">{c.impactoH2}</h2>
+        <p class="destacado">{c.destacado}</p>
+        <p class="nota">{c.nota}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Punto de partida -->
+  <section class="sec-b96">
+    <div class="contenedor">
+      <div class="angosto">
+        <h2 class="h2-36 mb20">{c.partidaH2}</h2>
+        <p class="p21 mb24">{c.partidaP}</p>
+        <div class="links">
+          {c.links.map((l) => <a class="enlace" href={l.href}>{l.label}</a>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CierreCoral
+    titulo="Data Driven On-the-job Tech Training"
+    texto={c.cierreTexto}
+    lang={lang}
+  />
+</main>
+
+<style>
+  .h2-36 { font-size: 36px; line-height: 1.12; margin: 0; }
+  .h3-28 { font-size: 28px; line-height: 1.12; margin: 48px 0 20px; }
+  .mb32 { margin-bottom: 32px; }
+  .mb24 { margin-bottom: 24px; }
+  .mb20 { margin-bottom: 20px; }
+  .p21 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
+
+  .sec-b96 { padding-block: 0 96px; }
+  .angosto { max-width: 900px; margin-inline: auto; }
+
+  /* Hero */
+  .hero-casos { padding-block: 72px 64px; }
+  .hero-casos__grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+  .hero-casos__h1 { font-size: clamp(36px, 4.2vw, 54px); line-height: 1.1; letter-spacing: -0.02em; max-width: 20ch; margin: 0; }
+  .hero-casos__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 24px 0 0; }
+  .hero-casos__cta { margin-top: 32px; }
+  .hero-casos__foto { aspect-ratio: 16 / 10; border-radius: var(--radius-tarjeta); overflow: hidden; }
+  .hero-casos__foto :global(img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Stats */
+  .cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .stat { background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 32px; }
+  .stat--texto { display: flex; align-items: center; }
+  .stat__num { font-family: var(--font-display); font-weight: 650; font-size: 52px; line-height: 1; letter-spacing: -0.02em; margin: 0; }
+  .stat__lbl { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 8px 0 0; }
+  .stat--texto .stat__lbl { margin: 0; }
+
+  .logos-grilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; align-items: stretch; }
+  .logo-card { min-height: 104px; background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 24px; display: flex; align-items: center; justify-content: center; }
+  .logo-card :global(img) { width: 100%; max-width: 140px; height: 44px; object-fit: contain; display: block; mix-blend-mode: multiply; }
+
+  /* Impacto */
+  .destacado { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.25; margin: 0 0 20px; }
+  .nota { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; color: var(--color-gris-texto); margin: 0; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+  @media (max-width: 1100px) {
+    .hero-casos__grid { grid-template-columns: 1fr; gap: 40px; }
+    .cards3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .cards3 { grid-template-columns: 1fr; }
+    .sec-b96 { padding-bottom: 56px; }
+  }
+</style>

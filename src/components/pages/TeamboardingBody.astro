@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+import Cta from "../Cta.astro";
+import Faq from "../Faq.astro";
+import CierreCoral from "../CierreCoral.astro";
+import mural from "../../assets/ilustraciones/mural-frontal-placas-figuras.png";
+import disco from "../../assets/ilustraciones/macro-empuje-disco-ambar.png";
+import { teamboardingContent } from "../../content/teamboarding";
+import { ruta } from "../../i18n/routes";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = teamboardingContent[lang];
+
+const metodologiaHref = ruta("metodologia", lang);
+const serviciosHref = ruta("servicios", lang);
+---
+
+<main id="contenido">
+  <!-- Hero -->
+  <section class="hero-tb">
+    <div class="contenedor hero-tb__grid">
+      <div>
+        <p class="kicker">{c.kicker}</p>
+        <h1 class="hero-tb__h1">{c.heroH1}</h1>
+        <p class="hero-tb__sub">{c.heroSub}</p>
+        <p class="hero-tb__bajada">{c.heroBajada}</p>
+        <p class="hero-tb__nota">{c.heroNota}</p>
+        <div class="chips">
+          {c.chips.map((ch) => <span class="chip">{ch}</span>)}
+        </div>
+        <div class="hero-tb__cta"><Cta lang={lang} /></div>
+      </div>
+      <div class="hero-tb__media">
+        <Image src={mural} alt={c.heroImgAlt} loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué registra (banda gris) -->
+  <section class="registra">
+    <div class="contenedor">
+      <h2 class="h2-36 mb32">{c.registraH2}</h2>
+      <div class="cards3">
+        {c.registra.map((card) => (
+          <article class="card-blanco">
+            <h3 class="card__titulo">{card.titulo}</h3>
+            <p class="card__p">{card.texto}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Información que sirve -->
+  <section class="sec">
+    <div class="contenedor info-grid">
+      <h2 class="h2-32">{c.infoH2}</h2>
+      <div class="info-lista">
+        {c.informacion.map((i) => (
+          <div class="info-row">
+            <h3 class="h3-24">{i.titulo}</h3>
+            <p class="p20">{i.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentoría humana + datos -->
+  <section class="sec sec--flush-b">
+    <div class="contenedor dos-col">
+      <div>
+        <h2 class="h2-32 mb20">{c.mentoriaH2}</h2>
+        <p class="p21 mb24">{c.mentoriaP}</p>
+        <div class="links">
+          <a class="enlace" href={metodologiaHref}>{c.linkMetodologia}</a>
+          <a class="enlace" href={serviciosHref}>{c.linkServicios}</a>
+        </div>
+      </div>
+      <div class="media360">
+        <Image src={disco} alt={c.discoImgAlt} loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec sec--flush-b2">
+    <div class="contenedor">
+      <h2 class="h2-32 mb32">{c.faqH2}</h2>
+      <Faq items={c.faqs} />
+    </div>
+  </section>
+
+  <CierreCoral
+    lang={lang}
+    enlaceExtra={{ label: c.cierreEnlaceLabel, href: "https://teamboarding.com" }}
+  />
+</main>
+
+<style>
+  .h2-36 { font-size: 36px; line-height: 1.12; margin: 0; }
+  .h2-32 { font-size: 32px; line-height: 1.12; margin: 0; }
+  .h3-24 { font-size: 24px; line-height: 1.15; margin: 0 0 8px; }
+  .mb32 { margin-bottom: 32px; }
+  .mb24 { margin-bottom: 24px; }
+  .mb20 { margin-bottom: 20px; }
+  .p20 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
+  .p21 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 62ch; margin: 0; }
+
+  .sec { padding-block: 96px; }
+  .sec--flush-b { padding-block: 0 112px; }
+  .sec--flush-b2 { padding-block: 0 96px; }
+
+  /* Hero */
+  .hero-tb { padding-block: 72px 88px; }
+  .hero-tb__grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 48px; align-items: center; }
+  .hero-tb__h1 { font-size: clamp(36px, 4.2vw, 56px); line-height: 1.1; letter-spacing: -0.02em; max-width: 20ch; margin: 0; }
+  .hero-tb__sub { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 1.2; color: var(--color-coral); margin: 18px 0 0; }
+  .hero-tb__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 60ch; margin: 18px 0 0; }
+  .hero-tb__nota { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; color: var(--color-gris-texto); max-width: 60ch; margin: 16px 0 0; }
+  .hero-tb__cta { margin-top: 28px; }
+  .hero-tb__media :global(img) { width: 100%; height: auto; max-height: 420px; object-fit: contain; display: block; margin-inline: auto; }
+
+  .chips { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .chip { background: var(--color-gris-claro); border-radius: var(--radius-capsula); padding: 8px 18px; font-family: var(--font-display); font-weight: 500; font-size: 17px; }
+
+  /* Qué registra */
+  .registra { background: var(--color-gris-claro); padding-block: 88px; }
+  .cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .card-blanco { background: #fff; border-radius: var(--radius-tarjeta); padding: 24px; }
+  .card__titulo { font-size: 22px; line-height: 1.12; color: var(--color-coral); margin: 0; }
+  .card__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 12px 0 0; }
+
+  /* Información */
+  .info-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+  .info-lista { border-top: 1px solid var(--color-linea); }
+  .info-row { padding: 22px 0; border-bottom: 1px solid var(--color-linea); }
+
+  /* Mentoría */
+  .dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .links { display: flex; flex-wrap: wrap; gap: 20px; }
+  .media360 :global(img) { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; }
+
+  @media (max-width: 1100px) {
+    .sec { padding-block: 64px; }
+    .registra { padding-block: 64px; }
+    .hero-tb__grid,
+    .info-grid,
+    .dos-col { grid-template-columns: 1fr; gap: 40px; }
+    .cards3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .cards3 { grid-template-columns: 1fr; }
+    .sec--flush-b { padding-bottom: 56px; }
+    .sec--flush-b2 { padding-bottom: 56px; }
+  }
+</style>

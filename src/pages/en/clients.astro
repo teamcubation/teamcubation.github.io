@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CasosBody from "../../components/pages/CasosBody.astro";
+import { casosContent } from "../../content/casos";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const c = casosContent.en;
+const translations = { es: "/casos", en: "/en/clients", pt: "/pt/clientes" };
+---
+
+<Layout
+  title={c.seoTitle}
+  description={c.seoDesc}
+  lang="en"
+  translations={translations}
+  schema={[breadcrumbSchema([{ name: "Home", path: "/en/" }, { name: "Clients", path: "/en/clients" }])]}
+>
+  <CasosBody lang="en" />
+</Layout>

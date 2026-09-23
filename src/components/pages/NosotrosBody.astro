@@ -1,0 +1,151 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import CierreCoral from "../CierreCoral.astro";
+import equipoPlanta from "../../assets/fotos/equipo-planta-planos.png";
+import mentorUno from "../../assets/fotos/mentor-uno-a-uno.png";
+import { nosotrosContent } from "../../content/nosotros";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = nosotrosContent[lang];
+
+const equipoFotos = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/equipo/*.png",
+  { eager: true },
+);
+const fotoDe = (key: string) => equipoFotos[`../../assets/equipo/${key}.png`].default;
+---
+
+<main id="contenido">
+  <!-- Hero + definición -->
+  <section class="hero-nos">
+    <div class="contenedor">
+      <p class="kicker">{c.kicker}</p>
+      <h1 class="hero-nos__h1">{c.heroH1}</h1>
+      <p class="hero-nos__bajada">{c.heroBajada}</p>
+      <p class="hero-nos__marca">{c.heroMarca}</p>
+
+      <div class="dos-col dos-col--start">
+        <article>
+          <h2 class="h2-30">{c.defQ.h2}</h2>
+          {c.defQ.ps.map((p, i) => (
+            <p class:list={["p21", i === 0 && "mb16"]}>{p}</p>
+          ))}
+        </article>
+        <article>
+          <h2 class="h2-30">{c.conviccion.h2}</h2>
+          {c.conviccion.bloques.map((b, i) => (
+            <>
+              <h3 class="h3-22">{b.h3}</h3>
+              <p class:list={["p20", i === 0 && "mb16"]} set:html={b.pHtml} />
+            </>
+          ))}
+        </article>
+      </div>
+
+      <div class="foto-ancha foto-ancha--24-9">
+        <Image src={equipoPlanta} alt={c.heroImgAlt} loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Fundadores -->
+  <section class="sec">
+    <div class="contenedor">
+      <h2 class="h2-32 mb28">{c.fundadoresH2}</h2>
+      <div class="equipo-grid">
+        {c.fundadores.map((f) => (
+          <article class="equipo-card">
+            <div class="equipo-foto">
+              <Image src={fotoDe(f.foto)} alt={f.nombre} width={400} loading="lazy" />
+            </div>
+            <div class="equipo-info">
+              <h3 class="equipo-nombre">{f.nombre}</h3>
+              <p class="equipo-rol">{f.rol}</p>
+            </div>
+            <a class="equipo-link" href={f.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Criterio (banda gris) -->
+  <section class="banda-gris">
+    <div class="contenedor angosto">
+      <div class="foto-ancha foto-ancha--16-9 mb32">
+        <Image src={mentorUno} alt={c.criterioImgAlt} loading="lazy" />
+      </div>
+      <h2 class="h2-36 mb20" set:html={c.criterioH2Html} />
+      <p class="p22 mb16">{c.criterioP}</p>
+      <p class="p20 mb28">{c.criterioPaises}</p>
+      <div class="links">
+        {c.criterioLinks.map((l) => (
+          <a class="enlace" href={l.href}>{l.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CierreCoral lang={lang} />
+</main>
+
+<style>
+  .h2-30 { font-size: 30px; line-height: 1.12; margin: 0 0 14px; }
+  .h2-32 { font-size: 32px; line-height: 1.12; margin: 0; }
+  .h2-36 { font-size: 36px; line-height: 1.12; margin: 0; }
+  .h3-22 { font-size: 22px; line-height: 1.15; margin: 0 0 6px; }
+  .mb32 { margin-bottom: 32px; }
+  .mb28 { margin-bottom: 28px; }
+  .mb20 { margin-bottom: 20px; }
+  .mb16 { margin-bottom: 16px; }
+  .p20 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 0; }
+  .p21 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 0; }
+  .p22 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 64ch; margin: 0; }
+
+  .sec { padding-block: 96px; }
+  .angosto { max-width: 900px; }
+
+  /* Hero */
+  .hero-nos { padding-block: 72px 0; }
+  .hero-nos__h1 { font-size: clamp(36px, 4.2vw, 54px); line-height: 1.1; letter-spacing: -0.02em; max-width: 22ch; margin: 0 0 20px; }
+  .hero-nos__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 68ch; margin: 0 0 16px; }
+  .hero-nos__marca { font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.2; color: var(--color-coral); margin: 0 0 40px; }
+
+  .dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .dos-col--start { align-items: start; }
+
+  .foto-ancha { border-radius: var(--radius-tarjeta); overflow: hidden; }
+  .foto-ancha--24-9 { aspect-ratio: 24 / 9; margin-top: 48px; }
+  .foto-ancha--16-9 { aspect-ratio: 16 / 9; }
+  .foto-ancha :global(img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* Equipo */
+  .equipo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .equipo-card { height: 100%; background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .equipo-foto { width: 100%; aspect-ratio: 1 / 1; border-radius: 10px; overflow: hidden; background: #ffffff; }
+  .equipo-foto :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .equipo-info { display: flex; flex-direction: column; gap: 6px; }
+  .equipo-nombre { font-size: 22px; line-height: 1.15; font-weight: 650; color: var(--color-coral); margin: 0; }
+  .equipo-rol { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-tarjeta, 14px); line-height: 1.45; margin: 0; }
+  .equipo-link { margin-top: auto; font-family: var(--font-body); font-weight: 500; font-size: var(--fs-secundario, 15px); color: var(--color-tinta, inherit); text-decoration: none; }
+  .equipo-link:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+
+  /* Criterio */
+  .banda-gris { background: var(--color-gris-claro); padding-block: 88px; }
+  .links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+  @media (max-width: 1100px) {
+    .sec { padding-block: 64px; }
+    .banda-gris { padding-block: 64px; }
+    .dos-col { grid-template-columns: 1fr; gap: 40px; }
+    .foto-ancha--24-9 { aspect-ratio: 16 / 9; }
+    .equipo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 720px) {
+    .equipo-grid { grid-template-columns: 1fr; }
+  }
+</style>

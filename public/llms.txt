@@ -1,25 +1,636 @@
 # Teamcubation
 
-> Teamcubation is a "Software + Team Factory" that builds software for companies while developing their people's technology skills through on-the-job training on real projects. Its model — "Experience Developers" — lets organizations create new tech talent and strengthen their existing teams at the same time.
+> Teamcubation is a training-tech company that trains companies' teams to adopt AI and build technology on their own processes and projects, with expert mentors and progress tracking in Teamboarding, its own platform. "Experience isn't taught: it's trained."
+>
+> Teamcubation es una empresa de training tech que entrena a los equipos de las empresas para adoptar IA y construir tecnología sobre sus propios procesos y proyectos, con mentores expertos y seguimiento en Teamboarding, su plataforma propia. «La experiencia no se enseña: se entrena.»
+>
+> A Teamcubation é uma empresa de training tech que treina as equipes das empresas para adotar IA e construir tecnologia sobre os seus próprios processos e projetos, com mentores especialistas e acompanhamento no Teamboarding, a sua plataforma própria. «A experiência não se ensina: se treina.»
 
-Every Teamcubation engagement is based on real projects with expert mentorship, so a company gets working software and measurable growth in its collaborators' technical skills simultaneously. Teamcubation also offers Teamboarding, a platform to measure and improve experience-acquisition (onboarding) processes across an organization. The site is published in three languages — Spanish (default, at the root), English (`/en/`), and Portuguese (`/pt/`). Clients include Mercado Libre, Banco Comafi, and others.
+This file covers the content of teamcubation.com in three equivalent sections: English, Español and Português. Spanish is the site's root language (https://teamcubation.com/); English lives under https://teamcubation.com/en/ and Brazilian Portuguese under https://teamcubation.com/pt/. Program page slugs are the same in all three languages (for example /servicios/booster-ai/, /en/services/booster-ai/ and /pt/servicos/booster-ai/).
 
-## Main pages
-- [Home (English)](https://teamcubation.com/en/): Overview of Teamcubation's "Experience Developers" model and its on-the-job services, with client success stories and testimonials.
-- [IncubatION](https://teamcubation.com/en/incubation/): The first Software + Team Factory. Teamcubation builds the software a client needs today while incubating their future developers — delivering both turnkey technology projects and professionals trained and ready to join the company without friction. Each collaborator's progress is tracked with the Teamboarding platform.
-- [BoosterAI](https://teamcubation.com/en/booster-ai/): An agile, human, on-the-job program that helps any team implement AI in about 30 days. Guided by mentors, teams in Sales, Finance, Legal, Marketing, HR, and Operations learn to automate repetitive processes with AI agents and RPA tools (n8n, Power Automate, agents), freeing hours to focus on the business — "any team in your company could be an IT team."
-- [Contact (English)](https://teamcubation.com/en/contact/): Get in touch to learn how Teamcubation's services can work for your team, or schedule a meeting.
+## English
 
-## Other languages
-- [Spanish — Home](https://teamcubation.com/): Default language version ("Desarrolladores de Experiencia").
-- [Spanish — IncubatION](https://teamcubation.com/incubation/)
-- [Spanish — BoosterAI](https://teamcubation.com/booster-ai/)
-- [Spanish — Contact](https://teamcubation.com/contacto/)
-- [Portuguese — Home](https://teamcubation.com/pt/): Portuguese version ("Desenvolvedores de Experiência").
-- [Portuguese — IncubatION](https://teamcubation.com/pt/incubation/)
-- [Portuguese — BoosterAI](https://teamcubation.com/pt/booster-ai/)
-- [Portuguese — Contact](https://teamcubation.com/pt/contato/)
+### About Teamcubation
 
-## Optional
-- [Privacy Policy](https://teamcubation.com/privacy-policy/): Privacy and cookie policy for Teamcubation's website and services.
-- [Terms & Conditions](https://teamcubation.com/terms/): General terms and conditions for using Teamcubation's products and services.
+Teamcubation builds companies' capability to use and build the technology they need by training their teams on their own processes and projects. Its premise: your AI investment needs adoption. Teamcubation trains teams to adopt AI with real business impact. Unlike a course, people learn by working on the real processes and projects of their day-to-day, guided by expert mentors, because experience isn't taught: it's trained.
+
+- Who it trains: non-technical people who need to bring AI into their work, and new developers who train while they build the software the company needs.
+- Principles: real processes, experience, capability. Good judgment is formed by doing, and the capability stays with the people: the goal is for every team to sustain what it builds and solve the next problem with more autonomy.
+- Training tech: the combination of training and technology Teamcubation uses to support teams. Mentors work on people's tasks, and Teamboarding, its proprietary platform, tracks each person's progress and the impact on each process.
+- History: founded in 2021 in Buenos Aires, Argentina, by Mariano Wechsler and Diego Jolodenco. It started by training junior developers who gained experience and seniority building real software for the companies that hired them from the start, without waiting until they were ready. Today it applies that same principle to training teams in AI adoption on their own work.
+- Track record: more than 90 leading companies, including Mercado Libre, Coca-Cola and Visa. Teamcubation operates in Argentina, Brazil, Uruguay, Chile, Colombia and Spain, and delivers its programs remotely to teams in any geography. It records up to 35% efficiency improvement in the processes it worked on.
+- Offer: eight programs (Discovery, Starter AI, Booster AI, Booster AI Intensive, VibeCode Studio, AI Builders, Booster AI Dev and Incubation) plus AI Rank, a free AI adoption assessment.
+- Contact: hola@teamcubation.com or https://teamcubation.com/en/contact/
+
+### Pages
+
+- [Home](https://teamcubation.com/en/): "Is your company harnessing all the potential of AI?" What Teamcubation does, the three layers of programs, the free AI Rank assessment and its track record.
+- [Methodology](https://teamcubation.com/en/methodology/): "Experience isn't taught: it's trained." How training happens inside real work, with expert mentors and progress and impact tracking in Teamboarding.
+- [Services](https://teamcubation.com/en/services/): The eight services compared by team and goal: adopt AI, automate processes, build applications or develop software while training talent.
+  - [Discovery](https://teamcubation.com/en/services/discovery/): Three-week assessment that delivers a prioritized map of AI opportunities with the recommended first step.
+  - [Starter AI](https://teamcubation.com/en/services/starter-ai/): One month. Non-technical teams learn to use AI on their own tasks with the tools they already have.
+  - [Booster AI](https://teamcubation.com/en/services/booster-ai/): Five weeks. Business teams automate their own processes with AI and agents.
+  - [Booster AI Intensive](https://teamcubation.com/en/services/booster-ai-intensivo/): One-week pilot. Six people in three pairs build a first real automation per pair.
+  - [VibeCode Studio](https://teamcubation.com/en/services/vibecode-studio/): Two months. Teams already using AI build business micro-apps with no traditional programming.
+  - [AI Builders](https://teamcubation.com/en/services/ai-builders/): Four months, full-time. Technical profiles train to build complex automations and integrations between systems.
+  - [Booster AI Dev](https://teamcubation.com/en/services/booster-ai-dev/): One month. Development teams adopt AI tools and agents on their real sprint and repositories.
+  - [Incubation](https://teamcubation.com/en/services/incubation/): Six months. Software built while training developers who can then join the company's team.
+- [Teamboarding](https://teamcubation.com/en/teamboarding/): Teamcubation's proprietary platform, which measures the progress and impact of AI adoption and generates the sponsor's reports.
+- [Clients](https://teamcubation.com/en/clients/): Track record with more than 90 leading companies across industries, and the client list.
+- [About](https://teamcubation.com/en/about/): What Teamcubation is, its history since 2021 and the team.
+- [Contact](https://teamcubation.com/en/contact/): Schedule a conversation about your team's next step.
+
+### Methodology
+
+Page: https://teamcubation.com/en/methodology/
+
+- On-the-job training: training happens inside real work, on each person's tasks. When someone takes a course they say "I'm off to the course"; Teamcubation goes to people's desks to work alongside them. It starts from the spreadsheet a person needs to sort out, the report they have to prepare or the software they're building, and works on their tools, their tasks and the decisions of their work.
+- The work moves forward and the experience stays with the people: prior training is a good base, and Teamcubation supports its application to a concrete need (understand the problem, build a response and check whether it works). What's learned stays with the people, together with concrete work done in the process.
+- Learning to think in processes and systems: with AI, more people can build solutions. Doing it with judgment requires understanding the problem: breaking it into steps, identifying what information comes in, which rules and exceptions exist and how each change affects the rest. This way of thinking, common in software development, is also useful in finance, operations or HR, and Teamcubation's experience training developers guides how it supports business teams.
+- A mentor to develop judgment: judgment is knowing which problem to tackle, whether AI can help solve it and when the solution is good enough. The mentor helps order the problem, question assumptions, unblock the work and evaluate results. Mentors don't give answers: they ask why, until the team recognizes the pattern and applies it on its own. Good judgment is formed by doing.
+- Confidence is built with experience: applying, testing, making mistakes and correcting on a task of your own shows what works and why, and is the base for tackling the next problem and adopting technology naturally.
+- Human support, guided by data: in the training programs, mentors guide and participants build (in Incubation, experienced developers and people in training form one team working on the company's project). Teamboarding records each person's progress and the impact on each process, personalizes the training and generates the reports the sponsor receives. The sponsor is the person responsible for the program within the company.
+- How it works in practice: (1) train on real work, with an expert guide working alongside the team on their tools and tasks; (2) measure progress in Teamboarding, which records people's progress and the impact on the processes, with reports for those responsible; (3) sustain what's learned, so the team can use what was built and tackle the next problem with more autonomy. Delivery and support are defined per program.
+- What's left at the end: AI applied to tasks (Starter AI); your own processes and tools (the automation and building programs, which train the team to sustain them); software and developers trained on the project (Incubation).
+- Double delivery: the solution in production plus the team trained to sustain it. It expresses the goal of the building and automation programs; the concrete scope is described in each program, and Discovery delivers a diagnosis.
+
+### Services
+
+Page: https://teamcubation.com/en/services/
+
+Teamcubation offers eight services to identify AI opportunities, train business teams, develop internal specialists and build software while training developers. The starting point depends on the company's needs and its teams' experience. Discovery sets priorities, and the other seven programs are organized in three layers:
+
+- Surface layer, business teams: have the people in your company use AI to work more efficiently. Teams know the tasks they need to improve, and training starts from that knowledge, with a focus on adoption. Programs: Starter AI (one month), Booster AI (five weeks) and Booster AI Intensive (one week).
+- Middle layer, building with AI: have your most advanced AI users build technology. Business profiles can create internal tools, and technical profiles can go deeper into integrations and more complex processes. Programs: VibeCode Studio (two months) and AI Builders (four months, full-time).
+- IT core, development teams: add talent and new tech skills to your development team. Teamcubation trains development teams to adopt AI and trains developers while they build the software the company needs. Programs: Booster AI Dev (one month) and Incubation (six months).
+
+Where to start: if the team doesn't use AI yet, Starter AI. If it already uses AI and wants to automate processes, Booster AI, or Booster AI Intensive to get to know the method with a focused one-week pilot. To prioritize opportunities first, Discovery. To measure where each person starts, the free AI Rank assessment.
+
+The training programs work on concrete needs with expert mentors and tracking in Teamboarding. Starter AI and Booster AI include Charlas AI as a starting point and support for leaders in guiding their teams with the new capabilities.
+
+#### Discovery
+
+https://teamcubation.com/en/services/discovery/ — "Discovery: assessing AI opportunities in your company." Before investing, know where.
+
+- What it is: Teamcubation's assessment to identify and prioritize AI opportunities before investing. Over three weeks, it analyzes the company's processes and how prepared its teams are.
+- Duration: three weeks. Scope: process assessment. Deliverable: a prioritized map of opportunities, with the recommended first step and the program that matches each need.
+- For: companies with several areas or candidate processes for working with AI that need to sort out the opportunities, and teams that want to assess their starting point before choosing a program.
+- Questions it answers: where the hours go, which tasks can be automated, which teams have experience using AI and which need a foundation.
+- How it works: (1) talk with the teams to understand how work is done today; (2) identify where AI can contribute and what preparation each team needs; (3) prioritize the first step.
+- Good to know: Discovery isn't mandatory; when the goal is clear, you can go straight to the right program. The company provides access to its teams and visibility into the processes. Discovery doesn't include building an automation: building happens in the program chosen afterward.
+
+#### Starter AI
+
+https://teamcubation.com/en/services/starter-ai/ — "Starter AI: AI applied to the work of non-technical teams." The AI your team already has, applied to everyday tasks.
+
+- What it is: Teamcubation's program for teams with no prior experience in AI. Over one month, participants learn to use their company's tools to write, analyze information and prepare reports on their own tasks, with an expert mentor by their side. No coding required.
+- Duration: one month. Participants: up to 16 people. Modality: mentoring in pairs.
+- For: HR, finance, operations, marketing, sales or administration teams that need to start using AI in their work.
+- Works on: writing and summarizing documents, analyzing information, preparing reports or organizing work materials, chosen based on the team's needs and the tools available at the company.
+- Tools: Microsoft Copilot, Google Gemini, Claude or ChatGPT, depending on the company's tools and licensing.
+- How it works: (1) recognize the tasks where AI can help; (2) build a shared foundation with Charlas AI, which also supports leaders in guiding their teams; (3) practice with a guide on real daily tasks; (4) review progress in Teamboarding.
+- Result: a team with experience using AI that understands how to apply the tools on its own, the foundation for automating full processes. Those responsible for the program receive progress reports from Teamboarding.
+- Next step: Booster AI, when the team already uses AI and needs to automate full processes, or Booster AI Intensive for a focused pilot.
+
+#### Booster AI
+
+https://teamcubation.com/en/services/booster-ai/ — "Booster AI: automating processes with AI and your own team." Your processes, automated by your own people.
+
+- What it is: Teamcubation's program in which business teams automate real day-to-day processes with AI and agents. Each participant works on a process of their own, supported by an expert mentor.
+- Duration: five weeks. Participants: up to 8 people. Modality: individual mentoring.
+- For: business teams that already use AI and need to move on to automating their own processes. No prior automation experience is needed; teams that don't use AI yet can build that foundation with Starter AI.
+- Works on: consolidating information, periodic reports, processing emails or tasks that move data between systems. The process is chosen from each participant's work, the available tools and what is best to solve first.
+- Tools: n8n, Power Automate, Copilot Studio or Claude Cowork.
+- How it works: (1) prepare the team with Charlas AI, which also supports leaders; (2) each person chooses a process of their own: which tasks it includes, which systems are involved and what result needs improving; (3) build with a mentor, who guides while the building stays in the participant's hands; (4) in the final week, each participant leaves their automation running and documented.
+- Result: automations brought to production and a team trained to sustain and evolve them. Teamboarding records each participant's progress and the impact on the processes worked on, and those responsible receive reports.
+- Good to know: an AI agent is a system that uses AI to decide and carry out steps aimed at a task, within the available tools and permissions; a fixed-rule flow can also automate a process without being an agent. Access, permissions and integrations are coordinated with IT according to each company's policies.
+
+#### Booster AI Intensive
+
+https://teamcubation.com/en/services/booster-ai-intensivo/ — "Booster AI Intensive: a one-week AI automation pilot." A first real automation per pair, in one week.
+
+- What it is: Teamcubation's pilot format. Six people, organized in three pairs, work for one week on their own processes to build a first real automation per pair, with expert mentors and a focused scope.
+- Duration: one week. Participants: 6 people. Modality: mentoring in 3 pairs.
+- For: business teams that want to try Teamcubation's method on a focused process before moving on to a longer program. The team's experience and the candidate process are reviewed when defining the pilot; for teams with no foundation in using AI, Starter AI is the starting program to consider.
+- Works on: a repetitive, focused task the pair knows, such as consolidating information, processing emails with attachments or preparing a periodic report.
+- Tools: n8n, Power Automate, Copilot Studio or Claude Cowork, depending on the company's ecosystem and the chosen process.
+- How it works: (1) choose a concrete scope of tasks and tools for each pair; (2) build in pairs with expert mentors; (3) share what was built and the experience gained.
+- Result: a first working automation per pair and building experience on a process of their own, which helps evaluate the next step. The pairs' progress is recorded in Teamboarding.
+- Compared with Booster AI: the Intensive is a one-week pilot in pairs; Booster AI lasts five weeks, covers a broader journey and uses individual mentoring. The pilot's preparation and conditions are defined when agreeing on the scope.
+
+#### VibeCode Studio
+
+https://teamcubation.com/en/services/vibecode-studio/ — "VibeCode Studio: build business applications with AI." From using tools to building your own.
+
+- What it is: Teamcubation's program in which business profiles that already use AI build micro-apps for their work, with no traditional programming. Over two months, each participant works on a concrete need with an expert mentor.
+- Duration: two months. Participants: up to 8 people. Modality: individual mentoring.
+- For: business teams and semi-technical profiles that already use AI in their tasks and need to build an internal application. It requires prior experience using AI at work and a concrete problem to solve.
+- Builds: business micro-apps, focused-scope tools for concrete team needs, such as a form with logic, a tracking dashboard or an internal tool that today runs on a shared spreadsheet.
+- Tools: AI-assisted building or low-code tools such as Power Apps, Lovable, Bolt or v0, depending on the company's ecosystem and the need.
+- How it works: (1) define the need and what the application should let you do; (2) build with AI-assisted tools, supported by a mentor; (3) evaluate and adjust, developing the judgment to check whether the application answers the problem and to keep improving it.
+- Result: a functional micro-app of their own and the experience to sustain and evolve it, including reviewing what the AI generates. Teamboarding tracks participants' progress and the work on their applications.
+- Good to know: vibe coding means building applications by describing to the AI what you need and guiding its development. Access, integration and usage requirements are coordinated with the responsible areas. Compared with Booster AI: Booster AI automates the team's processes, while VibeCode Studio builds business micro-apps such as forms or internal tools.
+
+#### AI Builders
+
+https://teamcubation.com/en/services/ai-builders/ — "AI Builders: train internal specialists in automation with AI." The capability to automate, inside your company.
+
+- What it is: Teamcubation's program that trains technical profiles to design and build complex automations with AI, agents and integrations between systems, working on concrete needs of their company.
+- Duration: four months, full-time. Participants: up to 3 people. Modality: full-time squad.
+- For: companies that want to develop internal specialists in automation with AI. Participants are IT profiles or developers in training, with a technical foundation and availability to dedicate four full months.
+- Works on: complex automations, meaning processes that connect several systems, incorporate business logic or combine agents, integrations and workflows. They are the company's own automations, chosen from its needs, not exercises.
+- Tools: n8n, Copilot Studio, Claude Cowork and the AI models' interfaces.
+- How it works: (1) choose company processes that require automation and integration between systems; (2) build with mentors; (3) develop their own capability to understand, sustain and expand what they build and tackle new needs.
+- Result: complex automations brought to production and people able to design, build and evolve them within the company. Teamboarding tracks participants' progress, with reports for those responsible.
+- Compared with Booster AI: Booster AI works with business teams on processes of their own role over five weeks; AI Builders trains technical profiles for complex automations and integrations over four months full-time.
+
+#### Booster AI Dev
+
+https://teamcubation.com/en/services/booster-ai-dev/ — "Booster AI Dev: AI for software development teams." AI-assisted development, with judgment.
+
+- What it is: Teamcubation's program to bring AI development tools and agents into a development team's work. Over one month, developers train on their own sprint, repositories and review practices, supported by an expert mentor.
+- Duration: one month. Participants: up to 8 developers. Modality: individual mentoring.
+- For: development teams that want to bring AI into their workflow and sustain review and quality practices, using the company's technical context and processes.
+- Works on: using tools like Cursor, Claude Code or GitHub Copilot in everyday work: which tasks to delegate, how to review what an agent proposes and how to integrate that practice into the team's flow. The training uses the team's own repositories, with the access and security safeguards the company defines.
+- How it works: (1) start from the team's current flow, repositories and tools; (2) bring agents into sprint tasks with a mentor; (3) train review and judgment to evaluate proposed changes and sustain the team's standards.
+- Result: AI tools and agents used with defined work practices: what to delegate, how to review and how to maintain quality. Teamboarding tracks participants' progress.
+- Developing with judgment: deciding what is best to delegate to AI, reviewing proposed changes and checking that the result meets the need and the team's standards.
+
+#### Incubation
+
+https://teamcubation.com/en/services/incubation/ — "Incubation: software development with developer training." The software you need today, and the team that can sustain it tomorrow.
+
+- What it is: Teamcubation's program in which a mixed team builds the software the company needs while training developers on the company's own project. At the end, the developers can join the company's team knowing the product, the code and the business.
+- Duration: six months. Participants: 3 developers in training. Modality: mixed squad of a Lead, a Senior and 3 juniors.
+- For: companies that need to build software and grow their technical team.
+- How talent is trained: experienced Teamcubation developers guide the people in training and the project's engineering practices while they work on the company's software. Technical experience is built alongside knowledge of the product, the code and the business.
+- How it works: (1) the mixed team works on the product; (2) the people in training learn within development, with experienced leadership and engineering practices; (3) continuity is prepared so the developers can join the company.
+- Result: software, documentation and work practices, plus developers trained on the product itself. Their possible joining of the team is defined within the program. Teamboarding measures the progress of the developers in training.
+- Origin: Teamcubation was born in 2021 training developers this way.
+
+### Teamboarding
+
+Page: https://teamcubation.com/en/teamboarding/ · Platform: https://teamboarding.com
+
+- "Teamboarding: it's how we measure the progress and impact of AI adoption." Behind every training: data.
+- Teamboarding is Teamcubation's proprietary platform. It records each person's progress and the impact on each process, personalizes the training and generates the reports the sponsor, the person responsible for the program within the company, receives. It works as the mentor's copilot: it orders the process, safeguards its completion and makes progress and results visible in real time.
+- What it records: impact on the work done (the process, application or development each participant takes on); skills growth (to support each person's journey and adapt the work to their level); program participation (attendance, mentoring hours and the satisfaction of participants and program leads).
+- What it provides: progress and impact reports for program leads; guides and summaries that help recover and reuse what was worked on; a journey that adapts to each participant's level and progress.
+- It doesn't replace the mentor: the person trains with expert support, and the platform records information to follow and personalize the journey. Human experience and journey tracking with AI are the two engines of Teamcubation's method.
+
+### AI Rank
+
+https://airank.teamcubation.com — free assessment.
+
+- AI Rank is Teamcubation's free AI adoption assessment, with no commitment. It measures each person's real level by role and by dimension, the gap between the current level and the one the company needs, and which program fits based on that gap. Before choosing a program, it helps to know where each person starts.
+
+### Clients and track record
+
+Page: https://teamcubation.com/en/clients/
+
+- More than 90 leading companies trust Teamcubation, including Mercado Libre, Coca-Cola and Visa. It operates in Argentina, Brazil, Uruguay, Chile, Colombia and Spain, and delivers its programs remotely to teams in any geography.
+- Industries: banking, healthcare, logistics, energy and technology.
+- Impact: results of up to 35% efficiency in the processes it worked on. This is an aggregate result of Teamcubation's experience: it isn't an average or an overall improvement across the whole company, and it isn't attributed to each client named.
+- The starting point is a concrete need: a process that needs to be automated, a team starting to use AI or a product that needs to be built.
+- Clients shown on the site: Mercado Libre, Coca-Cola, Visa, EY, HP, Cargill, Accenture, Tenaris, Boston Scientific, Banco Macro, Banco Comafi, Swiss Medical, BYMA, WTW, Prosegur, Andreani, Arcor Agronegocios, Advanta, GDM Seeds, Vista Energy, Aconcagua Energía, Clear Petroleum, Elea, Endeavor, Rootstock Labs (IOVlabs), JusToken, TCA, Grupo Corven, Max Capital, Plaza Logística, Celsur, Defiba, Metropol, Bolsapel, Ceibos Group, Espartina, Telviso, Vital Network, Strix, Natura, Payway, Parque de la Innovación, ArcelorMittal Acindar, Dreamco, Raízen and Geneia.
+
+### About and team
+
+Page: https://teamcubation.com/en/about/
+
+- Teamcubation was founded in 2021 in Buenos Aires, Argentina, by Mariano Wechsler and Diego Jolodenco. It was born training developers while they worked on software projects, which is the base of the Incubation program, and it applies the same principle to business tasks, automation and building with AI: people build experience working on needs they know.
+- Team: Mariano Wechsler (Co-founder and CEO), Diego Jolodenco (Co-founder and COO), Jonathan Tapicer (CTO), Agustín Pina (Head of Training), Tomás Estruga (Commercial and Partnerships Director), Tomás Muñoz (CFO) and Florencia Díaz (Head of People).
+
+### Contact
+
+Page: https://teamcubation.com/en/contact/ · Email: hola@teamcubation.com
+
+- "Let's talk about your team's next step." Tell Teamcubation which process you need to improve, what you want to build and how your team works today. In a conversation, it identifies which program fits and what information is needed to define the first step.
+- You don't need to have chosen a program, and you can get in touch even if your company doesn't use AI yet: the starting point can be Starter AI or a Discovery to prioritize opportunities.
+- Useful to share: the team (who takes part and what experience they have using AI or developing software) and the starting point (which tools they use today and what result they want to reach).
+- The contact form asks how you identify (I represent a company; I work in HR or talent development; I lead a technology team; I'm looking to train individually; other), your name, email, phone and message. Teamcubation replies within 48 business hours to arrange the conversation.
+
+### Other links
+
+- [Blog](https://blog.teamcubation.com/): Teamcubation's blog.
+- [Terms and Conditions](https://teamcubation.com/terms/): General terms and conditions of the Teamboarding product, offered by TQ DESARROLLADORES S.A.S.
+- [Privacy Policy](https://teamcubation.com/privacy-policy/): Privacy and cookie policy of the website and services.
+- [Sitemap](https://teamcubation.com/sitemap-index.xml): Every page in Spanish, English and Portuguese.
+
+## Español
+
+### Sobre Teamcubation
+
+Teamcubation desarrolla la capacidad de las empresas para usar y construir la tecnología que necesitan, entrenando a sus equipos sobre sus propios procesos y proyectos. Su premisa: la inversión en IA necesita adopción. Teamcubation entrena a los equipos para adoptar IA con impacto real en el negocio. A diferencia de un curso, los colaboradores aprenden trabajando en procesos y proyectos reales de su día a día, guiados por mentores expertos, porque la experiencia no se enseña: se entrena.
+
+- A quién entrena: a personas no técnicas que necesitan incorporar IA a su trabajo y a nuevos desarrolladores que se forman mientras construyen el software que la empresa necesita.
+- Principios: procesos reales, experiencia, capacidad. El criterio se forma haciendo y la capacidad queda en las personas: el objetivo es que cada equipo pueda sostener lo que construye y resolver el siguiente problema con más autonomía.
+- Training tech: la combinación de entrenamiento y tecnología que Teamcubation usa para acompañar a los equipos. Los mentores trabajan sobre las tareas de las personas y Teamboarding, su plataforma propietaria, registra el avance de cada persona y el impacto en cada proceso.
+- Historia: fundada en 2021 en Buenos Aires, Argentina, por Mariano Wechsler y Diego Jolodenco. Comenzó entrenando desarrolladores junior que ganaban experiencia y seniority construyendo software real para las empresas que los contrataban desde el inicio, sin esperar a que estuvieran listos. Hoy aplica ese mismo principio al entrenamiento de equipos en la adopción de IA sobre su propio trabajo.
+- Trayectoria: más de 90 empresas líderes, entre ellas Mercado Libre, Coca-Cola y Visa. Teamcubation opera en Argentina, Brasil, Uruguay, Chile, Colombia y España, y entrega sus programas de forma remota a equipos en cualquier geografía. Registra hasta 35% de mejora de eficiencia en los procesos intervenidos.
+- Oferta: ocho programas (Discovery, Starter AI, Booster AI, Booster AI Intensivo, VibeCode Studio, AI Builders, Booster AI Dev e Incubation) y AI Rank, un diagnóstico gratuito de adopción de IA.
+- Contacto: hola@teamcubation.com o https://teamcubation.com/contacto/
+
+### Páginas
+
+- [Inicio](https://teamcubation.com/): «¿Su compañía está aprovechando todo el potencial de la IA?» Qué hace Teamcubation, las tres capas de programas, el diagnóstico gratuito AI Rank y su trayectoria.
+- [Metodología](https://teamcubation.com/metodologia/): «La experiencia no se enseña: se entrena.» Cómo el entrenamiento sucede dentro del trabajo real, con mentores expertos y seguimiento del avance y el impacto en Teamboarding.
+- [Servicios](https://teamcubation.com/servicios/): Los ocho servicios comparados según el equipo y el objetivo: adoptar IA, automatizar procesos, crear aplicaciones o desarrollar software formando talento.
+  - [Discovery](https://teamcubation.com/servicios/discovery/): Relevamiento de tres semanas que entrega un mapa priorizado de oportunidades de IA con el primer paso recomendado.
+  - [Starter AI](https://teamcubation.com/servicios/starter-ai/): Un mes. Equipos no técnicos aprenden a usar IA sobre sus tareas con las herramientas que ya tienen.
+  - [Booster AI](https://teamcubation.com/servicios/booster-ai/): Cinco semanas. Equipos de negocio automatizan procesos propios con IA y agentes.
+  - [Booster AI Intensivo](https://teamcubation.com/servicios/booster-ai-intensivo/): Piloto de una semana. Seis personas en tres duplas construyen una primera automatización real por dupla.
+  - [VibeCode Studio](https://teamcubation.com/servicios/vibecode-studio/): Dos meses. Equipos que ya usan IA construyen micro-aplicaciones de negocio, sin programación tradicional.
+  - [AI Builders](https://teamcubation.com/servicios/ai-builders/): Cuatro meses, dedicación completa. Perfiles técnicos se forman para construir automatizaciones complejas e integraciones entre sistemas.
+  - [Booster AI Dev](https://teamcubation.com/servicios/booster-ai-dev/): Un mes. Equipos de desarrollo incorporan herramientas y agentes de IA sobre su sprint y sus repositorios reales.
+  - [Incubation](https://teamcubation.com/servicios/incubation/): Seis meses. Software construido mientras se forman los desarrolladores que después pueden integrarse al equipo de la empresa.
+- [Teamboarding](https://teamcubation.com/teamboarding/): La plataforma propietaria de Teamcubation, que mide el avance y el impacto de la adopción de IA y genera los informes del sponsor.
+- [Clientes](https://teamcubation.com/casos/): Trayectoria con más de 90 empresas líderes de distintas industrias y el listado de clientes.
+- [Nosotros](https://teamcubation.com/nosotros/): Qué es Teamcubation, su historia desde 2021 y el equipo.
+- [Contacto](https://teamcubation.com/contacto/): Agendar una conversación sobre el próximo paso del equipo.
+
+### Metodología
+
+Página: https://teamcubation.com/metodologia/
+
+- Entrenamiento on-the-job: el entrenamiento sucede dentro del trabajo real, sobre las tareas de cada persona. Cuando alguien hace un curso dice «Me voy al curso»; Teamcubation va al escritorio de la gente a trabajar con ellos. Parte de la planilla que la persona necesita ordenar, del reporte que tiene que preparar o del software que está construyendo, y trabaja sobre sus herramientas, sus tareas y las decisiones de su trabajo.
+- El trabajo avanza y la experiencia queda en las personas: una capacitación previa es una buena base, y Teamcubation acompaña su aplicación a una necesidad concreta (entender el problema, construir una respuesta y revisar si funciona). Lo aprendido queda en las personas, sumado al trabajo concreto realizado en el proceso.
+- Aprender a pensar en procesos y sistemas: con IA, más personas pueden construir soluciones. Hacerlo con criterio requiere comprender el problema: dividirlo en pasos, identificar qué información entra, qué reglas y excepciones existen y cómo cada cambio afecta al resto. Esa forma de pensar, habitual en el desarrollo de software, también es útil en finanzas, operaciones o recursos humanos, y la experiencia de Teamcubation entrenando desarrolladores guía cómo acompaña a los equipos de negocio.
+- Un mentor para desarrollar criterio: el criterio es saber qué problema atacar, si la IA puede ayudar a resolverlo y cuándo la solución sirve. El mentor ayuda a ordenar el problema, cuestionar supuestos, destrabar el trabajo y evaluar resultados. Los mentores no dan respuestas: preguntan por qué, hasta que el equipo reconoce el patrón y lo aplica solo. El criterio se forma haciendo.
+- La confianza se construye con experiencia: aplicar, probar, equivocarse y corregir sobre una tarea propia permite reconocer qué funciona y por qué, y es la base para encarar el siguiente problema y adoptar el uso de la tecnología de manera natural.
+- Acompañamiento humano, guiado por datos: en los programas de entrenamiento, los mentores guían y los participantes construyen (en Incubation, desarrolladores experimentados y personas en formación trabajan en un mismo equipo sobre el proyecto de la empresa). Teamboarding registra el avance de cada persona y el impacto en cada proceso, personaliza el entrenamiento y genera los informes que recibe el sponsor. El sponsor es el responsable del programa dentro de la empresa.
+- Cómo se trabaja, en concreto: (1) entrenar sobre el trabajo real, con un guía experto que trabaja junto al equipo sobre sus herramientas y tareas; (2) medir el avance en Teamboarding, que registra el progreso de las personas y el impacto sobre los procesos, con informes para los responsables; (3) sostener lo aprendido, para que el equipo pueda utilizar lo construido y encarar el siguiente problema con más autonomía. La entrega y el acompañamiento se definen según cada programa.
+- Qué queda al terminar: IA aplicada a las tareas (Starter AI); procesos y herramientas propios (los programas de automatización y construcción, que entrenan al equipo para sostenerlos); software y desarrolladores formados en el proyecto (Incubation).
+- Doble entrega: la solución en producción más el equipo capacitado para sostenerla. Expresa el objetivo de los programas de construcción y automatización; el alcance concreto se describe en cada programa, y Discovery entrega un diagnóstico.
+
+### Servicios
+
+Página: https://teamcubation.com/servicios/
+
+Teamcubation ofrece ocho servicios para identificar oportunidades de IA, entrenar equipos de negocio, formar especialistas internos y desarrollar software mientras se forman desarrolladores. El punto de partida depende de las necesidades de la empresa y de la experiencia de sus equipos. Discovery define prioridades, y los otros siete programas se organizan en tres capas:
+
+- Capa de superficie, equipos de negocio: que las personas de la compañía aprovechen la IA para trabajar con mayor eficiencia. Los equipos conocen las tareas que necesitan mejorar, y el entrenamiento parte de ese conocimiento, con foco en la adopción. Programas: Starter AI (un mes), Booster AI (cinco semanas) y Booster AI Intensivo (una semana).
+- Capa intermedia, construcción con IA: que las personas más avanzadas en el uso de la IA puedan construir tecnología. Los perfiles de negocio pueden crear herramientas internas, y los perfiles técnicos pueden profundizar en integraciones y procesos de mayor complejidad. Programas: VibeCode Studio (dos meses) y AI Builders (cuatro meses, dedicación completa).
+- Núcleo IT, equipos de desarrollo: incorporar talento y nuevas habilidades tecnológicas al equipo de desarrollo. Teamcubation entrena a los equipos de desarrollo para incorporar IA y forma desarrolladores mientras construyen el software que la empresa necesita. Programas: Booster AI Dev (un mes) e Incubation (seis meses).
+
+Por dónde empezar: si el equipo todavía no usa IA, Starter AI. Si ya usa IA y quiere automatizar procesos, Booster AI, o Booster AI Intensivo para conocer el método con un piloto acotado de una semana. Para priorizar oportunidades primero, Discovery. Para medir de dónde parte cada persona, el diagnóstico gratuito AI Rank.
+
+Los programas de entrenamiento trabajan sobre necesidades concretas con mentores expertos y seguimiento en Teamboarding. Starter AI y Booster AI incluyen Charlas AI como punto de partida y acompañamiento a los líderes para conducir a sus equipos con las nuevas capacidades.
+
+#### Discovery
+
+https://teamcubation.com/servicios/discovery/ — «Discovery: diagnóstico de oportunidades de IA en su empresa.» Antes de invertir, saber dónde.
+
+- Qué es: el relevamiento de Teamcubation para identificar y priorizar oportunidades de IA antes de invertir. Durante tres semanas, analiza los procesos de la empresa y la preparación de sus equipos.
+- Duración: tres semanas. Alcance: relevamiento de procesos. Entrega: un mapa priorizado de oportunidades, con el primer paso recomendado y el programa que corresponde a cada necesidad.
+- Para quién: empresas con varias áreas o procesos candidatos para trabajar con IA que necesitan ordenar las oportunidades, y equipos que quieren evaluar su punto de partida antes de elegir un programa.
+- Preguntas que responde: dónde se van las horas, qué tareas pueden automatizarse, qué equipos tienen experiencia usando IA y cuáles necesitan una base.
+- Cómo funciona: (1) conversar con los equipos para comprender cómo se trabaja hoy; (2) identificar dónde puede aportar la IA y qué preparación necesita cada equipo; (3) priorizar el primer paso.
+- A tener en cuenta: Discovery no es obligatorio; cuando el objetivo está claro, se puede evaluar directamente el programa adecuado. La empresa aporta acceso a conversar con los equipos y visibilidad de los procesos. Discovery no incluye construir una automatización: la construcción se aborda en el programa que se defina después.
+
+#### Starter AI
+
+https://teamcubation.com/servicios/starter-ai/ — «Starter AI: IA aplicada al trabajo de equipos no técnicos.» La IA que su equipo ya tiene, aplicada a las tareas de todos los días.
+
+- Qué es: el programa de Teamcubation para equipos sin experiencia previa en IA. Durante un mes, los participantes aprenden a usar las herramientas de su empresa para redactar, analizar información y preparar informes sobre sus propias tareas, con un mentor experto al lado. No hace falta saber programar.
+- Duración: un mes. Participantes: hasta 16 personas. Modalidad: mentorías en duplas.
+- Para quién: equipos de recursos humanos, finanzas, operaciones, marketing, ventas o administración que necesitan empezar a usar IA en su trabajo.
+- Sobre qué se trabaja: redactar y resumir documentos, analizar información, preparar reportes u organizar materiales de trabajo, según las necesidades del equipo y las herramientas disponibles en la empresa.
+- Herramientas: Microsoft Copilot, Google Gemini, Claude o ChatGPT, según las herramientas y el licenciamiento de la empresa.
+- Cómo funciona: (1) reconocer las tareas donde puede aplicar IA; (2) construir una base compartida con Charlas AI, que también acompaña a los líderes para conducir a sus equipos; (3) practicar con un guía sobre las tareas reales diarias; (4) revisar el avance en Teamboarding.
+- Resultado: un equipo con experiencia para usar IA, que comprende cómo aplicar las herramientas por su cuenta: la base para avanzar hacia la automatización de procesos completos. Los responsables del programa reciben informes de progreso de Teamboarding.
+- Siguiente paso: Booster AI, cuando el equipo ya usa IA y necesita automatizar procesos completos, o Booster AI Intensivo para un piloto acotado.
+
+#### Booster AI
+
+https://teamcubation.com/servicios/booster-ai/ — «Booster AI: automatización de procesos con IA y su propio equipo.» Sus procesos, automatizados por su propia gente.
+
+- Qué es: el programa de Teamcubation en el que equipos de negocio automatizan procesos reales de su día a día con IA y agentes. Cada participante trabaja sobre un proceso propio, acompañado por un mentor experto.
+- Duración: cinco semanas. Participantes: hasta 8 personas. Modalidad: mentorías individuales.
+- Para quién: equipos de negocio que ya usan IA y necesitan pasar a la automatización de sus propios procesos. No hace falta experiencia previa en automatización; los equipos que todavía no usan IA pueden construir esa base con Starter AI.
+- Sobre qué se trabaja: consolidaciones de información, reportes periódicos, procesamiento de correos o tareas que mueven datos entre sistemas. La selección parte del proceso de cada participante, de las herramientas disponibles y de lo que conviene resolver primero.
+- Herramientas: n8n, Power Automate, Copilot Studio o Claude Cowork.
+- Cómo funciona: (1) preparar al equipo con Charlas AI, que también acompaña a los líderes; (2) cada persona elige un proceso propio: qué tareas incluye, qué sistemas intervienen y qué resultado necesita mejorar; (3) construir con un mentor, que guía mientras la construcción queda en manos de la persona; (4) en la última semana, cada participante deja su automatización funcionando y documentada.
+- Resultado: automatizaciones llevadas a producción y un equipo entrenado para sostenerlas y evolucionarlas. Teamboarding registra el avance de cada participante y el impacto en los procesos trabajados, y los responsables reciben informes.
+- A tener en cuenta: un agente de IA es un sistema que utiliza IA para decidir y ejecutar pasos orientados a una tarea, dentro de las herramientas y los permisos disponibles; un flujo de reglas fijas también puede automatizar un proceso sin ser un agente. Los accesos, permisos e integraciones se coordinan con IT según las políticas de cada empresa.
+
+#### Booster AI Intensivo
+
+https://teamcubation.com/servicios/booster-ai-intensivo/ — «Booster AI Intensivo: un piloto de automatización con IA en una semana.» Una primera automatización real por dupla, en una semana.
+
+- Qué es: el formato piloto de Teamcubation. Seis personas, organizadas en tres duplas, trabajan durante una semana sobre procesos propios para construir una primera automatización real por dupla, con mentores expertos y un alcance acotado.
+- Duración: una semana. Participantes: 6 personas. Modalidad: mentorías en 3 duplas.
+- Para quién: equipos de negocio que quieren probar el método de Teamcubation con un proceso acotado antes de avanzar hacia un programa más largo. La experiencia del equipo y el proceso candidato se revisan al definir el piloto; para equipos sin base en el uso de IA, Starter AI es el programa de inicio a evaluar.
+- Sobre qué se trabaja: una tarea repetitiva y acotada que la dupla conoce, como consolidar información, procesar correos con adjuntos o preparar un reporte periódico.
+- Herramientas: n8n, Power Automate, Copilot Studio o Claude Cowork, según el ecosistema de la empresa y el proceso elegido.
+- Cómo funciona: (1) elegir un alcance concreto de tareas y herramientas para cada dupla; (2) construir en duplas con mentores expertos; (3) compartir lo construido y la experiencia adquirida.
+- Resultado: una primera automatización funcional por dupla y experiencia de construcción sobre un proceso propio, que ayuda a evaluar el siguiente paso. El avance de las duplas queda registrado en Teamboarding.
+- Frente a Booster AI: el Intensivo es un piloto de una semana en duplas; Booster AI dura cinco semanas, tiene un recorrido más amplio y mentorías individuales. La preparación y las condiciones del piloto se definen al acordar el alcance.
+
+#### VibeCode Studio
+
+https://teamcubation.com/servicios/vibecode-studio/ — «VibeCode Studio: construya aplicaciones de negocio con IA.» De usar herramientas a construir las propias.
+
+- Qué es: el programa de Teamcubation en el que perfiles de negocio que ya usan IA construyen micro-aplicaciones para su trabajo, sin programación tradicional. Durante dos meses, cada participante trabaja sobre una necesidad concreta con un mentor experto.
+- Duración: dos meses. Participantes: hasta 8 personas. Modalidad: mentorías individuales.
+- Para quién: equipos de negocio y perfiles semitécnicos que ya usan IA en sus tareas y necesitan construir una aplicación interna. Requiere experiencia previa usando IA en el trabajo y un problema concreto para resolver.
+- Qué se construye: micro-aplicaciones de negocio, herramientas de alcance acotado para necesidades concretas del equipo, como un formulario con lógica, un tablero de seguimiento o una herramienta interna que hoy se sostiene con una planilla compartida.
+- Herramientas: construcción asistida por IA o low-code, como Power Apps, Lovable, Bolt o v0, según el ecosistema de la empresa y la necesidad.
+- Cómo funciona: (1) definir la necesidad y qué debe permitir hacer la aplicación; (2) construir con herramientas asistidas por IA, acompañado por un mentor; (3) evaluar y ajustar, desarrollando criterio para revisar si la aplicación responde al problema y seguir mejorándola.
+- Resultado: una micro-aplicación propia y funcional y experiencia para sostenerla y evolucionarla, incluida la revisión de lo que genera la IA. Teamboarding acompaña el seguimiento del avance y del trabajo sobre las aplicaciones.
+- A tener en cuenta: vibe coding es construir aplicaciones describiendo a la IA lo que se necesita y guiando su desarrollo. Los requisitos de acceso, integración y uso se coordinan con las áreas responsables. Frente a Booster AI: Booster AI automatiza procesos del equipo, mientras que VibeCode Studio construye micro-aplicaciones de negocio, como formularios o herramientas internas.
+
+#### AI Builders
+
+https://teamcubation.com/servicios/ai-builders/ — «AI Builders: forme especialistas internos en automatización con IA.» La capacidad de automatizar, dentro de su empresa.
+
+- Qué es: el programa de Teamcubation que forma perfiles técnicos para diseñar y construir automatizaciones complejas con IA, agentes e integraciones entre sistemas, sobre necesidades concretas de su empresa.
+- Duración: cuatro meses, dedicación completa. Participantes: hasta 3 personas. Modalidad: squad con dedicación completa.
+- Para quién: empresas que quieren desarrollar especialistas internos en automatización con IA. Los participantes son perfiles de IT o desarrolladores en formación, con base técnica y disponibilidad para dedicar cuatro meses completos.
+- Sobre qué se trabaja: automatizaciones complejas, es decir, procesos que conectan varios sistemas, incorporan lógica de negocio o combinan agentes, integraciones y flujos de trabajo. Son automatizaciones de la empresa, elegidas a partir de sus necesidades, no ejercicios.
+- Herramientas: n8n, Copilot Studio, Claude Cowork y las interfaces de los modelos de IA.
+- Cómo funciona: (1) elegir procesos de la empresa que requieren automatización e integración entre sistemas; (2) construir con mentores; (3) desarrollar capacidad propia para comprender, sostener y ampliar lo construido y abordar nuevas necesidades.
+- Resultado: automatizaciones complejas llevadas a producción y personas capaces de diseñarlas, construirlas y evolucionarlas dentro de la empresa. Teamboarding sigue el avance de los participantes, con informes para los responsables.
+- Frente a Booster AI: Booster AI trabaja con equipos de negocio sobre procesos de su propio rol durante cinco semanas; AI Builders forma perfiles técnicos para automatizaciones complejas e integraciones durante cuatro meses con dedicación completa.
+
+#### Booster AI Dev
+
+https://teamcubation.com/servicios/booster-ai-dev/ — «Booster AI Dev: IA para equipos de desarrollo de software.» Desarrollo asistido por IA, con criterio.
+
+- Qué es: el programa de Teamcubation para incorporar herramientas y agentes de desarrollo con IA al trabajo de un equipo de desarrollo. Durante un mes, los desarrolladores entrenan sobre su sprint, sus repositorios y sus prácticas de revisión, acompañados por un mentor experto.
+- Duración: un mes. Participantes: hasta 8 desarrolladores. Modalidad: mentorías individuales.
+- Para quién: equipos de desarrollo que quieren incorporar IA a su flujo de trabajo y sostener prácticas de revisión y calidad, con el contexto técnico y los procesos de la empresa.
+- Sobre qué se trabaja: el uso de herramientas como Cursor, Claude Code o GitHub Copilot en el trabajo cotidiano: qué tareas delegar, cómo revisar lo que propone un agente y cómo integrar esa práctica en el flujo del equipo. El entrenamiento usa los repositorios del equipo, con los cuidados de acceso y seguridad que defina la empresa.
+- Cómo funciona: (1) partir del flujo actual, los repositorios y las herramientas del equipo; (2) incorporar agentes a las tareas del sprint con un mentor; (3) entrenar revisión y criterio para evaluar los cambios propuestos y sostener los estándares del equipo.
+- Resultado: herramientas y agentes de IA incorporados con prácticas de trabajo definidas: qué delegar, cómo revisar y cómo mantener la calidad. Teamboarding acompaña el seguimiento del avance.
+- Desarrollar con criterio: decidir qué conviene delegar a la IA, revisar los cambios propuestos y comprobar que el resultado responde a la necesidad y a los estándares del equipo.
+
+#### Incubation
+
+https://teamcubation.com/servicios/incubation/ — «Incubation: desarrollo de software con formación de desarrolladores.» El software que necesita hoy, y el equipo que puede sostenerlo mañana.
+
+- Qué es: el programa de Teamcubation en el que un equipo mixto construye el software que la empresa necesita mientras forma desarrolladores sobre el proyecto de la empresa. Al finalizar, los desarrolladores pueden integrarse a su equipo conociendo el producto, el código y el negocio.
+- Duración: seis meses. Participantes: 3 desarrolladores en formación. Modalidad: squad mixto con un Lead, un Senior y 3 juniors.
+- Para quién: empresas que necesitan construir software y hacer crecer su equipo técnico.
+- Cómo se forma el talento: desarrolladores experimentados de Teamcubation guían a las personas en formación y las prácticas de ingeniería del proyecto mientras trabajan en el software de la empresa. La experiencia técnica se construye junto con el conocimiento del producto, el código y el negocio.
+- Cómo funciona: (1) el equipo mixto trabaja sobre el producto; (2) las personas en formación aprenden dentro del desarrollo, con liderazgo experimentado y prácticas de ingeniería; (3) se prepara la continuidad para que los desarrolladores puedan integrarse a la empresa.
+- Resultado: software, documentación y prácticas de trabajo, más desarrolladores formados sobre el propio producto. Su posible incorporación al equipo se define en el marco del programa. Teamboarding mide el avance de los desarrolladores en formación.
+- Origen: Teamcubation nació en 2021 formando desarrolladores de esta manera.
+
+### Teamboarding
+
+Página: https://teamcubation.com/teamboarding/ · Plataforma: https://teamboarding.com
+
+- «Teamboarding: es cómo medimos el avance y el impacto de la adopción de IA.» Detrás de cada entrenamiento: datos.
+- Teamboarding es la plataforma propietaria de Teamcubation. Registra el avance de cada persona y el impacto en cada proceso, personaliza el entrenamiento y genera los informes que recibe el sponsor, el responsable del programa dentro de la empresa. Funciona como copiloto del mentor: ordena el proceso, resguarda su cumplimiento y hace visible el avance y los resultados en tiempo real.
+- Qué registra: impacto en lo trabajado (el proceso, la aplicación o el desarrollo que aborda cada participante); crecimiento de habilidades (para acompañar el recorrido de cada persona y adaptar el trabajo a su nivel); participación en el programa (asistencia, horas de mentoría y satisfacción de participantes y responsables).
+- Qué aporta: informes de avance e impacto para los responsables del programa; guías y resúmenes que ayudan a recuperar y reutilizar lo trabajado; un recorrido que se adapta al nivel y al avance de cada participante.
+- No reemplaza al mentor: la persona entrena con acompañamiento experto y la plataforma registra información para seguir y personalizar el recorrido. La experiencia humana y el seguimiento del recorrido con IA son los dos motores del método de Teamcubation.
+
+### AI Rank
+
+https://airank.teamcubation.com — diagnóstico sin costo.
+
+- AI Rank es el diagnóstico gratuito de adopción de IA de Teamcubation, sin costo y sin compromiso. Mide el nivel real de cada persona por rol y por dimensión, la distancia entre el nivel actual y el que necesita la empresa, y qué programa corresponde según la brecha. Antes de elegir un programa conviene saber de dónde parte cada persona.
+
+### Clientes y trayectoria
+
+Página: https://teamcubation.com/casos/
+
+- Más de 90 empresas líderes confían en Teamcubation, entre ellas Mercado Libre, Coca-Cola y Visa. Opera en Argentina, Brasil, Uruguay, Chile, Colombia y España, y entrega sus programas de forma remota a equipos en cualquier geografía.
+- Industrias: banca, salud, logística, energía y tecnología.
+- Impacto: resultados de hasta 35% de eficiencia en los procesos intervenidos. Es un resultado agregado de la experiencia de Teamcubation: no representa un promedio ni una mejora general de toda la empresa, y no se atribuye a cada cliente nombrado.
+- El punto de partida es una necesidad concreta: un proceso que necesita automatizarse, un equipo que empieza a usar IA o un producto que debe construirse.
+- Clientes que muestra el sitio: Mercado Libre, Coca-Cola, Visa, EY, HP, Cargill, Accenture, Tenaris, Boston Scientific, Banco Macro, Banco Comafi, Swiss Medical, BYMA, WTW, Prosegur, Andreani, Arcor Agronegocios, Advanta, GDM Seeds, Vista Energy, Aconcagua Energía, Clear Petroleum, Elea, Endeavor, Rootstock Labs (IOVlabs), JusToken, TCA, Grupo Corven, Max Capital, Plaza Logística, Celsur, Defiba, Metropol, Bolsapel, Ceibos Group, Espartina, Telviso, Vital Network, Strix, Natura, Payway, Parque de la Innovación, ArcelorMittal Acindar, Dreamco, Raízen y Geneia.
+
+### Nosotros y equipo
+
+Página: https://teamcubation.com/nosotros/
+
+- Teamcubation fue fundada en 2021 en Buenos Aires, Argentina, por Mariano Wechsler y Diego Jolodenco. Nació formando desarrolladores mientras trabajaban sobre proyectos de software, que es la base del programa Incubation, y aplica el mismo principio a las tareas de negocio, la automatización y la construcción con IA: que las personas desarrollen experiencia trabajando sobre necesidades que conocen.
+- Equipo: Mariano Wechsler (cofundador y CEO), Diego Jolodenco (cofundador y COO), Jonathan Tapicer (CTO), Agustín Pina (Head of Training), Tomás Estruga (Director Comercial y Alianzas), Tomás Muñoz (CFO) y Florencia Díaz (Head of People).
+
+### Contacto
+
+Página: https://teamcubation.com/contacto/ · Email: hola@teamcubation.com
+
+- «Conversemos sobre el próximo paso de su equipo.» Se puede contar qué proceso se necesita mejorar, qué se quiere construir y cómo trabaja hoy el equipo. En una conversación, Teamcubation identifica qué programa se ajusta a la necesidad y qué información hace falta para definir el primer paso.
+- No hace falta haber elegido un programa, y se puede contactar aunque la empresa todavía no use IA: el punto de partida puede ser Starter AI o un Discovery para priorizar oportunidades.
+- Qué conviene contar: el equipo (quiénes participan y qué experiencia tienen usando IA o desarrollando software) y el punto de partida (qué herramientas utilizan hoy y qué resultado quieren alcanzar).
+- El formulario de contacto pide cómo se identifica (represento a una empresa; trabajo en RRHH o desarrollo de talento; lidero un equipo de tecnología; busco entrenarme individualmente; otro), nombre, email, teléfono y mensaje. Teamcubation responde en menos de 48 horas hábiles para coordinar la conversación.
+
+### Otros enlaces
+
+- [Blog](https://blog.teamcubation.com/): El blog de Teamcubation.
+- [Términos y Condiciones](https://teamcubation.com/terms/): Condiciones generales del producto Teamboarding, ofrecido por TQ DESARROLLADORES S.A.S. (en inglés).
+- [Política de Privacidad](https://teamcubation.com/privacy-policy/): Política de privacidad y cookies del sitio web y los servicios (en inglés).
+- [Mapa del sitio](https://teamcubation.com/sitemap-index.xml): Todas las páginas en español, inglés y portugués.
+
+## Português
+
+### Sobre a Teamcubation
+
+A Teamcubation desenvolve a capacidade das empresas de usar e construir a tecnologia de que precisam, treinando as suas equipes sobre os seus próprios processos e projetos. A sua premissa: o investimento em IA precisa de adoção. A Teamcubation treina as equipes para adotar IA com impacto real no negócio. Diferente de um curso, as pessoas aprendem trabalhando nos processos e projetos reais do seu dia a dia, guiadas por mentores especialistas, porque a experiência não se ensina: se treina.
+
+- Quem treina: pessoas não técnicas que precisam incorporar IA ao seu trabalho e novos desenvolvedores que se formam enquanto constroem o software que a empresa precisa.
+- Princípios: processos reais, experiência, capacidade. O critério se forma fazendo e a capacidade fica nas pessoas: o objetivo é que cada equipe possa sustentar o que constrói e resolver o próximo problema com mais autonomia.
+- Training tech: a combinação de treinamento e tecnologia que a Teamcubation usa para acompanhar as equipes. Os mentores trabalham sobre as tarefas das pessoas e o Teamboarding, a sua plataforma proprietária, registra o progresso de cada pessoa e o impacto em cada processo.
+- História: fundada em 2021 em Buenos Aires, Argentina, por Mariano Wechsler e Diego Jolodenco. Começou treinando desenvolvedores juniores que ganhavam experiência e senioridade construindo software real para as empresas que os contratavam desde o início, sem esperar que estivessem prontos. Hoje aplica esse mesmo princípio ao treinamento de equipes na adoção de IA sobre o seu próprio trabalho.
+- Trajetória: mais de 90 empresas líderes, entre elas Mercado Livre, Coca-Cola e Visa. A Teamcubation atua na Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha, e entrega os seus programas de forma remota a equipes em qualquer geografia. Registra até 35% de melhoria de eficiência nos processos em que atuou.
+- Oferta: oito programas (Discovery, Starter AI, Booster AI, Booster AI Intensivo, VibeCode Studio, AI Builders, Booster AI Dev e Incubation) e o AI Rank, um diagnóstico gratuito de adoção de IA.
+- Contato: hola@teamcubation.com ou https://teamcubation.com/pt/contato/
+
+### Páginas
+
+- [Início](https://teamcubation.com/pt/): «A sua empresa está aproveitando todo o potencial da IA?» O que a Teamcubation faz, as três camadas de programas, o diagnóstico gratuito AI Rank e a sua trajetória.
+- [Metodologia](https://teamcubation.com/pt/metodologia/): «A experiência não se ensina: se treina.» Como o treinamento acontece dentro do trabalho real, com mentores especialistas e acompanhamento do progresso e do impacto no Teamboarding.
+- [Serviços](https://teamcubation.com/pt/servicos/): Os oito serviços comparados de acordo com a equipe e o objetivo: adotar IA, automatizar processos, criar aplicações ou desenvolver software formando talentos.
+  - [Discovery](https://teamcubation.com/pt/servicos/discovery/): Avaliação de três semanas que entrega um mapa priorizado de oportunidades de IA com o primeiro passo recomendado.
+  - [Starter AI](https://teamcubation.com/pt/servicos/starter-ai/): Um mês. Equipes não técnicas aprendem a usar IA nas suas tarefas com as ferramentas que já têm.
+  - [Booster AI](https://teamcubation.com/pt/servicos/booster-ai/): Cinco semanas. Equipes de negócio automatizam os próprios processos com IA e agentes.
+  - [Booster AI Intensivo](https://teamcubation.com/pt/servicos/booster-ai-intensivo/): Piloto de uma semana. Seis pessoas em três duplas constroem uma primeira automação real por dupla.
+  - [VibeCode Studio](https://teamcubation.com/pt/servicos/vibecode-studio/): Dois meses. Equipes que já usam IA constroem micro-aplicações de negócio, sem programação tradicional.
+  - [AI Builders](https://teamcubation.com/pt/servicos/ai-builders/): Quatro meses, tempo integral. Perfis técnicos se formam para construir automações complexas e integrações entre sistemas.
+  - [Booster AI Dev](https://teamcubation.com/pt/servicos/booster-ai-dev/): Um mês. Equipes de desenvolvimento incorporam ferramentas e agentes de IA sobre o seu sprint e os seus repositórios reais.
+  - [Incubation](https://teamcubation.com/pt/servicos/incubation/): Seis meses. Software construído enquanto se formam os desenvolvedores que depois podem se integrar à equipe da empresa.
+- [Teamboarding](https://teamcubation.com/pt/teamboarding/): A plataforma proprietária da Teamcubation, que mede o progresso e o impacto da adoção de IA e gera os relatórios do sponsor.
+- [Clientes](https://teamcubation.com/pt/clientes/): Trajetória com mais de 90 empresas líderes de diferentes setores e a lista de clientes.
+- [Sobre](https://teamcubation.com/pt/sobre/): O que é a Teamcubation, a sua história desde 2021 e a equipe.
+- [Contato](https://teamcubation.com/pt/contato/): Agendar uma conversa sobre o próximo passo da equipe.
+
+### Metodologia
+
+Página: https://teamcubation.com/pt/metodologia/
+
+- Treinamento on-the-job: o treinamento acontece dentro do trabalho real, sobre as tarefas de cada pessoa. Quando alguém faz um curso, diz «Vou para o curso»; a Teamcubation vai até a mesa das pessoas para trabalhar ao lado delas. Parte da planilha que a pessoa precisa organizar, do relatório que tem que preparar ou do software que está construindo, e trabalha sobre as suas ferramentas, as suas tarefas e as decisões do seu trabalho.
+- O trabalho avança e a experiência fica nas pessoas: um treinamento prévio é uma boa base, e a Teamcubation acompanha a sua aplicação a uma necessidade concreta (entender o problema, construir uma resposta e verificar se funciona). O que foi aprendido fica nas pessoas, somado ao trabalho concreto realizado no processo.
+- Aprender a pensar em processos e sistemas: com IA, mais pessoas podem construir soluções. Fazer isso com critério exige compreender o problema: dividi-lo em passos, identificar quais informações entram, quais regras e exceções existem e como cada mudança afeta o restante. Essa forma de pensar, comum no desenvolvimento de software, também é útil em finanças, operações ou recursos humanos, e a experiência da Teamcubation treinando desenvolvedores orienta como ela acompanha as equipes de negócio.
+- Um mentor para desenvolver critério: critério é saber qual problema atacar, se a IA pode ajudar a resolvê-lo e quando a solução é boa o suficiente. O mentor ajuda a organizar o problema, questionar suposições, destravar o trabalho e avaliar resultados. Os mentores não dão respostas: perguntam por quê, até que a equipe reconheça o padrão e o aplique sozinha. O critério se forma fazendo.
+- A confiança se constrói com experiência: aplicar, testar, errar e corrigir sobre uma tarefa própria permite reconhecer o que funciona e por quê, e é a base para encarar o próximo problema e adotar o uso da tecnologia de maneira natural.
+- Acompanhamento humano, guiado por dados: nos programas de treinamento, os mentores guiam e os participantes constroem (no Incubation, desenvolvedores experientes e pessoas em formação trabalham em uma mesma equipe sobre o projeto da empresa). O Teamboarding registra o progresso de cada pessoa e o impacto em cada processo, personaliza o treinamento e gera os relatórios que o sponsor recebe. O sponsor é o responsável pelo programa dentro da empresa.
+- Como se trabalha, na prática: (1) treinar sobre o trabalho real, com um guia especialista que trabalha junto à equipe sobre as suas ferramentas e tarefas; (2) medir o progresso no Teamboarding, que registra o avanço das pessoas e o impacto sobre os processos, com relatórios para os responsáveis; (3) sustentar o que foi aprendido, para que a equipe possa utilizar o que foi construído e encarar o próximo problema com mais autonomia. A entrega e o acompanhamento são definidos conforme cada programa.
+- O que fica ao terminar: IA aplicada às tarefas (Starter AI); processos e ferramentas próprios (os programas de automação e construção, que treinam a equipe para sustentá-los); software e desenvolvedores formados no projeto (Incubation).
+- Entrega dupla: a solução em produção mais a equipe capacitada para sustentá-la. Expressa o objetivo dos programas de construção e automação; o escopo concreto é descrito em cada programa, e o Discovery entrega um diagnóstico.
+
+### Serviços
+
+Página: https://teamcubation.com/pt/servicos/
+
+A Teamcubation oferece oito serviços para identificar oportunidades de IA, treinar equipes de negócio, formar especialistas internos e desenvolver software enquanto forma desenvolvedores. O ponto de partida depende das necessidades da empresa e da experiência das suas equipes. O Discovery define prioridades, e os outros sete programas se organizam em três camadas:
+
+- Camada de superfície, equipes de negócio: que as pessoas da empresa aproveitem a IA para trabalhar com mais eficiência. As equipes conhecem as tarefas que precisam melhorar, e o treinamento parte desse conhecimento, com foco na adoção. Programas: Starter AI (um mês), Booster AI (cinco semanas) e Booster AI Intensivo (uma semana).
+- Camada intermediária, construção com IA: que as pessoas mais avançadas no uso da IA possam construir tecnologia. Os perfis de negócio podem criar ferramentas internas, e os perfis técnicos podem se aprofundar em integrações e processos de maior complexidade. Programas: VibeCode Studio (dois meses) e AI Builders (quatro meses, tempo integral).
+- Núcleo IT, equipes de desenvolvimento: incorporar talentos e novas habilidades tecnológicas à equipe de desenvolvimento. A Teamcubation treina as equipes de desenvolvimento para incorporar IA e forma desenvolvedores enquanto constroem o software que a empresa precisa. Programas: Booster AI Dev (um mês) e Incubation (seis meses).
+
+Por onde começar: se a equipe ainda não usa IA, Starter AI. Se já usa IA e quer automatizar processos, Booster AI, ou Booster AI Intensivo para conhecer o método com um piloto delimitado de uma semana. Para priorizar oportunidades primeiro, Discovery. Para medir de onde parte cada pessoa, o diagnóstico gratuito AI Rank.
+
+Os programas de treinamento trabalham sobre necessidades concretas com mentores especialistas e acompanhamento no Teamboarding. Starter AI e Booster AI incluem as Charlas AI como ponto de partida e acompanhamento aos líderes na condução das suas equipes com as novas capacidades.
+
+#### Discovery
+
+https://teamcubation.com/pt/servicos/discovery/ — «Discovery: diagnóstico de oportunidades de IA na sua empresa.» Antes de investir, saber onde.
+
+- O que é: a avaliação da Teamcubation para identificar e priorizar oportunidades de IA antes de investir. Durante três semanas, analisa os processos da empresa e o preparo das suas equipes.
+- Duração: três semanas. Escopo: avaliação de processos. Entrega: um mapa priorizado de oportunidades, com o primeiro passo recomendado e o programa que corresponde a cada necessidade.
+- Para quem: empresas com várias áreas ou processos candidatos para trabalhar com IA que precisam organizar as oportunidades, e equipes que querem avaliar o seu ponto de partida antes de escolher um programa.
+- Perguntas que responde: onde vão as horas, quais tarefas podem ser automatizadas, quais equipes têm experiência usando IA e quais precisam de uma base.
+- Como funciona: (1) conversar com as equipes para entender como se trabalha hoje; (2) identificar onde a IA pode contribuir e qual preparo cada equipe precisa; (3) priorizar o primeiro passo.
+- Bom saber: o Discovery não é obrigatório; quando o objetivo está claro, é possível avaliar diretamente o programa adequado. A empresa fornece acesso para conversar com as equipes e visibilidade dos processos. O Discovery não inclui construir uma automação: a construção é abordada no programa definido depois.
+
+#### Starter AI
+
+https://teamcubation.com/pt/servicos/starter-ai/ — «Starter AI: IA aplicada ao trabalho de equipes não técnicas.» A IA que sua equipe já tem, aplicada às tarefas do dia a dia.
+
+- O que é: o programa da Teamcubation para equipes sem experiência prévia em IA. Durante um mês, os participantes aprendem a usar as ferramentas da sua empresa para redigir, analisar informações e preparar relatórios sobre as próprias tarefas, com um mentor especialista ao lado. Não é preciso saber programar.
+- Duração: um mês. Participantes: até 16 pessoas. Modalidade: mentorias em duplas.
+- Para quem: equipes de recursos humanos, finanças, operações, marketing, vendas ou administração que precisam começar a usar IA no trabalho.
+- Sobre o que se trabalha: redigir e resumir documentos, analisar informações, preparar relatórios ou organizar materiais de trabalho, conforme as necessidades da equipe e as ferramentas disponíveis na empresa.
+- Ferramentas: Microsoft Copilot, Google Gemini, Claude ou ChatGPT, conforme as ferramentas e o licenciamento da empresa.
+- Como funciona: (1) reconhecer as tarefas onde a IA pode ser aplicada; (2) construir uma base compartilhada com as Charlas AI, que também acompanham os líderes na condução das suas equipes; (3) praticar com um guia sobre as tarefas reais diárias; (4) revisar o progresso no Teamboarding.
+- Resultado: uma equipe com experiência para usar IA, que entende como aplicar as ferramentas por conta própria: a base para avançar rumo à automação de processos completos. Os responsáveis pelo programa recebem relatórios de progresso do Teamboarding.
+- Próximo passo: Booster AI, quando a equipe já usa IA e precisa automatizar processos completos, ou Booster AI Intensivo para um piloto delimitado.
+
+#### Booster AI
+
+https://teamcubation.com/pt/servicos/booster-ai/ — «Booster AI: automação de processos com IA e sua própria equipe.» Seus processos, automatizados pela sua própria gente.
+
+- O que é: o programa da Teamcubation em que equipes de negócio automatizam processos reais do dia a dia com IA e agentes. Cada participante trabalha em um processo próprio, acompanhado por um mentor especialista.
+- Duração: cinco semanas. Participantes: até 8 pessoas. Modalidade: mentorias individuais.
+- Para quem: equipes de negócio que já usam IA e precisam avançar para a automação dos próprios processos. Não é preciso experiência prévia em automação; equipes que ainda não usam IA podem construir essa base com o Starter AI.
+- Sobre o que se trabalha: consolidação de informações, relatórios periódicos, processamento de e-mails ou tarefas que movem dados entre sistemas. A seleção parte do processo de cada participante, das ferramentas disponíveis e do que convém resolver primeiro.
+- Ferramentas: n8n, Power Automate, Copilot Studio ou Claude Cowork.
+- Como funciona: (1) preparar a equipe com as Charlas AI, que também acompanham os líderes; (2) cada pessoa escolhe um processo próprio: quais tarefas inclui, quais sistemas participam e qual resultado precisa melhorar; (3) construir com um mentor, que orienta enquanto a construção fica nas mãos da pessoa; (4) na última semana, cada participante deixa a sua automação funcionando e documentada.
+- Resultado: automações levadas à produção e uma equipe treinada para sustentá-las e evoluí-las. O Teamboarding registra o progresso de cada participante e o impacto nos processos trabalhados, e os responsáveis recebem relatórios.
+- Bom saber: um agente de IA é um sistema que usa IA para decidir e executar passos voltados a uma tarefa, dentro das ferramentas e permissões disponíveis; um fluxo de regras fixas também pode automatizar um processo sem ser um agente. Acessos, permissões e integrações são coordenados com o TI conforme as políticas de cada empresa.
+
+#### Booster AI Intensivo
+
+https://teamcubation.com/pt/servicos/booster-ai-intensivo/ — «Booster AI Intensivo: um piloto de automação com IA em uma semana.» Uma primeira automação real por dupla, em uma semana.
+
+- O que é: o formato piloto da Teamcubation. Seis pessoas, organizadas em três duplas, trabalham durante uma semana sobre processos próprios para construir uma primeira automação real por dupla, com mentores especialistas e um escopo delimitado.
+- Duração: uma semana. Participantes: 6 pessoas. Modalidade: mentorias em 3 duplas.
+- Para quem: equipes de negócio que querem experimentar o método da Teamcubation com um processo delimitado antes de avançar para um programa mais longo. A experiência da equipe e o processo candidato são revisados ao definir o piloto; para equipes sem base no uso de IA, o Starter AI é o programa de início a considerar.
+- Sobre o que se trabalha: uma tarefa repetitiva e delimitada que a dupla conhece, como consolidar informações, processar e-mails com anexos ou preparar um relatório periódico.
+- Ferramentas: n8n, Power Automate, Copilot Studio ou Claude Cowork, conforme o ecossistema da empresa e o processo escolhido.
+- Como funciona: (1) escolher um escopo concreto de tarefas e ferramentas para cada dupla; (2) construir em duplas com mentores especialistas; (3) compartilhar o que foi construído e a experiência adquirida.
+- Resultado: uma primeira automação funcional por dupla e experiência de construção sobre um processo próprio, que ajuda a avaliar o próximo passo. O progresso das duplas fica registrado no Teamboarding.
+- Em relação ao Booster AI: o Intensivo é um piloto de uma semana em duplas; o Booster AI dura cinco semanas, tem um percurso mais amplo e mentorias individuais. A preparação e as condições do piloto são definidas ao acordar o escopo.
+
+#### VibeCode Studio
+
+https://teamcubation.com/pt/servicos/vibecode-studio/ — «VibeCode Studio: construa aplicações de negócio com IA.» De usar ferramentas a construir as próprias.
+
+- O que é: o programa da Teamcubation em que perfis de negócio que já usam IA constroem micro-aplicações para o seu trabalho, sem programação tradicional. Durante dois meses, cada participante trabalha sobre uma necessidade concreta com um mentor especialista.
+- Duração: dois meses. Participantes: até 8 pessoas. Modalidade: mentorias individuais.
+- Para quem: equipes de negócio e perfis semitécnicos que já usam IA nas suas tarefas e precisam construir uma aplicação interna. Requer experiência prévia usando IA no trabalho e um problema concreto para resolver.
+- O que se constrói: micro-aplicações de negócio, ferramentas de escopo delimitado para necessidades concretas da equipe, como um formulário com lógica, um painel de acompanhamento ou uma ferramenta interna que hoje se sustenta com uma planilha compartilhada.
+- Ferramentas: construção assistida por IA ou low-code, como Power Apps, Lovable, Bolt ou v0, conforme o ecossistema da empresa e a necessidade.
+- Como funciona: (1) definir a necessidade e o que a aplicação deve permitir fazer; (2) construir com ferramentas assistidas por IA, acompanhado por um mentor; (3) avaliar e ajustar, desenvolvendo critério para revisar se a aplicação responde ao problema e continuar melhorando-a.
+- Resultado: uma micro-aplicação própria e funcional e experiência para sustentá-la e evoluí-la, incluindo a revisão do que a IA gera. O Teamboarding acompanha o progresso dos participantes e o trabalho sobre as suas aplicações.
+- Bom saber: vibe coding é construir aplicações descrevendo à IA o que se precisa e guiando o seu desenvolvimento. Os requisitos de acesso, integração e uso são coordenados com as áreas responsáveis. Em relação ao Booster AI: o Booster AI automatiza processos da equipe, enquanto o VibeCode Studio constrói micro-aplicações de negócio, como formulários ou ferramentas internas.
+
+#### AI Builders
+
+https://teamcubation.com/pt/servicos/ai-builders/ — «AI Builders: forme especialistas internos em automação com IA.» A capacidade de automatizar, dentro da sua empresa.
+
+- O que é: o programa da Teamcubation que forma perfis técnicos para desenhar e construir automações complexas com IA, agentes e integrações entre sistemas, sobre necessidades concretas da sua empresa.
+- Duração: quatro meses, tempo integral. Participantes: até 3 pessoas. Modalidade: squad com dedicação integral.
+- Para quem: empresas que querem desenvolver especialistas internos em automação com IA. Os participantes são perfis de TI ou desenvolvedores em formação, com base técnica e disponibilidade para dedicar quatro meses completos.
+- Sobre o que se trabalha: automações complexas, ou seja, processos que conectam vários sistemas, incorporam lógica de negócio ou combinam agentes, integrações e fluxos de trabalho. São automações da empresa, escolhidas a partir das suas necessidades, não exercícios.
+- Ferramentas: n8n, Copilot Studio, Claude Cowork e as interfaces dos modelos de IA.
+- Como funciona: (1) escolher processos da empresa que exigem automação e integração entre sistemas; (2) construir com mentores; (3) desenvolver capacidade própria para entender, sustentar e ampliar o que foi construído e abordar novas necessidades.
+- Resultado: automações complexas levadas à produção e pessoas capazes de desenhá-las, construí-las e evoluí-las dentro da empresa. O Teamboarding acompanha o progresso dos participantes, com relatórios para os responsáveis.
+- Em relação ao Booster AI: o Booster AI trabalha com equipes de negócio sobre processos do próprio papel durante cinco semanas; o AI Builders forma perfis técnicos para automações complexas e integrações durante quatro meses em tempo integral.
+
+#### Booster AI Dev
+
+https://teamcubation.com/pt/servicos/booster-ai-dev/ — «Booster AI Dev: IA para equipes de desenvolvimento de software.» Desenvolvimento assistido por IA, com critério.
+
+- O que é: o programa da Teamcubation para incorporar ferramentas e agentes de desenvolvimento com IA ao trabalho de uma equipe de desenvolvimento. Durante um mês, os desenvolvedores treinam sobre o seu sprint, os seus repositórios e as suas práticas de revisão, acompanhados por um mentor especialista.
+- Duração: um mês. Participantes: até 8 desenvolvedores. Modalidade: mentorias individuais.
+- Para quem: equipes de desenvolvimento que querem incorporar IA ao seu fluxo de trabalho e sustentar práticas de revisão e qualidade, com o contexto técnico e os processos da empresa.
+- Sobre o que se trabalha: o uso de ferramentas como Cursor, Claude Code ou GitHub Copilot no trabalho cotidiano: quais tarefas delegar, como revisar o que um agente propõe e como integrar essa prática ao fluxo da equipe. O treinamento usa os repositórios da equipe, com os cuidados de acesso e segurança que a empresa definir.
+- Como funciona: (1) partir do fluxo atual, dos repositórios e das ferramentas da equipe; (2) incorporar agentes às tarefas do sprint com um mentor; (3) treinar revisão e critério para avaliar as mudanças propostas e sustentar os padrões da equipe.
+- Resultado: ferramentas e agentes de IA incorporados com práticas de trabalho definidas: o que delegar, como revisar e como manter a qualidade. O Teamboarding acompanha o progresso.
+- Desenvolver com critério: decidir o que convém delegar à IA, revisar as mudanças propostas e verificar que o resultado responde à necessidade e aos padrões da equipe.
+
+#### Incubation
+
+https://teamcubation.com/pt/servicos/incubation/ — «Incubation: desenvolvimento de software com formação de desenvolvedores.» O software que você precisa hoje, e a equipe que pode sustentá-lo amanhã.
+
+- O que é: o programa da Teamcubation em que uma equipe mista constrói o software que a empresa precisa enquanto forma desenvolvedores sobre o projeto da empresa. Ao finalizar, os desenvolvedores podem se integrar à sua equipe conhecendo o produto, o código e o negócio.
+- Duração: seis meses. Participantes: 3 desenvolvedores em formação. Modalidade: squad misto com um Lead, um Senior e 3 juniors.
+- Para quem: empresas que precisam construir software e fazer crescer a sua equipe técnica.
+- Como o talento se forma: desenvolvedores experientes da Teamcubation orientam as pessoas em formação e as práticas de engenharia do projeto enquanto trabalham no software da empresa. A experiência técnica é construída junto com o conhecimento do produto, do código e do negócio.
+- Como funciona: (1) a equipe mista trabalha sobre o produto; (2) as pessoas em formação aprendem dentro do desenvolvimento, com liderança experiente e práticas de engenharia; (3) prepara-se a continuidade para que os desenvolvedores possam se integrar à empresa.
+- Resultado: software, documentação e práticas de trabalho, mais desenvolvedores formados sobre o próprio produto. A sua possível incorporação à equipe é definida no âmbito do programa. O Teamboarding mede o progresso dos desenvolvedores em formação.
+- Origem: a Teamcubation nasceu em 2021 formando desenvolvedores dessa maneira.
+
+### Teamboarding
+
+Página: https://teamcubation.com/pt/teamboarding/ · Plataforma: https://teamboarding.com
+
+- «Teamboarding: é como medimos o progresso e o impacto da adoção de IA.» Por trás de cada treinamento: dados.
+- O Teamboarding é a plataforma proprietária da Teamcubation. Registra o progresso de cada pessoa e o impacto em cada processo, personaliza o treinamento e gera os relatórios que o sponsor, o responsável pelo programa dentro da empresa, recebe. Funciona como copiloto do mentor: organiza o processo, resguarda o seu cumprimento e torna o progresso e os resultados visíveis em tempo real.
+- O que registra: impacto no que foi trabalhado (o processo, a aplicação ou o desenvolvimento que cada participante aborda); crescimento de habilidades (para acompanhar a trajetória de cada pessoa e adaptar o trabalho ao seu nível); participação no programa (presença, horas de mentoria e satisfação de participantes e responsáveis).
+- O que oferece: relatórios de progresso e impacto para os responsáveis pelo programa; guias e resumos que ajudam a recuperar e reutilizar o que foi trabalhado; uma trajetória que se adapta ao nível e ao progresso de cada participante.
+- Não substitui o mentor: a pessoa treina com acompanhamento especialista e a plataforma registra informação para seguir e personalizar a trajetória. A experiência humana e o acompanhamento da trajetória com IA são os dois motores do método da Teamcubation.
+
+### AI Rank
+
+https://airank.teamcubation.com — diagnóstico sem custo.
+
+- O AI Rank é o diagnóstico gratuito de adoção de IA da Teamcubation, sem custo e sem compromisso. Mede o nível real de cada pessoa por função e por dimensão, a distância entre o nível atual e o que a empresa precisa, e qual programa corresponde conforme a lacuna. Antes de escolher um programa, convém saber de onde parte cada pessoa.
+
+### Clientes e trajetória
+
+Página: https://teamcubation.com/pt/clientes/
+
+- Mais de 90 empresas líderes confiam na Teamcubation, entre elas Mercado Livre, Coca-Cola e Visa. A Teamcubation atua na Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha, e entrega os seus programas de forma remota a equipes em qualquer geografia.
+- Setores: banca, saúde, logística, energia e tecnologia.
+- Impacto: resultados de até 35% de eficiência nos processos em que atuou. É um resultado agregado da experiência da Teamcubation: não representa uma média nem uma melhoria geral de toda a empresa, e não é atribuído a cada cliente citado.
+- O ponto de partida é uma necessidade concreta: um processo que precisa ser automatizado, uma equipe que começa a usar IA ou um produto que precisa ser construído.
+- Clientes que o site mostra: Mercado Libre, Coca-Cola, Visa, EY, HP, Cargill, Accenture, Tenaris, Boston Scientific, Banco Macro, Banco Comafi, Swiss Medical, BYMA, WTW, Prosegur, Andreani, Arcor Agronegocios, Advanta, GDM Seeds, Vista Energy, Aconcagua Energía, Clear Petroleum, Elea, Endeavor, Rootstock Labs (IOVlabs), JusToken, TCA, Grupo Corven, Max Capital, Plaza Logística, Celsur, Defiba, Metropol, Bolsapel, Ceibos Group, Espartina, Telviso, Vital Network, Strix, Natura, Payway, Parque de la Innovación, ArcelorMittal Acindar, Dreamco, Raízen e Geneia.
+
+### Sobre e equipe
+
+Página: https://teamcubation.com/pt/sobre/
+
+- A Teamcubation foi fundada em 2021 em Buenos Aires, Argentina, por Mariano Wechsler e Diego Jolodenco. Nasceu formando desenvolvedores enquanto trabalhavam sobre projetos de software, que é a base do programa Incubation, e aplica o mesmo princípio às tarefas de negócio, à automação e à construção com IA: que as pessoas desenvolvam experiência trabalhando sobre necessidades que conhecem.
+- Equipe: Mariano Wechsler (cofundador e CEO), Diego Jolodenco (cofundador e COO), Jonathan Tapicer (CTO), Agustín Pina (Head of Training), Tomás Estruga (diretor comercial e de alianças), Tomás Muñoz (CFO) e Florencia Díaz (Head of People).
+
+### Contato
+
+Página: https://teamcubation.com/pt/contato/ · E-mail: hola@teamcubation.com
+
+- «Vamos conversar sobre o próximo passo da sua equipe.» Conte qual processo você precisa melhorar, o que quer construir e como a sua equipe trabalha hoje. Em uma conversa, a Teamcubation identifica qual programa se encaixa na necessidade e quais informações são necessárias para definir o primeiro passo.
+- Não é preciso ter escolhido um programa, e é possível entrar em contato mesmo que a empresa ainda não use IA: o ponto de partida pode ser o Starter AI ou um Discovery para priorizar oportunidades.
+- O que ajuda a entender a necessidade: a equipe (quem participa e qual experiência tem usando IA ou desenvolvendo software) e o ponto de partida (quais ferramentas usa hoje e qual resultado quer alcançar).
+- O formulário de contato pede como você se identifica (represento uma empresa; trabalho com RH ou desenvolvimento de talentos; lidero uma equipe de tecnologia; busco me treinar individualmente; outro), nome, e-mail, telefone e mensagem. A Teamcubation responde em menos de 48 horas úteis para agendar a conversa.
+
+### Outros links
+
+- [Blog](https://blog.teamcubation.com/): O blog da Teamcubation.
+- [Termos e Condições](https://teamcubation.com/terms/): Condições gerais do produto Teamboarding, oferecido pela TQ DESARROLLADORES S.A.S. (em inglês).
+- [Política de Privacidade](https://teamcubation.com/privacy-policy/): Política de privacidade e cookies do site e dos serviços (em inglês).
+- [Mapa do site](https://teamcubation.com/sitemap-index.xml): Todas as páginas em espanhol, inglês e português.

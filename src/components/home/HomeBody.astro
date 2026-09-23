@@ -1,0 +1,214 @@
+---
+// Cuerpo del Home — content-driven por idioma. Lo usan index.astro (es) y en/index.astro (en).
+import { Image } from "astro:assets";
+import HeroHome from "./HeroHome.astro";
+import TiraLogos from "./TiraLogos.astro";
+import CapasApiladas from "./CapasApiladas.astro";
+import CierreCoral from "../CierreCoral.astro";
+import piramide from "../../assets/home/piramide-densa.png";
+import mentora from "../../assets/home/mentora-laptop-dupla.png";
+import equipoResultado from "../../assets/home/equipo-resultado.png";
+import esferaAmbar from "../../assets/home/esfera-ambar.png";
+import esferaLima from "../../assets/home/esfera-lima.png";
+import aiRank from "../../assets/home/ai-rank-bloques.png";
+import { homeContent } from "../../content/home";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props {
+  lang?: Locale;
+}
+const { lang = defaultLocale } = Astro.props;
+const c = homeContent[lang];
+---
+
+<main id="contenido">
+  <!-- 01 · Hero -->
+  <HeroHome content={c.hero} lang={lang} />
+
+  <!-- 02 · Tira de logos -->
+  <TiraLogos />
+
+  <!-- 03 · Capacidad (banda lima) -->
+  <section class="cap">
+    <div class="contenedor cap__inner">
+      <div class="cap__texto">
+        <h2 class="cap__h2">{c.capacidad.h2}</h2>
+        <div class="cap__lista">
+          <p>{c.capacidad.listaIntro}</p>
+          <ul>
+            {c.capacidad.bullets.map((b) => (
+              <li>
+                <img src={esferaAmbar.src} alt="" aria-hidden="true" width="9" height="9" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p class="cap__p">{c.capacidad.p}</p>
+        <div class="chips">
+          {c.capacidad.chips.map((chip) => <span class="chip">{chip}</span>)}
+        </div>
+        <p class="cap__link"><a class="enlace" href={c.capacidad.link.href}>{c.capacidad.link.label}</a></p>
+      </div>
+      <div class="cap__media">
+        <Image src={piramide} alt={c.alts.capacidadImg} loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · Criterio + Capacidad (dos columnas con foto) -->
+  <section class="dosfotos">
+    <div class="contenedor dosfotos__grid">
+      <div class="ff">
+        <div class="ff__foto">
+          <Image src={mentora} alt={c.alts.criterioFoto} loading="lazy" />
+        </div>
+        <h2 class="ff__h2" set:html={c.dosfotos.criterioH2Html} />
+        <p class="ff__p">{c.dosfotos.criterioP}</p>
+        <p class="ff__link"><a class="enlace" href={c.dosfotos.criterioLink.href}>{c.dosfotos.criterioLink.label}</a></p>
+      </div>
+      <div class="ff ff--stretch">
+        <div class="ff__foto">
+          <Image src={equipoResultado} alt={c.alts.resultadoFoto} loading="lazy" />
+        </div>
+        <h2 class="ff__h2">{c.dosfotos.capacidadH2}</h2>
+        <div class="ff__panel">
+          <p>{c.dosfotos.panelP}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · Necesidades y programas (3 capas apiladas) -->
+  <CapasApiladas content={c.capas} />
+
+  <!-- 06 · AI Rank (banda lima) -->
+  <section class="airank">
+    <div class="contenedor">
+      <article class="airank__grid">
+        <div>
+          <p class="airank__eyebrow">{c.airank.eyebrow}</p>
+          <h2 class="airank__h2">{c.airank.h2}</h2>
+          <p class="airank__intro">{c.airank.intro}</p>
+        </div>
+        <div>
+          <a class="airank__card" href="https://airank.teamcubation.com" target="_blank" rel="noopener">
+            <div class="airank__body">
+              <h3 class="airank__titulo">{c.airank.cardTitulo}</h3>
+              <p class="airank__desc">{c.airank.cardDesc}</p>
+              <ul class="airank__lista">
+                {c.airank.bullets.map((b) => (
+                  <li>
+                    <img src={esferaLima.src} alt="" aria-hidden="true" width="9" height="9" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="airank__accion">{c.airank.accion}</p>
+            </div>
+            <img class="airank__img" src={aiRank.src} alt={c.alts.airankImg} />
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 07 · Evidencia -->
+  <section class="evid">
+    <div class="contenedor">
+      <h2 class="evid__h2">{c.evidencia.h2}</h2>
+      <p class="evid__p">{c.evidencia.p}</p>
+      <div class="evid__cards">
+        {c.evidencia.stats.map((s) => (
+          <div class="stat">
+            <p class="stat__num">{s.num}</p>
+            <p class="stat__lbl">{s.lbl}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="evid__tira"><TiraLogos /></div>
+    <div class="contenedor evid__link">
+      <a class="enlace" href={c.evidencia.link.href}>{c.evidencia.link.label}</a>
+    </div>
+  </section>
+
+  <!-- 08 · Cierre -->
+  <CierreCoral lang={lang} grande />
+</main>
+
+<style>
+  /* 03 · Capacidad (banda lima) */
+  .cap { background: var(--color-lima); padding: 80px 0 0; overflow: hidden; }
+  .cap__inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: end; }
+  .cap__texto { padding-bottom: 80px; }
+  .cap__h2 { font-size: 36px; line-height: 1.12; max-width: 22ch; margin: 0 0 20px; }
+  .cap__lista { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 66ch; margin: 0 0 16px; }
+  .cap__lista ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+  .cap__lista li { display: grid; grid-template-columns: 9px 1fr; gap: 10px; align-items: start; }
+  .cap__lista li img { margin-top: 9px; display: block; }
+  .cap__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 66ch; margin: 0; }
+  .chips { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .chip { background: #fff; border-radius: var(--radius-capsula); padding: 8px 18px; font-family: var(--font-display); font-weight: 500; font-size: 17px; }
+  .cap__link { margin: 24px 0 0; }
+  .cap__media :global(img) { width: 132%; max-width: 132%; height: auto; margin: 0 -16% -1px auto; object-fit: contain; display: block; align-self: end; }
+
+  /* 04 · Dos fotos */
+  .dosfotos { padding: 112px 0 0; }
+  .dosfotos__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: stretch; }
+  .ff--stretch { display: flex; flex-direction: column; }
+  .ff__foto { height: 220px; margin: 0 0 20px; border-radius: var(--radius-tarjeta); overflow: hidden; }
+  .ff__foto :global(img) { width: 100%; height: 220px; object-fit: cover; display: block; }
+  .ff__h2 { font-size: 36px; line-height: 1.12; margin: 0 0 20px; }
+  .ff__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 0 0 20px; }
+  .ff__panel { background: var(--color-coral); border-radius: var(--radius-tarjeta); padding: 28px 32px; }
+  .ff__panel p { margin: 0; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); line-height: 1.5; color: #fff; }
+
+  /* 06 · AI Rank (banda lima) */
+  .airank { background: var(--color-lima); padding: 64px 0; }
+  .airank__grid { display: grid; grid-template-columns: 1fr minmax(0, 1.2fr); gap: 48px; align-items: center; }
+  .airank__eyebrow { font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.2; color: var(--color-coral); margin: 0 0 14px; }
+  .airank__h2 { font-size: 48px; line-height: 1.12; margin: 0; }
+  .airank__intro { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 44ch; margin: 18px 0 0; }
+  .airank__card { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 24px; align-items: center; background: #fff; border-radius: var(--radius-tarjeta); padding: 24px; color: var(--color-tinta); text-decoration: none; }
+  .airank__card:hover .airank__accion { text-decoration: underline; text-decoration-thickness: 1px; }
+  .airank__body { display: flex; flex-direction: column; gap: 12px; }
+  .airank__titulo { font-size: 22px; line-height: 1.12; color: var(--color-coral); margin: 0; }
+  .airank__desc, .airank__lista { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
+  .airank__lista { list-style: none; padding: 0; display: grid; gap: 8px; }
+  .airank__lista li { display: grid; grid-template-columns: 9px 1fr; gap: 10px; align-items: start; }
+  .airank__lista li img { margin-top: 7px; display: block; }
+  .airank__accion { margin: 0; font-family: var(--font-body); font-weight: var(--peso-cuerpo-bold); font-size: var(--fs-cuerpo); }
+  .airank__img { width: 100%; height: 160px; object-fit: contain; display: block; }
+
+  /* 07 · Evidencia */
+  .evid { padding: 112px 0; }
+  .evid__h2 { font-size: 40px; line-height: 1.12; max-width: 26ch; margin: 0 0 20px; }
+  .evid__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 70ch; margin: 0 0 32px; }
+  .evid__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .stat { background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 32px; }
+  .stat__num { font-family: var(--font-display); font-weight: 650; font-size: 52px; line-height: 1; letter-spacing: -0.02em; margin: 0; }
+  .stat__lbl { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); margin: 8px 0 0; }
+  .evid__tira { margin-top: 32px; }
+  .evid__link { margin-top: 20px; }
+
+  @media (max-width: 1100px) {
+    .cap__inner, .airank__grid { grid-template-columns: 1fr; gap: 32px; }
+    .cap { padding-bottom: 0; }
+    .cap__texto { padding-bottom: 40px; }
+    .dosfotos__grid { grid-template-columns: 1fr; gap: 40px; }
+    .airank__h2 { font-size: 38px; }
+  }
+  @media (max-width: 760px) {
+    .airank__card { grid-template-columns: 1fr; }
+    .airank__img { height: 140px; }
+  }
+  @media (max-width: 720px) {
+    .dosfotos { padding-top: 56px; }
+    .evid { padding: 56px 0; }
+    .evid__cards { grid-template-columns: 1fr; }
+    .stat__num { font-size: 40px !important; }
+    /* Banda lima "Desarrollamos la capacidad…": imagen pegada al fondo. */
+    .cap { padding-bottom: 0 !important; }
+  }
+</style>

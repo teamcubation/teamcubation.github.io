@@ -1,0 +1,34 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../../layouts/Layout.astro";
+import ProgramaBody from "../../../components/pages/ProgramaBody.astro";
+import { serviciosPt, ORDEN } from "../../../data/servicios";
+import { serviceSchema, breadcrumbSchema, SITE } from "../../../lib/seo";
+
+export const getStaticPaths = (() => {
+  return ORDEN.map((key) => {
+    const svc = serviciosPt[key];
+    return {
+      params: { slug: svc.slug.replace("/servicios/", "") },
+      props: { svc },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { svc } = Astro.props;
+const slug = svc.slug.replace("/servicios/", "");
+const url = `${SITE.url}/pt/servicos/${slug}`;
+const translations = { es: svc.slug, en: `/en/services/${slug}`, pt: `/pt/servicos/${slug}` };
+const schema = [
+  serviceSchema(svc, "pt", url),
+  breadcrumbSchema([
+    { name: "Início", path: "/pt/" },
+    { name: "Serviços", path: "/pt/servicos" },
+    { name: svc.nombre, path: `/pt/servicos/${slug}` },
+  ]),
+];
+---
+
+<Layout title={svc.title} description={svc.meta} lang="pt" translations={translations} schema={schema}>
+  <ProgramaBody svc={svc} lang="pt" />
+</Layout>

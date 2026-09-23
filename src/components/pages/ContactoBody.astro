@@ -1,0 +1,317 @@
+---
+import { contactoContent } from "../../content/contacto";
+import { ruta } from "../../i18n/routes";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = contactoContent[lang];
+
+const homeHref = ruta("home", lang);
+const serviciosHref = ruta("servicios", lang);
+
+// Mismo endpoint que el sitio anterior (API de contacto de Teamcubation).
+const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
+---
+
+<main id="contenido">
+  <!-- Hero -->
+  <section class="hero-cont">
+    <div class="contenedor">
+      <nav class="miga-coral" aria-label="Ruta de navegación">
+        <a href={homeHref}>{c.migaHome}</a><span> / {c.migaActual}</span>
+      </nav>
+      <h1 class="hero-cont__h1">{c.heroH1}</h1>
+      <p class="hero-cont__p">{c.heroP}</p>
+    </div>
+  </section>
+
+  <!-- Formulario -->
+  <section class="sec-form" id="formulario">
+    <div class="contenedor">
+      <div class="form-exito" data-form-exito hidden>
+        <h2 class="h2-30">{c.exito.h2}</h2>
+        <p class="form-exito__p">{c.exito.p}</p>
+      </div>
+
+      <div data-form-wrap>
+        <form
+          class="form"
+          data-contacto-form
+          novalidate
+          data-endpoint={ENDPOINT}
+          data-lang={lang}
+          data-enviando={c.form.enviando}
+          data-error-validacion={c.form.error}
+          data-error-envio={c.form.errorEnvio}
+        >
+          <div class="form__grid">
+            <label class="campo">
+              <span class="campo__label">{c.form.perfilLabel}</span>
+              <span class="select-wrap">
+                <select name="perfil" required>
+                  <option value="">{c.form.perfilPlaceholder}</option>
+                  {c.form.perfilOpciones.map((o) => (
+                    <option value={o.value}>{o.label}</option>
+                  ))}
+                </select>
+                <svg class="select-arrow" aria-hidden="true" width="16" height="10" viewBox="0 0 16 10">
+                  <path d="M1 1l7 7 7-7" fill="none" stroke="#171414" stroke-width="1.5"></path>
+                </svg>
+              </span>
+            </label>
+
+            <label class="campo">
+              <span class="campo__label">{c.form.nombreLabel}</span>
+              <input name="nombre" type="text" required autocomplete="name" />
+            </label>
+
+            <label class="campo">
+              <span class="campo__label">{c.form.emailLabel}</span>
+              <input name="email" type="email" required autocomplete="email" />
+            </label>
+
+            <div class="campo">
+              <span class="campo__label">{c.form.telLabel}</span>
+              <div class="tel">
+                <span class="tel__mas" aria-hidden="true">+</span>
+                <input name="pais" type="tel" inputmode="numeric" placeholder={c.form.telPaisPlaceholder} aria-label={c.form.telPaisAria} />
+                <input name="area" type="tel" inputmode="numeric" placeholder={c.form.telAreaPlaceholder} aria-label={c.form.telAreaAria} />
+                <input name="numero" type="tel" inputmode="numeric" placeholder={c.form.telNumeroPlaceholder} aria-label={c.form.telNumeroAria} />
+              </div>
+            </div>
+          </div>
+
+          <label class="campo">
+            <span class="campo__label">{c.form.mensajeLabel}</span>
+            <textarea name="mensaje" rows="5" required placeholder={c.form.mensajePlaceholder}></textarea>
+          </label>
+
+          <p class="form__error" role="alert" data-form-error hidden>
+            {c.form.error}
+          </p>
+
+          <div>
+            <button type="submit" class="btn-enviar">{c.form.boton}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué nos ayuda -->
+  <section class="sec-b96">
+    <div class="contenedor">
+      <h2 class="h2-36 mb28">{c.ayudaH2}</h2>
+      <div class="cards3">
+        {c.ayuda.map((a) => (
+          <article class="card-gris">
+            <h3 class="card__titulo">{a.titulo}</h3>
+            <p class="card__p">{a.texto}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Antes de conversar (FAQ) -->
+  <section class="sec-b112">
+    <div class="contenedor">
+      <h2 class="h2-32 mb28">{c.faqH2}</h2>
+      <div class="cards2">
+        {c.faqs.map((f) => (
+          <article class="card-gris">
+            <h3 class="faq__q">{f.pregunta}</h3>
+            <p class="card__p">{f.respuesta}</p>
+          </article>
+        ))}
+      </div>
+      <p class="link-final"><a class="enlace" href={serviciosHref}>{c.linkFinal}</a></p>
+    </div>
+  </section>
+</main>
+
+<style>
+  .h2-30 { font-size: 30px; line-height: 1.12; margin: 0; }
+  .h2-32 { font-size: 32px; line-height: 1.12; margin: 0; }
+  .h2-36 { font-size: 36px; line-height: 1.12; margin: 0; }
+  .mb28 { margin-bottom: 28px; }
+
+  /* Hero */
+  .hero-cont { padding-block: 72px 96px; }
+  .hero-cont__h1 { font-size: clamp(34px, 3.8vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 20ch; margin: 0; }
+  .hero-cont__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 58ch; margin: 24px 0 0; }
+
+  .miga-coral { font-family: var(--font-display); font-weight: 650; font-size: clamp(17px, 1.5vw, 25px); line-height: 1.2; color: var(--color-coral); margin: 0 0 14px; }
+  .miga-coral a { color: var(--color-coral); text-decoration: none; }
+  .miga-coral a:hover { text-decoration: underline; }
+
+  /* Formulario */
+  .sec-form { padding-block: 0 96px; }
+  .form { display: grid; gap: 20px; }
+  .form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; }
+  .campo { display: grid; gap: 6px; }
+  .campo__label { font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-secundario); line-height: 1.2; color: var(--color-tinta); }
+
+  .campo input,
+  .campo select,
+  .campo textarea {
+    width: 100%;
+    padding: 0 12px;
+    height: 44px;
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radius-control);
+    background: #fff;
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    color: var(--color-tinta);
+  }
+  .campo textarea { min-height: 140px; height: auto; padding: 10px 12px; line-height: 1.45; resize: vertical; }
+  .campo input:focus,
+  .campo select:focus,
+  .campo textarea:focus { outline: none; border: 1.5px solid var(--color-tinta); }
+
+  .select-wrap { position: relative; display: block; }
+  .campo select { appearance: none; -webkit-appearance: none; padding-right: 44px; }
+  .select-arrow { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; display: block; }
+
+  .tel { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr); gap: 12px; align-items: center; }
+  .tel__mas { font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); color: var(--color-gris-texto); }
+
+  .form__error { margin: 0; font-family: var(--font-body); font-weight: 700; font-size: 14px; color: var(--color-coral); }
+
+  .btn-enviar {
+    background: var(--color-lima);
+    color: var(--color-coral);
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: 26px;
+    line-height: 1.2;
+    border: 0;
+    border-radius: var(--radius-capsula);
+    padding: 0.45em 1.4em;
+    cursor: pointer;
+    transition: background-color 160ms ease-out;
+  }
+  .btn-enviar:hover { background: var(--color-lima-hover); }
+
+  .form-exito { background: var(--color-lima); border-radius: var(--radius-tarjeta); padding: 40px; }
+  .form-exito__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 60ch; margin: 12px 0 0; }
+
+  /* Qué nos ayuda / FAQ */
+  .sec-b96 { padding-block: 0 96px; }
+  .sec-b112 { padding-block: 0 112px; }
+  .cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .cards2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .card-gris { background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 24px; }
+  .card__titulo { font-size: 22px; line-height: 1.12; color: var(--color-coral); margin: 0; }
+  .faq__q { font-size: 21px; line-height: 1.15; color: var(--color-coral); margin: 0; }
+  .card__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 12px 0 0; }
+  .link-final { margin: 24px 0 0; }
+
+  [hidden] { display: none !important; }
+
+  @media (max-width: 1100px) {
+    .cards3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .form__grid { grid-template-columns: 1fr; }
+    .cards3,
+    .cards2 { grid-template-columns: 1fr; }
+    .sec-b96 { padding-bottom: 56px; }
+    .sec-b112 { padding-bottom: 56px; }
+  }
+</style>
+
+<script>
+  // Validación cliente + envío al mismo endpoint que el sitio anterior.
+  // Contrato de payload idéntico al form viejo:
+  // { full_name, message, organization, phone_number, email, origin_extra, lang, selectedService }
+  const form = document.querySelector<HTMLFormElement>("[data-contacto-form]");
+  if (form) {
+    const endpoint = form.dataset.endpoint!;
+    const lang = form.dataset.lang || "es";
+    const errorEl = document.querySelector<HTMLElement>("[data-form-error]");
+    const errValidacion = form.dataset.errorValidacion || "";
+    const errEnvio = form.dataset.errorEnvio || "";
+    const submitBtn = form.querySelector<HTMLButtonElement>(".btn-enviar");
+    const labelDefault = submitBtn?.textContent || "";
+    const labelEnviando = form.dataset.enviando || labelDefault;
+
+    const showError = (msg: string) => {
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.hidden = false;
+      }
+    };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const f = new FormData(form);
+      const nombre = String(f.get("nombre") || "").trim();
+      const mensaje = String(f.get("mensaje") || "").trim();
+      const email = String(f.get("email") || "").trim();
+      const perfil = String(f.get("perfil") || "");
+      const ok =
+        perfil &&
+        nombre &&
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) &&
+        mensaje;
+
+      if (!ok) {
+        showError(errValidacion);
+        return;
+      }
+      if (errorEl) errorEl.hidden = true;
+
+      // Teléfono: "+país área número"; si queda solo "+", se omite.
+      const pais = String(f.get("pais") || "").trim();
+      const area = String(f.get("area") || "").trim();
+      const numero = String(f.get("numero") || "").trim();
+      let phone: string | undefined = `+${pais} ${area} ${numero}`;
+      if (phone.trim() === "+") phone = undefined;
+
+      const params = new URLSearchParams(window.location.search);
+      const selectedService = params.get("selectedService") || "";
+
+      const payload = {
+        full_name: nombre,
+        message: mensaje,
+        organization: undefined,
+        phone_number: phone,
+        email,
+        origin_extra: perfil,
+        lang,
+        selectedService,
+      };
+
+      if (submitBtn) {
+        submitBtn.textContent = labelEnviando;
+        submitBtn.disabled = true;
+      }
+      try {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error("request failed");
+        const wrap = document.querySelector<HTMLElement>("[data-form-wrap]");
+        const exito = document.querySelector<HTMLElement>("[data-form-exito]");
+        if (wrap) wrap.hidden = true;
+        if (exito) {
+          exito.hidden = false;
+          exito.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      } catch {
+        showError(errEnvio);
+      } finally {
+        if (submitBtn) {
+          submitBtn.textContent = labelDefault;
+          submitBtn.disabled = false;
+        }
+      }
+    });
+  }
+</script>

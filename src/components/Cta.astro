@@ -1,0 +1,61 @@
+---
+// Cápsula CTA — recurso firma de la marca. Píldora lima (999px), texto coral
+// (como el render del diseño v2 — decisión de Matías 2026-09-15).
+import { ui } from "../i18n/ui";
+import { ruta } from "../i18n/routes";
+import { defaultLocale, type Locale } from "../i18n/config";
+
+interface Props {
+  href?: string;
+  label?: string;
+  tamano?: "sm" | "md" | "lg";
+  class?: string;
+  external?: boolean;
+  lang?: Locale;
+}
+
+const {
+  tamano = "md",
+  class: clase = "",
+  external = false,
+  lang = defaultLocale,
+} = Astro.props;
+
+const href = Astro.props.href ?? ruta("contacto", lang);
+const label = Astro.props.label ?? ui[lang].cta;
+
+const rel = external ? "noopener noreferrer" : undefined;
+const target = external ? "_blank" : undefined;
+---
+
+<a
+  class:list={["cta-capsula", `cta-capsula--${tamano}`, clase]}
+  href={href}
+  rel={rel}
+  target={target}
+>
+  {label}
+</a>
+
+<style>
+  .cta-capsula {
+    display: inline-block;
+    background: var(--color-lima);
+    color: var(--color-coral);
+    font-family: var(--font-display);
+    font-weight: 650;
+    line-height: 1.2;
+    border-radius: var(--radius-capsula);
+    padding: 0.45em 1.4em;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 160ms ease-out;
+  }
+  .cta-capsula:hover {
+    background: var(--color-lima-hover);
+    text-decoration: none;
+  }
+  .cta-capsula--sm { font-size: 16px; }
+  .cta-capsula--md { font-size: 19px; }
+  .cta-capsula--lg { font-size: 26px; }
+</style>

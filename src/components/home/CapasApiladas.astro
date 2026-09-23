@@ -1,0 +1,360 @@
+---
+// Home — «¿Qué podemos lograr juntos?» / «Un punto de partida para cada equipo.»
+// Tres fichas grandes que se apilan al hacer scroll (sticky, escalón 30px, salida
+// conjunta) con fallback estático <1100px. Texto EXACTO del render v2.
+import { Image } from "astro:assets";
+import cuboEsferaLima from "../../assets/home/cubo-esfera-lima.png";
+import capaIntermedia from "../../assets/home/capa-intermedia.png";
+import nucleoIt from "../../assets/home/nucleo-it.png";
+
+export interface CapaContent {
+  titulo: string;
+  prefijo: string;
+  desc: string;
+  imgAlt: string;
+  programas: { nombre: string; href: string; desc: string; dato: string }[];
+}
+export interface CapasContent {
+  grande: string;
+  headH2: string;
+  intro: string;
+  capas: CapaContent[];
+}
+
+interface Props {
+  content?: CapasContent;
+}
+
+// Estructura fija (imágenes y fondos), igual en todos los idiomas.
+const estructura = [
+  { img: cuboEsferaLima, fondo: "gris" as const },
+  { img: capaIntermedia, fondo: "blanco" as const },
+  { img: nucleoIt, fondo: "gris" as const },
+];
+
+const esDefault: CapasContent = {
+  grande: "¿Qué podemos lograr juntos?",
+  headH2: "Un punto de partida para cada equipo.",
+  intro:
+    "Desde aplicar IA en las tareas cotidianas hasta construir software y formar desarrolladores. Cada equipo empieza según lo que necesita resolver y la experiencia que ya tiene.",
+  capas: [
+    {
+      titulo:
+        "Que las personas en su compañía utilicen todo el potencial de la AI para trabajar con mayor eficiencia.",
+      prefijo: "Capa de superficie — equipos de negocio.",
+      desc: "Sus equipos conocen las tareas que necesitan mejorar. El entrenamiento parte de ese conocimiento y trabaja sobre sus herramientas y procesos con foco en la adopción.",
+      imgAlt:
+        "Colaboradores verdes y un mentor naranja moviendo una esfera lima sobre un bloque de concreto",
+      programas: [
+        { nombre: "Starter AI", href: "/servicios/starter-ai", desc: "Equipos sin experiencia previa aprenden a usar IA sobre sus tareas y con las herramientas que ya tienen.", dato: "Un mes." },
+        { nombre: "Booster AI", href: "/servicios/booster-ai", desc: "Equipos de negocio automatizan procesos propios con IA y agentes, acompañados por mentores expertos.", dato: "Cinco semanas." },
+        { nombre: "Booster AI Intensivo", href: "/servicios/booster-ai-intensivo", desc: "Seis personas en tres duplas construyen una primera automatización real por dupla, en un piloto acotado.", dato: "Una semana." },
+      ],
+    },
+    {
+      titulo: "Que las personas más avanzadas en el uso de la IA, puedan construir tecnología.",
+      prefijo: "Capa intermedia — construcción con IA.",
+      desc: "Los perfiles de negocio pueden crear herramientas internas. Los perfiles técnicos pueden profundizar en integraciones y procesos de mayor complejidad.",
+      imgAlt:
+        "Equipos verdes y naranjas construyendo estructuras de concreto con anillos ámbar y piezas lima",
+      programas: [
+        { nombre: "VibeCode Studio", href: "/servicios/vibecode-studio", desc: "Equipos que ya usan IA construyen micro-aplicaciones de negocio, sin programación tradicional.", dato: "Dos meses." },
+        { nombre: "AI Builders", href: "/servicios/ai-builders", desc: "Perfiles técnicos se forman para construir automatizaciones complejas e integraciones entre sistemas dentro de su empresa.", dato: "Cuatro meses, dedicación completa." },
+      ],
+    },
+    {
+      titulo: "Incoporar talento y habilidades tech a su equipo.",
+      prefijo: "Núcleo IT — equipos de desarrollo.",
+      desc: "Entrenamos a los equipos de desarrollo para incorporar IA y formamos desarrolladores mientras construyen el software que la empresa necesita.",
+      imgAlt:
+        "Torre densa de concreto en contrapicado que equipos verdes y naranjas escalan con piezas lima y ámbar",
+      programas: [
+        { nombre: "Booster AI Dev", href: "/servicios/booster-ai-dev", desc: "Equipos de desarrollo incorporan herramientas y agentes de IA sobre su sprint y sus repositorios.", dato: "Un mes." },
+        { nombre: "Incubation", href: "/servicios/incubation", desc: "Software construido mientras se forman los desarrolladores que después pueden integrarse a su equipo.", dato: "Seis meses." },
+      ],
+    },
+  ],
+};
+
+const { content = esDefault } = Astro.props;
+const capas = content.capas.map((c, i) => ({ ...c, ...estructura[i] }));
+---
+
+<section class="capas">
+  <div class="contenedor">
+    <p class="capas__grande"><span class="resaltado">{content.grande}</span></p>
+
+    <div class="capas__head" data-capas-head>
+      <h2 class="capas__h2">{content.headH2}</h2>
+    </div>
+
+    <p class="capas__intro">{content.intro}</p>
+
+    <div class="capas__pila" data-capas-pila>
+      {capas.map((capa, i) => (
+        <article class:list={["capa", `capa--${capa.fondo}`]} data-capa data-stack-i={i + 1}>
+          <div class="capa__texto">
+            <h3 class="capa__titulo">{capa.titulo}</h3>
+            <p class="capa__desc">
+              <strong class="capa__prefijo">{capa.prefijo}</strong> {capa.desc}
+            </p>
+            <div class:list={["capa__programas", `capa__programas--${capa.programas.length}`]}>
+              {capa.programas.map((p) => (
+                <a class="subficha" href={p.href}>
+                  <h4 class="subficha__titulo">{p.nombre}</h4>
+                  <p class="subficha__desc">
+                    {p.desc} <span class="subficha__dato">{p.dato}</span>
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div class="capa__media">
+            <Image src={capa.img} alt={capa.imgAlt} loading="lazy" />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .capas { padding: 112px 0 0; }
+
+  .capas__grande {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: clamp(38px, 4.4vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+  .capas__head {
+    position: sticky;
+    top: 78px;
+    z-index: 5;
+    background: #fff;
+    padding: 12px 0 20px;
+  }
+  .capas__h2 {
+    font-size: 36px;
+    line-height: 1.12;
+    max-width: 26ch;
+  }
+  .capas__intro {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-bajada);
+    line-height: 1.5;
+    max-width: 68ch;
+    margin: 0 0 32px;
+  }
+
+  .capas__pila {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    padding: 32px 0 64px;
+  }
+
+  .capa {
+    position: sticky;
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radius-tarjeta);
+    padding: 28px 40px;
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 1.3fr minmax(0, 0.9fr);
+    gap: 48px;
+    align-items: center;
+  }
+  .capa--gris { background: var(--color-gris-claro); }
+  .capa--blanco { background: #fff; }
+  .capa[data-stack-i="1"] { top: 198px; z-index: 1; }
+  .capa[data-stack-i="2"] { top: 228px; z-index: 2; }
+  .capa[data-stack-i="3"] { top: 258px; z-index: 3; }
+
+  .capa__titulo {
+    font-size: 28px;
+    line-height: 1.12;
+    margin: 0 0 12px;
+  }
+  .capa__desc {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    margin: 0 0 24px;
+    max-width: 62ch;
+  }
+  .capa__prefijo {
+    font-weight: 700;
+    color: var(--color-coral);
+  }
+  .capa__programas {
+    display: grid;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .capa__programas--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .capa__programas--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .capa__media :global(img) {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .subficha {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    border-radius: var(--radius-tarjeta);
+    padding: 24px;
+    color: var(--color-tinta);
+    text-decoration: none;
+    transition: background-color 160ms ease-out;
+  }
+  .capa--gris .subficha { background: #fff; }
+  .capa--blanco .subficha { background: var(--color-gris-claro); }
+  .subficha:hover { background: var(--color-superficie-hover); }
+  .subficha__titulo {
+    font-size: 22px;
+    line-height: 1.12;
+    color: var(--color-coral);
+    margin: 0;
+  }
+  .subficha__desc {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .subficha__dato {
+    background: var(--color-lima);
+    border-radius: 2px;
+    padding: 0 4px;
+  }
+
+  /* ≤1100px: apilado OFF — estático, una columna. */
+  @media (max-width: 1100px) {
+    .capas__head { position: static; top: auto; padding-bottom: 8px; }
+    .capas__pila { gap: 24px; padding-bottom: 48px; height: auto; }
+    .capa {
+      position: static;
+      top: auto;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 32px;
+      min-height: 0;
+    }
+    .capa__programas--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .capa__media :global(img) { max-height: 360px; }
+  }
+  @media (max-width: 720px) {
+    .capas { padding-top: 56px; }
+    .capa { padding: 24px; }
+    .capa__programas--3,
+    .capa__programas--2 { grid-template-columns: 1fr; }
+    .capa__media :global(img) { max-height: 300px; }
+  }
+</style>
+
+<script>
+  // Stacking de las 3 fichas — porta igualarCapas/estatico/onScroll/soltar (design-tech-notes §5).
+  const head = document.querySelector<HTMLElement>("[data-capas-head]");
+  const pila = document.querySelector<HTMLElement>("[data-capas-pila]");
+  const capas = Array.from(document.querySelectorAll<HTMLElement>("[data-capa]"));
+
+  if (head && pila && capas.length === 3) {
+    const topes = [198, 228, 258];
+    let pilaH = 0;
+
+    const estatico = () => {
+      if (window.matchMedia("(max-width:1100px)").matches) return true;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return true;
+      const alta = Math.max(...capas.map((c) => c.offsetHeight));
+      return window.innerHeight < alta + 300;
+    };
+
+    const limpiar = () => {
+      head.style.transform = "";
+      pila.style.height = "";
+      capas.forEach((c) => {
+        c.style.position = "";
+        c.style.top = "";
+        c.style.left = "";
+        c.style.width = "";
+      });
+    };
+
+    const igualar = () => {
+      capas.forEach((c) => (c.style.minHeight = ""));
+      if (estatico()) return;
+      const max = Math.max(...capas.map((c) => c.offsetHeight));
+      capas.forEach((c) => (c.style.minHeight = max + "px"));
+      pilaH = pila.offsetHeight;
+    };
+
+    const soltar = () => {
+      capas.forEach((c, i) => {
+        c.style.position = "sticky";
+        c.style.top = topes[i] + "px";
+        c.style.left = "";
+        c.style.width = "";
+      });
+      head.style.transform = "";
+      pila.style.height = "";
+    };
+
+    const onScroll = () => {
+      if (estatico()) {
+        limpiar();
+        return;
+      }
+      const rp = pila.getBoundingClientRect();
+      const cs = getComputedStyle(pila);
+      const padB = parseFloat(cs.paddingBottom) || 0;
+      const padL = parseFloat(cs.paddingLeft) || 0;
+      const padR = parseFloat(cs.paddingRight) || 0;
+      const ultima = capas[2];
+      const estaticoTop = rp.bottom - padB - ultima.offsetHeight;
+      const dist = estaticoTop - topes[2];
+
+      if (dist > 0) {
+        soltar();
+        pilaH = pila.offsetHeight;
+      } else {
+        const delta = -dist;
+        pila.style.height = pilaH + "px";
+        const left = rp.left + padL;
+        const width = pila.clientWidth - padL - padR;
+        capas.forEach((c, i) => {
+          c.style.position = "fixed";
+          c.style.top = topes[i] - delta + "px";
+          c.style.left = left + "px";
+          c.style.width = width + "px";
+        });
+        const shift = Math.min(Math.max(0, -dist), head.offsetHeight);
+        head.style.transform = `translateY(${-shift}px)`;
+      }
+    };
+
+    const onResize = () => {
+      limpiar();
+      igualar();
+      onScroll();
+    };
+
+    igualar();
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
+    window.addEventListener("load", onResize);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(onResize);
+    requestAnimationFrame(onResize);
+  }
+</script>

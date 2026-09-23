@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NosotrosBody from "../../components/pages/NosotrosBody.astro";
+import { nosotrosContent } from "../../content/nosotros";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const c = nosotrosContent.en;
+const translations = { es: "/nosotros", en: "/en/about", pt: "/pt/sobre" };
+---
+
+<Layout
+  title={c.seoTitle}
+  description={c.seoDesc}
+  lang="en"
+  translations={translations}
+  schema={[breadcrumbSchema([{ name: "Home", path: "/en/" }, { name: "About", path: "/en/about" }])]}
+>
+  <NosotrosBody lang="en" />
+</Layout>

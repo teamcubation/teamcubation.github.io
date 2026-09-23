@@ -1,0 +1,243 @@
+---
+import { Image } from "astro:assets";
+import Cta from "../Cta.astro";
+import Faq from "../Faq.astro";
+import CierreCoral from "../CierreCoral.astro";
+import { getServicios, type Servicio } from "../../data/servicios";
+import { ruta, rutaPrograma } from "../../i18n/routes";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props {
+  svc: Servicio;
+  lang?: Locale;
+}
+const { svc, lang = defaultLocale } = Astro.props;
+const all = getServicios(lang);
+
+// Strings fijos del template por idioma.
+const strings = {
+  es: {
+    inicio: "Inicio",
+    servicios: "Servicios",
+    faqH2: "Preguntas frecuentes.",
+    otrosH2: "Explore otros programas.",
+    metLink: "Cómo trabajamos en Teamcubation",
+    alt: `Escena 3D del programa ${svc.nombre}`,
+    migaAria: "Ruta de navegación",
+  },
+  en: {
+    inicio: "Home",
+    servicios: "Services",
+    faqH2: "Frequently asked questions.",
+    otrosH2: "Explore other programs.",
+    metLink: "How we work at Teamcubation",
+    alt: `3D scene of the ${svc.nombre} program`,
+    migaAria: "Breadcrumb",
+  },
+  pt: {
+    inicio: "Início",
+    servicios: "Serviços",
+    faqH2: "Perguntas frequentes.",
+    otrosH2: "Explore outros programas.",
+    metLink: "Como trabalhamos na Teamcubation",
+    alt: `Cena 3D do programa ${svc.nombre}`,
+    migaAria: "Trilha de navegação",
+  },
+};
+const t = strings[lang];
+
+// Ilustración del hero (astro:assets, optimizada).
+const modulos = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/ilustraciones/*.png",
+  { eager: true }
+);
+const porNombre: Record<string, ImageMetadata> = {};
+for (const rutaImg in modulos) {
+  porNombre[rutaImg.split("/").pop()!] = modulos[rutaImg].default;
+}
+const imagen = porNombre[svc.img];
+
+const segHref = ruta(svc.segLinkKey, lang);
+
+const otros = svc.otros.map((o) => {
+  if (o.k === "servicios") return { label: t.servicios, href: ruta("servicios", lang), frase: o.p };
+  const s = all[o.k];
+  return { label: s.nombre, href: rutaPrograma(s.slug, lang), frase: o.p };
+});
+---
+
+<main id="contenido">
+  <!-- Hero + ficha -->
+  <section class="hero-svc">
+    <div class="contenedor hero-svc__grid">
+      <div>
+        <nav class="miga-coral" aria-label={t.migaAria}>
+          <a href={ruta("home", lang)}>{t.inicio}</a><span> / </span><a href={ruta("servicios", lang)}>{t.servicios}</a><span> / {svc.nombre}</span>
+        </nav>
+        <h1 class="hero-svc__h1">{svc.h1}</h1>
+        <p class="hero-svc__apoyo">{svc.apoyo}</p>
+        <p class="hero-svc__bajada">{svc.bajada}</p>
+        <div class="hero-svc__cta"><Cta lang={lang} /></div>
+        <dl class="ficha">
+          {svc.ficha.map((f) => (
+            <div class="ficha__row">
+              <dt class="ficha__k">{f.k}</dt>
+              <dd class="ficha__v">{f.v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div class="hero-svc__media">
+        <Image src={imagen} alt={t.alt} loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Para quién / alcance -->
+  <section class="sec-flush">
+    <div class="contenedor quien-grid">
+      <article>
+        <h2 class="h2-30">{svc.quienH2}</h2>
+        <p class="p21">{svc.quienP}</p>
+      </article>
+      <article>
+        <h2 class="h2-30">{svc.alcanceH2}</h2>
+        <p class="p21 mw68">{svc.alcanceP}</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Cómo funciona (pasos) -->
+  <section class="sec-t72">
+    <div class="contenedor">
+      <h2 class="h2-30 mb28">{svc.comoH2}</h2>
+      <ol class:list={["pasos", `pasos--${svc.pasos.length}`]}>
+        {svc.pasos.map((paso) => (
+          <li class="paso">
+            <h3 class="paso__n">{paso.n}</h3>
+            <p class="paso__t">{paso.t}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Entrega -->
+  <section class="sec-t72">
+    <div class="contenedor">
+      <h2 class="h2-30 mb16">{svc.entregaH2}</h2>
+      <div class="entrega-panel">
+        <p class="p21 mw72">{svc.entregaP}</p>
+      </div>
+      <div class="entrega-seg">
+        {svc.segH3 && (
+          <div>
+            <h3 class="h3-22 mb8">{svc.segH3}</h3>
+            <p class="p19 mb12">{svc.segP}</p>
+          </div>
+        )}
+        <a class="enlace" href={segHref}>{svc.segLinkT}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec-t88">
+    <div class="contenedor">
+      <h2 class="h2-30 mb32">{t.faqH2}</h2>
+      <Faq items={svc.faqs.map((f) => ({ pregunta: f.q, respuesta: f.a }))} />
+    </div>
+  </section>
+
+  <!-- Explore otros programas -->
+  <section class="sec-otros">
+    <div class="contenedor">
+      <h2 class="h2-28 mb24">{t.otrosH2}</h2>
+      <div class="otros-grid">
+        {otros.map((o) => (
+          <div>
+            <a class="pill" href={o.href}>{o.label}</a>
+            <p class="otros__frase">{o.frase}</p>
+          </div>
+        ))}
+      </div>
+      <p class="otros__met"><a class="enlace" href={ruta("metodologia", lang)}>{t.metLink}</a></p>
+    </div>
+  </section>
+
+  <CierreCoral lang={lang} />
+</main>
+
+<style>
+  .h2-30 { font-size: 30px; line-height: 1.12; margin: 0 0 14px; }
+  .h2-28 { font-size: 28px; line-height: 1.12; margin: 0; }
+  .h3-22 { font-size: 22px; line-height: 1.15; margin: 0; }
+  .mb32 { margin-bottom: 32px; }
+  .mb28 { margin-bottom: 28px; }
+  .mb24 { margin-bottom: 24px; }
+  .mb16 { margin-bottom: 16px; }
+  .p21 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
+  .p19 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
+  .mw68 { max-width: 68ch; }
+  .mw72 { max-width: 72ch; }
+
+  .sec-flush { padding-block: 0; }
+  .sec-t72 { padding-block: 72px 0; }
+  .sec-t88 { padding-block: 88px 0; }
+  .sec-otros { padding-block: 56px 96px; }
+
+  /* Hero */
+  .hero-svc { padding-block: 64px 80px; }
+  .hero-svc__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+  .hero-svc__h1 { font-size: clamp(34px, 3.9vw, 50px); line-height: 1.1; letter-spacing: -0.02em; max-width: 24ch; margin: 0; }
+  .hero-svc__apoyo { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 1.2; color: var(--color-coral); max-width: 44ch; margin: 18px 0 0; }
+  .hero-svc__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 60ch; margin: 18px 0 0; }
+  .hero-svc__cta { margin-top: 32px; }
+  .hero-svc__media :global(img) { width: 100%; height: auto; max-height: 420px; object-fit: contain; display: block; margin-inline: auto; }
+
+  .miga-coral { font-family: var(--font-display); font-weight: 650; font-size: clamp(17px, 1.5vw, 25px); line-height: 1.2; color: var(--color-coral); margin: 0 0 14px; }
+  .miga-coral a { color: var(--color-coral); text-decoration: none; }
+  .miga-coral a:hover { text-decoration: underline; }
+
+  .ficha { margin: 32px 0 0; max-width: 520px; border-top: 1px solid var(--color-linea); }
+  .ficha__row { display: flex; justify-content: space-between; gap: 24px; padding: 14px 0; border-bottom: 1px solid var(--color-linea); }
+  .ficha__k { margin: 0; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-secundario); color: var(--color-gris-texto); }
+  .ficha__v { margin: 0; text-align: right; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-secundario); }
+
+  /* Para quién / alcance */
+  .quien-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
+
+  /* Pasos */
+  .pasos { margin: 0; padding: 0; list-style: none; display: grid; gap: 24px; align-items: stretch; }
+  .pasos--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pasos--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .paso { background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .paso__n { font-size: 21px; line-height: 1.15; color: var(--color-coral); margin: 0; }
+  .paso__t { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
+
+  /* Entrega */
+  .entrega-panel { background: var(--color-lima); border-radius: var(--radius-tarjeta); padding: 32px; }
+  .entrega-seg { margin-top: 24px; max-width: 72ch; }
+
+  /* Otros programas */
+  .otros-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+  .pill { display: inline-block; background: var(--color-gris-claro); border-radius: var(--radius-capsula); padding: 10px 20px; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); color: var(--color-tinta); text-decoration: none; transition: background-color 160ms ease-out; }
+  .pill:hover { background: var(--color-superficie-hover); }
+  .otros__frase { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 12px 0 0; }
+  .otros__met { margin: 28px 0 0; }
+
+  @media (max-width: 1100px) {
+    .sec-t72 { padding-top: 64px; }
+    .sec-t88 { padding-top: 64px; }
+    .hero-svc__grid,
+    .quien-grid { grid-template-columns: 1fr; gap: 40px; }
+    .pasos--3,
+    .pasos--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .otros-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 720px) {
+    .pasos--3,
+    .pasos--4 { grid-template-columns: 1fr; }
+    .sec-otros { padding-bottom: 56px; }
+  }
+</style>

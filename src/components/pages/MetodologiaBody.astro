@@ -1,0 +1,214 @@
+---
+import { Image } from "astro:assets";
+import HeroInterior from "../HeroInterior.astro";
+import Faq from "../Faq.astro";
+import CierreCoral from "../CierreCoral.astro";
+import pedestal from "../../assets/ilustraciones/pedestal-colaboracion-cargan-esfera.png";
+import placaDiana from "../../assets/ilustraciones/placa-diana-figuras.png";
+import montana from "../../assets/ilustraciones/montana-ascenso-cargando-piezas.png";
+import pensarProcesos from "../../assets/ilustraciones/pensar-procesos-sistemas.png";
+import mentorCriterio from "../../assets/ilustraciones/mentor-criterio-dupla.png";
+
+const fichaImgs = [pensarProcesos, mentorCriterio];
+import { metodologiaContent } from "../../content/metodologia";
+import { servicios, ORDEN } from "../../data/servicios";
+import { ruta, rutaPrograma } from "../../i18n/routes";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = metodologiaContent[lang];
+
+const pills = ORDEN.map((k) => ({ label: servicios[k].nombre, href: rutaPrograma(servicios[k].slug, lang) }));
+const tbHref = ruta("teamboarding", lang);
+---
+
+<main id="contenido">
+  <HeroInterior
+    kicker={c.kicker}
+    titulo={c.heroTituloHtml}
+    bajada={c.heroBajada}
+    imagen={pedestal}
+    imagenAlt={c.heroImgAlt}
+    cols="1.1fr 0.9fr"
+    tituloSize="clamp(38px, 4.4vw, 58px)"
+    tituloMaxWidth="16ch"
+    lang={lang}
+  />
+
+  <!-- Escritorio / experiencia -->
+  <section class="sec sec--flush">
+    <div class="contenedor dos-col dos-col--start">
+      {c.s2.map((a) => (
+        <article>
+          <h2 class="h2">{a.h2}</h2>
+          {a.ps.map((p) => <p class="p">{p}</p>)}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Procesos / mentor -->
+  <section class="sec">
+    <div class="contenedor dos-col dos-col--stretch">
+      {c.fichas.map((f, i) => (
+        <article class:list={["ficha", f.cierreHtml && "ficha--col"]}>
+          <Image
+            class:list={["ficha__ilus", i === 0 ? "ficha__ilus--alta" : "ficha__ilus--baja"]}
+            src={fichaImgs[i]}
+            alt=""
+            loading="lazy"
+          />
+          <h2 class="ficha__titulo">{f.titulo}</h2>
+          {f.ps.map((p) => <p class="p">{p}</p>)}
+          {f.cierreHtml && <p class="ficha__cierre" set:html={f.cierreHtml} />}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Banda lima: confianza -->
+  <section class="banda-lima">
+    <div class="contenedor confianza">
+      <h2 class="h2">{c.confianza.h2}</h2>
+      <p class="p">{c.confianza.p}</p>
+    </div>
+  </section>
+
+  <!-- Acompañamiento humano + datos -->
+  <section class="sec">
+    <div class="contenedor dos-col dos-col--center">
+      <div>
+        <h2 class="h2" set:html={c.acomp.h2Html} />
+        <h3 class="h3">{c.acomp.guiasH3}</h3>
+        <p class="p p--bajada">{c.acomp.guiasP}</p>
+        <h3 class="h3">{c.acomp.tbH3}</h3>
+        <p class="p">{c.acomp.tbP}</p>
+        <p class="p nota-coral">{c.acomp.nota}</p>
+        <a class="enlace" href={tbHref}>{c.acomp.linkLabel}</a>
+      </div>
+      <div class="media">
+        <Image src={placaDiana} alt="" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo se trabaja: pasos -->
+  <section class="sec sec--flush-b">
+    <div class="contenedor">
+      <h2 class="h2 mb32">{c.pasosH2}</h2>
+      <ol class="pasos">
+        {c.pasos.map((paso) => (
+          <li class="paso">
+            <h3 class="paso__titulo">{paso.titulo}</h3>
+            <p class="paso__p">{paso.p}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Qué queda -->
+  <section class="sec sec--flush-b">
+    <div class="contenedor dos-col dos-col--center dos-col--09">
+      <div class="media">
+        <Image src={montana} alt={c.quedaImgAlt} loading="lazy" />
+      </div>
+      <div>
+        <h2 class="h2 mb24">{c.quedaH2}</h2>
+        <div class="queda">
+          {c.queda.map((q) => (
+            <div>
+              <h3 class="h3">{q.h3}</h3>
+              <p class="p" set:html={q.pHtml} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + programas -->
+  <section class="sec sec--flush-b">
+    <div class="contenedor">
+      <h2 class="h2 mb32">{c.faqH2}</h2>
+      <Faq items={c.faqs} />
+      <div class="programas">
+        <h2 class="h2-sm">{c.programasH2}</h2>
+        <div class="pills">
+          {pills.map((p) => <a class="pill" href={p.href}>{p.label}</a>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CierreCoral lang={lang} grande />
+</main>
+
+<style>
+  .sec { padding-block: 96px; }
+  .sec--flush { padding-block: 0; }
+  .sec--flush-b { padding-block: 0 112px; }
+
+  .h2 { font-size: 36px; line-height: 1.12; margin: 0 0 16px; }
+  .dos-col--start .h2 { font-size: 32px; }
+  .mb32 { margin-bottom: 32px; }
+  .mb24 { margin-bottom: 24px; }
+  .h3 { font-size: 24px; line-height: 1.15; margin: 0 0 8px; }
+  .queda .h3 { font-size: 22px; }
+  .h2-sm { font-size: 28px; line-height: 1.12; margin: 0 0 16px; }
+  .p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 0 0 16px; }
+  .p--bajada { font-size: var(--fs-bajada); }
+  .p:last-child { margin-bottom: 0; }
+
+  .dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .dos-col--start { align-items: start; }
+  .dos-col--center { align-items: center; }
+  .dos-col--stretch { align-items: stretch; gap: 24px; }
+  .dos-col--09 { grid-template-columns: 0.9fr 1.1fr; }
+
+  .ficha { background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 32px; display: flex; flex-direction: column; }
+  .ficha :global(.ficha__ilus) { width: 100%; object-fit: contain; align-self: center; display: block; mix-blend-mode: multiply; }
+  /* El PNG trae mucho margen blanco: el margen negativo lo recorta para que el dibujo
+     quede a la misma distancia del borde que el de la otra ficha y los títulos alineados. */
+  .ficha :global(.ficha__ilus--alta) { max-width: 440px; height: 248px; margin: -14px 0 0; }
+  .ficha :global(.ficha__ilus--baja) { max-width: 600px; height: 220px; margin: 0; }
+  .ficha--col { gap: 14px; }
+  .ficha .p { font-size: 14px; }
+  .ficha--col .p { margin: 0; }
+  .ficha__titulo { font-size: 28px; line-height: 1.12; color: var(--color-coral); margin: 0 0 14px; }
+  .ficha--col .ficha__titulo { margin: 0; }
+  .ficha__cierre { margin: auto 0 0; font-family: var(--font-display); font-weight: 650; font-size: 24px; line-height: 1.15; }
+
+  .banda-lima { background: var(--color-lima); padding-block: 88px; }
+  .confianza { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+  .confianza .h2 { margin: 0; }
+  .confianza .p { margin: 0; max-width: 66ch; }
+
+  .nota-coral { color: var(--color-coral); font-size: var(--fs-cuerpo); }
+  .media :global(img) { width: 100%; height: auto; max-height: 400px; object-fit: contain; display: block; }
+
+  .pasos { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .paso { background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 24px; }
+  .paso__titulo { font-size: 22px; line-height: 1.12; color: var(--color-coral); margin: 0; }
+  .paso__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 12px 0 0; }
+
+  .queda { display: flex; flex-direction: column; gap: 20px; }
+  .queda .p { margin: 0; }
+
+  .programas { margin-top: 40px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 12px; }
+  .pill { background: var(--color-gris-claro); border-radius: var(--radius-capsula); padding: 10px 20px; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); color: var(--color-tinta); text-decoration: none; transition: background-color 160ms ease-out; }
+  .pill:hover { background: var(--color-superficie-hover); }
+
+  @media (max-width: 1100px) {
+    .sec { padding-block: 64px; }
+    .banda-lima { padding-block: 64px; }
+    .dos-col, .confianza { grid-template-columns: 1fr; gap: 32px; }
+    .dos-col--09 { grid-template-columns: 1fr; }
+    .pasos { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .sec--flush-b { padding-bottom: 56px; }
+  }
+</style>

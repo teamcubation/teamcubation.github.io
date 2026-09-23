@@ -1,0 +1,116 @@
+---
+// Tira de logos de clientes — marquee lineal 60s, con control «Pausar logos» y
+// respeto por reduced-motion. Orden y técnica: design-tech-notes §6.
+import { Image } from "astro:assets";
+
+const modulos = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/clientes/*.png",
+  { eager: true }
+);
+const porSlug: Record<string, ImageMetadata> = {};
+for (const ruta in modulos) {
+  const slug = ruta.split("/").pop()!.replace(".png", "");
+  porSlug[slug] = modulos[ruta].default;
+}
+
+// Orden exacto del diseño.
+const orden: [string, string][] = [
+  ["mercado-libre", "Mercado Libre"],
+  ["accenture", "Accenture"],
+  ["banco-comafi", "Banco Comafi"],
+  ["macro", "Macro"],
+  ["ey", "EY"],
+  ["natura", "Natura"],
+  ["coca-cola", "Coca-Cola"],
+  ["hp", "HP"],
+  ["swiss-medical", "Swiss Medical"],
+  ["iovlabs", "IOVlabs"],
+  ["visa", "Visa"],
+  ["arcor-agro", "Arcor Agro"],
+  ["advanta", "Advanta"],
+  ["tca", "TCA"],
+  ["raizen", "Raízen"],
+  ["geneia", "Geneia"],
+  ["vista", "Vista"],
+];
+const logos = orden
+  .filter(([slug]) => porSlug[slug])
+  .map(([slug, nombre]) => ({ img: porSlug[slug], nombre }));
+---
+
+<div class="tira" data-tira-wrap>
+  <div class="tira__track" data-tira-track>
+    <ul class="tira__grupo">
+      {logos.map((l) => (
+        <li class="tira__logo">
+          <Image src={l.img} alt={l.nombre} loading="lazy" />
+        </li>
+      ))}
+    </ul>
+    <ul class="tira__grupo" aria-hidden="true">
+      {logos.map((l) => (
+        <li class="tira__logo">
+          <Image src={l.img} alt="" loading="lazy" />
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .tira {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 24px 0;
+  }
+  .tira__track {
+    display: flex;
+    width: max-content;
+    animation: tc-tira 60s linear infinite;
+  }
+  .tira__track.paused { animation-play-state: paused; }
+  .tira__grupo {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 0 64px 0 0;
+    margin: 0;
+    list-style: none;
+  }
+  .tira__logo {
+    flex: none;
+    width: 150px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tira__logo :global(img) {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  @keyframes tc-tira {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tira__track {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px 48px;
+    }
+    .tira__grupo[aria-hidden="true"] { display: none; }
+  }
+
+  /* Pausa al interactuar (sin botón visible) — accesibilidad del marquee. */
+  .tira:hover .tira__track,
+  .tira:focus-within .tira__track {
+    animation-play-state: paused;
+  }
+</style>

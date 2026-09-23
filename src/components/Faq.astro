@@ -1,0 +1,55 @@
+---
+// FAQ — tarjetas SIEMPRE abiertas (no acordeón). Respuestas en el HTML inicial
+// (accesible sin JS). Pregunta como H3, respuesta visible. Ver design-tech-notes §7.
+interface Props {
+  titulo?: string;
+  items: { pregunta: string; respuesta: string }[];
+}
+const { titulo, items } = Astro.props;
+---
+
+<div class="faq">
+  {titulo && <h2 class="faq__titulo">{titulo}</h2>}
+  <div class="faq__grid">
+    {items.map((f) => (
+      <article class="faq__item">
+        <h3 class="faq__pregunta">{f.pregunta}</h3>
+        <p class="faq__respuesta">{f.respuesta}</p>
+      </article>
+    ))}
+  </div>
+</div>
+
+<style>
+  .faq__titulo {
+    font-size: clamp(28px, 3.6vw, 40px);
+    line-height: 1.1;
+    margin: 0 0 32px;
+  }
+  .faq__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .faq__item {
+    background: var(--color-gris-claro);
+    border-radius: var(--radius-tarjeta);
+    padding: 24px;
+  }
+  .faq__pregunta {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: 21px;
+    color: var(--color-coral);
+  }
+  .faq__respuesta {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    margin: 12px 0 0;
+  }
+  @media (max-width: 720px) {
+    .faq__grid { grid-template-columns: 1fr; }
+  }
+</style>

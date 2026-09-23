@@ -1,0 +1,68 @@
+---
+// Wrapper de páginas legales (Términos, Privacidad). Contenido en inglés
+// (mismos textos del sitio anterior), maquetado con el diseño nuevo.
+// El <article class="legal" lang="en"> lo provee cada página vía slot.
+---
+
+<main class="legal-wrap">
+  <div class="legal-inner">
+    <slot />
+  </div>
+</main>
+
+<style>
+  .legal-wrap { padding-block: 64px 96px; }
+  .legal-inner {
+    max-width: calc(820px + 2 * var(--gutter));
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* El artículo llega por slot (scope de la página) → estilos globales. */
+  .legal-wrap :global(.legal) {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.6;
+    color: var(--color-tinta);
+  }
+  .legal-wrap :global(.legal h1) {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: clamp(30px, 3.6vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .legal-wrap :global(.legal h2) {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 40px 0 12px;
+  }
+  .legal-wrap :global(.legal h3) {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 28px 0 10px;
+  }
+  .legal-wrap :global(.legal .sec-num) { color: var(--color-coral); margin-right: 6px; }
+  .legal-wrap :global(.legal p) { margin: 0 0 14px; }
+  .legal-wrap :global(.legal strong) { font-weight: var(--peso-cuerpo-bold); }
+  .legal-wrap :global(.legal ol),
+  .legal-wrap :global(.legal ul) { margin: 0 0 14px; padding-left: 24px; display: flex; flex-direction: column; gap: 6px; }
+  .legal-wrap :global(.legal a) {
+    color: var(--color-tinta);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    overflow-wrap: anywhere;
+  }
+  .legal-wrap :global(.legal hr) {
+    border: 0;
+    border-top: 1px solid var(--color-linea);
+    margin: 48px 0 32px;
+  }
+</style>

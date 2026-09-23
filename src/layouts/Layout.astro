@@ -1,41 +1,92 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { defaultLocale, type Locale } from "../i18n/config";
+import { SITE, organizationSchema } from "../lib/seo";
+import { ui } from "../i18n/ui";
 
 interface Props {
-  title: string
-  description: string
-  lang?: string
-  canonicalUrl?: string
-  ogImage?: string
-  alternateLanguages?: { lang: string; href: string }[]
+  title?: string;
+  description?: string;
+  lang?: Locale;
+  /** Ruta relativa de la imagen OG (default: OG de marca). */
+  image?: string;
+  /** JSON-LD extra de la página (Service, BreadcrumbList, WebSite, etc.). */
+  schema?: unknown[];
+  /** Evita indexación (útil en preview/staging). */
+  noindex?: boolean;
+  ogType?: string;
+  /** Traducciones disponibles por locale (para hreflang). Vacío = sin alternates. */
+  translations?: Partial<Record<Locale, string>>;
 }
 
 const {
-  title,
-  description,
-  lang = 'es',
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  alternateLanguages = [],
-} = Astro.props
+  title = "Teamcubation",
+  description = "La experiencia no se enseña: se entrena.",
+  lang = defaultLocale,
+  image,
+  schema = [],
+  noindex = false,
+  ogType = "website",
+  translations,
+} = Astro.props;
 
-const siteUrl = Astro.site?.toString().replace(/\/$/, '') || ''
-const canonical = canonicalUrl || Astro.url.href
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+// OG apunta al dominio donde vive el build (staging) para que la preview
+// resuelva; canonical/hreflang siguen en producción (SITE.url / Astro.site).
+const ogUrl = new URL(Astro.url.pathname, SITE.deployUrl).href;
+// OG por idioma (og-es/en/pt). Se puede override con la prop `image`.
+const ogImage = new URL(image ?? `/og/og-${lang}.png`, SITE.deployUrl).href;
 
-const localeMap: Record<string, string> = { es: 'es_ES', en: 'en_US', pt: 'pt_BR' }
-const ogLocale = localeMap[lang] || 'es_ES'
-const altLocales = alternateLanguages
-  .filter((a) => a.lang !== lang)
-  .map((a) => localeMap[a.lang])
-  .filter(Boolean)
-const defaultHref = alternateLanguages.find((a) => a.lang === 'es')?.href
+const ogLocales: Record<Locale, string> = { es: "es_AR", en: "en_US", pt: "pt_BR" };
+
+// hreflang: solo si hay traducciones declaradas (evita alternates rotos).
+const alternates = translations
+  ? Object.entries(translations).map(([loc, path]) => ({
+      loc,
+      href: new URL(path!, Astro.site).href,
+    }))
+  : [];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [organizationSchema, ...schema],
+};
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-smooth">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Redirect por idioma del browser (solo en la raíz ES). Excluye crawlers
+         para que indexen todas las versiones vía hreflang; una vez por sesión. -->
+    <script is:inline>
+      (function () {
+        if (window.location.pathname !== "/") return;
+        var ua = navigator.userAgent || "";
+        if (/bot|crawl|spider|slurp|mediapartners|baidu|yandex|sogou|duckduckgo|applebot|bingpreview|facebookexternalhit|ia_archiver/i.test(ua)) return;
+        // Navegación interna (p.ej. elegir "ES" desde /pt o /en) = elección
+        // deliberada del usuario → no auto-redirigir por idioma del sistema.
+        try {
+          if (document.referrer && new URL(document.referrer).origin === window.location.origin) return;
+        } catch (e) {}
+        if (sessionStorage.getItem("lang-redirected")) return;
+        var lang = (navigator.language || "").toLowerCase();
+        var target = null;
+        if (lang.indexOf("en") === 0) target = "/en/";
+        else if (lang.indexOf("pt") === 0) target = "/pt/";
+        if (target) {
+          sessionStorage.setItem("lang-redirected", "1");
+          window.location.replace(target);
+        }
+      })();
+    </script>
+
+    <meta name="theme-color" content="#ffffff" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Google Tag Manager -->
     <script is:inline>
@@ -56,93 +107,51 @@ const defaultHref = alternateLanguages.find((a) => a.lang === 'es')?.href
     </script>
     <!-- End Apollo -->
 
-    <!-- SEO -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preload de las fuentes de marca (evita FOUT en el titular/hero) -->
+    <link rel="preload" href="/fonts/funnel-display-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/darker-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
 
-    <!-- Alternate languages -->
-    {alternateLanguages.map(({ lang, href }) => (
-      <link rel="alternate" hreflang={lang} href={href} />
+    {alternates.map((a) => (
+      <link rel="alternate" hreflang={a.loc} href={a.href} />
     ))}
-    {defaultHref && <link rel="alternate" hreflang="x-default" href={defaultHref} />}
+    {alternates.length > 0 && (
+      <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname, Astro.site).href} />
+    )}
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Teamcubation" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={ogLocales[lang]} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content={String(SITE.ogImageWidth)} />
+    <meta property="og:image:height" content={String(SITE.ogImageHeight)} />
     <meta property="og:image:alt" content={title} />
-    <meta property="og:locale" content={ogLocale} />
-    {altLocales.map((loc) => (
-      <meta property="og:locale:alternate" content={loc} />
-    ))}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:url" content={canonical} />
-    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
-    <meta name="twitter:image:alt" content={title} />
+    <meta name="twitter:image" content={ogImage} />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" /></noscript>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Head slot for page-specific tags -->
-    <slot name="head" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
   </head>
-  <body class="font-sans text-[#1d1b1b] antialiased">
-    <script is:inline>
-      (function() {
-        if (window.location.pathname !== '/') return
-        // Don't redirect search engine crawlers — let them index every
-        // language version (/, /en, /pt) via the hreflang annotations.
-        var ua = navigator.userAgent || ''
-        if (/bot|crawl|spider|slurp|mediapartners|baidu|yandex|sogou|duckduckgo|applebot|bingpreview|facebookexternalhit|ia_archiver/i.test(ua)) return
-        if (sessionStorage.getItem('lang-redirected')) return
-        var lang = (navigator.language || '').toLowerCase()
-        var target = null
-        if (lang.startsWith('en')) target = '/en'
-        else if (lang.startsWith('pt')) target = '/pt'
-        if (target) {
-          sessionStorage.setItem('lang-redirected', '1')
-          window.location.replace(target)
-        }
-      })()
-    </script>
+  <body>
+    <a class="saltar-al-contenido" href="#contenido">{ui[lang].skip}</a>
+    <Header lang={lang} translations={translations} />
     <slot />
-
-    <script>
-      function setupReveal() {
-        const els = document.querySelectorAll('[data-reveal]:not(.is-visible)')
-        if (!els.length) return
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible')
-              io.unobserve(entry.target)
-            }
-          })
-        }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' })
-        els.forEach((el) => io.observe(el))
-      }
-
-      setupReveal()
-      document.addEventListener('astro:after-swap', setupReveal)
-    </script>
+    <Footer lang={lang} />
   </body>
 </html>

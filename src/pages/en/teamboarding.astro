@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TeamboardingBody from "../../components/pages/TeamboardingBody.astro";
+import { teamboardingContent } from "../../content/teamboarding";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const c = teamboardingContent.en;
+const translations = { es: "/teamboarding", en: "/en/teamboarding", pt: "/pt/teamboarding" };
+---
+
+<Layout
+  title={c.seoTitle}
+  description={c.seoDesc}
+  lang="en"
+  translations={translations}
+  schema={[breadcrumbSchema([{ name: "Home", path: "/en/" }, { name: "Teamboarding", path: "/en/teamboarding" }])]}
+>
+  <TeamboardingBody lang="en" />
+</Layout>
