@@ -50,9 +50,12 @@ const FRAMES = 120;
 </section>
 
 <style>
+  /* Alto: el del dibujo (16:9) menos 75px. Debajo de 1366px queda fijo en el
+     de 1366px, igual que el ancho del dibujo: si achicara con la ventana, el
+     dibujo se cortaría a media altura en vez de apoyar su base en el borde. */
   .hero {
     position: relative;
-    height: calc(56.25vw - 75px);
+    height: calc(max(100vw, 1366px) * 0.5625 - 75px);
     overflow: hidden;
     background: #fff;
   }
