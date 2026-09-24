@@ -25,7 +25,7 @@ export interface NosotrosContent {
 
 export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
   es: {
-    seoTitle: "Nosotros | Teamcubation fue fundada en 2021 en Buenos Aires por Mariano Wechsler y Diego Jolodenco. Conozca su historia y su método de entrenamiento.",
+    seoTitle: "Nosotros: la experiencia se entrena | Teamcubation",
     seoDesc: "Teamcubation fue fundada en 2021 en Buenos Aires por Mariano Wechsler y Diego Jolodenco. Conozca su historia y su método de entrenamiento.",
     kicker: "Nosotros",
     heroH1: "Qué es Teamcubation y quiénes la fundaron.",
@@ -41,8 +41,8 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     conviccion: {
       h2: "Una convicción que creció con el trabajo.",
       bloques: [
-        { h3: "2021: formar construyendo software.", pHtml: 'Teamcubation nació formando desarrolladores mientras trabajaban sobre proyectos de software. Esa forma de construir experiencia es la base del programa Incubation. <a class="enlace" href="/servicios/incubation">Conocer Incubation</a>' },
-        { h3: "Entrenar equipos para adoptar IA.", pHtml: 'Aplicamos el mismo principio a las tareas de negocio, la automatización y la construcción con IA: que las personas desarrollen experiencia trabajando sobre necesidades que conocen. <a class="enlace" href="/servicios">Conocer los programas</a>' },
+        { h3: "2021: formar construyendo software.", pHtml: 'Teamcubation nació formando desarrolladores mientras trabajaban sobre proyectos de software. Esa forma de construir experiencia es la base del programa Incubation. <a class="enlace" href="/servicios/incubation/">Conocer Incubation</a>' },
+        { h3: "Entrenar equipos para adoptar IA.", pHtml: 'Aplicamos el mismo principio a las tareas de negocio, la automatización y la construcción con IA: que las personas desarrollen experiencia trabajando sobre necesidades que conocen. <a class="enlace" href="/servicios/">Conocer los programas</a>' },
       ],
     },
     heroImgAlt: "Equipo trabajando sobre planos y procesos propios en planta",
@@ -61,14 +61,14 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     criterioP: "El criterio es saber qué problema atacar, si la IA puede ayudar a resolverlo y cómo encararlo. Se forma decidiendo sobre problemas propios, no sobre casos de ejemplo. Nuestros mentores no dan respuestas: preguntan por qué, hasta que el equipo reconoce el patrón y lo aplica solo.",
     criterioPaises: "Teamcubation trabajó con más de 90 empresas líderes en 6 países: Argentina, Brasil, Uruguay, Chile, Colombia y España.",
     criterioLinks: [
-      { label: "Conocer nuestra trayectoria", href: "/casos" },
-      { label: "Conocer la metodología", href: "/metodologia" },
-      { label: "Conocer Teamboarding", href: "/teamboarding" },
+      { label: "Conocer nuestra trayectoria", href: "/casos/" },
+      { label: "Conocer la metodología", href: "/metodologia/" },
+      { label: "Conocer Teamboarding", href: "/teamboarding/" },
     ],
   },
 
   en: {
-    seoTitle: "About | Teamcubation was founded in 2021 in Buenos Aires by Mariano Wechsler and Diego Jolodenco. Learn about its history and its training method.",
+    seoTitle: "About: experience is trained | Teamcubation",
     seoDesc: "Teamcubation was founded in 2021 in Buenos Aires by Mariano Wechsler and Diego Jolodenco. Learn about its history and its training method.",
     kicker: "About",
     heroH1: "What Teamcubation is and who founded it.",
@@ -84,8 +84,8 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     conviccion: {
       h2: "A conviction that grew with the work.",
       bloques: [
-        { h3: "2021: training by building software.", pHtml: 'Teamcubation was born training developers while they worked on software projects. That way of building experience is the base of the Incubation program. <a class="enlace" href="/en/services/incubation">Explore Incubation</a>' },
-        { h3: "Training teams to adopt AI.", pHtml: 'We apply the same principle to business tasks, automation and building with AI: that people build experience working on needs they know. <a class="enlace" href="/en/services">Explore the programs</a>' },
+        { h3: "2021: training by building software.", pHtml: 'Teamcubation was born training developers while they worked on software projects. That way of building experience is the base of the Incubation program. <a class="enlace" href="/en/services/incubation/">Explore Incubation</a>' },
+        { h3: "Training teams to adopt AI.", pHtml: 'We apply the same principle to business tasks, automation and building with AI: that people build experience working on needs they know. <a class="enlace" href="/en/services/">Explore the programs</a>' },
       ],
     },
     heroImgAlt: "Team working on their own plans and processes on site",
@@ -104,14 +104,14 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     criterioP: "Judgment is knowing which problem to tackle, whether AI can help solve it and how to approach it. It's formed by deciding on your own problems, not on example cases. Our mentors don't give answers: they ask why, until the team recognizes the pattern and applies it on its own.",
     criterioPaises: "Teamcubation has worked with more than 90 leading companies across 6 countries: Argentina, Brazil, Uruguay, Chile, Colombia and Spain.",
     criterioLinks: [
-      { label: "Explore our track record", href: "/en/clients" },
-      { label: "Explore our methodology", href: "/en/methodology" },
-      { label: "Explore Teamboarding", href: "/en/teamboarding" },
+      { label: "Explore our track record", href: "/en/clients/" },
+      { label: "Explore our methodology", href: "/en/methodology/" },
+      { label: "Explore Teamboarding", href: "/en/teamboarding/" },
     ],
   },
 
   pt: {
-    seoTitle: "Sobre | A Teamcubation foi fundada em 2021 em Buenos Aires por Mariano Wechsler e Diego Jolodenco. Conheça a sua história e o seu método de treinamento.",
+    seoTitle: "Sobre: a experiência se treina | Teamcubation",
     seoDesc: "A Teamcubation foi fundada em 2021 em Buenos Aires por Mariano Wechsler e Diego Jolodenco. Conheça a sua história e o seu método de treinamento.",
     kicker: "Sobre",
     heroH1: "O que é a Teamcubation e quem a fundou.",
@@ -127,8 +127,8 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     conviccion: {
       h2: "Uma convicção que cresceu com o trabalho.",
       bloques: [
-        { h3: "2021: formar construindo software.", pHtml: 'A Teamcubation nasceu formando desenvolvedores enquanto trabalhavam sobre projetos de software. Essa forma de construir experiência é a base do programa Incubation. <a class="enlace" href="/pt/servicos/incubation">Conhecer o Incubation</a>' },
-        { h3: "Treinar equipes para adotar IA.", pHtml: 'Aplicamos o mesmo princípio às tarefas de negócio, à automação e à construção com IA: que as pessoas desenvolvam experiência trabalhando sobre necessidades que conhecem. <a class="enlace" href="/pt/servicos">Conhecer os programas</a>' },
+        { h3: "2021: formar construindo software.", pHtml: 'A Teamcubation nasceu formando desenvolvedores enquanto trabalhavam sobre projetos de software. Essa forma de construir experiência é a base do programa Incubation. <a class="enlace" href="/pt/servicos/incubation/">Conhecer o Incubation</a>' },
+        { h3: "Treinar equipes para adotar IA.", pHtml: 'Aplicamos o mesmo princípio às tarefas de negócio, à automação e à construção com IA: que as pessoas desenvolvam experiência trabalhando sobre necessidades que conhecem. <a class="enlace" href="/pt/servicos/">Conhecer os programas</a>' },
       ],
     },
     heroImgAlt: "Equipe trabalhando sobre planos e processos próprios na planta",
@@ -147,9 +147,9 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     criterioP: "O critério é saber qual problema atacar, se a IA pode ajudar a resolvê-lo e como encará-lo. Se forma decidindo sobre problemas próprios, não sobre casos de exemplo. Os nossos mentores não dão respostas: perguntam por quê, até que a equipe reconheça o padrão e o aplique sozinha.",
     criterioPaises: "A Teamcubation trabalhou com mais de 90 empresas líderes em 6 países: Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha.",
     criterioLinks: [
-      { label: "Conhecer a nossa trajetória", href: "/pt/clientes" },
-      { label: "Conhecer a metodologia", href: "/pt/metodologia" },
-      { label: "Conhecer o Teamboarding", href: "/pt/teamboarding" },
+      { label: "Conhecer a nossa trajetória", href: "/pt/clientes/" },
+      { label: "Conhecer a metodologia", href: "/pt/metodologia/" },
+      { label: "Conhecer o Teamboarding", href: "/pt/teamboarding/" },
     ],
   },
 };

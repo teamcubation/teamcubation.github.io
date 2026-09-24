@@ -23,18 +23,18 @@ export default defineConfig({
   // Los destinos EN/PT resuelven cuando se publiquen esos idiomas.
   redirects: {
     // Español
-    '/incubation': '/servicios/incubation',
-    '/booster-ai': '/servicios/booster-ai',
+    '/incubation': '/servicios/incubation/',
+    '/booster-ai': '/servicios/booster-ai/',
     // Inglés (dos formatos históricos → /en/services/…)
-    '/incubation-en': '/en/services/incubation',
-    '/en/incubation': '/en/services/incubation',
-    '/booster-ai-en': '/en/services/booster-ai',
-    '/en/booster-ai': '/en/services/booster-ai',
+    '/incubation-en': '/en/services/incubation/',
+    '/en/incubation': '/en/services/incubation/',
+    '/booster-ai-en': '/en/services/booster-ai/',
+    '/en/booster-ai': '/en/services/booster-ai/',
     // Portugués (dos formatos históricos → /pt/servicos/…)
-    '/incubation-pt': '/pt/servicos/incubation',
-    '/pt/incubation': '/pt/servicos/incubation',
-    '/booster-ai-pt': '/pt/servicos/booster-ai',
-    '/pt/booster-ai': '/pt/servicos/booster-ai',
+    '/incubation-pt': '/pt/servicos/incubation/',
+    '/pt/incubation': '/pt/servicos/incubation/',
+    '/booster-ai-pt': '/pt/servicos/booster-ai/',
+    '/pt/booster-ai': '/pt/servicos/booster-ai/',
   },
   integrations: [sitemap()],
   vite: {

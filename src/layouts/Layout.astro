@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { defaultLocale, type Locale } from "../i18n/config";
+import { conBarra } from "../i18n/routes";
 import { SITE, organizationSchema } from "../lib/seo";
 import { ui } from "../i18n/ui";
 
@@ -33,6 +34,8 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+// En staging (el build vive en otro dominio que producción) ninguna página se indexa.
+const esStaging = SITE.deployUrl !== SITE.url;
 // OG apunta al dominio donde vive el build (staging) para que la preview
 // resuelva; canonical/hreflang siguen en producción (SITE.url / Astro.site).
 const ogUrl = new URL(Astro.url.pathname, SITE.deployUrl).href;
@@ -41,13 +44,16 @@ const ogImage = new URL(image ?? `/og/og-${lang}.png`, SITE.deployUrl).href;
 
 const ogLocales: Record<Locale, string> = { es: "es_AR", en: "en_US", pt: "pt_BR" };
 
-// hreflang: solo si hay traducciones declaradas (evita alternates rotos).
+// hreflang: solo si hay traducciones declaradas (evita alternates rotos). Con barra
+// final, igual que el canonical.
 const alternates = translations
   ? Object.entries(translations).map(([loc, path]) => ({
       loc,
-      href: new URL(path!, Astro.site).href,
+      href: new URL(conBarra(path!), Astro.site).href,
     }))
   : [];
+// x-default: la versión en español, la misma en las tres páginas del grupo.
+const xDefault = alternates.find((a) => a.loc === defaultLocale)?.href;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -86,7 +92,7 @@ const jsonLd = {
     </script>
 
     <meta name="theme-color" content="#ffffff" />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {(noindex || esStaging) && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Google Tag Manager -->
     <script is:inline>
@@ -124,9 +130,7 @@ const jsonLd = {
     {alternates.map((a) => (
       <link rel="alternate" hreflang={a.loc} href={a.href} />
     ))}
-    {alternates.length > 0 && (
-      <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname, Astro.site).href} />
-    )}
+    {xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />

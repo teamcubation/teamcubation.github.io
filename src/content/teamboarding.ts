@@ -29,7 +29,7 @@ export interface TeamboardingContent {
 
 export const teamboardingContent: Record<"es" | "en" | "pt", TeamboardingContent> = {
   es: {
-    seoTitle: "Teamboarding | Teamboarding es la plataforma propia de Teamcubation que registra el avance de cada persona y el impacto en cada proceso, y genera los informes que recibe el sponsor.",
+    seoTitle: "Teamboarding: el motor de datos del método | Teamcubation",
     seoDesc: "Teamboarding es la plataforma propia de Teamcubation que registra el avance de cada persona y el impacto en cada proceso, y genera los informes que recibe el sponsor.",
     kicker: "Teamboarding / Nuestra tecnología",
     heroH1: "Teamboarding: es cómo medimos el avance y el impacto de la adopción de IA.",
@@ -65,7 +65,7 @@ export const teamboardingContent: Record<"es" | "en" | "pt", TeamboardingContent
   },
 
   en: {
-    seoTitle: "Teamboarding | Teamboarding is Teamcubation's own platform that records each person's progress and the impact on each process, and generates the reports the sponsor receives.",
+    seoTitle: "Teamboarding: the data engine behind the method | Teamcubation",
     seoDesc: "Teamboarding is Teamcubation's own platform that records each person's progress and the impact on each process, and generates the reports the sponsor receives.",
     kicker: "Teamboarding / Our technology",
     heroH1: "Teamboarding: it's how we measure the progress and impact of AI adoption.",
@@ -101,7 +101,7 @@ export const teamboardingContent: Record<"es" | "en" | "pt", TeamboardingContent
   },
 
   pt: {
-    seoTitle: "Teamboarding | O Teamboarding é a plataforma própria da Teamcubation que registra o progresso de cada pessoa e o impacto em cada processo, e gera os relatórios que o sponsor recebe.",
+    seoTitle: "Teamboarding: o motor de dados do método | Teamcubation",
     seoDesc: "O Teamboarding é a plataforma própria da Teamcubation que registra o progresso de cada pessoa e o impacto em cada processo, e gera os relatórios que o sponsor recebe.",
     kicker: "Teamboarding / Nossa tecnologia",
     heroH1: "Teamboarding: é como medimos o progresso e o impacto da adoção de IA.",

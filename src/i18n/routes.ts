@@ -15,36 +15,39 @@ export const rutas: Record<string, Record<Locale, RutaLoc>> = {
     pt: { path: "/pt/", label: "Início" },
   },
   metodologia: {
-    es: { path: "/metodologia", label: "Metodología" },
-    en: { path: "/en/methodology", label: "Methodology" },
-    pt: { path: "/pt/metodologia", label: "Metodologia" },
+    es: { path: "/metodologia/", label: "Metodología" },
+    en: { path: "/en/methodology/", label: "Methodology" },
+    pt: { path: "/pt/metodologia/", label: "Metodologia" },
   },
   servicios: {
-    es: { path: "/servicios", label: "Servicios" },
-    en: { path: "/en/services", label: "Services" },
-    pt: { path: "/pt/servicos", label: "Serviços" },
+    es: { path: "/servicios/", label: "Servicios" },
+    en: { path: "/en/services/", label: "Services" },
+    pt: { path: "/pt/servicos/", label: "Serviços" },
   },
   teamboarding: {
-    es: { path: "/teamboarding", label: "Teamboarding" },
-    en: { path: "/en/teamboarding", label: "Teamboarding" },
-    pt: { path: "/pt/teamboarding", label: "Teamboarding" },
+    es: { path: "/teamboarding/", label: "Teamboarding" },
+    en: { path: "/en/teamboarding/", label: "Teamboarding" },
+    pt: { path: "/pt/teamboarding/", label: "Teamboarding" },
   },
   casos: {
-    es: { path: "/casos", label: "Clientes" },
-    en: { path: "/en/clients", label: "Clients" },
-    pt: { path: "/pt/clientes", label: "Clientes" },
+    es: { path: "/casos/", label: "Clientes" },
+    en: { path: "/en/clients/", label: "Clients" },
+    pt: { path: "/pt/clientes/", label: "Clientes" },
   },
   nosotros: {
-    es: { path: "/nosotros", label: "Nosotros" },
-    en: { path: "/en/about", label: "About" },
-    pt: { path: "/pt/sobre", label: "Sobre" },
+    es: { path: "/nosotros/", label: "Nosotros" },
+    en: { path: "/en/about/", label: "About" },
+    pt: { path: "/pt/sobre/", label: "Sobre" },
   },
   contacto: {
-    es: { path: "/contacto", label: "Contacto" },
-    en: { path: "/en/contact", label: "Contact" },
-    pt: { path: "/pt/contato", label: "Contato" },
+    es: { path: "/contacto/", label: "Contacto" },
+    en: { path: "/en/contact/", label: "Contact" },
+    pt: { path: "/pt/contato/", label: "Contato" },
   },
 };
+
+/** Asegura la barra final: es la URL canónica (sin ella GitHub Pages responde con un 301). */
+export const conBarra = (path: string) => (path.endsWith("/") ? path : `${path}/`);
 
 /** Base de la sección de servicios por idioma (para armar las URLs de programa). */
 export const basesServicios: Record<Locale, string> = {
@@ -61,5 +64,5 @@ export function ruta(key: string, locale: Locale): string {
 /** URL de un programa (slug de marca, sin traducir) en un idioma. */
 export function rutaPrograma(slug: string, locale: Locale): string {
   const s = slug.replace("/servicios/", "");
-  return `${basesServicios[locale]}/${s}`;
+  return conBarra(`${basesServicios[locale]}/${s}`);
 }

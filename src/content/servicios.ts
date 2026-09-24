@@ -17,7 +17,7 @@ export interface ServiciosContent {
 
 export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
   es: {
-    seoTitle: "Servicios | Compare ocho servicios según su equipo y su objetivo: adoptar IA, automatizar procesos, crear aplicaciones o desarrollar software formando talento.",
+    seoTitle: "Servicios de adopción de IA y talento | Teamcubation",
     seoDesc: "Compare ocho servicios según su equipo y su objetivo: adoptar IA, automatizar procesos, crear aplicaciones o desarrollar software formando talento.",
     hero: {
       kicker: "Servicios",
@@ -44,8 +44,8 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
     primerPaso: {
       h2: "El primer paso depende de su punto de partida.",
       cols: [
-        { h3: "¿Su equipo todavía no usa IA?", pHtml: 'Starter AI trabaja sobre las herramientas y las tareas de cada persona para construir una base de uso cotidiano. <a class="enlace" href="/servicios/starter-ai">Empezar con Starter AI</a>' },
-        { h3: "¿Ya usa IA y quiere automatizar procesos?", pHtml: 'Booster AI acompaña la automatización de procesos propios. Booster AI Intensivo permite conocer el método con un piloto acotado de una semana. <a class="enlace" href="/servicios/booster-ai">Ver Booster AI</a> · <a class="enlace" href="/servicios/booster-ai-intensivo">Ver el formato Intensivo</a>' },
+        { h3: "¿Su equipo todavía no usa IA?", pHtml: 'Starter AI trabaja sobre las herramientas y las tareas de cada persona para construir una base de uso cotidiano. <a class="enlace" href="/servicios/starter-ai/">Empezar con Starter AI</a>' },
+        { h3: "¿Ya usa IA y quiere automatizar procesos?", pHtml: 'Booster AI acompaña la automatización de procesos propios. Booster AI Intensivo permite conocer el método con un piloto acotado de una semana. <a class="enlace" href="/servicios/booster-ai/">Ver Booster AI</a> · <a class="enlace" href="/servicios/booster-ai-intensivo/">Ver el formato Intensivo</a>' },
       ],
     },
     panel: {
@@ -60,7 +60,7 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
   },
 
   en: {
-    seoTitle: "Services | Compare eight services based on your team and your goal: adopt AI, automate processes, build applications or develop software while training talent.",
+    seoTitle: "AI adoption and talent services | Teamcubation",
     seoDesc: "Compare eight services based on your team and your goal: adopt AI, automate processes, build applications or develop software while training talent.",
     hero: {
       kicker: "Services",
@@ -87,8 +87,8 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
     primerPaso: {
       h2: "The first step depends on your starting point.",
       cols: [
-        { h3: "Doesn't your team use AI yet?", pHtml: 'Starter AI works on each person’s tools and tasks to build a base of everyday use. <a class="enlace" href="/en/services/starter-ai">Start with Starter AI</a>' },
-        { h3: "Already using AI and want to automate processes?", pHtml: 'Booster AI supports the automation of your own processes. Booster AI Intensive lets you get to know the method with a focused one-week pilot. <a class="enlace" href="/en/services/booster-ai">See Booster AI</a> · <a class="enlace" href="/en/services/booster-ai-intensivo">See the Intensive format</a>' },
+        { h3: "Doesn't your team use AI yet?", pHtml: 'Starter AI works on each person’s tools and tasks to build a base of everyday use. <a class="enlace" href="/en/services/starter-ai/">Start with Starter AI</a>' },
+        { h3: "Already using AI and want to automate processes?", pHtml: 'Booster AI supports the automation of your own processes. Booster AI Intensive lets you get to know the method with a focused one-week pilot. <a class="enlace" href="/en/services/booster-ai/">See Booster AI</a> · <a class="enlace" href="/en/services/booster-ai-intensivo/">See the Intensive format</a>' },
       ],
     },
     panel: {
@@ -103,7 +103,7 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
   },
 
   pt: {
-    seoTitle: "Serviços | Compare oito serviços de acordo com a sua equipe e o seu objetivo: adotar IA, automatizar processos, criar aplicações ou desenvolver software formando talentos.",
+    seoTitle: "Serviços de adoção de IA e talentos | Teamcubation",
     seoDesc: "Compare oito serviços de acordo com a sua equipe e o seu objetivo: adotar IA, automatizar processos, criar aplicações ou desenvolver software formando talentos.",
     hero: {
       kicker: "Serviços",
@@ -130,8 +130,8 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
     primerPaso: {
       h2: "O primeiro passo depende do seu ponto de partida.",
       cols: [
-        { h3: "Sua equipe ainda não usa IA?", pHtml: 'Starter AI trabalha sobre as ferramentas e as tarefas de cada pessoa para construir uma base de uso cotidiano. <a class="enlace" href="/pt/servicos/starter-ai">Começar com Starter AI</a>' },
-        { h3: "Já usa IA e quer automatizar processos?", pHtml: 'Booster AI acompanha a automação dos seus próprios processos. Booster AI Intensivo permite conhecer o método com um piloto delimitado de uma semana. <a class="enlace" href="/pt/servicos/booster-ai">Ver Booster AI</a> · <a class="enlace" href="/pt/servicos/booster-ai-intensivo">Ver o formato Intensivo</a>' },
+        { h3: "Sua equipe ainda não usa IA?", pHtml: 'Starter AI trabalha sobre as ferramentas e as tarefas de cada pessoa para construir uma base de uso cotidiano. <a class="enlace" href="/pt/servicos/starter-ai/">Começar com Starter AI</a>' },
+        { h3: "Já usa IA e quer automatizar processos?", pHtml: 'Booster AI acompanha a automação dos seus próprios processos. Booster AI Intensivo permite conhecer o método com um piloto delimitado de uma semana. <a class="enlace" href="/pt/servicos/booster-ai/">Ver Booster AI</a> · <a class="enlace" href="/pt/servicos/booster-ai-intensivo/">Ver o formato Intensivo</a>' },
       ],
     },
     panel: {

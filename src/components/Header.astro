@@ -1,6 +1,6 @@
 ---
 import Cta from "./Cta.astro";
-import { rutas, ruta, rutaPrograma } from "../i18n/routes";
+import { rutas, ruta, rutaPrograma, conBarra } from "../i18n/routes";
 import { ui } from "../i18n/ui";
 import { getServicios } from "../data/servicios";
 import { defaultLocale, locales, type Locale } from "../i18n/config";
@@ -19,7 +19,7 @@ const MENU_GRUPOS: { keys: string[]; titulo: Record<Locale, string> }[] = [
   {
     keys: ["starter", "booster", "intensivo"],
     titulo: {
-      es: "AI para el trabajo diario de sus equipos",
+      es: "IA para el trabajo diario de sus equipos",
       en: "AI for your teams' everyday work",
       pt: "IA para o trabalho diário das suas equipes",
     },
@@ -27,7 +27,7 @@ const MENU_GRUPOS: { keys: string[]; titulo: Record<Locale, string> }[] = [
   {
     keys: ["builders", "vibecode"],
     titulo: {
-      es: "AI para procesos cross área o masivos",
+      es: "IA para procesos cross área o masivos",
       en: "AI for cross-area or large-scale processes",
       pt: "IA para processos entre áreas ou em escala",
     },
@@ -134,7 +134,7 @@ const menuServicios = MENU_GRUPOS.map((g) => ({
               .filter((loc) => loc !== lang && translations[loc])
               .map((loc) => (
                 <li role="none">
-                  <a role="menuitem" href={translations[loc]} hreflang={loc} title={ui[loc].langNombre}>{loc.toUpperCase()}</a>
+                  <a role="menuitem" href={conBarra(translations[loc]!)} hreflang={loc} title={ui[loc].langNombre}>{loc.toUpperCase()}</a>
                 </li>
               ))}
           </ul>

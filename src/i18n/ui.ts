@@ -31,7 +31,7 @@ export const ui: Record<Locale, {
     footerCopy: "Teamcubation. La experiencia no se enseña: se entrena.",
     legalTerminos: "Términos y Condiciones",
     legalPrivacidad: "Política de Privacidad",
-    cierreTexto: "Conversemos sobre cómo potenciar su compañía con AI.",
+    cierreTexto: "Conversemos sobre cómo potenciar su compañía con IA.",
     langNombre: "Español",
   },
   en: {

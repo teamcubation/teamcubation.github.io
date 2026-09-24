@@ -41,7 +41,7 @@ export interface ContactoContent {
 
 export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
   es: {
-    seoTitle: "Contacto | Conversemos sobre el próximo paso de su equipo: qué proceso necesita mejorar, qué quiere construir y qué programa se ajusta a su necesidad.",
+    seoTitle: "Agendar una conversación | Teamcubation",
     seoDesc: "Conversemos sobre el próximo paso de su equipo: qué proceso necesita mejorar, qué quiere construir y qué programa se ajusta a su necesidad.",
     migaHome: "Inicio",
     migaActual: "Contacto",
@@ -91,7 +91,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
   },
 
   en: {
-    seoTitle: "Contact | Let's talk about your team's next step: which process you need to improve, what you want to build and which program fits your need.",
+    seoTitle: "Schedule a conversation | Teamcubation",
     seoDesc: "Let's talk about your team's next step: which process you need to improve, what you want to build and which program fits your need.",
     migaHome: "Home",
     migaActual: "Contact",
@@ -141,7 +141,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
   },
 
   pt: {
-    seoTitle: "Contato | Vamos conversar sobre o próximo passo da sua equipe: qual processo você precisa melhorar, o que quer construir e qual programa se encaixa na sua necessidade.",
+    seoTitle: "Agende uma conversa | Teamcubation",
     seoDesc: "Vamos conversar sobre o próximo passo da sua equipe: qual processo você precisa melhorar, o que quer construir e qual programa se encaixa na sua necessidade.",
     migaHome: "Início",
     migaActual: "Contato",

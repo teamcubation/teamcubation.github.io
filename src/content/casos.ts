@@ -77,7 +77,7 @@ export const clientesGrilla: ClienteLogo[] = [
 
 export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
   es: {
-    seoTitle: "Clientes | Conozca la trayectoria de Teamcubation: más de 90 empresas líderes en 5 países. Entre sus clientes están Mercado Libre y Banco Comafi.",
+    seoTitle: "Clientes: impacto medible con IA | Teamcubation",
     seoDesc: "Conozca la trayectoria de Teamcubation: más de 90 empresas líderes en 5 países. Entre sus clientes están Mercado Libre y Banco Comafi.",
     kicker: "Clientes",
     heroH1: "La experiencia de Teamcubation trabajando con empresas.",
@@ -95,14 +95,14 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     partidaH2: "El punto de partida es una necesidad concreta.",
     partidaP: "Un proceso que necesita automatizarse, un equipo que empieza a usar IA o un producto que debe construirse. El trabajo de Teamcubation parte de esa necesidad y de la capacidad que la empresa quiere desarrollar en su gente.",
     links: [
-      { label: "Conocer la metodología", href: "/metodologia" },
-      { label: "Comparar los programas", href: "/servicios" },
+      { label: "Conocer la metodología", href: "/metodologia/" },
+      { label: "Comparar los programas", href: "/servicios/" },
     ],
-    cierreTexto: "Conversemos sobre cómo potenciar su compañía con AI.",
+    cierreTexto: "Conversemos sobre cómo potenciar su compañía con IA.",
   },
 
   en: {
-    seoTitle: "Clients | Explore Teamcubation's track record: more than 90 leading companies in 5 countries. Its clients include Mercado Libre and Banco Comafi.",
+    seoTitle: "Clients: measurable impact with AI | Teamcubation",
     seoDesc: "Explore Teamcubation's track record: more than 90 leading companies in 5 countries. Its clients include Mercado Libre and Banco Comafi.",
     kicker: "Clients",
     heroH1: "Teamcubation's experience working with companies.",
@@ -120,14 +120,14 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     partidaH2: "The starting point is a concrete need.",
     partidaP: "A process that needs to be automated, a team starting to use AI or a product that needs to be built. Teamcubation's work starts from that need and from the capability the company wants to develop in its people.",
     links: [
-      { label: "Explore our methodology", href: "/en/methodology" },
-      { label: "Compare the programs", href: "/en/services" },
+      { label: "Explore our methodology", href: "/en/methodology/" },
+      { label: "Compare the programs", href: "/en/services/" },
     ],
     cierreTexto: "Let's talk about how to power your company with AI.",
   },
 
   pt: {
-    seoTitle: "Clientes | Conheça a trajetória da Teamcubation: mais de 90 empresas líderes em 5 países. Entre seus clientes estão o Mercado Livre e o Banco Comafi.",
+    seoTitle: "Clientes: impacto mensurável com IA | Teamcubation",
     seoDesc: "Conheça a trajetória da Teamcubation: mais de 90 empresas líderes em 5 países. Entre seus clientes estão o Mercado Livre e o Banco Comafi.",
     kicker: "Clientes",
     heroH1: "A experiência da Teamcubation trabalhando com empresas.",
@@ -145,8 +145,8 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     partidaH2: "O ponto de partida é uma necessidade concreta.",
     partidaP: "Um processo que precisa ser automatizado, uma equipe que começa a usar IA ou um produto que precisa ser construído. O trabalho da Teamcubation parte dessa necessidade e da capacidade que a empresa quer desenvolver em sua gente.",
     links: [
-      { label: "Conheça nossa metodologia", href: "/pt/metodologia" },
-      { label: "Comparar os programas", href: "/pt/servicos" },
+      { label: "Conheça nossa metodologia", href: "/pt/metodologia/" },
+      { label: "Comparar os programas", href: "/pt/servicos/" },
     ],
     cierreTexto: "Vamos conversar sobre como potencializar a sua empresa com IA.",
   },

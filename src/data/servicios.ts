@@ -43,7 +43,7 @@ export const servicios: Record<string, Servicio> = {
     key: "discovery",
     nombre: "Discovery",
     slug: "/servicios/discovery",
-    title: "Discovery | Discovery releva los procesos de su empresa durante tres semanas y entrega un mapa priorizado de oportunidades de IA con el primer paso recomendado.",
+    title: "Discovery: dónde la IA rinde más | Teamcubation",
     meta: "Discovery releva los procesos de su empresa durante tres semanas y entrega un mapa priorizado de oportunidades de IA con el primer paso recomendado.",
     necesita: "Identificar por dónde empezar",
     publico: "Distintas áreas de la empresa",
@@ -91,7 +91,7 @@ export const servicios: Record<string, Servicio> = {
     key: "starter",
     nombre: "Starter AI",
     slug: "/servicios/starter-ai",
-    title: "Starter AI | Un mes de entrenamiento para equipos no técnicos. Aprendan a usar IA sobre sus tareas con las herramientas de su empresa y mentores expertos.",
+    title: "Starter AI: aproveche la IA que ya paga | Teamcubation",
     meta: "Un mes de entrenamiento para equipos no técnicos. Aprendan a usar IA sobre sus tareas con las herramientas de su empresa y mentores expertos.",
     necesita: "Usar IA en las tareas diarias",
     publico: "Equipos no técnicos, hasta 16 personas",
@@ -140,7 +140,7 @@ export const servicios: Record<string, Servicio> = {
     key: "booster",
     nombre: "Booster AI",
     slug: "/servicios/booster-ai",
-    title: "Booster AI | Sus equipos automatizan procesos reales con IA y agentes. Cinco semanas de entrenamiento con mentores de Teamcubation.",
+    title: "Booster AI: sus equipos automatizan procesos con IA | Teamcubation",
     meta: "Sus equipos automatizan procesos reales con IA y agentes. Cinco semanas de entrenamiento con mentores de Teamcubation.",
     necesita: "Automatizar procesos del equipo",
     publico: "Equipos de negocio, hasta 8 personas",
@@ -175,7 +175,7 @@ export const servicios: Record<string, Servicio> = {
     segLinkKey: "teamboarding",
     faqs: [
       { q: "¿Cuánto dura Booster AI?", a: "Cinco semanas de programa, para equipos de hasta 8 personas." },
-      { q: "¿Hace falta experiencia previa?", a: "No. Booster AI está orientado a personas sin experiencia previa en automatización ni en IA." },
+      { q: "¿Hace falta experiencia previa?", a: "No hace falta experiencia en automatización, pero sí que el equipo ya use IA en su trabajo. Si todavía no la usa, Starter AI permite construir esa base." },
       { q: "¿Qué es un agente de IA?", a: "Es un sistema que utiliza IA para decidir y ejecutar pasos orientados a una tarea, dentro de las herramientas y los permisos disponibles. Un flujo de reglas fijas también puede automatizar un proceso, sin ser necesariamente un agente." },
       { q: "¿Cómo se coordina con IT?", a: "El programa está dirigido a equipos de negocio. Los accesos, permisos e integraciones que requiera el proceso se coordinan según las políticas y la organización de cada empresa." },
     ],
@@ -189,7 +189,7 @@ export const servicios: Record<string, Servicio> = {
     key: "intensivo",
     nombre: "Booster AI Intensivo",
     slug: "/servicios/booster-ai-intensivo",
-    title: "Booster AI Intensivo | Booster AI Intensivo reúne a seis personas en tres duplas para trabajar en una primera automatización real por dupla, con mentores de Teamcubation.",
+    title: "Booster AI Intensivo: piloto de IA en una semana | Teamcubation",
     meta: "Booster AI Intensivo reúne a seis personas en tres duplas para trabajar en una primera automatización real por dupla, con mentores de Teamcubation.",
     necesita: "Probar un piloto acotado",
     publico: "Seis personas en tres duplas",
@@ -237,7 +237,7 @@ export const servicios: Record<string, Servicio> = {
     key: "vibecode",
     nombre: "VibeCode Studio",
     slug: "/servicios/vibecode-studio",
-    title: "VibeCode Studio | Dos meses para que equipos de negocio que ya usan IA construyan micro-aplicaciones sobre necesidades reales, con mentores expertos de Teamcubation.",
+    title: "VibeCode Studio: su equipo construye apps con IA | Teamcubation",
     meta: "Dos meses para que equipos de negocio que ya usan IA construyan micro-aplicaciones sobre necesidades reales, con mentores expertos de Teamcubation.",
     necesita: "Crear aplicaciones internas",
     publico: "Equipos que ya adoptaron IA, hasta 8 personas",
@@ -285,7 +285,7 @@ export const servicios: Record<string, Servicio> = {
     key: "builders",
     nombre: "AI Builders",
     slug: "/servicios/ai-builders",
-    title: "AI Builders | Cuatro meses con dedicación completa para formar perfiles técnicos capaces de construir automatizaciones con IA e integraciones entre sistemas.",
+    title: "AI Builders: especialistas internos de IA | Teamcubation",
     meta: "Cuatro meses con dedicación completa para formar perfiles técnicos capaces de construir automatizaciones con IA e integraciones entre sistemas.",
     necesita: "Desarrollar capacidad técnica de automatización",
     publico: "Perfiles técnicos, hasta 3 personas",
@@ -333,7 +333,7 @@ export const servicios: Record<string, Servicio> = {
     key: "dev",
     nombre: "Booster AI Dev",
     slug: "/servicios/booster-ai-dev",
-    title: "Booster AI Dev | Un mes de entrenamiento sobre el sprint y el código real de su equipo para adoptar herramientas de desarrollo con IA y prácticas de revisión y calidad.",
+    title: "Booster AI Dev: IA para equipos de desarrollo | Teamcubation",
     meta: "Un mes de entrenamiento sobre el sprint y el código real de su equipo para adoptar herramientas de desarrollo con IA y prácticas de revisión y calidad.",
     necesita: "Incorporar IA al desarrollo",
     publico: "Equipos de desarrollo, hasta 8 personas",
@@ -380,7 +380,7 @@ export const servicios: Record<string, Servicio> = {
     key: "incubation",
     nombre: "Incubation",
     slug: "/servicios/incubation",
-    title: "Incubation | Incubation combina desarrollo de software y formación de desarrolladores durante seis meses. El talento aprende sobre el producto de su empresa.",
+    title: "Incubation: software hoy, equipo para mañana | Teamcubation",
     meta: "Incubation combina desarrollo de software y formación de desarrolladores durante seis meses. El talento aprende sobre el producto de su empresa.",
     necesita: "Construir software y formar desarrolladores",
     publico: "Organización y equipo mixto de Teamcubation",
@@ -437,7 +437,7 @@ type ServicioEn = Partial<Servicio> & {
 const enText: Record<string, ServicioEn> = {
   discovery: {
     nombre: "Discovery",
-    title: "Discovery | Discovery assesses your company's processes over three weeks and delivers a prioritized map of AI opportunities with the recommended first step.",
+    title: "Discovery: where AI pays off most | Teamcubation",
     meta: "Discovery assesses your company's processes over three weeks and delivers a prioritized map of AI opportunities with the recommended first step.",
     foco: "Prioritized map of opportunities",
     resumen: "Assesses your processes and delivers a prioritized map of AI opportunities with the recommended first step.",
@@ -478,7 +478,7 @@ const enText: Record<string, ServicioEn> = {
   },
   starter: {
     nombre: "Starter AI",
-    title: "Starter AI | One month of training for non-technical teams. Learn to use AI on your tasks with your company's tools and expert mentors.",
+    title: "Starter AI: make the most of the AI you already pay for | Teamcubation",
     meta: "One month of training for non-technical teams. Learn to use AI on your tasks with your company's tools and expert mentors.",
     foco: "Applying tools to your own tasks",
     resumen: "Teams with no prior experience learn to use AI on their tasks with the tools they already have.",
@@ -520,7 +520,7 @@ const enText: Record<string, ServicioEn> = {
   },
   booster: {
     nombre: "Booster AI",
-    title: "Booster AI | Your teams automate real processes with AI and agents. Five weeks of training with Teamcubation mentors.",
+    title: "Booster AI: your teams automate processes with AI | Teamcubation",
     meta: "Your teams automate real processes with AI and agents. Five weeks of training with Teamcubation mentors.",
     foco: "Automation with AI and agents",
     resumen: "Business teams automate their own processes with AI and agents, guided by expert mentors.",
@@ -550,7 +550,7 @@ const enText: Record<string, ServicioEn> = {
     segLinkT: "Discover Teamboarding",
     faqs: [
       { q: "How long is Booster AI?", a: "Five weeks of program, for teams of up to 8 people." },
-      { q: "Is prior experience required?", a: "No. Booster AI is aimed at people with no prior experience in automation or AI." },
+      { q: "Is prior experience required?", a: "No experience in automation is needed, but the team should already use AI in its work. If it doesn't yet, Starter AI lets it build that foundation." },
       { q: "What is an AI agent?", a: "It's a system that uses AI to decide and carry out steps aimed at a task, within the available tools and permissions. A fixed-rule flow can also automate a process without necessarily being an agent." },
       { q: "How is it coordinated with IT?", a: "The program is aimed at business teams. The access, permissions and integrations the process requires are coordinated according to each company's policies and organization." },
     ],
@@ -562,7 +562,7 @@ const enText: Record<string, ServicioEn> = {
   },
   intensivo: {
     nombre: "Booster AI Intensive",
-    title: "Booster AI Intensive | Booster AI Intensive brings together six people in three pairs to work on a first real automation per pair, with Teamcubation mentors.",
+    title: "Booster AI Intensive: a one-week AI pilot | Teamcubation",
     meta: "Booster AI Intensive brings together six people in three pairs to work on a first real automation per pair, with Teamcubation mentors.",
     foco: "A first real automation per pair",
     resumen: "Six people in three pairs build a first real automation per pair, in a focused pilot.",
@@ -603,7 +603,7 @@ const enText: Record<string, ServicioEn> = {
   },
   vibecode: {
     nombre: "VibeCode Studio",
-    title: "VibeCode Studio | Two months for business teams that already use AI to build micro-apps around real needs, with Teamcubation's expert mentors.",
+    title: "VibeCode Studio: your team builds apps with AI | Teamcubation",
     meta: "Two months for business teams that already use AI to build micro-apps around real needs, with Teamcubation's expert mentors.",
     foco: "Business micro-apps",
     resumen: "Teams already using AI build business micro-apps, with no traditional programming.",
@@ -644,7 +644,7 @@ const enText: Record<string, ServicioEn> = {
   },
   builders: {
     nombre: "AI Builders",
-    title: "AI Builders | Four months full-time to train technical profiles able to build automations with AI and integrations between systems.",
+    title: "AI Builders: in-house AI specialists | Teamcubation",
     meta: "Four months full-time to train technical profiles able to build automations with AI and integrations between systems.",
     foco: "Complex automations and integrations",
     resumen: "Technical profiles train to build complex automations and integrations between systems within your company.",
@@ -685,7 +685,7 @@ const enText: Record<string, ServicioEn> = {
   },
   dev: {
     nombre: "Booster AI Dev",
-    title: "Booster AI Dev | One month of training on your team's real sprint and code to adopt AI development tools and review and quality practices.",
+    title: "Booster AI Dev: AI for development teams | Teamcubation",
     meta: "One month of training on your team's real sprint and code to adopt AI development tools and review and quality practices.",
     foco: "Adoption on the real sprint",
     resumen: "Development teams adopt AI tools and agents on their sprint and repositories.",
@@ -725,7 +725,7 @@ const enText: Record<string, ServicioEn> = {
   },
   incubation: {
     nombre: "Incubation",
-    title: "Incubation | Incubation combines software development and developer training over six months. Talent learns on your company's product.",
+    title: "Incubation: software today, a team for tomorrow | Teamcubation",
     meta: "Incubation combines software development and developer training over six months. Talent learns on your company's product.",
     foco: "Software and training on the project",
     resumen: "Software built while training the developers who can then join your team.",
@@ -774,7 +774,7 @@ export const serviciosEn: Record<string, Servicio> = Object.fromEntries(
 const ptText: Record<string, ServicioEn> = {
   discovery: {
     nombre: "Discovery",
-    title: "Discovery | O Discovery avalia os processos da sua empresa durante três semanas e entrega um mapa priorizado de oportunidades de IA com o primeiro passo recomendado.",
+    title: "Discovery: onde a IA rende mais | Teamcubation",
     meta: "O Discovery avalia os processos da sua empresa durante três semanas e entrega um mapa priorizado de oportunidades de IA com o primeiro passo recomendado.",
     foco: "Mapa priorizado de oportunidades",
     resumen: "Avalia seus processos e entrega um mapa priorizado de oportunidades de IA com o primeiro passo recomendado.",
@@ -815,7 +815,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   starter: {
     nombre: "Starter AI",
-    title: "Starter AI | Um mês de treinamento para equipes não técnicas. Aprendam a usar IA nas suas tarefas com as ferramentas da sua empresa e mentores especialistas.",
+    title: "Starter AI: aproveite a IA que você já paga | Teamcubation",
     meta: "Um mês de treinamento para equipes não técnicas. Aprendam a usar IA nas suas tarefas com as ferramentas da sua empresa e mentores especialistas.",
     foco: "Aplicação de ferramentas nas próprias tarefas",
     resumen: "Equipes sem experiência prévia aprendem a usar IA nas suas tarefas e com as ferramentas que já têm.",
@@ -857,7 +857,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   booster: {
     nombre: "Booster AI",
-    title: "Booster AI | Suas equipes automatizam processos reais com IA e agentes. Cinco semanas de treinamento com mentores da Teamcubation.",
+    title: "Booster AI: suas equipes automatizam processos com IA | Teamcubation",
     meta: "Suas equipes automatizam processos reais com IA e agentes. Cinco semanas de treinamento com mentores da Teamcubation.",
     foco: "Automação com IA e agentes",
     resumen: "Equipes de negócio automatizam os próprios processos com IA e agentes, acompanhadas por mentores especialistas.",
@@ -887,7 +887,7 @@ const ptText: Record<string, ServicioEn> = {
     segLinkT: "Conhecer o Teamboarding",
     faqs: [
       { q: "Quanto dura o Booster AI?", a: "Cinco semanas de programa, para equipes de até 8 pessoas." },
-      { q: "É preciso experiência prévia?", a: "Não. O Booster AI é voltado a pessoas sem experiência prévia em automação nem em IA." },
+      { q: "É preciso experiência prévia?", a: "Não é preciso experiência em automação, mas a equipe já deve usar IA no seu trabalho. Se ainda não usa, o Starter AI permite construir essa base." },
       { q: "O que é um agente de IA?", a: "É um sistema que usa IA para decidir e executar passos voltados a uma tarefa, dentro das ferramentas e permissões disponíveis. Um fluxo de regras fixas também pode automatizar um processo, sem ser necessariamente um agente." },
       { q: "Como é coordenado com o TI?", a: "O programa é voltado a equipes de negócio. Os acessos, permissões e integrações que o processo exigir são coordenados conforme as políticas e a organização de cada empresa." },
     ],
@@ -899,7 +899,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   intensivo: {
     nombre: "Booster AI Intensivo",
-    title: "Booster AI Intensivo | O Booster AI Intensivo reúne seis pessoas em três duplas para trabalhar em uma primeira automação real por dupla, com mentores da Teamcubation.",
+    title: "Booster AI Intensivo: piloto de IA em uma semana | Teamcubation",
     meta: "O Booster AI Intensivo reúne seis pessoas em três duplas para trabalhar em uma primeira automação real por dupla, com mentores da Teamcubation.",
     foco: "Primeira automação real por dupla",
     resumen: "Seis pessoas em três duplas constroem uma primeira automação real por dupla, em um piloto delimitado.",
@@ -940,7 +940,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   vibecode: {
     nombre: "VibeCode Studio",
-    title: "VibeCode Studio | Dois meses para que equipes de negócio que já usam IA construam micro-aplicações sobre necessidades reais, com mentores especialistas da Teamcubation.",
+    title: "VibeCode Studio: sua equipe constrói apps com IA | Teamcubation",
     meta: "Dois meses para que equipes de negócio que já usam IA construam micro-aplicações sobre necessidades reais, com mentores especialistas da Teamcubation.",
     foco: "Micro-aplicações de negócio",
     resumen: "Equipes que já usam IA constroem micro-aplicações de negócio, sem programação tradicional.",
@@ -981,7 +981,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   builders: {
     nombre: "AI Builders",
-    title: "AI Builders | Quatro meses em tempo integral para formar perfis técnicos capazes de construir automações com IA e integrações entre sistemas.",
+    title: "AI Builders: especialistas internos em IA | Teamcubation",
     meta: "Quatro meses em tempo integral para formar perfis técnicos capazes de construir automações com IA e integrações entre sistemas.",
     foco: "Automações complexas e integrações",
     resumen: "Perfis técnicos se formam para construir automações complexas e integrações entre sistemas dentro da sua empresa.",
@@ -1022,7 +1022,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   dev: {
     nombre: "Booster AI Dev",
-    title: "Booster AI Dev | Um mês de treinamento sobre o sprint e o código real da sua equipe para adotar ferramentas de desenvolvimento com IA e práticas de revisão e qualidade.",
+    title: "Booster AI Dev: IA para equipes de desenvolvimento | Teamcubation",
     meta: "Um mês de treinamento sobre o sprint e o código real da sua equipe para adotar ferramentas de desenvolvimento com IA e práticas de revisão e qualidade.",
     foco: "Adoção sobre o sprint real",
     resumen: "Equipes de desenvolvimento incorporam ferramentas e agentes de IA sobre o seu sprint e os seus repositórios.",
@@ -1062,7 +1062,7 @@ const ptText: Record<string, ServicioEn> = {
   },
   incubation: {
     nombre: "Incubation",
-    title: "Incubation | O Incubation combina desenvolvimento de software e formação de desenvolvedores durante seis meses. O talento aprende sobre o produto da sua empresa.",
+    title: "Incubation: software hoje, equipe para amanhã | Teamcubation",
     meta: "O Incubation combina desenvolvimento de software e formação de desenvolvedores durante seis meses. O talento aprende sobre o produto da sua empresa.",
     foco: "Software e formação sobre o projeto",
     resumen: "Software construído enquanto se formam os desenvolvedores que depois podem se integrar à sua equipe.",

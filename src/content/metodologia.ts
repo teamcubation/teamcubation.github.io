@@ -26,7 +26,7 @@ export interface MetodologiaContent {
 
 export const metodologiaContent: Record<"es" | "en" | "pt", MetodologiaContent> = {
   es: {
-    seoTitle: "Metodología | Cómo entrenamos equipos en IA: práctica sobre procesos reales, mentores expertos y seguimiento del avance y el impacto con Teamboarding.",
+    seoTitle: "Metodología: la experiencia se entrena | Teamcubation",
     seoDesc: "Cómo entrenamos equipos en IA: práctica sobre procesos reales, mentores expertos y seguimiento del avance y el impacto con Teamboarding.",
     kicker: "Metodología",
     heroTituloHtml: 'La experiencia no se enseña: <br /><span class="resaltado">se entrena.</span>',
@@ -74,9 +74,9 @@ export const metodologiaContent: Record<"es" | "en" | "pt", MetodologiaContent> 
     quedaImgAlt: "Figuras ascendiendo una montaña de concreto cargando piezas ámbar",
     quedaH2: "¿Qué queda al terminar?",
     queda: [
-      { h3: "IA aplicada a las tareas.", pHtml: 'Starter AI entrena el uso de herramientas sobre las tareas de cada persona.<br><a class="enlace" href="/servicios/starter-ai">Ver Starter AI</a>' },
-      { h3: "Procesos y herramientas propios.", pHtml: 'Los programas de automatización y construcción trabajan sobre procesos o aplicaciones concretos y entrenan al equipo para sostenerlos, con el alcance definido en cada programa. <a class="enlace" href="/servicios">Comparar los programas</a>' },
-      { h3: "Software y desarrolladores formados en el proyecto.", pHtml: 'Incubation combina la construcción de software con la formación de desarrolladores que pueden integrarse a la empresa. <a class="enlace" href="/servicios/incubation">Ver Incubation</a>' },
+      { h3: "IA aplicada a las tareas.", pHtml: 'Starter AI entrena el uso de herramientas sobre las tareas de cada persona.<br><a class="enlace" href="/servicios/starter-ai/">Ver Starter AI</a>' },
+      { h3: "Procesos y herramientas propios.", pHtml: 'Los programas de automatización y construcción trabajan sobre procesos o aplicaciones concretos y entrenan al equipo para sostenerlos, con el alcance definido en cada programa. <a class="enlace" href="/servicios/">Comparar los programas</a>' },
+      { h3: "Software y desarrolladores formados en el proyecto.", pHtml: 'Incubation combina la construcción de software con la formación de desarrolladores que pueden integrarse a la empresa. <a class="enlace" href="/servicios/incubation/">Ver Incubation</a>' },
     ],
     faqH2: "Preguntas sobre la metodología.",
     faqs: [
@@ -89,7 +89,7 @@ export const metodologiaContent: Record<"es" | "en" | "pt", MetodologiaContent> 
   },
 
   en: {
-    seoTitle: "Methodology | How we train teams in AI: practice on real processes, expert mentors and tracking of progress and impact with Teamboarding.",
+    seoTitle: "Methodology: experience is trained | Teamcubation",
     seoDesc: "How we train teams in AI: practice on real processes, expert mentors and tracking of progress and impact with Teamboarding.",
     kicker: "Methodology",
     heroTituloHtml: "Experience isn't taught: <br /><span class=\"resaltado\">it's trained.</span>",
@@ -137,9 +137,9 @@ export const metodologiaContent: Record<"es" | "en" | "pt", MetodologiaContent> 
     quedaImgAlt: "Figures climbing a concrete mountain carrying amber pieces",
     quedaH2: "What's left at the end?",
     queda: [
-      { h3: "AI applied to tasks.", pHtml: 'Starter AI trains the use of tools on each person’s tasks.<br><a class="enlace" href="/en/services/starter-ai">See Starter AI</a>' },
-      { h3: "Your own processes and tools.", pHtml: 'The automation and building programs work on concrete processes or applications and train the team to sustain them, with the scope defined per program. <a class="enlace" href="/en/services">Compare the programs</a>' },
-      { h3: "Software and developers trained on the project.", pHtml: 'Incubation combines building software with training developers who can join the company. <a class="enlace" href="/en/services/incubation">See Incubation</a>' },
+      { h3: "AI applied to tasks.", pHtml: 'Starter AI trains the use of tools on each person’s tasks.<br><a class="enlace" href="/en/services/starter-ai/">See Starter AI</a>' },
+      { h3: "Your own processes and tools.", pHtml: 'The automation and building programs work on concrete processes or applications and train the team to sustain them, with the scope defined per program. <a class="enlace" href="/en/services/">Compare the programs</a>' },
+      { h3: "Software and developers trained on the project.", pHtml: 'Incubation combines building software with training developers who can join the company. <a class="enlace" href="/en/services/incubation/">See Incubation</a>' },
     ],
     faqH2: "Questions about the methodology.",
     faqs: [
@@ -152,7 +152,7 @@ export const metodologiaContent: Record<"es" | "en" | "pt", MetodologiaContent> 
   },
 
   pt: {
-    seoTitle: "Metodologia | Como treinamos equipes em IA: prática sobre processos reais, mentores especialistas e acompanhamento do avanço e do impacto com Teamboarding.",
+    seoTitle: "Metodologia: a experiência se treina | Teamcubation",
     seoDesc: "Como treinamos equipes em IA: prática sobre processos reais, mentores especialistas e acompanhamento do avanço e do impacto com Teamboarding.",
     kicker: "Metodologia",
     heroTituloHtml: "A experiência não se ensina: <br /><span class=\"resaltado\">se treina.</span>",
@@ -200,9 +200,9 @@ export const metodologiaContent: Record<"es" | "en" | "pt", MetodologiaContent> 
     quedaImgAlt: "Figuras subindo uma montanha de concreto carregando peças âmbar",
     quedaH2: "O que fica ao terminar?",
     queda: [
-      { h3: "IA aplicada às tarefas.", pHtml: 'Starter AI treina o uso de ferramentas sobre as tarefas de cada pessoa.<br><a class="enlace" href="/pt/servicos/starter-ai">Ver Starter AI</a>' },
-      { h3: "Processos e ferramentas próprios.", pHtml: 'Os programas de automação e construção trabalham sobre processos ou aplicações concretos e treinam a equipe para sustentá-los, com o escopo definido em cada programa. <a class="enlace" href="/pt/servicos">Comparar os programas</a>' },
-      { h3: "Software e desenvolvedores formados no projeto.", pHtml: 'Incubation combina a construção de software com a formação de desenvolvedores que podem se integrar à empresa. <a class="enlace" href="/pt/servicos/incubation">Ver Incubation</a>' },
+      { h3: "IA aplicada às tarefas.", pHtml: 'Starter AI treina o uso de ferramentas sobre as tarefas de cada pessoa.<br><a class="enlace" href="/pt/servicos/starter-ai/">Ver Starter AI</a>' },
+      { h3: "Processos e ferramentas próprios.", pHtml: 'Os programas de automação e construção trabalham sobre processos ou aplicações concretos e treinam a equipe para sustentá-los, com o escopo definido em cada programa. <a class="enlace" href="/pt/servicos/">Comparar os programas</a>' },
+      { h3: "Software e desenvolvedores formados no projeto.", pHtml: 'Incubation combina a construção de software com a formação de desenvolvedores que podem se integrar à empresa. <a class="enlace" href="/pt/servicos/incubation/">Ver Incubation</a>' },
     ],
     faqH2: "Perguntas sobre a metodologia.",
     faqs: [

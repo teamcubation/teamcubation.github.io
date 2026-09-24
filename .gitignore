@@ -1,4 +1,3 @@
-.idea
 # build output (deploy is served from docs/, not dist/)
 dist/
 
@@ -24,3 +23,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Material de diseño de referencia (export crudo de Claude Design): pesado, no es
+# parte del sitio ni se deploya. Los .md de .agent/ SÍ se versionan.
+.agent/design/
