@@ -14,9 +14,11 @@ anything ignored (node_modules, ...), editor/agent settings (SKIP_DIRS) and this
 The copy is prepared for production on the way:
 - every reference to site-staging.teamcubation.com becomes teamcubation.com (og:url, og:image and
   twitter:image in the built pages, SITE.deployUrl in src/lib/seo.ts, ...);
-- every CNAME file is set to teamcubation.com;
+- every CNAME file is set to site-origin.teamcubation.com. teamcubation.com is served by CloudFront, which
+  sends /blog/* to the WordPress blog and everything else to GitHub Pages; GitHub Pages' custom domain is
+  that origin hostname (staging's is site-staging-origin.teamcubation.com, mapped the same way);
 - robots.txt allows indexing: every rule that blocks the whole site ("Disallow: /") becomes "Allow: /",
-  "Noindex:" lines are dropped, and the sitemap is declared if it isn't;
+  "Noindex:" lines are dropped, and the site's and the blog's sitemaps are declared if they aren't;
 - no built page keeps a robots meta tag asking not to be indexed (noindex or none, for robots, googlebot,
   bingbot...), whatever its form. That covers the one Layout.astro adds to every page while
   SITE.deployUrl isn't production, and pages using its noindex prop. Only Astro's redirect pages keep
@@ -34,7 +36,10 @@ from pathlib import Path
 
 STAGING_DOMAIN = "site-staging.teamcubation.com"
 PROD_DOMAIN = "teamcubation.com"
-SITEMAP_URL = f"https://{PROD_DOMAIN}/sitemap-index.xml"
+# GitHub Pages' custom domains: CloudFront serves the public domains and fetches the site from these.
+STAGING_ORIGIN = "site-staging-origin.teamcubation.com"
+PROD_ORIGIN = "site-origin.teamcubation.com"
+SITEMAP_URLS = (f"https://{PROD_DOMAIN}/sitemap-index.xml", f"https://{PROD_DOMAIN}/blog/sitemap_index.xml")
 
 SELF = Path(__file__).resolve()
 ROOT = SELF.parent.parent
@@ -44,6 +49,7 @@ SKIP_DIRS = {".idea", ".vscode", ".claude", "node_modules", ".astro", "dist", "_
 KEEP_DIRS = {"scripts"}
 
 STAGING_RE = re.compile(re.escape(STAGING_DOMAIN), re.IGNORECASE)
+STAGING_ORIGIN_RE = re.compile(re.escape(STAGING_ORIGIN), re.IGNORECASE)
 META_TAG_RE = re.compile(r"<meta\b[^>]*>", re.IGNORECASE)
 ATTR_RE = re.compile(r"""([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>/]+))""")
 
@@ -158,8 +164,8 @@ def git(repo: Path, *args: str) -> str:
 def to_production(name: str, text: str) -> str:
     """Return the production version of a file's text."""
     if name == "CNAME":
-        return PROD_DOMAIN + ("\n" if text.endswith("\n") else "")
-    text = STAGING_RE.sub(PROD_DOMAIN, text)
+        return PROD_ORIGIN + ("\n" if text.endswith("\n") else "")
+    text = STAGING_RE.sub(PROD_DOMAIN, STAGING_ORIGIN_RE.sub(PROD_ORIGIN, text))
     if name == "robots.txt":
         text = allow_indexing(text)
     elif name.endswith(".html"):
@@ -168,12 +174,14 @@ def to_production(name: str, text: str) -> str:
 
 
 def allow_indexing(robots: str) -> str:
-    """Turn rules that block the whole site into "Allow: /", drop "Noindex:" lines, declare the sitemap."""
+    """Turn rules that block the whole site into "Allow: /", drop "Noindex:" lines, declare the sitemaps."""
     block_all = (("disallow", "/"), ("disallow", "/*"))
     lines = ["Allow: /" if robots_rule(line) in block_all else line
              for line in robots.rstrip().splitlines() if robots_rule(line)[0] != "noindex"]
-    if not any(robots_rule(line)[0] == "sitemap" for line in lines):
-        lines += ["", f"Sitemap: {SITEMAP_URL}"]
+    declared = {value for field, value in map(robots_rule, lines) if field == "sitemap"}
+    missing = [url for url in SITEMAP_URLS if url not in declared]
+    if missing:
+        lines += ([""] if not declared else []) + [f"Sitemap: {url}" for url in missing]
     return "\n".join(lines) + "\n"
 
 

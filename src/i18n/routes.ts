@@ -46,11 +46,12 @@ export const rutas: Record<string, Record<Locale, RutaLoc>> = {
   },
 };
 
-/** Blog (WordPress aparte, solo en ES y EN): cada idioma va a su versión; PT no tiene, va al inglés. */
+/** Blog (WordPress servido en /blog del mismo dominio vía CloudFront, solo en ES y EN):
+ *  cada idioma va a su versión; PT no tiene, va al inglés. */
 export const blogUrl: Record<Locale, string> = {
-  es: "https://blog.teamcubation.com/es/",
-  en: "https://blog.teamcubation.com/",
-  pt: "https://blog.teamcubation.com/",
+  es: "/blog/es/",
+  en: "/blog/",
+  pt: "/blog/",
 };
 
 /** Asegura la barra final: es la URL canónica (sin ella GitHub Pages responde con un 301). */
