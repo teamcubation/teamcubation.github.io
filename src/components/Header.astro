@@ -1,6 +1,6 @@
 ---
 import Cta from "./Cta.astro";
-import { rutas, ruta, rutaPrograma, conBarra } from "../i18n/routes";
+import { rutas, ruta, rutaPrograma, conBarra, blogUrl } from "../i18n/routes";
 import { ui } from "../i18n/ui";
 import { getServicios } from "../data/servicios";
 import { defaultLocale, locales, type Locale } from "../i18n/config";
@@ -110,7 +110,7 @@ const menuServicios = MENU_GRUPOS.map((g) => ({
           <a href={item.path}>{item.label}</a>
         );
       })}
-      <a href="https://blog.teamcubation.com/" target="_blank" rel="noopener">Blog</a>
+      <a href={blogUrl[lang]} target="_blank" rel="noopener">Blog</a>
     </nav>
 
     <div class="cabecera__acciones">

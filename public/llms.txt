@@ -421,7 +421,7 @@ Página: https://teamcubation.com/contacto/ · Email: hola@teamcubation.com
 
 ### Otros enlaces
 
-- [Blog](https://blog.teamcubation.com/): El blog de Teamcubation.
+- [Blog](https://blog.teamcubation.com/es/): El blog de Teamcubation.
 - [Términos y Condiciones](https://teamcubation.com/terms/): Condiciones generales del producto Teamboarding, ofrecido por TQ DESARROLLADORES S.A.S. (en inglés).
 - [Política de Privacidad](https://teamcubation.com/privacy-policy/): Política de privacidad y cookies del sitio web y los servicios (en inglés).
 - [Mapa del sitio](https://teamcubation.com/sitemap-index.xml): Todas las páginas en español, inglés y portugués.
@@ -630,7 +630,7 @@ Página: https://teamcubation.com/pt/contato/ · E-mail: hola@teamcubation.com
 
 ### Outros links
 
-- [Blog](https://blog.teamcubation.com/): O blog da Teamcubation.
+- [Blog](https://blog.teamcubation.com/): O blog da Teamcubation (em inglês).
 - [Termos e Condições](https://teamcubation.com/terms/): Condições gerais do produto Teamboarding, oferecido pela TQ DESARROLLADORES S.A.S. (em inglês).
 - [Política de Privacidade](https://teamcubation.com/privacy-policy/): Política de privacidade e cookies do site e dos serviços (em inglês).
 - [Mapa do site](https://teamcubation.com/sitemap-index.xml): Todas as páginas em espanhol, inglês e português.
