@@ -13,7 +13,7 @@ export const error404Content: Record<"es" | "en" | "pt", Error404Content> = {
     tituloHtml: '404 <span class="resaltado">not found</span>',
     parrafos: [
       "Pero no se preocupe: equivocarse es parte del método. Nosotros lo decimos todo el tiempo: la experiencia es lo que queda después de haber hecho, equivocado, aprender, volver a hacer y finalmente haber entendido.",
-      "Usted clickeó o escribió la URL y hay dos opciones: Tenemos un link roto o se equivocó de URL. Ahora falta entender qué pasó y resolver la cuestión.",
+      "Usted clickeó o escribió la URL y hay dos opciones: tenemos un link roto o se equivocó de URL. Ahora falta entender qué pasó y resolver la cuestión.",
     ],
     enlacesAria: "Para seguir navegando",
     enlaces: {
