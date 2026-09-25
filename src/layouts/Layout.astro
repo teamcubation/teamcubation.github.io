@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import HeadComun from "../components/HeadComun.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { defaultLocale, type Locale } from "../i18n/config";
@@ -34,8 +35,6 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-// En staging (el build vive en otro dominio que producción) ninguna página se indexa.
-const esStaging = SITE.deployUrl !== SITE.url;
 // OG apunta al dominio donde vive el build (staging) para que la preview
 // resuelva; canonical/hreflang siguen en producción (SITE.url / Astro.site).
 const ogUrl = new URL(Astro.url.pathname, SITE.deployUrl).href;
@@ -91,37 +90,7 @@ const jsonLd = {
       })();
     </script>
 
-    <meta name="theme-color" content="#ffffff" />
-    {(noindex || esStaging) && <meta name="robots" content="noindex, nofollow" />}
-
-    <!-- Google Tag Manager -->
-    <script is:inline>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PS65VB9');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Apollo -->
-    <script is:inline>
-      function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-      o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-      o.onload=function(){window.trackingFunctions.onLoad({appId:"669817d6d1af0c01b288be3b"})},
-      document.head.appendChild(o)}initApollo();
-    </script>
-    <!-- End Apollo -->
-
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Preload de las fuentes de marca (evita FOUT en el titular/hero) -->
-    <link rel="preload" href="/fonts/funnel-display-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/darker-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <HeadComun noindex={noindex} />
 
     <title>{title}</title>
     <meta name="description" content={description} />

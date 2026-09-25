@@ -1,0 +1,77 @@
+---
+// Cuerpo de la 404: titular, texto y tres enlaces para seguir (inicio, servicios y el
+// formulario de contacto), con la ilustración a la derecha como en los heroes interiores.
+import { Image } from "astro:assets";
+import { error404Content } from "../../content/error404";
+import { ruta } from "../../i18n/routes";
+import { defaultLocale, type Locale } from "../../i18n/config";
+import ilustracion from "../../assets/ilustraciones/pedestal-hueco-encoge-hombros.png";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = error404Content[lang];
+
+const enlaces = [
+  { label: c.enlaces.inicio, href: ruta("home", lang) },
+  { label: c.enlaces.servicios, href: ruta("servicios", lang) },
+  { label: c.enlaces.contacto, href: ruta("contacto", lang) },
+];
+---
+
+<main id="contenido">
+  <section class="e404">
+    <div class="contenedor e404__grid">
+      <div>
+        <h1 class="e404__titulo" set:html={c.tituloHtml} />
+        {c.parrafos.map((p) => <p class="e404__p">{p}</p>)}
+        <nav class="e404__enlaces" aria-label={c.enlacesAria}>
+          {enlaces.map((e) => <a class="pill" href={e.href}>{e.label}</a>)}
+        </nav>
+      </div>
+      <div class="e404__media">
+        <Image class="e404__img" src={ilustracion} alt={c.imagenAlt} loading="eager" />
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  .e404 { padding-block: 72px 96px; }
+  .e404__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .e404__titulo {
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .e404__p {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    max-width: 58ch;
+    margin: 24px 0 0;
+  }
+  .e404__p + .e404__p { margin-top: 16px; }
+  .e404__enlaces { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .pill { display: inline-block; background: var(--color-gris-claro); border-radius: var(--radius-capsula); padding: 10px 20px; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); color: var(--color-tinta); text-decoration: none; transition: background-color 160ms ease-out; }
+  .pill:hover { background: var(--color-superficie-hover); }
+  .e404__img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+    display: block;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 1100px) {
+    .e404__grid { grid-template-columns: 1fr; gap: 40px; }
+    .e404__img { max-height: 440px; }
+  }
+</style>

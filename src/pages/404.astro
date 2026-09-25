@@ -1,0 +1,80 @@
+---
+// 404. GitHub Pages sirve este mismo archivo en cualquier URL que no existe, así que la página
+// trae los tres idiomas y el script del <head> elige uno antes de que se pinte: el del prefijo
+// de la URL (/en/, /pt/); si no tiene, el de la página del sitio de la que viene el visitante;
+// si llegó de afuera, el del navegador (como el redirect de la raíz en Layout.astro). El script
+// del final del <body> quita las otras versiones antes de que corran los scripts del header.
+import "../styles/global.css";
+import HeadComun from "../components/HeadComun.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Error404Body from "../components/pages/Error404Body.astro";
+import { locales, type Locale } from "../i18n/config";
+import { rutas } from "../i18n/routes";
+import { ui } from "../i18n/ui";
+
+// El selector de idioma del header lleva a la home de cada idioma.
+const homes = Object.fromEntries(locales.map((l) => [l, rutas.home[l].path])) as Record<Locale, string>;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script is:inline>
+      (function () {
+        // Idioma de una ruta del dominio: /en/ y /pt/ por prefijo; el blog es inglés salvo /blog/es/.
+        function idioma(ruta) {
+          var m = /^\/(en|pt)(\/|$)/.exec(ruta);
+          if (m) return m[1];
+          if (/^\/blog(\/|$)/.test(ruta)) return /^\/blog\/es(\/|$)/.test(ruta) ? "es" : "en";
+          return null;
+        }
+        var lang = idioma(window.location.pathname);
+        if (!lang) {
+          try {
+            var ref = new URL(document.referrer);
+            if (ref.origin === window.location.origin) lang = idioma(ref.pathname) || "es";
+          } catch (e) {}
+        }
+        if (!lang) {
+          var nav = (navigator.language || "").toLowerCase();
+          lang = nav.indexOf("en") === 0 ? "en" : nav.indexOf("pt") === 0 ? "pt" : "es";
+        }
+        document.documentElement.lang = lang;
+      })();
+    </script>
+
+    <HeadComun />
+
+    <title>404 not found | Teamcubation</title>
+  </head>
+  <body>
+    {locales.map((lang) => (
+      <div class="version-idioma" data-idioma={lang}>
+        <a class="saltar-al-contenido" href="#contenido">{ui[lang].skip}</a>
+        <Header lang={lang} translations={homes} />
+        <Error404Body lang={lang} />
+        <Footer lang={lang} />
+      </div>
+    ))}
+    <script is:inline>
+      (function () {
+        var lang = document.documentElement.lang;
+        document.querySelectorAll("[data-idioma]").forEach(function (v) {
+          if (v.getAttribute("data-idioma") !== lang) v.remove();
+        });
+      })();
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  /* El envoltorio no arma caja: el header sigue siendo sticky respecto del body. */
+  .version-idioma { display: contents; }
+  html[lang="es"] .version-idioma:not([data-idioma="es"]),
+  html[lang="en"] .version-idioma:not([data-idioma="en"]),
+  html[lang="pt"] .version-idioma:not([data-idioma="pt"]) { display: none; }
+</style>
