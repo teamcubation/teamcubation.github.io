@@ -78,7 +78,7 @@ export const clientesGrilla: ClienteLogo[] = [
 export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
   es: {
     seoTitle: "Clientes: impacto medible con IA | Teamcubation",
-    seoDesc: "Conozca la trayectoria de Teamcubation: más de 90 empresas líderes en 5 países. Entre sus clientes están Mercado Libre y Banco Comafi.",
+    seoDesc: "Conozca la trayectoria de Teamcubation: más de 90 empresas líderes en 6 países. Entre sus clientes están Mercado Libre y Banco Comafi.",
     kicker: "Clientes",
     heroH1: "La experiencia de Teamcubation trabajando con empresas.",
     heroBajada: "Teamcubation opera actualmente en 6 países —Argentina, Brasil, Uruguay, Chile, Colombia y España— y entrega sus programas de forma remota a equipos en cualquier geografía. Más de 90 empresas líderes confían en nosotros, entre ellas Mercado Libre, Coca-Cola Latam y Visa.",
@@ -86,7 +86,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     industriasH2: "Equipos y procesos en distintas industrias.",
     stats: [
       { num: "+90", lbl: "Más de 90 empresas líderes." },
-      { num: "5", lbl: "5 países." },
+      { num: "6", lbl: "6 países." },
       { lbl: "Nuestra trayectoria incluye empresas de banca, salud, logística, energía y tecnología." },
     ],
     clientesH3: "Entre nuestros clientes.",    impactoH2: "Impacto en los procesos intervenidos.",
@@ -103,7 +103,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
 
   en: {
     seoTitle: "Clients: measurable impact with AI | Teamcubation",
-    seoDesc: "Explore Teamcubation's track record: more than 90 leading companies in 5 countries. Its clients include Mercado Libre and Banco Comafi.",
+    seoDesc: "Explore Teamcubation's track record: more than 90 leading companies in 6 countries. Its clients include Mercado Libre and Banco Comafi.",
     kicker: "Clients",
     heroH1: "Teamcubation's experience working with companies.",
     heroBajada: "Teamcubation currently operates in 6 countries —Argentina, Brazil, Uruguay, Chile, Colombia and Spain— and delivers its programs remotely to teams in any geography. More than 90 leading companies trust us, including Mercado Libre, Coca-Cola Latam and Visa.",
@@ -111,7 +111,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     industriasH2: "Teams and processes across different industries.",
     stats: [
       { num: "+90", lbl: "More than 90 leading companies." },
-      { num: "5", lbl: "5 countries." },
+      { num: "6", lbl: "6 countries." },
       { lbl: "Our track record includes companies in banking, healthcare, logistics, energy and technology." },
     ],
     clientesH3: "Among our clients.",    impactoH2: "Impact on the processes we worked on.",
@@ -128,7 +128,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
 
   pt: {
     seoTitle: "Clientes: impacto mensurável com IA | Teamcubation",
-    seoDesc: "Conheça a trajetória da Teamcubation: mais de 90 empresas líderes em 5 países. Entre seus clientes estão o Mercado Livre e o Banco Comafi.",
+    seoDesc: "Conheça a trajetória da Teamcubation: mais de 90 empresas líderes em 6 países. Entre seus clientes estão o Mercado Livre e o Banco Comafi.",
     kicker: "Clientes",
     heroH1: "A experiência da Teamcubation trabalhando com empresas.",
     heroBajada: "A Teamcubation atua atualmente em 6 países —Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha— e entrega seus programas de forma remota a equipes em qualquer geografia. Mais de 90 empresas líderes confiam em nós, entre elas Mercado Livre, Coca-Cola Latam e Visa.",
@@ -136,7 +136,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     industriasH2: "Equipes e processos em diferentes indústrias.",
     stats: [
       { num: "+90", lbl: "Mais de 90 empresas líderes." },
-      { num: "5", lbl: "5 países." },
+      { num: "6", lbl: "6 países." },
       { lbl: "Nossa trajetória inclui empresas de banca, saúde, logística, energia e tecnologia." },
     ],
     clientesH3: "Entre nossos clientes.",    impactoH2: "Impacto nos processos em que atuamos.",
