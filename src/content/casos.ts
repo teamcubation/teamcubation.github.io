@@ -81,7 +81,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     seoDesc: "Conozca la trayectoria de Teamcubation: más de 90 empresas líderes en 5 países. Entre sus clientes están Mercado Libre y Banco Comafi.",
     kicker: "Clientes",
     heroH1: "La experiencia de Teamcubation trabajando con empresas.",
-    heroBajada: "Teamcubation opera actualmente en 6 países —Argentina, Brasil, Uruguay, Chile, Colombia y España— y entrega sus programas de forma remota a equipos en cualquier geografía. Más de 90 empresas líderes confían en ellos, entre ellas Mercado Libre, Coca-Cola Latam y Visa.",
+    heroBajada: "Teamcubation opera actualmente en 6 países —Argentina, Brasil, Uruguay, Chile, Colombia y España— y entrega sus programas de forma remota a equipos en cualquier geografía. Más de 90 empresas líderes confían en nosotros, entre ellas Mercado Libre, Coca-Cola Latam y Visa.",
     heroImgAlt: "Equipo reunido alrededor de una mesa de trabajo",
     industriasH2: "Equipos y procesos en distintas industrias.",
     stats: [
@@ -106,7 +106,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     seoDesc: "Explore Teamcubation's track record: more than 90 leading companies in 5 countries. Its clients include Mercado Libre and Banco Comafi.",
     kicker: "Clients",
     heroH1: "Teamcubation's experience working with companies.",
-    heroBajada: "Teamcubation currently operates in 6 countries —Argentina, Brazil, Uruguay, Chile, Colombia and Spain— and delivers its programs remotely to teams in any geography. More than 90 leading companies trust them, including Mercado Libre, Coca-Cola Latam and Visa.",
+    heroBajada: "Teamcubation currently operates in 6 countries —Argentina, Brazil, Uruguay, Chile, Colombia and Spain— and delivers its programs remotely to teams in any geography. More than 90 leading companies trust us, including Mercado Libre, Coca-Cola Latam and Visa.",
     heroImgAlt: "Team gathered around a work table",
     industriasH2: "Teams and processes across different industries.",
     stats: [
@@ -131,7 +131,7 @@ export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
     seoDesc: "Conheça a trajetória da Teamcubation: mais de 90 empresas líderes em 5 países. Entre seus clientes estão o Mercado Livre e o Banco Comafi.",
     kicker: "Clientes",
     heroH1: "A experiência da Teamcubation trabalhando com empresas.",
-    heroBajada: "A Teamcubation atua atualmente em 6 países —Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha— e entrega seus programas de forma remota a equipes em qualquer geografia. Mais de 90 empresas líderes confiam neles, entre elas Mercado Livre, Coca-Cola Latam e Visa.",
+    heroBajada: "A Teamcubation atua atualmente em 6 países —Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha— e entrega seus programas de forma remota a equipes em qualquer geografia. Mais de 90 empresas líderes confiam em nós, entre elas Mercado Livre, Coca-Cola Latam e Visa.",
     heroImgAlt: "Equipe reunida ao redor de uma mesa de trabalho",
     industriasH2: "Equipes e processos em diferentes indústrias.",
     stats: [

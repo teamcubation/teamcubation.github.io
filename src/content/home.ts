@@ -57,7 +57,7 @@ export const homeContent: Record<"es" | "en" | "pt", HomeContent> = {
         "A diferencia de un curso sus colaboradores aprenden, guiados por nuestros mentores expertos, trabajando en procesos y proyectos reales de su día a día.<br />Porque la experiencia no se enseña: se entrena.",
     },
     capacidad: {
-      h2: "Desarrollamos la capacidad de tu empresa para usar y construir la tecnología que necesita.",
+      h2: "Desarrollamos la capacidad de su empresa para usar y construir la tecnología que necesita.",
       listaIntro: "En Teamcubation entrenamos a los equipos sobre sus propios procesos y proyectos:",
       bullets: [
         "Acompañamos a las personas no técnicas que necesitan incorporar IA a su trabajo.",
@@ -131,10 +131,10 @@ export const homeContent: Record<"es" | "en" | "pt", HomeContent> = {
     },
     evidencia: {
       h2: "Experiencia construida con empresas de distintos sectores.",
-      p: "Trabajamos con más de 90 empresas líderes en Argentina, Brasil, Uruguay, Colombia y España. Entre nuestros clientes están empresas como Mercado Libre, Coca-Cola y Visa.",
+      p: "Trabajamos con más de 90 empresas líderes en Argentina, Brasil, Uruguay, Chile, Colombia y España. Entre nuestros clientes están empresas como Mercado Libre, Coca-Cola y Visa.",
       stats: [
         { num: "+90", lbl: "Más de 90 empresas líderes." },
-        { num: "5", lbl: "5 países: Argentina, Brasil, Uruguay, Colombia y España." },
+        { num: "6", lbl: "6 países: Argentina, Brasil, Uruguay, Chile, Colombia y España." },
         { num: "35%", lbl: "Hasta 35% de mejora de eficiencia en los procesos intervenidos." },
       ],
       link: { label: "Conocer nuestra trayectoria", href: "/casos/" },
@@ -230,10 +230,10 @@ export const homeContent: Record<"es" | "en" | "pt", HomeContent> = {
     },
     evidencia: {
       h2: "Experience built with companies across industries.",
-      p: "We've worked with more than 90 leading companies in Argentina, Brazil, Uruguay, Colombia and Spain. Our clients include companies like Mercado Libre, Coca-Cola and Visa.",
+      p: "We've worked with more than 90 leading companies in Argentina, Brazil, Uruguay, Chile, Colombia and Spain. Our clients include companies like Mercado Libre, Coca-Cola and Visa.",
       stats: [
         { num: "+90", lbl: "More than 90 leading companies." },
-        { num: "5", lbl: "5 countries: Argentina, Brazil, Uruguay, Colombia and Spain." },
+        { num: "6", lbl: "6 countries: Argentina, Brazil, Uruguay, Chile, Colombia and Spain." },
         { num: "35%", lbl: "Up to 35% efficiency improvement in the processes we worked on." },
       ],
       link: { label: "Explore our track record", href: "/en/clients/" },
@@ -329,10 +329,10 @@ export const homeContent: Record<"es" | "en" | "pt", HomeContent> = {
     },
     evidencia: {
       h2: "Experiência construída com empresas de diferentes setores.",
-      p: "Trabalhamos com mais de 90 empresas líderes na Argentina, Brasil, Uruguai, Colômbia e Espanha. Entre os nossos clientes estão empresas como Mercado Livre, Coca-Cola e Visa.",
+      p: "Trabalhamos com mais de 90 empresas líderes na Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha. Entre os nossos clientes estão empresas como Mercado Livre, Coca-Cola e Visa.",
       stats: [
         { num: "+90", lbl: "Mais de 90 empresas líderes." },
-        { num: "5", lbl: "5 países: Argentina, Brasil, Uruguai, Colômbia e Espanha." },
+        { num: "6", lbl: "6 países: Argentina, Brasil, Uruguai, Chile, Colômbia e Espanha." },
         { num: "35%", lbl: "Até 35% de melhoria de eficiência nos processos em que atuamos." },
       ],
       link: { label: "Conheça a nossa trajetória", href: "/pt/clientes/" },
