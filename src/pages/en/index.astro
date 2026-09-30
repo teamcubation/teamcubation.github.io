@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import HomeBody from "../../components/home/HomeBody.astro";
-import { websiteSchema } from "../../lib/seo";
+import { ids } from "../../lib/seo";
 
 const translations = { es: "/", en: "/en/", pt: "/pt/" };
 ---
@@ -10,7 +10,7 @@ const translations = { es: "/", en: "/en/", pt: "/pt/" };
   title="Teamcubation — Real AI adoption: experience is trained"
   description="We train your teams to adopt AI with real business impact. They learn by working on real processes and projects, guided by expert mentors."
   lang="en"
-  schema={[websiteSchema("en")]}
+  webPage={{ mainEntity: ids.organization }}
   translations={translations}
 >
   <HomeBody lang="en" />

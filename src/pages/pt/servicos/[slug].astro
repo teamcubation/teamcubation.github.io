@@ -19,8 +19,9 @@ const { svc } = Astro.props;
 const slug = svc.slug.replace("/servicios/", "");
 const url = `${SITE.url}/pt/servicos/${slug}`;
 const translations = { es: svc.slug, en: `/en/services/${slug}`, pt: `/pt/servicos/${slug}` };
+const service = serviceSchema(svc, "pt", url);
 const schema = [
-  serviceSchema(svc, "pt", url),
+  service,
   breadcrumbSchema([
     { name: "Início", path: "/pt/" },
     { name: "Serviços", path: "/pt/servicos" },
@@ -29,6 +30,6 @@ const schema = [
 ];
 ---
 
-<Layout title={svc.title} description={svc.meta} lang="pt" translations={translations} schema={schema}>
+<Layout title={svc.title} description={svc.meta} lang="pt" translations={translations} schema={schema} webPage={{ mainEntity: service["@id"] }}>
   <ProgramaBody svc={svc} lang="pt" />
 </Layout>

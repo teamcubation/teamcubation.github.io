@@ -18,8 +18,9 @@ export const getStaticPaths = (() => {
 const { svc } = Astro.props;
 const slug = svc.slug.replace("/servicios/", "");
 const translations = { es: svc.slug, en: `/en/services/${slug}`, pt: `/pt/servicos/${slug}` };
+const service = serviceSchema(svc, "es");
 const schema = [
-  serviceSchema(svc, "es"),
+  service,
   breadcrumbSchema([
     { name: "Inicio", path: "/" },
     { name: "Servicios", path: "/servicios" },
@@ -28,6 +29,6 @@ const schema = [
 ];
 ---
 
-<Layout title={svc.title} description={svc.meta} lang="es" translations={translations} schema={schema}>
+<Layout title={svc.title} description={svc.meta} lang="es" translations={translations} schema={schema} webPage={{ mainEntity: service["@id"] }}>
   <ProgramaBody svc={svc} lang="es" />
 </Layout>

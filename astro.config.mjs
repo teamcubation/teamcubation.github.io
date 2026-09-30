@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import checkJsonLd from './integrations/check-jsonld.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,7 +37,7 @@ export default defineConfig({
     '/booster-ai-pt': '/pt/servicos/booster-ai/',
     '/pt/booster-ai': '/pt/servicos/booster-ai/',
   },
-  integrations: [sitemap()],
+  integrations: [sitemap(), checkJsonLd()],
   vite: {
     plugins: [tailwindcss()]
   }

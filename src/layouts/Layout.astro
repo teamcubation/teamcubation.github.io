@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { defaultLocale, type Locale } from "../i18n/config";
 import { conBarra } from "../i18n/routes";
-import { SITE, organizationSchema } from "../lib/seo";
+import { SITE, langCode, organizationSchema, websiteSchema, webPageSchema } from "../lib/seo";
 import { ui } from "../i18n/ui";
 
 interface Props {
@@ -14,8 +14,11 @@ interface Props {
   lang?: Locale;
   /** Ruta relativa de la imagen OG (default: OG de marca). */
   image?: string;
-  /** JSON-LD extra de la página (Service, BreadcrumbList, WebSite, etc.). */
+  /** JSON-LD extra de la página (Service, BreadcrumbList, Person, etc.). */
   schema?: unknown[];
+  /** Nodo WebPage del JSON-LD: tipo (AboutPage, ContactPage…), @id de su entidad
+   *  principal e idioma del contenido si no es el de la página. */
+  webPage?: { type?: string; mainEntity?: string; inLanguage?: string };
   /** Evita indexación (útil en preview/staging). */
   noindex?: boolean;
   ogType?: string;
@@ -29,6 +32,7 @@ const {
   lang = defaultLocale,
   image,
   schema = [],
+  webPage = {},
   noindex = false,
   ogType = "website",
   translations,
@@ -54,9 +58,27 @@ const alternates = translations
 // x-default: la versión en español, la misma en las tres páginas del grupo.
 const xDefault = alternates.find((a) => a.loc === defaultLocale)?.href;
 
+// JSON-LD: Organization, WebSite y WebPage en todas las páginas, más los nodos propios
+// de cada una. El WebPage enlaza el BreadcrumbList de la página, si tiene.
+const breadcrumb = (schema as { "@type"?: string; "@id"?: string }[]).find(
+  (n) => n["@type"] === "BreadcrumbList"
+)?.["@id"];
 const jsonLd = {
   "@context": "https://schema.org",
-  "@graph": [organizationSchema, ...schema],
+  "@graph": [
+    organizationSchema(lang),
+    websiteSchema,
+    webPageSchema({
+      type: webPage.type,
+      url: canonical,
+      name: title,
+      description,
+      inLanguage: webPage.inLanguage ?? langCode[lang],
+      breadcrumb,
+      mainEntity: webPage.mainEntity,
+    }),
+    ...schema,
+  ],
 };
 ---
 

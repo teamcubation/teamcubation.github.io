@@ -7,17 +7,19 @@ import { breadcrumbSchema, itemListSchema } from "../../lib/seo";
 
 const c = serviciosContent.en;
 const translations = { es: "/servicios", en: "/en/services", pt: "/pt/servicos" };
+const lista = itemListSchema(
+  ORDEN.map((k) => ({
+    nombre: serviciosEn[k].nombre,
+    slug: `/en/services/${serviciosEn[k].slug.replace("/servicios/", "")}`,
+  })),
+  "/en/services"
+);
 const schema = [
   breadcrumbSchema([{ name: "Home", path: "/en/" }, { name: "Services", path: "/en/services" }]),
-  itemListSchema(
-    ORDEN.map((k) => ({
-      nombre: serviciosEn[k].nombre,
-      slug: `/en/services/${serviciosEn[k].slug.replace("/servicios/", "")}`,
-    }))
-  ),
+  lista,
 ];
 ---
 
-<Layout title={c.seoTitle} description={c.seoDesc} lang="en" translations={translations} schema={schema}>
+<Layout title={c.seoTitle} description={c.seoDesc} lang="en" translations={translations} schema={schema} webPage={{ type: "CollectionPage", mainEntity: lista["@id"] }}>
   <ServiciosBody lang="en" />
 </Layout>

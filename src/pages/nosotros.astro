@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import NosotrosBody from "../components/pages/NosotrosBody.astro";
 import { nosotrosContent } from "../content/nosotros";
-import { breadcrumbSchema } from "../lib/seo";
+import { breadcrumbSchema, equipoSchema, ids } from "../lib/seo";
 
 const c = nosotrosContent.es;
+const equipo = await equipoSchema("es");
 const translations = { es: "/nosotros", en: "/en/about", pt: "/pt/sobre" };
 ---
 
@@ -13,7 +14,8 @@ const translations = { es: "/nosotros", en: "/en/about", pt: "/pt/sobre" };
   description={c.seoDesc}
   lang="es"
   translations={translations}
-  schema={[breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Nosotros", path: "/nosotros" }])]}
+  schema={[breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Nosotros", path: "/nosotros" }]), ...equipo]}
+  webPage={{ type: "AboutPage", mainEntity: ids.organization }}
 >
   <NosotrosBody lang="es" />
 </Layout>
