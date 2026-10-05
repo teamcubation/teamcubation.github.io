@@ -26,6 +26,7 @@ export interface ContactoContent {
     telNumeroAria: string;
     mensajeLabel: string;
     mensajePlaceholder: string;
+    trampaLabel: string;
     error: string;
     errorEnvio: string;
     boton: string;
@@ -68,6 +69,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
       telNumeroAria: "Número",
       mensajeLabel: "Su mensaje",
       mensajePlaceholder: "Qué proceso necesita mejorar, qué quiere construir y cómo trabaja hoy su equipo.",
+      trampaLabel: "No complete este campo",
       error: "Complete cómo se identifica, su nombre, un email válido y el mensaje.",
       errorEnvio: "Ocurrió un error al enviar el formulario. Por favor, intente nuevamente.",
       boton: "Enviar mensaje",
@@ -118,6 +120,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
       telNumeroAria: "Number",
       mensajeLabel: "Your message",
       mensajePlaceholder: "Which process you need to improve, what you want to build and how your team works today.",
+      trampaLabel: "Leave this field empty",
       error: "Please complete how you identify, your name, a valid email and the message.",
       errorEnvio: "An error occurred while sending the form. Please try again.",
       boton: "Send message",
@@ -168,6 +171,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
       telNumeroAria: "Número",
       mensajeLabel: "Sua mensagem",
       mensajePlaceholder: "Qual processo você precisa melhorar, o que quer construir e como sua equipe trabalha hoje.",
+      trampaLabel: "Não preencha este campo",
       error: "Preencha como você se identifica, seu nome, um e-mail válido e a mensagem.",
       errorEnvio: "Ocorreu um erro ao enviar o formulário. Tente novamente.",
       boton: "Enviar mensagem",

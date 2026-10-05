@@ -63,29 +63,37 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
 
             <label class="campo">
               <span class="campo__label">{c.form.nombreLabel}</span>
-              <input name="nombre" type="text" required autocomplete="name" />
+              <input name="nombre" type="text" required autocomplete="name" maxlength="200" />
             </label>
 
             <label class="campo">
               <span class="campo__label">{c.form.emailLabel}</span>
-              <input name="email" type="email" required autocomplete="email" />
+              <input name="email" type="email" required autocomplete="email" maxlength="254" />
             </label>
 
             <div class="campo">
               <span class="campo__label">{c.form.telLabel}</span>
               <div class="tel">
                 <span class="tel__mas" aria-hidden="true">+</span>
-                <input name="pais" type="tel" inputmode="numeric" placeholder={c.form.telPaisPlaceholder} aria-label={c.form.telPaisAria} />
-                <input name="area" type="tel" inputmode="numeric" placeholder={c.form.telAreaPlaceholder} aria-label={c.form.telAreaAria} />
-                <input name="numero" type="tel" inputmode="numeric" placeholder={c.form.telNumeroPlaceholder} aria-label={c.form.telNumeroAria} />
+                <input name="pais" type="tel" inputmode="numeric" maxlength="60" placeholder={c.form.telPaisPlaceholder} aria-label={c.form.telPaisAria} />
+                <input name="area" type="tel" inputmode="numeric" maxlength="60" placeholder={c.form.telAreaPlaceholder} aria-label={c.form.telAreaAria} />
+                <input name="numero" type="tel" inputmode="numeric" maxlength="60" placeholder={c.form.telNumeroPlaceholder} aria-label={c.form.telNumeroAria} />
               </div>
             </div>
           </div>
 
           <label class="campo">
             <span class="campo__label">{c.form.mensajeLabel}</span>
-            <textarea name="mensaje" rows="5" required placeholder={c.form.mensajePlaceholder}></textarea>
+            <textarea name="mensaje" rows="5" required maxlength="10000" placeholder={c.form.mensajePlaceholder}></textarea>
           </label>
+
+          {/* Campo para bots: las personas no lo ven ni llegan con Tab; si viene completo, la API marca el mail como posible spam. */}
+          <div class="campo-web" aria-hidden="true">
+            <label>
+              {c.form.trampaLabel}
+              <input name="sitio_web" type="text" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
 
           <p class="form__error" role="alert" data-form-error hidden>
             {c.form.error}
@@ -179,6 +187,8 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
   .tel { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr); gap: 12px; align-items: center; }
   .tel__mas { font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); color: var(--color-gris-texto); }
 
+  .campo-web { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
   .form__error { margin: 0; font-family: var(--font-body); font-weight: 700; font-size: 14px; color: var(--color-coral); }
 
   .btn-enviar {
@@ -226,10 +236,12 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
 
 <script>
   // Validación cliente + envío al mismo endpoint que el sitio anterior.
-  // Contrato de payload idéntico al form viejo:
-  // { full_name, message, organization, phone_number, email, origin_extra, lang, selectedService }
+  // Payload del form viejo más los chequeos antispam que evalúa la API (website, elapsed_ms):
+  // { full_name, message, organization, phone_number, email, origin_extra, lang, selectedService, website, elapsed_ms }
   const form = document.querySelector<HTMLFormElement>("[data-contacto-form]");
   if (form) {
+    // La API marca como posible spam lo que se envía a menos de 3 s de cargar la página.
+    const cargada = performance.now();
     const endpoint = form.dataset.endpoint!;
     const lang = form.dataset.lang || "es";
     const errorEl = document.querySelector<HTMLElement>("[data-form-error]");
@@ -273,7 +285,8 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
       if (phone.trim() === "+") phone = undefined;
 
       const params = new URLSearchParams(window.location.search);
-      const selectedService = params.get("selectedService") || "";
+      // La API rechaza más de 200 caracteres; un link armado a mano no debe dejar el form sin enviar.
+      const selectedService = (params.get("selectedService") || "").slice(0, 200);
 
       const payload = {
         full_name: nombre,
@@ -284,6 +297,8 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
         origin_extra: perfil,
         lang,
         selectedService,
+        website: String(f.get("sitio_web") || ""),
+        elapsed_ms: Math.round(performance.now() - cargada),
       };
 
       if (submitBtn) {
