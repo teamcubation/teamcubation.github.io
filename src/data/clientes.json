@@ -6,7 +6,7 @@
   { "slug": "hp", "nombre": "HP", "home": true },
   { "slug": "cargill", "nombre": "Cargill", "home": false },
   { "slug": "accenture", "nombre": "Accenture", "home": true },
-  { "slug": "tenaris", "nombre": "Tenaris", "home": false },
+  { "slug": "tenaris", "nombre": "Tenaris", "home": true },
   { "slug": "boston-scientific", "nombre": "Boston Scientific", "home": false },
   { "slug": "banco-macro", "nombre": "Banco Macro", "home": true },
   { "slug": "banco-comafi", "nombre": "Banco Comafi", "home": true },
