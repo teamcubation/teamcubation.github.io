@@ -25,11 +25,11 @@ const homes = Object.fromEntries(locales.map((l) => [l, rutas.home[l].path])) as
 
     <script is:inline>
       (function () {
-        // Idioma de una ruta del dominio: /en/ y /pt/ por prefijo; el blog es inglés salvo /blog/es/.
+        // Idioma de una ruta del dominio: /en/ y /pt/ por prefijo; el blog es español salvo /blog/en/.
         function idioma(ruta) {
           var m = /^\/(en|pt)(\/|$)/.exec(ruta);
           if (m) return m[1];
-          if (/^\/blog(\/|$)/.test(ruta)) return /^\/blog\/es(\/|$)/.test(ruta) ? "es" : "en";
+          if (/^\/blog(\/|$)/.test(ruta)) return /^\/blog\/en(\/|$)/.test(ruta) ? "en" : "es";
           return null;
         }
         var lang = idioma(window.location.pathname);
