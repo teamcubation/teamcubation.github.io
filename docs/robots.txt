@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://teamcubation.com/sitemap-index.xml
-Sitemap: https://teamcubation.com/blog/sitemap_index.xml

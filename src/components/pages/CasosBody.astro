@@ -1,21 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
 import Cta from "../Cta.astro";
 import CierreCoral from "../CierreCoral.astro";
 import equipoReunion from "../../assets/fotos/equipo-reunion-mate.png";
-import { casosContent, clientesGrilla } from "../../content/casos";
+import { casosContent } from "../../content/casos";
+import { clientes } from "../../data/clientes";
 import { defaultLocale, type Locale } from "../../i18n/config";
 
 interface Props { lang?: Locale }
 const { lang = defaultLocale } = Astro.props;
 const c = casosContent[lang];
-
-const logos = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/clientes/grilla/*.png",
-  { eager: true },
-);
-const logoDe = (key: string) => logos[`../../assets/clientes/grilla/${key}.png`].default;
 ---
 
 <main id="contenido">
@@ -48,9 +42,9 @@ const logoDe = (key: string) => logos[`../../assets/clientes/grilla/${key}.png`]
       </div>
       <h3 class="h3-28">{c.clientesH3}</h3>
       <div class="logos-grilla">
-        {clientesGrilla.map((cl) => (
+        {clientes.map((cl) => (
           <div class="logo-card">
-            <Image src={logoDe(cl.logo)} alt={cl.alt} width={280} loading="lazy" />
+            <Image src={cl.logo} alt={cl.nombre} width={280} loading="lazy" />
           </div>
         ))}
       </div>

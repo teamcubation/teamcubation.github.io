@@ -1,5 +1,6 @@
-# build output (deploy is served from docs/, not dist/)
+# build output: GitHub Actions builds docs/ and publishes it (.github/workflows/deploy.yml)
 dist/
+docs/
 
 # generated types
 .astro/
@@ -27,3 +28,6 @@ pnpm-debug.log*
 # Material de diseño de referencia (export crudo de Claude Design): pesado, no es
 # parte del sitio ni se deploya. Los .md de .agent/ SÍ se versionan.
 .agent/design/
+
+# editor de clientes: lo que se sube a Apps Script se arma en dist/
+editor-clientes/dist/

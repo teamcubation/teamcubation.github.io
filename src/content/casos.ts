@@ -25,56 +25,6 @@ export interface CasosContent {
   cierreTexto: string;
 }
 
-export interface ClienteLogo { logo: string; alt: string }
-
-// Grilla de clientes (logos). Las marcas no se traducen: lista única para los 3 idiomas.
-export const clientesGrilla: ClienteLogo[] = [
-  { logo: "mercado-libre", alt: "Mercado Libre" },
-  { logo: "coca-cola", alt: "Coca-Cola" },
-  { logo: "visa", alt: "Visa" },
-  { logo: "ey", alt: "EY" },
-  { logo: "hp", alt: "HP" },
-  { logo: "cargill", alt: "Cargill" },
-  { logo: "accenture", alt: "Accenture" },
-  { logo: "tenaris", alt: "Tenaris" },
-  { logo: "boston-scientific", alt: "Boston Scientific" },
-  { logo: "banco-macro", alt: "Banco Macro" },
-  { logo: "banco-comafi", alt: "Banco Comafi" },
-  { logo: "swiss-medical", alt: "Swiss Medical" },
-  { logo: "byma", alt: "BYMA" },
-  { logo: "wtw", alt: "WTW" },
-  { logo: "prosegur", alt: "Prosegur" },
-  { logo: "andreani", alt: "Andreani" },
-  { logo: "arcor-agronegocios", alt: "Arcor Agronegocios" },
-  { logo: "advanta", alt: "Advanta" },
-  { logo: "gdm-seeds", alt: "GDM Seeds" },
-  { logo: "vista-energy", alt: "Vista Energy" },
-  { logo: "aconcagua-energia", alt: "Aconcagua Energía" },
-  { logo: "clear-petroleum", alt: "Clear Petroleum" },
-  { logo: "elea", alt: "Elea" },
-  { logo: "endeavor", alt: "Endeavor" },
-  { logo: "iov-labs", alt: "Rootstock Labs" },
-  { logo: "agrotoken", alt: "JusToken" },
-  { logo: "tca", alt: "TCA" },
-  { logo: "grupo-corven", alt: "Grupo Corven" },
-  { logo: "max-capital", alt: "Max Capital" },
-  { logo: "plaza-logistica", alt: "Plaza Logística" },
-  { logo: "celsur", alt: "Celsur" },
-  { logo: "defiba", alt: "Defiba" },
-  { logo: "metropol", alt: "Metropol" },
-  { logo: "bolsapel", alt: "Bolsapel" },
-  { logo: "ceibos-group", alt: "Ceibos Group" },
-  { logo: "espartina", alt: "Espartina" },
-  { logo: "telviso", alt: "Telviso" },
-  { logo: "vital-network", alt: "Vital Network" },
-  { logo: "strix", alt: "Strix" },
-  { logo: "natura", alt: "Natura" },
-  { logo: "payway", alt: "Payway" },
-  { logo: "parque-de-la-innovacion", alt: "Parque de la Innovación" },
-  { logo: "arcelormittal-acindar", alt: "ArcelorMittal Acindar" },
-  { logo: "dreamco", alt: "Dreamco" },
-];
-
 export const casosContent: Record<"es" | "en" | "pt", CasosContent> = {
   es: {
     seoTitle: "Clientes: impacto medible con IA | Teamcubation",

@@ -1,0 +1,64 @@
+# Builds the site and publishes it to GitHub Pages on every push to main, then clears the
+# CloudFront cache so the change shows right away. The same file serves staging and production
+# (scripts/prepare_prod.py copies it): each repo sets its distribution and AWS role as
+# repository variables (CLOUDFRONT_DISTRIBUTION_ID, AWS_ROLE_ARN).
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; a newer push waits instead of cancelling the one in progress.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Production must be indexable: only Astro's redirect pages (meta refresh) may say noindex.
+      # It catches a promotion that kept the staging deployUrl in src/lib/seo.ts.
+      - name: Check that production pages are indexable
+        if: github.repository == 'teamcubation/teamcubation.github.io'
+        run: |
+          paginas=$(grep -rlE '<meta name="robots" content="[^"]*(noindex|none)' docs --include='*.html' | xargs -r grep -L 'http-equiv="refresh"' || true)
+          if [ -n "$paginas" ]; then echo "These pages say noindex:"; echo "$paginas"; exit 1; fi
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - id: pages
+        uses: actions/deploy-pages@v5
+      - if: vars.CLOUDFRONT_DISTRIBUTION_ID != ''
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+      - name: Clear the CloudFront cache
+        if: vars.CLOUDFRONT_DISTRIBUTION_ID != ''
+        env:
+          DISTRIBUTION: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          id=$(aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION" --paths '/*' --query Invalidation.Id --output text)
+          aws cloudfront wait invalidation-completed --distribution-id "$DISTRIBUTION" --id "$id"

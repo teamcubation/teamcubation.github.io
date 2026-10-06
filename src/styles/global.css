@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* Ni el editor de clientes (Apps Script) ni los workflows son parte del sitio: que Tailwind no
+   tome palabras de ahí como clases (p. ej. "contents: read" generaría .contents en cada página). */
+@source not "../../editor-clientes";
+@source not "../../.github";
 
 /* =============================================================================
    Teamcubation — CSS global

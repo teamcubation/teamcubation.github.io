@@ -1,41 +1,18 @@
 ---
 // Tira de logos de clientes — marquee lineal 60s, con control «Pausar logos» y
-// respeto por reduced-motion. Orden y técnica: design-tech-notes §6.
+// respeto por reduced-motion. Muestra los clientes marcados para la home, en el orden de la
+// lista (src/data/clientes.json).
 import { Image } from "astro:assets";
+import { clientesHome } from "../../data/clientes";
 
-const modulos = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/clientes/*.png",
-  { eager: true }
-);
-const porSlug: Record<string, ImageMetadata> = {};
-for (const ruta in modulos) {
-  const slug = ruta.split("/").pop()!.replace(".png", "");
-  porSlug[slug] = modulos[ruta].default;
-}
-
-// Orden exacto del diseño.
-const orden: [string, string][] = [
-  ["mercado-libre", "Mercado Libre"],
-  ["accenture", "Accenture"],
-  ["banco-comafi", "Banco Comafi"],
-  ["macro", "Macro"],
-  ["ey", "EY"],
-  ["natura", "Natura"],
-  ["coca-cola", "Coca-Cola"],
-  ["hp", "HP"],
-  ["swiss-medical", "Swiss Medical"],
-  ["iovlabs", "IOVlabs"],
-  ["visa", "Visa"],
-  ["arcor-agro", "Arcor Agro"],
-  ["advanta", "Advanta"],
-  ["tca", "TCA"],
-  ["raizen", "Raízen"],
-  ["geneia", "Geneia"],
-  ["vista", "Vista"],
-];
-const logos = orden
-  .filter(([slug]) => porSlug[slug])
-  .map(([slug, nombre]) => ({ img: porSlug[slug], nombre }));
+// Cada logo ocupa más o menos la misma superficie, hasta 150 × 44 px: los anchos quedan más
+// bajos y los cuadrados más altos, y la tira se ve pareja.
+const SUPERFICIE = 3000;
+const logos = clientesHome.map((c) => {
+  const proporcion = c.logo.width / c.logo.height;
+  const alto = Math.min(44, Math.sqrt(SUPERFICIE / proporcion), 150 / proporcion);
+  return { img: c.logo, nombre: c.nombre, ancho: Math.round(alto * proporcion), alto: Math.round(alto) };
+});
 ---
 
 <div class="tira" data-tira-wrap>
@@ -43,14 +20,14 @@ const logos = orden
     <ul class="tira__grupo">
       {logos.map((l) => (
         <li class="tira__logo">
-          <Image src={l.img} alt={l.nombre} loading="lazy" />
+          <Image src={l.img} alt={l.nombre} width={l.ancho * 2} height={l.alto * 2} style={`width: ${l.ancho}px; height: ${l.alto}px`} loading="lazy" />
         </li>
       ))}
     </ul>
     <ul class="tira__grupo" aria-hidden="true">
       {logos.map((l) => (
         <li class="tira__logo">
-          <Image src={l.img} alt="" loading="lazy" />
+          <Image src={l.img} alt="" width={l.ancho * 2} height={l.alto * 2} style={`width: ${l.ancho}px; height: ${l.alto}px`} loading="lazy" />
         </li>
       ))}
     </ul>
@@ -87,10 +64,7 @@ const logos = orden
     justify-content: center;
   }
   .tira__logo :global(img) {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    display: block;
     object-fit: contain;
   }
   @keyframes tc-tira {
