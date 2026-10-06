@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Copy the site from the local tq-site-staging clone into this repo, ready to publish as teamcubation.com.
 
-Run it before pushing:
+Run it, review and commit, then push: GitHub Actions builds the site and publishes it
+(.github/workflows/deploy.yml, copied from staging). Neither repo commits the built docs/ anymore.
 
     python3 scripts/prepare_prod.py --dry-run  # list what would change
     python3 scripts/prepare_prod.py            # copy and prepare for production
@@ -9,20 +10,18 @@ Run it before pushing:
 
 This repo ends up with the staging clone's content: every file git tracks there (or would add, so nothing
 ignored) is copied over, and files here that staging doesn't have are deleted. Left alone on both sides:
-anything ignored (node_modules, ...), editor/agent settings (SKIP_DIRS) and this repo's scripts/.
+anything ignored (node_modules, docs/, ...), editor/agent settings and staging's client editor (SKIP_DIRS)
+and this repo's scripts/.
 
 The copy is prepared for production on the way:
-- every reference to site-staging.teamcubation.com becomes teamcubation.com (og:url, og:image and
-  twitter:image in the built pages, SITE.deployUrl in src/lib/seo.ts, ...);
+- every reference to site-staging.teamcubation.com becomes teamcubation.com (SITE.deployUrl in
+  src/lib/seo.ts, ...). With the production deployUrl the build leaves out the noindex every staging page
+  carries; the deploy workflow fails if a production page other than a redirect still says noindex;
 - every CNAME file is set to site-origin.teamcubation.com. teamcubation.com is served by CloudFront, which
   sends /blog/* to the WordPress blog and everything else to GitHub Pages; GitHub Pages' custom domain is
   that origin hostname (staging's is site-staging-origin.teamcubation.com, mapped the same way);
 - robots.txt allows indexing: every rule that blocks the whole site ("Disallow: /") becomes "Allow: /",
-  "Noindex:" lines are dropped, and the site's and the blog's sitemaps are declared if they aren't;
-- no built page keeps a robots meta tag asking not to be indexed (noindex or none, for robots, googlebot,
-  bingbot...), whatever its form. That covers the one Layout.astro adds to every page while
-  SITE.deployUrl isn't production, and pages using its noindex prop. Only Astro's redirect pages keep
-  theirs. If a noindex it doesn't recognize is left on a page, the run fails.
+  "Noindex:" lines are dropped, and the site's and the blog's sitemaps are declared if they aren't.
 """
 
 import argparse
@@ -43,15 +42,14 @@ SITEMAP_URLS = (f"https://{PROD_DOMAIN}/sitemap-index.xml", f"https://{PROD_DOMA
 
 SELF = Path(__file__).resolve()
 ROOT = SELF.parent.parent
-# Not site content (editor/agent settings, dependencies, generated files): never copied or deleted.
-SKIP_DIRS = {".idea", ".vscode", ".claude", "node_modules", ".astro", "dist", "__pycache__"}
+# Not site content (editor/agent settings, dependencies, generated files, staging's client editor, an Apps
+# Script project): never copied or deleted.
+SKIP_DIRS = {".idea", ".vscode", ".claude", "node_modules", ".astro", "dist", "__pycache__", "editor-clientes"}
 # This repo's own tooling, which staging doesn't have: never deleted.
 KEEP_DIRS = {"scripts"}
 
 STAGING_RE = re.compile(re.escape(STAGING_DOMAIN), re.IGNORECASE)
 STAGING_ORIGIN_RE = re.compile(re.escape(STAGING_ORIGIN), re.IGNORECASE)
-META_TAG_RE = re.compile(r"<meta\b[^>]*>", re.IGNORECASE)
-ATTR_RE = re.compile(r"""([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>/]+))""")
 
 
 def main() -> int:
@@ -66,9 +64,8 @@ def main() -> int:
         sys.exit(f"error: {ROOT} doesn't look like the site repo (no astro.config.mjs)")
     if staging == ROOT:
         sys.exit("error: --staging points at this repo, it must be the staging clone")
-    # docs/CNAME matters: GitHub Pages drops the custom domain if the published folder doesn't have it.
-    if not (staging / "astro.config.mjs").is_file() or not (staging / "docs" / "CNAME").is_file():
-        sys.exit(f"error: {staging} doesn't look like the staging clone (no astro.config.mjs or docs/CNAME), "
+    if not (staging / "astro.config.mjs").is_file() or not (staging / "public" / "CNAME").is_file():
+        sys.exit(f"error: {staging} doesn't look like the staging clone (no astro.config.mjs or public/CNAME), "
                  "pass its path with --staging")
 
     warnings, errors = staging_state_warnings(staging), []
@@ -98,10 +95,7 @@ def main() -> int:
             if STAGING_DOMAIN.encode() in data.lower():
                 errors.append(f"{rel} is a binary file that mentions {STAGING_DOMAIN}, it can't be fixed automatically")
         else:
-            text = to_production(src.name, text)
-            data = text.encode("utf-8")
-            if src.suffix == ".html" and is_noindexed(text):
-                errors.append(f"{rel} still has a noindex meta tag, in a form this script doesn't handle")
+            data = to_production(src.name, text).encode("utf-8")
         if dst.is_file() and dst.read_bytes() == data:
             continue
         action = "updated" if dst.exists() else "added"
@@ -168,8 +162,6 @@ def to_production(name: str, text: str) -> str:
     text = STAGING_RE.sub(PROD_DOMAIN, STAGING_ORIGIN_RE.sub(PROD_ORIGIN, text))
     if name == "robots.txt":
         text = allow_indexing(text)
-    elif name.endswith(".html"):
-        text = strip_noindex(text)
     return text
 
 
@@ -189,36 +181,6 @@ def robots_rule(line: str) -> tuple[str, str]:
     """Split a robots.txt line into its lowercased field and its value, ignoring comments."""
     field, _, value = line.split("#", 1)[0].partition(":")
     return field.strip().lower(), value.strip()
-
-
-def strip_noindex(html: str) -> str:
-    """Drop the meta tags that keep a page out of search results, unless it's one of Astro's redirect pages."""
-    if is_redirect(html):
-        return html
-    return META_TAG_RE.sub(lambda tag: "" if blocks_indexing(tag.group()) else tag.group(), html)
-
-
-def blocks_indexing(tag: str) -> bool:
-    """Whether a <meta> tag tells crawlers not to index the page."""
-    attrs = meta_attrs(tag)
-    directives = {d.strip() for d in attrs.get("content", "").lower().split(",")}
-    # "robots" and the crawler-specific names (googlebot, googlebot-news, bingbot...) all contain "bot".
-    return "bot" in attrs.get("name", "").lower() and bool(directives & {"noindex", "none"})
-
-
-def is_noindexed(html: str) -> bool:
-    """Whether a page other than a redirect still mentions noindex in a meta tag (a form not handled above)."""
-    return not is_redirect(html) and any("noindex" in tag.lower() for tag in META_TAG_RE.findall(html))
-
-
-def is_redirect(html: str) -> bool:
-    """Whether the page is one of Astro's redirect pages (a meta refresh), which are meant to be noindex."""
-    return any(meta_attrs(tag).get("http-equiv", "").lower() == "refresh" for tag in META_TAG_RE.findall(html))
-
-
-def meta_attrs(tag: str) -> dict:
-    """The attributes of an HTML tag, with lowercased names."""
-    return {m[1].lower(): next(v for v in m.groups()[1:] if v is not None) for m in ATTR_RE.finditer(tag)}
 
 
 if __name__ == "__main__":
