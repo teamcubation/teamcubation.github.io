@@ -44,6 +44,12 @@ export const rutas: Record<string, Record<Locale, RutaLoc>> = {
     en: { path: "/en/contact/", label: "Contact" },
     pt: { path: "/pt/contato/", label: "Contato" },
   },
+  // Fuera de la navegación principal y del pie: se enlaza desde Nosotros y Servicios.
+  prensa: {
+    es: { path: "/prensa/", label: "Prensa" },
+    en: { path: "/en/press/", label: "Press" },
+    pt: { path: "/pt/imprensa/", label: "Imprensa" },
+  },
 };
 
 /** Blog (WordPress servido en /blog del mismo dominio vía CloudFront, solo en ES y EN):

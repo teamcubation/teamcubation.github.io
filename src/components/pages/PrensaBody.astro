@@ -1,0 +1,187 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import CierreCoral from "../CierreCoral.astro";
+import BloquePrensa from "../BloquePrensa.astro";
+import { prensaContent, destacados, adopcion, archivo, ACTUALIZADO, formatearFecha, type Nota } from "../../content/prensa";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = prensaContent[lang];
+
+const logos = import.meta.glob<{ default: ImageMetadata }>("../../assets/medios/*.png", { eager: true });
+const logoDe = (key: string) => logos[`../../assets/medios/${key}.png`].default;
+
+// Las notas están en español (salvo las marcadas): hreflang solo cuando difiere de la página.
+const hreflang = (idioma = "es") => (idioma === lang ? undefined : idioma);
+const fecha = (n: Nota) => formatearFecha(n.fecha, lang);
+const tarjetas = [
+  { notas: destacados, clase: "nota--grande", grilla: "notas--2" },
+  { notas: adopcion, clase: "nota--chica", grilla: "notas--3" },
+];
+---
+
+<main id="contenido">
+  <!-- Hero -->
+  <section class="hero-prensa">
+    <div class="contenedor">
+      <p class="kicker">{c.kicker}</p>
+      <h1 class="hero-prensa__h1">{c.heroH1}</h1>
+      {c.heroPs.map((p) => <p class="hero-prensa__p">{p}</p>)}
+      <p class="actualizado">
+        {c.actualizado} <time datetime={ACTUALIZADO.slice(0, 7)}>{formatearFecha(ACTUALIZADO, lang, false)}</time>
+      </p>
+    </div>
+  </section>
+
+  <!-- Destacados y adopción de IA -->
+  <section class="sec-adopcion">
+    <div class="contenedor">
+      <h2 class="h2-32 mb28">{c.adopcionH2}</h2>
+      {tarjetas.map((t) => (
+        <div class:list={["notas", t.grilla]}>
+          {t.notas.map((n) => (
+            <article class:list={["nota", t.clase]}>
+              <div class="medio">
+                {n.logo ? (
+                  <Image class="medio__logo" src={logoDe(n.logo)} alt={n.logoAlt ?? n.medio} height={60} loading="lazy" />
+                ) : (
+                  <span class="medio__nombre">{n.medio}</span>
+                )}
+              </div>
+              <p class="nota__meta">{n.tipo[lang]} · <time datetime={n.fecha}>{fecha(n)}</time></p>
+              <h3 class="nota__titulo">{n.titulo[lang]}</h3>
+              {n.parrafos?.[lang].map((p) => <p class="nota__p">{p}</p>)}
+              <div class="nota__links">
+                <a class="nota__link" href={n.url} target="_blank" rel="noopener noreferrer" hreflang={hreflang(n.idioma)}>{n.enlace?.[lang]}</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- El origen del modelo -->
+  <section class="sec-origen">
+    <div class="contenedor angosto">
+      <h2 class="h2-32 mb8">{c.origen.h2}</h2>
+      <p class="origen__sub">{c.origen.sub}</p>
+      {c.origen.psHtml.map((p) => <p class="p16" set:html={p} />)}
+    </div>
+  </section>
+
+  <!-- Archivo -->
+  {archivo.map((s) => (
+    <section class="arch">
+      <div class="contenedor angosto">
+        <h2 class="h2-28 mb24">{s.titulo[lang]}</h2>
+        <ul class="arch__lista">
+          {s.notas.map((n) => (
+            <li class="arch__item">
+              <div class="arch__cabeza">
+                <div class="medio">
+                  {n.logo ? (
+                    <Image class="medio__logo" src={logoDe(n.logo)} alt={n.logoAlt ?? n.medio} height={60} loading="lazy" />
+                  ) : (
+                    <span class="medio__nombre">{n.medio}</span>
+                  )}
+                </div>
+                <p class="arch__meta">{n.tipo[lang]} · <time datetime={n.fecha}>{fecha(n)}</time></p>
+              </div>
+              <a class="arch__titulo" href={n.url} target="_blank" rel="noopener noreferrer" hreflang={hreflang(n.idioma)}>{n.titulo[lang]}</a>
+              {n.extra?.map((l) => (
+                <a class="arch__extra" href={l.url} target="_blank" rel="noopener noreferrer" hreflang={hreflang()}>
+                  {l.logo && <Image class="medio__logo" src={logoDe(l.logo)} alt="" aria-hidden="true" height={60} loading="lazy" />}
+                  <span>{l.texto[lang]}</span>
+                </a>
+              ))}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  ))}
+
+  <BloquePrensa lang={lang} />
+
+  <CierreCoral lang={lang} />
+</main>
+
+<style>
+  /* Gris de los logos de medios (y del nombre, cuando no hay logo). */
+  main { --gris-medios: #595959; }
+
+  .h2-32 { font-size: 32px; line-height: 1.12; margin: 0; }
+  .h2-28 { font-size: 28px; line-height: 1.12; margin: 0; }
+  .p16 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0 0 16px; }
+  .angosto { max-width: calc(900px + 2 * var(--gutter)); }
+
+  /* Hero */
+  .hero-prensa { padding-block: 72px 0; }
+  .hero-prensa__h1 { font-size: clamp(36px, 4.2vw, 54px); line-height: 1.1; letter-spacing: -0.02em; max-width: 22ch; margin: 0 0 20px; }
+  .hero-prensa__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 68ch; margin: 0 0 16px; }
+  .actualizado { font-family: var(--font-body); font-weight: 400; font-size: var(--fs-caption); line-height: 1.4; margin: 0; }
+
+  /* Logo del medio: caja fija, logo contenido y alineado a la izquierda. */
+  .medio { flex: none; }
+  .medio__logo { display: block; object-fit: contain; object-position: left center; }
+  .medio__nombre { display: block; font-family: var(--font-display); font-weight: 650; color: var(--gris-medios); white-space: nowrap; }
+
+  /* Tarjetas de notas */
+  .sec-adopcion { padding-block: 64px 0; }
+  .notas { display: grid; gap: 24px; align-items: stretch; }
+  .notas--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .notas--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
+  .nota { height: 100%; background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); display: flex; flex-direction: column; }
+  .nota__meta { font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-caption); line-height: 1.4; margin: 0; }
+  .nota__titulo { color: var(--color-coral); text-wrap-style: pretty; margin: 0; }
+  .nota__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: 14px; line-height: 1.45; margin: 0; }
+  .nota__links { margin-top: auto; display: flex; flex-direction: column; }
+  .nota__link { font-family: var(--font-body); font-size: 14px; line-height: normal; color: var(--color-tinta); text-decoration: none; }
+  .nota__link:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+
+  .nota--grande { padding: 32px; gap: 14px; }
+  .nota--grande .medio { height: 30px; }
+  .nota--grande .medio__logo { width: 170px; height: 30px; }
+  .nota--grande .medio__nombre { font-size: 22px; line-height: 30px; }
+  .nota--grande .nota__titulo { font-size: 24px; line-height: 1.15; }
+  .nota--grande .nota__links { padding-top: 8px; gap: 8px; }
+  .nota--grande .nota__link { font-weight: var(--peso-cuerpo-bold); }
+
+  .nota--chica { padding: 24px; gap: 10px; }
+  .nota--chica .medio { height: 24px; margin-bottom: 4px; }
+  .nota--chica .medio__logo { width: 140px; height: 24px; }
+  .nota--chica .medio__nombre { font-size: 18px; line-height: 24px; }
+  .nota--chica .nota__titulo { font-size: 19px; line-height: 1.2; }
+  .nota--chica .nota__links { padding-top: 6px; gap: 6px; }
+  .nota--chica .nota__link { font-weight: var(--peso-cuerpo-semibold); }
+
+  /* El origen */
+  .sec-origen { padding-block: 96px 0; }
+  .origen__sub { font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.2; color: var(--color-coral); margin: 0 0 24px; }
+  .sec-origen .p16:last-child { margin-bottom: 0; }
+
+  /* Archivo */
+  .arch { padding-block: 80px 0; }
+  .arch__lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 40px; }
+  .arch__item { display: flex; flex-direction: column; gap: 6px; }
+  .arch__cabeza { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .arch .medio { height: 18px; }
+  .arch .medio__logo { width: 96px; height: 18px; }
+  .arch .medio__nombre { font-size: 14px; line-height: 18px; }
+  .arch__meta { font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: 12px; line-height: 1.4; margin: 0; }
+  .arch__titulo { font-family: var(--font-display); font-weight: 300; font-size: 17px; line-height: 1.3; color: var(--color-tinta); text-decoration: none; text-wrap-style: pretty; }
+  .arch__extra { display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-secundario); line-height: normal; color: var(--color-tinta); text-decoration: none; }
+  .arch__extra .medio__logo { width: 96px; height: 14px; }
+  .arch__titulo:hover, .arch__extra:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+
+  @media (max-width: 1100px) {
+    .notas--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 720px) {
+    .notas--2, .notas--3 { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PrensaBody from "../../components/pages/PrensaBody.astro";
+import { prensaContent, todasLasNotas, ACTUALIZADO } from "../../content/prensa";
+import { breadcrumbSchema, prensaSchema } from "../../lib/seo";
+
+const c = prensaContent.en;
+const translations = { es: "/prensa", en: "/en/press", pt: "/pt/imprensa" };
+const lista = prensaSchema(todasLasNotas.map((n) => ({ titulo: n.titulo.en, url: n.url })), "/en/press");
+---
+
+<Layout
+  title={c.seoTitle}
+  description={c.seoDesc}
+  lang="en"
+  translations={translations}
+  schema={[breadcrumbSchema([{ name: "Home", path: "/en/" }, { name: "Press", path: "/en/press" }]), lista]}
+  webPage={{ type: "CollectionPage", mainEntity: lista["@id"], dateModified: ACTUALIZADO }}
+>
+  <PrensaBody lang="en" />
+</Layout>

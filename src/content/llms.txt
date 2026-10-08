@@ -38,6 +38,7 @@ Teamcubation builds companies' capability to use and build the technology they n
 - [Teamboarding](https://teamcubation.com/en/teamboarding/): Teamcubation's proprietary platform, which measures the progress and impact of AI adoption and generates the sponsor's reports.
 - [Clients](https://teamcubation.com/en/clients/): Track record with more than 90 leading companies across industries, and the client list.
 - [About](https://teamcubation.com/en/about/): What Teamcubation is, its history since 2021 and the team.
+- [Press](https://teamcubation.com/en/press/): Press coverage, interviews, columns, podcasts and talks featuring Teamcubation and its founders since 2022.
 - [Contact](https://teamcubation.com/en/contact/): Schedule a conversation about your team's next step.
 
 ### Methodology
@@ -201,6 +202,16 @@ Page: https://teamcubation.com/en/about/
 - Teamcubation was founded in 2021 in Buenos Aires, Argentina, by Mariano Wechsler and Diego Jolodenco. It was born training developers while they worked on software projects, which is the base of the Incubation program, and it applies the same principle to business tasks, automation and building with AI: people build experience working on needs they know.
 - Team: Mariano Wechsler (Co-founder and CEO), Diego Jolodenco (Co-founder and COO), Jonathan Tapicer (CTO), Agustín Pina (Head of Training), Tomás Estruga (Commercial and Partnerships Director), Tomás Muñoz (CFO) and Florencia Díaz (Head of People).
 
+### Press
+
+Page: https://teamcubation.com/en/press/
+
+- Teamcubation has appeared in business and technology media since 2022. The first stories (LA NACION, Infobae, Newsweek Argentina and Forbes Argentina, 2022) described its original model as "the medical residency for programmers": developers who already knew how to code gained experience inside companies, on real projects, alongside senior professionals and with their progress measured through data.
+- AI adoption: Forbes Argentina covered Booster AI (March 2026); iProfesional (March 2026) and LA NACION (August 2026) covered why AI investment doesn't turn into results without adoption; in Infobae (June 2025), Mariano Wechsler wrote about enabling people in every area to automate their own tasks.
+- Investment: in 2023, Alaya Capital, FJ Labs, Mr. Pink and Opera Ventures took part in Teamcubation's seed round (LAVCA); Forbes Argentina reported US$1 million.
+- Talks and conversations: Forbes IA Summit (2026), Endeavor's Mindset Emprendedor podcast (2026), Experiencia IDEA Management (2026), Experiencia Endeavor NOA (2024), Provocación Live! (2024), the Argentinos, a las cosas! podcast (2023) and a column in Forbes Argentina on ChatGPT (2023).
+- The coverage is in Spanish, except LAVCA's post, which is in English. Press contact: hola@teamcubation.com
+
 ### Contact
 
 Page: https://teamcubation.com/en/contact/ · Email: hola@teamcubation.com
@@ -247,6 +258,7 @@ Teamcubation desarrolla la capacidad de las empresas para usar y construir la te
 - [Teamboarding](https://teamcubation.com/teamboarding/): La plataforma propietaria de Teamcubation, que mide el avance y el impacto de la adopción de IA y genera los informes del sponsor.
 - [Clientes](https://teamcubation.com/casos/): Trayectoria con más de 90 empresas líderes de distintas industrias y el listado de clientes.
 - [Nosotros](https://teamcubation.com/nosotros/): Qué es Teamcubation, su historia desde 2021 y el equipo.
+- [Prensa](https://teamcubation.com/prensa/): Notas, entrevistas, columnas, podcasts y conferencias de Teamcubation y sus fundadores desde 2022.
 - [Contacto](https://teamcubation.com/contacto/): Agendar una conversación sobre el próximo paso del equipo.
 
 ### Metodología
@@ -410,6 +422,16 @@ Página: https://teamcubation.com/nosotros/
 - Teamcubation fue fundada en 2021 en Buenos Aires, Argentina, por Mariano Wechsler y Diego Jolodenco. Nació formando desarrolladores mientras trabajaban sobre proyectos de software, que es la base del programa Incubation, y aplica el mismo principio a las tareas de negocio, la automatización y la construcción con IA: que las personas desarrollen experiencia trabajando sobre necesidades que conocen.
 - Equipo: Mariano Wechsler (cofundador y CEO), Diego Jolodenco (cofundador y COO), Jonathan Tapicer (CTO), Agustín Pina (Head of Training), Tomás Estruga (Director Comercial y Alianzas), Tomás Muñoz (CFO) y Florencia Díaz (Head of People).
 
+### Prensa
+
+Página: https://teamcubation.com/prensa/
+
+- Teamcubation aparece en medios de negocios y tecnología desde 2022. Las primeras coberturas (LA NACION, Infobae, Newsweek Argentina y Forbes Argentina, 2022) describieron su modelo original como «la residencia médica de los programadores»: desarrolladores que ya sabían programar adquirían experiencia dentro de empresas, sobre proyectos reales, junto a profesionales senior y con su evolución medida mediante datos.
+- Adopción de IA: Forbes Argentina presentó Booster AI (marzo de 2026); iProfesional (marzo de 2026) y LA NACION (agosto de 2026) analizaron por qué la inversión en IA no se traduce en resultados sin adopción; en Infobae (junio de 2025), Mariano Wechsler escribió sobre habilitar a personas de cualquier área para que automaticen sus propias tareas.
+- Inversión: en 2023, Alaya Capital, FJ Labs, Mr. Pink y Opera Ventures participaron de la ronda seed de Teamcubation (LAVCA); Forbes Argentina informó US$1 millón.
+- Charlas y conversaciones: Forbes IA Summit (2026), el podcast Mindset Emprendedor de Endeavor (2026), Experiencia IDEA Management (2026), Experiencia Endeavor NOA (2024), Provocación Live! (2024), el podcast Argentinos, a las cosas! (2023) y una columna en Forbes Argentina sobre ChatGPT (2023).
+- Contacto de prensa: hola@teamcubation.com
+
 ### Contacto
 
 Página: https://teamcubation.com/contacto/ · Email: hola@teamcubation.com
@@ -456,6 +478,7 @@ A Teamcubation desenvolve a capacidade das empresas de usar e construir a tecnol
 - [Teamboarding](https://teamcubation.com/pt/teamboarding/): A plataforma proprietária da Teamcubation, que mede o progresso e o impacto da adoção de IA e gera os relatórios do sponsor.
 - [Clientes](https://teamcubation.com/pt/clientes/): Trajetória com mais de 90 empresas líderes de diferentes setores e a lista de clientes.
 - [Sobre](https://teamcubation.com/pt/sobre/): O que é a Teamcubation, a sua história desde 2021 e a equipe.
+- [Imprensa](https://teamcubation.com/pt/imprensa/): Matérias, entrevistas, colunas, podcasts e palestras da Teamcubation e dos seus fundadores desde 2022.
 - [Contato](https://teamcubation.com/pt/contato/): Agendar uma conversa sobre o próximo passo da equipe.
 
 ### Metodologia
@@ -618,6 +641,16 @@ Página: https://teamcubation.com/pt/sobre/
 
 - A Teamcubation foi fundada em 2021 em Buenos Aires, Argentina, por Mariano Wechsler e Diego Jolodenco. Nasceu formando desenvolvedores enquanto trabalhavam sobre projetos de software, que é a base do programa Incubation, e aplica o mesmo princípio às tarefas de negócio, à automação e à construção com IA: que as pessoas desenvolvam experiência trabalhando sobre necessidades que conhecem.
 - Equipe: Mariano Wechsler (cofundador e CEO), Diego Jolodenco (cofundador e COO), Jonathan Tapicer (CTO), Agustín Pina (Head of Training), Tomás Estruga (diretor comercial e de alianças), Tomás Muñoz (CFO) e Florencia Díaz (Head of People).
+
+### Imprensa
+
+Página: https://teamcubation.com/pt/imprensa/
+
+- A Teamcubation aparece em veículos de negócios e tecnologia desde 2022. As primeiras matérias (LA NACION, Infobae, Newsweek Argentina e Forbes Argentina, 2022) descreveram o seu modelo original como «a residência médica dos programadores»: desenvolvedores que já sabiam programar adquiriam experiência dentro das empresas, sobre projetos reais, ao lado de profissionais seniores e com a sua evolução medida por meio de dados.
+- Adoção de IA: a Forbes Argentina apresentou o Booster AI (março de 2026); o iProfesional (março de 2026) e o LA NACION (agosto de 2026) analisaram por que o investimento em IA não se traduz em resultados sem adoção; no Infobae (junho de 2025), Mariano Wechsler escreveu sobre habilitar pessoas de qualquer área para que automatizem as suas próprias tarefas.
+- Investimento: em 2023, Alaya Capital, FJ Labs, Mr. Pink e Opera Ventures participaram da rodada seed da Teamcubation (LAVCA); a Forbes Argentina informou US$ 1 milhão.
+- Palestras e conversas: Forbes IA Summit (2026), o podcast Mindset Emprendedor da Endeavor (2026), Experiencia IDEA Management (2026), Experiencia Endeavor NOA (2024), Provocación Live! (2024), o podcast Argentinos, a las cosas! (2023) e uma coluna na Forbes Argentina sobre o ChatGPT (2023).
+- As matérias estão em espanhol, exceto a publicação da LAVCA, em inglês. Contato para a imprensa: hola@teamcubation.com
 
 ### Contato
 

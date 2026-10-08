@@ -25,7 +25,7 @@ export interface NosotrosContent {
 
 export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
   es: {
-    seoTitle: "Nosotros: la experiencia se entrena | Teamcubation",
+    seoTitle: "Qué es Teamcubation: historia y equipo",
     seoDesc: "Teamcubation fue fundada en 2021 en Buenos Aires por Mariano Wechsler y Diego Jolodenco. Conozca su historia y su método de entrenamiento.",
     kicker: "Nosotros",
     heroH1: "Qué es Teamcubation y quiénes la fundaron.",
@@ -64,11 +64,12 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
       { label: "Conocer nuestra trayectoria", href: "/casos/" },
       { label: "Conocer la metodología", href: "/metodologia/" },
       { label: "Conocer Teamboarding", href: "/teamboarding/" },
+      { label: "Prensa y entrevistas", href: "/prensa/" },
     ],
   },
 
   en: {
-    seoTitle: "About: experience is trained | Teamcubation",
+    seoTitle: "What is Teamcubation: history and team",
     seoDesc: "Teamcubation was founded in 2021 in Buenos Aires by Mariano Wechsler and Diego Jolodenco. Learn about its history and its training method.",
     kicker: "About",
     heroH1: "What Teamcubation is and who founded it.",
@@ -91,11 +92,11 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     heroImgAlt: "Team working on their own plans and processes on site",
     fundadoresH2: "The team.",
     fundadores: [
-      { nombre: "Mariano Wechsler", rol: "Cofundador y CEO", linkedin: "https://www.linkedin.com/in/marianowechsler/", foto: "mariano-wechsler" },
-      { nombre: "Diego Jolodenco", rol: "Cofundador y COO", linkedin: "https://www.linkedin.com/in/diegojolodenco/", foto: "diego-jolodenco" },
+      { nombre: "Mariano Wechsler", rol: "Co-founder and CEO", linkedin: "https://www.linkedin.com/in/marianowechsler/", foto: "mariano-wechsler" },
+      { nombre: "Diego Jolodenco", rol: "Co-founder and COO", linkedin: "https://www.linkedin.com/in/diegojolodenco/", foto: "diego-jolodenco" },
       { nombre: "Jonathan Tapicer", rol: "CTO", linkedin: "https://www.linkedin.com/in/tapicer/", foto: "jonathan-tapicer" },
       { nombre: "Agustín Pina", rol: "Head of Training", linkedin: "https://www.linkedin.com/in/agustin-pina/", foto: "agustin-pina" },
-      { nombre: "Tomás Estruga", rol: "Director Comercial y Alianzas", linkedin: "https://www.linkedin.com/in/tomas-estruga-892140b/", foto: "tomas-estruga" },
+      { nombre: "Tomás Estruga", rol: "Commercial and Partnerships Director", linkedin: "https://www.linkedin.com/in/tomas-estruga-892140b/", foto: "tomas-estruga" },
       { nombre: "Tomás Muñoz", rol: "CFO", linkedin: "https://www.linkedin.com/in/tomasmunoz/", foto: "tomas-munoz" },
       { nombre: "Florencia Díaz", rol: "Head of People", linkedin: "https://www.linkedin.com/in/mariaflorenciadiaz/", foto: "florencia-diaz" },
     ],
@@ -107,11 +108,12 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
       { label: "Explore our track record", href: "/en/clients/" },
       { label: "Explore our methodology", href: "/en/methodology/" },
       { label: "Explore Teamboarding", href: "/en/teamboarding/" },
+      { label: "Press and interviews", href: "/en/press/" },
     ],
   },
 
   pt: {
-    seoTitle: "Sobre: a experiência se treina | Teamcubation",
+    seoTitle: "O que é a Teamcubation: história e equipe",
     seoDesc: "A Teamcubation foi fundada em 2021 em Buenos Aires por Mariano Wechsler e Diego Jolodenco. Conheça a sua história e o seu método de treinamento.",
     kicker: "Sobre",
     heroH1: "O que é a Teamcubation e quem a fundou.",
@@ -134,11 +136,11 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
     heroImgAlt: "Equipe trabalhando sobre planos e processos próprios na planta",
     fundadoresH2: "A equipe.",
     fundadores: [
-      { nombre: "Mariano Wechsler", rol: "Cofundador y CEO", linkedin: "https://www.linkedin.com/in/marianowechsler/", foto: "mariano-wechsler" },
-      { nombre: "Diego Jolodenco", rol: "Cofundador y COO", linkedin: "https://www.linkedin.com/in/diegojolodenco/", foto: "diego-jolodenco" },
+      { nombre: "Mariano Wechsler", rol: "Cofundador e CEO", linkedin: "https://www.linkedin.com/in/marianowechsler/", foto: "mariano-wechsler" },
+      { nombre: "Diego Jolodenco", rol: "Cofundador e COO", linkedin: "https://www.linkedin.com/in/diegojolodenco/", foto: "diego-jolodenco" },
       { nombre: "Jonathan Tapicer", rol: "CTO", linkedin: "https://www.linkedin.com/in/tapicer/", foto: "jonathan-tapicer" },
       { nombre: "Agustín Pina", rol: "Head of Training", linkedin: "https://www.linkedin.com/in/agustin-pina/", foto: "agustin-pina" },
-      { nombre: "Tomás Estruga", rol: "Director Comercial y Alianzas", linkedin: "https://www.linkedin.com/in/tomas-estruga-892140b/", foto: "tomas-estruga" },
+      { nombre: "Tomás Estruga", rol: "Diretor Comercial e de Alianças", linkedin: "https://www.linkedin.com/in/tomas-estruga-892140b/", foto: "tomas-estruga" },
       { nombre: "Tomás Muñoz", rol: "CFO", linkedin: "https://www.linkedin.com/in/tomasmunoz/", foto: "tomas-munoz" },
       { nombre: "Florencia Díaz", rol: "Head of People", linkedin: "https://www.linkedin.com/in/mariaflorenciadiaz/", foto: "florencia-diaz" },
     ],
@@ -150,6 +152,7 @@ export const nosotrosContent: Record<"es" | "en" | "pt", NosotrosContent> = {
       { label: "Conhecer a nossa trajetória", href: "/pt/clientes/" },
       { label: "Conhecer a metodologia", href: "/pt/metodologia/" },
       { label: "Conhecer o Teamboarding", href: "/pt/teamboarding/" },
+      { label: "Imprensa e entrevistas", href: "/pt/imprensa/" },
     ],
   },
 };

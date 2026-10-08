@@ -55,6 +55,7 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
       links: [
         { label: "Conocer la metodología", routeKey: "metodologia" },
         { label: "Conocer Teamboarding", routeKey: "teamboarding" },
+        { label: "Prensa y entrevistas", routeKey: "prensa" },
       ],
     },
   },
@@ -98,6 +99,7 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
       links: [
         { label: "Explore our methodology", routeKey: "metodologia" },
         { label: "Discover Teamboarding", routeKey: "teamboarding" },
+        { label: "Press and interviews", routeKey: "prensa" },
       ],
     },
   },
@@ -141,6 +143,7 @@ export const serviciosContent: Record<"es" | "en" | "pt", ServiciosContent> = {
       links: [
         { label: "Conhecer a metodologia", routeKey: "metodologia" },
         { label: "Conhecer o Teamboarding", routeKey: "teamboarding" },
+        { label: "Imprensa e entrevistas", routeKey: "prensa" },
       ],
     },
   },

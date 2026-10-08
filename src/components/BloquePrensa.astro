@@ -1,0 +1,88 @@
+---
+// Bloque de prensa — «¿Por qué Teamcubation empezó formando desarrolladores?»,
+// «¿Quién invirtió en Teamcubation?» y las tarjetas «Acerca de» y «Contacto de prensa».
+// Va en Prensa, antes del cierre coral, y en Nosotros entre dos cierres coral, como en el diseño.
+import { prensaContent } from "../content/prensa";
+import { email } from "../i18n/ui";
+import { defaultLocale, type Locale } from "../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = prensaContent[lang];
+
+// hreflang solo cuando el destino está en otro idioma que la página.
+const hreflang = (idioma = "es") => (idioma === lang ? undefined : idioma);
+---
+
+<!-- Por qué formando desarrolladores · Quién invirtió -->
+<section class="sec-faq">
+  <div class="contenedor faq">
+    <article>
+      <h2 class="h2-28 mb16">{c.porQue.h2}</h2>
+      {c.porQue.ps.map((p) => <p class="p16">{p}</p>)}
+      <p class="marca">{c.porQue.marca}</p>
+      {c.porQue.ps2.map((p) => <p class="p16">{p}</p>)}
+      <a class="enlace" href={c.porQue.link.href}>{c.porQue.link.label}</a>
+    </article>
+    <article>
+      <h2 class="h2-28 mb16">{c.inversion.h2}</h2>
+      {c.inversion.ps.map((p) => <p class="p16">{p}</p>)}
+      <div class="faq__enlaces">
+        {c.inversion.links.map((l) => (
+          <a class="enlace" href={l.href} target="_blank" rel="noopener noreferrer" hreflang={hreflang(l.idioma)}>{l.label}</a>
+        ))}
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Acerca de · Contacto de prensa -->
+<section class="sec-tarjetas">
+  <div class="contenedor tarjetas">
+    <article class="tarjeta tarjeta--gris">
+      <h2 class="tarjeta__h2">{c.acerca.h2}</h2>
+      {c.acerca.ps.map((p) => <p class="tarjeta__p">{p}</p>)}
+      <a class="tarjeta__link" href={c.acerca.link.href}>{c.acerca.link.label}</a>
+    </article>
+    <article class="tarjeta tarjeta--lima">
+      <h2 class="tarjeta__h2">{c.contacto.h2}</h2>
+      <p class="tarjeta__p">{c.contacto.p}</p>
+      <a class="tarjeta__email" href={`mailto:${email}`}>{email}</a>
+    </article>
+  </div>
+</section>
+
+<style>
+  .h2-28 { font-size: 28px; line-height: 1.12; margin: 0; }
+  .p16 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0 0 16px; }
+
+  /* Por qué · Quién invirtió */
+  .sec-faq { padding-block: 96px 0; }
+  /* line-height normal: la línea de los enlaces mide lo mismo que en el diseño. */
+  .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; line-height: normal; }
+  .marca { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 1.2; color: var(--color-coral); margin: 0 0 16px; }
+  .faq .p16:last-of-type { margin-bottom: 20px; }
+  .faq__enlaces { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+
+  /* Acerca de · Contacto de prensa */
+  .sec-tarjetas { padding-block: 96px; }
+  .tarjetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .tarjeta { height: 100%; border-radius: var(--radius-tarjeta); padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+  .tarjeta--gris { background: var(--color-gris-claro); }
+  .tarjeta--lima { background: var(--color-lima); }
+  .tarjeta__h2 { font-size: 24px; line-height: 1.15; margin: 0; }
+  .tarjeta--gris .tarjeta__h2 { color: var(--color-coral); }
+  .tarjeta__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: 14px; line-height: 1.45; margin: 0; }
+  .tarjeta__link { margin-top: auto; padding-top: 8px; font-family: var(--font-body); font-weight: var(--peso-cuerpo-bold); font-size: 14px; line-height: normal; color: var(--color-tinta); text-decoration: none; }
+  .tarjeta__email { font-family: var(--font-display); font-weight: 650; font-size: 22px; line-height: 1.2; color: var(--color-tinta); text-decoration: none; }
+  .tarjeta__link:hover, .tarjeta__email:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+
+  @media (max-width: 1100px) {
+    .faq { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 720px) {
+    .tarjetas { grid-template-columns: 1fr; }
+    .faq { gap: 32px; }
+  }
+</style>

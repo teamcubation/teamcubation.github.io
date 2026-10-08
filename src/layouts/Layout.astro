@@ -17,8 +17,8 @@ interface Props {
   /** JSON-LD extra de la página (Service, BreadcrumbList, Person, etc.). */
   schema?: unknown[];
   /** Nodo WebPage del JSON-LD: tipo (AboutPage, ContactPage…), @id de su entidad
-   *  principal e idioma del contenido si no es el de la página. */
-  webPage?: { type?: string; mainEntity?: string; inLanguage?: string };
+   *  principal, idioma del contenido si no es el de la página y fecha de actualización. */
+  webPage?: { type?: string; mainEntity?: string; inLanguage?: string; dateModified?: string };
   /** Evita indexación (útil en preview/staging). */
   noindex?: boolean;
   ogType?: string;
@@ -76,6 +76,7 @@ const jsonLd = {
       inLanguage: webPage.inLanguage ?? langCode[lang],
       breadcrumb,
       mainEntity: webPage.mainEntity,
+      dateModified: webPage.dateModified,
     }),
     ...schema,
   ],

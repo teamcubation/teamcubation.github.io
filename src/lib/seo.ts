@@ -114,6 +114,7 @@ export function webPageSchema(p: {
   inLanguage: string;
   breadcrumb?: string;
   mainEntity?: string;
+  dateModified?: string;
 }) {
   return {
     "@type": p.type ?? "WebPage",
@@ -125,6 +126,7 @@ export function webPageSchema(p: {
     isPartOf: { "@id": ids.website },
     ...(p.breadcrumb && { breadcrumb: { "@id": p.breadcrumb } }),
     ...(p.mainEntity && { mainEntity: { "@id": p.mainEntity } }),
+    ...(p.dateModified && { dateModified: p.dateModified }),
   };
 }
 
@@ -171,6 +173,22 @@ export function itemListSchema(items: { nombre: string; slug: string }[], path: 
       position: i + 1,
       name: it.nombre,
       url: `${SITE.url}${conBarra(it.slug)}`,
+    })),
+  };
+}
+
+/** ItemList — las notas de Prensa, en el orden de la página; cada ítem apunta a la nota en su
+ *  medio. Las notas son de terceros: no se declaran como NewsArticle. */
+export function prensaSchema(notas: { titulo: string; url: string }[], path: string) {
+  return {
+    "@type": "ItemList",
+    "@id": `${SITE.url}${conBarra(path)}#list`,
+    numberOfItems: notas.length,
+    itemListElement: notas.map((n, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: n.titulo,
+      url: n.url,
     })),
   };
 }

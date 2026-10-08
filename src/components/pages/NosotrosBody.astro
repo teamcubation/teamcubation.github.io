@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import CierreCoral from "../CierreCoral.astro";
+import BloquePrensa from "../BloquePrensa.astro";
 import equipoPlanta from "../../assets/fotos/equipo-planta-planos.png";
 import mentorUno from "../../assets/fotos/mentor-uno-a-uno.png";
 import { nosotrosContent } from "../../content/nosotros";
@@ -79,8 +80,8 @@ const fotoDe = (key: string) => equipoFotos[`../../assets/equipo/${key}.png`].de
         <Image src={mentorUno} alt={c.criterioImgAlt} loading="lazy" />
       </div>
       <h2 class="h2-36 mb20" set:html={c.criterioH2Html} />
-      <p class="p22 mb16">{c.criterioP}</p>
-      <p class="p20 mb28">{c.criterioPaises}</p>
+      <p class="p16 mb16">{c.criterioP}</p>
+      <p class="p16 mb28">{c.criterioPaises}</p>
       <div class="links">
         {c.criterioLinks.map((l) => (
           <a class="enlace" href={l.href}>{l.label}</a>
@@ -88,6 +89,11 @@ const fotoDe = (key: string) => equipoFotos[`../../assets/equipo/${key}.png`].de
       </div>
     </div>
   </section>
+
+  <CierreCoral lang={lang} />
+
+  <!-- Como en el diseño: debajo del cierre, el bloque de Prensa y un segundo cierre. -->
+  <BloquePrensa lang={lang} />
 
   <CierreCoral lang={lang} />
 </main>
@@ -103,15 +109,15 @@ const fotoDe = (key: string) => equipoFotos[`../../assets/equipo/${key}.png`].de
   .mb16 { margin-bottom: 16px; }
   .p20 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 0; }
   .p21 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 64ch; margin: 0; }
-  .p22 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 64ch; margin: 0; }
+  .p16 { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 0; }
 
   .sec { padding-block: 96px; }
-  .angosto { max-width: 900px; }
+  .angosto { max-width: calc(900px + 2 * var(--gutter)); }
 
   /* Hero */
   .hero-nos { padding-block: 72px 0; }
   .hero-nos__h1 { font-size: clamp(36px, 4.2vw, 54px); line-height: 1.1; letter-spacing: -0.02em; max-width: 22ch; margin: 0 0 20px; }
-  .hero-nos__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 68ch; margin: 0 0 16px; }
+  .hero-nos__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.45; max-width: 68ch; margin: 0 0 16px; }
   .hero-nos__marca { font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.2; color: var(--color-coral); margin: 0 0 40px; }
 
   .dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
