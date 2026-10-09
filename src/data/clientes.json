@@ -13,12 +13,14 @@
   { "slug": "gdm-seeds", "nombre": "GDM Seeds", "home": true },
   { "slug": "arcelormittal-acindar", "nombre": "ArcelorMittal Acindar", "home": true },
   { "slug": "dreamco", "nombre": "Dreamco", "home": true },
-  { "slug": "boston-scientific", "nombre": "Boston Scientific", "home": false },
+  { "slug": "irsa", "nombre": "IRSA", "home": true },
   { "slug": "banco-comafi-2", "nombre": "Banco Comafi", "home": false },
   { "slug": "banco-macro", "nombre": "Banco Macro", "home": true },
   { "slug": "elea", "nombre": "Elea", "home": true },
+  { "slug": "boston-scientific", "nombre": "Boston Scientific", "home": false },
   { "slug": "mercantil-andina", "nombre": "Mercantil Andina", "home": true },
   { "slug": "prisma", "nombre": "Prisma", "home": true },
+  { "slug": "omint", "nombre": "OMINT", "home": false },
   { "slug": "byma", "nombre": "BYMA", "home": false },
   { "slug": "wtw", "nombre": "WTW", "home": false },
   { "slug": "prosegur", "nombre": "Prosegur", "home": true },
@@ -48,5 +50,7 @@
   { "slug": "raizen", "nombre": "Raízen", "home": true },
   { "slug": "genneia", "nombre": "Genneia", "home": true },
   { "slug": "appa", "nombre": "¡appa!", "home": true },
-  { "slug": "dagma", "nombre": "Dagma", "home": true }
+  { "slug": "dagma", "nombre": "Dagma", "home": true },
+  { "slug": "agrouranga", "nombre": "AgroUranga", "home": false },
+  { "slug": "quento-snacks", "nombre": "Quento Snacks", "home": false }
 ]
