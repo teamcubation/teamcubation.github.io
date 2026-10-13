@@ -62,3 +62,17 @@ jobs:
         run: |
           id=$(aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION" --paths '/*' --query Invalidation.Id --output text)
           aws cloudfront wait invalidation-completed --distribution-id "$DISTRIBUTION" --id "$id"
+
+  # Production: checks the published sitemaps (the site's and the blog's, as robots.txt declares
+  # them) against the live site: every URL must answer 200, be its own canonical and be indexable.
+  # The site is already live when this runs; a failure here means the sitemap needs fixing.
+  check-sitemaps:
+    needs: deploy
+    if: github.repository == 'teamcubation/teamcubation.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - run: node scripts/check-sitemaps.mjs
