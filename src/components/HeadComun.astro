@@ -1,6 +1,6 @@
 ---
 // Lo que va en el <head> de todas las páginas: color del tema, noindex en staging, Google Tag
-// Manager, Apollo, íconos y precarga de las fuentes. Lo usan Layout.astro y la página 404.
+// Manager, íconos y precarga de las fuentes. Lo usan Layout.astro y la página 404.
 // Indentado como dentro del <head>: el contenido de los <script> pasa tal cual al HTML.
 import { SITE } from "../lib/seo";
 
@@ -26,15 +26,6 @@ const esStaging = SITE.deployUrl !== SITE.url;
       })(window,document,'script','dataLayer','GTM-PS65VB9');
     </script>
     <!-- End Google Tag Manager -->
-
-    <!-- Apollo -->
-    <script is:inline>
-      function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-      o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-      o.onload=function(){window.trackingFunctions.onLoad({appId:"669817d6d1af0c01b288be3b"})},
-      document.head.appendChild(o)}initApollo();
-    </script>
-    <!-- End Apollo -->
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
