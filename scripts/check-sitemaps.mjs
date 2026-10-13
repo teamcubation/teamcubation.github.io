@@ -2,8 +2,9 @@
 // sitio y el del blog), abre los índices y pide cada URL sin seguir redirects. Falla si una URL
 // no responde 200, si su canonical no es exactamente ella, si dice noindex (meta robots o
 // X-Robots-Tag), si es un meta refresh, si no es https://<dominio>/… o si no tiene barra final.
-// Ve lo que el build no puede ver (CloudFront, GitHub Pages, WordPress). Corre en GitHub Actions
-// después de cada deploy de producción, y a mano:
+// Ve lo que el build no puede ver (CloudFront, GitHub Pages, WordPress). Pide como un crawler que
+// prefiere inglés: así detecta redirects por idioma (el blog manda /blog/ a /blog/en/ a quien pide en
+// inglés, salvo a los crawlers). Corre en GitHub Actions después de cada deploy de producción, y a mano:
 //
 //   node scripts/check-sitemaps.mjs                         # https://teamcubation.com
 //   node scripts/check-sitemaps.mjs https://otro.dominio
@@ -17,7 +18,10 @@ async function pedir(url) {
     try {
       const r = await fetch(url, {
         redirect: "manual",
-        headers: { "user-agent": "Mozilla/5.0 (compatible; teamcubation-sitemap-check)" },
+        headers: {
+          "user-agent": "Mozilla/5.0 (compatible; teamcubation-sitemap-check-bot)",
+          "accept-language": "en-US,en;q=0.9",
+        },
         signal: AbortSignal.timeout(20000),
       });
       if (r.status < 500 || intento === 2) return { r, texto: await r.text() };
