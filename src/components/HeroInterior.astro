@@ -39,6 +39,8 @@ const {
   tituloMaxWidth,
   lang = defaultLocale,
 } = Astro.props;
+// La ilustración se genera al alto máximo con que se ve (maxImg) y al doble para pantallas de
+// alta densidad.
 ---
 
 <section class="hero-int" style={`padding-block:${padTop}px ${padBottom}px`}>
@@ -55,7 +57,7 @@ const {
       )}
     </div>
     <div class="hero-int__media">
-      <Image src={imagen} alt={imagenAlt} style={`max-height:${maxImg}px`} loading="eager" />
+      <Image src={imagen} alt={imagenAlt} height={maxImg} densities={[2]} style={`max-height:${maxImg}px`} loading="eager" />
     </div>
   </div>
 </section>

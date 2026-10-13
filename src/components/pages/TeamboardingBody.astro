@@ -33,7 +33,7 @@ const serviciosHref = ruta("servicios", lang);
         <div class="hero-tb__cta"><Cta lang={lang} /></div>
       </div>
       <div class="hero-tb__media">
-        <Image src={mural} alt={c.heroImgAlt} loading="eager" />
+        <Image src={mural} alt={c.heroImgAlt} height={420} densities={[2]} loading="eager" />
       </div>
     </div>
   </section>
@@ -80,7 +80,7 @@ const serviciosHref = ruta("servicios", lang);
         </div>
       </div>
       <div class="media360">
-        <Image src={disco} alt={c.discoImgAlt} loading="lazy" />
+        <Image src={disco} alt={c.discoImgAlt} height={360} densities={[2]} loading="lazy" />
       </div>
     </div>
   </section>

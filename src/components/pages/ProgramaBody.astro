@@ -46,7 +46,8 @@ const strings = {
 };
 const t = strings[lang];
 
-// Ilustración del hero (astro:assets, optimizada).
+// Ilustración del hero (astro:assets, optimizada). Se genera al alto máximo con que se ve
+// (420px, su max-height) y al doble para pantallas de alta densidad.
 const modulos = import.meta.glob<{ default: ImageMetadata }>(
   "../../assets/ilustraciones/*.png",
   { eager: true }
@@ -88,7 +89,7 @@ const otros = svc.otros.map((o) => {
         </dl>
       </div>
       <div class="hero-svc__media">
-        <Image src={imagen} alt={t.alt} loading="eager" />
+        <Image src={imagen} alt={t.alt} height={420} densities={[2]} loading="eager" />
       </div>
     </div>
   </section>

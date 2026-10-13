@@ -9,7 +9,11 @@ import montana from "../../assets/ilustraciones/montana-ascenso-cargando-piezas.
 import pensarProcesos from "../../assets/ilustraciones/pensar-procesos-sistemas.png";
 import mentorCriterio from "../../assets/ilustraciones/mentor-criterio-dupla.png";
 
-const fichaImgs = [pensarProcesos, mentorCriterio];
+// Ilustraciones de las fichas, con el alto fijo que les da el CSS (.ficha__ilus--alta / --baja).
+const fichaImgs = [
+  { src: pensarProcesos, alto: 248 },
+  { src: mentorCriterio, alto: 220 },
+];
 import { metodologiaContent } from "../../content/metodologia";
 import { servicios, ORDEN } from "../../data/servicios";
 import { ruta, rutaPrograma } from "../../i18n/routes";
@@ -55,7 +59,9 @@ const tbHref = ruta("teamboarding", lang);
         <article class:list={["ficha", f.cierreHtml && "ficha--col"]}>
           <Image
             class:list={["ficha__ilus", i === 0 ? "ficha__ilus--alta" : "ficha__ilus--baja"]}
-            src={fichaImgs[i]}
+            src={fichaImgs[i].src}
+            height={fichaImgs[i].alto}
+            densities={[2, 3]}
             alt=""
             loading="lazy"
           />
@@ -88,7 +94,7 @@ const tbHref = ruta("teamboarding", lang);
         <a class="enlace" href={tbHref}>{c.acomp.linkLabel}</a>
       </div>
       <div class="media">
-        <Image src={placaDiana} alt="" loading="lazy" />
+        <Image src={placaDiana} alt="" height={400} densities={[2]} loading="lazy" />
       </div>
     </div>
   </section>
@@ -112,7 +118,7 @@ const tbHref = ruta("teamboarding", lang);
   <section class="sec sec--flush-b">
     <div class="contenedor dos-col dos-col--center dos-col--09">
       <div class="media">
-        <Image src={montana} alt={c.quedaImgAlt} loading="lazy" />
+        <Image src={montana} alt={c.quedaImgAlt} height={400} densities={[2, 3]} loading="lazy" />
       </div>
       <div>
         <h2 class="h2 mb24">{c.quedaH2}</h2>

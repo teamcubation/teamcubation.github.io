@@ -29,12 +29,13 @@ const esDefault: HeroContent = {
 const { content = esDefault, lang = defaultLocale } = Astro.props;
 
 // Secuencia de frames en /public/media/hero-frames/ (f_001.webp … f_120.webp):
-// los 120 frames de hero-video.mp4, a 1920x1080 (WebP q88).
+// los 120 frames de hero-video.mp4, a 1920x1080 (WebP q88). El primero es también el
+// poster: el canvas lo reutiliza sin volver a descargarlo.
 const FRAMES = 120;
 ---
 
 <section class="hero" data-hero data-frames={FRAMES}>
-  <img class="hero__poster" src="/media/hero-poster.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+  <img class="hero__poster" src="/media/hero-frames/f_001.webp" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
   <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
   <div class="hero__veil" aria-hidden="true"></div>
 

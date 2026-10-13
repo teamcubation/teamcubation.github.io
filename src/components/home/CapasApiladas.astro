@@ -110,7 +110,7 @@ const capas = content.capas.map((c, i) => ({ ...c, ...estructura[i] }));
             </div>
           </div>
           <div class="capa__media">
-            <Image src={capa.img} alt={capa.imgAlt} loading="lazy" />
+            <Image src={capa.img} alt={capa.imgAlt} width={375} densities={[2]} loading="lazy" />
           </div>
         </article>
       ))}
