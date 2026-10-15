@@ -219,7 +219,7 @@ Page: https://teamcubation.com/en/contact/ · Email: hola@teamcubation.com
 - "Let's talk about your team's next step." Tell Teamcubation which process you need to improve, what you want to build and how your team works today. In a conversation, it identifies which program fits and what information is needed to define the first step.
 - You don't need to have chosen a program, and you can get in touch even if your company doesn't use AI yet: the starting point can be Starter AI or a Discovery to prioritize opportunities.
 - Useful to share: the team (who takes part and what experience they have using AI or developing software) and the starting point (which tools they use today and what result they want to reach).
-- The contact form asks how you identify (I represent a company; I work in HR or talent development; I lead a technology team; I'm looking to train individually; other), your name, email, phone and message. Teamcubation replies within 48 business hours to arrange the conversation.
+- The contact form asks for your profile (I represent a company; I work in HR or talent development; I lead a technology team; I'm looking to train individually; other), your name, email, phone and message. Teamcubation replies within 48 business hours to arrange the conversation.
 - To book the conversation directly, pick a time on Teamcubation's calendar ("Schedule a conversation" on the contact page): https://calendar.google.com/calendar/appointments/schedules/AcZssZ26pTkxVBOQnolWYqnxC7xgvChe8WBqkyaNYYF8cPoKhpXrp5_6E7Wd4aJg7KoKG1ND-RZO1CWM
 
 ### Other links
@@ -440,7 +440,7 @@ Página: https://teamcubation.com/contacto/ · Email: hola@teamcubation.com
 - «Conversemos sobre el próximo paso de su equipo.» Se puede contar qué proceso se necesita mejorar, qué se quiere construir y cómo trabaja hoy el equipo. En una conversación, Teamcubation identifica qué programa se ajusta a la necesidad y qué información hace falta para definir el primer paso.
 - No hace falta haber elegido un programa, y se puede contactar aunque la empresa todavía no use IA: el punto de partida puede ser Starter AI o un Discovery para priorizar oportunidades.
 - Qué conviene contar: el equipo (quiénes participan y qué experiencia tienen usando IA o desarrollando software) y el punto de partida (qué herramientas utilizan hoy y qué resultado quieren alcanzar).
-- El formulario de contacto pide cómo se identifica (represento a una empresa; trabajo en RRHH o desarrollo de talento; lidero un equipo de tecnología; busco entrenarme individualmente; otro), nombre, email, teléfono y mensaje. Teamcubation responde en menos de 48 horas hábiles para coordinar la conversación.
+- El formulario de contacto pide el perfil (represento a una empresa; trabajo en RRHH o desarrollo de talento; lidero un equipo de tecnología; busco entrenarme individualmente; otro), nombre, email, teléfono y mensaje. Teamcubation responde en menos de 48 horas hábiles para coordinar la conversación.
 - Para agendar la conversación directamente, se puede elegir un horario en el calendario de Teamcubation («Agendar una conversación» en la página de contacto): https://calendar.google.com/calendar/appointments/schedules/AcZssZ26pTkxVBOQnolWYqnxC7xgvChe8WBqkyaNYYF8cPoKhpXrp5_6E7Wd4aJg7KoKG1ND-RZO1CWM
 
 ### Otros enlaces
@@ -661,7 +661,7 @@ Página: https://teamcubation.com/pt/contato/ · E-mail: hola@teamcubation.com
 - «Vamos conversar sobre o próximo passo da sua equipe.» Conte qual processo você precisa melhorar, o que quer construir e como a sua equipe trabalha hoje. Em uma conversa, a Teamcubation identifica qual programa se encaixa na necessidade e quais informações são necessárias para definir o primeiro passo.
 - Não é preciso ter escolhido um programa, e é possível entrar em contato mesmo que a empresa ainda não use IA: o ponto de partida pode ser o Starter AI ou um Discovery para priorizar oportunidades.
 - O que ajuda a entender a necessidade: a equipe (quem participa e qual experiência tem usando IA ou desenvolvendo software) e o ponto de partida (quais ferramentas usa hoje e qual resultado quer alcançar).
-- O formulário de contato pede como você se identifica (represento uma empresa; trabalho com RH ou desenvolvimento de talentos; lidero uma equipe de tecnologia; busco me treinar individualmente; outro), nome, e-mail, telefone e mensagem. A Teamcubation responde em menos de 48 horas úteis para agendar a conversa.
+- O formulário de contato pede seu perfil (represento uma empresa; trabalho com RH ou desenvolvimento de talentos; lidero uma equipe de tecnologia; busco me treinar individualmente; outro), nome, e-mail, telefone e mensagem. A Teamcubation responde em menos de 48 horas úteis para agendar a conversa.
 - Para agendar a conversa diretamente, escolha um horário na agenda da Teamcubation («Agende uma conversa» na página de contato): https://calendar.google.com/calendar/appointments/schedules/AcZssZ26pTkxVBOQnolWYqnxC7xgvChe8WBqkyaNYYF8cPoKhpXrp5_6E7Wd4aJg7KoKG1ND-RZO1CWM
 
 ### Outros links

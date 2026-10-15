@@ -11,8 +11,10 @@ export interface ContactoContent {
   migaActual: string;
   heroH1: string;
   heroP: string;
+  agendarIntro: string;
   agendar: string;
   form: {
+    intro: string;
     perfilLabel: string;
     perfilPlaceholder: string;
     perfilOpciones: SelectOption[];
@@ -49,10 +51,12 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
     migaActual: "Contacto",
     heroH1: "Conversemos",
     heroP: "Cuéntenos qué proceso necesita mejorar, qué quiere construir y cómo trabaja hoy su equipo. En una conversación con Teamcubation podemos identificar qué programa se ajusta a su necesidad y qué información hace falta para definir el primer paso.",
+    agendarIntro: "¿Prefiere una llamada? Elija día y horario en nuestra agenda.",
     agendar: "Agendar una conversación",
     form: {
-      perfilLabel: "¿Cómo se identifica?",
-      perfilPlaceholder: "Seleccione una opción",
+      intro: "O escríbanos y le respondemos en menos de 48 horas hábiles.",
+      perfilLabel: "Su perfil",
+      perfilPlaceholder: "Elija la que mejor lo describa",
       perfilOpciones: [
         { value: "empresa", label: "Represento a una empresa" },
         { value: "rrhh", label: "Trabajo en RRHH o desarrollo de talento" },
@@ -72,7 +76,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
       mensajeLabel: "Su mensaje",
       mensajePlaceholder: "Qué proceso necesita mejorar, qué quiere construir y cómo trabaja hoy su equipo.",
       trampaLabel: "No complete este campo",
-      error: "Complete cómo se identifica, su nombre, un email válido y el mensaje.",
+      error: "Elija su perfil y complete su nombre, un email válido y el mensaje.",
       errorEnvio: "Ocurrió un error al enviar el formulario. Por favor, intente nuevamente.",
       boton: "Enviar mensaje",
       enviando: "Enviando...",
@@ -101,10 +105,12 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
     migaActual: "Contact",
     heroH1: "Let's talk",
     heroP: "Tell us which process you need to improve, what you want to build and how your team works today. In a conversation with Teamcubation we can identify which program fits your need and what information is required to define the first step.",
+    agendarIntro: "Prefer a call? Pick a day and time in our calendar.",
     agendar: "Schedule a conversation",
     form: {
-      perfilLabel: "How do you identify?",
-      perfilPlaceholder: "Select an option",
+      intro: "Or write to us and we'll get back to you within 48 business hours.",
+      perfilLabel: "Your profile",
+      perfilPlaceholder: "Pick what best describes you",
       perfilOpciones: [
         { value: "empresa", label: "I represent a company" },
         { value: "rrhh", label: "I work in HR or talent development" },
@@ -124,7 +130,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
       mensajeLabel: "Your message",
       mensajePlaceholder: "Which process you need to improve, what you want to build and how your team works today.",
       trampaLabel: "Leave this field empty",
-      error: "Please complete how you identify, your name, a valid email and the message.",
+      error: "Please choose your profile and enter your name, a valid email and the message.",
       errorEnvio: "An error occurred while sending the form. Please try again.",
       boton: "Send message",
       enviando: "Sending...",
@@ -153,10 +159,12 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
     migaActual: "Contato",
     heroH1: "Vamos conversar",
     heroP: "Conte para a gente qual processo você precisa melhorar, o que quer construir e como sua equipe trabalha hoje. Em uma conversa com a Teamcubation, podemos identificar qual programa se encaixa na sua necessidade e quais informações são necessárias para definir o primeiro passo.",
+    agendarIntro: "Prefere uma chamada? Escolha o dia e o horário na nossa agenda.",
     agendar: "Agende uma conversa",
     form: {
-      perfilLabel: "Como você se identifica?",
-      perfilPlaceholder: "Selecione uma opção",
+      intro: "Ou escreva para nós e respondemos em menos de 48 horas úteis.",
+      perfilLabel: "Seu perfil",
+      perfilPlaceholder: "Escolha a que mais se aplica",
       perfilOpciones: [
         { value: "empresa", label: "Represento uma empresa" },
         { value: "rrhh", label: "Trabalho com RH ou desenvolvimento de talentos" },
@@ -176,7 +184,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
       mensajeLabel: "Sua mensagem",
       mensajePlaceholder: "Qual processo você precisa melhorar, o que quer construir e como sua equipe trabalha hoje.",
       trampaLabel: "Não preencha este campo",
-      error: "Preencha como você se identifica, seu nome, um e-mail válido e a mensagem.",
+      error: "Escolha seu perfil e preencha seu nome, um e-mail válido e a mensagem.",
       errorEnvio: "Ocorreu um erro ao enviar o formulário. Tente novamente.",
       boton: "Enviar mensagem",
       enviando: "Enviando...",

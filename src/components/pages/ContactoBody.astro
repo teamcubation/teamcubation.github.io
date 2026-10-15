@@ -28,6 +28,7 @@ const AGENDA = "https://calendar.google.com/calendar/appointments/schedules/AcZs
       <h1 class="hero-cont__h1">{c.heroH1}</h1>
       <p class="hero-cont__p">{c.heroP}</p>
       <div class="hero-cont__cta">
+        <p class="hero-cont__agenda">{c.agendarIntro}</p>
         <Cta href={AGENDA} label={c.agendar} external />
       </div>
     </div>
@@ -42,6 +43,7 @@ const AGENDA = "https://calendar.google.com/calendar/appointments/schedules/AcZs
       </div>
 
       <div data-form-wrap>
+        <p class="form__intro">{c.form.intro}</p>
         <form
           class="form"
           data-contacto-form
@@ -157,6 +159,12 @@ const AGENDA = "https://calendar.google.com/calendar/appointments/schedules/AcZs
   .hero-cont__h1 { font-size: clamp(34px, 3.8vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 20ch; margin: 0; }
   .hero-cont__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 58ch; margin: 24px 0 0; }
   .hero-cont__cta { margin-top: 32px; }
+
+  /* Los dos caminos: agendar una llamada (hero) o escribir (formulario). */
+  .hero-cont__agenda,
+  .form__intro { font-family: var(--font-body); font-weight: var(--peso-cuerpo-semibold); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 58ch; margin: 0; }
+  .hero-cont__agenda { margin-bottom: 16px; }
+  .form__intro { margin-bottom: 24px; }
 
   .miga-coral { font-family: var(--font-display); font-weight: 650; font-size: clamp(17px, 1.5vw, 25px); line-height: 1.2; color: var(--color-coral); margin: 0 0 14px; }
   .miga-coral a { color: var(--color-coral); text-decoration: none; }
