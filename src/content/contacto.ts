@@ -56,7 +56,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
     form: {
       intro: "O escríbanos y le respondemos en menos de 48 horas hábiles.",
       perfilLabel: "Su perfil",
-      perfilPlaceholder: "Elija la que mejor lo describa",
+      perfilPlaceholder: "Elija el que mejor lo describa",
       perfilOpciones: [
         { value: "empresa", label: "Represento a una empresa" },
         { value: "rrhh", label: "Trabajo en RRHH o desarrollo de talento" },
@@ -164,7 +164,7 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
     form: {
       intro: "Ou escreva para nós e respondemos em menos de 48 horas úteis.",
       perfilLabel: "Seu perfil",
-      perfilPlaceholder: "Escolha a que mais se aplica",
+      perfilPlaceholder: "Escolha o que mais se aplica",
       perfilOpciones: [
         { value: "empresa", label: "Represento uma empresa" },
         { value: "rrhh", label: "Trabalho com RH ou desenvolvimento de talentos" },
