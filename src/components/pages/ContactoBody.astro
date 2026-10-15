@@ -1,4 +1,5 @@
 ---
+import Cta from "../Cta.astro";
 import { contactoContent } from "../../content/contacto";
 import { ruta } from "../../i18n/routes";
 import { defaultLocale, type Locale } from "../../i18n/config";
@@ -12,6 +13,9 @@ const serviciosHref = ruta("servicios", lang);
 
 // Mismo endpoint que el sitio anterior (API de contacto de Teamcubation).
 const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
+
+// Agenda de citas de Google Calendar: quien prefiere elegir un horario no necesita el formulario.
+const AGENDA = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ26pTkxVBOQnolWYqnxC7xgvChe8WBqkyaNYYF8cPoKhpXrp5_6E7Wd4aJg7KoKG1ND-RZO1CWM";
 ---
 
 <main id="contenido">
@@ -23,6 +27,9 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
       </nav>
       <h1 class="hero-cont__h1">{c.heroH1}</h1>
       <p class="hero-cont__p">{c.heroP}</p>
+      <div class="hero-cont__cta">
+        <Cta href={AGENDA} label={c.agendar} external />
+      </div>
     </div>
   </section>
 
@@ -149,6 +156,7 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
   .hero-cont { padding-block: 72px 96px; }
   .hero-cont__h1 { font-size: clamp(34px, 3.8vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 20ch; margin: 0; }
   .hero-cont__p { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; max-width: 58ch; margin: 24px 0 0; }
+  .hero-cont__cta { margin-top: 32px; }
 
   .miga-coral { font-family: var(--font-display); font-weight: 650; font-size: clamp(17px, 1.5vw, 25px); line-height: 1.2; color: var(--color-coral); margin: 0 0 14px; }
   .miga-coral a { color: var(--color-coral); text-decoration: none; }
@@ -231,6 +239,10 @@ const ENDPOINT = "https://api.prod.tq.teamcubation.com/contact";
     .cards2 { grid-template-columns: 1fr; }
     .sec-b96 { padding-bottom: 56px; }
     .sec-b112 { padding-bottom: 56px; }
+  }
+  /* A 320 px la cápsula de 19 px no entra en la columna: se achica, como la del cierre coral. */
+  @media (max-width: 359px) {
+    .hero-cont__cta :global(.cta-capsula) { font-size: 17px; }
   }
 </style>
 

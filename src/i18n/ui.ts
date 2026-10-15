@@ -20,7 +20,7 @@ export const ui: Record<Locale, {
   langNombre: string;
 }> = {
   es: {
-    cta: "Agendar una conversación",
+    cta: "Contáctenos",
     skip: "Ir al contenido",
     navAria: "Navegación principal",
     footerAria: "Pie de página",
@@ -35,7 +35,7 @@ export const ui: Record<Locale, {
     langNombre: "Español",
   },
   en: {
-    cta: "Schedule a conversation",
+    cta: "Contact us",
     skip: "Skip to content",
     navAria: "Main navigation",
     footerAria: "Footer",
@@ -50,7 +50,7 @@ export const ui: Record<Locale, {
     langNombre: "English",
   },
   pt: {
-    cta: "Agende uma conversa",
+    cta: "Fale conosco",
     skip: "Ir para o conteúdo",
     navAria: "Navegação principal",
     footerAria: "Rodapé",

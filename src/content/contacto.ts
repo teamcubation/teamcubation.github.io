@@ -11,6 +11,7 @@ export interface ContactoContent {
   migaActual: string;
   heroH1: string;
   heroP: string;
+  agendar: string;
   form: {
     perfilLabel: string;
     perfilPlaceholder: string;
@@ -42,12 +43,13 @@ export interface ContactoContent {
 
 export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
   es: {
-    seoTitle: "Agendar una conversación | Teamcubation",
+    seoTitle: "Contacto | Teamcubation",
     seoDesc: "Conversemos sobre el próximo paso de su equipo: qué proceso necesita mejorar, qué quiere construir y qué programa se ajusta a su necesidad.",
     migaHome: "Inicio",
     migaActual: "Contacto",
-    heroH1: "Conversemos sobre el próximo paso de su equipo.",
+    heroH1: "Conversemos",
     heroP: "Cuéntenos qué proceso necesita mejorar, qué quiere construir y cómo trabaja hoy su equipo. En una conversación con Teamcubation podemos identificar qué programa se ajusta a su necesidad y qué información hace falta para definir el primer paso.",
+    agendar: "Agendar una conversación",
     form: {
       perfilLabel: "¿Cómo se identifica?",
       perfilPlaceholder: "Seleccione una opción",
@@ -93,12 +95,13 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
   },
 
   en: {
-    seoTitle: "Schedule a conversation | Teamcubation",
+    seoTitle: "Contact | Teamcubation",
     seoDesc: "Let's talk about your team's next step: which process you need to improve, what you want to build and which program fits your need.",
     migaHome: "Home",
     migaActual: "Contact",
-    heroH1: "Let's talk about your team's next step.",
+    heroH1: "Let's talk",
     heroP: "Tell us which process you need to improve, what you want to build and how your team works today. In a conversation with Teamcubation we can identify which program fits your need and what information is required to define the first step.",
+    agendar: "Schedule a conversation",
     form: {
       perfilLabel: "How do you identify?",
       perfilPlaceholder: "Select an option",
@@ -144,12 +147,13 @@ export const contactoContent: Record<"es" | "en" | "pt", ContactoContent> = {
   },
 
   pt: {
-    seoTitle: "Agende uma conversa | Teamcubation",
+    seoTitle: "Contato | Teamcubation",
     seoDesc: "Vamos conversar sobre o próximo passo da sua equipe: qual processo você precisa melhorar, o que quer construir e qual programa se encaixa na sua necessidade.",
     migaHome: "Início",
     migaActual: "Contato",
-    heroH1: "Vamos conversar sobre o próximo passo da sua equipe.",
+    heroH1: "Vamos conversar",
     heroP: "Conte para a gente qual processo você precisa melhorar, o que quer construir e como sua equipe trabalha hoje. Em uma conversa com a Teamcubation, podemos identificar qual programa se encaixa na sua necessidade e quais informações são necessárias para definir o primeiro passo.",
+    agendar: "Agende uma conversa",
     form: {
       perfilLabel: "Como você se identifica?",
       perfilPlaceholder: "Selecione uma opção",

@@ -4,7 +4,7 @@
 export const email = "hola@teamcubation.com";
 
 export const ctaPrincipal = {
-  label: "Agendar una conversación",
+  label: "Contáctenos",
   href: "/contacto",
 };
 
