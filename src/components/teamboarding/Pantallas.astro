@@ -1,0 +1,238 @@
+---
+// Pantallas de Teamboarding — pestañas (chips) y un panel gris por función: título + texto a la
+// izquierda y la captura a la derecha (apilados en pantallas angostas). La captura se achica según
+// el alto de la ventana, para que pestañas y panel se vean enteros sin desplazar la página. Patrón
+// de pestañas WAI-ARIA con activación automática; sin JS queda la primera. Los paneles comparten la
+// misma celda de grilla: el alto es el del más alto y la captura no se mueve al cambiar de pestaña.
+// Las capturas (1920 px, WebP sin pérdida) están por idioma en src/assets/teamboarding/<idioma>/<clave>.webp.
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { teamboardingContent } from "../../content/teamboarding";
+import { defaultLocale, type Locale } from "../../i18n/config";
+
+interface Props { lang?: Locale }
+const { lang = defaultLocale } = Astro.props;
+const c = teamboardingContent[lang];
+
+const capturas = import.meta.glob<{ default: ImageMetadata }>("../../assets/teamboarding/*/*.webp", { eager: true });
+const captura = (clave: string) => {
+  const archivo = capturas[`../../assets/teamboarding/${lang}/${clave}.webp`];
+  if (!archivo) throw new Error(`Falta la captura ${lang}/${clave}.webp`);
+  return archivo.default;
+};
+// Ancho de la captura (ver el CSS): apilada ocupa el panel; al lado del texto mide hasta 776 px.
+const sizes = "(max-width: 720px) calc(100vw - 80px), (max-width: 899px) calc(100vw - 128px), 776px";
+---
+
+<section class="pantallas">
+  <div class="contenedor">
+    <h2 class="pantallas__h2">{c.pantallasH2}</h2>
+    <p class="pantallas__p">{c.pantallasP}</p>
+
+    <div class="pantallas__pestanas" role="tablist" aria-label={c.pantallasPestanasLabel} data-pantallas-pestanas>
+      {c.pantallas.map((p, i) => (
+        <button
+          type="button"
+          class="pantallas__pestana"
+          role="tab"
+          id={`pantalla-pestana-${p.clave}`}
+          aria-controls={`pantalla-${p.clave}`}
+          aria-selected={i === 0 ? "true" : "false"}
+          tabindex={i === 0 ? 0 : -1}
+        >
+          {p.pestana}
+        </button>
+      ))}
+    </div>
+
+    <div class="pantallas__paneles">
+      {c.pantallas.map((p, i) => (
+        <div
+          class="pantallas__panel"
+          role="tabpanel"
+          id={`pantalla-${p.clave}`}
+          aria-labelledby={`pantalla-pestana-${p.clave}`}
+          tabindex="0"
+          data-inactivo={i === 0 ? undefined : ""}
+        >
+          <Image
+            class="pantallas__captura"
+            src={captura(p.clave)}
+            alt={p.alt}
+            widths={[640, 960, 1280, 1600, 1920]}
+            sizes={sizes}
+            loading="lazy"
+          />
+          <div class="pantallas__texto">
+            <h3 class="pantallas__titulo">{p.titulo}</h3>
+            <p class="pantallas__desc">{p.texto}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="pantallas__nota">{c.pantallasNota}</div>
+  </div>
+</section>
+
+<style>
+  .pantallas {
+    padding-block: 0 112px;
+    /* Alto que la captura no puede usar: cabecera fija + pestañas + separación + padding del panel
+       arriba y abajo + 32 px de aire. Así pestañas y panel entran enteros en la ventana. */
+    --fijo: calc(84px + 42px + 20px + 2 * 32px + 32px);
+    --alto-captura: calc(100vh - var(--fijo));
+  }
+  .pantallas__h2 { font-size: 32px; line-height: 1.12; margin: 0; }
+  .pantallas__p {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    max-width: 62ch;
+    margin: 20px 0 0;
+  }
+
+  /* Pestañas: chip neutro gris, activo lima (como los chips del hero). */
+  .pantallas__pestanas {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .pantallas__pestana {
+    background: var(--color-gris-claro);
+    color: var(--color-tinta);
+    border: 0;
+    border-radius: var(--radius-capsula);
+    padding: 8px 18px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.5;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 160ms ease-out;
+  }
+  .pantallas__pestana:hover { background: var(--color-superficie-hover); }
+  .pantallas__pestana[aria-selected="true"] { background: var(--color-lima); cursor: default; }
+
+  /* Paneles apilados en una sola celda. */
+  .pantallas__paneles { display: grid; margin-top: 20px; }
+  .pantallas__panel {
+    grid-area: 1 / 1;
+    display: grid;
+    /* Texto a la izquierda (320 px como mínimo) y la captura, 16:10, tan ancha como lo permita el
+       alto disponible (y nunca menos de 400 px). */
+    grid-template-columns: minmax(0, 1fr) min(max(calc(var(--alto-captura) * 1.6), 400px), calc(100% - 360px));
+    grid-template-areas: "texto captura";
+    column-gap: 40px;
+    align-items: start;
+    background: var(--color-gris-claro);
+    border-radius: var(--radius-tarjeta);
+    padding: 32px;
+    transition: opacity 160ms ease-out;
+  }
+  .pantallas__panel[data-inactivo] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 160ms ease-out, visibility 0s linear 160ms;
+  }
+  .pantallas__captura {
+    grid-area: captura;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-control);
+    outline: 1px solid var(--color-linea);
+  }
+  .pantallas__texto { grid-area: texto; }
+  .pantallas__titulo { font-size: 22px; line-height: 1.12; color: var(--color-coral); margin: 0; }
+  .pantallas__desc {
+    font-family: var(--font-body);
+    font-weight: var(--peso-cuerpo);
+    font-size: var(--fs-cuerpo);
+    line-height: 1.5;
+    margin: 12px 0 0;
+  }
+  .pantallas__nota {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: var(--fs-caption);
+    line-height: 1.4;
+    color: var(--color-gris-texto);
+    margin-top: 12px;
+  }
+
+  /* Si no entran en una fila (la más larga, ES, mide ~1070 px), van de a tres: en dos filas
+     parejas, sin una pestaña sola abajo. */
+  @media (max-width: 1199px) {
+    .pantallas { --fijo: calc(84px + 95px + 20px + 2 * 32px + 32px); }
+    .pantallas__pestanas { display: grid; grid-template-columns: repeat(3, max-content); }
+  }
+  @media (max-width: 1100px) {
+    .pantallas { --fijo: calc(84px + 95px + 20px + 2 * 24px + 32px); }
+    .pantallas__panel { padding: 24px; }
+  }
+  /* Angosto: la captura arriba y el texto abajo; igual se limita por el alto de la ventana. */
+  @media (max-width: 899px) {
+    .pantallas__panel { grid-template-columns: minmax(0, 1fr); grid-template-areas: "captura" "texto"; }
+    .pantallas__captura { max-width: max(calc(var(--alto-captura) * 1.6), 320px); justify-self: center; }
+    .pantallas__texto { margin-top: 24px; }
+  }
+  @media (max-width: 720px) {
+    .pantallas { --fijo: calc(76px + 42px + 20px + 2 * 16px + 32px); }
+    /* Una sola fila que se desliza, de borde a borde de la pantalla. */
+    .pantallas__pestanas {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      margin-inline: calc(-1 * var(--gutter));
+      padding-inline: var(--gutter);
+      gap: 8px;
+    }
+    .pantallas__pestanas::-webkit-scrollbar { display: none; }
+    .pantallas__panel { padding: 16px; }
+    .pantallas__texto { margin-top: 20px; }
+  }
+</style>
+
+<script>
+  // Pestañas de las pantallas: clic, o flechas izquierda/derecha, Inicio y Fin sobre la lista.
+  const lista = document.querySelector<HTMLElement>("[data-pantallas-pestanas]");
+  if (lista) {
+    const pestanas = Array.from(lista.querySelectorAll<HTMLButtonElement>("[role=tab]"));
+    const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const activar = (pestana: HTMLButtonElement, enfocar: boolean) => {
+      for (const p of pestanas) {
+        const activa = p === pestana;
+        p.setAttribute("aria-selected", String(activa));
+        p.tabIndex = activa ? 0 : -1;
+        document.getElementById(p.getAttribute("aria-controls") ?? "")?.toggleAttribute("data-inactivo", !activa);
+      }
+      if (enfocar) pestana.focus({ preventScroll: true });
+      // En móvil la fila se desliza: centrar la pestaña elegida.
+      if (lista.scrollWidth > lista.clientWidth) {
+        lista.scrollTo({
+          left: pestana.offsetLeft - (lista.clientWidth - pestana.offsetWidth) / 2,
+          behavior: sinMovimiento.matches ? "auto" : "smooth",
+        });
+      }
+    };
+
+    lista.addEventListener("click", (e) => {
+      const pestana = (e.target as HTMLElement).closest<HTMLButtonElement>("[role=tab]");
+      if (pestana) activar(pestana, false);
+    });
+    lista.addEventListener("keydown", (e) => {
+      const i = pestanas.indexOf(document.activeElement as HTMLButtonElement);
+      const destinos: Record<string, number> = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: pestanas.length - 1 };
+      if (i < 0 || !(e.key in destinos)) return;
+      e.preventDefault();
+      activar(pestanas[(destinos[e.key] + pestanas.length) % pestanas.length], true);
+    });
+  }
+</script>

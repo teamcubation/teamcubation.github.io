@@ -171,12 +171,13 @@ https://teamcubation.com/en/services/incubation/ — "Incubation: software devel
 
 ### Teamboarding
 
-Page: https://teamcubation.com/en/teamboarding/ · Platform: https://teamboarding.com
+Page: https://teamcubation.com/en/teamboarding/ · Platform sign-in: https://app.teamcubation.com/
 
 - "Teamboarding: it's how we measure the progress and impact of AI adoption." Behind every training: data.
 - Teamboarding is Teamcubation's proprietary platform. It records each person's progress and the impact on each process, personalizes the training and generates the reports the sponsor, the person responsible for the program within the company, receives. It works as the mentor's copilot: it orders the process, safeguards its completion and makes progress and results visible in real time.
 - What it records: impact on the work done (the process, application or development each participant takes on); skills growth (to support each person's journey and adapt the work to their level); program participation (attendance, mentoring hours and the satisfaction of participants and program leads).
 - What it provides: progress and impact reports for program leads; guides and summaries that help recover and reuse what was worked on; a journey that adapts to each participant's level and progress.
+- How mentoring works in Teamboarding: an initial assessment, in which each participant talks with an AI agent about their process, tools and data so the mentor arrives with that context; a program calendar where participants book their mentoring sessions and each team's mentoring hours are tracked; live sessions on real work, with the agenda, notes and next steps recorded; an AI summary after each session (recording, transcript, key decisions, action items and the focus for the next session); the program's talks, workshops and Show & Tells; and NPS and feedback after each session, summarized with AI.
 - It doesn't replace the mentor: the person trains with expert support, and the platform records information to follow and personalize the journey. Human experience and journey tracking with AI are the two engines of Teamcubation's method.
 
 ### AI Rank
@@ -392,12 +393,13 @@ https://teamcubation.com/servicios/incubation/ — «Incubation: desarrollo de s
 
 ### Teamboarding
 
-Página: https://teamcubation.com/teamboarding/ · Plataforma: https://teamboarding.com
+Página: https://teamcubation.com/teamboarding/ · Ingreso a la plataforma: https://app.teamcubation.com/
 
 - «Teamboarding: es cómo medimos el avance y el impacto de la adopción de IA.» Detrás de cada entrenamiento: datos.
 - Teamboarding es la plataforma propietaria de Teamcubation. Registra el avance de cada persona y el impacto en cada proceso, personaliza el entrenamiento y genera los informes que recibe el sponsor, el responsable del programa dentro de la empresa. Funciona como copiloto del mentor: ordena el proceso, resguarda su cumplimiento y hace visible el avance y los resultados en tiempo real.
 - Qué registra: impacto en lo trabajado (el proceso, la aplicación o el desarrollo que aborda cada participante); crecimiento de habilidades (para acompañar el recorrido de cada persona y adaptar el trabajo a su nivel); participación en el programa (asistencia, horas de mentoría y satisfacción de participantes y responsables).
 - Qué aporta: informes de avance e impacto para los responsables del programa; guías y resúmenes que ayudan a recuperar y reutilizar lo trabajado; un recorrido que se adapta al nivel y al avance de cada participante.
+- Cómo funcionan las mentorías en Teamboarding: un relevamiento inicial, en el que cada participante conversa con un agente de IA sobre su proceso, sus herramientas y sus datos, para que el mentor llegue con ese contexto; una agenda del programa donde los participantes reservan sus mentorías y se lleva la cuenta de las horas de cada equipo; sesiones en vivo sobre el trabajo real, con la agenda, las notas y los próximos pasos registrados; un resumen con IA después de cada sesión (grabación, transcripción, decisiones clave, accionables y foco de la próxima sesión); las charlas, los workshops y los Show & Tell del programa; y NPS y comentarios después de cada sesión, resumidos con IA.
 - No reemplaza al mentor: la persona entrena con acompañamiento experto y la plataforma registra información para seguir y personalizar el recorrido. La experiencia humana y el seguimiento del recorrido con IA son los dos motores del método de Teamcubation.
 
 ### AI Rank
@@ -613,12 +615,13 @@ https://teamcubation.com/pt/servicos/incubation/ — «Incubation: desenvolvimen
 
 ### Teamboarding
 
-Página: https://teamcubation.com/pt/teamboarding/ · Plataforma: https://teamboarding.com
+Página: https://teamcubation.com/pt/teamboarding/ · Acesso à plataforma: https://app.teamcubation.com/
 
 - «Teamboarding: é como medimos o progresso e o impacto da adoção de IA.» Por trás de cada treinamento: dados.
 - O Teamboarding é a plataforma proprietária da Teamcubation. Registra o progresso de cada pessoa e o impacto em cada processo, personaliza o treinamento e gera os relatórios que o sponsor, o responsável pelo programa dentro da empresa, recebe. Funciona como copiloto do mentor: organiza o processo, resguarda o seu cumprimento e torna o progresso e os resultados visíveis em tempo real.
 - O que registra: impacto no que foi trabalhado (o processo, a aplicação ou o desenvolvimento que cada participante aborda); crescimento de habilidades (para acompanhar a trajetória de cada pessoa e adaptar o trabalho ao seu nível); participação no programa (presença, horas de mentoria e satisfação de participantes e responsáveis).
 - O que oferece: relatórios de progresso e impacto para os responsáveis pelo programa; guias e resumos que ajudam a recuperar e reutilizar o que foi trabalhado; uma trajetória que se adapta ao nível e ao progresso de cada participante.
+- Como funcionam as mentorias no Teamboarding: uma avaliação inicial, em que cada participante conversa com um agente de IA sobre o seu processo, as suas ferramentas e os seus dados, para que o mentor chegue com esse contexto; uma agenda do programa onde os participantes agendam as suas mentorias e se acompanham as horas de cada equipe; sessões ao vivo sobre o trabalho real, com a pauta, as anotações e os próximos passos registrados; um resumo com IA depois de cada sessão (gravação, transcrição, decisões principais, ações combinadas e foco da próxima sessão); as palestras, os workshops e os Show & Tell do programa; e NPS e feedback depois de cada sessão, resumidos com IA.
 - Não substitui o mentor: a pessoa treina com acompanhamento especialista e a plataforma registra informação para seguir e personalizar a trajetória. A experiência humana e o acompanhamento da trajetória com IA são os dois motores do método da Teamcubation.
 
 ### AI Rank

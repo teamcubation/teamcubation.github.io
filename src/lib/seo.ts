@@ -18,6 +18,8 @@ export const SITE = {
   legalName: "TQ DESARROLLADORES S.A.S.",
   email: "hola@teamcubation.com",
   linkedin: "https://www.linkedin.com/company/teamcubation/",
+  // Teamboarding, la plataforma: se entra por la página de ingreso de la app.
+  appTeamboarding: "https://app.teamcubation.com/",
   ogImage: "/og/og-default.png",
   ogImageWidth: 1200,
   ogImageHeight: 630,
@@ -199,7 +201,7 @@ export function teamboardingSchema(lang: Locale) {
     "@type": "SoftwareApplication",
     "@id": ids.teamboarding,
     name: "Teamboarding",
-    url: "https://teamboarding.com/",
+    url: `${SITE.url}/teamboarding/`,
     description: teamboardingContent[lang].heroBajada,
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",

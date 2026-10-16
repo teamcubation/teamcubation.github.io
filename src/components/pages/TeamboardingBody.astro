@@ -3,9 +3,11 @@ import { Image } from "astro:assets";
 import Cta from "../Cta.astro";
 import Faq from "../Faq.astro";
 import CierreCoral from "../CierreCoral.astro";
+import Pantallas from "../teamboarding/Pantallas.astro";
 import mural from "../../assets/ilustraciones/mural-frontal-placas-figuras.png";
 import disco from "../../assets/ilustraciones/macro-empuje-disco-ambar.png";
 import { teamboardingContent } from "../../content/teamboarding";
+import { SITE } from "../../lib/seo";
 import { ruta } from "../../i18n/routes";
 import { defaultLocale, type Locale } from "../../i18n/config";
 
@@ -31,6 +33,10 @@ const serviciosHref = ruta("servicios", lang);
           {c.chips.map((ch) => <span class="chip">{ch}</span>)}
         </div>
         <div class="hero-tb__cta"><Cta lang={lang} /></div>
+        <p class="hero-tb__acceso">
+          {c.accesoPregunta}{" "}
+          <a class="enlace" href={SITE.appTeamboarding} target="_blank" rel="noreferrer">{c.accesoLabel}</a>
+        </p>
       </div>
       <div class="hero-tb__media">
         <Image src={mural} alt={c.heroImgAlt} height={420} densities={[2]} loading="eager" />
@@ -85,6 +91,9 @@ const serviciosHref = ruta("servicios", lang);
     </div>
   </section>
 
+  <!-- Pantallas de Teamboarding (pestañas) -->
+  <Pantallas lang={lang} />
+
   <!-- FAQ -->
   <section class="sec sec--flush-b2">
     <div class="contenedor">
@@ -95,7 +104,7 @@ const serviciosHref = ruta("servicios", lang);
 
   <CierreCoral
     lang={lang}
-    enlaceExtra={{ label: c.cierreEnlaceLabel, href: "https://teamboarding.com" }}
+    enlaceExtra={{ label: c.cierreEnlaceLabel, href: SITE.appTeamboarding }}
   />
 </main>
 
@@ -121,6 +130,8 @@ const serviciosHref = ruta("servicios", lang);
   .hero-tb__bajada { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-bajada); line-height: 1.5; max-width: 60ch; margin: 18px 0 0; }
   .hero-tb__nota { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; color: var(--color-gris-texto); max-width: 60ch; margin: 16px 0 0; }
   .hero-tb__cta { margin-top: 28px; }
+  .hero-tb__acceso { font-family: var(--font-body); font-weight: var(--peso-cuerpo); font-size: var(--fs-cuerpo); line-height: 1.5; margin: 16px 0 0; }
+  .hero-tb__acceso .enlace { font-size: inherit; }
   .hero-tb__media :global(img) { width: 100%; height: auto; max-height: 420px; object-fit: contain; display: block; margin-inline: auto; }
 
   .chips { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
