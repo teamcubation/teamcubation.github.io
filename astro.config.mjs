@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import checkJsonLd from './integrations/check-jsonld.mjs';
 import checkSitemap from './integrations/check-sitemap.mjs';
-import teamboardingEs from './integrations/teamboarding-es.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -45,8 +44,8 @@ export default defineConfig({
     '/contato': '/pt/contato/',
     '/pt/contact': '/pt/contato/', // sitio de 2022
   },
-  // check-sitemap va después de sitemap() y de teamboardingEs(): revisa lo que dejan en docs/.
-  integrations: [sitemap(), teamboardingEs(), checkJsonLd(), checkSitemap()],
+  // check-sitemap va después de sitemap(): revisa lo que deja en docs/.
+  integrations: [sitemap(), checkJsonLd(), checkSitemap()],
   vite: {
     plugins: [tailwindcss()]
   }
