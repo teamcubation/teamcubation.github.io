@@ -10,12 +10,9 @@
 // footer, el CSS y los scripts no cuentan. En sitemap-index.xml, el lastmod de cada sitemap es cuándo
 // cambió ese archivo.
 //
-// La primera vez, con el sitemap publicado todavía sin lastmod, la fecha de una página que no cambió
-// sale de lastmod-inicial.json: el último commit que cambió su contenido, según la historia de git.
-//
 // Si no puede leer el sitio publicado, en GitHub Actions el build falla (una fecha inventada en el
 // sitemap es peor que reintentar el deploy); en una máquina local avisa y usa la hora del build.
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -24,7 +21,6 @@ import { fileURLToPath } from "node:url";
 const PARALELAS = 4;
 const INTENTOS = 6;
 const INDICE = "/sitemap-index.xml";
-const INICIAL = new URL("./lastmod-inicial.json", import.meta.url);
 
 const attr = (tag, nombre) => tag.match(new RegExp(`\\s${nombre}\\s*=\\s*"([^"]*)"`))?.[1];
 
@@ -95,13 +91,11 @@ async function publicado(ruta, origen, etiqueta) {
 // Las fechas publicadas que siguen valiendo: las de las URLs cuyo contenido no cambió y las de los
 // sitemaps que quedan iguales. Las que no están acá llevan la hora del build.
 async function fechasVigentes(raiz, sitemaps, origen, ahora) {
-  const inicial = existsSync(INICIAL) ? JSON.parse(readFileSync(INICIAL, "utf8")) : {};
   const indice = await publicado(INDICE, origen, "sitemap");
   const urls = new Map();
   const deSitemaps = new Map();
   for (const s of sitemaps) {
     const anterior = await publicado(s.ruta, origen, "url");
-    const primeraVez = ![...anterior.entradas.values()].some(Boolean);
     const pendientes = [...entradas(s.xml, "url").keys()];
     await Promise.all(
       Array.from({ length: PARALELAS }, async () => {
@@ -114,7 +108,7 @@ async function fechasVigentes(raiz, sitemaps, origen, ahora) {
           try {
             igual = viejo.status === 200 && contenido(viejo.texto) === nuevo;
           } catch {} // JSON-LD roto en la página publicada: cuenta como cambio
-          const fecha = anterior.entradas.get(url) ?? (primeraVez ? inicial[path] : undefined);
+          const fecha = anterior.entradas.get(url);
           if (igual && fecha) urls.set(url, fecha);
         }
       })

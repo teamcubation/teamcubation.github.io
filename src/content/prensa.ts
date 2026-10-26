@@ -579,3 +579,12 @@ export const prensaContent: Record<Locale, PrensaContent> = {
     },
   },
 };
+
+/** Las dos preguntas de BloquePrensa con su respuesta, como se leen en la página, para el FAQPage de Prensa.
+ *  Nosotros también muestra el bloque, pero esas preguntas se marcan en una sola página. */
+export function faqsPrensa(c: PrensaContent) {
+  return [
+    { pregunta: c.porQue.h2, respuesta: [...c.porQue.ps, c.porQue.marca, ...c.porQue.ps2].join(" ") },
+    { pregunta: c.inversion.h2, respuesta: c.inversion.ps.join(" ") },
+  ];
+}
