@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import TeamboardingBody from "../components/pages/TeamboardingBody.astro";
 import { teamboardingContent } from "../content/teamboarding";
-import { breadcrumbSchema, ids, teamboardingSchema } from "../lib/seo";
+import { breadcrumbSchema, faqSchema, ids, teamboardingSchema } from "../lib/seo";
 
 const c = teamboardingContent.es;
 const translations = { es: "/teamboarding", en: "/en/teamboarding", pt: "/pt/teamboarding" };
@@ -13,7 +13,11 @@ const translations = { es: "/teamboarding", en: "/en/teamboarding", pt: "/pt/tea
   description={c.seoDesc}
   lang="es"
   translations={translations}
-  schema={[teamboardingSchema("es"), breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Teamboarding", path: "/teamboarding" }])]}
+  schema={[
+    teamboardingSchema("es"),
+    breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Teamboarding", path: "/teamboarding" }]),
+    faqSchema("/teamboarding", c.faqs, "es"),
+  ]}
   webPage={{ mainEntity: ids.teamboarding }}
 >
   <TeamboardingBody lang="es" />

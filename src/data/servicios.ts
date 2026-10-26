@@ -147,7 +147,7 @@ export const servicios: Record<string, Servicio> = {
     duracion: "Cinco semanas",
     foco: "Automatización con IA y agentes",
     resumen: "Equipos de negocio automatizan procesos propios con IA y agentes, acompañados por mentores expertos.",
-    h1: "Booster AI: automatización de procesos con IA y su propio equipo.",
+    h1: "Booster AI: entrenamos a su equipo de negocios para que automaticen sus propios procesos con IA.",
     apoyo: "Sus procesos, automatizados por su propia gente.",
     bajada: "Booster AI es el programa de Teamcubation en el que equipos de negocio automatizan procesos reales de su día a día con IA y agentes. Cada participante trabaja sobre un proceso propio, acompañado por un mentor experto. Son cinco semanas de programa.",
     img: "macro-empuje-disco-ambar.png",
@@ -524,7 +524,7 @@ const enText: Record<string, ServicioEn> = {
     meta: "Your teams automate real processes with AI and agents. Five weeks of training with Teamcubation mentors.",
     foco: "Automation with AI and agents",
     resumen: "Business teams automate their own processes with AI and agents, guided by expert mentors.",
-    h1: "Booster AI: automating processes with AI and your own team.",
+    h1: "Booster AI: we train your business team to automate their own processes with AI.",
     apoyo: "Your processes, automated by your own people.",
     bajada: "Booster AI is Teamcubation's program in which business teams automate real day-to-day processes with AI and agents. Each participant works on a process of their own, supported by an expert mentor. It's five weeks of program.",
     ficha: [
@@ -861,7 +861,7 @@ const ptText: Record<string, ServicioEn> = {
     meta: "Suas equipes automatizam processos reais com IA e agentes. Cinco semanas de treinamento com mentores da Teamcubation.",
     foco: "Automação com IA e agentes",
     resumen: "Equipes de negócio automatizam os próprios processos com IA e agentes, acompanhadas por mentores especialistas.",
-    h1: "Booster AI: automação de processos com IA e sua própria equipe.",
+    h1: "Booster AI: treinamos sua equipe de negócios para automatizar os próprios processos com IA.",
     apoyo: "Seus processos, automatizados pela sua própria gente.",
     bajada: "O Booster AI é o programa da Teamcubation em que equipes de negócio automatizam processos reais do dia a dia com IA e agentes. Cada participante trabalha em um processo próprio, acompanhado por um mentor especialista. São cinco semanas de programa.",
     ficha: [

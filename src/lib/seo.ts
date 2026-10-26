@@ -116,6 +116,7 @@ export function webPageSchema(p: {
   inLanguage: string;
   breadcrumb?: string;
   mainEntity?: string;
+  hasPart?: string;
   dateModified?: string;
 }) {
   return {
@@ -128,7 +129,25 @@ export function webPageSchema(p: {
     isPartOf: { "@id": ids.website },
     ...(p.breadcrumb && { breadcrumb: { "@id": p.breadcrumb } }),
     ...(p.mainEntity && { mainEntity: { "@id": p.mainEntity } }),
+    ...(p.hasPart && { hasPart: { "@id": p.hasPart } }),
     ...(p.dateModified && { dateModified: p.dateModified }),
+  };
+}
+
+/** FAQPage — las preguntas frecuentes de la página (path), con el mismo texto que muestra. Es una
+ *  sección de la página, no otra página: no lleva url, y el WebPage la enlaza con hasPart. */
+export function faqSchema(path: string, faqs: { pregunta: string; respuesta: string }[], lang: Locale) {
+  const url = `${SITE.url}${conBarra(path)}`;
+  return {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    inLanguage: langCode[lang],
+    isPartOf: { "@id": `${url}#webpage` },
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.pregunta,
+      acceptedAnswer: { "@type": "Answer", text: f.respuesta },
+    })),
   };
 }
 

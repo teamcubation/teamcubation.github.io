@@ -3,7 +3,8 @@
 // de una página publicada: https://teamcubation.com/… con barra final, que no sea un redirect
 // (meta refresh) ni diga noindex. También falla si una página publicada (salvo los redirects y
 // la 404) no está en el sitemap con la URL de su canonical, así una página nueva no puede
-// quedar afuera. El status real detrás de CloudFront y GitHub Pages lo revisa
+// quedar afuera. Cada URL, y cada sitemap del índice, tiene que tener un lastmod W3C que no esté en el
+// futuro (lo agrega sitemap-lastmod). El status real detrás de CloudFront y GitHub Pages lo revisa
 // scripts/check-sitemaps.mjs contra el sitio publicado.
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
@@ -18,6 +19,17 @@ function* archivosHtml(dir) {
 }
 
 const locs = (xml) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim().replaceAll("&amp;", "&"));
+
+const W3C = /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2}))?$/;
+function revisarLastmod(xml, etiqueta, problemas) {
+  for (const [, entrada] of xml.matchAll(new RegExp(`<${etiqueta}>([\\s\\S]*?)</${etiqueta}>`, "g"))) {
+    const loc = entrada.match(/<loc>([^<]+)<\/loc>/)?.[1];
+    const fechas = [...entrada.matchAll(/<lastmod>([^<]*)<\/lastmod>/g)].map((m) => m[1].trim());
+    if (fechas.length !== 1) problemas.push(`${loc}: tiene ${fechas.length} lastmod, debe tener uno`);
+    else if (!W3C.test(fechas[0]) || Number.isNaN(Date.parse(fechas[0]))) problemas.push(`${loc}: lastmod ${fechas[0]} no es una fecha W3C`);
+    else if (Date.parse(fechas[0]) > Date.now() + 60_000) problemas.push(`${loc}: lastmod ${fechas[0]} está en el futuro`);
+  }
+}
 
 function leerPagina(html) {
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
@@ -47,12 +59,16 @@ export default function checkSitemap() {
         const indice = join(raiz, "sitemap-index.xml");
         if (!existsSync(indice)) throw new Error("Sitemap: no se generó sitemap-index.xml");
         const urls = [];
-        for (const loc of locs(readFileSync(indice, "utf8"))) {
+        const xmlIndice = readFileSync(indice, "utf8");
+        revisarLastmod(xmlIndice, "sitemap", problemas);
+        for (const loc of locs(xmlIndice)) {
           const archivo = join(raiz, new URL(loc).pathname);
           if (new URL(loc).origin !== site.origin || !existsSync(archivo)) {
             problemas.push(`sitemap-index.xml lista ${loc}, que no es un sitemap de este build`);
           } else {
-            urls.push(...locs(readFileSync(archivo, "utf8")));
+            const xml = readFileSync(archivo, "utf8");
+            revisarLastmod(xml, "url", problemas);
+            urls.push(...locs(xml));
           }
         }
 
@@ -90,7 +106,7 @@ export default function checkSitemap() {
         }
 
         if (problemas.length) throw new Error(`Sitemap con problemas:\n${problemas.join("\n")}`);
-        logger.info(`Sitemap revisado: ${enSitemap.size} URLs, todas canónicas e indexables, sin páginas afuera.`);
+        logger.info(`Sitemap revisado: ${enSitemap.size} URLs, todas canónicas e indexables y con lastmod, sin páginas afuera.`);
       },
     },
   };

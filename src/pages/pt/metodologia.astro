@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import MetodologiaBody from "../../components/pages/MetodologiaBody.astro";
 import { metodologiaContent } from "../../content/metodologia";
-import { breadcrumbSchema } from "../../lib/seo";
+import { breadcrumbSchema, faqSchema } from "../../lib/seo";
 
 const c = metodologiaContent.pt;
 const translations = { es: "/metodologia", en: "/en/methodology", pt: "/pt/metodologia" };
@@ -13,7 +13,10 @@ const translations = { es: "/metodologia", en: "/en/methodology", pt: "/pt/metod
   description={c.seoDesc}
   lang="pt"
   translations={translations}
-  schema={[breadcrumbSchema([{ name: "Início", path: "/pt/" }, { name: "Metodologia", path: "/pt/metodologia" }])]}
+  schema={[
+    breadcrumbSchema([{ name: "Início", path: "/pt/" }, { name: "Metodologia", path: "/pt/metodologia" }]),
+    faqSchema("/pt/metodologia", c.faqs, "pt"),
+  ]}
 >
   <MetodologiaBody lang="pt" />
 </Layout>

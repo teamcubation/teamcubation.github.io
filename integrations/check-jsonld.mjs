@@ -1,7 +1,8 @@
 // Integración de Astro: al terminar el build revisa el JSON-LD de cada página publicada y
 // falla si un bloque no es JSON válido, si una referencia {"@id"} no apunta a un nodo de la
 // misma página, si falta el Organization, si el WebPage no es uno solo con la url del
-// canonical, o si aparece el dominio donde vive el build (el de og:url, p.ej. staging)
+// canonical, si una pregunta del FAQPage o su respuesta no está tal cual en el texto que
+// muestra la página, o si aparece el dominio donde vive el build (el de og:url, p.ej. staging)
 // cuando no es el canónico.
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
@@ -25,6 +26,21 @@ function recorrer(valor, definidos, referencias) {
   if (typeof valor["@id"] === "string") (claves.length === 1 ? referencias : definidos).add(valor["@id"]);
   for (const k of claves) recorrer(valor[k], definidos, referencias);
 }
+
+const ENTIDADES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
+const normalizar = (texto) =>
+  texto
+    .replace(/&(#x[0-9a-f]+|#\d+|\w+);/gi, (entidad, c) =>
+      /^#x/i.test(c) ? String.fromCodePoint(parseInt(c.slice(2), 16))
+      : c[0] === "#" ? String.fromCodePoint(Number(c.slice(1)))
+      : (ENTIDADES[c] ?? entidad)
+    )
+    .replace(/\s+/g, " ")
+    .trim();
+
+// El texto que muestra la página: el <body> sin scripts, estilos ni etiquetas.
+const textoVisible = (html) =>
+  normalizar((html.match(/<body[\s\S]*<\/body>/)?.[0] ?? "").replace(/<(script|style)\b[\s\S]*?<\/\1>/g, " ").replace(/<[^>]+>/g, " "));
 
 function revisarPagina(html) {
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
@@ -51,6 +67,20 @@ function revisarPagina(html) {
   const paginas = nodos.filter((n) => TIPOS_PAGINA.has(n["@type"]));
   if (paginas.length !== 1 || paginas[0].url !== canonical) {
     errores.push(`debe tener un solo WebPage, con url ${canonical}`);
+  }
+  const faqs = nodos.filter((n) => n["@type"] === "FAQPage");
+  const visible = faqs.length ? textoVisible(html) : "";
+  for (const faq of faqs) {
+    const preguntas = Array.isArray(faq.mainEntity) ? faq.mainEntity : [];
+    if (!preguntas.length) errores.push("el FAQPage no tiene preguntas");
+    for (const q of preguntas) {
+      const respuesta = q.acceptedAnswer?.text;
+      if (q["@type"] !== "Question" || !q.name || q.acceptedAnswer?.["@type"] !== "Answer" || !respuesta) {
+        errores.push(`FAQPage: pregunta incompleta: ${q.name ?? "(sin texto)"}`);
+      } else if (!visible.includes(normalizar(q.name)) || !visible.includes(normalizar(respuesta))) {
+        errores.push(`FAQPage: la página no muestra tal cual «${q.name}» y su respuesta`);
+      }
+    }
   }
   const ogUrl = html.match(/<meta property="og:url" content="([^"]+)"/)?.[1];
   const hostBuild = ogUrl && new URL(ogUrl).host;

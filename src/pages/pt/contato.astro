@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import ContactoBody from "../../components/pages/ContactoBody.astro";
 import { contactoContent } from "../../content/contacto";
-import { breadcrumbSchema } from "../../lib/seo";
+import { breadcrumbSchema, faqSchema } from "../../lib/seo";
 
 const c = contactoContent.pt;
 const translations = { es: "/contacto", en: "/en/contact", pt: "/pt/contato" };
@@ -13,7 +13,10 @@ const translations = { es: "/contacto", en: "/en/contact", pt: "/pt/contato" };
   description={c.seoDesc}
   lang="pt"
   translations={translations}
-  schema={[breadcrumbSchema([{ name: "Início", path: "/pt/" }, { name: "Contato", path: "/pt/contato" }])]}
+  schema={[
+    breadcrumbSchema([{ name: "Início", path: "/pt/" }, { name: "Contato", path: "/pt/contato" }]),
+    faqSchema("/pt/contato", c.faqs, "pt"),
+  ]}
   webPage={{ type: "ContactPage" }}
 >
   <ContactoBody lang="pt" />

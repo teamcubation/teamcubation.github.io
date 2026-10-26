@@ -59,10 +59,11 @@ const alternates = translations
 const xDefault = alternates.find((a) => a.loc === defaultLocale)?.href;
 
 // JSON-LD: Organization, WebSite y WebPage en todas las páginas, más los nodos propios
-// de cada una. El WebPage enlaza el BreadcrumbList de la página, si tiene.
-const breadcrumb = (schema as { "@type"?: string; "@id"?: string }[]).find(
-  (n) => n["@type"] === "BreadcrumbList"
-)?.["@id"];
+// de cada una. El WebPage enlaza el BreadcrumbList y el FAQPage de la página, si tiene.
+const nodo = (tipo: string) =>
+  (schema as { "@type"?: string; "@id"?: string }[]).find((n) => n["@type"] === tipo)?.["@id"];
+const breadcrumb = nodo("BreadcrumbList");
+const faq = nodo("FAQPage");
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -76,6 +77,7 @@ const jsonLd = {
       inLanguage: webPage.inLanguage ?? langCode[lang],
       breadcrumb,
       mainEntity: webPage.mainEntity,
+      hasPart: faq,
       dateModified: webPage.dateModified,
     }),
     ...schema,

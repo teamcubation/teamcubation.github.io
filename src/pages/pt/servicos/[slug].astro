@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import Layout from "../../../layouts/Layout.astro";
 import ProgramaBody from "../../../components/pages/ProgramaBody.astro";
 import { serviciosPt, ORDEN } from "../../../data/servicios";
-import { serviceSchema, breadcrumbSchema, SITE } from "../../../lib/seo";
+import { serviceSchema, breadcrumbSchema, faqSchema, SITE } from "../../../lib/seo";
 
 export const getStaticPaths = (() => {
   return ORDEN.map((key) => {
@@ -27,6 +27,7 @@ const schema = [
     { name: "Serviços", path: "/pt/servicos" },
     { name: svc.nombre, path: `/pt/servicos/${slug}` },
   ]),
+  faqSchema(`/pt/servicos/${slug}`, svc.faqs.map((f) => ({ pregunta: f.q, respuesta: f.a })), "pt"),
 ];
 ---
 
