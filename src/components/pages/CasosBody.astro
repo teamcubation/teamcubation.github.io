@@ -43,8 +43,8 @@ const c = casosContent[lang];
       <h3 class="h3-28">{c.clientesH3}</h3>
       <div class="logos-grilla">
         {clientes.map((cl) => (
-          <div class="logo-card">
-            <Image src={cl.logo} alt={cl.nombre} width={280} loading="lazy" />
+          <div class="logo-card" style={cl.zoom !== 1 ? `--zoom: ${cl.zoom}` : undefined}>
+            <Image src={cl.logo} alt={cl.nombre} width={Math.round(280 * Math.max(1, cl.zoom))} loading="lazy" />
           </div>
         ))}
       </div>
@@ -112,7 +112,21 @@ const c = casosContent[lang];
 
   .logos-grilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; align-items: stretch; }
   .logo-card { min-height: 104px; background: var(--color-gris-claro); border-radius: var(--radius-tarjeta); padding: 24px; display: flex; align-items: center; justify-content: center; }
-  .logo-card :global(img) { width: 100%; max-width: 140px; height: 44px; object-fit: contain; display: block; mix-blend-mode: multiply; }
+  /* El logo entra en una caja de 140 × 44 px (o lo que deje la tarjeta) multiplicada por su zoom
+     (clientes.json). Agrandado, puede ocupar el relleno hasta 12 px del borde: 80 px de alto y
+     24 px más de ancho (por eso max-width: none, que el reset dejaba en 100 %); el margen negativo
+     hace que no estire la tarjeta. El editor de clientes no deja pasar de ahí
+     (editor-clientes/src/editor.js, zoomMaximo). */
+  .logo-card :global(img) {
+    flex: none;
+    width: min(100% * var(--zoom, 1), 140px * var(--zoom, 1), 100% + 24px);
+    max-width: none;
+    height: min(44px * var(--zoom, 1), 80px);
+    margin-block: -12px;
+    object-fit: contain;
+    display: block;
+    mix-blend-mode: multiply;
+  }
 
   /* Impacto */
   .destacado { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.25; margin: 0 0 20px; }

@@ -1,7 +1,9 @@
 // Clientes del sitio, en el orden en que se muestran. La lista vive en clientes.json y la edita
 // el editor de clientes (editor-clientes/); cada logo es src/assets/clientes/<slug>.png, un solo
-// gris con transparencia, recortado y de 120 px de alto. La usan la grilla de Clientes (todos),
-// la tira de logos de la home (los que tienen home: true) y llms.txt. Las marcas no se traducen.
+// gris con transparencia, recortado justo y de 240 px de alto (los más viejos, de 120). zoom
+// (opcional, de 0.5 a 2; 1 si no está) agranda o achica el logo en la grilla de Clientes y en la
+// tira de la home por igual. La usan la grilla de Clientes (todos), la tira de logos de la home
+// (los que tienen home: true) y llms.txt. Las marcas no se traducen.
 // Si la lista o un logo no es válido, el build falla y no se publica nada.
 import type { ImageMetadata } from "astro";
 import lista from "./clientes.json";
@@ -10,6 +12,7 @@ export interface Cliente {
   slug: string;
   nombre: string;
   home: boolean;
+  zoom: number;
   logo: ImageMetadata;
 }
 
@@ -23,17 +26,18 @@ function validar(datos: unknown): Cliente[] {
   const nombres = new Set<string>();
   const clientes = datos.map((c, i): Cliente => {
     const donde = `clientes.json, cliente ${i + 1}`;
-    const { slug, nombre, home } = c ?? {};
+    const { slug, nombre, home, zoom = 1 } = c ?? {};
     if (typeof slug !== "string" || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) errores.push(`${donde}: slug inválido (${JSON.stringify(slug)})`);
     else if (slugs.has(slug)) errores.push(`${donde}: el slug ${slug} está repetido`);
     if (typeof nombre !== "string" || !nombre.trim()) errores.push(`${donde}: falta el nombre`);
     else if (nombres.has(nombre.trim().toLowerCase())) errores.push(`${donde}: el nombre ${nombre} está repetido`);
     if (typeof home !== "boolean") errores.push(`${donde}: home tiene que ser true o false`);
+    if (typeof zoom !== "number" || !(zoom >= 0.5 && zoom <= 2)) errores.push(`${donde}: zoom tiene que ser un número de 0.5 a 2`);
     const logo = logoDe(slug);
     if (typeof slug === "string" && !logo) errores.push(`${donde}: falta el logo src/assets/clientes/${slug}.png`);
     slugs.add(slug);
     if (typeof nombre === "string") nombres.add(nombre.trim().toLowerCase());
-    return { slug, nombre: typeof nombre === "string" ? nombre.trim() : nombre, home, logo };
+    return { slug, nombre: typeof nombre === "string" ? nombre.trim() : nombre, home, zoom, logo };
   });
   if (errores.length) throw new Error(`Lista de clientes con problemas:\n${errores.join("\n")}`);
   const sobrantes = Object.keys(logos)

@@ -6,11 +6,12 @@ import { Image } from "astro:assets";
 import { clientesHome } from "../../data/clientes";
 
 // Cada logo ocupa más o menos la misma superficie, hasta 150 × 44 px: los anchos quedan más
-// bajos y los cuadrados más altos, y la tira se ve pareja.
+// bajos y los cuadrados más altos, y la tira se ve pareja. Después, el zoom de cada cliente lo
+// agranda o achica (como en la grilla de Clientes); agrandado, puede pasar de 150 × 44.
 const SUPERFICIE = 3000;
 const logos = clientesHome.map((c) => {
   const proporcion = c.logo.width / c.logo.height;
-  const alto = Math.min(44, Math.sqrt(SUPERFICIE / proporcion), 150 / proporcion);
+  const alto = Math.min(44, Math.sqrt(SUPERFICIE / proporcion), 150 / proporcion) * c.zoom;
   return { img: c.logo, nombre: c.nombre, ancho: Math.round(alto * proporcion), alto: Math.round(alto) };
 });
 ---
@@ -57,8 +58,8 @@ const logos = clientesHome.map((c) => {
   }
   .tira__logo {
     flex: none;
-    width: 150px;
-    height: 44px;
+    min-width: 150px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
