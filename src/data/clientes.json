@@ -53,9 +53,9 @@
   { "slug": "parque-de-la-innovacion", "nombre": "Parque de la Innovación", "home": false },
   { "slug": "appa", "nombre": "¡appa!", "home": true },
   { "slug": "dagma", "nombre": "Dagma", "home": true },
-  { "slug": "agrouranga", "nombre": "AgroUranga", "home": false },
-  { "slug": "brons-salas", "nombre": "Brons & Salas", "home": true },
+  { "slug": "agrouranga", "nombre": "AgroUranga", "home": true },
   { "slug": "idea", "nombre": "IDEA", "home": true },
-  { "slug": "llorente-hermanos", "nombre": "Llorente Hermanos", "home": false },
-  { "slug": "planexware", "nombre": "Planexware", "home": false }
+  { "slug": "planexware", "nombre": "Planexware", "home": false },
+  { "slug": "llorente-hermanos-2", "nombre": "Llorente Hermanos", "home": true, "zoom": 1.43 },
+  { "slug": "brons-salas-2", "nombre": "Brons&Salas", "home": true, "zoom": 1.14 }
 ]
